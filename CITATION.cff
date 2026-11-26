@@ -6,6 +6,8 @@ authors:
   - family-names: "Elu"
     given-names: "R. A."
     orcid: "https://orcid.org/0009-0000-1456-2467"
+version: "1.0.0"
+doi: "10.5281/zenodo.24557491"
 date-released: "2026-11-26"
 license: Apache-2.0
 repository-code: "https://github.com/r-a-elu-architecture/rsos-one-seed"

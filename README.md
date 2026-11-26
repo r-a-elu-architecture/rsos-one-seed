@@ -3,6 +3,8 @@
 One shared decision selector, the *seed*, choosing among candidate actions written for each domain, tested across
 ten real domains against each domain's standard method. Every claim is sealed (pre-registered, fingerprinted, pushed before the run) and can be rerun.
 
+**Software archive** (this release, v1.0.0): [doi:10.5281/zenodo.24557491](https://doi.org/10.5281/zenodo.24557491)
+
 **Papers** (preprints, CC BY 4.0):
 - *One Selector, Many Domains* — [doi:10.5281/zenodo.24555154](https://doi.org/10.5281/zenodo.24555154) · [PDF](paper/pdf/PAPER_1_ONE_SELECTOR.pdf) · [source](paper/PAPER_1_ONE_SELECTOR.md)
 - *SRC-X.5: an open record of sealed claims, verified at the source* — [doi:10.5281/zenodo.24555259](https://doi.org/10.5281/zenodo.24555259) · [PDF](paper/pdf/PAPER_2_SRCX5.pdf) · [source](paper/PAPER_2_SRCX5.md)
