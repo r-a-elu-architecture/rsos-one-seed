@@ -1,0 +1,44 @@
+{
+ "upload_type": "software",
+ "title": "One Selector, Many Domains: research release (code, sealed runs and analysis)",
+ "creators": [
+  {
+   "name": "Elu, R. A.",
+   "orcid": "0009-0000-1456-2467"
+  }
+ ],
+ "description": "<p>The research release for the paper One Selector, Many Domains (https://doi.org/10.5281/zenodo.24555154): one shared decision selector choosing among candidate actions written for each domain, tested against each domain's standard method and against plain rollout on real tools, real data and real models.</p><p>It contains the selector and domain hosts, every pre-registration and seal (files fingerprinted and pushed before each run), the result files of REAL1, REAL3, STRUCT1, CONF1-CONF6 and ABL1, the analysis scripts, one-command reproduction scripts, the three papers (PDF and source) and the protocol SRC-X.5. Third-party data is fetched at run time by the included scripts and checked against its fingerprint; it is not redistributed.</p><p>Website: https://r-a-elu-architecture.github.io/rsos-one-seed/</p>",
+ "license": "Apache-2.0",
+ "keywords": [
+  "decision-making",
+  "AI agents",
+  "multi-agent communication",
+  "satellite scheduling",
+  "inventory control",
+  "pre-registration",
+  "reproducibility",
+  "LLM agents"
+ ],
+ "related_identifiers": [
+  {
+   "identifier": "10.5281/zenodo.24555154",
+   "relation": "isSupplementTo",
+   "resource_type": "publication-preprint",
+   "scheme": "doi"
+  },
+  {
+   "identifier": "10.5281/zenodo.24555259",
+   "relation": "isSupplementTo",
+   "resource_type": "publication-preprint",
+   "scheme": "doi"
+  },
+  {
+   "identifier": "10.5281/zenodo.24555298",
+   "relation": "isSupplementTo",
+   "resource_type": "publication-preprint",
+   "scheme": "doi"
+  }
+ ],
+ "language": "eng",
+ "access_right": "open"
+}
