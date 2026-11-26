@@ -29,6 +29,7 @@ mkdir -p "$OUT/.github/workflows"; cp .github/workflows/site_pages.yml "$OUT/.gi
 cd "$OUT"
 rm -rf corpus real/out3/_tmp experiments/genealogy 2>/dev/null || true
 rm -f protocol/SEAL_SRCX5.txt   # private v1.3 seal of the 11-entry log; the public seal is protocol/SEAL_SRCX5_PUBLIC.txt
+rm -f protocol/.github/workflows/anchor.yml   # sealed v1.4 workflow kept private; anchor_v141.yml replaces it (tests/v14/RELEASE_NOTE.md)
 # third-party data stays out until its licence is confirmed (DATA_LICENCES.md); the fetch scripts recreate it
 rm -f real/hosts/data/walmart_sales_weekly.csv real/hosts/data/household_load_uci_hourly.csv
 find real/hosts/data/topical_chat -type f ! -name .gitignore -delete 2>/dev/null || true   # fetched at run time, never staged
