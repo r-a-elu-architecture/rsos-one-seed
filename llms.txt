@@ -1,0 +1,24 @@
+# RSOS / One Selector, Many Domains / SRC-X.5
+
+> One shared decision selector and the RSOS operator language, tested on real tools, real data and real models against each domain's standard method and against plain rollout. Every test was pre-registered and sealed before it ran; failures are kept. Every claim, with its number, baseline and caveat: CLAIMS.md / claims.json.
+
+Strongest results (all sealed, all rerunnable):
+- CONF6, AI-AI system vs plain rollout: accuracy 1.000 vs 0.875, 51 % fewer tokens (200 cells, Holm p 1.3e-7 and 5.1e-28).
+- CONF5, AI agents vs plain rollout: accuracy 0.95 vs 0.83, 43 % fewer tokens (48 cells, Holm p 1.9e-13).
+- CONF1, four domains vs each standard method: all criteria met at Holm p < 1e-5 (AI agents 58-69 % fewer tokens; inventory +1.42 %; satellite +1.67 %).
+- Blind planning for shared state: 318 of 320 tasks exact across six models; 48/48 on tasks drawn from a public randomness beacon.
+Not met, and kept: STRUCT1 (structure alone), CONF4, ABL1, CONF5 AI-AI row; quantum and neural sensing in REAL3.
+What is new: one operator language bound unchanged across unrelated hosts, each tested sealed against its standard and plain rollout, every claim in an open hash-verified record. No single lever is claimed as new; production transfer is not yet tested.
+
+## Evidence
+- [Every claim](https://github.com/r-a-elu-architecture/rsos-one-seed/blob/main/CLAIMS.md): number, baseline, criteria, caveat, sealed source
+- [claims.json](https://raw.githubusercontent.com/r-a-elu-architecture/rsos-one-seed/main/claims.json)
+- [Paper: One Selector, Many Domains](https://doi.org/10.5281/zenodo.24555154)
+- [Paper: Blind planning and the error-window law](https://doi.org/10.5281/zenodo.24555298)
+- [Paper: SRC-X.5](https://doi.org/10.5281/zenodo.24555259)
+
+## Verify
+- [Open record (browser verification)](https://r-a-elu-architecture.github.io/srcx5/)
+- [Live node, MCP at /mcp, A2A at /a2a](https://rsos-srcx5.hf.space)
+- [Research release and rerun scripts](https://github.com/r-a-elu-architecture/rsos-one-seed)
+- [Protocol](https://github.com/r-a-elu-architecture/srcx5) · pip install srcx5

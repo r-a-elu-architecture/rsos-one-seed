@@ -1,5 +1,7 @@
 # One Selector, Many Domains
 
+**Every claim on one page, with its number, baseline, criteria and caveat: [`CLAIMS.md`](CLAIMS.md)** (machine-readable: [`claims.json`](claims.json), [`llms.txt`](llms.txt)).
+
 One shared decision selector, the *seed*, choosing among candidate actions written for each domain, tested across
 ten real domains against each domain's standard method. Every claim is sealed (pre-registered, fingerprinted, pushed before the run) and can be rerun.
 

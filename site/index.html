@@ -112,6 +112,8 @@ nav.top::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;
 #language[data-c]::before{background:var(--open)}
 </style>
 <script>new MutationObserver(()=>{for(const c of document.querySelectorAll('.stack td:not([data-l])')){let i=0,p=c;while(p=p.previousElementSibling)i+=p.colSpan;c.dataset.l=c.closest('table').rows[0].cells[i]?.textContent||''}}).observe(document,{childList:true,subtree:true})</script>
+<link rel="alternate" type="text/plain" href="llms.txt" title="llms.txt">
+<link rel="alternate" type="application/json" href="claims.json" title="claims">
 </head>
 <body>
 
@@ -295,6 +297,7 @@ PYTHONPATH=experiments/sec1 \
 
 <section class="band" id="paper" data-c style="--p:var(--yellow);--c:var(--yellow);--w:5.5px"><div class="in">
  <h2>The papers</h2>
+ <p><b><a href="https://github.com/r-a-elu-architecture/rsos-one-seed/blob/main/CLAIMS.md">Every claim on one page</a></b>: number, baseline, pre-registered criteria, caveat and sealed source (<a href="claims.json">claims.json</a>, <a href="llms.txt">llms.txt</a>).</p>
  <p><a data-p="paper-0" href="#">One Selector, Many Domains</a> (<a href="https://doi.org/10.5281/zenodo.24555154">doi:10.5281/zenodo.24555154</a>): method, the controlled environment, the real-world runs (REAL1, REAL3, CONF1–CONF6),
  prior art, limits and disclosures. It states what was shown and what was not.</p>
  <p><span class="pill">§5 real-world results</span><span class="pill">§6 simulated environment</span><span class="pill">§7 prior art and reviewer questions</span><span class="pill">§8 limits and fixes</span></p>

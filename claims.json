@@ -1,0 +1,235 @@
+{
+ "title": "RSOS and SRC-X.5: every sealed claim, with its number, baseline and caveat",
+ "version": "2026-11-26",
+ "summary": "One shared decision selector (the seed) and the RSOS operator language, tested on real tools, real data and real models against each domain's standard method and against plain rollout; every test pre-registered and sealed before it ran; failures kept. Strongest results: CONF6 (AI-AI system: accuracy 1.000 vs 0.875 with 51 % fewer tokens vs plain rollout), CONF5 (AI agents: accuracy 0.95 vs 0.83 with 43 % fewer tokens vs plain rollout), CONF1 (beats the standard in four domains at Holm p < 1e-5), blind planning (318/320 exact; 48/48 on beacon-drawn tasks).",
+ "what_is_new": "The individual mechanisms (rollout, plan-then-execute, early-stopping self-consistency, scenario MPC, context compression) exist. What is new is one operator language bound unchanged across unrelated hosts (AI agents, AI-AI and AI-human communication, inventory, satellite downlink, energy, robotics), each tested sealed against that host's standard method and against plain rollout, with every claim, including failures, in an open, hash-verified record (SRC-X.5).",
+ "not_claimed": [
+  "best in any single field",
+  "novelty of any single lever",
+  "results outside the sealed cells (production transfer not yet tested)"
+ ],
+ "papers": {
+  "one_selector": "https://doi.org/10.5281/zenodo.24555154",
+  "srcx5": "https://doi.org/10.5281/zenodo.24555259",
+  "blind_planning": "https://doi.org/10.5281/zenodo.24555298"
+ },
+ "software": {
+  "rsos_one_seed": "https://doi.org/10.5281/zenodo.24557491",
+  "srcx5": "https://doi.org/10.5281/zenodo.24557469"
+ },
+ "verify": {
+  "open_record": "https://r-a-elu-architecture.github.io/srcx5/",
+  "node": "https://rsos-srcx5.hf.space",
+  "rerun": "https://github.com/r-a-elu-architecture/rsos-one-seed#rerun"
+ },
+ "claims": [
+  {
+   "id": "CONF6",
+   "area": "AI-AI system",
+   "claim": "Binding a whole two-model AI-AI system to one RSOS structure beats plain rollout on accuracy and tokens",
+   "result": "accuracy 1.000 vs 0.875 (25 better, 0 worse; Holm p 1.3e-7); tokens 1,286 vs 2,645 (-51 %, 180/200 cells, p 5.1e-28)",
+   "baseline": "plain rollout (RSOS-free planning)",
+   "criteria": "all met",
+   "cells": 200,
+   "source": "https://github.com/r-a-elu-architecture/rsos-one-seed/blob/main/real/RESULTS_CONF6.md",
+   "caveat": "the test does not separate its two parts (binding B; the completeness check)",
+   "paper": "https://doi.org/10.5281/zenodo.24555154"
+  },
+  {
+   "id": "CONF5-agents",
+   "area": "AI agents",
+   "claim": "The RSOS structure identified per host beats plain rollout",
+   "result": "7.3k vs 12.9k tokens (-43 %), accuracy 0.95 vs 0.83, Holm p 1.9e-13, 44/48 cells",
+   "baseline": "plain rollout",
+   "criteria": "met (row 1 of 3; CONF5 met in 2 of 3 rows)",
+   "cells": 48,
+   "source": "https://github.com/r-a-elu-architecture/rsos-one-seed/blob/main/real/RESULTS_CONF5.md",
+   "paper": "https://doi.org/10.5281/zenodo.24555154"
+  },
+  {
+   "id": "CONF5-satellite",
+   "area": "Satellite downlink",
+   "claim": "Same, satellite downlink on real orbits",
+   "result": "+0.74 %, 20/20 cells, p 1.5e-8",
+   "baseline": "plain rollout",
+   "criteria": "met (row 2 of 3)",
+   "cells": 20,
+   "source": "https://github.com/r-a-elu-architecture/rsos-one-seed/blob/main/real/RESULTS_CONF5.md",
+   "paper": "https://doi.org/10.5281/zenodo.24555154"
+  },
+  {
+   "id": "CONF5-ai-ai",
+   "area": "AI-AI messaging",
+   "claim": "Same, AI-AI messaging",
+   "result": "tokens -3.8 % (p 0.25); accuracy 0.73 vs 0.59 reported only",
+   "baseline": "plain rollout",
+   "criteria": "not met (row 3 of 3)",
+   "cells": 100,
+   "source": "https://github.com/r-a-elu-architecture/rsos-one-seed/blob/main/real/RESULTS_CONF5.md",
+   "paper": "https://doi.org/10.5281/zenodo.24555154"
+  },
+  {
+   "id": "CONF1",
+   "area": "AI agents, AI-human, inventory, satellite",
+   "claim": "The full seed beats each domain's standard method in all four domains at Holm p < 1e-5",
+   "result": "AI agents 58-69 % fewer tokens, accuracy +0.11/+0.15 (p 8e-11, 5e-27); AI-human 42 % fewer tokens (5e-21); inventory +1.42 %, 12/12 (1e-9); satellite +1.67 %, 12/12 (1e-9), +1.33 % over the look-ahead MILP",
+   "baseline": "each domain's standard method (ReAct / self-consistency; direct reply; base-stock; value-per-MB queue)",
+   "criteria": "all met",
+   "cells": 102,
+   "source": "https://github.com/r-a-elu-architecture/rsos-one-seed/blob/main/real/RESULTS_CONF1.md",
+   "paper": "https://doi.org/10.5281/zenodo.24555154"
+  },
+  {
+   "id": "CONF3-communication",
+   "area": "AI agents, AI-human, AI-AI",
+   "claim": "Communication principle: fewer tokens at equal or better results",
+   "result": "AI agents 48-61 % fewer tokens (p 8e-9, 2e-21); AI-human 42 % (8e-25); AI-AI 25 % on 150 cells (1e-9)",
+   "baseline": "standard method per domain",
+   "criteria": "all met",
+   "cells": 230,
+   "source": "https://github.com/r-a-elu-architecture/rsos-one-seed/blob/main/real/RESULTS_CONF3.md",
+   "paper": "https://doi.org/10.5281/zenodo.24555154"
+  },
+  {
+   "id": "CONF3-composed",
+   "area": "AI agents, AI-AI, satellite",
+   "claim": "Operator chains written by a fresh agent from the RSOS sources beat the standard",
+   "result": "AI agents (self-consistency) 45 % fewer tokens (2e-23); AI-AI 27 % (8e-12); satellite +1.01 %, 22/23 (1e-7); AI-human not passed",
+   "baseline": "standard method per domain",
+   "criteria": "all met (3 of 4 rows passed)",
+   "source": "https://github.com/r-a-elu-architecture/rsos-one-seed/blob/main/real/RESULTS_CONF3.md",
+   "caveat": "a control agent without the RSOS sources has not been run",
+   "paper": "https://doi.org/10.5281/zenodo.24555154"
+  },
+  {
+   "id": "CONF3-cross-domain",
+   "area": "five domains",
+   "claim": "Cross-domain claim",
+   "result": "inventory +1.34 % (p 1.4e-5, just above 1e-5); satellite +1.98 % (1e-6)",
+   "baseline": "standard method per domain",
+   "criteria": "partly met",
+   "source": "https://github.com/r-a-elu-architecture/rsos-one-seed/blob/main/real/RESULTS_CONF3.md",
+   "paper": "https://doi.org/10.5281/zenodo.24555154"
+  },
+  {
+   "id": "REAL3-ai-agents-sc",
+   "area": "AI agents (gpt-oss-20b)",
+   "claim": "Seed vs self-consistency (majority voting)",
+   "result": "68.4 % fewer tokens; accuracy +0.06 (95 % CI -0.16 to +0.29)",
+   "baseline": "self-consistency",
+   "criteria": "shown",
+   "cells": 8,
+   "source": "https://github.com/r-a-elu-architecture/rsos-one-seed/blob/main/real/RESULTS_REAL3.md",
+   "caveat": "plan caches were not cleared between jobs; consistent with leakage, not proven; intervals assume an independence that did not fully hold",
+   "paper": "https://doi.org/10.5281/zenodo.24555154"
+  },
+  {
+   "id": "REAL3-ai-agents-react",
+   "area": "AI agents (gpt-oss-20b)",
+   "claim": "Seed vs ReAct",
+   "result": "51.3 % fewer tokens; accuracy +0.16 (+0.03, +0.29)",
+   "baseline": "ReAct",
+   "criteria": "shown",
+   "cells": 8,
+   "source": "https://github.com/r-a-elu-architecture/rsos-one-seed/blob/main/real/RESULTS_REAL3.md",
+   "caveat": "same cache caveat as above",
+   "paper": "https://doi.org/10.5281/zenodo.24555154"
+  },
+  {
+   "id": "REAL3-domains",
+   "area": "ten real domains",
+   "claim": "Seed beats the standard in seven of ten domains under the pre-registered rule",
+   "result": "shown in AI agents, AI-AI, AI-human, inventory (+1.36 %, 8/8), energy (+5.79 %, 12/16), satellite (+1.50 %, 8/8), robotics (14.3 % less control effort); four after Holm correction across units",
+   "baseline": "standard method per domain",
+   "criteria": "shown in 7 of 10; not shown: quantum measurement, neural sensing; classification undecided",
+   "source": "https://github.com/r-a-elu-architecture/rsos-one-seed/blob/main/real/RESULTS_REAL3.md",
+   "paper": "https://doi.org/10.5281/zenodo.24555154"
+  },
+  {
+   "id": "STRUCT1",
+   "area": "five rows",
+   "claim": "Does the general structure alone (domain-written levers off) beat plain rollout?",
+   "result": "no row passed",
+   "baseline": "plain rollout",
+   "criteria": "not met",
+   "source": "https://github.com/r-a-elu-architecture/rsos-one-seed/blob/main/real/results_cloud/struct1/RESULTS_STRUCT1.md",
+   "caveat": "the gains come from the domain-written levers",
+   "paper": "https://doi.org/10.5281/zenodo.24555154"
+  },
+  {
+   "id": "CONF4",
+   "area": "four rows",
+   "claim": "Do programs written by an AI given the RSOS sources beat programs by the same AI without them?",
+   "result": "AI agents (ReAct) 6.7k vs 12.0k tokens (-44 %), accuracy 0.93 vs 0.91, Holm p 4.9e-16, 39/40; other rows no difference",
+   "baseline": "same AI without the RSOS sources (same compiled operator channels in both arms)",
+   "criteria": "not met (1 of 4 rows)",
+   "cells": 254,
+   "source": "https://github.com/r-a-elu-architecture/rsos-one-seed/blob/main/real/RESULTS_CONF4.md",
+   "paper": "https://doi.org/10.5281/zenodo.24555154"
+  },
+  {
+   "id": "ABL1",
+   "area": "three rows",
+   "claim": "Does switching off one operator cost the gain?",
+   "result": "full RSOS beat the standard in every row (p 1e-25, 3e-16, 2e-15), but the operators switched off were barely chosen",
+   "baseline": "full RSOS with one operator off",
+   "criteria": "not met (0 of 3); design error disclosed",
+   "cells": 238,
+   "source": "https://github.com/r-a-elu-architecture/rsos-one-seed/blob/main/real/RESULTS_ABL1.md",
+   "paper": "https://doi.org/10.5281/zenodo.24555154"
+  },
+  {
+   "id": "BP-main",
+   "area": "LLM agents editing shared state",
+   "claim": "Blind planning: the model names keys, a runtime computes values",
+   "result": "318 of 320 pre-registered tasks exact across six models from four companies, at 0.45-0.61x the cost per correct task; the 2 failures were refused by the runtime, none silent",
+   "baseline": "one-call JSON Patch",
+   "criteria": "met",
+   "cells": 320,
+   "source": "https://r-a-elu-architecture.github.io/RSOS-Language/results.html",
+   "paper": "https://doi.org/10.5281/zenodo.24555298"
+  },
+  {
+   "id": "BP-A9",
+   "area": "LLM agents editing shared state",
+   "claim": "Against the strongest rival patterns, tasks drawn from a public randomness beacon after predictions were public",
+   "result": "blind planning 48/48 exact; Python that sees the state 48/48; blind Python 47/48; one-call JSON Patch 46/48 (bad steps in the last quarter); tool-calling agent 15/16 at about 100 calls per task",
+   "baseline": "tool-calling agent, code-as-action, JSON Patch",
+   "criteria": "met",
+   "cells": "48 per arm",
+   "source": "https://r-a-elu-architecture.github.io/RSOS-Language/results.html",
+   "caveat": "not more compact than plain Python",
+   "paper": "https://doi.org/10.5281/zenodo.24555298"
+  },
+  {
+   "id": "BP-error-window",
+   "area": "LLM agents and SQLite",
+   "claim": "Failures follow the number of independent error windows an operation spans",
+   "result": "one-call JSON Patch per-step error 0.19 % (first quarter of a plan) to 2.33 % (last), Mantel-Haenszel OR 12.3 (95 % CI 6.1-24.7); blind planning flat; SQLite failure 30.7 % to 72.0 % across lock cycles",
+   "baseline": "one-call JSON Patch",
+   "criteria": "met; 26 of 76 agent predictions failed and are reported",
+   "source": "https://r-a-elu-architecture.github.io/RSOS-Language/results.html",
+   "paper": "https://doi.org/10.5281/zenodo.24555298"
+  },
+  {
+   "id": "SRCX5-v14",
+   "area": "protocol",
+   "claim": "SRC-X.5 v1.4 launch tests",
+   "result": "all seven criteria met: six carriers byte-identical (incl. delay-tolerant link with 30 % loss); failover with 2 of 3 mirrors down; interfaces conform; MCP agent verify/reject; 600/600 invalid quarantined, 0/200 valid blocked; 400 hostile requests, no failure; head time-stamped on Bitcoin",
+   "baseline": "pre-registered criteria",
+   "criteria": "all met",
+   "source": "https://github.com/r-a-elu-architecture/srcx5/blob/main/tests/v14/RESULTS_V14.md",
+   "paper": "https://doi.org/10.5281/zenodo.24555259"
+  },
+  {
+   "id": "SRCX5-v15",
+   "area": "protocol",
+   "claim": "SRC-X.5 v1.5: MCP over HTTP, A2A, install, convergence across nodes, submission by issue",
+   "result": "8 of 8 local tests met (one after a disclosed fix); deployment checks 3 of 4 met, IPFS id met only in an alternative form",
+   "baseline": "pre-registered criteria",
+   "criteria": "partly met",
+   "source": "https://github.com/r-a-elu-architecture/srcx5/blob/main/tests/v15/RESULTS_V15.md",
+   "paper": "https://doi.org/10.5281/zenodo.24555259"
+  }
+ ]
+}

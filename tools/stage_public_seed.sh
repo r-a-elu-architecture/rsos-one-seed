@@ -25,8 +25,9 @@ for p in paper/WHITEPAPER_DRAFT.md paper/PAPER_1_ONE_SELECTOR.md paper/PAPER_2_S
          .github/workflows/rsos_tle_freeze.yml protocol; do
   [ -e "$p" ] && cp -r --parents "$p" "$OUT/"
 done
-cp CITATION_RELEASE.cff "$OUT/CITATION.cff"; cp ZENODO_RELEASE.json "$OUT/.zenodo.json"   # the release cites paper 1; the language CITATION stays in RSOS-Language
-python3 tools/build_public_site.py "$OUT/site"; cp site/seed/mark.svg "$OUT/site/mark.svg"
+cp CITATION_RELEASE.cff "$OUT/CITATION.cff"; cp public_claims/CLAIMS.md public_claims/claims.json public_claims/llms.txt "$OUT/"; cp ZENODO_RELEASE.json "$OUT/.zenodo.json"   # the release cites paper 1; the language CITATION stays in RSOS-Language
+python3 tools/build_public_site.py "$OUT/site"
+cp public_claims/llms.txt public_claims/claims.json "$OUT/site/"; cp site/seed/mark.svg "$OUT/site/mark.svg"
 mkdir -p "$OUT/.github/workflows"; cp .github/workflows/site_pages.yml "$OUT/.github/workflows/"
 cd "$OUT"
 rm -rf corpus real/out3/_tmp experiments/genealogy 2>/dev/null || true
