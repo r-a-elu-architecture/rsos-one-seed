@@ -43,8 +43,7 @@ operators. Every test was pre-registered, fingerprinted and pushed before it ran
   AI agents, 44 % fewer tokens, p 4.9e-16) and ABL1 (single operators switched off: NOT SHOWN; the operators chosen were
   barely used, a design error disclosed in §5.7).
 
-Each pre-registration fixes its pass criteria before the run. This paper reports whether they were met (all, partly, or not), with the numbers; it does not rank results. The sealed analysis files name the outcomes UNPRECEDENTED, STRONG and NOT SHOWN; those are internal labels for all, partly and not met, nothing more. They measure statistical certainty and operator lineage, not novelty
-against prior art. The individual mechanisms have relatives in recent work (§7); what we found no precedent for is one
+Each pre-registration fixes its pass criteria before the run. This paper reports whether they were met (all, partly, or not), with the numbers; it does not rank results. Meeting a criterion measures statistical certainty and operator lineage, not novelty against prior art. The individual mechanisms have relatives in recent work (§7); what we found no precedent for is one
 operator language bound unchanged across hosts this unrelated, sealed-tested against each host's standard and against
 plain rollout. The claim is a sealed, replicated selection discipline over domain-written and language-composed
 candidates, not one algorithm that is best in any field.
@@ -173,6 +172,7 @@ standard method at the same state.
     but does not prove it.
   - Until the AI-agent units are re-run with the stores cleared per job, their intervals assume an independence that
     did not fully hold. Other domains do not use these stores.
+- **Outcome labels in the sealed files.** The analysis scripts were sealed with fixed labels for their outcomes: UNPRECEDENTED, STRONG and NOT SHOWN. They mean that the pre-registered criteria were met in all, part or none of the rows, nothing more, and this paper uses only the latter wording.
 - **Pass rules (REAL3).** Two looks, Bonferroni: two-sided 97.5 % paired-t intervals.
   - Priced and fixed-budget units are SHOWN if mean result gain > 0 and the lower bound > 0.
   - Free-resource units are SHOWN if mean resource saved > 0 with lower bound > 0, and the result is not worse: mean
