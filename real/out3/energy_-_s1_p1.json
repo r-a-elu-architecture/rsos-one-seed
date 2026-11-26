@@ -1,0 +1,86 @@
+{
+ "row": "energy",
+ "model": "-",
+ "stage": 1,
+ "pair": 1,
+ "cells": {
+  "std|203": {
+   "default": {
+    "result": 7.692734865117059,
+    "resource": 140.4807203323566,
+    "R": 0.05476007559554923,
+    "choices": {
+     "present|standard": 168
+    }
+   },
+   "seed3v1": {
+    "result": 7.327032128741261,
+    "resource": 87.74901510021509,
+    "R": 0.08349987883480303,
+    "choices": {
+     "P4P5:scenario_mpc|policy": 131,
+     "P2:price_on_wear|policy": 14,
+     "P2:price_on_wear|own": 1,
+     "P4P5:scenario_mpc|standard": 16,
+     "future+1|standard": 1,
+     "F:coupled_hours:realpast_day_paths|policy": 1,
+     "P5:soc_dp_realpast_tree|policy": 2,
+     "P4P5:scenario_mpc|own": 2
+    },
+    "policy_fallback_steps": 0
+   },
+   "strongest": {
+    "result": 7.675453503020393,
+    "resource": 85.21972031954151,
+    "R": 0.09006663568291899,
+    "choices": {
+     "present|standard": 168
+    }
+   },
+   "sec": 8856
+  },
+  "std|204": {
+   "default": {
+    "result": 9.360266095679261,
+    "resource": 156.81645741111424,
+    "R": 0.05968930972047236,
+    "choices": {
+     "present|standard": 168
+    }
+   },
+   "seed3v1": {
+    "result": 10.697650906609656,
+    "resource": 119.01613055759667,
+    "R": 0.0898840422427667,
+    "choices": {
+     "P4P5:scenario_mpc|policy": 82,
+     "P4P5:scenario_mpc|standard": 2,
+     "F:coupled_hours:realpast_day_paths|policy": 15,
+     "charge_half|own": 1,
+     "past-2|own": 1,
+     "present|own": 1,
+     "F:coupled_hours:realpast_day_paths|own": 5,
+     "present|standard": 4,
+     "F:coupled_hours:realpast_day_paths|standard": 7,
+     "charge_half|standard": 1,
+     "P2:price_on_wear|policy": 23,
+     "P5:soc_dp_realpast_tree|policy": 6,
+     "past-1|own": 6,
+     "P2:price_on_wear|standard": 1,
+     "P4P5:scenario_mpc|own": 11,
+     "P2:price_on_wear|own": 2
+    },
+    "policy_fallback_steps": 0
+   },
+   "strongest": {
+    "result": 11.246780541433274,
+    "resource": 123.59122457781729,
+    "R": 0.09099983093340025,
+    "choices": {
+     "present|standard": 168
+    }
+   },
+   "sec": 8770
+  }
+ }
+}

@@ -1,0 +1,16 @@
+cell 1 seed     result 0.62178 resource 240 R 2.5907e-03 [STAND-IN (interface check only)] choices {'focus_shank1|standard': 1, 'present|own': 53, 'latent|own': 3, 'past-2|own': 1, 'focus_shank3|own': 1, 'past-1|own': 1}
+cell 1 default  result 0.64801 resource 240 R 2.7001e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 1 uniform  result 0.26149 resource 240 R 1.0896e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 1 time 23.4s
+cell 2 seed     result 0.26957 resource 240 R 1.1232e-03 [STAND-IN (interface check only)] choices {'focus_shank2|standard': 1, 'present|own': 20, 'focus_shank0|own': 4, 'latent|own': 12, 'focus_shank1|own': 3, 'focus_shank3|own': 4, 'past-1|own': 10, 'focus_shank2|own': 3, 'past-2|own': 3}
+cell 2 default  result 0.27674 resource 240 R 1.1531e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 2 uniform  result 0.14518 resource 240 R 6.0491e-04 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 2 time 12.0s
+cell 3 seed     result 0.32112 resource 240 R 1.3380e-03 [STAND-IN (interface check only)] choices {'focus_shank2|standard': 1, 'present|own': 29, 'focus_shank3|own': 10, 'latent|own': 9, 'past-2|own': 4, 'focus_shank1|own': 1, 'past-1|own': 2, 'focus_shank0|own': 3, 'focus_shank2|own': 1}
+cell 3 default  result 0.30576 resource 240 R 1.2740e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 3 uniform  result 0.14288 resource 240 R 5.9533e-04 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 3 time 12.2s
+cell 4 seed     result 0.30059 resource 240 R 1.2525e-03 [STAND-IN (interface check only)] choices {'present|standard': 1, 'present|own': 30, 'latent|standard': 1, 'latent|own': 8, 'focus_shank0|own': 6, 'past-2|own': 1, 'focus_shank1|own': 6, 'focus_shank2|own': 4, 'past-1|own': 3}
+cell 4 default  result 0.30947 resource 240 R 1.2894e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 4 uniform  result 0.17175 resource 240 R 7.1563e-04 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 4 time 13.0s

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>One Selector, Many Domains</title>
+<meta name="description" content="One shared decision structure, sealed and rerunnable across real domains: fewer tokens and higher accuracy in AI agents and AI-to-AI work, better satellite schedules, and SRC-X.5, an open protocol for sealed claims that any field can use from day one.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="One Selector, Many Domains">
+<meta property="og:description" content="Sealed, rerunnable results across domains, and SRC-X.5: an open protocol for sealed claims, for any field.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "ScholarlyArticle", "name": "One Selector, Many Domains", "about": ["decision-making", "AI agents", "multi-agent communication", "satellite scheduling", "pre-registration", "reproducibility"], "isAccessibleForFree": true, "license": "https://creativecommons.org/licenses/by/4.0/"}, {"@type": "SoftwareSourceCode", "name": "SRC-X.5", "alternateName": "srcx5", "description": "An open record of sealed claims, verified at the source: specification, a one-file reference node and an append-only, hash-chained public log. Carries no domain content, so any field can use it.", "programmingLanguage": "Python", "license": "https://www.apache.org/licenses/LICENSE-2.0", "version": "1.3"}, {"@type": "Dataset", "name": "Sealed test results (REAL3, STRUCT1, CONF1-CONF6, ABL1)", "description": "Pre-registered, fingerprinted results on fresh cells, each with its pass criteria fixed before the run and the outcome reported as met in all, part or none.", "isAccessibleForFree": true, "license": "https://www.apache.org/licenses/LICENSE-2.0"}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@700;800&family=Instrument+Sans:wght@400;600&display=swap">
+<style>
+/* VOICE: a sober research report: finding first, evidence one click away, limits stated beside the claims.
+   IDEA: an annual report whose cover is the evidence: a ledger of what the seed saved, cell-sealed.
+   PICTURE: a ledger of bars, standard = full width, seed = what is left; the accent = what was saved.
+   COLOUR (owner, 26 Nov): professional and quiet. One accent (deep Carina teal) for figures, charts and met criteria;
+   neutral greys; deep-space ink, no black, no blue, no gradients or glow. The cosmos colours live in the mark only.
+   The language section keeps the language's own palette with its legend. TYPE: Sofia Sans Condensed 800 + Instrument Sans.
+   LAYOUT: draft banner, cover band with headline and ledger, then full-width bands per HANDOFF_STRATEGIC section 6. */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#0c0b16);--ink:light-dark(#16142a,#ecebf2);--mute:light-dark(#5f5d6e,#a9a7b8);
+--v:light-dark(#2a8a82,#8fd6cd);--vb:light-dark(#7cc4bb,#5fb3aa);--vbig:light-dark(#45a198,#8fd6cd);--tq:var(--v);--cy:var(--v);--rule:light-dark(#e7e6ec,#24222f);--panel:light-dark(#f8f8fa,#13121d);--keep:light-dark(#d9d8e0,#3a3848)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Instrument Sans",system-ui,sans-serif;overflow-x:clip}
+a{color:inherit;text-decoration-color:var(--v);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--v);outline-offset:2px}
+h1,h2,h3{font-family:"Sofia Sans Condensed","Arial Narrow",sans-serif;font-weight:800;line-height:1.05;text-wrap:balance;margin:0 0 .4em}
+h1{font-size:clamp(40px,6.4vw,76px);letter-spacing:-.01em}
+h2{font-size:clamp(30px,3.6vw,44px)}
+h3{font-size:22px;font-weight:700}
+p{max-width:68ch;margin:0 0 1em}
+.band{padding:clamp(28px,4vw,64px) max(5vw,16px)}
+.in{max-width:1240px;margin:0 auto}
+.draft{background:#16142a;color:#ecebf2;font-size:14px;padding:10px max(5vw,16px)}
+.draft b{color:#a8e0d9}
+nav.top{display:flex;flex-wrap:wrap;gap:6px 18px;padding:14px max(5vw,16px);border-bottom:1px solid var(--rule);font-size:15px;position:sticky;top:0;background:var(--bg);z-index:2}
+nav.top b{font-family:"Sofia Sans Condensed",sans-serif;font-size:20px;margin-inline-end:auto}
+nav.top a{text-decoration:none;padding:8px 0}
+nav.top a:hover{text-decoration:underline}
+.cover{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,56px);align-items:end}
+.lead{font-size:19px;color:var(--mute);max-width:44ch}
+.big{font-family:"Sofia Sans Condensed",sans-serif;font-weight:800;font-size:clamp(64px,10vw,132px);line-height:.9;color:var(--v);margin:.1em 0 .1em}
+.ledger{display:grid;gap:10px}
+.row{display:grid;grid-template-columns:minmax(0,11em) minmax(0,1fr) 4.2em;gap:10px;align-items:center;font-size:14px}
+.row a.l{text-decoration:none}.row a.l:hover{text-decoration:underline}
+.bar{height:26px;background:var(--v);position:relative;border-radius:2px;overflow:hidden}
+.bar i{position:absolute;inset:0 auto 0 0;background:var(--keep)}
+.row .n{text-align:right;font-weight:600;white-space:nowrap}
+.key{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;color:var(--mute);margin-top:8px}
+.key span::before{content:"";display:inline-block;width:12px;height:12px;margin-inline-end:6px;vertical-align:-1px}
+.key .k1::before{background:var(--keep)}.key .k2::before{background:var(--v)}
+.alt{background:var(--panel)}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,3vw,40px)}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,3vw,40px)}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{text-align:left;padding:10px 12px 10px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-weight:600;color:var(--mute);font-size:14px}
+td.s{font-weight:600;white-space:nowrap}
+#start td.s{white-space:normal}
+#start th:nth-child(1){width:28%}#start th:nth-child(2){width:28%}#start th:nth-child(3){width:24%}#start th:nth-child(4){width:20%}
+.shown{color:var(--v)}.l2{color:var(--tq)}.both{color:var(--v)}
+.sw{display:inline-block;width:12px;height:12px;border-radius:2px;margin-inline-end:6px;vertical-align:-1px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--mute);margin:10px 0 0}
+.small{font-size:14px;color:var(--mute)}
+.pill{display:inline-block;border:1px solid var(--rule);border-radius:99px;padding:2px 10px;font-size:13px;margin:0 6px 6px 0}
+pre{background:var(--panel);padding:14px;border-radius:4px;font-size:14px;overflow-x:auto}
+.alt pre{background:var(--bg)}
+footer{border-top:1px solid var(--rule)}
+@media(max-width:860px){.cover,.grid3,.grid2{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px){.row{grid-template-columns:minmax(0,1fr) 3.6em}.row .bar{grid-column:1/-1;grid-row:2}
+table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px;border-bottom:1px solid var(--rule)}.stack td{display:flow-root;border:0;padding:3px 0;padding-inline-start:8em;text-align:start}.stack td::before{content:attr(data-l);float:inline-start;width:7.5em;margin-inline-start:-8em;white-space:normal;color:var(--mute)}.stack td:empty{display:none}}
+@media(prefers-reduced-motion:no-preference){.bar i{transition:width .9s ease}}
+pre,.scroll{overflow-x:auto}code{overflow-wrap:anywhere}html{scroll-padding-top:72px}
+
+/* THE THREAD (owner, 26 Nov): one line runs down the page, thin and grey at the problem, widening and rising through the
+   colours to turquoise at the whole. Each section carries one colour from its meaning: grey = where it starts, red =
+   energy and action, blue = order, law and the seal, orange = measurable results, green = everyone together, yellow =
+   systems and integration, turquoise = the whole. Accents only. Hues recombined from the owner's space images:
+   dust grey, crimson, deep violet (for order), amber dust, Carina green, starlight gold, Carina teal. */
+:root{--beige:#d8c9a8;--purple:#a993c4;--red:#d58b96;--blue:#8fa9d6;--orange:#e2b585;--green:#8cc7ae;--yellow:#dccb8a;--turq:#7cc4bb;--cyan:#8fd3e0;--open:linear-gradient(#8fd3e0,#b9c8ee 50%,#d8c3ea)}
+.brand{display:inline-flex;align-items:center;gap:10px}.mark{flex:none}
+.band[data-c]{position:relative}
+.band[data-c]::before{content:"";position:absolute;inset-block:0;left:max(1.4vw,5px);width:calc(var(--w) * .55);opacity:.8;
+ background:linear-gradient(var(--p),var(--c) 38%)}
+.band[data-c] h2::before{content:"";display:block;width:40px;height:4px;border-radius:2px;background:var(--c);margin-bottom:16px;opacity:.8}
+@media(max-width:600px){.band[data-c]::before{left:4px;width:calc(var(--w) * .6)}}
+@media print{.band[data-c]::before{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+
+/* PROFESSIONAL (owner, 26 Nov): one accent for figures and charts (deep Carina teal), neutral greys, deep-space ink;
+   no gradients, no glow. Colour from the cosmos images lives in the mark. */
+.hero{position:relative}
+.mark{color:var(--ink)}
+.hero .cover{align-items:center}
+.bar{height:12px;border-radius:2px;background:var(--vb)}
+.key .k2::before{background:var(--vb)}
+.big{color:var(--vbig)}
+.big a{color:inherit}
+.bar i{border-radius:2px 0 0 2px}
+a{text-decoration-color:color-mix(in oklab,var(--ink) 35%,transparent)}
+a:hover{text-decoration-color:var(--v)}
+
+/* THE MARK'S CODE (owner, 26 Nov): the thread and the menu hairline carry the mark's sequence: the developmental
+   colours rising (beige, purple, red, blue, orange, green, yellow, turquoise, cyan) and, last, the open colour of
+   what is not yet proven. Same soft tones as the mark. */
+nav.top{border-bottom:0;box-shadow:none}
+nav.top::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;
+ background:linear-gradient(90deg,var(--beige) 0 10%,var(--purple) 10% 20%,var(--red) 20% 30%,var(--blue) 30% 40%,var(--orange) 40% 50%,
+ var(--green) 50% 60%,var(--yellow) 60% 70%,var(--turq) 70% 80%,var(--cyan) 80% 88%,#b9c8ee 88% 94%,#d8c3ea 94% 100%);opacity:.85}
+#language[data-c]::before{background:var(--open)}
+</style>
+<script>new MutationObserver(()=>{for(const c of document.querySelectorAll('.stack td:not([data-l])')){let i=0,p=c;while(p=p.previousElementSibling)i+=p.colSpan;c.dataset.l=c.closest('table').rows[0].cells[i]?.textContent||''}}).observe(document,{childList:true,subtree:true})</script>
+</head>
+<body>
+
+<nav class="top" aria-label="Sections"><b class="brand"><svg class="mark" viewBox="4 -8 56 64" width="38" height="44" aria-hidden="true" focusable="false"><line x1="15.00" y1="46.00" x2="32.00" y2="34.00" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity="0.4"/><line x1="49.00" y1="41.00" x2="32.00" y2="34.00" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity="0.4"/><line x1="31.00" y1="17.00" x2="32.00" y2="34.00" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity="0.4"/><line x1="15.00" y1="46.00" x2="8.94" y2="49.50" stroke="#d8c9a8" stroke-width="2.4" stroke-linecap="round" opacity="1"/><line x1="15.00" y1="46.00" x2="21.06" y2="49.50" stroke="#a993c4" stroke-width="2.4" stroke-linecap="round" opacity="1"/><line x1="15.00" y1="46.00" x2="15.00" y2="39.00" stroke="#d58b96" stroke-width="2.4" stroke-linecap="round" opacity="1"/><circle cx="15.00" cy="46.00" r="1.7" fill="currentColor" opacity="0.8"/><line x1="49.00" y1="41.00" x2="41.64" y2="45.25" stroke="#8fa9d6" stroke-width="2.4" stroke-linecap="round" opacity="1"/><line x1="49.00" y1="41.00" x2="56.36" y2="45.25" stroke="#e2b585" stroke-width="2.4" stroke-linecap="round" opacity="1"/><line x1="49.00" y1="41.00" x2="49.00" y2="32.50" stroke="#8cc7ae" stroke-width="2.4" stroke-linecap="round" opacity="1"/><circle cx="49.00" cy="41.00" r="1.7" fill="currentColor" opacity="0.8"/><line x1="31.00" y1="17.00" x2="22.34" y2="22.00" stroke="#dccb8a" stroke-width="2.4" stroke-linecap="round" opacity="1"/><line x1="31.00" y1="17.00" x2="39.66" y2="22.00" stroke="#7cc4bb" stroke-width="2.4" stroke-linecap="round" opacity="1"/><line x1="31.00" y1="17.00" x2="31.00" y2="7.00" stroke="#8fd3e0" stroke-width="2.4" stroke-linecap="round" opacity="1"/><circle cx="31.00" cy="17.00" r="1.7" fill="currentColor" opacity="0.8"/><circle cx="6.34" cy="51.00" r="1.1" fill="#d8c9a8" opacity="0.9"/><circle cx="4.09" cy="52.30" r="0.85" fill="#d8c9a8" opacity="0.68"/><circle cx="2.01" cy="53.50" r="0.6" fill="#d8c9a8" opacity="0.46"/><circle cx="39.04" cy="46.75" r="1.1" fill="#8fa9d6" opacity="0.9"/><circle cx="36.79" cy="48.05" r="0.85" fill="#8fa9d6" opacity="0.68"/><circle cx="34.71" cy="49.25" r="0.6" fill="#8fa9d6" opacity="0.46"/><circle cx="31.00" cy="3.40" r="1.25" fill="#a8d8e8" opacity="0.95"/><circle cx="31.00" cy="0.00" r="1.0" fill="#b9c8ee" opacity="0.75"/><circle cx="31.00" cy="-3.40" r="0.8" fill="#c9bdf0" opacity="0.5499999999999999"/><circle cx="32" cy="34" r="4.2" fill="none" stroke="#7cc4bb" stroke-width="2"/><circle cx="32.00" cy="34.00" r="1.7" fill="#7cc4bb" opacity="1"/></svg>One Selector</b><a href="#problem">Problem</a><a href="#how">How it works</a><a href="#evidence">Evidence</a><a href="#ai">For AI teams</a><a href="#ops">For operations</a><a href="#start">Start</a><a href="#open">Open core</a><a href="#paper">Paper</a><a href="#purpose">Purpose</a><a href="#pilot">Pilot</a><a href="#language">Language</a></nav>
+
+<main>
+<section class="band hero"><div class="in cover">
+ <div>
+  <h1>Fewer tokens, sealed and rerunnable.</h1>
+  <p class="big"><a id="hero-range" style="text-decoration:none"></a></p>
+  <p class="lead">One shared decision selector over candidate actions written for each domain, sealed against each domain's
+  standard method. It beats the standard in <a id="hero-count"></a>; four after a correction across units. Every number links to its sealed file.</p>
+ </div>
+ <div class="cov2">
+  <div class="ledger" id="ledger" role="list" aria-label="Tokens used by the seed, as a share of the standard method"></div>
+  <div class="key"><span class="k1">tokens the seed used</span><span class="k2">tokens saved against the standard</span></div>
+  <p class="small">AI agents: accuracy not worse, wide intervals; the gain is mainly a plan-then-execute candidate. Llama 8B agent rows are in the paper only: their baseline is near zero accuracy. AI–human: scored by a word-overlap proxy. See <a data-p="paper-51" href="#">paper §5.1</a>.</p>
+ </div>
+</div></section>
+
+<section class="band alt" id="planning"><div class="in">
+ <h2>Against planning without RSOS</h2>
+ <p>Plain rollout, valuing each option in its futures, is the established planning method, and the hardest baseline
+ we have used. Each test below was sealed and pushed before its first cell ran, on fresh cells, with its levels fixed in advance.</p>
+ <table class="stack"><thead><tr><th>Host</th><th>Sealed test</th><th>RSOS against plain rollout</th><th>Pre-registered criteria</th></tr></thead><tbody>
+ <tr><td>Two AI models solving a split-information question</td><td>CONF6, 200 cells</td><td><a data-f="real/RESULTS_CONF6.md" href="#">accuracy 1.000 vs 0.875, 51 % fewer tokens (p 1e-7, 5e-28)</a></td><td class="s shown">all pre-registered criteria met</td></tr>
+ <tr><td>AI agents, self-consistency</td><td>CONF5, 48 cells</td><td><a data-f="real/RESULTS_CONF5.md" href="#">43 % fewer tokens at accuracy 0.95 vs 0.83 (p 2e-13)</a></td><td class="s">criteria met in 2 of 3 rows</td></tr>
+ <tr><td>Satellite downlink</td><td>CONF5, 20 cells</td><td><a data-f="real/RESULTS_CONF5.md" href="#">+0.74 %, all 20 cells (p 2e-8)</a></td><td class="s">(same test)</td></tr>
+ </tbody></table>
+ <p>Every sealed test is also a record in <b>SRC-X.5</b>, the open protocol for sealed claims: a hash-chained log that
+ anyone can verify in the browser, copy as a node, and add to. Before launch its checks quarantined 600 of 600 forged, tampered, back-dated
+ and personal-data records and blocked 0 of 200 valid ones; three live nodes converged moving only what each lacked.</p>
+ <p class="small">In CONF6 the whole two-agent system was bound to one RSOS structure: both agents follow the question's chain, and an answer counts only when the agent's own facts hold the whole chain. Rerun: <code>bash reproduce_conf6.sh</code>. Details and disclosures: <a data-p="paper-57" href="#">paper §5.7</a>.</p>
+</div></section>
+
+<section class="band" id="problem" data-c style="--p:var(--beige);--c:var(--beige);--w:2px"><div class="in">
+ <h2>Standard methods waste value in the same three ways</h2>
+ <div class="grid3">
+  <div><h3>Unused capacity</h3><p>Budget is spread evenly where only some parts need it, so the parts that need it get too little.</p></div>
+  <div><h3>Unneeded messages</h3><p>Agents and people resend the whole history when only one missing piece is needed.</p></div>
+  <div><h3>Unvalued futures</h3><p>Each step is chosen for now, not for what it does to the next steps and the plan as a whole.</p></div>
+ </div>
+ <p class="small">These patterns showed up in every domain tested; see <a href="#paper" data-p="paper-1">paper §1–§2</a>.</p>
+</div></section>
+
+<section class="band" id="how" data-c style="--p:var(--purple);--c:var(--red);--w:2.5px"><div class="in grid2">
+ <div>
+  <h2>How it works</h2>
+  <p>At every step the seed looks at the options the domain already has, plus its own past and planned actions, actions
+  focused on one part, and actions on parts that drive each other. It values each one in the unit's own possible
+  futures, as a whole plan, and takes it only if it is at least as good as the standard action in those same futures.</p>
+  <p>Three habits follow: see the whole and value each option in its own future; act only where it is needed; say only
+  what is missing.</p>
+ </div>
+ <div>
+  <h3>What is claimed, and what is not</h3>
+  <p>Claimed: one sealed selection discipline across domains, replicated on fresh cells. The selector is shared; the candidate actions are written per domain. A sealed ablation found the bare structure alone no better than plain rollout; with its operators bound, the structure beats plain rollout in three hosts (CONF5, CONF6).</p>
+  <p>Not claimed: the best method in every field, production-scale savings, or anything beyond the sealed runs. In
+  REAL3 the comparisons with stronger methods are unequal in information or architecture; see <a data-p="paper-7" href="#">paper §7</a>.</p>
+  <p class="small">Each part of the seed has prior art (rollout, scenario MPC, plan reuse, early-stopping self-consistency,
+  receiver-relative messaging, answering on sufficient evidence): <a data-f="real/PRIOR_ART_REAL.md" href="#">prior-art search</a>,
+  <a data-f="paper/PRIOR_ART_26NOV.md" href="#">update of 26 Nov</a>. Not found: one operator language bound across hosts this unrelated.</p>
+ </div>
+</div></section>
+
+<section class="band alt" id="evidence" data-c style="--p:var(--red);--c:var(--blue);--w:3px"><div class="in">
+ <h2>The sealed table</h2>
+ <p class="legend"><span><i class="sw" style="background:var(--vb)"></i>coloured status: pre-registered criteria met against the standard, on real data</span></p>
+ <p>REAL3, fresh cells 201–216, two looks, 97.5 % intervals. Pre-registered and hashed before the run:
+ <a data-f="real/PREREG_REAL3.md" href="#">pre-registration</a>, <a data-f="real/SEAL_REAL3_FIX1.txt" href="#">fingerprints</a>,
+ <a data-f="real/RESULTS_REAL3.md" href="#">results</a>.</p>
+ <table class="stack" id="table"><thead><tr><th>Domain</th><th>Status</th><th>Against the standard</th><th>Against the stronger method</th><th>Sources</th></tr></thead><tbody></tbody></table>
+ <h3 style="margin-top:28px">All confirmations, levels fixed before each run</h3>
+ <table class="stack"><thead><tr><th>Test</th><th>Claim</th><th>Pre-registered criteria</th><th>Headline</th></tr></thead><tbody>
+ <tr><td>CONF1</td><td>full seed beats the standard in 4 domains at p &lt; 1e-5</td><td class="s shown">all pre-registered criteria met</td><td><a data-f="real/RESULTS_CONF1.md" href="#">AI agents, AI–human, inventory, satellite; p 5e-27 to 1e-9</a></td></tr>
+ <tr><td>CONF3</td><td>communication principle: fewer tokens at equal or better results, p &lt; 1e-7</td><td class="s shown">all pre-registered criteria met</td><td><a data-f="real/RESULTS_CONF3.md" href="#">25–61 % fewer tokens in AI agents, AI–human, AI–AI</a></td></tr>
+ <tr><td>CONF3</td><td>moves composed in the RSOS language beat the standard</td><td class="s shown">all pre-registered criteria met</td><td><a data-f="real/RESULTS_CONF3.md" href="#">AI–AI, satellite; AI agents mostly via the shared structure</a></td></tr>
+ <tr><td>CONF3</td><td>cross-domain, 5 rows at p &lt; 1e-5</td><td class="s">criteria met in 4 of 5</td><td><a data-f="real/RESULTS_CONF3.md" href="#">inventory just above the threshold</a></td></tr>
+ <tr><td>CONF2</td><td>one move per operator, written from the language</td><td class="s">not met</td><td><a data-f="real/RESULTS_CONF2.md" href="#">corrected in CONF3 by composition</a></td></tr>
+ <tr><td>CONF4</td><td>programs by an AI given the RSOS sources vs the same AI without them</td><td class="s">not met (1 of 4)</td><td><a data-f="real/RESULTS_CONF4.md" href="#">AI agents 44 % fewer tokens (p 5e-16); other rows no difference</a></td></tr>
+ <tr><td>ABL1</td><td>one operator switched off per row</td><td class="s">not met</td><td><a data-f="real/RESULTS_ABL1.md" href="#">the switched operators were barely used: a design error, disclosed</a></td></tr>
+ <tr><td>CONF5</td><td>the identified RSOS structure vs plain rollout</td><td class="s">criteria met in 2 of 3</td><td><a data-f="real/RESULTS_CONF5.md" href="#">AI agents and satellite pass; AI–AI not on tokens</a></td></tr>
+ <tr><td>CONF6</td><td>the whole AI–AI system bound to one structure vs plain rollout</td><td class="s shown">all pre-registered criteria met</td><td><a data-f="real/RESULTS_CONF6.md" href="#">accuracy 1.000 vs 0.875, 51 % fewer tokens</a></td></tr>
+ </tbody></table>
+ <p class="small">Criteria are fixed before each run; this table reports whether they were met and ranks nothing (<a data-p="paper-56" href="#">paper §5.6</a>, <a data-p="paper-57" href="#">§5.7</a>).</p>
+ <h3 style="margin-top:28px">Replicated on fresh cells, and what the ablation showed</h3>
+ <p>A second sealed run (STRUCT1, cells 301–308) repeated the full seed with an earlier flaw fixed and found the same:
+ <a data-f="real/results_cloud/struct1/RESULTS_STRUCT1.md" href="#">45–57 % fewer tokens in AI agents with higher accuracy,
+ 43 % in AI–human replies, +1.3 % in inventory and satellite downlink</a>. The same run switched off every candidate
+ written for a specific domain: the general structure alone then did no better than plain rollout in any row
+ (pre-registered level: <b>not met</b>). The gains come from the domain-written candidates the seed selects among
+ (<a data-p="paper-54" href="#">paper §5.4</a>).</p>
+ <p class="small">Earlier sealed evidence: REAL1 and REAL1b with an earlier seed (<a data-f="real/results_cloud/RESULTS_REAL1.md" href="#">REAL1</a>,
+ <a data-f="real/results_cloud/RESULTS_REAL1B.md" href="#">REAL1b</a>); a controlled simulated world
+ (<a data-f="seal2/RESULTS_SEAL2_cloud.md" href="#">SEAL2</a>, <a data-f="seal1/RESULTS_SEAL1.md" href="#">SEAL1</a>, 13 of 15 rows);
+ blind planning, 256 of 256 tasks exact across six models (<a data-f="README_PUBLIC.md" href="#">report</a>).
+ Limits and every disclosed fix: <a data-p="paper-8" href="#">paper §8</a>.</p>
+</div></section>
+
+<section class="band" id="ai" data-c style="--p:var(--blue);--c:var(--orange);--w:3.5px"><div class="in grid2">
+ <div>
+  <h2>For AI teams</h2>
+  <p>The seed sits on top of an existing agent stack and decides which calls and messages are worth making. In the sealed
+  run, agents on gpt-oss-20b used <a id="ai-std"></a> fewer tokens than ReAct or self-consistency, with accuracy not worse
+  (wide intervals). Most of that comes from planning the whole task in one call and executing it deterministically. Against
+  early-stopping self-consistency the saving was <a id="ai-str"></a>, a comparison of two different architectures.</p>
+  <p>Measure it on your own workload with the open benchmark; the comparison is sealed the same way.</p>
+ </div>
+ <div>
+  <h3>Rerun one cell</h3>
+<pre><code>sha256sum -c &lt;(grep -v '^#' real/SEAL_REAL3_FIX1.txt)
+PYTHONPATH=experiments/sec1 \
+  python cloud/real3_unit_fix1.py ai_agents \
+  openrouter:openai/gpt-oss-20b 0 1</code></pre>
+  <p class="small">Needs an OpenRouter key. Other domains run offline after their data-fetch scripts.</p>
+ </div>
+</div></section>
+
+<section class="band alt" id="ops" data-c style="--p:var(--orange);--c:var(--orange);--w:4px"><div class="in">
+ <h2>For operations, where one per cent is large</h2>
+ <div class="grid3" id="opsgrid"></div>
+ <p class="small">Domains judged at a fixed budget are judged on result only; satellite downlink used 13.5 % more contact
+ capacity and inventory 3.5 % more capital (<a data-p="paper-8" href="#">paper §8</a>).</p>
+</div></section>
+
+<section class="band" id="start" data-c style="--p:var(--orange);--c:var(--green);--w:4.5px"><div class="in">
+ <h2>Start where you are</h2>
+ <p>The seed carries no field of its own, so it can be planted in any field. Where it has been grown, the sealed results
+ are above. Everywhere else it is ready on the first day, and every field that grows it adds its results to the same open
+ record, linked by lineage, so the fields grow together.</p>
+ <table class="stack"><thead><tr><th>Who</th><th>What it gives on day one</th><th>First step</th><th>Status</th></tr></thead><tbody>
+ <tr><td>AI labs, agent and ML teams</td><td>Fewer tokens and higher accuracy in agent and multi-agent work</td><td><code>bash reproduce_conf6.sh</code>, then one workload of your own</td><td class="s shown">Grown: CONF5, CONF6</td></tr>
+ <tr><td>Space, satellite and operations teams</td><td>Better schedules where one per cent is large</td><td>Rerun the satellite row, then seal your own schedule test</td><td class="s shown">Grown: +0.74 %, 20 of 20 cells</td></tr>
+ <tr><td>Universities and research centres, in every science</td><td>Pre-register a study, seal it, receive replications</td><td><code>python srcx5.py create</code>, then submit the record</td><td class="s">Ready: protocol proven at launch</td></tr>
+ <tr><td>Companies and corporations</td><td>Benchmark and vendor claims anyone can check</td><td>Seal the claim before the run; publish the record</td><td class="s">Ready: protocol proven at launch</td></tr>
+ <tr><td>Institutions and public bodies</td><td>A forecast sealed before a decision, audited after it</td><td>Create a forecast record</td><td class="s">Ready: protocol proven at launch</td></tr>
+ <tr><td>Individuals</td><td>Check any record in the browser; add a replication</td><td>Open the viewer</td><td class="s">Ready at launch</td></tr>
+ <tr><td>Distributed and delay-tolerant networks, up to interplanetary links</td><td>A shared log where each node syncs only what it lacks</td><td><code>python srcx5.py serve --peer &lt;node&gt;</code></td><td class="s">Ready: a full copy moved 50.3 % of the bytes, a re-check 0.86 % (local nodes)</td></tr>
+ <tr><td>Every other field: biology, chemistry, physics, mathematics, robotics, socio-technical and cybernetic systems, discovery and invention</td><td>The same seed on your own problem, sealed to the same standard</td><td>Bring one workload</td><td class="s">Seed ready for your field</td></tr>
+ </tbody></table>
+</div></section>
+
+<section class="band" id="open" data-c style="--p:var(--green);--c:var(--yellow);--w:5px"><div class="in grid2">
+ <div><h2>Open core</h2>
+ <p>The seed, the hosts, every sealed cell and the analysis scripts, under Apache 2.0. Third-party data is fetched at run
+ time, not redistributed (<a data-f="public_kit/DATA_LICENCES.md" href="#">data and licences</a>).</p></div>
+ <div><h3>The sealing protocol: SRC-X.5</h3>
+ <p>Pre-registration, fingerprints of every file, fresh cells, paired comparisons with intervals, every cell rerunnable,
+ every fix disclosed. The method above, as an open protocol: a specification, a one-file node and a public log anyone
+ can join. It carries no domain content, so a benchmark, a clinical protocol or a forecast is sealed the same way.
+ Apache 2.0 (<a data-f="protocol/SPEC_SRCX5.md" href="#">specification</a>).</p></div>
+</div></section>
+
+<section class="band alt" id="paper" data-c style="--p:var(--yellow);--c:var(--yellow);--w:5.5px"><div class="in">
+ <h2>The paper</h2>
+ <p><a data-p="paper-0" href="#">One Seed, Many Domains</a>: method, the controlled world (SEAL2, SEAL1), the real world (REAL1, REAL3),
+ the communication principle, prior art, limits and disclosures. It states what was shown and what was not.</p>
+ <p><span class="pill">§5 real-world results</span><span class="pill">§6 simulated world</span><span class="pill">§7 prior art and reviewer questions</span><span class="pill">§8 limits and fixes</span></p>
+</div></section>
+
+<section class="band" id="purpose" data-c style="--p:var(--yellow);--c:var(--turq);--w:6px"><div class="in">
+ <h2>Where this work stands</h2>
+ <p>This work builds on what many people, cultures, sciences and tools have contributed over time, far more than could be
+ named, and it is offered back openly so that anyone, anywhere, can use, test and improve it. No source is ranked above
+ another. Its results are evidence for this work alone; they are meant to connect with other ways of knowing, not to
+ replace them.</p>
+</div></section>
+
+<section class="band alt" id="pilot" data-c style="--p:var(--turq);--c:var(--cyan);--w:6.5px"><div class="in">
+ <h2>Bring one workload</h2>
+ <p>We run a sealed comparison on it: pre-registered, fingerprinted, with the standard method you use today as the
+ baseline, and the result rerunnable by you.</p>
+ <p class="small">Open an issue titled "Pilot: &lt;your domain&gt;" at <a href="https://github.com/r-a-elu-architecture/rsos-one-seed/issues">github.com/r-a-elu-architecture/rsos-one-seed/issues</a>.</p>
+</div></section>
+
+<section class="band alt" id="language" data-c style="--p:var(--cyan);--c:var(--cyan);--w:7px"><div class="in">
+ <h2>The language behind it</h2>
+ <p>RSOS is a functional design language: symbols are components, operators act on them, and the order of objects in a
+ scene is the program. The seed tested above is one part of it. Colours in the language carry meaning:</p>
+ <p class="legend">
+  <span><i class="sw" style="background:#0f9a8a"></i>turquoise: proven in layer 2, the RSOS model world</span>
+  <span><i class="sw" style="background:#1f5fbf"></i>blue: proven in layer 1, the real world</span>
+  <span><i class="sw" style="background:#0aa6c9"></i>cyan: proven in both layers</span>
+  <span><i class="sw" style="background:#2e9e44"></i>green: done</span>
+  <span><i class="sw" style="background:#e3b505"></i>yellow: started</span>
+  <span><i class="sw" style="background:#9aa0a6"></i>grey: not started; in a design, risky but contained</span>
+  <span><i class="sw" style="background:#111"></i>black: in a design, only destructive</span>
+  <span><i class="sw" style="background:#7b4fd0"></i>violet: the family of shades, finite distinguishable units in any host</span>
+ </p>
+ <p class="small">Sources: <a data-f="LAYER_RULE.md" href="#">layer rule</a>, <a data-f="map/ROADMAP_COMPARE_21NOV_1539.md" href="#">roadmap states</a>,
+ <a data-f="spec/PAINTING_INTERFACE.md" href="#">painting interface</a>, <a data-f="map/STRUCTURAL_MAP_22NOV.md" href="#">structural map</a>.</p>
+</div></section>
+</main>
+<footer class="band"><div class="in small">Every number on this page comes from the sealed result files in <a href="https://github.com/r-a-elu-architecture/rsos-one-seed">r-a-elu-architecture/rsos-one-seed</a>. The open record: <a href="https://github.com/r-a-elu-architecture/srcx5">SRC-X.5</a>. Code: Apache 2.0.</div></footer>
+
+<script>
+{
+const REPO = "https://github.com/r-a-elu-architecture/rsos-one-seed/blob/main/";
+const PAPER = REPO + "paper/WHITEPAPER_DRAFT.md";
+const anchors = {"paper-0": "", "paper-1": "#1-the-claim-and-what-it-is-not", "paper-51": "#51-real3-main-confirmatory-run",
+  "paper-7": "#7-prior-art-and-the-reviewers-first-questions", "paper-8": "#8-limits-and-disclosures", "paper-54": "#54-struct1-the-structure-alone-an-ablation-sealed", "paper-56": "#56-confirmations-on-fresh-cells-conf1-conf2-conf3", "paper-57": "#57-against-rsos-free-planning-and-what-carries-the-gain-conf4-abl1-conf5-conf6"};
+const R3 = "real/RESULTS_REAL3.md", SUM = "real/RESULTS_REAL3_SUMMARY.md";
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+const fl = f => REPO + f, pl = k => PAPER + (anchors[k] ?? "");
+// [label, % tokens saved vs standard] from real/RESULTS_REAL3.md (resource saved, free-resource units)
+const ledger = [
+  ["Agents, gpt-oss-20b, self-consistency", 68.4], ["Agents, gpt-oss-20b, ReAct", 51.3],
+  ["AI–human, Mistral", 43.6], ["AI–human, Llama", 41.0],
+  ["AI–AI (not after Holm)", 36.9]];
+const rows = [
+  ["AI agents (gpt-oss-20b)", "SHOWN", "51–68 % fewer tokens, accuracy not worse (wide intervals)", "56–74 % fewer tokens; different architecture"],
+  ["AI–AI messaging", "SHOWN, not after Holm", "36.9 % fewer tokens; both arms at ceiling", "–"],
+  ["AI–human replies", "SHOWN", "41–44 % fewer tokens; proxy score", "–"],
+  ["Inventory", "SHOWN", "+1.36 %, 8 of 8 cells", "level (+0.00 %)"],
+  ["Energy", "SHOWN, not after Holm", "+5.79 %, 12 of 16 cells", "−1.53 %, not shown"],
+  ["Satellite downlink", "SHOWN", "+1.50 %, 8 of 8 cells", "+0.89 % vs deterministic MILP; unequal information"],
+  ["Robotics", "SHOWN, not after Holm", "14.3 % less effort, result +1.80 %", "–"],
+  ["Quantum measurement", "NOT SHOWN", "−0.39 %, 6 of 16 cells", "–"],
+  ["Neural sensing", "NOT SHOWN", "+5.85 %, interval crosses zero", "–"],
+  ["Life-science classification", "UNDECIDED", "better in 5 of 6 cells, +5.1 % accuracy with 90.9 % fewer labels; interval includes zero; one pair timed out", "–"]];
+const ops = [["Satellite downlink", "+1.50 %", "more delivered value on real orbits (synthetic data arrivals), 8 of 8 cells."],
+  ["Energy", "+5.79 %", "over rule-based time-of-use dispatch with real solar and household load, 12 of 16 cells; not significant after correction across units."],
+  ["Robotics and inventory", "+1.8 % / +1.4 %", "robotics: better result with 14.3 % less control effort; inventory: 8 of 8 cells over base-stock."]];
+const shown = rows.filter(r => r[1].startsWith("SHOWN")).length;
+const link = (el, href, text) => { el.href = href; el.textContent = text; };
+link(document.getElementById("hero-range"), fl(R3), "41–68 %");
+link(document.getElementById("hero-count"), pl("paper-51"), shown + " of 10 real domains (biology undecided)");
+link(document.getElementById("ai-std"), fl(R3), "51–68 %");
+link(document.getElementById("ai-str"), pl("paper-51"), "56–74 %");
+document.getElementById("ledger").innerHTML = ledger.map(([l, v]) =>
+  `<div class="row" role="listitem"><a class="l" href="${esc(fl(R3))}">${esc(l)}</a><div class="bar" aria-hidden="true"><i data-w="${100 - v}" style="width:100%"></i></div><a class="n" href="${esc(fl(R3))}">−${esc(v.toFixed(1))} %</a></div>`).join("");
+document.querySelector("#table tbody").innerHTML = rows.map(([d, s, a, b]) =>
+  `<tr><td>${esc(d)}</td><td class="s ${s.startsWith("SHOWN") ? "shown" : ""}">${esc(s)}</td><td><a href="${esc(fl(R3))}">${esc(a)}</a></td><td>${b === "–" ? "–" : `<a href="${esc(fl(SUM))}">${esc(b)}</a>`}</td><td><a href="${esc(pl("paper-51"))}">paper §5.1</a></td></tr>`).join("");
+document.getElementById("opsgrid").innerHTML = ops.map(([t, n, d]) =>
+  `<div><h3>${esc(t)}</h3><p class="big" style="font-size:clamp(44px,5vw,64px)"><a href="${esc(fl(R3))}" style="text-decoration:none">${esc(n)}</a></p><p>${esc(d)} <a href="${esc(pl("paper-51"))}">Paper §5.1</a>.</p></div>`).join("");
+for (const a of document.querySelectorAll("a[data-f]")) a.href = fl(a.dataset.f);
+for (const a of document.querySelectorAll("a[data-p]")) a.href = pl(a.dataset.p);
+requestAnimationFrame(() => requestAnimationFrame(() => { for (const i of document.querySelectorAll(".bar i")) i.style.width = i.dataset.w + "%"; }));
+}
+</script>
+</body>
+</html>

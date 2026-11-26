@@ -1,0 +1,46 @@
+{
+ "row": "space",
+ "model": "-",
+ "cells_run": [
+  609
+ ],
+ "generated": true,
+ "cells": {
+  "std|609": {
+   "default": {
+    "result": 488.4952566289967,
+    "resource": 14448.69009907629,
+    "R": 0.03380896491511202,
+    "choices": {
+     "present|standard": 24
+    },
+    "sec": 0.0
+   },
+   "strongest": {
+    "result": 488.8069845630511,
+    "resource": 16698.678281617264,
+    "R": 0.029272196057645722,
+    "choices": {
+     "present|standard": 24
+    },
+    "sec": 10.3
+   },
+   "generated": {
+    "result": 490.9741162124774,
+    "resource": 15352.640780053887,
+    "R": 0.031979782712714136,
+    "choices": {
+     "G:compress|policy": 18,
+     "G:zoom|policy": 1,
+     "G:compress|standard": 2,
+     "G:pierce|standard": 1,
+     "G:beam|policy": 1,
+     "G:compress|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 8.0
+   },
+   "sec": 18
+  }
+ }
+}

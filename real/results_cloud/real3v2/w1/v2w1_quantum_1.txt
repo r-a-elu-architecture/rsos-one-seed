@@ -1,0 +1,15 @@
+width_free False
+cell 1 seed3     result 0.98371 resource 2520 rmse 0.01629 joint_shots 36 choices {'op:carry|Eagle': 1, 'op:fuse|Eagle': 1, 'op:beam3|Eagle': 1, 'op:zoom|Eagle': 1, 'op:enter|Eagle': 2, 'op:pierce|Eagle': 1, 'focus_su2_Z|standard': 1, 'present|own': 1, 'P4P5:horizon-neyman|policy': 1, 'future+1|own': 1, 'P8:vote-of-futures|own': 1}
+   v2 ops_used {'beam3': 1, 'fuse': 1, 'carry': 1, 'pierce': 1, 'enter': 2, 'zoom': 1, 'colour': 12, 'rooms': 12, 'transplant': 11} rooms {'Eagle': 9, 'Owl': 0, 'Associated': 3, 'base': 0} colour {'failing': 0, 'recovering': 17, 'healthy': 55} vetoed 2 carried_shots 0
+   v2 passed_membrane {'heal': 4, 'beam1': 6, 'beam3': 2, 'contain': 0, 'compress': 0, 'inherit': 0, 'fuse': 25, 'carry': 11, 'rehost': 6, 'pierce': 12, 'overlay': 6, 'enter': 11, 'zoom': 3} tried {'heal': 12, 'beam1': 12, 'beam3': 12, 'contain': 12, 'compress': 12, 'inherit': 12, 'fuse': 12, 'carry': 12, 'rehost': 12, 'pierce': 12, 'overlay': 12, 'enter': 12, 'zoom': 12}
+   v2 rollouts v1/ops 407/257 zoom {6: 11, 12: 1} enter {1: 12, 2: 12} op_fallback 0 inherit 1 shapes 12 pool_in None pool_out /tmp/pool_quantum_1.json
+   seed3 seconds 104.5
+cell 1 seed3v1   result 0.98126 resource 2516 rmse 0.01874 joint_shots 95 choices {'focus_nlocal_Y|standard': 1, 'past-1|standard': 1, 'F:joint-greedy|policy': 1, 'present|standard': 1, 'P8:vote-of-futures|standard': 1, 'P8:vote-of-futures|policy': 2, 'P2:price-on-harm|standard': 1, 'F:joint-all|standard': 2, 'P4P5:horizon-neyman|standard': 1, 'F:joint-greedy|own': 1}
+   seed3v1 seconds 99.8
+cell 1 seed      result 0.97947 resource 2520 rmse 0.02053 joint_shots 0 choices {'land_withheld': 0, 'land_retargeted': 9, 'focus_nlocal_Y|standard': 2, 'future+2|own': 1, 'focus_realamp_XX|standard': 1, 'past-1|standard': 1, 'past-2|standard': 2, 'present|standard': 2, 'future+1|own': 2, 'future+2|standard': 1}
+cell 1 rollout   result 0.97510 resource 2520 rmse 0.02490 joint_shots 0 choices {'focus_nlocal_Y|rollout': 2, 'focus_su2_Z|rollout': 2, 'focus_realamp_XX|rollout': 3, 'present|standard': 3, 'focus_ghz_X|rollout': 1, 'focus_qaoa_ring_ZZ|rollout': 1}
+cell 1 default   result 0.97567 resource 2520 rmse 0.02433 joint_shots 0 choices {'present|standard': 12}
+cell 1 strongest result 0.97567 resource 2520 rmse 0.02433 joint_shots 0 choices {'present|standard': 12}
+cell 1 pass(result > default / > strongest): seed3=WIN/WIN seed3v1=WIN/WIN seed=WIN/WIN rollout=no/no v2-v1 +0.00245 time 208.9s
+ops_bound {"heal": "bound", "beam1": "bound", "beam3": "bound", "contain": "bound", "compress": "bound", "inherit": "bound", "fuse": "bound", "carry": "bound", "rehost": "bound", "pierce": "bound", "overlay": "bound", "enter": "bound (depth 2)", "zoom": "bound (generic)", "colour": "bound", "rooms": "bound (generic)", "transplant": "bound (generic; file: SEED3_POOL_IN / SEED3_POOL_OUT)"}
+ops_used total (v2, all cells) {'beam3': 1, 'fuse': 1, 'carry': 1, 'pierce': 1, 'enter': 2, 'zoom': 1, 'colour': 12, 'rooms': 12, 'transplant': 11}

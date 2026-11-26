@@ -1,0 +1,903 @@
+{
+ "code_commit": "0347b0e0b6a9892db1fe0f24af11e81af0ae78e6",
+ "experiment": "a3_head_to_head",
+ "model": "claude-haiku-5-5",
+ "numpy": "2.5.3",
+ "predictions": {
+  "R1": {
+   "D": 1467.875,
+   "D_with_table": 1669.875,
+   "E": 2773.25,
+   "P": 2699.4375,
+   "P_over_min_DE": 1.8390104743251299,
+   "pass": false
+  },
+  "R2": {
+   "A": "0/48",
+   "D": "0/48",
+   "E": "0/48",
+   "P": "48/48",
+   "pass": true
+  },
+  "R3": {
+   "A": 4,
+   "D": 16,
+   "E": 1,
+   "P": 16,
+   "pass": true
+  },
+  "R4": {
+   "D": {
+    "chan_ratio": null,
+    "healed": 3,
+    "status": "fail (healed drifts cost 0 extra tokens)",
+    "total_ratio": null
+   },
+   "E": {
+    "chan_ratio": 0.3942807625649913,
+    "healed": 18,
+    "status": "fail",
+    "total_ratio": 0.008660398187978225
+   },
+   "pass": false
+  }
+ },
+ "python": "3.13.18",
+ "results_sha256": "ff058345292abb4e7d062c863eeb7f90fc4d493c08fee6cdb108d4a8328ae135",
+ "run_utc": "2026-11-17T14:39:54Z",
+ "scaffold_per_call": {
+  "checker": 1395,
+  "planner": 1435,
+  "schema_extra": 529,
+  "worker": 1391
+ },
+ "seeds": [
+  100,
+  101,
+  102,
+  103,
+  104,
+  105,
+  106,
+  107,
+  300,
+  301,
+  302,
+  303,
+  304,
+  305,
+  306,
+  307
+ ],
+ "tables": {
+  "a1_seeds_100_107": {
+   "A": {
+    "billed_minus_scaffold_mean": 45870.25,
+    "billed_tok_mean": 117501.25,
+    "calls_mean": 51.0,
+    "channel_bytes_mean": 46477.75,
+    "channel_tok_ci": [
+     16682.375,
+     17710.390625
+    ],
+    "channel_tok_mean": 17244.875,
+    "cost_usd_total": 0.20745360000000002,
+    "drift_events": 24,
+    "drift_healed": 24,
+    "drift_healed_zero_call": 0,
+    "drift_in_any_copy_final": 0,
+    "drift_in_authoritative_final": 0,
+    "final_errors": {
+     "100": [
+      "cache.region"
+     ],
+     "101": [
+      "auth.timeout_ms",
+      "search.replicas"
+     ],
+     "102": [],
+     "103": [
+      "billing.log_level",
+      "billing.retries"
+     ],
+     "104": [
+      "gateway.timeout_ms"
+     ],
+     "105": [
+      "cache.replicas"
+     ],
+     "106": [],
+     "107": []
+    },
+    "line_acc_mean": 0.970764326618053,
+    "out_tok_mean": 15103.125,
+    "recovery_billed_per_healed": 7327.541666666667,
+    "recovery_chan_per_healed": 888.5,
+    "recovery_sec_per_healed": 16.23224715391795,
+    "recovery_total_per_healed": 8216.041666666666,
+    "replica_success": 3,
+    "steps_failed": 9,
+    "success": 3,
+    "tasks": 8,
+    "wall_sec_mean": 249.45406275987625,
+    "wrong_final_lines": 7
+   },
+   "D": {
+    "billed_minus_scaffold_mean": 24469.25,
+    "billed_tok_mean": 84608.0,
+    "calls_mean": 42.75,
+    "channel_bytes_mean": 5048.5,
+    "channel_tok_ci": [
+     1394.0,
+     1632.628125
+    ],
+    "channel_tok_mean": 1506.125,
+    "cost_usd_total": 0.13862828,
+    "drift_events": 24,
+    "drift_healed": 2,
+    "drift_healed_zero_call": 0,
+    "drift_in_any_copy_final": 17,
+    "drift_in_authoritative_final": 0,
+    "final_errors": {
+     "100": [],
+     "101": [],
+     "102": [],
+     "103": [],
+     "104": [],
+     "105": [],
+     "106": [],
+     "107": []
+    },
+    "line_acc_mean": 1.0,
+    "out_tok_mean": 7227.875,
+    "recovery_billed_per_healed": 0.0,
+    "recovery_chan_per_healed": 0.0,
+    "recovery_sec_per_healed": 0.0,
+    "recovery_total_per_healed": 0.0,
+    "replica_success": 0,
+    "steps_failed": 0,
+    "success": 8,
+    "tasks": 8,
+    "wall_sec_mean": 192.51754879951477,
+    "wrong_final_lines": 0
+   },
+   "E": {
+    "billed_minus_scaffold_mean": 35844.5,
+    "billed_tok_mean": 125236.25,
+    "calls_mean": 63.75,
+    "channel_bytes_mean": 10291.375,
+    "channel_tok_ci": [
+     2676.375,
+     3046.0
+    ],
+    "channel_tok_mean": 2856.0,
+    "cost_usd_total": 0.20196293,
+    "drift_events": 24,
+    "drift_healed": 9,
+    "drift_healed_zero_call": 0,
+    "drift_in_any_copy_final": 3,
+    "drift_in_authoritative_final": 1,
+    "final_errors": {
+     "100": [
+      "auth.replicas",
+      "search.retries"
+     ],
+     "101": [
+      "auth.replicas",
+      "auth.timeout_ms",
+      "search.replicas"
+     ],
+     "102": [
+      "auth.region",
+      "gateway.owner",
+      "gateway.region",
+      "search.replicas",
+      "search.retries"
+     ],
+     "103": [
+      "billing.log_level",
+      "billing.max_conn",
+      "cache.retries",
+      "gateway.owner",
+      "search.log_level"
+     ],
+     "104": [
+      "billing.replicas",
+      "gateway.log_level",
+      "gateway.timeout_ms",
+      "search.log_level"
+     ],
+     "105": [
+      "auth.retries",
+      "cache.timeout_ms",
+      "gateway.timeout_ms",
+      "search.retries",
+      "search.tier"
+     ],
+     "106": [
+      "billing.log_level",
+      "gateway.max_conn",
+      "gateway.tier",
+      "search.max_conn",
+      "search.timeout_ms"
+     ],
+     "107": []
+    },
+    "line_acc_mean": 0.8788951341370697,
+    "out_tok_mean": 8862.875,
+    "recovery_billed_per_healed": 3848.0,
+    "recovery_chan_per_healed": 87.33333333333333,
+    "recovery_sec_per_healed": 8.627798027462429,
+    "recovery_total_per_healed": 3935.3333333333335,
+    "replica_success": 1,
+    "steps_failed": 31,
+    "success": 1,
+    "tasks": 8,
+    "wall_sec_mean": 294.26328694820404,
+    "wrong_final_lines": 29
+   },
+   "P": {
+    "billed_minus_scaffold_mean": 25236.875,
+    "billed_tok_mean": 86072.125,
+    "calls_mean": 43.25,
+    "channel_bytes_mean": 10453.125,
+    "channel_tok_ci": [
+     2536.75,
+     3094.003125
+    ],
+    "channel_tok_mean": 2788.0,
+    "cost_usd_total": 0.14989934,
+    "drift_events": 24,
+    "drift_healed": 24,
+    "drift_healed_zero_call": 24,
+    "drift_in_any_copy_final": 0,
+    "drift_in_authoritative_final": 0,
+    "final_errors": {
+     "100": [],
+     "101": [],
+     "102": [],
+     "103": [],
+     "104": [],
+     "105": [],
+     "106": [],
+     "107": []
+    },
+    "line_acc_mean": 1.0,
+    "out_tok_mean": 7266.125,
+    "recovery_billed_per_healed": 0.0,
+    "recovery_chan_per_healed": 38.375,
+    "recovery_sec_per_healed": 0.00015860795974731445,
+    "recovery_total_per_healed": 38.375,
+    "replica_success": 8,
+    "steps_failed": 2,
+    "success": 8,
+    "tasks": 8,
+    "wall_sec_mean": 192.961739808321,
+    "wrong_final_lines": 0
+   }
+  },
+  "all": {
+   "A": {
+    "billed_minus_scaffold_mean": 46548.4375,
+    "billed_tok_mean": 118527.6875,
+    "calls_mean": 51.25,
+    "channel_bytes_mean": 46896.1875,
+    "channel_tok_ci": [
+     17075.1234375,
+     17760.6875
+    ],
+    "channel_tok_mean": 17441.6875,
+    "cost_usd_total": 0.41912633000000005,
+    "drift_events": 48,
+    "drift_healed": 48,
+    "drift_healed_zero_call": 0,
+    "drift_in_any_copy_final": 0,
+    "drift_in_authoritative_final": 0,
+    "final_errors": {
+     "100": [
+      "cache.region"
+     ],
+     "101": [
+      "auth.timeout_ms",
+      "search.replicas"
+     ],
+     "102": [],
+     "103": [
+      "billing.log_level",
+      "billing.retries"
+     ],
+     "104": [
+      "gateway.timeout_ms"
+     ],
+     "105": [
+      "cache.replicas"
+     ],
+     "106": [],
+     "107": [],
+     "300": [],
+     "301": [
+      "auth.log_level",
+      "gateway.owner"
+     ],
+     "302": [
+      "cache.tier"
+     ],
+     "303": [
+      "search.retries"
+     ],
+     "304": [
+      "gateway.timeout_ms"
+     ],
+     "305": [
+      "gateway.retries"
+     ],
+     "306": [
+      "auth.replicas"
+     ],
+     "307": [
+      "auth.region"
+     ]
+    },
+    "line_acc_mean": 0.9691472026414497,
+    "out_tok_mean": 15413.6875,
+    "recovery_billed_per_healed": 7356.208333333333,
+    "recovery_chan_per_healed": 901.5,
+    "recovery_sec_per_healed": 16.455342094103496,
+    "recovery_total_per_healed": 8257.708333333334,
+    "replica_success": 4,
+    "steps_failed": 17,
+    "success": 4,
+    "tasks": 16,
+    "wall_sec_mean": 250.7635961174965,
+    "wrong_final_lines": 15
+   },
+   "D": {
+    "billed_minus_scaffold_mean": 23424.5625,
+    "billed_tok_mean": 83563.3125,
+    "calls_mean": 42.75,
+    "channel_bytes_mean": 4929.6875,
+    "channel_tok_ci": [
+     1405.684375,
+     1542.190625
+    ],
+    "channel_tok_mean": 1467.875,
+    "cost_usd_total": 0.27011775,
+    "drift_events": 48,
+    "drift_healed": 3,
+    "drift_healed_zero_call": 0,
+    "drift_in_any_copy_final": 40,
+    "drift_in_authoritative_final": 0,
+    "final_errors": {
+     "100": [],
+     "101": [],
+     "102": [],
+     "103": [],
+     "104": [],
+     "105": [],
+     "106": [],
+     "107": [],
+     "300": [],
+     "301": [],
+     "302": [],
+     "303": [],
+     "304": [],
+     "305": [],
+     "306": [],
+     "307": []
+    },
+    "line_acc_mean": 1.0,
+    "out_tok_mean": 6785.25,
+    "recovery_billed_per_healed": 0.0,
+    "recovery_chan_per_healed": 0.0,
+    "recovery_sec_per_healed": 0.0,
+    "recovery_total_per_healed": 0.0,
+    "replica_success": 0,
+    "steps_failed": 0,
+    "success": 16,
+    "tasks": 16,
+    "wall_sec_mean": 190.95728632807732,
+    "wrong_final_lines": 0
+   },
+   "E": {
+    "billed_minus_scaffold_mean": 34407.875,
+    "billed_tok_mean": 122580.75,
+    "calls_mean": 62.875,
+    "channel_bytes_mean": 9880.125,
+    "channel_tok_ci": [
+     2595.4375,
+     2944.3171875
+    ],
+    "channel_tok_mean": 2773.25,
+    "cost_usd_total": 0.39777452,
+    "drift_events": 48,
+    "drift_healed": 18,
+    "drift_healed_zero_call": 0,
+    "drift_in_any_copy_final": 6,
+    "drift_in_authoritative_final": 1,
+    "final_errors": {
+     "100": [
+      "auth.replicas",
+      "search.retries"
+     ],
+     "101": [
+      "auth.replicas",
+      "auth.timeout_ms",
+      "search.replicas"
+     ],
+     "102": [
+      "auth.region",
+      "gateway.owner",
+      "gateway.region",
+      "search.replicas",
+      "search.retries"
+     ],
+     "103": [
+      "billing.log_level",
+      "billing.max_conn",
+      "cache.retries",
+      "gateway.owner",
+      "search.log_level"
+     ],
+     "104": [
+      "billing.replicas",
+      "gateway.log_level",
+      "gateway.timeout_ms",
+      "search.log_level"
+     ],
+     "105": [
+      "auth.retries",
+      "cache.timeout_ms",
+      "gateway.timeout_ms",
+      "search.retries",
+      "search.tier"
+     ],
+     "106": [
+      "billing.log_level",
+      "gateway.max_conn",
+      "gateway.tier",
+      "search.max_conn",
+      "search.timeout_ms"
+     ],
+     "107": [],
+     "300": [
+      "auth.log_level",
+      "auth.owner",
+      "billing.owner",
+      "billing.replicas",
+      "cache.tier",
+      "search.replicas"
+     ],
+     "301": [
+      "auth.log_level",
+      "gateway.owner"
+     ],
+     "302": [
+      "auth.owner",
+      "billing.retries",
+      "billing.timeout_ms",
+      "cache.log_level",
+      "cache.owner",
+      "cache.tier",
+      "gateway.owner",
+      "gateway.retries",
+      "gateway.tier"
+     ],
+     "303": [
+      "gateway.max_conn"
+     ],
+     "304": [
+      "auth.replicas",
+      "billing.retries",
+      "cache.tier",
+      "gateway.timeout_ms",
+      "search.replicas",
+      "search.retries"
+     ],
+     "305": [
+      "billing.timeout_ms",
+      "cache.owner",
+      "gateway.log_level",
+      "gateway.owner",
+      "gateway.retries"
+     ],
+     "306": [
+      "auth.replicas"
+     ],
+     "307": [
+      "auth.timeout_ms",
+      "gateway.timeout_ms"
+     ]
+    },
+    "line_acc_mean": 0.8757300947929424,
+    "out_tok_mean": 8497.3125,
+    "recovery_billed_per_healed": 4282.0,
+    "recovery_chan_per_healed": 96.16666666666667,
+    "recovery_sec_per_healed": 9.64393667380015,
+    "recovery_total_per_healed": 4378.166666666667,
+    "replica_success": 1,
+    "steps_failed": 60,
+    "success": 1,
+    "tasks": 16,
+    "wall_sec_mean": 286.0370474755764,
+    "wrong_final_lines": 61
+   },
+   "P": {
+    "billed_minus_scaffold_mean": 24128.625,
+    "billed_tok_mean": 84789.75,
+    "calls_mean": 43.125,
+    "channel_bytes_mean": 10061.6875,
+    "channel_tok_ci": [
+     2551.6796875,
+     2886.8203125
+    ],
+    "channel_tok_mean": 2699.4375,
+    "cost_usd_total": 0.29662986,
+    "drift_events": 48,
+    "drift_healed": 48,
+    "drift_healed_zero_call": 48,
+    "drift_in_any_copy_final": 0,
+    "drift_in_authoritative_final": 0,
+    "final_errors": {
+     "100": [],
+     "101": [],
+     "102": [],
+     "103": [],
+     "104": [],
+     "105": [],
+     "106": [],
+     "107": [],
+     "300": [],
+     "301": [],
+     "302": [],
+     "303": [],
+     "304": [],
+     "305": [],
+     "306": [],
+     "307": []
+    },
+    "line_acc_mean": 1.0,
+    "out_tok_mean": 6973.3125,
+    "recovery_billed_per_healed": 0.0,
+    "recovery_chan_per_healed": 37.916666666666664,
+    "recovery_sec_per_healed": 0.00011373559633890788,
+    "recovery_total_per_healed": 37.916666666666664,
+    "replica_success": 16,
+    "steps_failed": 2,
+    "success": 16,
+    "tasks": 16,
+    "wall_sec_mean": 191.70169700682163,
+    "wrong_final_lines": 0
+   }
+  },
+  "new_seeds_300_307": {
+   "A": {
+    "billed_minus_scaffold_mean": 47226.625,
+    "billed_tok_mean": 119554.125,
+    "calls_mean": 51.5,
+    "channel_bytes_mean": 47314.625,
+    "channel_tok_ci": [
+     17219.125,
+     18030.25
+    ],
+    "channel_tok_mean": 17638.5,
+    "cost_usd_total": 0.21167273000000003,
+    "drift_events": 24,
+    "drift_healed": 24,
+    "drift_healed_zero_call": 0,
+    "drift_in_any_copy_final": 0,
+    "drift_in_authoritative_final": 0,
+    "final_errors": {
+     "300": [],
+     "301": [
+      "auth.log_level",
+      "gateway.owner"
+     ],
+     "302": [
+      "cache.tier"
+     ],
+     "303": [
+      "search.retries"
+     ],
+     "304": [
+      "gateway.timeout_ms"
+     ],
+     "305": [
+      "gateway.retries"
+     ],
+     "306": [
+      "auth.replicas"
+     ],
+     "307": [
+      "auth.region"
+     ]
+    },
+    "line_acc_mean": 0.9675300786648464,
+    "out_tok_mean": 15724.25,
+    "recovery_billed_per_healed": 7384.875,
+    "recovery_chan_per_healed": 914.5,
+    "recovery_sec_per_healed": 16.678437034289043,
+    "recovery_total_per_healed": 8299.375,
+    "replica_success": 1,
+    "steps_failed": 8,
+    "success": 1,
+    "tasks": 8,
+    "wall_sec_mean": 252.07312947511673,
+    "wrong_final_lines": 8
+   },
+   "D": {
+    "billed_minus_scaffold_mean": 22379.875,
+    "billed_tok_mean": 82518.625,
+    "calls_mean": 42.75,
+    "channel_bytes_mean": 4810.875,
+    "channel_tok_ci": [
+     1382.875,
+     1476.125
+    ],
+    "channel_tok_mean": 1429.625,
+    "cost_usd_total": 0.13148947,
+    "drift_events": 24,
+    "drift_healed": 1,
+    "drift_healed_zero_call": 0,
+    "drift_in_any_copy_final": 23,
+    "drift_in_authoritative_final": 0,
+    "final_errors": {
+     "300": [],
+     "301": [],
+     "302": [],
+     "303": [],
+     "304": [],
+     "305": [],
+     "306": [],
+     "307": []
+    },
+    "line_acc_mean": 1.0,
+    "out_tok_mean": 6342.625,
+    "recovery_billed_per_healed": 0.0,
+    "recovery_chan_per_healed": 0.0,
+    "recovery_sec_per_healed": 0.0,
+    "recovery_total_per_healed": 0.0,
+    "replica_success": 0,
+    "steps_failed": 0,
+    "success": 8,
+    "tasks": 8,
+    "wall_sec_mean": 189.39702385663986,
+    "wrong_final_lines": 0
+   },
+   "E": {
+    "billed_minus_scaffold_mean": 32971.25,
+    "billed_tok_mean": 119925.25,
+    "calls_mean": 62.0,
+    "channel_bytes_mean": 9468.875,
+    "channel_tok_ci": [
+     2407.45,
+     2973.5125
+    ],
+    "channel_tok_mean": 2690.5,
+    "cost_usd_total": 0.19581159,
+    "drift_events": 24,
+    "drift_healed": 9,
+    "drift_healed_zero_call": 0,
+    "drift_in_any_copy_final": 3,
+    "drift_in_authoritative_final": 0,
+    "final_errors": {
+     "300": [
+      "auth.log_level",
+      "auth.owner",
+      "billing.owner",
+      "billing.replicas",
+      "cache.tier",
+      "search.replicas"
+     ],
+     "301": [
+      "auth.log_level",
+      "gateway.owner"
+     ],
+     "302": [
+      "auth.owner",
+      "billing.retries",
+      "billing.timeout_ms",
+      "cache.log_level",
+      "cache.owner",
+      "cache.tier",
+      "gateway.owner",
+      "gateway.retries",
+      "gateway.tier"
+     ],
+     "303": [
+      "gateway.max_conn"
+     ],
+     "304": [
+      "auth.replicas",
+      "billing.retries",
+      "cache.tier",
+      "gateway.timeout_ms",
+      "search.replicas",
+      "search.retries"
+     ],
+     "305": [
+      "billing.timeout_ms",
+      "cache.owner",
+      "gateway.log_level",
+      "gateway.owner",
+      "gateway.retries"
+     ],
+     "306": [
+      "auth.replicas"
+     ],
+     "307": [
+      "auth.timeout_ms",
+      "gateway.timeout_ms"
+     ]
+    },
+    "line_acc_mean": 0.8725650554488151,
+    "out_tok_mean": 8131.75,
+    "recovery_billed_per_healed": 4716.0,
+    "recovery_chan_per_healed": 105.0,
+    "recovery_sec_per_healed": 10.66007532013787,
+    "recovery_total_per_healed": 4821.0,
+    "replica_success": 0,
+    "steps_failed": 29,
+    "success": 0,
+    "tasks": 8,
+    "wall_sec_mean": 277.81080800294876,
+    "wrong_final_lines": 32
+   },
+   "P": {
+    "billed_minus_scaffold_mean": 23020.375,
+    "billed_tok_mean": 83507.375,
+    "calls_mean": 43.0,
+    "channel_bytes_mean": 9670.25,
+    "channel_tok_ci": [
+     2472.121875,
+     2774.5
+    ],
+    "channel_tok_mean": 2610.875,
+    "cost_usd_total": 0.14673052,
+    "drift_events": 24,
+    "drift_healed": 24,
+    "drift_healed_zero_call": 24,
+    "drift_in_any_copy_final": 0,
+    "drift_in_authoritative_final": 0,
+    "final_errors": {
+     "300": [],
+     "301": [],
+     "302": [],
+     "303": [],
+     "304": [],
+     "305": [],
+     "306": [],
+     "307": []
+    },
+    "line_acc_mean": 1.0,
+    "out_tok_mean": 6680.5,
+    "recovery_billed_per_healed": 0.0,
+    "recovery_chan_per_healed": 37.458333333333336,
+    "recovery_sec_per_healed": 6.88632329305013e-05,
+    "recovery_total_per_healed": 37.458333333333336,
+    "replica_success": 8,
+    "steps_failed": 0,
+    "success": 8,
+    "tasks": 8,
+    "wall_sec_mean": 190.44165420532227,
+    "wrong_final_lines": 0
+   }
+  }
+ },
+ "truncation": {
+  "A": {
+   "0.1": {
+    "correct": 0,
+    "detected": 298,
+    "silent_wrong": 0
+   },
+   "0.2": {
+    "correct": 0,
+    "detected": 298,
+    "silent_wrong": 0
+   },
+   "0.3": {
+    "correct": 0,
+    "detected": 298,
+    "silent_wrong": 0
+   },
+   "0.4": {
+    "correct": 0,
+    "detected": 298,
+    "silent_wrong": 0
+   },
+   "0.5": {
+    "correct": 0,
+    "detected": 298,
+    "silent_wrong": 0
+   }
+  },
+  "D": {
+   "0.1": {
+    "correct": 0,
+    "detected": 230,
+    "silent_wrong": 0
+   },
+   "0.2": {
+    "correct": 0,
+    "detected": 219,
+    "silent_wrong": 11
+   },
+   "0.3": {
+    "correct": 0,
+    "detected": 229,
+    "silent_wrong": 1
+   },
+   "0.4": {
+    "correct": 0,
+    "detected": 229,
+    "silent_wrong": 1
+   },
+   "0.5": {
+    "correct": 0,
+    "detected": 230,
+    "silent_wrong": 0
+   }
+  },
+  "E": {
+   "0.1": {
+    "correct": 0,
+    "detected": 372,
+    "silent_wrong": 19
+   },
+   "0.2": {
+    "correct": 0,
+    "detected": 388,
+    "silent_wrong": 3
+   },
+   "0.3": {
+    "correct": 0,
+    "detected": 367,
+    "silent_wrong": 24
+   },
+   "0.4": {
+    "correct": 0,
+    "detected": 360,
+    "silent_wrong": 31
+   },
+   "0.5": {
+    "correct": 0,
+    "detected": 369,
+    "silent_wrong": 22
+   }
+  },
+  "P": {
+   "0.1": {
+    "correct": 0,
+    "detected": 233,
+    "silent_wrong": 0
+   },
+   "0.2": {
+    "correct": 0,
+    "detected": 233,
+    "silent_wrong": 0
+   },
+   "0.3": {
+    "correct": 0,
+    "detected": 233,
+    "silent_wrong": 0
+   },
+   "0.4": {
+    "correct": 0,
+    "detected": 233,
+    "silent_wrong": 0
+   },
+   "0.5": {
+    "correct": 0,
+    "detected": 233,
+    "silent_wrong": 0
+   }
+  }
+ },
+ "truncation_resend_tok_mean": {
+  "A": 349.4228187919463,
+  "D": 9.3,
+  "E": 18.565217391304348,
+  "P": 13.459227467811159
+ },
+ "ucr_table_tok": 202
+}

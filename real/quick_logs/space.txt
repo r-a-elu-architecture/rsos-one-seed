@@ -1,0 +1,12 @@
+cell 1 seed    result 284.65 resource 11568.1 R 0.024606 choices={'present|standard': 14, 'future+1|own': 1, 'present|own': 6, 'future+2|standard': 1, 'focus_bulk|standard': 1, 'focus_science|standard': 1, 'future+1|standard': 2, 'focus_bulk|own': 1}
+cell 1 default result 282.68 resource 10821.6 R 0.026122 stand_in=True
+cell 1 pareto no
+cell 2 seed    result 329.17 resource 12410.0 R 0.026524 choices={'present|standard': 14, 'focus_bulk|standard': 1, 'present|own': 4, 'future+1|standard': 3, 'focus_science|standard': 2, 'future+2|standard': 2, 'future+2|own': 2}
+cell 2 default result 320.70 resource 10758.4 R 0.029809 stand_in=True
+cell 2 pareto no
+cell 3 seed    result 393.36 resource 11741.8 R 0.033501 choices={'focus_bulk|standard': 4, 'present|standard': 11, 'focus_science|standard': 2, 'focus_bulk|own': 1, 'future+1|standard': 4, 'future+1|own': 1, 'future+2|standard': 2, 'present|own': 2}
+cell 3 default result 393.66 resource 9972.9 R 0.039473 stand_in=True
+cell 3 pareto no
+cell 4 seed    result 396.82 resource 11809.3 R 0.033602 choices={'present|standard': 15, 'future+1|standard': 4, 'focus_science|standard': 3, 'future+2|own': 2, 'focus_science|own': 1, 'future+1|own': 2, 'present|own': 1}
+cell 4 default result 393.19 resource 11549.8 R 0.034043 stand_in=True
+cell 4 pareto no

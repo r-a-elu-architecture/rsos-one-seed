@@ -1,0 +1,72 @@
+{
+ "row": "neuro",
+ "model": "-",
+ "stage": 1,
+ "pair": 3,
+ "cells": {
+  "std|11": {
+   "default": {
+    "result": 0.1905641730531814,
+    "resource": 240.0,
+    "R": 0.0007940173877215892,
+    "choices": {
+     "present|standard": 60
+    }
+   },
+   "seed3v1": {
+    "result": 0.16552127813725948,
+    "resource": 240.0,
+    "R": 0.0006896719922385811,
+    "choices": {
+     "F:rel-std|policy": 9,
+     "F:otrace-rel|policy": 15,
+     "past-2|own": 2,
+     "past-1|own": 5,
+     "P8:vote|own": 13,
+     "P1:surprise|policy": 1,
+     "F:rel-reads|policy": 4,
+     "future+1|standard": 2,
+     "P8:vote|standard": 2,
+     "future+1|own": 3,
+     "past-2|standard": 1,
+     "F:otrace-rel|own": 1,
+     "latent|own": 2
+    },
+    "policy_fallback_steps": 0
+   },
+   "sec": 694
+  },
+  "std|12": {
+   "default": {
+    "result": 0.1330850496614172,
+    "resource": 240.0,
+    "R": 0.000554521040255905,
+    "choices": {
+     "present|standard": 60
+    }
+   },
+   "seed3v1": {
+    "result": 0.11716910753841192,
+    "resource": 240.0,
+    "R": 0.000488204614743383,
+    "choices": {
+     "F:rel-std|policy": 19,
+     "past-1|standard": 1,
+     "P8:vote|own": 15,
+     "latent|own": 3,
+     "F:rel-reads|policy": 5,
+     "present|own": 2,
+     "P2:age-price|own": 3,
+     "F:otrace|own": 1,
+     "F:otrace-rel|own": 2,
+     "past-1|own": 5,
+     "F:otrace-rel|policy": 2,
+     "past-2|own": 1,
+     "P8:vote|standard": 1
+    },
+    "policy_fallback_steps": 0
+   },
+   "sec": 737
+  }
+ }
+}

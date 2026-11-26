@@ -1,0 +1,130 @@
+{
+ "summary": {
+  "correct": 8,
+  "of": 12,
+  "page_errors": []
+ },
+ "rows": {
+  "T1": {
+   "compiles": true,
+   "errors": [],
+   "rsos_match": true,
+   "plain_complete": true,
+   "plain_missing": [],
+   "correct": true
+  },
+  "T2": {
+   "compiles": true,
+   "errors": [],
+   "rsos_match": true,
+   "plain_complete": true,
+   "plain_missing": [],
+   "correct": true
+  },
+  "T3": {
+   "compiles": true,
+   "errors": [],
+   "rsos_match": true,
+   "plain_complete": true,
+   "plain_missing": [],
+   "correct": true
+  },
+  "T4": {
+   "compiles": true,
+   "errors": [],
+   "rsos_match": true,
+   "plain_complete": true,
+   "plain_missing": [],
+   "correct": true
+  },
+  "T5": {
+   "compiles": true,
+   "errors": [],
+   "rsos_match": true,
+   "plain_complete": true,
+   "plain_missing": [],
+   "correct": true
+  },
+  "T6": {
+   "compiles": true,
+   "errors": [],
+   "rsos_match": true,
+   "plain_complete": true,
+   "plain_missing": [],
+   "correct": true
+  },
+  "P1": {
+   "compiles": true,
+   "errors": [],
+   "rsos_match": true,
+   "plain_complete": true,
+   "plain_missing": [],
+   "correct": true
+  },
+  "P2": {
+   "compiles": false,
+   "errors": [
+    "line 11: error E007_VALUE: expected one of vertical, horizontal, outward, inward, down, up, across; found '_'",
+    "line 12: error E009_DUPLICATE: 'team' already declared on line 3"
+   ],
+   "rsos_match": false,
+   "plain_complete": false,
+   "plain_missing": [
+    "dissociated",
+    "action",
+    "rocket heart flows backward into the team"
+   ],
+   "correct": false
+  },
+  "P3": {
+   "compiles": false,
+   "errors": [
+    "line 11: error E009_DUPLICATE: 'team' already declared on line 3"
+   ],
+   "rsos_match": false,
+   "plain_complete": false,
+   "plain_missing": [
+    "forward = analogical reasoning",
+    "down = future pacing",
+    "decision-making",
+    "transplant the sphere into the team"
+   ],
+   "correct": false
+  },
+  "P4": {
+   "compiles": true,
+   "errors": [],
+   "rsos_match": true,
+   "plain_complete": true,
+   "plain_missing": [],
+   "correct": true
+  },
+  "P5": {
+   "compiles": true,
+   "errors": [],
+   "rsos_match": false,
+   "plain_complete": false,
+   "plain_missing": [
+    "state anchor",
+    "white dragon beams up into the team"
+   ],
+   "correct": false
+  },
+  "P6": {
+   "compiles": false,
+   "errors": [
+    "line 10: error E003_UNKNOWN_ENTITY: 'eagle' is not declared",
+    "line 11: error E003_UNKNOWN_ENTITY: 'eagle' is not declared"
+   ],
+   "rsos_match": false,
+   "plain_complete": false,
+   "plain_missing": [
+    "robot leg",
+    "view from above",
+    "action",
+    "team contains the rocket heart"
+   ],
+   "correct": false
+  }
+ }
+}

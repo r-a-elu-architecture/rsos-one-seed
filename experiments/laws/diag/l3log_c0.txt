@@ -1,0 +1,10 @@
+collect 2
+collect 4
+collect 6
+collect 8
+collect 10
+collect 12
+collect 14
+collect 16
+collect 18
+collect 20

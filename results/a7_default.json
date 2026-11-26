@@ -1,0 +1,202 @@
+{
+ "code_commit": "1ea545e16aca237a284e0e4f6f1103fd19844d49",
+ "experiment": "a7_default",
+ "numpy": "2.5.3",
+ "predictions": {
+  "P1_runtime_beats_M*": false,
+  "P2_blind_no_loss": true,
+  "P3_cost_per_correct_half": false,
+  "P4_blind_input_half": false,
+  "P5_M*_thinks_more": false,
+  "P6_M*_errors_on_dependent_steps": true,
+  "P7_calls_le_3": true,
+  "P8_drift_healed_all_arms": true,
+  "REACH_cost_tenfold_distance_x": {
+   "S1": 1.2707614207928244,
+   "S2": 1.099118055888415
+  }
+ },
+ "price_sheet": "haiku-5-5",
+ "python": "3.13.18",
+ "results_sha256": "42be52d5fbc82bfa2155129d832ebaeb13d4a31d79353be2db50f6eb54ad6d56",
+ "run_utc": "2026-11-18T09:56:38Z",
+ "scaffold": {
+  "S1": {
+   "mean": 571,
+   "tokens": [
+    571,
+    571,
+    571,
+    571,
+    571,
+    571
+   ]
+  },
+  "S2": {
+   "mean": 571,
+   "tokens": [
+    571,
+    571,
+    571,
+    571,
+    571,
+    571
+   ]
+  }
+ },
+ "tables": {
+  "S1": {
+   "B2": {
+    "calls": 2.25,
+    "cost_api": 0.00143446875,
+    "cost_billed": 0.0016443362500000002,
+    "cost_per_correct_api": 0.0015301,
+    "drifts": 48,
+    "exact": 15,
+    "healed_zero_call": 48,
+    "in_tok": 2260.9375,
+    "invalid": 0,
+    "line_acc": 0.9935344827586207,
+    "out_tok": 2416.75,
+    "replica_exact": 15,
+    "steps_failed": 1,
+    "steps_wrong": 0,
+    "tasks": 16,
+    "think_tok": 1824.375,
+    "wall_sec": 12.223299607634544,
+    "wrong_dependent": 1
+   },
+   "X5b": {
+    "calls": 2.375,
+    "cost_api": 0.00120408125,
+    "cost_billed": 0.001163884375,
+    "cost_per_correct_api": 0.00120408125,
+    "cost_per_correct_ratio_vs_B2": 0.786929775831645,
+    "cost_ratio_vs_B2": 0.839391760887088,
+    "cost_ratio_vs_B2_ci": [
+     0.7865935816580159,
+     0.8985611595990938
+    ],
+    "drifts": 48,
+    "exact": 16,
+    "healed_zero_call": 48,
+    "in_tok": 2427.6875,
+    "invalid": 0,
+    "line_acc": 1.0,
+    "out_tok": 1922.625,
+    "reach_distance_x": 1.2707614207928244,
+    "replica_exact": 16,
+    "steps_failed": 0,
+    "steps_wrong": 0,
+    "tasks": 16,
+    "think_tok": 1653.875,
+    "wall_sec": 12.220149114727974,
+    "wrong_dependent": 0
+   },
+   "X5r": {
+    "calls": 2.375,
+    "cost_api": 0.00125128125,
+    "cost_billed": 0.00141209375,
+    "cost_per_correct_api": 0.00125128125,
+    "cost_per_correct_ratio_vs_B2": 0.8177774328475264,
+    "cost_ratio_vs_B2": 0.8722959283706947,
+    "cost_ratio_vs_B2_ci": [
+     0.7769875917062893,
+     0.9838243568766564
+    ],
+    "drifts": 48,
+    "exact": 16,
+    "healed_zero_call": 48,
+    "in_tok": 2579.0625,
+    "invalid": 4,
+    "line_acc": 1.0,
+    "out_tok": 1986.75,
+    "reach_distance_x": 1.2228266027321995,
+    "replica_exact": 16,
+    "steps_failed": 0,
+    "steps_wrong": 0,
+    "tasks": 16,
+    "think_tok": 1714.8125,
+    "wall_sec": 12.114411398768425,
+    "wrong_dependent": 0
+   }
+  },
+  "S2": {
+   "B2": {
+    "calls": 2,
+    "cost_api": 0.00143318125,
+    "cost_billed": 0.0016383843750000001,
+    "cost_per_correct_api": 0.00143318125,
+    "drifts": 48,
+    "exact": 16,
+    "healed_zero_call": 48,
+    "in_tok": 2502.125,
+    "invalid": 0,
+    "line_acc": 1.0,
+    "out_tok": 2365.9375,
+    "replica_exact": 16,
+    "steps_failed": 0,
+    "steps_wrong": 0,
+    "tasks": 16,
+    "think_tok": 1820.25,
+    "wall_sec": 11.377678900957108,
+    "wrong_dependent": 0
+   },
+   "X5b": {
+    "calls": 2.25,
+    "cost_api": 0.0013039375,
+    "cost_billed": 0.0012256590625,
+    "cost_per_correct_api": 0.0013039375,
+    "cost_per_correct_ratio_vs_B2": 0.9098203733826409,
+    "cost_ratio_vs_B2": 0.9098203733826409,
+    "cost_ratio_vs_B2_ci": [
+     0.8700510179333484,
+     0.9510681884752972
+    ],
+    "drifts": 48,
+    "exact": 16,
+    "healed_zero_call": 48,
+    "in_tok": 2854.375,
+    "invalid": 4,
+    "line_acc": 1.0,
+    "out_tok": 2037,
+    "reach_distance_x": 1.099118055888415,
+    "replica_exact": 16,
+    "steps_failed": 0,
+    "steps_wrong": 0,
+    "tasks": 16,
+    "think_tok": 1733.875,
+    "wall_sec": 11.854124382138252,
+    "wrong_dependent": 0
+   },
+   "X5r": {
+    "calls": 2.1875,
+    "cost_api": 0.0013272125,
+    "cost_billed": 0.001418831875,
+    "cost_per_correct_api": 0.0013272125,
+    "cost_per_correct_ratio_vs_B2": 0.9260604686253048,
+    "cost_ratio_vs_B2": 0.9260604686253048,
+    "cost_ratio_vs_B2_ci": [
+     0.8526715947692554,
+     1.0181765985967717
+    ],
+    "drifts": 48,
+    "exact": 16,
+    "healed_zero_call": 48,
+    "in_tok": 3024.625,
+    "invalid": 1,
+    "line_acc": 1.0,
+    "out_tok": 2049.5,
+    "reach_distance_x": 1.079843092195108,
+    "replica_exact": 16,
+    "steps_failed": 0,
+    "steps_wrong": 0,
+    "tasks": 16,
+    "think_tok": 1764.5,
+    "wall_sec": 11.954266145825386,
+    "wrong_dependent": 0
+   }
+  }
+ },
+ "think": "default"
+}

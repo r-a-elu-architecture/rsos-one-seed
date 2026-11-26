@@ -1,0 +1,4 @@
+# CONF1 seal B (25 Nov 2026): seal A + the generated moves exactly as written by a fresh agent (no edits)
+5fa27662dc01dca097ccc9ede09aa5e91c1715ef14cb216c664240bbd9d221dc real/SEAL_CONF1_A.txt
+f3cfd6ae42bed78610e5bbe1dadf47a25adb5f3eb9dcf56d72ca33278546ce1d real/generated/ai_agents_moves.py
+3f99c201d1fa4cd03aac6865fb554f677d658c1788ab50e1f0da48cb446f00b5 real/generated/ai_human_moves.py

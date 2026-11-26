@@ -1,0 +1,449 @@
+{
+ "code_commit": "6983689aff5117a1bad9ae9dec27088b06830bef",
+ "experiment": "ROUND-2",
+ "numpy": "2.5.3",
+ "python": "3.13.18",
+ "results_sha256": "e595dffb7535d0b8bdaf1ababf333f8726169bc0c19937e628829b181dd30e09",
+ "run_utc": "2026-11-16T18:38:43Z",
+ "summary": {
+  "P1_engine_gt_bird": {
+   "n": 200,
+   "pass": true,
+   "throws": 200
+  },
+  "P2_objects_reached_per_landing": {
+   "mean": 2.7439999999999998,
+   "pass": false
+  },
+  "P3_grey_helps_tank_landing": {
+   "ci95": [
+    0.9722948445647053,
+    1.0409599129324947
+   ],
+   "mean_diff": 1.0065166529278802,
+   "n": 200,
+   "pass": true,
+   "throws_better": 200
+  },
+  "P4_fish_gather_or_not": {
+   "gathering_grew": 26,
+   "pass": true,
+   "tank_in_lake_worlds": 34
+  },
+  "P5_pierce_deeper_than_land": {
+   "mean_extra_objects": 0.35037499999999994,
+   "n": 200,
+   "pass": true,
+   "throws_deeper": 186
+  },
+  "scene_score_ci95": {
+   "land_grey": [
+    -0.20218657338274895,
+    -0.09394813485449538
+   ],
+   "land_no_grey": [
+    -1.219456565630701,
+    -1.089807017107724
+   ],
+   "pierce_grey": [
+    -0.49644345213329705,
+    -0.2897692594030372
+   ]
+  },
+  "scene_score_mean": {
+   "land_grey": -0.14867134974557636,
+   "land_no_grey": -1.1551880026734567,
+   "pierce_grey": -0.39464394724002255
+  }
+ },
+ "throws": {
+  "land_grey": [
+   {
+    "bird": 0.19100000000000003,
+    "engine": 17.153165,
+    "gathering": null,
+    "placement": {
+     "cable": "sun",
+     "engine": "trees",
+     "fan": "sky",
+     "gauge": "lake",
+     "pipe": "bird",
+     "tank": "house",
+     "turbine": "path",
+     "valve": "bench"
+    },
+    "reach": 3.5,
+    "score": -0.45900316375417055,
+    "tank": -0.07879372114844041,
+    "tank_host": "house"
+   },
+   {
+    "bird": 0.21800000000000003,
+    "engine": 11.124649999999999,
+    "gathering": null,
+    "placement": {
+     "cable": "trees",
+     "engine": "house",
+     "fan": "bird",
+     "gauge": "lake",
+     "pipe": "bench",
+     "tank": "path",
+     "turbine": "sky",
+     "valve": "sun"
+    },
+    "reach": 2.75,
+    "score": -0.14718294648689678,
+    "tank": -0.018649124376744396,
+    "tank_host": "path"
+   },
+   {
+    "bird": 0.19100000000000003,
+    "engine": 9.86,
+    "gathering": null,
+    "placement": {
+     "cable": "path",
+     "engine": "sun",
+     "fan": "sky",
+     "gauge": "lake",
+     "pipe": "bird",
+     "tank": "trees",
+     "turbine": "house",
+     "valve": "bench"
+    },
+    "reach": 2.875,
+    "score": 0.1319170243418773,
+    "tank": -0.17676668670689435,
+    "tank_host": "trees"
+   },
+   {
+    "bird": 0.15600000000000003,
+    "engine": 8.40595,
+    "gathering": [
+     0.1,
+     0.7716722130360671
+    ],
+    "placement": {
+     "cable": "trees",
+     "engine": "path",
+     "fan": "house",
+     "gauge": "bird",
+     "pipe": "sun",
+     "tank": "lake",
+     "turbine": "bench",
+     "valve": "sky"
+    },
+    "reach": 3.125,
+    "score": -0.3256899166910493,
+    "tank": -0.08754996161559252,
+    "tank_host": "lake"
+   },
+   {
+    "bird": 0.18300000000000002,
+    "engine": 8.112525000000002,
+    "gathering": null,
+    "placement": {
+     "cable": "trees",
+     "engine": "bench",
+     "fan": "bird",
+     "gauge": "lake",
+     "pipe": "path",
+     "tank": "sky",
+     "turbine": "sun",
+     "valve": "house"
+    },
+    "reach": 1.75,
+    "score": -0.3957865654692142,
+    "tank": -0.080980298270158,
+    "tank_host": "sky"
+   },
+   {
+    "bird": 0.23400000000000004,
+    "engine": 10.734200000000001,
+    "gathering": null,
+    "placement": {
+     "cable": "path",
+     "engine": "lake",
+     "fan": "sky",
+     "gauge": "bird",
+     "pipe": "trees",
+     "tank": "house",
+     "turbine": "bench",
+     "valve": "sun"
+    },
+    "reach": 2.5,
+    "score": 0.22831354465397843,
+    "tank": -0.002113465675876286,
+    "tank_host": "house"
+   },
+   {
+    "bird": 0.19100000000000003,
+    "engine": 10.724649999999999,
+    "gathering": null,
+    "placement": {
+     "cable": "bird",
+     "engine": "house",
+     "fan": "trees",
+     "gauge": "sun",
+     "pipe": "path",
+     "tank": "bench",
+     "turbine": "sky",
+     "valve": "lake"
+    },
+    "reach": 3.875,
+    "score": -0.42201527180064735,
+    "tank": -0.061847121653452616,
+    "tank_host": "bench"
+   },
+   {
+    "bird": 0.19100000000000003,
+    "engine": 7.912525000000001,
+    "gathering": null,
+    "placement": {
+     "cable": "path",
+     "engine": "bench",
+     "fan": "sun",
+     "gauge": "lake",
+     "pipe": "trees",
+     "tank": "house",
+     "turbine": "sky",
+     "valve": "bird"
+    },
+    "reach": 2.25,
+    "score": -0.42195703396273354,
+    "tank": -0.08122025218848243,
+    "tank_host": "house"
+   },
+   {
+    "bird": 0.18300000000000002,
+    "engine": 10.92465,
+    "gathering": null,
+    "placement": {
+     "cable": "bird",
+     "engine": "house",
+     "fan": "sky",
+     "gauge": "trees",
+     "pipe": "lake",
+     "tank": "sun",
+     "turbine": "bench",
+     "valve": "path"
+    },
+    "reach": 3.625,
+    "score": -0.14046952464953893,
+    "tank": -0.09027547959895352,
+    "tank_host": "sun"
+   },
+   {
+    "bird": 0.11300000000000002,
+    "engine": 9.9146,
+    "gathering": null,
+    "placement": {
+     "cable": "sky",
+     "engine": "lake",
+     "fan": "bench",
+     "gauge": "path",
+     "pipe": "house",
+     "tank": "sun",
+     "turbine": "trees",
+     "valve": "bird"
+    },
+    "reach": 2.375,
+    "score": 0.20045656139828694,
+    "tank": -0.10111828441047854,
+    "tank_host": "sun"
+   },
+   {
+    "bird": 0.14800000000000002,
+    "engine": 10.014600000000002,
+    "gathering": null,
+    "placement": {
+     "cable": "path",
+     "engine": "lake",
+     "fan": "bench",
+     "gauge": "bird",
+     "pipe": "house",
+     "tank": "trees",
+     "turbine": "sky",
+     "valve": "sun"
+    },
+    "reach": 2.5,
+    "score": -0.45670792773928187,
+    "tank": -0.21430907751080439,
+    "tank_host": "trees"
+   },
+   {
+    "bird": 0.11300000000000002,
+    "engine": 10.52465,
+    "gathering": [
+     0.1,
+     0.03178103462769976
+    ],
+    "placement": {
+     "cable": "bird",
+     "engine": "house",
+     "fan": "bench",
+     "gauge": "sky",
+     "pipe": "sun",
+     "tank": "lake",
+     "turbine": "trees",
+     "valve": "path"
+    },
+    "reach": 3.125,
+    "score": -0.7013086845936464,
+    "tank": -0.0706304335304356,
+    "tank_host": "lake"
+   },
+   {
+    "bird": 0.261,
+    "engine": 30.41753525,
+    "gathering": null,
+    "placement": {
+     "cable": "house",
+     "engine": "sky",
+     "fan": "lake",
+     "gauge": "bird",
+     "pipe": "path",
+     "tank": "trees",
+     "turbine": "bench",
+     "valve": "sun"
+    },
+    "reach": 2.625,
+    "score": 0.6084493001677024,
+    "tank": -0.19432329420068886,
+    "tank_host": "trees"
+   },
+   {
+    "bird": 0.22600000000000003,
+    "engine": 9.86,
+    "gathering": null,
+    "placement": {
+     "cable": "bird",
+     "engine": "sun",
+     "fan": "trees",
+     "gauge": "lake",
+     "pipe": "sky",
+     "tank": "house",
+     "turbine": "bench",
+     "valve": "path"
+    },
+    "reach": 2.375,
+    "score": 0.12793106461489495,
+    "tank": -0.13129558324064647,
+    "tank_host": "house"
+   },
+   {
+    "bird": 0.14800000000000002,
+    "engine": 10.2,
+    "gathering": null,
+    "placement": {
+     "cable": "bird",
+     "engine": "sun",
+     "fan": "bench",
+     "gauge": "lake",
+     "pipe": "house",
+     "tank": "path",
+     "turbine": "trees",
+     "valve": "sky"
+    },
+    "reach": 2.725,
+    "score": 0.7638495650943502,
+    "tank": -0.06602229584457131,
+    "tank_host": "path"
+   },
+   {
+    "bird": 0.269,
+    "engine": 28.412913500000002,
+    "gathering": null,
+    "placement": {
+     "cable": "bird",
+     "engine": "sky",
+     "fan": "bench",
+     "gauge": "sun",
+     "pipe": "house",
+     "tank": "path",
+     "turbine": "trees",
+     "valve": "lake"
+    },
+    "reach": 3.25,
+    "score": 0.1049641100544072,
+    "tank": -0.0026953127675658608,
+    "tank_host": "path"
+   },
+   {
+    "bird": 0.07,
+    "engine": 17.378542500000002,
+    "gathering": null,
+    "placement": {
+     "cable": "path",
+     "engine": "trees",
+     "fan": "bird",
+     "gauge": "lake",
+     "pipe": "sky",
+     "tank": "bench",
+     "turbine": "sun",
+     "valve": "house"
+    },
+    "reach": 2.25,
+    "score": 0.2095700929218976,
+    "tank": -0.05542582489534901,
+    "tank_host": "bench"
+   },
+   {
+    "bird": 0.19100000000000003,
+    "engine": 9.52,
+    "gathering": null,
+    "placement": {
+     "cable": "bench",
+     "engine": "sun",
+     "fan": "sky",
+     "gauge": "trees",
+     "pipe": "lake",
+     "tank": "path",
+     "turbine": "house",
+     "valve": "bird"
+    },
+    "reach": 3.0,
+    "score": -0.09493250808536888,
+    "tank": -0.06839213504960173,
+    "tank_host": "path"
+   },
+   {
+    "bird": 0.19100000000000003,
+    "engine": 8.205026000000002,
+    "gathering": null,
+    "placement": {
+     "cable": "path",
+     "engine": "bench",
+     "fan": "sun",
+     "gauge": "lake",
+     "pipe": "bird",
+     "tank": "sky",
+     "turbine": "house",
+     "valve": "trees"
+    },
+    "reach": 2.85,
+    "score": -0.23347198002114639,
+    "tank": -0.10084945054765637,
+    "tank_host": "sky"
+   },
+   {
+    "bird": 0.07,
+    "engine": 10.52465,
+    "gathering": null,
+    "placement": {
+     "cable": "bird",
+     "engine": "house",
+     "fan": "sun",
+     "gauge": "trees",
+     "pipe": "lake",
+     "tank": "sky",
+     "turbine": "bench",
+     "valve": "path"
+    },
+    "reach": 2.875,
+    "score": -0.636608323207246,
+    "tank": -0.13207028723188943,
+    "tank_host": "sky"
+   }
+  ]
+ }
+}

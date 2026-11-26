@@ -1,0 +1,15 @@
+{
+ "files": {
+  "a3c_replay_a3P_Hp_transcripts.jsonl": {
+   "bytes": 1201552,
+   "derived": "a3c_replay_a3P_Hp_counts.jsonl",
+   "sha256": "f814ecee7f599643a05eb2926838d4b1e57aca3b6129a1903945cd2479f88221"
+  },
+  "a3c_transcripts_Hp.jsonl": {
+   "bytes": 1178117,
+   "derived": "a3c_counts_Hp.jsonl",
+   "sha256": "876b454f3d44ac81811ba12d4d6cc9a3719d5d471be1465491b1c01c6edf4005"
+  }
+ },
+ "note": "Withheld A3c H-pred transcripts (coded messages use arbitrary alphabet words as code digits). Text-free count files are published in their place; available on request for verification."
+}

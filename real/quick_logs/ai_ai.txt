@@ -1,0 +1,12 @@
+cell 1 seed    result 1 resource 1295 R 0.000772 rounds 2 calls 0 choices={'present|standard': 1, 'present|own': 1}
+cell 1 default result 1 resource 1295 R 0.000772 rounds 2 calls 0
+cell 1 pareto TIE
+cell 2 seed    result 1 resource 639 R 0.001565 rounds 1 calls 0 choices={'present|standard': 1}
+cell 2 default result 1 resource 639 R 0.001565 rounds 1 calls 0
+cell 2 pareto TIE
+cell 3 seed    result 1 resource 2712 R 0.000369 rounds 4 calls 0 choices={'focus_manager|standard': 1, 'present|own': 3}
+cell 3 default result 1 resource 2702 R 0.000370 rounds 4 calls 0
+cell 3 pareto no
+cell 4 seed    result 1 resource 1299 R 0.000770 rounds 2 calls 0 choices={'present|standard': 2}
+cell 4 default result 1 resource 1299 R 0.000770 rounds 2 calls 0
+cell 4 pareto TIE

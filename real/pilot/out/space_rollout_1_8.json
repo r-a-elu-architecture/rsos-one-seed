@@ -1,0 +1,88 @@
+{
+ "row": "space",
+ "arm": "rollout",
+ "model": "-",
+ "cells": {
+  "1": {
+   "result": 509.81525263295975,
+   "resource": 16195.046857670835,
+   "choices": {
+    "present|standard": 16,
+    "focus_bulk|rollout": 2,
+    "focus_science|rollout": 6
+   },
+   "sec": 0.8
+  },
+  "2": {
+   "result": 626.6143201077952,
+   "resource": 15397.25817660593,
+   "choices": {
+    "present|standard": 17,
+    "focus_bulk|rollout": 1,
+    "focus_science|rollout": 6
+   },
+   "sec": 0.8
+  },
+  "3": {
+   "result": 425.0267697503446,
+   "resource": 15315.728745395374,
+   "choices": {
+    "present|standard": 17,
+    "focus_bulk|rollout": 1,
+    "focus_science|rollout": 6
+   },
+   "sec": 0.6
+  },
+  "4": {
+   "result": 545.7726061573328,
+   "resource": 16225.11872251513,
+   "choices": {
+    "present|standard": 21,
+    "focus_science|rollout": 2,
+    "focus_alert|rollout": 1,
+    "focus_bulk|rollout": 2
+   },
+   "sec": 0.7
+  },
+  "5": {
+   "result": 506.42241622593934,
+   "resource": 16184.469564558427,
+   "choices": {
+    "present|standard": 19,
+    "focus_bulk|rollout": 4,
+    "focus_science|rollout": 2
+   },
+   "sec": 0.6
+  },
+  "6": {
+   "result": 593.3539189147157,
+   "resource": 17122.404583705316,
+   "choices": {
+    "present|standard": 18,
+    "focus_science|rollout": 6,
+    "focus_bulk|rollout": 2
+   },
+   "sec": 0.6
+  },
+  "7": {
+   "result": 508.7080018126682,
+   "resource": 15924.410655582877,
+   "choices": {
+    "present|standard": 17,
+    "focus_bulk|rollout": 3,
+    "focus_science|rollout": 4
+   },
+   "sec": 0.6
+  },
+  "8": {
+   "result": 578.8840405478802,
+   "resource": 15764.537145168317,
+   "choices": {
+    "present|standard": 18,
+    "focus_science|rollout": 5,
+    "focus_bulk|rollout": 1
+   },
+   "sec": 0.7
+  }
+ }
+}

@@ -1,0 +1,34 @@
+file: /tmp/dandi/sub-Jenkins_ses-small_desc-train_behavior+ecephys.nwb
+saved /tmp/neuro.npz: 5874 bins x 32 units, mean rate 7.5 Hz, 12 windows of 460 bins
+cell 1 seed     result 0.21332 resource 240 R 8.8883e-04 [recording] choices {'present|standard': 1, 'present|own': 59}
+cell 1 default  result 0.21332 resource 240 R 8.8883e-04 [recording] choices {'present|standard': 60}
+cell 1 uniform  result 0.16753 resource 240 R 6.9806e-04 [recording] choices {'present|standard': 60}
+cell 1 time 8.3s
+cell 2 seed     result 0.13059 resource 240 R 5.4414e-04 [recording] choices {'present|standard': 1, 'present|own': 59}
+cell 2 default  result 0.13059 resource 240 R 5.4414e-04 [recording] choices {'present|standard': 60}
+cell 2 uniform  result 0.09575 resource 240 R 3.9895e-04 [recording] choices {'present|standard': 60}
+cell 2 time 8.3s
+cell 3 seed     result 0.16251 resource 240 R 6.7712e-04 [recording] choices {'present|standard': 1, 'present|own': 59}
+cell 3 default  result 0.16251 resource 240 R 6.7712e-04 [recording] choices {'present|standard': 60}
+cell 3 uniform  result 0.11223 resource 240 R 4.6764e-04 [recording] choices {'present|standard': 60}
+cell 3 time 8.2s
+cell 4 seed     result 0.15727 resource 240 R 6.5528e-04 [recording] choices {'present|standard': 1, 'present|own': 59}
+cell 4 default  result 0.15727 resource 240 R 6.5528e-04 [recording] choices {'present|standard': 60}
+cell 4 uniform  result 0.09092 resource 240 R 3.7885e-04 [recording] choices {'present|standard': 60}
+cell 4 time 8.3s
+cell 5 seed     result 0.14990 resource 240 R 6.2458e-04 [recording] choices {'present|standard': 1, 'present|own': 59}
+cell 5 default  result 0.14990 resource 240 R 6.2458e-04 [recording] choices {'present|standard': 60}
+cell 5 uniform  result 0.13827 resource 240 R 5.7614e-04 [recording] choices {'present|standard': 60}
+cell 5 time 8.3s
+cell 6 seed     result 0.09593 resource 240 R 3.9969e-04 [recording] choices {'present|standard': 1, 'present|own': 59}
+cell 6 default  result 0.09593 resource 240 R 3.9969e-04 [recording] choices {'present|standard': 60}
+cell 6 uniform  result 0.09906 resource 240 R 4.1276e-04 [recording] choices {'present|standard': 60}
+cell 6 time 8.3s
+cell 7 seed     result 0.12815 resource 240 R 5.3395e-04 [recording] choices {'present|standard': 1, 'present|own': 59}
+cell 7 default  result 0.12815 resource 240 R 5.3395e-04 [recording] choices {'present|standard': 60}
+cell 7 uniform  result 0.13464 resource 240 R 5.6099e-04 [recording] choices {'present|standard': 60}
+cell 7 time 8.3s
+cell 8 seed     result 0.06329 resource 240 R 2.6370e-04 [recording] choices {'present|standard': 1, 'present|own': 59}
+cell 8 default  result 0.06329 resource 240 R 2.6370e-04 [recording] choices {'present|standard': 60}
+cell 8 uniform  result 0.02965 resource 240 R 1.2354e-04 [recording] choices {'present|standard': 60}
+cell 8 time 8.2s

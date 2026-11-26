@@ -1,0 +1,109 @@
+{
+ "row": "ai_ai",
+ "model": "openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct",
+ "pair": 1,
+ "cells": {
+  "std|303": {
+   "default": {
+    "result": 0.0,
+    "resource": 5818.0,
+    "R": 0.0,
+    "choices": {
+     "present|standard": 6
+    },
+    "failed_calls": 0,
+    "sec": 7.9
+   },
+   "rollout": {
+    "result": 0.0,
+    "resource": 5795.0,
+    "R": 0.0,
+    "choices": {
+     "present|standard": 2,
+     "focus_home|rollout": 2,
+     "focus_team|rollout": 2
+    },
+    "failed_calls": 0,
+    "sec": 5.5
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 4619.0,
+    "R": 0.00021649707728945658,
+    "choices": {
+     "F:holo-vote|policy": 1,
+     "F:holo-vote|own": 1,
+     "F:holokey|standard": 1,
+     "past-1|standard": 2
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 6.0
+   },
+   "structure": {
+    "result": 1.0,
+    "resource": 4572.0,
+    "R": 0.00021872265966754156,
+    "choices": {
+     "present|standard": 1,
+     "present|own": 1,
+     "past-2|own": 1,
+     "past-1|standard": 2
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 5.7
+   },
+   "sec": 25
+  },
+  "std|304": {
+   "default": {
+    "result": 1.0,
+    "resource": 1737.0,
+    "R": 0.0005757052389176742,
+    "choices": {
+     "present|standard": 2
+    },
+    "failed_calls": 0,
+    "sec": 2.6
+   },
+   "rollout": {
+    "result": 1.0,
+    "resource": 1724.0,
+    "R": 0.000580046403712297,
+    "choices": {
+     "present|standard": 1,
+     "focus_city|rollout": 1
+    },
+    "failed_calls": 0,
+    "sec": 2.4
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 2665.0,
+    "R": 0.000375234521575985,
+    "choices": {
+     "P4P5-joint|policy": 1,
+     "F:holo-vote|policy": 1,
+     "F:holo-std|policy": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 3.7
+   },
+   "structure": {
+    "result": 1.0,
+    "resource": 1699.0,
+    "R": 0.0005885815185403178,
+    "choices": {
+     "present|standard": 1,
+     "focus_city|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.3
+   },
+   "sec": 11
+  }
+ }
+}

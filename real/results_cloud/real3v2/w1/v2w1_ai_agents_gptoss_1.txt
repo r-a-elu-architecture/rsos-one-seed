@@ -1,0 +1,16 @@
+ai_agents  model openrouter:openai/gpt-oss-20b  cells (1,)  modes ('seed3', 'seed3v1')  pool in None
+cell 1 standard=react     seed3     result 0.750  resource  11.71  R 0.0640  plan calls 8 fail 6 reused 0 blind answers 2 fallbacks 2 pool 2  failed_calls 0  [28.6s; calls 17 failed 0 retries 0]
+        seed3 choices: present|own 17, F:blind-b0|standard 4
+        seed3 ops used {'colour': 21, 'rooms': 21, 'transplant': 20}  rooms {'Eagle': 0, 'Owl': 0, 'Associated': 14, 'base': 7}  vetoed 2  rollouts v1/ops 268/100  passed {heal: 10, beam1: 10, beam3: 11, contain: 3, fuse: 21, rehost: 8, pierce: 21, overlay: 8, enter: 21, zoom: 21}  inherit 5 shapes 18 fallback 0 pool_saved /tmp/pool_ai_agents_gptoss_1.json
+cell 1 standard=react     seed3v1   result 0.750  resource  12.91  R 0.0581  plan calls 6 fail 3 reused 0 blind answers 3 fallbacks 1 pool 3  failed_calls 0  [15.3s; calls 15 failed 0 retries 0]
+        seed3v1 choices: present|own 15, F:blind-b0|standard 4
+cell 1 standard=selfcons  seed3     result 1.000  resource   6.29  R 0.1590  plan calls 6 fail 1 reused 1 blind answers 6 fallbacks 0 pool 4  failed_calls 0  [13.2s; calls 12 failed 0 retries 0]
+        seed3 choices: stop|own 4, present|standard 3, op:fuse|base 3, F:blind-b0|standard 2, F:reuse-b0|standard 1, op:overlay|base 1, op:heal|base 1, open|standard 1
+        seed3 ops used {'heal': 1, 'fuse': 3, 'overlay': 1, 'colour': 17, 'rooms': 17, 'transplant': 17}  rooms {'Eagle': 0, 'Owl': 4, 'Associated': 1, 'base': 12}  vetoed 5  rollouts v1/ops 313/96  passed {heal: 12, beam1: 14, beam3: 15, fuse: 21, rehost: 8, pierce: 17, overlay: 9, enter: 16, zoom: 13}  inherit 13 shapes 35 fallback 0 pool_saved /tmp/pool_ai_agents_gptoss_1.json
+cell 1 standard=selfcons  seed3v1   result 1.000  resource  14.62  R 0.0684  plan calls 7 fail 3 reused 1 blind answers 5 fallbacks 1 pool 3  failed_calls 0  [21.4s; calls 18 failed 0 retries 0]
+        seed3v1 choices: present|standard 8, present|own 5, stop|own 3, F:blind-b1|own 2, F:blind-b0|standard 2, F:reuse-b0|standard 1, future+2|own 1, F:blind-b0|own 1
+cell 1 standard=strongest strongest result 0.750  resource  19.71  R 0.0380  failed_calls 0  [24.7s; calls 27 failed 0 retries 0]
+seed3 v2 operators chosen (all cells, both standards): {'heal': 1, 'fuse': 3, 'overlay': 1}
+ops bound: {"heal": "bound", "beam1": "bound", "beam3": "bound", "contain": "bound", "compress": "bound", "inherit": "bound", "fuse": "bound", "carry": "not bound: needs carry", "rehost": "bound", "pierce": "bound", "overlay": "bound", "enter": "bound (depth 1: parts(state, within) not offered)", "zoom": "bound (generic)", "colour": "bound", "rooms": "bound (generic)", "transplant": "bound (generic; file: SEED3_POOL_IN / SEED3_POOL_OUT)"}
+bounded calls: {"consecutive_fail": 0, "calls": 89, "failed": 0, "requests": 89, "retries": 0, "seconds_waited": 0.0, "broken_calls": 0, "last_reason": ""}
+total 103.3s

@@ -1,0 +1,92 @@
+ai_agents  model mock:0  cells (1, 2, 3, 4)  modes ('seed3', 'seed3v1', 'seed', 'rollout', 'default')  pool in None
+cell 1 standard=react     seed3     result 1.000  resource   3.60  R 0.2775  plan calls 5 fail 1 reused 0 blind answers 4 fallbacks 0 pool 4  failed_calls 0  [1.4s; calls 0 failed 0 retries 0]
+        seed3 choices: present|own 5, F:blind-b0|standard 4
+        seed3 ops used {'colour': 9, 'rooms': 9, 'transplant': 8}  rooms {'Eagle': 0, 'Owl': 0, 'Associated': 9, 'base': 0}  vetoed 0  rollouts v1/ops 108/48  passed {heal: 1, beam1: 1, beam3: 2, fuse: 9, rehost: 4, pierce: 9, overlay: 8, enter: 9, zoom: 9}  inherit 4 shapes 9 fallback 0 pool_saved /tmp/pool_ai_agents.json
+cell 1 standard=react     seed3v1   result 1.000  resource   3.60  R 0.2775  plan calls 5 fail 1 reused 0 blind answers 4 fallbacks 0 pool 4  failed_calls 0  [0.9s; calls 0 failed 0 retries 0]
+        seed3v1 choices: present|own 5, F:blind-b0|standard 4
+cell 1 standard=react     seed      result 0.750  resource  10.06  R 0.0746  land w0 r0  failed_calls 0  [1.1s; calls 0 failed 0 retries 0]
+cell 1 standard=react     rollout   result 0.750  resource  10.06  R 0.0746  failed_calls 0  [0.3s; calls 0 failed 0 retries 0]
+cell 1 standard=react     default   result 0.750  resource  10.06  R 0.0746  failed_calls 0  [0.0s; calls 0 failed 0 retries 0]
+cell 1 standard=react     pareto vs default: seed3 WIN, seed3v1 WIN, seed TIE, rollout TIE
+cell 1 standard=selfcons  seed3     result 1.000  resource  12.88  R 0.0776  plan calls 6 fail 1 reused 1 blind answers 6 fallbacks 0 pool 4  failed_calls 0  [6.6s; calls 0 failed 0 retries 0]
+        seed3 choices: F:blind-b0|standard 4, past-1|standard 4, stop|own 3, F:blind-b1|own 2, op:fuse|Associated 2, present|own 2, open|own 2, F:reuse-b0|standard 1
+        seed3 ops used {'fuse': 2, 'colour': 23, 'rooms': 23, 'transplant': 23}  rooms {'Eagle': 0, 'Owl': 0, 'Associated': 23, 'base': 0}  vetoed 7  rollouts v1/ops 417/138  passed {heal: 18, beam1: 22, beam3: 23, contain: 1, fuse: 35, rehost: 10, pierce: 23, overlay: 22, enter: 21, zoom: 19}  inherit 17 shapes 32 fallback 0 pool_saved /tmp/pool_ai_agents.json
+cell 1 standard=selfcons  seed3v1   result 1.000  resource  12.88  R 0.0776  plan calls 6 fail 1 reused 1 blind answers 6 fallbacks 0 pool 4  failed_calls 0  [4.7s; calls 0 failed 0 retries 0]
+        seed3v1 choices: F:blind-b0|standard 5, past-1|standard 5, stop|own 3, F:blind-b1|own 2, present|own 2, open|own 2, F:reuse-b0|standard 1, future+1|standard 1
+cell 1 standard=selfcons  seed      result 1.000  resource  14.61  R 0.0684  land w0 r3  failed_calls 0  [3.2s; calls 0 failed 0 retries 0]
+cell 1 standard=selfcons  rollout   result 0.750  resource  14.93  R 0.0502  failed_calls 0  [0.6s; calls 0 failed 0 retries 0]
+cell 1 standard=selfcons  default   result 0.750  resource  29.05  R 0.0258  failed_calls 0  [0.0s; calls 0 failed 0 retries 0]
+cell 1 standard=selfcons  pareto vs default: seed3 WIN, seed3v1 WIN, seed WIN, rollout WIN
+cell 1 standard=strongest strongest result 0.500  resource  16.06  R 0.0311  failed_calls 0  [0.0s; calls 0 failed 0 retries 0]
+cell 2 standard=react     seed3     result 1.000  resource   2.94  R 0.3407  plan calls 4 fail 1 reused 1 blind answers 4 fallbacks 0 pool 7  failed_calls 0  [1.6s; calls 0 failed 0 retries 0]
+        seed3 choices: past-1|own 5, F:blind-b0|standard 3, F:reuse-b0|standard 1
+        seed3 ops used {'colour': 9, 'rooms': 9, 'transplant': 9}  rooms {'Eagle': 0, 'Owl': 0, 'Associated': 9, 'base': 0}  vetoed 0  rollouts v1/ops 111/49  passed {heal: 1, beam1: 9, beam3: 9, compress: 1, inherit: 1, fuse: 9, rehost: 4, pierce: 9, overlay: 8, enter: 9, zoom: 9}  inherit 23 shapes 39 fallback 0 pool_saved /tmp/pool_ai_agents.json
+cell 2 standard=react     seed3v1   result 1.000  resource   2.94  R 0.3407  plan calls 4 fail 1 reused 1 blind answers 4 fallbacks 0 pool 7  failed_calls 0  [0.9s; calls 0 failed 0 retries 0]
+        seed3v1 choices: past-1|own 5, F:blind-b0|standard 3, F:reuse-b0|standard 1
+cell 2 standard=react     seed      result 1.000  resource  11.03  R 0.0907  land w0 r0  failed_calls 0  [1.4s; calls 0 failed 0 retries 0]
+cell 2 standard=react     rollout   result 1.000  resource  11.03  R 0.0907  failed_calls 0  [0.2s; calls 0 failed 0 retries 0]
+cell 2 standard=react     default   result 1.000  resource  11.03  R 0.0907  failed_calls 0  [0.0s; calls 0 failed 0 retries 0]
+cell 2 standard=react     pareto vs default: seed3 WIN, seed3v1 WIN, seed TIE, rollout TIE
+cell 2 standard=selfcons  seed3     result 0.750  resource  10.08  R 0.0744  plan calls 6 fail 1 reused 1 blind answers 6 fallbacks 0 pool 7  failed_calls 0  [4.1s; calls 0 failed 0 retries 0]
+        seed3 choices: past-1|own 6, op:heal|Associated 3, past-1|standard 2, op:fuse|Associated 2, F:blind-b0|standard 2, F:reuse-b0|standard 1, F:blind-b1|own 1, past-2|own 1
+        seed3 ops used {'heal': 3, 'fuse': 2, 'colour': 19, 'rooms': 19, 'transplant': 19}  rooms {'Eagle': 0, 'Owl': 0, 'Associated': 19, 'base': 0}  vetoed 2  rollouts v1/ops 311/96  passed {heal: 19, beam1: 19, beam3: 19, contain: 4, compress: 1, fuse: 25, rehost: 12, pierce: 19, overlay: 10, enter: 19, zoom: 19}  inherit 30 shapes 56 fallback 0 pool_saved /tmp/pool_ai_agents.json
+cell 2 standard=selfcons  seed3v1   result 0.750  resource  10.08  R 0.0744  plan calls 6 fail 1 reused 1 blind answers 6 fallbacks 0 pool 7  failed_calls 0  [2.9s; calls 0 failed 0 retries 0]
+        seed3v1 choices: past-1|own 8, past-1|standard 3, F:blind-b0|standard 3, F:blind-b1|own 2, F:reuse-b0|standard 1, past-2|own 1, stop|own 1
+cell 2 standard=selfcons  seed      result 1.000  resource  14.12  R 0.0708  land w0 r5  failed_calls 0  [2.8s; calls 0 failed 0 retries 0]
+cell 2 standard=selfcons  rollout   result 1.000  resource  13.15  R 0.0760  failed_calls 0  [0.6s; calls 0 failed 0 retries 0]
+cell 2 standard=selfcons  default   result 1.000  resource  31.96  R 0.0313  failed_calls 0  [0.0s; calls 0 failed 0 retries 0]
+cell 2 standard=selfcons  pareto vs default: seed3 no, seed3v1 no, seed WIN, rollout WIN
+cell 2 standard=strongest strongest result 1.000  resource  16.22  R 0.0617  failed_calls 0  [0.0s; calls 0 failed 0 retries 0]
+cell 3 standard=react     seed3     result 0.750  resource   1.97  R 0.3815  plan calls 3 fail 0 reused 1 blind answers 4 fallbacks 0 pool 7  failed_calls 0  [1.4s; calls 0 failed 0 retries 0]
+        seed3 choices: past-1|own 4, F:blind-b0|standard 3, F:reuse-b0|standard 1
+        seed3 ops used {'colour': 8, 'rooms': 8, 'transplant': 8}  rooms {'Eagle': 0, 'Owl': 0, 'Associated': 8, 'base': 0}  vetoed 0  rollouts v1/ops 99/46  passed {beam1: 8, beam3: 8, compress: 1, inherit: 1, fuse: 8, rehost: 4, pierce: 8, overlay: 8, enter: 8, zoom: 8}  inherit 34 shapes 63 fallback 0 pool_saved /tmp/pool_ai_agents.json
+cell 3 standard=react     seed3v1   result 0.750  resource   1.97  R 0.3815  plan calls 3 fail 0 reused 1 blind answers 4 fallbacks 0 pool 7  failed_calls 0  [0.9s; calls 0 failed 0 retries 0]
+        seed3v1 choices: past-1|own 4, F:blind-b0|standard 3, F:reuse-b0|standard 1
+cell 3 standard=react     seed      result 0.750  resource   7.15  R 0.1049  land w0 r0  failed_calls 0  [1.1s; calls 0 failed 0 retries 0]
+cell 3 standard=react     rollout   result 0.750  resource   7.15  R 0.1049  failed_calls 0  [0.2s; calls 0 failed 0 retries 0]
+cell 3 standard=react     default   result 0.750  resource   7.15  R 0.1049  failed_calls 0  [0.0s; calls 0 failed 0 retries 0]
+cell 3 standard=react     pareto vs default: seed3 WIN, seed3v1 WIN, seed TIE, rollout TIE
+cell 3 standard=selfcons  seed3     result 1.000  resource  10.76  R 0.0930  plan calls 6 fail 0 reused 1 blind answers 7 fallbacks 0 pool 7  failed_calls 0  [4.9s; calls 0 failed 0 retries 0]
+        seed3 choices: F:blind-b1|own 3, F:blind-b0|standard 3, past-1|standard 3, stop|own 2, op:heal|Associated 2, past-1|own 2, op:compress|Associated 2, F:reuse-b0|standard 1
+        seed3 ops used {'heal': 2, 'compress': 2, 'fuse': 1, 'colour': 21, 'rooms': 21, 'transplant': 21}  rooms {'Eagle': 0, 'Owl': 0, 'Associated': 21, 'base': 0}  vetoed 5  rollouts v1/ops 365/111  passed {heal: 19, beam1: 21, beam3: 21, contain: 4, compress: 7, inherit: 1, fuse: 28, rehost: 11, pierce: 21, overlay: 8, enter: 21, zoom: 20}  inherit 39 shapes 70 fallback 0 pool_saved /tmp/pool_ai_agents.json
+cell 3 standard=selfcons  seed3v1   result 1.000  resource  10.76  R 0.0930  plan calls 6 fail 0 reused 1 blind answers 7 fallbacks 0 pool 7  failed_calls 0  [3.3s; calls 0 failed 0 retries 0]
+        seed3v1 choices: past-1|standard 6, past-1|own 5, F:blind-b1|own 3, F:blind-b0|standard 3, stop|own 2, F:reuse-b0|standard 1, past-2|standard 1
+cell 3 standard=selfcons  seed      result 0.750  resource  12.35  R 0.0607  land w2 r8  failed_calls 0  [3.0s; calls 0 failed 0 retries 0]
+cell 3 standard=selfcons  rollout   result 0.750  resource  16.07  R 0.0467  failed_calls 0  [0.6s; calls 0 failed 0 retries 0]
+cell 3 standard=selfcons  default   result 0.750  resource  30.99  R 0.0242  failed_calls 0  [0.0s; calls 0 failed 0 retries 0]
+cell 3 standard=selfcons  pareto vs default: seed3 WIN, seed3v1 WIN, seed WIN, rollout WIN
+cell 3 standard=strongest strongest result 0.750  resource  13.97  R 0.0537  failed_calls 0  [0.0s; calls 0 failed 0 retries 0]
+cell 4 standard=react     seed3     result 1.000  resource   3.91  R 0.2558  plan calls 5 fail 2 reused 1 blind answers 4 fallbacks 0 pool 8  failed_calls 0  [1.6s; calls 0 failed 0 retries 0]
+        seed3 choices: present|own 6, F:blind-b0|standard 3, F:reuse-b0|standard 1
+        seed3 ops used {'colour': 10, 'rooms': 10, 'transplant': 10}  rooms {'Eagle': 0, 'Owl': 0, 'Associated': 10, 'base': 0}  vetoed 0  rollouts v1/ops 125/55  passed {heal: 3, beam1: 10, beam3: 10, compress: 2, inherit: 2, fuse: 10, rehost: 4, pierce: 10, overlay: 8, enter: 10, zoom: 10}  inherit 42 shapes 78 fallback 0 pool_saved /tmp/pool_ai_agents.json
+cell 4 standard=react     seed3v1   result 1.000  resource   3.91  R 0.2558  plan calls 5 fail 2 reused 1 blind answers 4 fallbacks 0 pool 8  failed_calls 0  [1.0s; calls 0 failed 0 retries 0]
+        seed3v1 choices: past-1|own 6, F:blind-b0|standard 3, F:reuse-b0|standard 1
+cell 4 standard=react     seed      result 0.750  resource   6.34  R 0.1183  land w0 r0  failed_calls 0  [0.9s; calls 0 failed 0 retries 0]
+cell 4 standard=react     rollout   result 0.750  resource   6.34  R 0.1183  failed_calls 0  [0.2s; calls 0 failed 0 retries 0]
+cell 4 standard=react     default   result 0.750  resource   6.34  R 0.1183  failed_calls 0  [0.0s; calls 0 failed 0 retries 0]
+cell 4 standard=react     pareto vs default: seed3 WIN, seed3v1 WIN, seed TIE, rollout TIE
+cell 4 standard=selfcons  seed3     result 0.750  resource   6.02  R 0.1246  plan calls 7 fail 3 reused 0 blind answers 4 fallbacks 0 pool 8  failed_calls 0  [3.5s; calls 0 failed 0 retries 0]
+        seed3 choices: op:heal|Associated 2, present|standard 2, stop|own 2, op:fuse|Associated 2, past-2|own 2, F:reuse-b0|standard 1, F:blind-b1|own 1, F:blind-b0|standard 1
+        seed3 ops used {'heal': 2, 'fuse': 2, 'colour': 13, 'rooms': 13, 'transplant': 13}  rooms {'Eagle': 0, 'Owl': 0, 'Associated': 13, 'base': 0}  vetoed 4  rollouts v1/ops 209/72  passed {heal: 13, beam1: 13, beam3: 13, compress: 1, fuse: 14, rehost: 5, pierce: 13, overlay: 5, enter: 13, zoom: 12}  inherit 49 shapes 86 fallback 0 pool_saved /tmp/pool_ai_agents.json
+cell 4 standard=selfcons  seed3v1   result 0.750  resource   6.02  R 0.1246  plan calls 7 fail 3 reused 0 blind answers 4 fallbacks 0 pool 8  failed_calls 0  [2.3s; calls 0 failed 0 retries 0]
+        seed3v1 choices: past-1|standard 4, F:blind-b0|standard 3, stop|own 2, past-2|own 2, F:reuse-b0|standard 1, F:blind-b1|own 1
+cell 4 standard=selfcons  seed      result 0.750  resource  13.81  R 0.0543  land w0 r8  failed_calls 0  [3.1s; calls 0 failed 0 retries 0]
+cell 4 standard=selfcons  rollout   result 0.750  resource  14.62  R 0.0513  failed_calls 0  [0.7s; calls 0 failed 0 retries 0]
+cell 4 standard=selfcons  default   result 0.750  resource  25.81  R 0.0291  failed_calls 0  [0.0s; calls 0 failed 0 retries 0]
+cell 4 standard=selfcons  pareto vs default: seed3 WIN, seed3v1 WIN, seed WIN, rollout WIN
+cell 4 standard=strongest strongest result 0.500  resource  18.67  R 0.0268  failed_calls 0  [0.0s; calls 0 failed 0 retries 0]
+seed3 v2 operators chosen (all cells, both standards): {'fuse': 7, 'heal': 7, 'compress': 2}
+ops bound: {"heal": "bound", "beam1": "bound", "beam3": "bound", "contain": "bound", "compress": "bound", "inherit": "bound", "fuse": "bound", "carry": "not bound: needs carry", "rehost": "bound", "pierce": "bound", "overlay": "bound", "enter": "bound (depth 1: parts(state, within) not offered)", "zoom": "bound (generic)", "colour": "bound", "rooms": "bound (generic)", "transplant": "bound (generic; file: SEED3_POOL_IN / SEED3_POOL_OUT)"}
+bounded calls: {"consecutive_fail": 0, "calls": 0, "failed": 0, "requests": 0, "retries": 0, "seconds_waited": 0.0, "broken_calls": 0, "last_reason": ""}
+total 62.1s
+
+=== ROBUSTNESS CHECK (fake provider, no network, no key; requests.post replaced, sleeps counted not waited): AIAgents openrouter:meta-llama/llama-3.1-8b-instruct, standard react, mode default, cell 1 ===
+down result 0.0 resource 0.0 failed_calls 4 errors 4 requests 13 sleep_s 18.0 wall 0.0
+first error: [ai_agents openrouter:meta-llama/llama-3.1-8b-instruct std=react cell 1 task 0 branch 0 call 1 try 1/2] LLMError: bounded retries exhausted (4 tries / 100s): HTTP 429: {"error": "rate"}
+{"consecutive_fail": 4, "calls": 4, "failed": 4, "requests": 13, "retries": 9, "seconds_waited": 18.0, "broken_calls": 1, "last_reason": "LLMError: bounded retries exhausted (1 tries / 35s): HTTP 429: {\"error\": \"rate\"}"}
+timeout result 0.0 resource 0.0 failed_calls 4 errors 4 requests 13 sleep_s 21.0 wall 0.0
+first error: [ai_agents openrouter:meta-llama/llama-3.1-8b-instruct std=react cell 1 task 0 branch 0 call 1 try 1/2] LLMError: bounded retries exhausted (4 tries / 100s): Timeout: read timed out
+{"consecutive_fail": 4, "calls": 4, "failed": 4, "requests": 13, "retries": 9, "seconds_waited": 21.0, "broken_calls": 1, "last_reason": "LLMError: bounded retries exhausted (1 tries / 35s): Timeout: read timed out"}
+flaky result 0.0 resource 1.28 failed_calls 0 errors 0 requests 12 sleep_s 16.1 wall 0.0
+first error: None
+{"consecutive_fail": 0, "calls": 4, "failed": 0, "requests": 12, "retries": 8, "seconds_waited": 16.130769888243655, "broken_calls": 0, "last_reason": ""}

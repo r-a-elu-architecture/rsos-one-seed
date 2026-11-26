@@ -1,0 +1,86 @@
+{
+ "row": "energy",
+ "model": "-",
+ "stage": 1,
+ "pair": 0,
+ "cells": {
+  "std|201": {
+   "default": {
+    "result": 13.485920629721164,
+    "resource": 149.3170655788399,
+    "R": 0.09031734301395411,
+    "choices": {
+     "present|standard": 168
+    }
+   },
+   "seed3v1": {
+    "result": 14.728859903782965,
+    "resource": 161.91062931942213,
+    "R": 0.0909690732825541,
+    "choices": {
+     "P4P5:scenario_mpc|policy": 75,
+     "P4P5:scenario_mpc|standard": 20,
+     "future+2|standard": 1,
+     "P5:soc_dp_realpast_tree|policy": 20,
+     "P2:price_on_wear|policy": 14,
+     "future+1|standard": 2,
+     "charge_half|standard": 1,
+     "P5:soc_dp_realpast_tree|standard": 8,
+     "P2:price_on_wear|standard": 11,
+     "P2:price_on_wear|own": 8,
+     "P5:soc_dp_realpast_tree|own": 8
+    },
+    "policy_fallback_steps": 0
+   },
+   "strongest": {
+    "result": 14.411013683737965,
+    "resource": 155.7717165496989,
+    "R": 0.09251367323245832,
+    "choices": {
+     "present|standard": 168
+    }
+   },
+   "sec": 6052
+  },
+  "std|202": {
+   "default": {
+    "result": 14.581860099333674,
+    "resource": 152.02047935226923,
+    "R": 0.09592036652866934,
+    "choices": {
+     "present|standard": 168
+    }
+   },
+   "seed3v1": {
+    "result": 14.275165363406707,
+    "resource": 157.43784015387612,
+    "R": 0.09067175559226733,
+    "choices": {
+     "P4P5:scenario_mpc|policy": 95,
+     "P2:price_on_wear|policy": 10,
+     "P4P5:scenario_mpc|standard": 12,
+     "P5:soc_dp_realpast_tree|policy": 15,
+     "P2:price_on_wear|standard": 16,
+     "P5:soc_dp_realpast_tree|standard": 2,
+     "past-2|standard": 1,
+     "future+2|standard": 1,
+     "F:coupled_hours:realpast_day_paths|policy": 5,
+     "past-1|standard": 1,
+     "P5:soc_dp_realpast_tree|own": 1,
+     "P4P5:scenario_mpc|own": 6,
+     "P2:price_on_wear|own": 3
+    },
+    "policy_fallback_steps": 0
+   },
+   "strongest": {
+    "result": 14.449180040541457,
+    "resource": 152.1131101370278,
+    "R": 0.09498970882605204,
+    "choices": {
+     "present|standard": 168
+    }
+   },
+   "sec": 6023
+  }
+ }
+}

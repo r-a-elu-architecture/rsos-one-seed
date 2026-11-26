@@ -1,0 +1,755 @@
+{
+ "shades": {
+  "1": {
+   "node": "Law 2 blind operation",
+   "P0": {
+    "wins": 11,
+    "nonzero": 11,
+    "of": 12,
+    "mean": 0.04027777777777769,
+    "p": 0.00048828125
+   },
+   "P5": {
+    "wins": 11,
+    "nonzero": 11,
+    "of": 12,
+    "mean": 0.03532407407407396,
+    "p": 0.00048828125
+   },
+   "channels_ok": 10,
+   "repeat": [
+    5,
+    6
+   ],
+   "holm_P0": 0.005126953125,
+   "holm_P5": 0.005126953125,
+   "m": {
+    "m1": true,
+    "m2": true,
+    "m3": true,
+    "m4": false,
+    "m5": true
+   },
+   "green": false
+  },
+  "2": {
+   "node": "Network",
+   "P0": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.06032407407407398,
+    "p": 0.000244140625
+   },
+   "P5": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.049999999999999926,
+    "p": 0.000244140625
+   },
+   "channels_ok": 11,
+   "repeat": [
+    6,
+    6
+   ],
+   "holm_P0": 0.005126953125,
+   "holm_P5": 0.005126953125,
+   "m": {
+    "m1": true,
+    "m2": true,
+    "m3": true,
+    "m4": false,
+    "m5": true
+   },
+   "green": false
+  },
+  "3": {
+   "node": "Networks, satellites",
+   "P0": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.06634259259259255,
+    "p": 0.000244140625
+   },
+   "P5": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.056863425925925894,
+    "p": 0.000244140625
+   },
+   "channels_ok": 9,
+   "repeat": [
+    6,
+    6
+   ],
+   "holm_P0": 0.005126953125,
+   "holm_P5": 0.005126953125,
+   "m": {
+    "m1": true,
+    "m2": false,
+    "m3": true,
+    "m4": false,
+    "m5": true
+   },
+   "green": false
+  },
+  "4": {
+   "node": "Physical comm layer",
+   "P0": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.06290509259259251,
+    "p": 0.000244140625
+   },
+   "P5": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.035254629629629504,
+    "p": 0.000244140625
+   },
+   "channels_ok": 11,
+   "repeat": [
+    6,
+    6
+   ],
+   "holm_P0": 0.005126953125,
+   "holm_P5": 0.005126953125,
+   "m": {
+    "m1": true,
+    "m2": true,
+    "m3": true,
+    "m4": false,
+    "m5": true
+   },
+   "green": false
+  },
+  "5": {
+   "node": "Human reasoning",
+   "P0": {
+    "wins": 11,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.028888888888888797,
+    "p": 0.003173828125
+   },
+   "P5": {
+    "wins": 11,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.026412037037036946,
+    "p": 0.003173828125
+   },
+   "channels_ok": 9,
+   "repeat": [
+    5,
+    6
+   ],
+   "holm_P0": 0.01904296875,
+   "holm_P5": 0.022216796875,
+   "m": {
+    "m1": true,
+    "m2": false,
+    "m3": true,
+    "m4": false,
+    "m5": true
+   },
+   "green": false
+  },
+  "6": {
+   "node": "Physics (layer 2)",
+   "P0": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.07697916666666656,
+    "p": 0.000244140625
+   },
+   "P5": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.04790509259259245,
+    "p": 0.000244140625
+   },
+   "channels_ok": 12,
+   "repeat": [
+    6,
+    6
+   ],
+   "holm_P0": 0.005126953125,
+   "holm_P5": 0.005126953125,
+   "m": {
+    "m1": true,
+    "m2": true,
+    "m3": true,
+    "m4": false,
+    "m5": true
+   },
+   "green": false
+  },
+  "7": {
+   "node": "Ledgers, finance",
+   "P0": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.04624999999999995,
+    "p": 0.000244140625
+   },
+   "P5": {
+    "wins": 11,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.021585648148148062,
+    "p": 0.003173828125
+   },
+   "channels_ok": 9,
+   "repeat": [
+    6,
+    5
+   ],
+   "holm_P0": 0.005126953125,
+   "holm_P5": 0.022216796875,
+   "m": {
+    "m1": true,
+    "m2": false,
+    "m3": true,
+    "m4": false,
+    "m5": true
+   },
+   "green": false
+  },
+  "8": {
+   "node": "Chemistry",
+   "P0": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.05457175925925922,
+    "p": 0.000244140625
+   },
+   "P5": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.04879629629629628,
+    "p": 0.000244140625
+   },
+   "channels_ok": 10,
+   "repeat": [
+    6,
+    6
+   ],
+   "holm_P0": 0.005126953125,
+   "holm_P5": 0.005126953125,
+   "m": {
+    "m1": true,
+    "m2": true,
+    "m3": true,
+    "m4": false,
+    "m5": true
+   },
+   "green": false
+  },
+  "9": {
+   "node": "Databases",
+   "P0": {
+    "wins": 11,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.023657407407407377,
+    "p": 0.003173828125
+   },
+   "P5": {
+    "wins": 11,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.022141203703703677,
+    "p": 0.003173828125
+   },
+   "channels_ok": 10,
+   "repeat": [
+    5,
+    6
+   ],
+   "holm_P0": 0.01904296875,
+   "holm_P5": 0.022216796875,
+   "m": {
+    "m1": true,
+    "m2": true,
+    "m3": true,
+    "m4": false,
+    "m5": true
+   },
+   "green": false
+  },
+  "10": {
+   "node": "AI chips (layer 2)",
+   "P0": {
+    "wins": 11,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.02369212962962955,
+    "p": 0.003173828125
+   },
+   "P5": {
+    "wins": 11,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.022592592592592498,
+    "p": 0.003173828125
+   },
+   "channels_ok": 9,
+   "repeat": [
+    5,
+    6
+   ],
+   "holm_P0": 0.01904296875,
+   "holm_P5": 0.022216796875,
+   "m": {
+    "m1": true,
+    "m2": false,
+    "m3": true,
+    "m4": false,
+    "m5": true
+   },
+   "green": false
+  },
+  "11": {
+   "node": "Earth and space",
+   "P0": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.04996527777777776,
+    "p": 0.000244140625
+   },
+   "P5": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.046342592592592595,
+    "p": 0.000244140625
+   },
+   "channels_ok": 9,
+   "repeat": [
+    6,
+    6
+   ],
+   "holm_P0": 0.005126953125,
+   "holm_P5": 0.005126953125,
+   "m": {
+    "m1": true,
+    "m2": false,
+    "m3": true,
+    "m4": false,
+    "m5": true
+   },
+   "green": false
+  },
+  "12": {
+   "node": "Cosmology",
+   "P0": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.07334490740740725,
+    "p": 0.000244140625
+   },
+   "P5": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.05094907407407389,
+    "p": 0.000244140625
+   },
+   "channels_ok": 11,
+   "repeat": [
+    6,
+    6
+   ],
+   "holm_P0": 0.005126953125,
+   "holm_P5": 0.005126953125,
+   "m": {
+    "m1": true,
+    "m2": true,
+    "m3": true,
+    "m4": false,
+    "m5": true
+   },
+   "green": false
+  },
+  "13": {
+   "node": "Biology, medicine",
+   "P0": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.033483796296296275,
+    "p": 0.000244140625
+   },
+   "P5": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.0312847222222222,
+    "p": 0.000244140625
+   },
+   "channels_ok": 11,
+   "repeat": [
+    6,
+    6
+   ],
+   "holm_P0": 0.005126953125,
+   "holm_P5": 0.005126953125,
+   "m": {
+    "m1": true,
+    "m2": true,
+    "m3": true,
+    "m4": false,
+    "m5": true
+   },
+   "green": false
+  },
+  "14": {
+   "node": "Level E (layer 2)",
+   "P0": {
+    "wins": 11,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.015462962962962928,
+    "p": 0.003173828125
+   },
+   "P5": {
+    "wins": 11,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.015462962962962928,
+    "p": 0.003173828125
+   },
+   "channels_ok": 8,
+   "repeat": [
+    5,
+    6
+   ],
+   "holm_P0": 0.01904296875,
+   "holm_P5": 0.022216796875,
+   "m": {
+    "m1": true,
+    "m2": false,
+    "m3": true,
+    "m4": false,
+    "m5": true
+   },
+   "green": false
+  },
+  "15": {
+   "node": "Law 1 read scope",
+   "P0": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.0172337962962963,
+    "p": 0.000244140625
+   },
+   "P5": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.0172337962962963,
+    "p": 0.000244140625
+   },
+   "channels_ok": 9,
+   "repeat": [
+    6,
+    6
+   ],
+   "holm_P0": 0.005126953125,
+   "holm_P5": 0.005126953125,
+   "m": {
+    "m1": true,
+    "m2": false,
+    "m3": true,
+    "m4": false,
+    "m5": true
+   },
+   "green": false
+  },
+  "16": {
+   "node": "Linguistics",
+   "P0": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.03883101851851851,
+    "p": 0.000244140625
+   },
+   "P5": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.03800925925925925,
+    "p": 0.000244140625
+   },
+   "channels_ok": 10,
+   "repeat": [
+    6,
+    6
+   ],
+   "holm_P0": 0.005126953125,
+   "holm_P5": 0.005126953125,
+   "m": {
+    "m1": true,
+    "m2": true,
+    "m3": true,
+    "m4": false,
+    "m5": true
+   },
+   "green": false
+  },
+  "17": {
+   "node": "Level D",
+   "P0": {
+    "wins": 11,
+    "nonzero": 11,
+    "of": 12,
+    "mean": 0.014687500000000011,
+    "p": 0.00048828125
+   },
+   "P5": {
+    "wins": 11,
+    "nonzero": 11,
+    "of": 12,
+    "mean": 0.014687500000000011,
+    "p": 0.00048828125
+   },
+   "channels_ok": 7,
+   "repeat": [
+    5,
+    6
+   ],
+   "holm_P0": 0.005126953125,
+   "holm_P5": 0.005126953125,
+   "m": {
+    "m1": true,
+    "m2": false,
+    "m3": true,
+    "m4": false,
+    "m5": true
+   },
+   "green": false
+  },
+  "18": {
+   "node": "Protocol theory",
+   "P0": {
+    "wins": 10,
+    "nonzero": 11,
+    "of": 12,
+    "mean": 0.011076388888888919,
+    "p": 0.005859375
+   },
+   "P5": {
+    "wins": 10,
+    "nonzero": 11,
+    "of": 12,
+    "mean": 0.011076388888888919,
+    "p": 0.005859375
+   },
+   "channels_ok": 7,
+   "repeat": [
+    5,
+    5
+   ],
+   "holm_P0": 0.01904296875,
+   "holm_P5": 0.022216796875,
+   "m": {
+    "m1": true,
+    "m2": false,
+    "m3": true,
+    "m4": false,
+    "m5": true
+   },
+   "green": false
+  },
+  "19": {
+   "node": "Level B",
+   "P0": {
+    "wins": 10,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.01140046296296296,
+    "p": 0.019287109375
+   },
+   "P5": {
+    "wins": 10,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.01140046296296296,
+    "p": 0.019287109375
+   },
+   "channels_ok": 11,
+   "repeat": [
+    5,
+    5
+   ],
+   "holm_P0": 0.019287109375,
+   "holm_P5": 0.022216796875,
+   "m": {
+    "m1": true,
+    "m2": true,
+    "m3": true,
+    "m4": false,
+    "m5": true
+   },
+   "green": false
+  },
+  "20": {
+   "node": "Information theory",
+   "P0": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.032604166666666684,
+    "p": 0.000244140625
+   },
+   "P5": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.032604166666666684,
+    "p": 0.000244140625
+   },
+   "channels_ok": 10,
+   "repeat": [
+    6,
+    6
+   ],
+   "holm_P0": 0.005126953125,
+   "holm_P5": 0.005126953125,
+   "m": {
+    "m1": true,
+    "m2": true,
+    "m3": true,
+    "m4": false,
+    "m5": true
+   },
+   "green": false
+  },
+  "21": {
+   "node": "Operator algebra",
+   "P0": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.013171296296296283,
+    "p": 0.000244140625
+   },
+   "P5": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.013171296296296283,
+    "p": 0.000244140625
+   },
+   "channels_ok": 11,
+   "repeat": [
+    6,
+    6
+   ],
+   "holm_P0": 0.005126953125,
+   "holm_P5": 0.005126953125,
+   "m": {
+    "m1": true,
+    "m2": true,
+    "m3": true,
+    "m4": false,
+    "m5": true
+   },
+   "green": false
+  }
+ },
+ "n_green": 0,
+ "P14": {
+  "wins": 4,
+  "nonzero": 9,
+  "of": 126,
+  "mean": -0.0001642416225749578,
+  "p": 0.74609375
+ },
+ "P15": "not measurable (no fever)",
+ "P8b": {
+  "wins": 242,
+  "nonzero": 252,
+  "of": 252,
+  "mean": 0.003416346924409669,
+  "p": 3.4222032572879183e-59
+ },
+ "P16": {
+  "wins": 11,
+  "nonzero": 37,
+  "of": 51,
+  "mean": -0.0023474945533769314,
+  "p": 0.996183960698545
+ },
+ "P4b": {
+  "valid": 20,
+  "rejected_hash": 1,
+  "corrupted_adopted": 0,
+  "corrupted_total": 1,
+  "pass": true
+ },
+ "real": {
+  "P5r": {
+   "wins": 11,
+   "nonzero": 24,
+   "of": 24,
+   "mean": 0.008832846003898632,
+   "p": 0.7293719053268433,
+   "holm": 0.7293719053268433
+  },
+  "P0r": {
+   "wins": 19,
+   "nonzero": 22,
+   "of": 24,
+   "mean": 0.06282082521117609,
+   "p": 0.0004277229309082031,
+   "holm": 0.0012831687927246094
+  },
+  "P9r": {
+   "wins": 13,
+   "nonzero": 19,
+   "of": 24,
+   "mean": 0.01665042235217674,
+   "p": 0.08353424072265625,
+   "holm": 0.1670684814453125
+  },
+  "by_data": {
+   "cancer": {
+    "wins": 5,
+    "nonzero": 8,
+    "of": 8,
+    "mean": 0.002192982456140344,
+    "p": 0.36328125
+   },
+   "wine": {
+    "wins": 6,
+    "nonzero": 8,
+    "of": 8,
+    "mean": 0.05324074074074074,
+    "p": 0.14453125
+   },
+   "digits": {
+    "wins": 0,
+    "nonzero": 8,
+    "of": 8,
+    "mean": -0.02893518518518519,
+    "p": 1.0
+   }
+  }
+ }
+}

@@ -1,0 +1,81 @@
+ D:\FROM_CLAUDE\RSOS-A8> $env:PYTHONUTF8="1"; $env:A7_BACKEND="openai"; $env:A7_WORKERS="2"; $env:A7_OPENAI_BASE="https://api.mistral.ai/v1"; $env:A7_OPENAI_MODEL="mistral-large-4-0"; $env:A7_LABEL="mistral_large40"; py experiments/a7_run.py run S1 B2,X5b; py experiments/a7_run.py run L3 B2,X5b
+S1 label=mistral_large40 backend=openai: done 0, live 32
+S1 B2 100 think=default success=True acc=1.000 calls=2 out=8739 think_tok=8366 inv=0 wrong=0 fail=0 wall=130s
+S1 B2 101 think=default success=True acc=1.000 calls=2 out=11038 think_tok=10639 inv=0 wrong=0 fail=0 wall=220s
+S1 B2 102 think=default success=True acc=1.000 calls=2 out=10447 think_tok=10042 inv=0 wrong=0 fail=0 wall=155s
+S1 B2 103 think=default success=True acc=1.000 calls=2 out=10119 think_tok=9737 inv=0 wrong=0 fail=0 wall=124s
+S1 B2 104 think=default success=True acc=1.000 calls=2 out=6148 think_tok=5757 inv=0 wrong=0 fail=0 wall=88s
+S1 B2 105 think=default success=True acc=1.000 calls=2 out=5961 think_tok=5588 inv=0 wrong=0 fail=0 wall=72s
+S1 B2 106 think=default success=True acc=1.000 calls=2 out=6569 think_tok=6194 inv=0 wrong=0 fail=0 wall=114s
+S1 B2 300 think=default success=True acc=1.000 calls=2 out=10771 think_tok=10341 inv=0 wrong=0 fail=0 wall=156s
+S1 B2 107 think=default success=True acc=1.000 calls=2 out=14369 think_tok=13768 inv=0 wrong=0 fail=0 wall=277s
+S1 B2 301 think=default success=True acc=1.000 calls=2 out=8329 think_tok=7850 inv=0 wrong=0 fail=0 wall=125s
+S1 B2 302 think=default success=True acc=1.000 calls=2 out=13607 think_tok=13160 inv=0 wrong=0 fail=0 wall=193s
+S1 B2 303 think=default success=True acc=1.000 calls=2 out=8788 think_tok=8378 inv=0 wrong=0 fail=0 wall=137s
+S1 B2 304 think=default success=True acc=1.000 calls=2 out=10401 think_tok=10018 inv=0 wrong=0 fail=0 wall=148s
+S1 B2 305 think=default success=True acc=1.000 calls=2 out=8902 think_tok=8452 inv=0 wrong=0 fail=0 wall=151s
+S1 B2 307 think=default success=True acc=1.000 calls=2 out=9964 think_tok=9568 inv=0 wrong=0 fail=0 wall=179s
+S1 B2 306 think=default success=True acc=1.000 calls=2 out=10356 think_tok=9936 inv=0 wrong=0 fail=0 wall=207s
+S1 X5b 100 think=default success=True acc=1.000 calls=2 out=4310 think_tok=4123 inv=0 wrong=0 fail=0 wall=67s
+S1 X5b 101 think=default success=True acc=1.000 calls=2 out=7011 think_tok=6789 inv=0 wrong=0 fail=0 wall=89s
+S1 X5b 102 think=default success=True acc=1.000 calls=2 out=4025 think_tok=3858 inv=0 wrong=0 fail=0 wall=76s
+S1 X5b 103 think=default success=True acc=1.000 calls=2 out=3805 think_tok=3610 inv=0 wrong=0 fail=0 wall=67s
+S1 X5b 104 think=default success=True acc=1.000 calls=2 out=6363 think_tok=6171 inv=0 wrong=0 fail=0 wall=81s
+S1 X5b 105 think=default success=True acc=1.000 calls=2 out=6718 think_tok=6553 inv=0 wrong=0 fail=0 wall=98s
+S1 X5b 106 think=default success=True acc=1.000 calls=2 out=4654 think_tok=4485 inv=0 wrong=0 fail=0 wall=55s
+S1 X5b 300 think=default success=True acc=1.000 calls=2 out=5578 think_tok=5409 inv=0 wrong=0 fail=0 wall=74s
+S1 X5b 107 think=default success=True acc=1.000 calls=2 out=14907 think_tok=14727 inv=0 wrong=0 fail=0 wall=205s
+S1 X5b 301 think=default success=True acc=1.000 calls=2 out=4008 think_tok=3811 inv=0 wrong=0 fail=0 wall=128s
+S1 X5b 302 think=default success=True acc=1.000 calls=2 out=4544 think_tok=4360 inv=0 wrong=0 fail=0 wall=113s
+S1 X5b 303 think=default success=True acc=1.000 calls=2 out=5160 think_tok=4960 inv=0 wrong=0 fail=0 wall=117s
+S1 X5b 305 think=default success=True acc=1.000 calls=2 out=5844 think_tok=5665 inv=0 wrong=0 fail=0 wall=133s
+S1 X5b 304 think=default success=True acc=1.000 calls=2 out=6781 think_tok=6610 inv=0 wrong=0 fail=0 wall=158s
+S1 X5b 307 think=default success=True acc=1.000 calls=2 out=4592 think_tok=4434 inv=0 wrong=0 fail=0 wall=52s
+S1 X5b 306 think=default success=True acc=1.000 calls=4 out=7443 think_tok=7158 inv=0 wrong=0 fail=0 wall=139s
+L3 label=mistral_large40 backend=openai: done 0, live 32
+L3 B2 701 think=default success=True acc=1.000 calls=2 out=15875 think_tok=13960 inv=0 wrong=0 fail=0 wall=305s
+L3 B2 700 think=default success=True acc=1.000 calls=2 out=17364 think_tok=14838 inv=0 wrong=0 fail=0 wall=305s
+L3 B2 703 think=default success=True acc=1.000 calls=2 out=19778 think_tok=16937 inv=0 wrong=0 fail=0 wall=364s
+L3 B2 704 NOT RUN: [Errno 2] No such file or directory: 'D:\\FROM_CLAUDE\\RSOS-A8\\results\\a7_transcripts_L3_mistral_large40.jsonl'
+L3 B2 702 NOT RUN: [Errno 2] No such file or directory: 'D:\\FROM_CLAUDE\\RSOS-A8\\results\\a7_transcripts_L3_mistral_large40.jsonl'
+L3 B2 706 NOT RUN: [Errno 2] No such file or directory: 'D:\\FROM_CLAUDE\\RSOS-A8\\results\\a7_transcripts_L3_mistral_large40.jsonl'
+L3 B2 705 NOT RUN: [Errno 2] No such file or directory: 'D:\\FROM_CLAUDE\\RSOS-A8\\results\\a7_transcripts_L3_mistral_large40.jsonl'
+L3 B2 708 NOT RUN: [Errno 2] No such file or directory: 'D:\\FROM_CLAUDE\\RSOS-A8\\results\\a7_transcripts_L3_mistral_large40.jsonl'
+L3 B2 707 NOT RUN: [Errno 2] No such file or directory: 'D:\\FROM_CLAUDE\\RSOS-A8\\results\\a7_transcripts_L3_mistral_large40.jsonl'
+L3 B2 709 NOT RUN: [Errno 2] No such file or directory: 'D:\\FROM_CLAUDE\\RSOS-A8\\results\\a7_transcripts_L3_mistral_large40.jsonl'
+L3 B2 710 NOT RUN: [Errno 2] No such file or directory: 'D:\\FROM_CLAUDE\\RSOS-A8\\results\\a7_transcripts_L3_mistral_large40.jsonl'
+L3 B2 711 NOT RUN: [Errno 2] No such file or directory: 'D:\\FROM_CLAUDE\\RSOS-A8\\results\\a7_transcripts_L3_mistral_large40.jsonl'
+L3 B2 713 think=default success=True acc=1.000 calls=2 out=18897 think_tok=16575 inv=0 wrong=0 fail=0 wall=324s
+L3 B2 712 think=default success=False acc=0.984 calls=6 out=35657 think_tok=33599 inv=0 wrong=5 fail=0 wall=462s
+L3 B2 715 think=default success=True acc=1.000 calls=2 out=13059 think_tok=11109 inv=0 wrong=0 fail=0 wall=152s
+L3 B2 714 think=default success=True acc=1.000 calls=2 out=15417 think_tok=13628 inv=0 wrong=0 fail=0 wall=252s
+L3 X5b 701 think=default success=True acc=1.000 calls=2 out=10060 think_tok=8954 inv=0 wrong=0 fail=0 wall=112s
+L3 X5b 700 think=default success=True acc=1.000 calls=2 out=15742 think_tok=14684 inv=0 wrong=0 fail=0 wall=202s
+L3 X5b 703 think=default success=True acc=1.000 calls=2 out=9575 think_tok=8552 inv=0 wrong=0 fail=0 wall=117s
+L3 X5b 702 think=default success=True acc=1.000 calls=2 out=15895 think_tok=14842 inv=0 wrong=0 fail=0 wall=207s
+L3 X5b 705 think=default success=True acc=1.000 calls=2 out=14688 think_tok=13640 inv=0 wrong=0 fail=0 wall=174s
+L3 X5b 704 think=default success=True acc=1.000 calls=2 out=16818 think_tok=15839 inv=0 wrong=0 fail=0 wall=279s
+L3 X5b 707 think=default success=True acc=1.000 calls=2 out=10624 think_tok=9571 inv=0 wrong=0 fail=0 wall=168s
+L3 X5b 706 think=default success=True acc=1.000 calls=4 out=17387 think_tok=16176 inv=9 wrong=0 fail=0 wall=282s
+L3 X5b 708 think=default success=True acc=1.000 calls=2 out=14467 think_tok=13470 inv=0 wrong=0 fail=0 wall=183s
+L3 X5b 710 think=default success=True acc=1.000 calls=2 out=11161 think_tok=10058 inv=0 wrong=0 fail=0 wall=168s
+L3 X5b 711 think=default success=True acc=1.000 calls=2 out=13942 think_tok=12950 inv=0 wrong=0 fail=0 wall=214s
+L3 X5b 709 think=default success=True acc=1.000 calls=2 out=11789 think_tok=10769 inv=0 wrong=0 fail=0 wall=890s
+L3 X5b 712 think=default success=True acc=1.000 calls=6 out=34633 think_tok=33554 inv=1 wrong=0 fail=0 wall=483s
+L3 X5b 713 think=default success=True acc=1.000 calls=2 out=10489 think_tok=9553 inv=0 wrong=0 fail=0 wall=202s
+L3 X5b 714 think=default success=True acc=1.000 calls=2 out=9500 think_tok=8462 inv=0 wrong=0 fail=0 wall=144s
+L3 X5b 715 think=default success=True acc=1.000 calls=2 out=16202 think_tok=15177 inv=0 wrong=0 fail=0 wall=210s
+9 task(s) not run (provider errors); run the same command again later to resume
+PS D:\FROM_CLAUDE\RSOS-A8> $env:PYTHONUTF8="1"; $env:A7_BACKEND="openai"; $env:A7_WORKERS="2"; $env:A7_OPENAI_BASE="https://api.mistral.ai/v1"; $env:A7_OPENAI_MODEL="mistral-large-4-0"; $env:A7_LABEL="mistral_large40"; py experiments/a7_run.py run S1 B2,X5b; py experiments/a7_run.py run L3 B2,X5b
+S1 label=mistral_large40 backend=openai: done 32, live 0
+L3 label=mistral_large40 backend=openai: done 23, live 9
+L3 B2 704 think=default success=True acc=1.000 calls=2 out=14051 think_tok=12068 inv=0 wrong=0 fail=0 wall=194s
+L3 B2 705 think=default success=True acc=1.000 calls=2 out=19322 think_tok=17016 inv=0 wrong=0 fail=0 wall=273s
+L3 B2 702 think=default success=False acc=0.949 calls=6 out=47249 think_tok=43958 inv=35 wrong=2 fail=1 wall=636s
+L3 B2 706 think=default success=True acc=1.000 calls=2 out=15373 think_tok=13290 inv=0 wrong=0 fail=0 wall=187s
+L3 B2 707 think=default success=False acc=0.997 calls=6 out=24113 think_tok=22012 inv=0 wrong=1 fail=2 wall=321s
+L3 B2 708 think=default success=True acc=1.000 calls=4 out=24275 think_tok=22004 inv=0 wrong=0 fail=0 wall=349s
+L3 B2 709 think=default success=True acc=1.000 calls=2 out=22088 think_tok=19328 inv=0 wrong=0 fail=0 wall=318s
+L3 B2 710 think=default success=True acc=1.000 calls=2 out=20017 think_tok=17530 inv=0 wrong=0 fail=0 wall=285s
+L3 B2 711 think=default success=False acc=0.997 calls=5 out=64572 think_tok=59145 inv=48 wrong=1 fail=2 wall=881s
+PS D:\FROM_CLAUDE\RSOS-A8>

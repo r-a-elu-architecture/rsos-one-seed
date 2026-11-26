@@ -1,0 +1,3 @@
+# SEAL1 FIX1: sha256 of the FIX1 note and script (SEAL_SEAL1.txt unchanged and still checked by seal1.py)
+1e77472132f4241fb48f6ce9a253e069a949b3d732a0f3fe785bb71af5d897f4  seal1/PREREG_SEAL1_FIX1.md
+d11585c5f1801db2e15ce58c3066cf4df0961764d3955f757b40a20372dbbd86  seal1/seal1_fix1.py

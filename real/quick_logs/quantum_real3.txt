@@ -1,0 +1,25 @@
+cell 1 seed3     result 0.98491 resource 2520 rmse 0.01509 joint_shots 2400 choices {'F:joint-greedy|standard': 9, 'F:joint-greedy|own': 3}
+cell 1 seed      result 0.97947 resource 2520 rmse 0.02053 joint_shots 0 choices {'land_withheld': 0, 'land_retargeted': 9, 'focus_nlocal_Y|standard': 2, 'future+2|own': 1, 'focus_realamp_XX|standard': 1, 'past-1|standard': 1, 'past-2|standard': 2, 'present|standard': 2, 'future+1|own': 2, 'future+2|standard': 1}
+cell 1 rollout   result 0.97510 resource 2520 rmse 0.02490 joint_shots 0 choices {'focus_nlocal_Y|rollout': 2, 'focus_su2_Z|rollout': 2, 'focus_realamp_XX|rollout': 3, 'present|standard': 3, 'focus_ghz_X|rollout': 1, 'focus_qaoa_ring_ZZ|rollout': 1}
+cell 1 default   result 0.97567 resource 2520 rmse 0.02433 joint_shots 0 choices {'present|standard': 12}
+cell 1 strongest result 0.97567 resource 2520 rmse 0.02433 joint_shots 0 choices {'present|standard': 12}
+cell 1 pass(result > default / > strongest): seed3=WIN/WIN seed=WIN/WIN rollout=no/no time 7.2s
+cell 2 seed3     result 0.98929 resource 2520 rmse 0.01071 joint_shots 2400 choices {'F:joint-greedy|standard': 10, 'F:joint-greedy|own': 2}
+cell 2 seed      result 0.97009 resource 2520 rmse 0.02991 joint_shots 0 choices {'land_withheld': 0, 'land_retargeted': 5, 'focus_su2_Z|standard': 2, 'focus_ghz_X|standard': 1, 'past-1|standard': 1, 'focus_nlocal_Y|standard': 1, 'focus_qft_X|standard': 1, 'future+2|standard': 1, 'focus_qaoa_ring_ZZ|standard': 2, 'focus_realamp_XX|standard': 1, 'present|own': 1, 'future+1|own': 1}
+cell 2 rollout   result 0.98490 resource 2520 rmse 0.01510 joint_shots 0 choices {'focus_su2_Z|rollout': 2, 'focus_qaoa_ring_ZZ|rollout': 3, 'focus_qft_X|rollout': 1, 'focus_nlocal_Y|rollout': 1, 'present|standard': 4, 'focus_ghz_X|rollout': 1}
+cell 2 default   result 0.97845 resource 2520 rmse 0.02155 joint_shots 0 choices {'present|standard': 12}
+cell 2 strongest result 0.97845 resource 2520 rmse 0.02155 joint_shots 0 choices {'present|standard': 12}
+cell 2 pass(result > default / > strongest): seed3=WIN/WIN seed=no/no rollout=WIN/WIN time 6.9s
+cell 3 seed3     result 0.98595 resource 2520 rmse 0.01405 joint_shots 2400 choices {'F:joint-greedy|standard': 9, 'F:joint-greedy|own': 3}
+cell 3 seed      result 0.98046 resource 2520 rmse 0.01954 joint_shots 0 choices {'land_withheld': 0, 'land_retargeted': 5, 'present|standard': 2, 'focus_ghz_X|standard': 2, 'focus_realamp_XX|standard': 1, 'focus_qft_X|standard': 1, 'focus_qaoa_ring_ZZ|standard': 1, 'focus_su2_Z|standard': 1, 'future+2|standard': 1, 'past-2|standard': 1, 'future+1|standard': 1, 'present|own': 1}
+cell 3 rollout   result 0.98855 resource 2520 rmse 0.01145 joint_shots 0 choices {'present|standard': 3, 'focus_ghz_X|rollout': 2, 'focus_realamp_XX|rollout': 1, 'focus_qft_X|rollout': 1, 'focus_qaoa_ring_ZZ|rollout': 2, 'focus_su2_Z|rollout': 1, 'focus_nlocal_Y|rollout': 2}
+cell 3 default   result 0.97401 resource 2520 rmse 0.02599 joint_shots 0 choices {'present|standard': 12}
+cell 3 strongest result 0.97401 resource 2520 rmse 0.02599 joint_shots 0 choices {'present|standard': 12}
+cell 3 pass(result > default / > strongest): seed3=WIN/WIN seed=WIN/WIN rollout=WIN/WIN time 5.0s
+cell 4 seed3     result 0.98598 resource 2520 rmse 0.01402 joint_shots 2400 choices {'F:joint-greedy|standard': 10, 'F:joint-greedy|own': 2}
+cell 4 seed      result 0.96961 resource 2520 rmse 0.03039 joint_shots 0 choices {'land_withheld': 0, 'land_retargeted': 5, 'present|standard': 1, 'focus_realamp_XX|standard': 1, 'future+2|standard': 1, 'past-1|standard': 2, 'focus_ghz_X|standard': 1, 'focus_su2_Z|standard': 1, 'focus_qaoa_ring_ZZ|standard': 1, 'future+2|own': 1, 'focus_nlocal_Y|standard': 1, 'future+1|standard': 1, 'present|own': 1}
+cell 4 rollout   result 0.97694 resource 2520 rmse 0.02306 joint_shots 0 choices {'present|standard': 6, 'focus_ghz_X|rollout': 2, 'focus_su2_Z|rollout': 1, 'focus_qaoa_ring_ZZ|rollout': 1, 'focus_realamp_XX|rollout': 1, 'focus_nlocal_Y|rollout': 1}
+cell 4 default   result 0.97415 resource 2520 rmse 0.02585 joint_shots 0 choices {'present|standard': 12}
+cell 4 strongest result 0.97415 resource 2520 rmse 0.02585 joint_shots 0 choices {'present|standard': 12}
+cell 4 pass(result > default / > strongest): seed3=WIN/WIN seed=no/no rollout=WIN/WIN time 6.7s
+exit 0

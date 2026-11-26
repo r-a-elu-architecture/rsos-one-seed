@@ -1,0 +1,89 @@
+{
+ "row": "energy",
+ "model": "-",
+ "stage": 2,
+ "pair": 3,
+ "cells": {
+  "std|215": {
+   "default": {
+    "result": 15.979301743228664,
+    "resource": 154.9116597151737,
+    "R": 0.10315105894939605,
+    "choices": {
+     "present|standard": 168
+    }
+   },
+   "seed3v1": {
+    "result": 15.739894875922376,
+    "resource": 163.8906574067307,
+    "R": 0.09603900017839556,
+    "choices": {
+     "P4P5:scenario_mpc|policy": 79,
+     "P5:soc_dp_realpast_tree|policy": 18,
+     "P4P5:scenario_mpc|standard": 17,
+     "P5:soc_dp_realpast_tree|standard": 14,
+     "past-2|standard": 1,
+     "P2:price_on_wear|policy": 7,
+     "P2:price_on_wear|standard": 17,
+     "future+1|standard": 2,
+     "future+2|standard": 1,
+     "past-1|standard": 1,
+     "hold|standard": 1,
+     "P2:price_on_wear|own": 8,
+     "P5:soc_dp_realpast_tree|own": 2
+    },
+    "policy_fallback_steps": 0
+   },
+   "strongest": {
+    "result": 15.644690556700912,
+    "resource": 155.10856102259018,
+    "R": 0.10086284376284299,
+    "choices": {
+     "present|standard": 168
+    }
+   },
+   "sec": 8473
+  },
+  "std|216": {
+   "default": {
+    "result": 11.64604689871895,
+    "resource": 130.74141109866522,
+    "R": 0.08907695580805804,
+    "choices": {
+     "present|standard": 168
+    }
+   },
+   "seed3v1": {
+    "result": 13.981324091531796,
+    "resource": 152.371358982693,
+    "R": 0.09175821614296854,
+    "choices": {
+     "P4P5:scenario_mpc|standard": 1,
+     "P2:price_on_wear|policy": 16,
+     "P4P5:scenario_mpc|policy": 104,
+     "P2:price_on_wear|standard": 18,
+     "P5:soc_dp_realpast_tree|standard": 1,
+     "P5:soc_dp_realpast_tree|policy": 12,
+     "future+2|own": 1,
+     "past-2|own": 1,
+     "past-1|own": 1,
+     "P2:price_on_wear|own": 3,
+     "charge_full|standard": 1,
+     "F:coupled_hours:realpast_day_paths|policy": 6,
+     "future+1|own": 1,
+     "F:coupled_hours:realpast_day_paths|standard": 2
+    },
+    "policy_fallback_steps": 0
+   },
+   "strongest": {
+    "result": 14.268867037992194,
+    "resource": 155.21156156592696,
+    "R": 0.09193172785605547,
+    "choices": {
+     "present|standard": 168
+    }
+   },
+   "sec": 8107
+  }
+ }
+}

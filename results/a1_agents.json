@@ -1,0 +1,404 @@
+{
+ "code_commit": "090e04a81c7064dd20c2910bbfbb6f1ed0455806",
+ "experiment": "a1_agents",
+ "full_state_msg_tok_mean": 414.41964285714283,
+ "model": "claude-haiku-5-5",
+ "numpy": "2.5.3",
+ "predictions": {
+  "P1": {
+   "pass": true,
+   "ratio_P_over_A": 0.1480449146116908,
+   "success_A": 5,
+   "success_P": 7
+  },
+  "P2": {
+   "A": "24/24",
+   "B": "23/24",
+   "C": "0/24",
+   "P": "24/24",
+   "pass": false
+  },
+  "P3": {
+   "heal_over_full_state_resend": 0.24255784245517553,
+   "pass": true
+  },
+  "P4": {
+   "pass": true,
+   "ratio": 0.5075462670987104
+  },
+  "P5": {
+   "A": 226.57092741131783,
+   "P": 172.63479825854301,
+   "pass": true
+  },
+  "P6": {
+   "P_detected": "580/580",
+   "pass": true,
+   "recovery_ratio_P_over_A": 0.03728311867182342
+  }
+ },
+ "python": "3.13.18",
+ "results_sha256": "d224abbf56c47013782b79a3f145c7b8863f61c6634ef43d27b68b10719732e1",
+ "run_utc": "2026-11-17T09:57:37Z",
+ "scaffold_per_call": {
+  "checker": 1392,
+  "planner": 1427,
+  "schema_extra": 521,
+  "worker": 1390
+ },
+ "seeds": [
+  100,
+  101,
+  102,
+  103,
+  104,
+  105,
+  106,
+  107
+ ],
+ "table": {
+  "A": {
+   "billed_minus_scaffold_mean": 45983.0,
+   "billed_tok_mean": 116732.5,
+   "calls_mean": 50.5,
+   "channel_bytes_mean": 46698.625,
+   "channel_tok_ci": [
+    16922.125,
+    17651.63125
+   ],
+   "channel_tok_mean": 17310.625,
+   "cost_usd_total": 0.20574435000000002,
+   "drift_caught": 24,
+   "drift_events": 24,
+   "drift_silent_in_final": 0,
+   "final_errors": {
+    "100": [],
+    "101": [],
+    "102": [
+     "gateway.region"
+    ],
+    "103": [
+     "billing.log_level"
+    ],
+    "104": [
+     "gateway.timeout_ms"
+    ],
+    "105": [],
+    "106": [],
+    "107": []
+   },
+   "line_acc_mean": 0.9869933829611249,
+   "msgs_mean": 50.5,
+   "out_tok_mean": 15404.625,
+   "recovery_billed_mean_caught": 6894.375,
+   "recovery_chan_mean_caught": 874.8333333333334,
+   "recovery_sec_mean_caught": 13.818372547626495,
+   "steps_failed": 6,
+   "success": 5,
+   "tasks": 8,
+   "wall_sec_mean": 226.57092741131783
+  },
+  "B": {
+   "billed_minus_scaffold_mean": 58171.0,
+   "billed_tok_mean": 148415.0,
+   "calls_mean": 50.75,
+   "channel_bytes_mean": 63039.25,
+   "channel_tok_ci": [
+    23529.209375,
+    25256.159375
+   ],
+   "channel_tok_mean": 24425.0,
+   "cost_usd_total": 0.25587219,
+   "drift_caught": 23,
+   "drift_events": 24,
+   "drift_silent_in_final": 1,
+   "final_errors": {
+    "100": [],
+    "101": [],
+    "102": [],
+    "103": [
+     "billing.log_level"
+    ],
+    "104": [],
+    "105": [
+     "cache.timeout_ms"
+    ],
+    "106": [
+     "billing.log_level"
+    ],
+    "107": []
+   },
+   "line_acc_mean": 0.9877511471078977,
+   "msgs_mean": 50.75,
+   "out_tok_mean": 27792.375,
+   "recovery_billed_mean_caught": 10214.08695652174,
+   "recovery_chan_mean_caught": 1607.304347826087,
+   "recovery_sec_mean_caught": 12.98570025485495,
+   "steps_failed": 5,
+   "success": 5,
+   "tasks": 8,
+   "wall_sec_mean": 201.2431426346302
+  },
+  "C": {
+   "billed_minus_scaffold_mean": 25291.375,
+   "billed_tok_mean": 91867.875,
+   "calls_mean": 47.5,
+   "channel_bytes_mean": 15895.0,
+   "channel_tok_ci": [
+    4286.0,
+    4881.88125
+   ],
+   "channel_tok_mean": 4560.625,
+   "cost_usd_total": 0.17602130000000002,
+   "drift_caught": 0,
+   "drift_events": 24,
+   "drift_silent_in_final": 24,
+   "final_errors": {
+    "100": [
+     "billing.log_level",
+     "cache.retries",
+     "gateway.replicas"
+    ],
+    "101": [
+     "auth.retries",
+     "billing.owner",
+     "cache.owner",
+     "search.max_conn",
+     "search.owner",
+     "search.region",
+     "search.tier"
+    ],
+    "102": [
+     "auth.replicas",
+     "auth.timeout_ms",
+     "billing.owner",
+     "cache.log_level",
+     "cache.owner",
+     "gateway.owner",
+     "search.owner"
+    ],
+    "103": [
+     "auth.retries",
+     "gateway.owner",
+     "search.retries"
+    ],
+    "104": [
+     "auth.tier",
+     "cache.owner",
+     "gateway.region",
+     "search.retries"
+    ],
+    "105": [
+     "auth.region",
+     "cache.owner",
+     "cache.timeout_ms",
+     "gateway.max_conn"
+    ],
+    "106": [
+     "auth.log_level",
+     "gateway.region",
+     "gateway.tier",
+     "search.max_conn",
+     "search.retries"
+    ],
+    "107": [
+     "auth.timeout_ms",
+     "cache.log_level",
+     "cache.region",
+     "cache.timeout_ms",
+     "gateway.owner"
+    ]
+   },
+   "line_acc_mean": 0.8357975103510072,
+   "msgs_mean": 47.5,
+   "out_tok_mean": 12128.625,
+   "recovery_billed_mean_caught": null,
+   "recovery_chan_mean_caught": null,
+   "recovery_sec_mean_caught": null,
+   "steps_failed": 9,
+   "success": 0,
+   "tasks": 8,
+   "wall_sec_mean": 206.5851955115795
+  },
+  "P": {
+   "billed_minus_scaffold_mean": 23338.5,
+   "billed_tok_mean": 83655.5,
+   "calls_mean": 43.0,
+   "channel_bytes_mean": 9591.375,
+   "channel_tok_ci": [
+    2454.875,
+    2688.515625
+   ],
+   "channel_tok_mean": 2562.75,
+   "cost_usd_total": 0.14826951,
+   "drift_caught": 24,
+   "drift_events": 24,
+   "drift_silent_in_final": 0,
+   "filter_decisions": [
+    "sender",
+    "sender",
+    "sender",
+    "sender",
+    "sender",
+    "sender",
+    "sender",
+    "sender",
+    "sender",
+    "sender",
+    "sender",
+    "sender",
+    "sender",
+    "sender",
+    "sender",
+    "sender",
+    "sender",
+    "sender",
+    "sender",
+    "sender",
+    "sender",
+    "sender",
+    "sender",
+    "sender"
+   ],
+   "final_errors": {
+    "100": [],
+    "101": [
+     "search.tier"
+    ],
+    "102": [],
+    "103": [],
+    "104": [],
+    "105": [],
+    "106": [],
+    "107": []
+   },
+   "heal_over_resend": 0.24255784245517553,
+   "line_acc_mean": 0.9959677419354839,
+   "msgs_mean": 59.875,
+   "out_tok_mean": 6353.125,
+   "recovery_billed_mean_caught": 0.0,
+   "recovery_chan_mean_caught": 38.375,
+   "recovery_sec_mean_caught": 0.00015021363894144693,
+   "steps_failed": 1,
+   "success": 7,
+   "tasks": 8,
+   "wall_sec_mean": 172.63479825854301
+  }
+ },
+ "truncation": {
+  "A": {
+   "0.1": {
+    "correct": 0,
+    "detected": 146,
+    "silent_wrong": 0
+   },
+   "0.2": {
+    "correct": 0,
+    "detected": 146,
+    "silent_wrong": 0
+   },
+   "0.3": {
+    "correct": 0,
+    "detected": 146,
+    "silent_wrong": 0
+   },
+   "0.4": {
+    "correct": 0,
+    "detected": 146,
+    "silent_wrong": 0
+   },
+   "0.5": {
+    "correct": 0,
+    "detected": 146,
+    "silent_wrong": 0
+   }
+  },
+  "B": {
+   "0.1": {
+    "correct": 0,
+    "detected": 147,
+    "silent_wrong": 0
+   },
+   "0.2": {
+    "correct": 0,
+    "detected": 147,
+    "silent_wrong": 0
+   },
+   "0.3": {
+    "correct": 0,
+    "detected": 147,
+    "silent_wrong": 0
+   },
+   "0.4": {
+    "correct": 0,
+    "detected": 147,
+    "silent_wrong": 0
+   },
+   "0.5": {
+    "correct": 0,
+    "detected": 147,
+    "silent_wrong": 0
+   }
+  },
+  "C": {
+   "0.1": {
+    "correct": 0,
+    "detected": 134,
+    "silent_wrong": 0
+   },
+   "0.2": {
+    "correct": 0,
+    "detected": 134,
+    "silent_wrong": 0
+   },
+   "0.3": {
+    "correct": 0,
+    "detected": 134,
+    "silent_wrong": 0
+   },
+   "0.4": {
+    "correct": 0,
+    "detected": 134,
+    "silent_wrong": 0
+   },
+   "0.5": {
+    "correct": 0,
+    "detected": 134,
+    "silent_wrong": 0
+   }
+  },
+  "P": {
+   "0.1": {
+    "correct": 0,
+    "detected": 116,
+    "silent_wrong": 0
+   },
+   "0.2": {
+    "correct": 0,
+    "detected": 116,
+    "silent_wrong": 0
+   },
+   "0.3": {
+    "correct": 0,
+    "detected": 116,
+    "silent_wrong": 0
+   },
+   "0.4": {
+    "correct": 0,
+    "detected": 116,
+    "silent_wrong": 0
+   },
+   "0.5": {
+    "correct": 0,
+    "detected": 116,
+    "silent_wrong": 0
+   }
+  }
+ },
+ "truncation_resend_tok_mean": {
+  "A": 348.45205479452056,
+  "B": 669.0748299319728,
+  "C": 57.04477611940298,
+  "P": 12.991379310344827
+ }
+}

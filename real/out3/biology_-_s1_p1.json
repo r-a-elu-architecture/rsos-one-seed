@@ -1,0 +1,72 @@
+{
+ "row": "biology",
+ "model": "-",
+ "stage": 1,
+ "pair": 1,
+ "cells": {
+  "std|203": {
+   "default": {
+    "result": 0.8518518518518519,
+    "resource": 3600.0,
+    "R": 0.00023662551440329217,
+    "choices": {
+     "present|standard": 300
+    }
+   },
+   "seed3v1": {
+    "result": 0.8703703703703703,
+    "resource": 89.0,
+    "R": 0.009779442363712027,
+    "choices": {
+     "P1:deficit-share|policy": 1,
+     "future+1|own": 7,
+     "pair|own": 11,
+     "P8:vote-landing|policy": 7,
+     "P1:deficit-share|own": 9,
+     "clean|own": 4,
+     "future+1|standard": 2,
+     "P1:deficit-share|standard": 1,
+     "future+2|own": 3,
+     "pair|standard": 2,
+     "present|own": 206,
+     "past-1|standard": 7,
+     "past-1|own": 17,
+     "present|standard": 20,
+     "future+2|standard": 2,
+     "clean|standard": 1
+    },
+    "policy_fallback_steps": 0
+   },
+   "sec": 15574
+  },
+  "std|204": {
+   "default": {
+    "result": 0.9259259259259259,
+    "resource": 3300.0,
+    "R": 0.0002805836139169473,
+    "choices": {
+     "present|standard": 300
+    }
+   },
+   "seed3v1": {
+    "result": 0.9629629629629629,
+    "resource": 46.0,
+    "R": 0.020933977455716585,
+    "choices": {
+     "weak1|standard": 1,
+     "F:need|own": 8,
+     "P1:deficit-share|policy": 1,
+     "P1:deficit-share|own": 10,
+     "P1:deficit-share|standard": 3,
+     "weak1|own": 10,
+     "F:need|standard": 2,
+     "F:need-fill|own": 1,
+     "present|own": 261,
+     "present|standard": 3
+    },
+    "policy_fallback_steps": 0
+   },
+   "sec": 15751
+  }
+ }
+}

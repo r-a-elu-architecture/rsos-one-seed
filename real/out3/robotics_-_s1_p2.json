@@ -1,0 +1,88 @@
+{
+ "row": "robotics",
+ "model": "-",
+ "stage": 1,
+ "pair": 2,
+ "cells": {
+  "std|205": {
+   "default": {
+    "result": 154.0,
+    "resource": 94.1380289042238,
+    "R": 1.6358957351516237,
+    "choices": {
+     "present|standard": 200
+    }
+   },
+   "seed3v1": {
+    "result": 160.0,
+    "resource": 72.4489459075378,
+    "R": 2.208451731018948,
+    "choices": {
+     "P4P5:cem|policy": 37,
+     "angle|standard": 4,
+     "past-2|standard": 24,
+     "F:trace-law|standard": 3,
+     "coast|standard": 18,
+     "past-1|standard": 29,
+     "P8:elite-vote|standard": 7,
+     "P1:counter-shift|standard": 1,
+     "P1:counter-shift|policy": 14,
+     "damp|standard": 3,
+     "P2:price-effort|policy": 30,
+     "half|standard": 5,
+     "F:traj-cem|standard": 2,
+     "pump|standard": 1,
+     "future+1|standard": 2,
+     "future+2|standard": 1,
+     "F:traj-cem|policy": 4,
+     "damp|own": 1,
+     "angle|own": 1,
+     "coast|own": 1,
+     "past-1|own": 9,
+     "past-2|own": 2,
+     "F:trace-law|policy": 1
+    },
+    "policy_fallback_steps": 0
+   },
+   "sec": 5214
+  },
+  "std|206": {
+   "default": {
+    "result": 154.0,
+    "resource": 93.58311304098407,
+    "R": 1.645596037530369,
+    "choices": {
+     "present|standard": 200
+    }
+   },
+   "seed3v1": {
+    "result": 158.0,
+    "resource": 73.08719456195305,
+    "R": 2.1618014064840017,
+    "choices": {
+     "P8:elite-vote|policy": 6,
+     "P4P5:cem|policy": 33,
+     "past-2|standard": 1,
+     "coast|standard": 82,
+     "past-1|standard": 4,
+     "angle|standard": 2,
+     "damp|standard": 1,
+     "P2:price-effort|policy": 26,
+     "P1:counter-shift|policy": 14,
+     "P8:elite-vote|standard": 4,
+     "half|standard": 3,
+     "future+1|standard": 2,
+     "pump|standard": 3,
+     "future+2|standard": 1,
+     "F:traj-cem|policy": 2,
+     "P8:elite-vote|own": 1,
+     "F:trace-law|policy": 2,
+     "future+1|own": 1,
+     "coast|own": 12
+    },
+    "policy_fallback_steps": 0
+   },
+   "sec": 5214
+  }
+ }
+}

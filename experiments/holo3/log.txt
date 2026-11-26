@@ -1,0 +1,103 @@
+{
+ "densities": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "seeds": [
+  300,
+  301,
+  302,
+  303,
+  304,
+  305,
+  306,
+  307
+ ],
+ "orders": 120,
+ "d1": {
+  "G_rr": -4.324110694638045,
+  "G_hist": -4.266694734611348,
+  "G_quark_median_order": -4.267254665432606,
+  "median_order": "GKAVO",
+  "G_quark_best_order": -4.2121373043021135,
+  "best_order": "VOGKA",
+  "G_quark_uncoupled": -4.260106589148014,
+  "adv_median_vs_best_baseline": -0.07012489986362097,
+  "order_spread": 0.12934467998505905
+ },
+ "d2": {
+  "G_rr": -7.446340787224765,
+  "G_hist": -7.745301560942332,
+  "G_quark_median_order": -7.671318472108257,
+  "median_order": "GOAVK",
+  "G_quark_best_order": -7.5526481966656105,
+  "best_order": "KVGAO",
+  "G_quark_uncoupled": -7.5355155369641995,
+  "adv_median_vs_best_baseline": -0.2745675654456846,
+  "order_spread": 0.19768974646010573
+ },
+ "d3": {
+  "G_rr": -10.018338161579894,
+  "G_hist": -9.862389547353247,
+  "G_quark_median_order": -10.182418372863776,
+  "median_order": "KOAVG",
+  "G_quark_best_order": -10.028794589757325,
+  "best_order": "OGVKA",
+  "G_quark_uncoupled": -10.163627165762541,
+  "adv_median_vs_best_baseline": -0.6162823364642314,
+  "order_spread": 0.3057028039828573
+ },
+ "d4": {
+  "G_rr": -13.46775885084233,
+  "G_hist": -13.686536031861749,
+  "G_quark_median_order": -13.523839621884683,
+  "median_order": "GOAVK",
+  "G_quark_best_order": -13.283136295641155,
+  "best_order": "OKVAG",
+  "G_quark_uncoupled": -13.48995696093041,
+  "adv_median_vs_best_baseline": -0.3343229976479438,
+  "order_spread": 0.48078566195567696
+ },
+ "d5": {
+  "G_rr": -17.063559427317863,
+  "G_hist": -17.5747871983731,
+  "G_quark_median_order": -17.280705062422307,
+  "median_order": "KGOVA",
+  "G_quark_best_order": -17.13290491117924,
+  "best_order": "KAGVO",
+  "G_quark_uncoupled": -17.21460191594138,
+  "adv_median_vs_best_baseline": -0.5365963837868133,
+  "order_spread": 0.8449380171238019
+ },
+ "P2": {
+  "adv_d1": -0.07012489986362097,
+  "adv_d5": -0.5365963837868133,
+  "spearman_rho": -0.0888217643155949,
+  "p": 0.5857370061581545,
+  "pass": false
+ },
+ "P2b_coupled_vs_uncoupled_d5": {
+  "wins": 3,
+  "of": 8,
+  "p": 0.85546875,
+  "mean_diff": -0.06610314648092697
+ },
+ "P3": {
+  "orders_all_five_changed": 120,
+  "of": 120,
+  "other_processes_changed_median": 46.0,
+  "range": [
+   44,
+   47
+  ]
+ },
+ "P1": {
+  "spearman_levels": 0.6242424242424242,
+  "null_95": 0.7703030303030297,
+  "p": 0.09645177411294353,
+  "note": "system level = the same subnodes aggregated per time window (disclosed: shares definitions)"
+ }
+}

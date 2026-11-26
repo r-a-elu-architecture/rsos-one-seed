@@ -1,0 +1,143 @@
+{
+ "units": 1200,
+ "models": [
+  "openrouter:meta-llama/llama-4-scout",
+  "openrouter:openai/gpt-oss-120b",
+  "openrouter:openai/gpt-oss-20b",
+  "openrouter:qwen/qwen3.8-27b"
+ ],
+ "accuracy": {
+  "rsos_01100": 0.8841666666666667,
+  "react": 0.8708333333333333,
+  "reflexion": 0.8816666666666667,
+  "selfcons": 0.8866666666666667,
+  "planexec": 0.8733333333333333
+ },
+ "errors": 0,
+ "H1": {
+  "wins": 91,
+  "losses": 75,
+  "n": 1200,
+  "p": 0.12212496356033589,
+  "pass": false
+ },
+ "H2": {
+  "openrouter:meta-llama/llama-4-scout": {
+   "wins": 46,
+   "losses": 37,
+   "n": 300,
+   "p": 0.18999969820595902,
+   "holm": 0.569999094617877,
+   "pass": false
+  },
+  "openrouter:openai/gpt-oss-120b": {
+   "wins": 9,
+   "losses": 4,
+   "n": 300,
+   "p": 0.1334228515625,
+   "holm": 0.53369140625,
+   "pass": false
+  },
+  "openrouter:openai/gpt-oss-20b": {
+   "wins": 36,
+   "losses": 34,
+   "n": 300,
+   "p": 0.4524872632297311,
+   "holm": 0.9049745264594622,
+   "pass": false
+  },
+  "openrouter:qwen/qwen3.8-27b": {
+   "wins": 0,
+   "losses": 0,
+   "n": 300,
+   "p": 1.0,
+   "holm": 1,
+   "pass": false
+  }
+ },
+ "H3": {
+  "reflexion": {
+   "wins": 81,
+   "losses": 78,
+   "n": 1200,
+   "p": 0.4370201692131983,
+   "holm": 0.8740403384263966,
+   "pass": false
+  },
+  "selfcons": {
+   "wins": 93,
+   "losses": 96,
+   "n": 1200,
+   "p": 0.6144126886480363,
+   "holm": 0.8740403384263966,
+   "pass": false
+  },
+  "planexec": {
+   "wins": 103,
+   "losses": 90,
+   "n": 1200,
+   "p": 0.19388143913210168,
+   "holm": 0.5816443173963051,
+   "pass": false
+  }
+ },
+ "H4": {
+  "tokens_per_correct_ratio": 0.5972859150340951,
+  "ratio_ci95": [
+   0.5753030116002146,
+   0.6199257896435476
+  ],
+  "acc_diff": -0.0025000000000000577,
+  "acc_diff_ci95": [
+   -0.025,
+   0.019166666666666665
+  ],
+  "pass": true
+ },
+ "per_model_accuracy": {
+  "openrouter:meta-llama/llama-4-scout": {
+   "rsos_01100": 0.7833333333333333,
+   "react": 0.7533333333333333,
+   "reflexion": 0.7766666666666666,
+   "selfcons": 0.7266666666666667,
+   "planexec": 0.6666666666666666
+  },
+  "openrouter:openai/gpt-oss-120b": {
+   "rsos_01100": 0.9666666666666667,
+   "react": 0.95,
+   "reflexion": 0.9666666666666667,
+   "selfcons": 0.95,
+   "planexec": 0.9733333333333334
+  },
+  "openrouter:openai/gpt-oss-20b": {
+   "rsos_01100": 0.7866666666666666,
+   "react": 0.78,
+   "reflexion": 0.7933333333333333,
+   "selfcons": 0.8733333333333333,
+   "planexec": 0.88
+  },
+  "openrouter:qwen/qwen3.8-27b": {
+   "rsos_01100": 1.0,
+   "react": 1.0,
+   "reflexion": 0.99,
+   "selfcons": 0.9966666666666667,
+   "planexec": 0.9733333333333334
+  }
+ },
+ "per_family_accuracy": {
+  "orders": {
+   "rsos_01100": 0.89,
+   "react": 0.8783333333333333,
+   "reflexion": 0.8866666666666667,
+   "selfcons": 0.8866666666666667,
+   "planexec": 0.8383333333333334
+  },
+  "staff": {
+   "rsos_01100": 0.8783333333333333,
+   "react": 0.8633333333333333,
+   "reflexion": 0.8766666666666667,
+   "selfcons": 0.8866666666666667,
+   "planexec": 0.9083333333333333
+  }
+ }
+}

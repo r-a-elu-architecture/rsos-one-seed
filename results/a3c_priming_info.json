@@ -1,0 +1,12 @@
+{
+ "frozen_bytes": 341451,
+ "frozen_sha256": "0d40a312eab05e660d4633882f50745ba6dbdc73bb51e0577093d157203facc1",
+ "n_instr": 448,
+ "n_reasons": 12,
+ "corpus_bytes": 138479,
+ "corpus_regex_tok": 37924,
+ "corpus_bpe": 38389,
+ "sec": 1.6968488693237305,
+ "vocab": 360,
+ "ppm_contexts": 13760
+}

@@ -1,0 +1,1190 @@
+[
+ {
+  "shade": 1,
+  "objects": [
+   "d1a0g1b0",
+   "d1a0g1b1",
+   "d1a1g1b0",
+   "d1a1g1b1"
+  ],
+  "arms": {
+   "house": {
+    "dry": "d1a0g1b0",
+    "drift": "d1a1g1b0",
+    "calm": "d1a0g1b0"
+   },
+   "fixed": {
+    "dry": "d1a0g1b1",
+    "drift": "d1a0g1b1",
+    "calm": "d1a0g1b1"
+   },
+   "flat": {
+    "dry": "d1a1g1b1",
+    "drift": "d1a1g1b1",
+    "calm": "d1a1g1b1"
+   },
+   "shuffled": {
+    "dry": "d1a1g1b0",
+    "drift": "d1a0g1b0",
+    "calm": "d1a0g1b0"
+   }
+  },
+  "rows": [
+   {
+    "shade": 1,
+    "seed": 7310,
+    "house": 0.9465277777777776,
+    "fixed": 0.9531944444444442,
+    "flat": 0.9508333333333331,
+    "shuffled": 0.946111111111111,
+    "house_ch": [
+     5.0,
+     5.0
+    ],
+    "fixed_ch": [
+     4.0,
+     4.0
+    ],
+    "flat_ch": [
+     6.0,
+     4.0
+    ],
+    "shuffled_ch": [
+     4.0,
+     4.0
+    ],
+    "best_native": 0.9040277777777778
+   },
+   {
+    "shade": 1,
+    "seed": 7311,
+    "house": 0.9619444444444443,
+    "fixed": 0.9604166666666667,
+    "flat": 0.9588888888888887,
+    "shuffled": 0.9590277777777776,
+    "house_ch": [
+     3.0,
+     4.0
+    ],
+    "fixed_ch": [
+     3.0,
+     4.0
+    ],
+    "flat_ch": [
+     4.0,
+     5.0
+    ],
+    "shuffled_ch": [
+     4.0,
+     4.0
+    ],
+    "best_native": 0.9252777777777779
+   },
+   {
+    "shade": 1,
+    "seed": 7312,
+    "house": 0.9651388888888888,
+    "fixed": 0.9668055555555556,
+    "flat": 0.9651388888888888,
+    "shuffled": 0.9668055555555556,
+    "house_ch": [
+     3.0,
+     3.0
+    ],
+    "fixed_ch": [
+     3.0,
+     3.0
+    ],
+    "flat_ch": [
+     3.0,
+     3.0
+    ],
+    "shuffled_ch": [
+     3.0,
+     3.0
+    ],
+    "best_native": 0.9390277777777776
+   }
+  ]
+ },
+ {
+  "shade": 3,
+  "objects": [
+   "d1a1g1b0",
+   "d1a1g1b1",
+   "d1a1g0b0",
+   "d1a1g0b1"
+  ],
+  "arms": {
+   "house": {
+    "dry": "d1a1g0b0",
+    "drift": "d1a1g1b0",
+    "calm": "d1a1g0b0"
+   },
+   "fixed": {
+    "dry": "d1a1g0b1",
+    "drift": "d1a1g0b1",
+    "calm": "d1a1g0b1"
+   },
+   "flat": {
+    "dry": "d1a1g1b1",
+    "drift": "d1a1g1b1",
+    "calm": "d1a1g1b1"
+   },
+   "shuffled": {
+    "dry": "d1a1g1b0",
+    "drift": "d1a1g0b0",
+    "calm": "d1a1g0b0"
+   }
+  },
+  "rows": [
+   {
+    "shade": 3,
+    "seed": 7310,
+    "house": 0.9733333333333332,
+    "fixed": 0.9672222222222219,
+    "flat": 0.9677777777777776,
+    "shuffled": 0.9743055555555553,
+    "house_ch": [
+     3.0,
+     2.0
+    ],
+    "fixed_ch": [
+     4.0,
+     2.0
+    ],
+    "flat_ch": [
+     3.0,
+     3.0
+    ],
+    "shuffled_ch": [
+     3.0,
+     3.0
+    ],
+    "best_native": 0.9120833333333331
+   },
+   {
+    "shade": 3,
+    "seed": 7311,
+    "house": 0.9970833333333333,
+    "fixed": 0.9983333333333333,
+    "flat": 0.995,
+    "shuffled": 0.9983333333333333,
+    "house_ch": [
+     0.0,
+     3.0
+    ],
+    "fixed_ch": [
+     0.0,
+     2.0
+    ],
+    "flat_ch": [
+     0.0,
+     2.0
+    ],
+    "shuffled_ch": [
+     0.0,
+     2.0
+    ],
+    "best_native": 0.9788888888888889
+   },
+   {
+    "shade": 3,
+    "seed": 7312,
+    "house": 0.9590277777777776,
+    "fixed": 0.9679166666666663,
+    "flat": 0.9606944444444443,
+    "shuffled": 0.9563888888888887,
+    "house_ch": [
+     4.0,
+     3.0
+    ],
+    "fixed_ch": [
+     3.0,
+     3.0
+    ],
+    "flat_ch": [
+     4.0,
+     3.0
+    ],
+    "shuffled_ch": [
+     3.0,
+     3.0
+    ],
+    "best_native": 0.8845833333333332
+   }
+  ]
+ },
+ {
+  "shade": 5,
+  "objects": [
+   "d1a0g1b0",
+   "d1a1g1b0",
+   "d1a1g0b0",
+   "d0a1g0b0"
+  ],
+  "arms": {
+   "house": {
+    "dry": "d0a1g0b0",
+    "drift": "d1a0g1b0",
+    "calm": "d1a1g0b0"
+   },
+   "fixed": {
+    "dry": "d1a1g0b0",
+    "drift": "d1a1g0b0",
+    "calm": "d1a1g0b0"
+   },
+   "flat": {
+    "dry": "d1a1g1b0",
+    "drift": "d1a1g1b0",
+    "calm": "d1a1g1b0"
+   },
+   "shuffled": {
+    "dry": "d1a0g1b0",
+    "drift": "d1a1g0b0",
+    "calm": "d0a1g0b0"
+   }
+  },
+  "rows": [
+   {
+    "shade": 5,
+    "seed": 7310,
+    "house": 0.948333333333333,
+    "fixed": 0.9458333333333331,
+    "flat": 0.9562499999999999,
+    "shuffled": 0.9399999999999997,
+    "house_ch": [
+     5.0,
+     4.0
+    ],
+    "fixed_ch": [
+     5.0,
+     4.0
+    ],
+    "flat_ch": [
+     3.0,
+     3.0
+    ],
+    "shuffled_ch": [
+     6.0,
+     3.0
+    ],
+    "best_native": 0.9191666666666667
+   },
+   {
+    "shade": 5,
+    "seed": 7311,
+    "house": 0.985138888888889,
+    "fixed": 0.983611111111111,
+    "flat": 0.9762499999999998,
+    "shuffled": 0.9730555555555553,
+    "house_ch": [
+     2.0,
+     4.0
+    ],
+    "fixed_ch": [
+     2.0,
+     3.0
+    ],
+    "flat_ch": [
+     2.0,
+     4.0
+    ],
+    "shuffled_ch": [
+     4.0,
+     3.0
+    ],
+    "best_native": 0.9574999999999999
+   },
+   {
+    "shade": 5,
+    "seed": 7312,
+    "house": 0.9866666666666666,
+    "fixed": 0.9829166666666667,
+    "flat": 0.9790277777777778,
+    "shuffled": 0.9833333333333334,
+    "house_ch": [
+     1.0,
+     3.0
+    ],
+    "fixed_ch": [
+     1.0,
+     3.0
+    ],
+    "flat_ch": [
+     1.0,
+     2.0
+    ],
+    "shuffled_ch": [
+     0.0,
+     3.0
+    ],
+    "best_native": 0.9694444444444446
+   }
+  ]
+ },
+ {
+  "shade": 7,
+  "objects": [
+   "d1a1g1b0",
+   "d1a0g1b0",
+   "d1a1g1b1",
+   "d0a1g0b0"
+  ],
+  "arms": {
+   "house": {
+    "dry": "d1a1g1b0",
+    "drift": "d1a1g1b0",
+    "calm": "d1a0g1b0"
+   },
+   "fixed": {
+    "dry": "d1a1g1b0",
+    "drift": "d1a1g1b0",
+    "calm": "d1a1g1b0"
+   },
+   "flat": {
+    "dry": "d1a1g1b1",
+    "drift": "d1a1g1b1",
+    "calm": "d1a1g1b1"
+   },
+   "shuffled": {
+    "dry": "d1a1g1b0",
+    "drift": "d1a0g1b0",
+    "calm": "d1a1g1b0"
+   }
+  },
+  "rows": [
+   {
+    "shade": 7,
+    "seed": 7310,
+    "house": 0.9081944444444443,
+    "fixed": 0.8979166666666667,
+    "flat": 0.815138888888889,
+    "shuffled": 0.9049999999999998,
+    "house_ch": [
+     7.0,
+     6.0
+    ],
+    "fixed_ch": [
+     9.0,
+     4.0
+    ],
+    "flat_ch": [
+     23.0,
+     22.0
+    ],
+    "shuffled_ch": [
+     10.0,
+     5.0
+    ],
+    "best_native": 0.8722222222222222
+   },
+   {
+    "shade": 7,
+    "seed": 7311,
+    "house": 0.9149999999999999,
+    "fixed": 0.9119444444444443,
+    "flat": 0.854027777777778,
+    "shuffled": 0.9191666666666667,
+    "house_ch": [
+     7.0,
+     5.0
+    ],
+    "fixed_ch": [
+     6.0,
+     5.0
+    ],
+    "flat_ch": [
+     12.0,
+     24.0
+    ],
+    "shuffled_ch": [
+     5.0,
+     4.0
+    ],
+    "best_native": 0.87625
+   },
+   {
+    "shade": 7,
+    "seed": 7312,
+    "house": 0.9079166666666667,
+    "fixed": 0.9111111111111112,
+    "flat": 0.8356944444444445,
+    "shuffled": 0.9073611111111111,
+    "house_ch": [
+     6.0,
+     4.0
+    ],
+    "fixed_ch": [
+     6.0,
+     3.0
+    ],
+    "flat_ch": [
+     14.0,
+     15.0
+    ],
+    "shuffled_ch": [
+     7.0,
+     3.0
+    ],
+    "best_native": 0.8734722222222224
+   }
+  ]
+ },
+ {
+  "shade": 9,
+  "objects": [
+   "d1a0g0b0",
+   "d1a1g1b0",
+   "d1a0g1b0",
+   "d0a1g0b0"
+  ],
+  "arms": {
+   "house": {
+    "dry": "d1a0g0b0",
+    "drift": "d1a1g1b0",
+    "calm": "d1a0g0b0"
+   },
+   "fixed": {
+    "dry": "d1a0g0b0",
+    "drift": "d1a0g0b0",
+    "calm": "d1a0g0b0"
+   },
+   "flat": {
+    "dry": "d1a1g1b0",
+    "drift": "d1a1g1b0",
+    "calm": "d1a1g1b0"
+   },
+   "shuffled": {
+    "dry": "d1a1g1b0",
+    "drift": "d1a0g0b0",
+    "calm": "d1a0g0b0"
+   }
+  },
+  "rows": [
+   {
+    "shade": 9,
+    "seed": 7310,
+    "house": 0.9683333333333332,
+    "fixed": 0.9676388888888887,
+    "flat": 0.9555555555555554,
+    "shuffled": 0.9688888888888887,
+    "house_ch": [
+     3.0,
+     4.0
+    ],
+    "fixed_ch": [
+     3.0,
+     4.0
+    ],
+    "flat_ch": [
+     5.0,
+     7.0
+    ],
+    "shuffled_ch": [
+     2.0,
+     4.0
+    ],
+    "best_native": 0.9186111111111112
+   },
+   {
+    "shade": 9,
+    "seed": 7311,
+    "house": 0.9881944444444445,
+    "fixed": 0.9888888888888889,
+    "flat": 0.9866666666666667,
+    "shuffled": 0.9888888888888889,
+    "house_ch": [
+     1.0,
+     3.0
+    ],
+    "fixed_ch": [
+     1.0,
+     3.0
+    ],
+    "flat_ch": [
+     1.0,
+     3.0
+    ],
+    "shuffled_ch": [
+     1.0,
+     3.0
+    ],
+    "best_native": 0.9656944444444443
+   },
+   {
+    "shade": 9,
+    "seed": 7312,
+    "house": 0.9845833333333334,
+    "fixed": 0.9808333333333333,
+    "flat": 0.9770833333333333,
+    "shuffled": 0.9808333333333333,
+    "house_ch": [
+     0.0,
+     3.0
+    ],
+    "fixed_ch": [
+     0.0,
+     3.0
+    ],
+    "flat_ch": [
+     0.0,
+     3.0
+    ],
+    "shuffled_ch": [
+     0.0,
+     3.0
+    ],
+    "best_native": 0.9654166666666666
+   }
+  ]
+ },
+ {
+  "shade": 11,
+  "objects": [
+   "d1a1g0b0",
+   "d1a1g0b1",
+   "d0a1g0b0",
+   "d0a1g0b1"
+  ],
+  "arms": {
+   "house": {
+    "dry": "d1a1g0b0",
+    "drift": "d1a1g0b0",
+    "calm": "d1a1g0b0"
+   },
+   "fixed": {
+    "dry": "d1a1g0b1",
+    "drift": "d1a1g0b1",
+    "calm": "d1a1g0b1"
+   },
+   "flat": {
+    "dry": "d1a1g0b1",
+    "drift": "d1a1g0b1",
+    "calm": "d1a1g0b1"
+   },
+   "shuffled": {
+    "dry": "d1a1g0b0",
+    "drift": "d1a1g0b0",
+    "calm": "d1a1g0b0"
+   }
+  },
+  "rows": [
+   {
+    "shade": 11,
+    "seed": 7310,
+    "house": 0.9916666666666667,
+    "fixed": 0.9916666666666667,
+    "flat": 0.9916666666666667,
+    "shuffled": 0.9916666666666667,
+    "house_ch": [
+     1.0,
+     2.0
+    ],
+    "fixed_ch": [
+     1.0,
+     2.0
+    ],
+    "flat_ch": [
+     1.0,
+     2.0
+    ],
+    "shuffled_ch": [
+     1.0,
+     2.0
+    ],
+    "best_native": 0.9438888888888887
+   },
+   {
+    "shade": 11,
+    "seed": 7311,
+    "house": 0.9975,
+    "fixed": 0.9975,
+    "flat": 0.9975,
+    "shuffled": 0.9975,
+    "house_ch": [
+     0.0,
+     2.0
+    ],
+    "fixed_ch": [
+     0.0,
+     2.0
+    ],
+    "flat_ch": [
+     0.0,
+     2.0
+    ],
+    "shuffled_ch": [
+     0.0,
+     2.0
+    ],
+    "best_native": 0.9766666666666667
+   },
+   {
+    "shade": 11,
+    "seed": 7312,
+    "house": 0.9799999999999999,
+    "fixed": 0.9799999999999999,
+    "flat": 0.9799999999999999,
+    "shuffled": 0.9799999999999999,
+    "house_ch": [
+     2.0,
+     3.0
+    ],
+    "fixed_ch": [
+     2.0,
+     3.0
+    ],
+    "flat_ch": [
+     2.0,
+     3.0
+    ],
+    "shuffled_ch": [
+     2.0,
+     3.0
+    ],
+    "best_native": 0.9190277777777778
+   }
+  ]
+ },
+ {
+  "shade": 13,
+  "objects": [
+   "d1a1g0b0",
+   "d1a1g0b1",
+   "d1a1g1b0",
+   "d1a1g1b1"
+  ],
+  "arms": {
+   "house": {
+    "dry": "d1a1g0b0",
+    "drift": "d1a1g0b0",
+    "calm": "d1a1g0b0"
+   },
+   "fixed": {
+    "dry": "d1a1g0b1",
+    "drift": "d1a1g0b1",
+    "calm": "d1a1g0b1"
+   },
+   "flat": {
+    "dry": "d1a1g1b1",
+    "drift": "d1a1g1b1",
+    "calm": "d1a1g1b1"
+   },
+   "shuffled": {
+    "dry": "d1a1g0b0",
+    "drift": "d1a1g0b0",
+    "calm": "d1a1g0b0"
+   }
+  },
+  "rows": [
+   {
+    "shade": 13,
+    "seed": 7310,
+    "house": 0.9970833333333333,
+    "fixed": 0.9970833333333333,
+    "flat": 0.9958333333333333,
+    "shuffled": 0.9970833333333333,
+    "house_ch": [
+     0.0,
+     2.0
+    ],
+    "fixed_ch": [
+     0.0,
+     2.0
+    ],
+    "flat_ch": [
+     0.0,
+     2.0
+    ],
+    "shuffled_ch": [
+     0.0,
+     2.0
+    ],
+    "best_native": 0.9829166666666667
+   },
+   {
+    "shade": 13,
+    "seed": 7311,
+    "house": 0.9855555555555553,
+    "fixed": 0.9855555555555553,
+    "flat": 0.9701388888888888,
+    "shuffled": 0.9855555555555553,
+    "house_ch": [
+     2.0,
+     3.0
+    ],
+    "fixed_ch": [
+     2.0,
+     3.0
+    ],
+    "flat_ch": [
+     3.0,
+     5.0
+    ],
+    "shuffled_ch": [
+     2.0,
+     3.0
+    ],
+    "best_native": 0.9199999999999999
+   },
+   {
+    "shade": 13,
+    "seed": 7312,
+    "house": 0.9944444444444445,
+    "fixed": 0.9944444444444445,
+    "flat": 0.991111111111111,
+    "shuffled": 0.9944444444444445,
+    "house_ch": [
+     1.0,
+     2.0
+    ],
+    "fixed_ch": [
+     1.0,
+     2.0
+    ],
+    "flat_ch": [
+     1.0,
+     3.0
+    ],
+    "shuffled_ch": [
+     1.0,
+     2.0
+    ],
+    "best_native": 0.9666666666666666
+   }
+  ]
+ },
+ {
+  "shade": 15,
+  "objects": [
+   "d1a1g1b0",
+   "d1a1g0b0",
+   "d1a0g1b0",
+   "d0a1g0b0"
+  ],
+  "arms": {
+   "house": {
+    "dry": "d1a1g1b0",
+    "drift": "d1a1g0b0",
+    "calm": "d1a1g0b0"
+   },
+   "fixed": {
+    "dry": "d1a1g0b0",
+    "drift": "d1a1g0b0",
+    "calm": "d1a1g0b0"
+   },
+   "flat": {
+    "dry": "d1a1g1b0",
+    "drift": "d1a1g1b0",
+    "calm": "d1a1g1b0"
+   },
+   "shuffled": {
+    "dry": "d1a1g0b0",
+    "drift": "d1a1g0b0",
+    "calm": "d1a1g1b0"
+   }
+  },
+  "rows": [
+   {
+    "shade": 15,
+    "seed": 7310,
+    "house": 0.981111111111111,
+    "fixed": 0.9837499999999998,
+    "flat": 0.9797222222222222,
+    "shuffled": 0.9791666666666667,
+    "house_ch": [
+     2.0,
+     2.0
+    ],
+    "fixed_ch": [
+     3.0,
+     2.0
+    ],
+    "flat_ch": [
+     2.0,
+     3.0
+    ],
+    "shuffled_ch": [
+     3.0,
+     3.0
+    ],
+    "best_native": 0.9548611111111112
+   },
+   {
+    "shade": 15,
+    "seed": 7311,
+    "house": 0.9966666666666666,
+    "fixed": 0.9966666666666666,
+    "flat": 0.9933333333333334,
+    "shuffled": 0.995,
+    "house_ch": [
+     0.0,
+     3.0
+    ],
+    "fixed_ch": [
+     0.0,
+     3.0
+    ],
+    "flat_ch": [
+     0.0,
+     3.0
+    ],
+    "shuffled_ch": [
+     0.0,
+     3.0
+    ],
+    "best_native": 0.9833333333333334
+   },
+   {
+    "shade": 15,
+    "seed": 7312,
+    "house": 0.9854166666666666,
+    "fixed": 0.9854166666666666,
+    "flat": 0.9804166666666667,
+    "shuffled": 0.98375,
+    "house_ch": [
+     0.0,
+     3.0
+    ],
+    "fixed_ch": [
+     0.0,
+     3.0
+    ],
+    "flat_ch": [
+     0.0,
+     2.0
+    ],
+    "shuffled_ch": [
+     0.0,
+     3.0
+    ],
+    "best_native": 0.9720833333333334
+   }
+  ]
+ },
+ {
+  "shade": 17,
+  "objects": [
+   "d1a1g1b0",
+   "d1a1g1b1",
+   "d1a1g0b0",
+   "d1a1g0b1"
+  ],
+  "arms": {
+   "house": {
+    "dry": "d1a1g1b0",
+    "drift": "d1a1g0b0",
+    "calm": "d1a1g0b0"
+   },
+   "fixed": {
+    "dry": "d1a1g0b1",
+    "drift": "d1a1g0b1",
+    "calm": "d1a1g0b1"
+   },
+   "flat": {
+    "dry": "d1a1g1b1",
+    "drift": "d1a1g1b1",
+    "calm": "d1a1g1b1"
+   },
+   "shuffled": {
+    "dry": "d1a1g0b0",
+    "drift": "d1a1g0b0",
+    "calm": "d1a1g1b0"
+   }
+  },
+  "rows": [
+   {
+    "shade": 17,
+    "seed": 7310,
+    "house": 0.9884722222222223,
+    "fixed": 0.9894444444444446,
+    "flat": 0.9890277777777778,
+    "shuffled": 0.9886111111111112,
+    "house_ch": [
+     2.0,
+     3.0
+    ],
+    "fixed_ch": [
+     2.0,
+     3.0
+    ],
+    "flat_ch": [
+     1.0,
+     4.0
+    ],
+    "shuffled_ch": [
+     1.0,
+     3.0
+    ],
+    "best_native": 0.9654166666666666
+   },
+   {
+    "shade": 17,
+    "seed": 7311,
+    "house": 0.9954166666666666,
+    "fixed": 0.9954166666666666,
+    "flat": 0.9933333333333334,
+    "shuffled": 0.9941666666666666,
+    "house_ch": [
+     0.0,
+     3.0
+    ],
+    "fixed_ch": [
+     0.0,
+     3.0
+    ],
+    "flat_ch": [
+     0.0,
+     3.0
+    ],
+    "shuffled_ch": [
+     0.0,
+     2.0
+    ],
+    "best_native": 0.9829166666666667
+   },
+   {
+    "shade": 17,
+    "seed": 7312,
+    "house": 0.98375,
+    "fixed": 0.98375,
+    "flat": 0.9783333333333333,
+    "shuffled": 0.9829166666666667,
+    "house_ch": [
+     0.0,
+     2.0
+    ],
+    "fixed_ch": [
+     0.0,
+     2.0
+    ],
+    "flat_ch": [
+     0.0,
+     3.0
+    ],
+    "shuffled_ch": [
+     0.0,
+     3.0
+    ],
+    "best_native": 0.9720833333333334
+   }
+  ]
+ },
+ {
+  "shade": 19,
+  "objects": [
+   "d1a1g1b0",
+   "d1a1g0b0",
+   "d1a0g1b0",
+   "d1a0g1b1"
+  ],
+  "arms": {
+   "house": {
+    "dry": "d1a1g1b0",
+    "drift": "d1a1g0b0",
+    "calm": "d1a1g1b0"
+   },
+   "fixed": {
+    "dry": "d1a1g0b0",
+    "drift": "d1a1g0b0",
+    "calm": "d1a1g0b0"
+   },
+   "flat": {
+    "dry": "d1a1g1b1",
+    "drift": "d1a1g1b1",
+    "calm": "d1a1g1b1"
+   },
+   "shuffled": {
+    "dry": "d1a1g0b0",
+    "drift": "d1a1g1b0",
+    "calm": "d1a1g1b0"
+   }
+  },
+  "rows": [
+   {
+    "shade": 19,
+    "seed": 7310,
+    "house": 0.9890277777777778,
+    "fixed": 0.9873611111111111,
+    "flat": 0.9836111111111112,
+    "shuffled": 0.9904166666666667,
+    "house_ch": [
+     1.0,
+     3.0
+    ],
+    "fixed_ch": [
+     1.0,
+     4.0
+    ],
+    "flat_ch": [
+     1.0,
+     4.0
+    ],
+    "shuffled_ch": [
+     1.0,
+     3.0
+    ],
+    "best_native": 0.9715277777777778
+   },
+   {
+    "shade": 19,
+    "seed": 7311,
+    "house": 0.9924999999999999,
+    "fixed": 0.99125,
+    "flat": 0.9891666666666667,
+    "shuffled": 0.98875,
+    "house_ch": [
+     0.0,
+     3.0
+    ],
+    "fixed_ch": [
+     0.0,
+     3.0
+    ],
+    "flat_ch": [
+     0.0,
+     3.0
+    ],
+    "shuffled_ch": [
+     0.0,
+     3.0
+    ],
+    "best_native": 0.9829166666666667
+   },
+   {
+    "shade": 19,
+    "seed": 7312,
+    "house": 0.9841666666666666,
+    "fixed": 0.98375,
+    "flat": 0.97875,
+    "shuffled": 0.9795833333333333,
+    "house_ch": [
+     0.0,
+     3.0
+    ],
+    "fixed_ch": [
+     0.0,
+     3.0
+    ],
+    "flat_ch": [
+     0.0,
+     3.0
+    ],
+    "shuffled_ch": [
+     0.0,
+     2.0
+    ],
+    "best_native": 0.9708333333333333
+   }
+  ]
+ },
+ {
+  "shade": 21,
+  "objects": [
+   "d1a1g1b0",
+   "d0a1g0b0",
+   "d1a1g0b0",
+   "d1a0g1b0"
+  ],
+  "arms": {
+   "house": {
+    "dry": "d1a1g1b0",
+    "drift": "d0a1g0b0",
+    "calm": "d1a1g1b0"
+   },
+   "fixed": {
+    "dry": "d1a1g0b0",
+    "drift": "d1a1g0b0",
+    "calm": "d1a1g0b0"
+   },
+   "flat": {
+    "dry": "d1a1g1b0",
+    "drift": "d1a1g1b0",
+    "calm": "d1a1g1b0"
+   },
+   "shuffled": {
+    "dry": "d0a1g0b0",
+    "drift": "d1a1g1b0",
+    "calm": "d1a1g1b0"
+   }
+  },
+  "rows": [
+   {
+    "shade": 21,
+    "seed": 7310,
+    "house": 0.9895833333333333,
+    "fixed": 0.9909722222222224,
+    "flat": 0.9908333333333332,
+    "shuffled": 0.9908333333333332,
+    "house_ch": [
+     1.0,
+     3.0
+    ],
+    "fixed_ch": [
+     2.0,
+     3.0
+    ],
+    "flat_ch": [
+     1.0,
+     3.0
+    ],
+    "shuffled_ch": [
+     1.0,
+     3.0
+    ],
+    "best_native": 0.9798611111111111
+   },
+   {
+    "shade": 21,
+    "seed": 7311,
+    "house": 0.9941666666666666,
+    "fixed": 0.9958333333333333,
+    "flat": 0.99375,
+    "shuffled": 0.99375,
+    "house_ch": [
+     0.0,
+     3.0
+    ],
+    "fixed_ch": [
+     0.0,
+     3.0
+    ],
+    "flat_ch": [
+     0.0,
+     3.0
+    ],
+    "shuffled_ch": [
+     0.0,
+     3.0
+    ],
+    "best_native": 0.9816666666666667
+   },
+   {
+    "shade": 21,
+    "seed": 7312,
+    "house": 0.9829166666666667,
+    "fixed": 0.9824999999999999,
+    "flat": 0.9791666666666667,
+    "shuffled": 0.9791666666666667,
+    "house_ch": [
+     0.0,
+     3.0
+    ],
+    "fixed_ch": [
+     0.0,
+     2.0
+    ],
+    "flat_ch": [
+     0.0,
+     2.0
+    ],
+    "shuffled_ch": [
+     0.0,
+     2.0
+    ],
+    "best_native": 0.9708333333333333
+   }
+  ]
+ }
+]

@@ -1,0 +1,105 @@
+{
+ "row": "ai_ai",
+ "model": "openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct",
+ "pair": 0,
+ "cells": {
+  "std|301": {
+   "default": {
+    "result": 1.0,
+    "resource": 1734.0,
+    "R": 0.0005767012687427913,
+    "choices": {
+     "present|standard": 2
+    },
+    "failed_calls": 0,
+    "sec": 3.1
+   },
+   "rollout": {
+    "result": 1.0,
+    "resource": 1711.0,
+    "R": 0.0005844535359438924,
+    "choices": {
+     "focus_office|rollout": 1,
+     "present|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 2.9
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 1680.0,
+    "R": 0.0005952380952380953,
+    "choices": {
+     "F:holo-vote|policy": 1,
+     "F:holo-vote|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 3.3
+   },
+   "structure": {
+    "result": 1.0,
+    "resource": 1713.0,
+    "R": 0.0005837711617046118,
+    "choices": {
+     "focus_office|standard": 1,
+     "present|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.2
+   },
+   "sec": 11
+  },
+  "std|302": {
+   "default": {
+    "result": 1.0,
+    "resource": 3618.0,
+    "R": 0.0002763957987838585,
+    "choices": {
+     "present|standard": 4
+    },
+    "failed_calls": 0,
+    "sec": 5.2
+   },
+   "rollout": {
+    "result": 1.0,
+    "resource": 3603.0,
+    "R": 0.0002775464890369137,
+    "choices": {
+     "focus_team|rollout": 3,
+     "focus_home|rollout": 1
+    },
+    "failed_calls": 0,
+    "sec": 5.2
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 2580.0,
+    "R": 0.0003875968992248062,
+    "choices": {
+     "F:holo-path|standard": 1,
+     "F:holokey|standard": 1,
+     "past-1|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 4.3
+   },
+   "structure": {
+    "result": 1.0,
+    "resource": 3508.0,
+    "R": 0.00028506271379703536,
+    "choices": {
+     "focus_team|standard": 1,
+     "focus_home|standard": 1,
+     "past-1|standard": 2
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 5.4
+   },
+   "sec": 20
+  }
+ }
+}

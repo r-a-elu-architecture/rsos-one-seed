@@ -1,0 +1,64 @@
+# REAL3 sealed run, stage 1 (25 Nov 2026): 12 row/model units x 4 pairs of fresh cells (201-208; neuro windows 5-12);
+# sealed analysis (analyze_real3.py); results to cloud-results/real3. PREREG_REAL3.md, SEAL_REAL3.txt.
+name: rsos-real3-s1
+on:
+  push:
+    branches: [core-v1]
+    paths: ["cloud/trigger_real3_s1.txt"]
+permissions:
+  contents: write
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 345
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        u: ["quantum - 0 1", "quantum - 1 1", "quantum - 2 1", "quantum - 3 1", "energy - 0 1", "energy - 1 1", "energy - 2 1", "energy - 3 1", "economics - 0 1", "economics - 1 1", "economics - 2 1", "economics - 3 1", "space - 0 1", "space - 1 1", "space - 2 1", "space - 3 1", "robotics - 0 1", "robotics - 1 1", "robotics - 2 1", "robotics - 3 1", "biology - 0 1", "biology - 1 1", "biology - 2 1", "biology - 3 1", "neuro - 0 1", "neuro - 1 1", "neuro - 2 1", "neuro - 3 1", "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 0 1", "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 1 1", "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 2 1", "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 3 1", "ai_human openrouter:meta-llama/llama-3.1-8b-instruct 0 1", "ai_human openrouter:meta-llama/llama-3.1-8b-instruct 1 1", "ai_human openrouter:meta-llama/llama-3.1-8b-instruct 2 1", "ai_human openrouter:meta-llama/llama-3.1-8b-instruct 3 1", "ai_human openrouter:mistralai/mistral-small-3.2-24b-instruct 0 1", "ai_human openrouter:mistralai/mistral-small-3.2-24b-instruct 1 1", "ai_human openrouter:mistralai/mistral-small-3.2-24b-instruct 2 1", "ai_human openrouter:mistralai/mistral-small-3.2-24b-instruct 3 1", "ai_agents openrouter:openai/gpt-oss-20b 0 1", "ai_agents openrouter:openai/gpt-oss-20b 1 1", "ai_agents openrouter:openai/gpt-oss-20b 2 1", "ai_agents openrouter:openai/gpt-oss-20b 3 1", "ai_agents openrouter:meta-llama/llama-3.1-8b-instruct 0 1", "ai_agents openrouter:meta-llama/llama-3.1-8b-instruct 1 1", "ai_agents openrouter:meta-llama/llama-3.1-8b-instruct 2 1", "ai_agents openrouter:meta-llama/llama-3.1-8b-instruct 3 1"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install numpy scipy pandas scikit-learn requests qiskit qiskit-aer pvlib gymnasium skyfield dandi pynwb tiktoken mistral-common && pip install --no-deps llama-models
+      - name: real data for this row
+        run: |
+          set -- ${{ matrix.u }}
+          if [ "$1" = space ]; then python real/hosts/space_fetch.py; fi
+          if [ "$1" = neuro ]; then python real/hosts/neuro_fetch.py --out /tmp/neuro.npz --dir /tmp/dandi; fi
+          if [ "$1" = ai_human ]; then python real/hosts/ai_human_fetch.py; fi
+      - run: python cloud/real3_unit.py ${{ matrix.u }}
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          REASONING_EFFORT: low
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: real3-s1-${{ strategy.job-index }}
+          path: real/out3/
+  analyze:
+    needs: unit
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install scipy
+      - name: collect (stage 2 also reads the stage-1 outputs from cloud-results)
+        run: |
+          mkdir -p real/out3
+          git fetch origin cloud-results
+          if [ 1 = 2 ]; then git archive origin/cloud-results real3/out3 | tar -x -C /tmp && cp /tmp/real3/out3/*.json real/out3/; fi
+      - uses: actions/download-artifact@v4
+        with:
+          path: /tmp/art
+      - run: cp /tmp/art/*/*.json real/out3/ 2>/dev/null; ls real/out3 | wc -l && python real/analyze_real3.py
+      - name: push results to cloud-results
+        if: always()
+        run: |
+          git config user.name "rsos-cloud"; git config user.email "rsos-cloud@users.noreply.github.com"
+          mkdir -p /tmp/r3 && cp -r real/out3 real/RESULTS_REAL3.* real/REAL3_12_UNITS.json /tmp/r3/ 2>/dev/null || true
+          git checkout cloud-results
+          rm -rf real3 && mkdir -p real3 && cp -r /tmp/r3/. real3/
+          git add real3 && git commit -qm "REAL3 sealed run stage 1 ${{ github.run_id }}" && git push -q origin cloud-results

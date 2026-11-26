@@ -1,0 +1,223 @@
+{
+ "row": "ai_agents",
+ "model": "openrouter:openai/gpt-oss-20b",
+ "rsos_arm": "full",
+ "cells_run": [
+  1017,
+  1018,
+  1019,
+  1020
+ ],
+ "cells": {
+  "1017": {
+   "default": {
+    "result": 0.75,
+    "resource": 24.25,
+    "choices": {
+     "present|standard": 46
+    },
+    "failed_calls": 0,
+    "sec": 32.6
+   },
+   "rollout": {
+    "result": 1.0,
+    "resource": 7.029,
+    "choices": {
+     "present|standard": 12,
+     "stop|rollout": 4,
+     "open|rollout": 1
+    },
+    "failed_calls": 0,
+    "sec": 9.7
+   },
+   "full": {
+    "result": 1.0,
+    "resource": 11.466,
+    "choices": {
+     "F:blind-b0|standard": 1,
+     "op:heal|base": 1,
+     "present|standard": 6,
+     "op:fuse|base": 7,
+     "present|own": 4,
+     "stop|own": 4,
+     "past-2|own": 1,
+     "op:beam3|Associated": 1
+    },
+    "ops_passed_membrane": {
+     "heal": 15,
+     "beam1": 23,
+     "beam3": 23,
+     "contain": 0,
+     "compress": 0,
+     "inherit": 0,
+     "fuse": 32,
+     "carry": 0,
+     "rehost": 14,
+     "pierce": 25,
+     "overlay": 11,
+     "enter": 24,
+     "zoom": 21
+    },
+    "vote_vetoed": 5,
+    "failed_calls": 0,
+    "sec": 20.7
+   }
+  },
+  "1018": {
+   "default": {
+    "result": 0.5,
+    "resource": 21.149,
+    "choices": {
+     "present|standard": 41
+    },
+    "failed_calls": 0,
+    "sec": 37.2
+   },
+   "rollout": {
+    "result": 0.5,
+    "resource": 10.668,
+    "choices": {
+     "present|standard": 14,
+     "open|rollout": 2,
+     "focus-b0|rollout": 3,
+     "stop|rollout": 4
+    },
+    "failed_calls": 0,
+    "sec": 20.7
+   },
+   "full": {
+    "result": 1.0,
+    "resource": 4.014,
+    "choices": {
+     "present|standard": 1,
+     "F:blind-b0|standard": 1,
+     "op:fuse|base": 4,
+     "present|own": 1,
+     "stop|own": 3,
+     "F:blind-b1|own": 1,
+     "op:fuse|Owl": 1,
+     "past-2|own": 1
+    },
+    "ops_passed_membrane": {
+     "heal": 11,
+     "beam1": 12,
+     "beam3": 13,
+     "contain": 1,
+     "compress": 0,
+     "inherit": 0,
+     "fuse": 15,
+     "carry": 0,
+     "rehost": 5,
+     "pierce": 13,
+     "overlay": 8,
+     "enter": 13,
+     "zoom": 12
+    },
+    "vote_vetoed": 0,
+    "failed_calls": 0,
+    "sec": 12.3
+   }
+  },
+  "1019": {
+   "default": {
+    "result": 0.75,
+    "resource": 25.298,
+    "choices": {
+     "present|standard": 46
+    },
+    "failed_calls": 0,
+    "sec": 28.8
+   },
+   "rollout": {
+    "result": 0.5,
+    "resource": 7.353,
+    "choices": {
+     "present|standard": 14,
+     "stop|rollout": 4
+    },
+    "failed_calls": 0,
+    "sec": 14.8
+   },
+   "full": {
+    "result": 1.0,
+    "resource": 4.055,
+    "choices": {
+     "op:fuse|Owl": 3,
+     "stop|own": 4,
+     "F:blind-b0|standard": 2,
+     "F:blind-b1|own": 2,
+     "op:overlay|Owl": 2
+    },
+    "ops_passed_membrane": {
+     "heal": 12,
+     "beam1": 13,
+     "beam3": 13,
+     "contain": 0,
+     "compress": 0,
+     "inherit": 0,
+     "fuse": 13,
+     "carry": 0,
+     "rehost": 4,
+     "pierce": 12,
+     "overlay": 7,
+     "enter": 12,
+     "zoom": 11
+    },
+    "vote_vetoed": 3,
+    "failed_calls": 0,
+    "sec": 12.3
+   }
+  },
+  "1020": {
+   "default": {
+    "result": 0.75,
+    "resource": 21.639,
+    "choices": {
+     "present|standard": 41
+    },
+    "failed_calls": 0,
+    "sec": 24.0
+   },
+   "rollout": {
+    "result": 0.75,
+    "resource": 8.889,
+    "choices": {
+     "present|standard": 17,
+     "stop|rollout": 3
+    },
+    "failed_calls": 0,
+    "sec": 16.3
+   },
+   "full": {
+    "result": 1.0,
+    "resource": 3.433,
+    "choices": {
+     "F:reuse-b0|standard": 1,
+     "op:fuse|Owl": 1,
+     "stop|own": 4,
+     "F:blind-b0|standard": 2,
+     "op:overlay|Owl": 3,
+     "F:blind-b1|own": 1
+    },
+    "ops_passed_membrane": {
+     "heal": 11,
+     "beam1": 11,
+     "beam3": 10,
+     "contain": 0,
+     "compress": 1,
+     "inherit": 0,
+     "fuse": 12,
+     "carry": 0,
+     "rehost": 5,
+     "pierce": 10,
+     "overlay": 8,
+     "enter": 9,
+     "zoom": 8
+    },
+    "vote_vetoed": 2,
+    "failed_calls": 0,
+    "sec": 7.6
+   }
+  }
+ }
+}

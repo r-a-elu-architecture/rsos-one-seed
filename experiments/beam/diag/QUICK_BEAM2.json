@@ -1,0 +1,285 @@
+{
+ "wrong_beam": 0,
+ "caught_by_READY": {
+  "beam": 312,
+  "lockstep": 313,
+  "snap": 360,
+  "delta": 340
+ },
+ "cells": {
+  "light|0.1": {
+   "beam": 0.8630952380952381,
+   "lockstep": 0.8623015873015873,
+   "snap": 0.0,
+   "delta": 0.657936507936508
+  },
+  "light|0.3": {
+   "beam": 0.6900793650793651,
+   "lockstep": 0.6873015873015872,
+   "snap": 0.0,
+   "delta": 0.2400793650793651
+  },
+  "light|0.5": {
+   "beam": 0.46111111111111114,
+   "lockstep": 0.4396825396825396,
+   "snap": 0.0,
+   "delta": 0.04285714285714286
+  },
+  "radio|0.1": {
+   "beam": 0.846031746031746,
+   "lockstep": 0.8444444444444443,
+   "snap": 0.0,
+   "delta": 0.6746031746031746
+  },
+  "radio|0.3": {
+   "beam": 0.6992063492063492,
+   "lockstep": 0.6952380952380952,
+   "snap": 0.0,
+   "delta": 0.22579365079365082
+  },
+  "radio|0.5": {
+   "beam": 0.4932539682539683,
+   "lockstep": 0.4781746031746031,
+   "snap": 0.0,
+   "delta": 0.01746031746031746
+  },
+  "matter|0.1": {
+   "beam": 0.8507936507936508,
+   "lockstep": 0.8507936507936508,
+   "snap": 0.0,
+   "delta": 0.7662698412698412
+  },
+  "matter|0.3": {
+   "beam": 0.6670634920634921,
+   "lockstep": 0.6662698412698413,
+   "snap": 0.0,
+   "delta": 0.16706349206349205
+  },
+  "matter|0.5": {
+   "beam": 0.4884920634920635,
+   "lockstep": 0.4853174603174603,
+   "snap": 0.0,
+   "delta": 0.00873015873015873
+  }
+ },
+ "cells_beam_gt_lockstep": 8,
+ "cells_beam_gt_snap_delta": 9,
+ "runs_ge": [
+  378,
+  378
+ ],
+ "runs_beam_gt_lock": 68,
+ "runs_beam_lt_lock": 0,
+ "zero": {
+  "exact": 42,
+  "lock_exact": 42,
+  "runs": 42,
+  "beam_sync_1": 42,
+  "sync_mean": {
+   "beam": 1.0,
+   "lockstep": 1.0,
+   "snap": 0.0,
+   "delta": 1.0
+  }
+ },
+ "DESCRIPTIVE_frames_single_tick_median": {
+  "beam": 2.0,
+  "lockstep": 3.0
+ },
+ "DESCRIPTIVE_frames_per_message_median_lossy": {
+  "beam": 2.0,
+  "lockstep": 3.0,
+  "snap": 39.0,
+  "delta": 23.0
+ },
+ "DESCRIPTIVE_budget_sweep": {
+  "B1|light|0.1": {
+   "beam": 0.0,
+   "lockstep": 0.0
+  },
+  "B2|light|0.1": {
+   "beam": 0.05,
+   "lockstep": 0.0
+  },
+  "B3|light|0.1": {
+   "beam": 0.738,
+   "lockstep": 0.033
+  },
+  "B4|light|0.1": {
+   "beam": 0.825,
+   "lockstep": 0.332
+  },
+  "B6|light|0.1": {
+   "beam": 0.879,
+   "lockstep": 0.824
+  },
+  "B1|light|0.3": {
+   "beam": 0.0,
+   "lockstep": 0.0
+  },
+  "B2|light|0.3": {
+   "beam": 0.011,
+   "lockstep": 0.0
+  },
+  "B3|light|0.3": {
+   "beam": 0.183,
+   "lockstep": 0.01
+  },
+  "B4|light|0.3": {
+   "beam": 0.396,
+   "lockstep": 0.038
+  },
+  "B6|light|0.3": {
+   "beam": 0.569,
+   "lockstep": 0.361
+  },
+  "B1|light|0.5": {
+   "beam": 0.0,
+   "lockstep": 0.0
+  },
+  "B2|light|0.5": {
+   "beam": 0.008,
+   "lockstep": 0.0
+  },
+  "B3|light|0.5": {
+   "beam": 0.018,
+   "lockstep": 0.004
+  },
+  "B4|light|0.5": {
+   "beam": 0.06,
+   "lockstep": 0.01
+  },
+  "B6|light|0.5": {
+   "beam": 0.177,
+   "lockstep": 0.054
+  },
+  "B1|radio|0.1": {
+   "beam": 0.0,
+   "lockstep": 0.0
+  },
+  "B2|radio|0.1": {
+   "beam": 0.085,
+   "lockstep": 0.0
+  },
+  "B3|radio|0.1": {
+   "beam": 0.686,
+   "lockstep": 0.074
+  },
+  "B4|radio|0.1": {
+   "beam": 0.742,
+   "lockstep": 0.392
+  },
+  "B6|radio|0.1": {
+   "beam": 0.796,
+   "lockstep": 0.737
+  },
+  "B1|radio|0.3": {
+   "beam": 0.0,
+   "lockstep": 0.0
+  },
+  "B2|radio|0.3": {
+   "beam": 0.019,
+   "lockstep": 0.0
+  },
+  "B3|radio|0.3": {
+   "beam": 0.176,
+   "lockstep": 0.017
+  },
+  "B4|radio|0.3": {
+   "beam": 0.308,
+   "lockstep": 0.065
+  },
+  "B6|radio|0.3": {
+   "beam": 0.435,
+   "lockstep": 0.309
+  },
+  "B1|radio|0.5": {
+   "beam": 0.0,
+   "lockstep": 0.0
+  },
+  "B2|radio|0.5": {
+   "beam": 0.01,
+   "lockstep": 0.0
+  },
+  "B3|radio|0.5": {
+   "beam": 0.021,
+   "lockstep": 0.008
+  },
+  "B4|radio|0.5": {
+   "beam": 0.048,
+   "lockstep": 0.012
+  },
+  "B6|radio|0.5": {
+   "beam": 0.144,
+   "lockstep": 0.053
+  },
+  "B1|matter|0.1": {
+   "beam": 0.0,
+   "lockstep": 0.0
+  },
+  "B2|matter|0.1": {
+   "beam": 0.044,
+   "lockstep": 0.0
+  },
+  "B3|matter|0.1": {
+   "beam": 0.745,
+   "lockstep": 0.033
+  },
+  "B4|matter|0.1": {
+   "beam": 0.854,
+   "lockstep": 0.363
+  },
+  "B6|matter|0.1": {
+   "beam": 0.881,
+   "lockstep": 0.846
+  },
+  "B1|matter|0.3": {
+   "beam": 0.0,
+   "lockstep": 0.0
+  },
+  "B2|matter|0.3": {
+   "beam": 0.01,
+   "lockstep": 0.0
+  },
+  "B3|matter|0.3": {
+   "beam": 0.156,
+   "lockstep": 0.007
+  },
+  "B4|matter|0.3": {
+   "beam": 0.382,
+   "lockstep": 0.044
+  },
+  "B6|matter|0.3": {
+   "beam": 0.592,
+   "lockstep": 0.343
+  },
+  "B1|matter|0.5": {
+   "beam": 0.0,
+   "lockstep": 0.0
+  },
+  "B2|matter|0.5": {
+   "beam": 0.004,
+   "lockstep": 0.0
+  },
+  "B3|matter|0.5": {
+   "beam": 0.014,
+   "lockstep": 0.002
+  },
+  "B4|matter|0.5": {
+   "beam": 0.073,
+   "lockstep": 0.004
+  },
+  "B6|matter|0.5": {
+   "beam": 0.224,
+   "lockstep": 0.062
+  }
+ },
+ "PASS": {
+  "no_wrong": true,
+  "beam_gt_lockstep_9": false,
+  "beam_gt_snap_delta_9": true,
+  "runs_90": true,
+  "zero_exact": true
+ },
+ "ROW_PASS": false
+}

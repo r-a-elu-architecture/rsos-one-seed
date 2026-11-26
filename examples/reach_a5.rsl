@@ -1,0 +1,13 @@
+# REACH: the owner's stretch target as an operator. A5 (18 Nov 2026): 10x below the market's best setup.
+# Measured: the assembly line (X5) reached 3.7x on S1 (0.268 of B1, api basis) and 2.8x on S2; the limit is thinking.
+LANGUAGE RSOS 0.2
+WORLD economy
+HOST agents KIND software CHANNELS visual
+USE HOST agents
+OBJECT cost KIND module
+PART cost.task KIND measure
+REACH cost10 ON cost.task TARGET 10 AGAINST market_best MEASURE cost_per_task RESULT 3.7 LIMIT thinking BLOCKERS thinking, audit_calls, grammar_per_call
+DEFICIT cost.task.thinking 0.87
+PARTICLE thermostat LAND cost.task.thinking ON effort OPENS escalate_on_reject
+PARTICLE acceptance_sampling LAND cost.task.audit_calls ON risk_ops OPENS audit_by_equality
+REACH cost10b ON cost.task TARGET 10 AGAINST market_best_low_thinking MEASURE cost_per_task FROM cost10 BLOCKERS thinking, auditor_errors

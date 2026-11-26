@@ -1,0 +1,453 @@
+{
+ "row": "space",
+ "model": "-",
+ "cells_run": [
+  809,
+  810,
+  811,
+  812
+ ],
+ "cells": {
+  "std|809": {
+   "default": {
+    "result": 437.83266428046545,
+    "resource": 14370.120010071969,
+    "R": 0.03046826776488923,
+    "choices": {
+     "present|standard": 25
+    },
+    "sec": 0.1
+   },
+   "structure": {
+    "result": 444.82712859220726,
+    "resource": 16367.327945267638,
+    "R": 0.027177748871392425,
+    "choices": {
+     "present|standard": 1,
+     "future+1|standard": 5,
+     "focus_science|standard": 15,
+     "focus_bulk|standard": 1,
+     "future+2|standard": 2,
+     "present|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 8.0
+   },
+   "R1": {
+    "result": 449.0320775670189,
+    "resource": 17533.108105201958,
+    "R": 0.025610523523424467,
+    "choices": {
+     "R1:need_edf_fragment|policy": 16,
+     "R1:dragon_repair_standard|policy": 7,
+     "R1:dragon_repair_standard|standard": 1,
+     "R1:need_edf_fragment|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 17.1
+   },
+   "R2": {
+    "result": 449.79886541552537,
+    "resource": 17515.99945837345,
+    "R": 0.02567931487349418,
+    "choices": {
+     "R2:house_downlink|policy": 3,
+     "R2:deficit_land|policy": 13,
+     "R2:standard_healed|policy": 6,
+     "focus_science|standard": 1,
+     "R2:standard_healed|standard": 1,
+     "R2:deficit_land|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 16.2
+   },
+   "R3": {
+    "result": 449.79886541552537,
+    "resource": 17515.99945837345,
+    "R": 0.02567931487349418,
+    "choices": {
+     "R3:dragon_plan_house|policy": 5,
+     "R3:tiger_edf|policy": 17,
+     "focus_science|standard": 1,
+     "R3:tiger_edf|standard": 1,
+     "R3:tiger_edf|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 14.9
+   },
+   "C1": {
+    "result": 449.4509980672422,
+    "resource": 17516.211748214337,
+    "R": 0.025659143913526895,
+    "choices": {
+     "C1:urgent_knapsack|policy": 15,
+     "C1:density_edf_frag|policy": 8,
+     "focus_science|standard": 1,
+     "C1:urgent_knapsack|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 21.7
+   },
+   "C2": {
+    "result": 449.4509980672422,
+    "resource": 17515.99945837345,
+    "R": 0.02565945489638526,
+    "choices": {
+     "C2:expiring_knapsack|policy": 17,
+     "C2:density_edf_frag|policy": 6,
+     "focus_science|standard": 1,
+     "C2:expiring_knapsack|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 13.0
+   },
+   "C3": {
+    "result": 449.4509980672422,
+    "resource": 17515.99945837345,
+    "R": 0.02565945489638526,
+    "choices": {
+     "C3:late_plan|policy": 4,
+     "C3:edf_frag|policy": 18,
+     "focus_science|standard": 1,
+     "C3:knap_now|policy": 1,
+     "C3:edf_frag|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 13.2
+   },
+   "sec": 104
+  },
+  "std|810": {
+   "default": {
+    "result": 543.855484430187,
+    "resource": 16202.375349262875,
+    "R": 0.03356640447506542,
+    "choices": {
+     "present|standard": 26
+    },
+    "sec": 0.0
+   },
+   "structure": {
+    "result": 554.0240686286762,
+    "resource": 17910.023128493263,
+    "R": 0.03093374389602395,
+    "choices": {
+     "present|standard": 2,
+     "future+1|standard": 10,
+     "focus_science|standard": 11,
+     "future+2|standard": 2,
+     "future+1|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 9.1
+   },
+   "R1": {
+    "result": 560.4193712739075,
+    "resource": 19392.193197199096,
+    "R": 0.028899225867595597,
+    "choices": {
+     "present|standard": 1,
+     "R1:need_edf_fragment|policy": 13,
+     "R1:dragon_repair_standard|policy": 10,
+     "R1:dragon_repair_standard|standard": 1,
+     "R1:dragon_repair_standard|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 20.8
+   },
+   "R2": {
+    "result": 560.6346550543291,
+    "resource": 19458.377548964534,
+    "R": 0.0288119938902184,
+    "choices": {
+     "present|standard": 1,
+     "R2:house_downlink|policy": 4,
+     "R2:deficit_land|policy": 6,
+     "R2:standard_healed|policy": 13,
+     "R2:standard_healed|standard": 1,
+     "R2:standard_healed|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 19.8
+   },
+   "R3": {
+    "result": 560.4546632565153,
+    "resource": 19436.68419324497,
+    "R": 0.028834890647206988,
+    "choices": {
+     "present|standard": 1,
+     "R3:dragon_plan_house|policy": 5,
+     "R3:tiger_edf|policy": 14,
+     "R3:lion_urgent_value|policy": 4,
+     "R3:tiger_edf|standard": 1,
+     "R3:lion_urgent_value|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 18.2
+   },
+   "C1": {
+    "result": 560.6346550543291,
+    "resource": 19458.377548964538,
+    "R": 0.028811993890218397,
+    "choices": {
+     "present|standard": 1,
+     "C1:urgent_knapsack|policy": 10,
+     "C1:lazy_plan_frag|policy": 2,
+     "C1:density_edf_frag|policy": 11,
+     "C1:density_edf_frag|standard": 1,
+     "C1:urgent_knapsack|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 27.2
+   },
+   "C2": {
+    "result": 560.6346550543291,
+    "resource": 19458.377548964534,
+    "R": 0.0288119938902184,
+    "choices": {
+     "present|standard": 1,
+     "C2:expiring_knapsack|policy": 12,
+     "C2:density_edf_frag|policy": 11,
+     "C2:density_edf_frag|standard": 1,
+     "C2:expiring_knapsack|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 16.2
+   },
+   "C3": {
+    "result": 560.6346550543291,
+    "resource": 19458.377548964534,
+    "R": 0.0288119938902184,
+    "choices": {
+     "present|standard": 1,
+     "C3:late_plan|policy": 4,
+     "C3:edf_frag|policy": 14,
+     "C3:must_now|policy": 5,
+     "C3:edf_frag|standard": 1,
+     "C3:knap_now|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 15.5
+   },
+   "sec": 127
+  },
+  "std|811": {
+   "default": {
+    "result": 473.46334598131136,
+    "resource": 16050.009228192124,
+    "R": 0.029499256931869212,
+    "choices": {
+     "present|standard": 24
+    },
+    "sec": 0.0
+   },
+   "structure": {
+    "result": 477.7105230534149,
+    "resource": 17239.559068811268,
+    "R": 0.02771013580722368,
+    "choices": {
+     "present|standard": 9,
+     "focus_bulk|standard": 4,
+     "focus_science|standard": 7,
+     "future+2|standard": 2,
+     "future+1|standard": 1,
+     "present|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 7.7
+   },
+   "R1": {
+    "result": 482.4689316630473,
+    "resource": 18740.833400970834,
+    "R": 0.025744262346308135,
+    "choices": {
+     "R1:need_edf_fragment|policy": 22,
+     "R1:alap_reserve_85|standard": 1,
+     "R1:need_edf_fragment|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 17.8
+   },
+   "R2": {
+    "result": 482.9723086273046,
+    "resource": 18764.48222550494,
+    "R": 0.02573864297576205,
+    "choices": {
+     "R2:house_downlink|policy": 5,
+     "R2:deficit_land|policy": 16,
+     "R2:deficit_land|standard": 2,
+     "R2:deficit_land|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 17.1
+   },
+   "R3": {
+    "result": 482.9723086273046,
+    "resource": 18764.48222550494,
+    "R": 0.02573864297576205,
+    "choices": {
+     "R3:dragon_plan_house|policy": 5,
+     "R3:tiger_edf|policy": 15,
+     "R3:lion_urgent_value|policy": 1,
+     "R3:tiger_edf|standard": 2,
+     "R3:tiger_edf|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 15.7
+   },
+   "C1": {
+    "result": 482.9723086273046,
+    "resource": 18764.48222550494,
+    "R": 0.02573864297576205,
+    "choices": {
+     "C1:lazy_plan_frag|policy": 1,
+     "C1:urgent_knapsack|policy": 17,
+     "C1:density_edf_frag|policy": 4,
+     "C1:density_edf_frag|standard": 1,
+     "C1:urgent_knapsack|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 22.7
+   },
+   "C2": {
+    "result": 482.9723086273046,
+    "resource": 18764.48222550494,
+    "R": 0.02573864297576205,
+    "choices": {
+     "C2:expiring_knapsack|policy": 23,
+     "C2:expiring_knapsack|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 14.0
+   },
+   "C3": {
+    "result": 482.9723086273046,
+    "resource": 18764.48222550494,
+    "R": 0.02573864297576205,
+    "choices": {
+     "C3:late_plan|policy": 5,
+     "C3:must_now|policy": 13,
+     "C3:knap_now|policy": 4,
+     "C3:must_now|standard": 1,
+     "C3:must_now|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 13.3
+   },
+   "sec": 108
+  },
+  "std|812": {
+   "default": {
+    "result": 414.10093805745913,
+    "resource": 14852.655302514644,
+    "R": 0.027880599773115945,
+    "choices": {
+     "present|standard": 24
+    },
+    "sec": 0.0
+   },
+   "structure": {
+    "result": 419.30360763472356,
+    "resource": 15751.621101872524,
+    "R": 0.026619711388618756,
+    "choices": {
+     "present|standard": 6,
+     "focus_science|standard": 8,
+     "future+2|standard": 3,
+     "future+1|standard": 4,
+     "present|own": 1,
+     "focus_alert|own": 1,
+     "focus_science|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 8.2
+   },
+   "R1": {
+    "result": 427.1628709263695,
+    "resource": 17619.573448241445,
+    "R": 0.024243655624308167,
+    "choices": {
+     "R1:need_edf_fragment|policy": 11,
+     "R1:dragon_repair_standard|policy": 9,
+     "R1:alap_reserve_60|policy": 1,
+     "R1:alap_reserve_85|policy": 1,
+     "present|own": 1,
+     "R1:need_edf_fragment|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 20.9
+   },
+   "R2": {
+    "result": 427.5688755834988,
+    "resource": 17619.573448241445,
+    "R": 0.02426669844417676,
+    "choices": {
+     "R2:house_downlink|policy": 1,
+     "R2:deficit_land|policy": 1,
+     "R2:standard_healed|policy": 20,
+     "present|own": 1,
+     "R2:standard_healed|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 19.3
+   },
+   "R3": {
+    "result": 427.5688755834988,
+    "resource": 17619.57344824145,
+    "R": 0.024266698444176754,
+    "choices": {
+     "R3:dragon_plan_house|policy": 1,
+     "R3:tiger_edf|policy": 21,
+     "R3:dragon_plan_house|own": 1,
+     "R3:tiger_edf|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 18.4
+   },
+   "C1": {
+    "result": 427.5688755834988,
+    "resource": 17619.57344824145,
+    "R": 0.024266698444176754,
+    "choices": {
+     "C1:lazy_plan_frag|policy": 1,
+     "C1:urgent_knapsack|policy": 9,
+     "C1:density_edf_frag|policy": 12,
+     "C1:lazy_plan_frag|own": 1,
+     "C1:density_edf_frag|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 23.8
+   },
+   "C2": {
+    "result": 427.5688755834989,
+    "resource": 17619.573448241445,
+    "R": 0.024266698444176765,
+    "choices": {
+     "C2:expiring_knapsack|policy": 2,
+     "C2:density_edf_frag|policy": 17,
+     "C2:urgency_value|policy": 2,
+     "C2:lookahead_assign|policy": 1,
+     "focus_alert|own": 1,
+     "C2:density_edf_frag|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 7.8
+   },
+   "C3": {
+    "result": 427.5688755834989,
+    "resource": 17619.573448241445,
+    "R": 0.024266698444176765,
+    "choices": {
+     "C3:late_plan|policy": 2,
+     "C3:must_now|policy": 2,
+     "C3:edf_frag|policy": 18,
+     "present|own": 1,
+     "C3:edf_frag|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 7.6
+   },
+   "sec": 106
+  }
+ }
+}

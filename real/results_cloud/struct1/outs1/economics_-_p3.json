@@ -1,0 +1,141 @@
+{
+ "row": "economics",
+ "model": "-",
+ "pair": 3,
+ "cells": {
+  "std|307": {
+   "default": {
+    "result": 2361.566804838389,
+    "resource": 356.24501491987553,
+    "R": 6.629052213880209,
+    "choices": {
+     "present|standard": 26
+    },
+    "sec": 0.0
+   },
+   "rollout": {
+    "result": 2378.3208783837476,
+    "resource": 346.5809564735116,
+    "R": 6.862237621430066,
+    "choices": {
+     "prebuild|rollout": 19,
+     "focus_big|rollout": 1,
+     "focus_short|rollout": 2,
+     "focus_small|rollout": 2,
+     "present|standard": 1,
+     "lean|rollout": 1
+    },
+    "sec": 1.7
+   },
+   "seed3v1": {
+    "result": 2397.5877659722514,
+    "resource": 344.6651822816444,
+    "R": 6.9562807304773076,
+    "choices": {
+     "P4P5:stochastic_lp|policy": 24,
+     "past-1|own": 1,
+     "P4P5:stochastic_lp|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 841.6
+   },
+   "structure": {
+    "result": 2390.204005513462,
+    "resource": 350.3458983818685,
+    "R": 6.822411840849348,
+    "choices": {
+     "prebuild|standard": 6,
+     "prebuild|own": 5,
+     "future+1|standard": 2,
+     "future+2|standard": 3,
+     "past-1|standard": 2,
+     "present|standard": 1,
+     "past-1|own": 3,
+     "future+2|own": 2,
+     "past-2|own": 1,
+     "lean|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 3.4
+   },
+   "strongest": {
+    "result": 2395.891876671187,
+    "resource": 344.85807964290296,
+    "R": 6.94747207069096,
+    "choices": {
+     "present|standard": 26
+    },
+    "sec": 1.8
+   },
+   "sec": 849
+  },
+  "std|308": {
+   "default": {
+    "result": 2412.149616808097,
+    "resource": 360.85871153217636,
+    "R": 6.684471067821277,
+    "choices": {
+     "present|standard": 26
+    },
+    "sec": 0.0
+   },
+   "rollout": {
+    "result": 2416.993684103935,
+    "resource": 355.4965785869445,
+    "R": 6.798922492337872,
+    "choices": {
+     "prebuild|rollout": 15,
+     "present|standard": 4,
+     "pair|rollout": 2,
+     "focus_small|rollout": 2,
+     "focus_short|rollout": 1,
+     "lean|rollout": 2
+    },
+    "sec": 1.6
+   },
+   "seed3v1": {
+    "result": 2425.5886351171625,
+    "resource": 365.5040592074798,
+    "R": 6.636283712899253,
+    "choices": {
+     "P4P5:stochastic_lp|policy": 22,
+     "F:otrace:lp_corrected|policy": 2,
+     "F:otrace:lp_corrected|own": 1,
+     "P4P5:stochastic_lp|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 856.4
+   },
+   "structure": {
+    "result": 2412.4727632969925,
+    "resource": 361.4304578376374,
+    "R": 6.674790989476402,
+    "choices": {
+     "prebuild|standard": 9,
+     "future+2|standard": 3,
+     "present|standard": 1,
+     "pair|standard": 2,
+     "focus_small|standard": 1,
+     "focus_short|standard": 1,
+     "prebuild|own": 3,
+     "past-1|standard": 2,
+     "past-2|standard": 1,
+     "past-2|own": 1,
+     "lean|own": 2
+    },
+    "policy_fallback_steps": 0,
+    "sec": 1.6
+   },
+   "strongest": {
+    "result": 2424.811948445082,
+    "resource": 365.62928052409103,
+    "R": 6.631886661181429,
+    "choices": {
+     "present|standard": 26
+    },
+    "sec": 1.1
+   },
+   "sec": 861
+  }
+ }
+}

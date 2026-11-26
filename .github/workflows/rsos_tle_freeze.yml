@@ -1,0 +1,30 @@
+# Freeze the satellite orbit elements once (owner 25 Nov 14:28): retry CelesTrak until it answers (30 tries, 60 s apart),
+# then commit real/hosts/data/space_tle_frozen.txt (+ .meta.json with source and UTC fetch time) to core-v1.
+# CONF1 FIX1 and CONF2 use this frozen file; it is fingerprinted in their seals.
+name: rsos-tle-freeze
+on:
+  push:
+    branches: [core-v1]
+    paths: ["cloud/trigger_tle_freeze.txt"]
+permissions:
+  contents: write
+jobs:
+  freeze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: |
+          for i in $(seq 1 30); do
+            if python real/hosts/space_fetch.py; then echo "fetched on try $i"; break; fi
+            echo "try $i failed; waiting 60 s"; sleep 60
+          done
+          test -s real/hosts/data/space_tle.txt
+          cp real/hosts/data/space_tle.txt real/hosts/data/space_tle_frozen.txt
+          cp real/hosts/data/space_tle.meta.json real/hosts/data/space_tle_frozen.meta.json
+          git config user.name "rsos-cloud"; git config user.email "rsos-cloud@users.noreply.github.com"
+          git add -f real/hosts/data/space_tle_frozen.txt real/hosts/data/space_tle_frozen.meta.json
+          git commit -qm "Frozen satellite orbit elements (CelesTrak, fetched in run ${{ github.run_id }})"
+          for k in 1 2 3; do git pull -q --rebase origin core-v1 && git push -q origin HEAD:core-v1 && break; sleep 5; done

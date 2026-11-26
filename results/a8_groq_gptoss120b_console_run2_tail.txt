@@ -1,0 +1,9 @@
+Owner's console, 18 Nov 2026 23:37 Kyiv (tail as pasted in chat; second run after the 22:40 rate-limit stop):
+S1 B2 304 ... success=True acc=1.000 calls=2 out=2306 think_tok=1936 inv=0 wrong=0 fail=0 wall=46s
+S1 B2 305 think=default success=True acc=1.000 calls=2 out=3170 think_tok=2810 inv=0 wrong=0 fail=0 wall=18s
+S1 B2 306 think=default success=True acc=1.000 calls=2 out=2956 think_tok=2613 inv=0 wrong=0 fail=0 wall=47s
+S1 B2 307 think=default success=True acc=1.000 calls=2 out=2431 think_tok=2112 inv=0 wrong=0 fail=0 wall=16s
+S1 X5b 100 think=default success=True acc=1.000 calls=2 out=2274 think_tok=2089 inv=0 wrong=0 fail=0 wall=26s
+S1 X5b 101 think=default success=True acc=1.000 calls=2 out=2104 think_tok=1908 inv=0 wrong=0 fail=0 wall=25s
+S1 X5b 102 think=default success=True acc=1.000 calls=2 out=1928 think_tok=1750 inv=0 wrong=0 fail=0 wall=25s
+RuntimeError: openai-compatible call failed: HTTP 429: ... tokens per day (TPD): Limit 200000, Used 198047

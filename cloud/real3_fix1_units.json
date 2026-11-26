@@ -1,0 +1,14 @@
+[
+ "energy - 0 2",
+ "energy - 1 2",
+ "energy - 2 2",
+ "energy - 3 2",
+ "quantum - 0 2",
+ "quantum - 1 2",
+ "quantum - 2 2",
+ "quantum - 3 2",
+ "ai_agents openrouter:meta-llama/llama-3.1-8b-instruct 0 2",
+ "ai_agents openrouter:meta-llama/llama-3.1-8b-instruct 1 2",
+ "ai_agents openrouter:meta-llama/llama-3.1-8b-instruct 2 2",
+ "ai_agents openrouter:meta-llama/llama-3.1-8b-instruct 3 2"
+]

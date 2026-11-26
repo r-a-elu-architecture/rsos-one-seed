@@ -1,0 +1,45 @@
+{
+ "code_commit": "d2757aed7b3249c35f51615dba25807ea59d59ba",
+ "experiment": "T9-DISCOVERY",
+ "numpy": "2.5.3",
+ "python": "3.13.18",
+ "results_sha256": "b705bd48f9c95927b11b2f9c825d32a01fee9fecd6adcf0e163958fdfc4a8347",
+ "run_utc": "2026-11-16T19:39:16Z",
+ "summary": {
+  "H1_holds_on_held_out": {
+   "A": 0.681,
+   "B": 0.7245,
+   "best_possible_A": 0.6894,
+   "pass": true
+  },
+  "H2_removal_locates_function": {
+   "loss_when_removed": {
+    "cache=brain": 0.015,
+    "fast_retry=heart": 0.0168,
+    "spell_corrector=heart": 0.197,
+    "synonym_expander=brain": 0.134
+   },
+   "pass": false
+  },
+  "H3_induced_rule_transfers": {
+   "other_host_baseline": 0.3393,
+   "other_host_rule": 0.8049,
+   "pass": true,
+   "rule": {
+    "cache": "brain",
+    "fast_retry": "heart",
+    "grey": "on",
+    "heal": "on",
+    "spell_corrector": "brain",
+    "synonym_expander": "brain"
+   }
+  },
+  "best_program_on_search_set": [
+   "PIERCE spell_corrector THROUGH classify.heart",
+   "PIERCE synonym_expander THROUGH classify.brain",
+   "PIERCE cache THROUGH memory.brain",
+   "PIERCE fast_retry THROUGH act.heart"
+  ],
+  "search_score": 0.7335
+ }
+}

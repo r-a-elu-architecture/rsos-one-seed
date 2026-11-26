@@ -1,0 +1,667 @@
+{
+ "null_calls": {
+  "legacy": [
+   {
+    "in": 2,
+    "cache_w": 1348,
+    "cache_w5m": 0,
+    "cache_w1h": 1348,
+    "cache_r": 0,
+    "out": 4,
+    "think": 0,
+    "sec": 3.49983811378479,
+    "api_ms": 900,
+    "turns": 1,
+    "cost": 0.0002718,
+    "model": "claude-haiku-5-5"
+   },
+   {
+    "in": 2,
+    "cache_w": 1345,
+    "cache_w5m": 0,
+    "cache_w1h": 1345,
+    "cache_r": 0,
+    "out": 4,
+    "think": 0,
+    "sec": 3.67874813079834,
+    "api_ms": 830,
+    "turns": 1,
+    "cost": 0.00027120000000000003,
+    "model": "claude-haiku-5-5"
+   },
+   {
+    "in": 2,
+    "cache_w": 1348,
+    "cache_w5m": 0,
+    "cache_w1h": 1348,
+    "cache_r": 0,
+    "out": 4,
+    "think": 0,
+    "sec": 3.3932559490203857,
+    "api_ms": 698,
+    "turns": 1,
+    "cost": 0.0002718,
+    "model": "claude-haiku-5-5"
+   }
+  ],
+  "fixed": [
+   {
+    "in": 2,
+    "cache_w": 569,
+    "cache_w5m": 569,
+    "cache_w1h": 0,
+    "cache_r": 0,
+    "out": 7,
+    "think": 0,
+    "sec": 1.624342441558838,
+    "api_ms": 589,
+    "turns": 1,
+    "cost": 7.482499999999999e-05,
+    "model": "claude-haiku-5-5"
+   },
+   {
+    "in": 2,
+    "cache_w": 569,
+    "cache_w5m": 569,
+    "cache_w1h": 0,
+    "cache_r": 0,
+    "out": 7,
+    "think": 0,
+    "sec": 1.9314775466918945,
+    "api_ms": 948,
+    "turns": 1,
+    "cost": 7.482499999999999e-05,
+    "model": "claude-haiku-5-5"
+   },
+   {
+    "in": 2,
+    "cache_w": 569,
+    "cache_w5m": 569,
+    "cache_w1h": 0,
+    "cache_r": 0,
+    "out": 4,
+    "think": 0,
+    "sec": 1.7412519454956055,
+    "api_ms": 785,
+    "turns": 1,
+    "cost": 7.3325e-05,
+    "model": "claude-haiku-5-5"
+   }
+  ]
+ },
+ "scaffold_tokens": {
+  "legacy": 1349,
+  "fixed": 571
+ },
+ "recorded_prompt_calls": [
+  {
+   "source": "a3b_transcripts_hd.jsonl",
+   "seed": 101,
+   "role_sys": "You are the PLANNER in a three-agent pip",
+   "recorded": {
+    "in": 2,
+    "cache_w": 834,
+    "cache_r": 923,
+    "out": 354,
+    "cost": 0.00035323
+   },
+   "legacy": {
+    "in": 2,
+    "cache_w": 1840,
+    "cache_w5m": 0,
+    "cache_w1h": 1840,
+    "cache_r": 0,
+    "out": 95,
+    "think": 0,
+    "sec": 4.9846718311309814,
+    "api_ms": 906,
+    "turns": 1,
+    "cost": 0.0004157000000000001,
+    "model": "claude-haiku-5-5"
+   },
+   "fixed": {
+    "in": 2,
+    "cache_w": 1062,
+    "cache_w5m": 1062,
+    "cache_w1h": 0,
+    "cache_r": 0,
+    "out": 293,
+    "think": 148,
+    "sec": 2.981959581375122,
+    "api_ms": 1991,
+    "turns": 1,
+    "cost": 0.00027945,
+    "model": "claude-haiku-5-5"
+   }
+  },
+  {
+   "source": "a3b_transcripts_hd.jsonl",
+   "seed": 101,
+   "role_sys": "You are the WORKER in a three-agent pipe",
+   "recorded": {
+    "in": 2,
+    "cache_w": 2114,
+    "cache_r": 0,
+    "out": 9,
+    "cost": 0.00042750000000000004
+   },
+   "legacy": {
+    "in": 2,
+    "cache_w": 2117,
+    "cache_w5m": 0,
+    "cache_w1h": 2117,
+    "cache_r": 0,
+    "out": 9,
+    "think": 0,
+    "sec": 4.569984436035156,
+    "api_ms": 1378,
+    "turns": 1,
+    "cost": 0.0004281,
+    "model": "claude-haiku-5-5"
+   },
+   "fixed": {
+    "in": 2,
+    "cache_w": 1339,
+    "cache_w5m": 1339,
+    "cache_w1h": 0,
+    "cache_r": 0,
+    "out": 9,
+    "think": 0,
+    "sec": 1.7989294528961182,
+    "api_ms": 772,
+    "turns": 1,
+    "cost": 0.000172075,
+    "model": "claude-haiku-5-5"
+   }
+  },
+  {
+   "source": "a3b_transcripts_hd.jsonl",
+   "seed": 101,
+   "role_sys": "You are the CHECKER in a three-agent pip",
+   "recorded": {
+    "in": 2,
+    "cache_w": 1830,
+    "cache_r": 0,
+    "out": 154,
+    "cost": 0.00044320000000000004
+   },
+   "legacy": {
+    "in": 2,
+    "cache_w": 1900,
+    "cache_w5m": 0,
+    "cache_w1h": 1900,
+    "cache_r": 0,
+    "out": 196,
+    "think": 138,
+    "sec": 5.170642852783203,
+    "api_ms": 1557,
+    "turns": 1,
+    "cost": 0.0004782,
+    "model": "claude-haiku-5-5"
+   },
+   "fixed": {
+    "in": 2,
+    "cache_w": 1123,
+    "cache_w5m": 1123,
+    "cache_w1h": 0,
+    "cache_r": 0,
+    "out": 158,
+    "think": 105,
+    "sec": 2.83760666847229,
+    "api_ms": 1532,
+    "turns": 1,
+    "cost": 0.000219575,
+    "model": "claude-haiku-5-5"
+   }
+  },
+  {
+   "source": "a3b_transcripts_hd.jsonl",
+   "seed": 101,
+   "role_sys": "You are the PLANNER in a three-agent pip",
+   "recorded": {
+    "in": 2,
+    "cache_w": 837,
+    "cache_r": 919,
+    "out": 228,
+    "cost": 0.00029079
+   },
+   "legacy": {
+    "in": 2,
+    "cache_w": 1835,
+    "cache_w5m": 0,
+    "cache_w1h": 1835,
+    "cache_r": 0,
+    "out": 174,
+    "think": 133,
+    "sec": 4.199411392211914,
+    "api_ms": 1459,
+    "turns": 1,
+    "cost": 0.00045420000000000004,
+    "model": "claude-haiku-5-5"
+   },
+   "fixed": {
+    "in": 2,
+    "cache_w": 1058,
+    "cache_w5m": 1058,
+    "cache_w1h": 0,
+    "cache_r": 0,
+    "out": 202,
+    "think": 116,
+    "sec": 2.285623550415039,
+    "api_ms": 1352,
+    "turns": 1,
+    "cost": 0.00023345,
+    "model": "claude-haiku-5-5"
+   }
+  },
+  {
+   "source": "a3b_transcripts_hd.jsonl",
+   "seed": 101,
+   "role_sys": "You are the WORKER in a three-agent pipe",
+   "recorded": {
+    "in": 2,
+    "cache_w": 1925,
+    "cache_r": 0,
+    "out": 22,
+    "cost": 0.00039620000000000004
+   },
+   "legacy": {
+    "in": 2,
+    "cache_w": 1928,
+    "cache_w5m": 0,
+    "cache_w1h": 1928,
+    "cache_r": 0,
+    "out": 22,
+    "think": 0,
+    "sec": 4.46442437171936,
+    "api_ms": 1223,
+    "turns": 1,
+    "cost": 0.00039680000000000005,
+    "model": "claude-haiku-5-5"
+   },
+   "fixed": {
+    "in": 2,
+    "cache_w": 1147,
+    "cache_w5m": 1147,
+    "cache_w1h": 0,
+    "cache_r": 0,
+    "out": 22,
+    "think": 0,
+    "sec": 1.808389663696289,
+    "api_ms": 851,
+    "turns": 1,
+    "cost": 0.000154575,
+    "model": "claude-haiku-5-5"
+   }
+  },
+  {
+   "source": "a3b_transcripts_hd.jsonl",
+   "seed": 101,
+   "role_sys": "You are the CHECKER in a three-agent pip",
+   "recorded": {
+    "in": 2,
+    "cache_w": 1671,
+    "cache_r": 0,
+    "out": 196,
+    "cost": 0.0004324
+   },
+   "legacy": {
+    "in": 2,
+    "cache_w": 1737,
+    "cache_w5m": 0,
+    "cache_w1h": 1737,
+    "cache_r": 0,
+    "out": 193,
+    "think": 132,
+    "sec": 5.012167930603027,
+    "api_ms": 2016,
+    "turns": 1,
+    "cost": 0.00044410000000000006,
+    "model": "claude-haiku-5-5"
+   },
+   "fixed": {
+    "in": 2,
+    "cache_w": 960,
+    "cache_w5m": 960,
+    "cache_w1h": 0,
+    "cache_r": 0,
+    "out": 88,
+    "think": 0,
+    "sec": 1.8903965950012207,
+    "api_ms": 928,
+    "turns": 1,
+    "cost": 0.0001642,
+    "model": "claude-haiku-5-5"
+   }
+  },
+  {
+   "source": "a4_transcripts.jsonl",
+   "seed": 401,
+   "role_sys": "You are the PLANNER in a three-agent pip",
+   "recorded": {
+    "in": 2,
+    "cache_w": 1845,
+    "cache_r": 0,
+    "out": 155,
+    "cost": 0.0004467
+   },
+   "legacy": {
+    "in": 2,
+    "cache_w": 1851,
+    "cache_w5m": 0,
+    "cache_w1h": 1851,
+    "cache_r": 0,
+    "out": 143,
+    "think": 93,
+    "sec": 4.343782663345337,
+    "api_ms": 1277,
+    "turns": 1,
+    "cost": 0.0004419,
+    "model": "claude-haiku-5-5"
+   },
+   "fixed": {
+    "in": 2,
+    "cache_w": 1067,
+    "cache_w5m": 1067,
+    "cache_w1h": 0,
+    "cache_r": 0,
+    "out": 158,
+    "think": 110,
+    "sec": 2.5030016899108887,
+    "api_ms": 1419,
+    "turns": 1,
+    "cost": 0.000212575,
+    "model": "claude-haiku-5-5"
+   }
+  },
+  {
+   "source": "a4_transcripts.jsonl",
+   "seed": 401,
+   "role_sys": "You are the WORKER in a three-agent pipe",
+   "recorded": {
+    "in": 2,
+    "cache_w": 1818,
+    "cache_r": 0,
+    "out": 13,
+    "cost": 0.0003703
+   },
+   "legacy": {
+    "in": 2,
+    "cache_w": 1821,
+    "cache_w5m": 0,
+    "cache_w1h": 1821,
+    "cache_r": 0,
+    "out": 13,
+    "think": 0,
+    "sec": 4.220132350921631,
+    "api_ms": 921,
+    "turns": 1,
+    "cost": 0.0003709,
+    "model": "claude-haiku-5-5"
+   },
+   "fixed": {
+    "in": 2,
+    "cache_w": 1042,
+    "cache_w5m": 1042,
+    "cache_w1h": 0,
+    "cache_r": 0,
+    "out": 13,
+    "think": 0,
+    "sec": 1.6419060230255127,
+    "api_ms": 687,
+    "turns": 1,
+    "cost": 0.00013695,
+    "model": "claude-haiku-5-5"
+   }
+  },
+  {
+   "source": "a4_transcripts.jsonl",
+   "seed": 401,
+   "role_sys": "You are the CHECKER in a three-agent pip",
+   "recorded": {
+    "in": 2,
+    "cache_w": 1610,
+    "cache_r": 0,
+    "out": 70,
+    "cost": 0.0003572
+   },
+   "legacy": {
+    "in": 2,
+    "cache_w": 1612,
+    "cache_w5m": 0,
+    "cache_w1h": 1612,
+    "cache_r": 0,
+    "out": 73,
+    "think": 0,
+    "sec": 4.323672771453857,
+    "api_ms": 956,
+    "turns": 1,
+    "cost": 0.0003591,
+    "model": "claude-haiku-5-5"
+   },
+   "fixed": {
+    "in": 2,
+    "cache_w": 832,
+    "cache_w5m": 832,
+    "cache_w1h": 0,
+    "cache_r": 0,
+    "out": 83,
+    "think": 0,
+    "sec": 2.2367968559265137,
+    "api_ms": 1083,
+    "turns": 1,
+    "cost": 0.0001457,
+    "model": "claude-haiku-5-5"
+   }
+  },
+  {
+   "source": "a4_transcripts.jsonl",
+   "seed": 401,
+   "role_sys": "You are the PLANNER in a three-agent pip",
+   "recorded": {
+    "in": 2,
+    "cache_w": 1860,
+    "cache_r": 0,
+    "out": 123,
+    "cost": 0.0004337000000000001
+   },
+   "legacy": {
+    "in": 2,
+    "cache_w": 1860,
+    "cache_w5m": 0,
+    "cache_w1h": 1860,
+    "cache_r": 0,
+    "out": 126,
+    "think": 108,
+    "sec": 4.363414764404297,
+    "api_ms": 1132,
+    "turns": 1,
+    "cost": 0.00043520000000000006,
+    "model": "claude-haiku-5-5"
+   },
+   "fixed": {
+    "in": 2,
+    "cache_w": 1082,
+    "cache_w5m": 1082,
+    "cache_w1h": 0,
+    "cache_r": 0,
+    "out": 25,
+    "think": 0,
+    "sec": 2.047318696975708,
+    "api_ms": 916,
+    "turns": 1,
+    "cost": 0.00014795000000000002,
+    "model": "claude-haiku-5-5"
+   }
+  },
+  {
+   "source": "a4_transcripts.jsonl",
+   "seed": 401,
+   "role_sys": "You are the WORKER in a three-agent pipe",
+   "recorded": {
+    "in": 2,
+    "cache_w": 1790,
+    "cache_r": 0,
+    "out": 12,
+    "cost": 0.0003642
+   },
+   "legacy": {
+    "in": 2,
+    "cache_w": 1794,
+    "cache_w5m": 0,
+    "cache_w1h": 1794,
+    "cache_r": 0,
+    "out": 12,
+    "think": 0,
+    "sec": 4.278716802597046,
+    "api_ms": 964,
+    "turns": 1,
+    "cost": 0.00036500000000000004,
+    "model": "claude-haiku-5-5"
+   },
+   "fixed": {
+    "in": 2,
+    "cache_w": 1013,
+    "cache_w5m": 1013,
+    "cache_w1h": 0,
+    "cache_r": 0,
+    "out": 12,
+    "think": 0,
+    "sec": 1.8390824794769287,
+    "api_ms": 843,
+    "turns": 1,
+    "cost": 0.000132825,
+    "model": "claude-haiku-5-5"
+   }
+  },
+  {
+   "source": "a4_transcripts.jsonl",
+   "seed": 401,
+   "role_sys": "You are the CHECKER in a three-agent pip",
+   "recorded": {
+    "in": 2,
+    "cache_w": 1577,
+    "cache_r": 0,
+    "out": 76,
+    "cost": 0.00035360000000000003
+   },
+   "legacy": {
+    "in": 2,
+    "cache_w": 1574,
+    "cache_w5m": 0,
+    "cache_w1h": 1574,
+    "cache_r": 0,
+    "out": 175,
+    "think": 86,
+    "sec": 4.6860527992248535,
+    "api_ms": 1640,
+    "turns": 1,
+    "cost": 0.0004025000000000001,
+    "model": "claude-haiku-5-5"
+   },
+   "fixed": {
+    "in": 2,
+    "cache_w": 799,
+    "cache_w5m": 799,
+    "cache_w1h": 0,
+    "cache_r": 0,
+    "out": 79,
+    "think": 0,
+    "sec": 2.0819668769836426,
+    "api_ms": 962,
+    "turns": 1,
+    "cost": 0.000139575,
+    "model": "claude-haiku-5-5"
+   }
+  }
+ ],
+ "legacy_minus_fixed_tokens_per_call": 778.75,
+ "recorded_minus_legacy_now": -26.333333333333332,
+ "legacy_ttl": {
+  "1h_tokens": 21869,
+  "5m_tokens": 0
+ },
+ "fixed_ttl": {
+  "1h_tokens": 0,
+  "5m_tokens": 12524
+ },
+ "reads_recorded_prompts": {
+  "legacy": 0,
+  "fixed": 0
+ },
+ "threshold_probe": [
+  {
+   "pad_notes": 0,
+   "calls": [
+    {
+     "in": 2,
+     "cache_w": 852,
+     "cache_r": 0,
+     "out": 288
+    },
+    {
+     "in": 2,
+     "cache_w": 852,
+     "cache_r": 0,
+     "out": 137
+    }
+   ]
+  },
+  {
+   "pad_notes": 40,
+   "calls": [
+    {
+     "in": 2,
+     "cache_w": 1212,
+     "cache_r": 0,
+     "out": 260
+    },
+    {
+     "in": 2,
+     "cache_w": 1212,
+     "cache_r": 0,
+     "out": 244
+    }
+   ]
+  },
+  {
+   "pad_notes": 60,
+   "calls": [
+    {
+     "in": 2,
+     "cache_w": 795,
+     "cache_r": 597,
+     "out": 462
+    },
+    {
+     "in": 2,
+     "cache_w": 795,
+     "cache_r": 597,
+     "out": 145
+    }
+   ]
+  },
+  {
+   "pad_notes": 90,
+   "calls": [
+    {
+     "in": 2,
+     "cache_w": 795,
+     "cache_r": 867,
+     "out": 265
+    },
+    {
+     "in": 2,
+     "cache_w": 795,
+     "cache_r": 867,
+     "out": 296
+    }
+   ]
+  }
+ ],
+ "cost_crosscheck": {
+  "calls": 30,
+  "max_abs_diff_usd": 1.0842021724855044e-19,
+  "pass": true
+ }
+}

@@ -1,0 +1,301 @@
+{
+ "summary": {
+  "folds": 32,
+  "chan_mean": 233.125,
+  "bpe_mean": 233.125,
+  "heldout_instr_bpc": 0.5606564768169644,
+  "instr_per_task": 14.0,
+  "design_threshold_bpc": 0.72,
+  "design_honest_prediction_if_above": 236.88244427003676
+ },
+ "folds": [
+  {
+   "seed": 500,
+   "chan": 204,
+   "bpe": 204,
+   "success": true,
+   "instr_bits": 2019.9136047277495,
+   "instr_chars": 3681,
+   "n_instr": 14
+  },
+  {
+   "seed": 501,
+   "chan": 238,
+   "bpe": 238,
+   "success": true,
+   "instr_bits": 2579.1134750907595,
+   "instr_chars": 4620,
+   "n_instr": 14
+  },
+  {
+   "seed": 502,
+   "chan": 248,
+   "bpe": 248,
+   "success": true,
+   "instr_bits": 2548.046815626148,
+   "instr_chars": 4990,
+   "n_instr": 14
+  },
+  {
+   "seed": 503,
+   "chan": 215,
+   "bpe": 215,
+   "success": true,
+   "instr_bits": 2221.8468912477256,
+   "instr_chars": 3782,
+   "n_instr": 14
+  },
+  {
+   "seed": 504,
+   "chan": 216,
+   "bpe": 216,
+   "success": true,
+   "instr_bits": 2206.3135615154197,
+   "instr_chars": 4015,
+   "n_instr": 14
+  },
+  {
+   "seed": 505,
+   "chan": 228,
+   "bpe": 228,
+   "success": true,
+   "instr_bits": 2175.2469020508083,
+   "instr_chars": 3997,
+   "n_instr": 14
+  },
+  {
+   "seed": 506,
+   "chan": 250,
+   "bpe": 250,
+   "success": true,
+   "instr_bits": 2703.3801129492067,
+   "instr_chars": 4879,
+   "n_instr": 14
+  },
+  {
+   "seed": 507,
+   "chan": 236,
+   "bpe": 236,
+   "success": true,
+   "instr_bits": 2548.046815626148,
+   "instr_chars": 4538,
+   "n_instr": 14
+  },
+  {
+   "seed": 508,
+   "chan": 275,
+   "bpe": 275,
+   "success": true,
+   "instr_bits": 2532.5134858938427,
+   "instr_chars": 4229,
+   "n_instr": 14
+  },
+  {
+   "seed": 509,
+   "chan": 234,
+   "bpe": 234,
+   "success": true,
+   "instr_bits": 2516.9801561615363,
+   "instr_chars": 3538,
+   "n_instr": 14
+  },
+  {
+   "seed": 510,
+   "chan": 205,
+   "bpe": 205,
+   "success": true,
+   "instr_bits": 2066.513593924667,
+   "instr_chars": 3315,
+   "n_instr": 14
+  },
+  {
+   "seed": 511,
+   "chan": 258,
+   "bpe": 258,
+   "success": true,
+   "instr_bits": 2889.7800697368766,
+   "instr_chars": 4628,
+   "n_instr": 14
+  },
+  {
+   "seed": 512,
+   "chan": 173,
+   "bpe": 173,
+   "success": true,
+   "instr_bits": 1569.4470424908807,
+   "instr_chars": 3215,
+   "n_instr": 14
+  },
+  {
+   "seed": 513,
+   "chan": 220,
+   "bpe": 220,
+   "success": true,
+   "instr_bits": 2299.5135399092546,
+   "instr_chars": 5532,
+   "n_instr": 14
+  },
+  {
+   "seed": 514,
+   "chan": 191,
+   "bpe": 191,
+   "success": true,
+   "instr_bits": 1849.0469776723855,
+   "instr_chars": 3979,
+   "n_instr": 14
+  },
+  {
+   "seed": 515,
+   "chan": 204,
+   "bpe": 204,
+   "success": true,
+   "instr_bits": 2050.9802641923616,
+   "instr_chars": 4093,
+   "n_instr": 14
+  },
+  {
+   "seed": 516,
+   "chan": 221,
+   "bpe": 221,
+   "success": true,
+   "instr_bits": 2315.0468696415605,
+   "instr_chars": 4041,
+   "n_instr": 14
+  },
+  {
+   "seed": 517,
+   "chan": 213,
+   "bpe": 213,
+   "success": true,
+   "instr_bits": 2190.7802317831147,
+   "instr_chars": 3514,
+   "n_instr": 14
+  },
+  {
+   "seed": 518,
+   "chan": 167,
+   "bpe": 167,
+   "success": true,
+   "instr_bits": 1476.2470640970455,
+   "instr_chars": 2673,
+   "n_instr": 14
+  },
+  {
+   "seed": 519,
+   "chan": 222,
+   "bpe": 222,
+   "success": true,
+   "instr_bits": 2330.580199373866,
+   "instr_chars": 4361,
+   "n_instr": 14
+  },
+  {
+   "seed": 520,
+   "chan": 312,
+   "bpe": 312,
+   "success": false,
+   "instr_bits": 2641.246794019983,
+   "instr_chars": 4840,
+   "n_instr": 14
+  },
+  {
+   "seed": 521,
+   "chan": 244,
+   "bpe": 244,
+   "success": true,
+   "instr_bits": 1988.8469452631384,
+   "instr_chars": 3460,
+   "n_instr": 14
+  },
+  {
+   "seed": 522,
+   "chan": 241,
+   "bpe": 241,
+   "success": true,
+   "instr_bits": 2594.6468048230663,
+   "instr_chars": 4747,
+   "n_instr": 14
+  },
+  {
+   "seed": 523,
+   "chan": 299,
+   "bpe": 299,
+   "success": true,
+   "instr_bits": 3464.5132698321922,
+   "instr_chars": 5258,
+   "n_instr": 14
+  },
+  {
+   "seed": 524,
+   "chan": 279,
+   "bpe": 279,
+   "success": true,
+   "instr_bits": 2765.5134318784303,
+   "instr_chars": 4994,
+   "n_instr": 14
+  },
+  {
+   "seed": 525,
+   "chan": 221,
+   "bpe": 221,
+   "success": true,
+   "instr_bits": 2283.9802101769487,
+   "instr_chars": 4183,
+   "n_instr": 14
+  },
+  {
+   "seed": 526,
+   "chan": 208,
+   "bpe": 208,
+   "success": true,
+   "instr_bits": 2082.046923656973,
+   "instr_chars": 4268,
+   "n_instr": 14
+  },
+  {
+   "seed": 527,
+   "chan": 221,
+   "bpe": 221,
+   "success": true,
+   "instr_bits": 2283.9802101769487,
+   "instr_chars": 3528,
+   "n_instr": 14
+  },
+  {
+   "seed": 528,
+   "chan": 224,
+   "bpe": 224,
+   "success": true,
+   "instr_bits": 1973.313615530832,
+   "instr_chars": 3766,
+   "n_instr": 14
+  },
+  {
+   "seed": 529,
+   "chan": 248,
+   "bpe": 248,
+   "success": true,
+   "instr_bits": 2765.51343187843,
+   "instr_chars": 4192,
+   "n_instr": 14
+  },
+  {
+   "seed": 530,
+   "chan": 282,
+   "bpe": 282,
+   "success": true,
+   "instr_bits": 2610.180134555371,
+   "instr_chars": 4613,
+   "n_instr": 14
+  },
+  {
+   "seed": 531,
+   "chan": 263,
+   "bpe": 263,
+   "success": true,
+   "instr_bits": 2936.3800589337943,
+   "instr_chars": 5158,
+   "n_instr": 14
+  }
+ ]
+}

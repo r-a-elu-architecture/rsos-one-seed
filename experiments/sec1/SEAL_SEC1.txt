@@ -1,0 +1,24 @@
+8bc65609f5a973fe5d599a84449c4ae488083bf26f5b06e2ed3a3c96a5753119  TOP_MAP_SEC1.md
+top map sealed 2026-11-21T11:50:44Z before any SEC1 build or run
+a0859ebaf3e88d0fa5d6421e6ad41daa1fa17f07643973d676978e4cdd753a7c  sec1_net.py
+d1105cff76112089e810d89557087a8db9dea7f105abbd07cacbd4088dbba981  PREREG_SEC1_NET.md
+build 1 (network hosts) sealed 2026-11-21T11:55:38Z before run
+61b2101c81aeb07c8f9469cb251a33899b63890ab2ad2e477373f38f71745594  sec1_protocol.py
+34cb6a99ec85ee4ebd2dbc929c1eef6d9a11874892f839890a82a34a946969ac  PREREG_SEC1_PROTOCOL.md
+build 2 (protocol) sealed 2026-11-21T11:56:27Z before run
+ea771f3a8a020d0fcaa8a2e1dc7ff5248e7df6a07fed5379b7392c7ed69a4175  TOP_MAP_SEC1_v2.md
+top map v2 (organism, U166) sealed 2026-11-21T12:24:04Z before any v2 build or run
+58cbb4e37ba758af439ad579f5b9b628f984fd34621f1872ca5390e8598344a1  sec1_org.py
+fa091215162925c4800e406e1f5b5ab1f2b62ecd14a0c8b9a1142ac0e1ffd90a  PREREG_SEC1v2_ORG.md
+v2 build 1 (organism) sealed 2026-11-21T12:30:33Z before run
+6e62cf211ac0d9f7279ed3d9d6a5c4e3ffa5dc170095666839589de4aff4c318  sec1_real.py
+c61bf2fc3bc16ff78eed44cce0ed1a415f0cad2f54f7ba5efd6c37201dd77ee3  PREREG_SEC1v2_REAL.md
+v2 build 2 (real data) sealed 2026-11-21T12:31:34Z before run
+93d85ac781d2511acf658ed64c94ea2477b39ca80af3c2e0f768871275ffac74  sec1_org_v3.py
+6bc575a4827b23c7c879073e5cd9187c85d9643cf3fff215acd7801b56495a49  sec1_real_v3.py
+99be103ac24bfd9f459a140a23054674d8b4c2abc67af374a5d0262bab4515cb  PREREG_SEC1v3.md
+v3 sealed 2026-11-21T12:54:25Z before run
+f667e852db8e803b6be99aa0b895007655b9c8f7541492b364714b49c1ca6506  sec1_org_v4.py
+972ee911ecff13c2b2fed053ab7bcec2dfa8b2903c2dccbfb85c684ea34f1c97  sec1_real_v4.py
+795ea034d4cab5f0cdea9bc1483e6245c116f0dc9fe7a7febfda71dce493866a  PREREG_SEC1v4.md
+v4 (U167) sealed 2026-11-21T13:47:21Z before run

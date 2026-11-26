@@ -1,0 +1,53 @@
+{
+ "code_commit": "9fca3a69716dd9dd9fc2fc1c9133dc3e2c69b377",
+ "experiment": "X1-EXTERNAL",
+ "numpy": "2.5.3",
+ "python": "3.13.18",
+ "results_sha256": "c755215002f41cfe41dd5ae8c3b49e41dd2c906fd038fc51f3b839cff1a5abbe",
+ "run_utc": "2026-11-16T20:44:24Z",
+ "summary": {
+  "H1_distinct": {
+   "pass": true
+  },
+  "H2_top_beats_surface": {
+   "ci95": [
+    0.4766666666666667,
+    0.5933333333333334
+   ],
+   "diff": 0.5366666666666666,
+   "pass": true
+  },
+  "H3_top_vs_side": {
+   "side": 0.74,
+   "top": 0.9266666666666666
+  },
+  "budget_used": {
+   "side": 2.1666666666666665,
+   "surface": 3.3533333333333335,
+   "top": 2.16
+  },
+  "fixed_rate": {
+   "side": 0.74,
+   "surface": 0.39,
+   "top": 0.9266666666666666
+  },
+  "health": {
+   "side": 0.9856289185185183,
+   "surface": 0.9506192666666667,
+   "top": 0.9998962962962963
+  },
+  "meanings": {
+   "side": "lateral",
+   "surface": "interface_only",
+   "top": "supervisory_entry"
+  },
+  "painted_scene": {
+   "BEAR": "path",
+   "EAGLE": "path",
+   "LEOPARD": "path",
+   "LION": "path",
+   "RAVEN": "path",
+   "TIGER": "path"
+  }
+ }
+}

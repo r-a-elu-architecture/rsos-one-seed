@@ -1,0 +1,517 @@
+{
+ "row": "space",
+ "model": "-",
+ "cells_run": [
+  937,
+  938,
+  939,
+  940,
+  941,
+  942,
+  943,
+  944,
+  945,
+  946,
+  947,
+  948
+ ],
+ "cells": {
+  "std|937": {
+   "default": {
+    "result": 450.6280210007714,
+    "resource": 15786.79725075877,
+    "R": 0.02854461318803044,
+    "choices": {
+     "present|standard": 24
+    },
+    "sec": 0.0
+   },
+   "full": {
+    "result": 452.6845912612253,
+    "resource": 16611.74755813657,
+    "R": 0.02725087108848441,
+    "choices": {
+     "present|standard": 1,
+     "C:see>future>compress>inherit>contain>act|policy": 18,
+     "C:see>future>compress>inherit>contain>act|standard": 2,
+     "C:see>choose>contain>act|policy": 1,
+     "C:see>choose>contain>act|standard": 1,
+     "C:see>future>compress>inherit>contain>act|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 14.0
+   },
+   "minus": {
+    "result": 453.09941499722504,
+    "resource": 16842.84503745466,
+    "R": 0.02690159613709174,
+    "choices": {
+     "present|standard": 4,
+     "future+2|standard": 3,
+     "future+1|standard": 12,
+     "focus_bulk|standard": 1,
+     "focus_science|standard": 3,
+     "present|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 4.7
+   },
+   "sec": 19
+  },
+  "std|938": {
+   "default": {
+    "result": 473.3841940370599,
+    "resource": 15435.437649563752,
+    "R": 0.030668660311710633,
+    "choices": {
+     "present|standard": 24
+    },
+    "sec": 0.0
+   },
+   "full": {
+    "result": 476.4935482091204,
+    "resource": 16177.371336514,
+    "R": 0.029454324704386626,
+    "choices": {
+     "C:see>future>compress>inherit>contain>act|policy": 16,
+     "focus_bulk|standard": 1,
+     "present|standard": 1,
+     "C:see>future>compress>inherit>contain>act|standard": 3,
+     "focus_science|standard": 1,
+     "C:see>future>compress>inherit>contain>act|own": 2
+    },
+    "policy_fallback_steps": 0,
+    "sec": 14.6
+   },
+   "minus": {
+    "result": 476.41205264153456,
+    "resource": 16216.117163257619,
+    "R": 0.029378922700496156,
+    "choices": {
+     "present|standard": 5,
+     "focus_science|standard": 11,
+     "future+2|standard": 5,
+     "focus_science|own": 3
+    },
+    "policy_fallback_steps": 0,
+    "sec": 4.8
+   },
+   "sec": 19
+  },
+  "std|939": {
+   "default": {
+    "result": 467.9056970446154,
+    "resource": 14634.597017769018,
+    "R": 0.03197257133055965,
+    "choices": {
+     "present|standard": 24
+    },
+    "sec": 0.0
+   },
+   "full": {
+    "result": 470.536891316478,
+    "resource": 15657.305219013298,
+    "R": 0.03005222704256196,
+    "choices": {
+     "C:see>future>compress>inherit>contain>act|policy": 17,
+     "future+1|standard": 2,
+     "C:see>future>compress>inherit>contain>act|standard": 4,
+     "C:see>future>compress>inherit>contain>act|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 14.6
+   },
+   "minus": {
+    "result": 472.40738840715244,
+    "resource": 15880.861667681052,
+    "R": 0.02974696199064204,
+    "choices": {
+     "focus_bulk|standard": 3,
+     "present|standard": 2,
+     "future+1|standard": 6,
+     "focus_science|standard": 11,
+     "future+2|standard": 1,
+     "present|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 4.7
+   },
+   "sec": 19
+  },
+  "std|940": {
+   "default": {
+    "result": 523.0249095798271,
+    "resource": 15039.411626373083,
+    "R": 0.034776952887083136,
+    "choices": {
+     "present|standard": 26
+    },
+    "sec": 0.0
+   },
+   "full": {
+    "result": 527.4814043590338,
+    "resource": 16210.189806746128,
+    "R": 0.03254011277150586,
+    "choices": {
+     "present|standard": 1,
+     "C:see>future>compress>inherit>contain>act|policy": 21,
+     "C:see>choose>contain>act|policy": 1,
+     "focus_science|standard": 1,
+     "focus_bulk|standard": 1,
+     "C:see>future>compress>inherit>contain>act|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 15.3
+   },
+   "minus": {
+    "result": 528.9903643291664,
+    "resource": 17450.14776204915,
+    "R": 0.03031437736473629,
+    "choices": {
+     "present|standard": 2,
+     "future+1|standard": 10,
+     "focus_bulk|standard": 3,
+     "future+2|standard": 3,
+     "focus_science|standard": 6,
+     "future+2|own": 1,
+     "focus_science|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 5.0
+   },
+   "sec": 20
+  },
+  "std|941": {
+   "default": {
+    "result": 455.4995219278812,
+    "resource": 15352.79402875131,
+    "R": 0.029668835592717734,
+    "choices": {
+     "present|standard": 25
+    },
+    "sec": 0.0
+   },
+   "full": {
+    "result": 461.37427248998375,
+    "resource": 16806.688427400084,
+    "R": 0.02745182517561291,
+    "choices": {
+     "focus_bulk|standard": 1,
+     "C:see>future>compress>inherit>contain>act|policy": 17,
+     "future+2|standard": 3,
+     "C:see>colour>route>contain>act|policy": 1,
+     "focus_science|standard": 1,
+     "C:see>future>compress>inherit>contain>act|standard": 1,
+     "C:see>future>compress>inherit>contain>act|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 14.2
+   },
+   "minus": {
+    "result": 460.4283253897065,
+    "resource": 16875.017410144806,
+    "R": 0.027284613354704414,
+    "choices": {
+     "focus_bulk|standard": 2,
+     "focus_science|standard": 14,
+     "present|standard": 3,
+     "future+1|standard": 2,
+     "future+2|standard": 3,
+     "present|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 4.8
+   },
+   "sec": 19
+  },
+  "std|942": {
+   "default": {
+    "result": 542.9093710751046,
+    "resource": 16824.591390902562,
+    "R": 0.03226879978604817,
+    "choices": {
+     "present|standard": 26
+    },
+    "sec": 0.0
+   },
+   "full": {
+    "result": 552.639967425652,
+    "resource": 17886.302176604753,
+    "R": 0.03089738515927031,
+    "choices": {
+     "present|standard": 1,
+     "C:see>future>compress>inherit>contain>act|policy": 17,
+     "focus_science|standard": 3,
+     "C:see>colour>route>contain>act|policy": 1,
+     "future+2|standard": 1,
+     "future+1|standard": 2,
+     "C:see>future>compress>inherit>contain>act|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 17.3
+   },
+   "minus": {
+    "result": 552.1700523799964,
+    "resource": 18416.910385359708,
+    "R": 0.02998168752664057,
+    "choices": {
+     "present|standard": 3,
+     "focus_science|standard": 12,
+     "future+2|standard": 4,
+     "focus_bulk|standard": 1,
+     "future+1|standard": 5,
+     "present|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 5.3
+   },
+   "sec": 23
+  },
+  "std|943": {
+   "default": {
+    "result": 471.9617663671843,
+    "resource": 15632.35592561857,
+    "R": 0.0301913395916047,
+    "choices": {
+     "present|standard": 24
+    },
+    "sec": 0.0
+   },
+   "full": {
+    "result": 480.1896882224862,
+    "resource": 16850.33011799365,
+    "R": 0.02849734603773222,
+    "choices": {
+     "C:see>future>compress>inherit>contain>act|policy": 18,
+     "focus_bulk|standard": 2,
+     "future+1|standard": 1,
+     "focus_science|standard": 1,
+     "C:see>future>compress>inherit>contain>act|standard": 1,
+     "C:see>future>compress>inherit>contain>act|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 13.4
+   },
+   "minus": {
+    "result": 478.0110748067651,
+    "resource": 16770.035885936293,
+    "R": 0.02850387906490023,
+    "choices": {
+     "present|standard": 1,
+     "focus_bulk|standard": 4,
+     "future+2|standard": 3,
+     "focus_science|standard": 7,
+     "future+1|standard": 8,
+     "present|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 4.7
+   },
+   "sec": 18
+  },
+  "std|944": {
+   "default": {
+    "result": 495.86591347582697,
+    "resource": 13346.445831766658,
+    "R": 0.03715340546286768,
+    "choices": {
+     "present|standard": 24
+    },
+    "sec": 0.0
+   },
+   "full": {
+    "result": 502.7906532949084,
+    "resource": 15030.124497974497,
+    "R": 0.03345219484793129,
+    "choices": {
+     "C:see>future>compress>inherit>contain>act|policy": 15,
+     "focus_bulk|standard": 1,
+     "future+1|standard": 1,
+     "future+2|standard": 1,
+     "C:see>future>compress>inherit>contain>act|standard": 3,
+     "C:see>colour>route>contain>act|standard": 1,
+     "C:see>future>compress>inherit>contain>act|own": 2
+    },
+    "policy_fallback_steps": 0,
+    "sec": 15.4
+   },
+   "minus": {
+    "result": 501.4313253810303,
+    "resource": 14698.171496067547,
+    "R": 0.03411521804022948,
+    "choices": {
+     "present|standard": 6,
+     "focus_bulk|standard": 1,
+     "future+1|standard": 10,
+     "future+2|standard": 4,
+     "future+1|own": 3
+    },
+    "policy_fallback_steps": 0,
+    "sec": 4.9
+   },
+   "sec": 20
+  },
+  "std|945": {
+   "default": {
+    "result": 459.9977415515172,
+    "resource": 15009.620517352896,
+    "R": 0.030646860193414314,
+    "choices": {
+     "present|standard": 24
+    },
+    "sec": 0.0
+   },
+   "full": {
+    "result": 462.72111394643736,
+    "resource": 15994.25297099477,
+    "R": 0.02893046113410686,
+    "choices": {
+     "C:see>future>compress>inherit>contain>act|policy": 23,
+     "C:see>future>compress>inherit>contain>act|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 15.3
+   },
+   "minus": {
+    "result": 463.20775036490625,
+    "resource": 15808.951570411251,
+    "R": 0.029300345965501396,
+    "choices": {
+     "present|standard": 3,
+     "future+2|standard": 8,
+     "focus_science|standard": 3,
+     "future+1|standard": 9,
+     "present|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 4.9
+   },
+   "sec": 20
+  },
+  "std|946": {
+   "default": {
+    "result": 488.78978861055214,
+    "resource": 15246.188868177467,
+    "R": 0.03205980149116323,
+    "choices": {
+     "present|standard": 26
+    },
+    "sec": 0.0
+   },
+   "full": {
+    "result": 489.582288943024,
+    "resource": 15592.600404284163,
+    "R": 0.03139837334691834,
+    "choices": {
+     "present|standard": 2,
+     "future+1|standard": 1,
+     "C:see>future>compress>inherit>contain>act|policy": 19,
+     "focus_science|standard": 2,
+     "C:see>future>compress>inherit>contain>act|standard": 1,
+     "C:see>future>compress>inherit>contain>act|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 14.9
+   },
+   "minus": {
+    "result": 493.71797546414285,
+    "resource": 16958.400860873306,
+    "R": 0.029113474761836587,
+    "choices": {
+     "present|standard": 3,
+     "future+1|standard": 5,
+     "focus_science|standard": 10,
+     "focus_bulk|standard": 3,
+     "future+2|standard": 4,
+     "present|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 5.0
+   },
+   "sec": 20
+  },
+  "std|947": {
+   "default": {
+    "result": 413.5303477483624,
+    "resource": 14039.278073403284,
+    "R": 0.029455243039296666,
+    "choices": {
+     "present|standard": 25
+    },
+    "sec": 0.0
+   },
+   "full": {
+    "result": 416.04181680341736,
+    "resource": 14831.748327653051,
+    "R": 0.02805076027535663,
+    "choices": {
+     "present|standard": 2,
+     "C:see>future>compress>inherit>contain>act|policy": 19,
+     "focus_science|standard": 1,
+     "future+1|standard": 2,
+     "C:see>future>compress>inherit>contain>act|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 13.9
+   },
+   "minus": {
+    "result": 419.4502238522779,
+    "resource": 16073.765411593058,
+    "R": 0.026095330690203627,
+    "choices": {
+     "present|standard": 5,
+     "focus_science|standard": 13,
+     "focus_bulk|standard": 4,
+     "future+1|standard": 2,
+     "present|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 4.8
+   },
+   "sec": 19
+  },
+  "std|948": {
+   "default": {
+    "result": 435.49392371019053,
+    "resource": 15613.406525675737,
+    "R": 0.027892306716925292,
+    "choices": {
+     "present|standard": 26
+    },
+    "sec": 0.0
+   },
+   "full": {
+    "result": 448.0918011159994,
+    "resource": 16653.390460321672,
+    "R": 0.02690694139332299,
+    "choices": {
+     "present|standard": 1,
+     "C:see>future>compress>inherit>contain>act|policy": 20,
+     "focus_bulk|standard": 1,
+     "C:see>colour>route>contain>act|policy": 1,
+     "C:see>future>compress>inherit>contain>act|standard": 2,
+     "C:see>future>compress>inherit>contain>act|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 13.9
+   },
+   "minus": {
+    "result": 451.8077528152926,
+    "resource": 18085.967932016476,
+    "R": 0.024981120972546077,
+    "choices": {
+     "present|standard": 2,
+     "future+1|standard": 6,
+     "focus_bulk|standard": 4,
+     "focus_science|standard": 10,
+     "future+2|standard": 2,
+     "future+2|own": 1,
+     "focus_science|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 2.7
+   },
+   "sec": 17
+  }
+ }
+}

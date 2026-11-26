@@ -1,0 +1,6 @@
+cell 4 6640 {'house': 0.9115, 'single_vote': 0.9028, 'single_memory': 0.9162, 'single_cs': 0.9167, 'single_apoptosis': 0.916, 'single_membrane': 0.9039, 'flat': 0.9062, 'shuffled': 0.9153} 45 s
+cell 4 6641 {'house': 0.8269, 'single_vote': 0.8511, 'single_memory': 0.8513, 'single_cs': 0.8356, 'single_apoptosis': 0.8513, 'single_membrane': 0.8269, 'flat': 0.8322, 'shuffled': 0.8354} 46 s
+cell 10 6640 {'house': 0.9617, 'single_vote': 0.9524, 'single_memory': 0.9524, 'single_cs': 0.964, 'single_apoptosis': 0.9524, 'single_membrane': 0.9524, 'flat': 0.9639, 'shuffled': 0.9618} 42 s
+cell 10 6641 {'house': 0.8851, 'single_vote': 0.9103, 'single_memory': 0.9103, 'single_cs': 0.8967, 'single_apoptosis': 0.9103, 'single_membrane': 0.8967, 'flat': 0.8928, 'shuffled': 0.891} 42 s
+cell 16 6640 {'house': 0.9617, 'single_vote': 0.9694, 'single_memory': 0.96, 'single_cs': 0.9576, 'single_apoptosis': 0.96, 'single_membrane': 0.9628, 'flat': 0.959, 'shuffled': 0.9681} 47 s
+cell 16 6641 {'house': 0.949, 'single_vote': 0.9581, 'single_memory': 0.9603, 'single_cs': 0.9547, 'single_apoptosis': 0.9556, 'single_membrane': 0.9546, 'flat': 0.9507, 'shuffled': 0.9531} 49 s

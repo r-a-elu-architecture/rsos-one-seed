@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RSOS Core v1: specification, operations and guarantees | RSOS</title>
+<meta name="description" content="Eight state operations, a JSON IR with a schema, stable error codes, a state digest and conformance tests.">
+<link rel="canonical" href="https://r-a-elu-architecture.github.io/RSOS-Language/core.html">
+<meta property="og:title" content="RSOS Core v1: specification, operations and guarantees | RSOS">
+<meta property="og:description" content="Eight state operations, a JSON IR with a schema, stable error codes, a state digest and conformance tests.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://r-a-elu-architecture.github.io/RSOS-Language/core.html">
+<meta property="og:site_name" content="RSOS">
+<meta property="og:image" content="https://r-a-elu-architecture.github.io/RSOS-Language/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="RSOS Core: shared state for AI agents, exact by construction. 318 of 320 tasks exact across six models.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RSOS Core v1: specification, operations and guarantees | RSOS">
+<meta name="twitter:description" content="Eight state operations, a JSON IR with a schema, stable error codes, a state digest and conformance tests.">
+<meta name="twitter:image" content="https://r-a-elu-architecture.github.io/RSOS-Language/og.png">
+<meta name="theme-color" content="#0e2233">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;600;700&family=Atkinson+Hyperlegible+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="family" role="navigation" aria-label="RSOS family"><div class="wrap">
+<b>RSOS</b>
+<a class="here" href="index.html">Core and Language</a>
+<a href="https://r-a-elu-architecture.github.io/RSOS-Multimodal-Cue-Framework/">Multimodal Cue Framework</a>
+</div></div>
+<div class="wrap">
+<header class="top">
+<a class="mark" href="index.html"><span class="dot" aria-hidden="true"></span>RSOS</a>
+<nav class="main" aria-label="Site"><a href="core.html" aria-current="page">Core</a><a href="adopt.html">For organisations</a><a href="results.html">Results</a><a href="paper.html">Research</a><a class="gh" href="https://github.com/r-a-elu-architecture/RSOS-Language">GitHub</a></nav>
+</header>
+</div>
+<main id="main">
+<div class="wrap">
+<div class="hero">
+<h1>RSOS Core v1</h1>
+<p class="lead">Eight state operations with neutral names, one compiled form, stable error codes and a state digest.
+A planning model writes the program from key names; the runtime executes it atomically and deterministically.
+Specified, implemented and tested; seven operations backed by pre-registered experiments.</p>
+<a class="cta" href="https://github.com/r-a-elu-architecture/RSOS-Language/blob/main/spec/core/STATE_OPS.md">Read the specification</a><a class="cta quiet" href="https://github.com/r-a-elu-architecture/RSOS-Language/blob/main/spec/core/ir.schema.json">IR JSON Schema</a><a class="cta quiet" href="https://github.com/r-a-elu-architecture/RSOS-Language/tree/main/tests/core">Conformance tests</a>
+<p class="muted small">Install: <code>pip install rsoslang</code> (0.4.0 and later include Core 1.0.0).</p>
+</div>
+</div>
+
+<section id="quickstart"><div class="wrap split">
+<div>
+<h2>Quickstart</h2>
+<p class="intro">Parse either syntax into the IR, check its digest, execute it. The same program written in Core
+syntax or RSOS syntax has the same IR digest.</p>
+<p class="muted small">From an MCP client, the five state tools are <code>rsos_state_new</code>,
+<code>rsos_state_prompt</code>, <code>rsos_state_apply</code>, <code>rsos_state_sync</code> and
+<code>rsos_state_get</code>.</p>
+</div>
+<pre aria-label="Python quickstart"><code>from rsoslang.core import (parse_core, compile_rsos,
+    ir_digest, execute_ir, state_digest)
+
+ir = parse_core(
+    "reassign_where(field=owner, from=bruno, to=chen)")
+rsos = compile_rsos("REHOST owner bruno chen")
+assert ir_digest(ir) == ir_digest(rsos)
+
+before = {"auth.owner": "bruno",
+          "search.owner": "bruno",
+          "cache.owner": "dara"}
+after = execute_ir(before, ir)
+<span class="c"># auth.owner and search.owner are now chen</span>
+state_digest(after)   <span class="c"># 2db9c91bc4cf on every replica</span></code></pre>
+</div></section>
+
+<section id="operations"><div class="wrap">
+<h2>Operations</h2>
+<p class="intro">An operation is part of Core only when it is tested <em>and</em> backed by an experiment.
+<code>copy</code> is implemented and tested but no planner used it in A7 or A8, so it is supported and listed outside
+the Core layer until an experiment uses it.</p>
+<div class="tw"><table class="ops"><caption>Generated from <code>registry/operators.json</code>, registry 1.0.0, Core 1.0.0. Uses: operations written by blind planners across experiments A7 and A8.</caption><thead><tr><th scope="col">Operation</th><th scope="col">Meaning</th><th scope="col">Familiar as</th><th scope="col">RSOS name</th><th scope="col" class="n">Uses in A7, A8</th><th scope="col">Status</th></tr></thead><tbody><tr><td><code class="op">set</code><span class="sig">set(key: Key, value: Text)</span></td><td>key := value, stored as text exactly as given.</td><td>JSON Patch add/replace</td><td>SET</td><td class="n">2,011</td><td><span class="tag pass">executed</span></td></tr><tr class="outside"><td><code class="op">copy</code><span class="sig">copy(key: Key, from: Key)</span></td><td>key := state[from].</td><td>JSON Patch copy</td><td>SET</td><td class="n">0</td><td><span class="tag pred">tested, no experiment yet</span></td></tr><tr><td><code class="op">delete</code><span class="sig">delete(key: Key)</span></td><td>Remove key.</td><td>JSON Patch remove</td><td>DEL</td><td class="n">692</td><td><span class="tag pass">executed</span></td></tr><tr><td><code class="op">derive</code><span class="sig">derive(dst: Key, src: Key, add: Int = 0, max: Int | null = null)</span></td><td>If add == 0 and max is null: dst := state[src] (any text). Otherwise dst := min(int(state[src]) + add, max), as decimal text.</td><td>computed field</td><td>INHERIT</td><td class="n">5,829</td><td><span class="tag pass">executed</span></td></tr><tr><td><code class="op">sum_into</code><span class="sig">sum_into(dst: Key, a: Key, b: Key, max: Int | null = null)</span></td><td>dst := min(int(state[a]) + int(state[b]), max).</td><td>reducer</td><td>FUSE</td><td class="n">1,099</td><td><span class="tag pass">executed</span></td></tr><tr><td><code class="op">multiply</code><span class="sig">multiply(key: Key, factor: Number &gt;= 0, max: Int | null = null)</span></td><td>key := min(int(state[key]) * factor, max); the product MUST be a whole number.</td><td>scalar update</td><td>SCALE</td><td class="n">645</td><td><span class="tag pass">executed</span></td></tr><tr><td><code class="op">select_if</code><span class="sig">select_if(cond_key: Key, equals: Text, dst: Key, then: Text, else: Text)</span></td><td>dst := then if state[cond_key] == equals, else dst := else.</td><td>conditional assignment</td><td>ROUTE</td><td class="n">696</td><td><span class="tag pass">executed</span></td></tr><tr><td><code class="op">reassign_where</code><span class="sig">reassign_where(field: Name, from: Text, to: Text)</span></td><td>For every key whose last segment is field and whose value equals from: value := to. No match is not an error.</td><td>UPDATE … SET field = to WHERE field = from</td><td>REHOST</td><td class="n">718</td><td><span class="tag pass">executed</span></td></tr><tr class="outside"><td><code class="op">derive_where</code><span class="sig">derive_where(field: Name, cond_field: Name, equals: Text, add: Int, max: Int | null = null)</span></td><td>For every object whose cond_field equals the given text: field := min(int(field) + add, max). No match is not an error.</td><td>UPDATE … SET field = field + n WHERE cond_field = x</td><td>FLOW</td><td class="n">0</td><td><span class="tag pred">tested, no experiment yet</span></td></tr><tr><td><code class="op">state_digest</code><span class="sig">state_digest(state: Map[Key, Text]) -&gt; Hex12</span></td><td>First 12 hex digits of SHA-256 over the canonical JSON of the state (keys sorted, values as text, separators &#x27;,&#x27; and &#x27;:&#x27;, UTF-8).</td><td>content hash</td><td>green dot</td><td class="n"></td><td><span class="tag pass">executed</span></td></tr><tr><td><code class="op">reconcile</code><span class="sig">reconcile(replica: Map[Key, Text]) -&gt; {healed: [Key], state, digest, model_calls: 0}</span></td><td>If digest(replica) equals the agreed digest, nothing changes; otherwise every key that differs is restored from the agreed state. Zero model calls.</td><td>anti-entropy / replica repair</td><td>heal / sync</td><td class="n"></td><td><span class="tag pass">executed</span></td></tr></tbody></table></div>
+</div></section>
+
+<section id="guarantees"><div class="wrap">
+<h2>Guarantees</h2>
+<div class="props">
+<div><h3>Atomic steps</h3><p>Every operation in a step succeeds and the new state replaces the old one, or the first
+error is returned and the state is unchanged.</p></div>
+<div><h3>Deterministic</h3><p>Each operation is a pure function of state and program. No time, randomness, locale or
+key order in memory.</p></div>
+<div><h3>Values stay with the runtime</h3><p>The planner sees key names only (an auditor model, where used, sees the values a step
+read and changed). The planner never reads, copies or computes a
+value, so it cannot mistype one.</p></div>
+<div><h3>Replica check without a model</h3><p>Every copy carries a 12-digit state digest. A mismatched copy is
+repaired from the agreed state with zero model calls.</p></div>
+<div><h3>One program, one digest</h3><p>Core syntax, RSOS syntax and the JSON IR are three forms of one program,
+identified by the SHA-256 of its canonical IR.</p></div>
+<div><h3>No guessing</h3><p>The runtime never guesses a missing key or coerces a non-integer. It returns a stable
+error code the planner can act on.</p></div>
+</div>
+</div></section>
+
+<section id="errors"><div class="wrap split">
+<div>
+<h2>Errors</h2>
+<p class="intro">Codes are stable within a major version. Each comes with a message written to be sent back to the
+planning model for one retry.</p>
+</div>
+<div class="tw"><table>
+<thead><tr><th scope="col">Code</th><th scope="col">Meaning</th></tr></thead>
+<tbody>
+<tr><td><code>E_PARSE</code></td><td>The program or an operation cannot be read: unknown name, missing or unexpected field, wrong type.</td></tr>
+<tr><td><code>E_NOT_KEY</code></td><td>A field that must be a key is not a valid key.</td></tr>
+<tr><td><code>E_EMPTY</code></td><td>The program has no operations.</td></tr>
+<tr><td><code>E_MISSING_KEY</code></td><td>A key that must exist does not.</td></tr>
+<tr><td><code>E_NOT_INTEGER</code></td><td>An arithmetic operation read a value that is not an integer.</td></tr>
+<tr><td><code>E_FRACTION</code></td><td><code>multiply</code> produced a value that is not a whole number.</td></tr>
+</tbody></table></div>
+</div></section>
+
+<section id="digest"><div class="wrap split">
+<div>
+<h2>State digest test vectors</h2>
+<p class="intro">The first 12 hex digits of SHA-256 over the state as canonical JSON: keys sorted, values as
+strings, no insignificant whitespace, UTF-8. Any implementation must reproduce these.</p>
+<p class="muted small">The digest detects accidental drift between replicas. It is not authentication; use a
+full-length hash or a signature where tampering is a threat.</p>
+</div>
+<div class="tw"><table>
+<thead><tr><th scope="col">State</th><th scope="col">Digest</th></tr></thead>
+<tbody>
+<tr><td><code>{}</code></td><td><code>44136fa355b3</code></td></tr>
+<tr><td><code>{"a.b": "1"}</code></td><td><code>737a6b803cf8</code></td></tr>
+<tr><td><code>{"a.b": "1", "c.d": "two words"}</code></td><td><code>daae52c2238c</code></td></tr>
+<tr><td><code>{"k.x": "é"}</code></td><td><code>04d8868891da</code></td></tr>
+</tbody></table></div>
+</div></section>
+
+<section id="lineage"><div class="wrap split">
+<div>
+<h2>Lineage and status</h2>
+<p class="intro">Every operation carries one status. Only tested or executed operations backed by an experiment are
+part of Core; the registry records the evidence and the RSOS notation each operation came from.</p>
+<ol class="steps">
+<li><b>Proposed.</b> Named and described.</li>
+<li><b>Specified.</b> Precise meaning, inputs, outputs and errors.</li>
+<li><b>Implemented.</b> Code exists.</li>
+<li><b>Tested.</b> Conformance tests pass.</li>
+<li><b>Executed.</b> Used by real agents in a pre-registered experiment, with published results.</li>
+</ol>
+</div>
+<div class="tw"><table>
+<thead><tr><th scope="col">RSOS notation</th><th scope="col">Core</th><th scope="col">What it does</th></tr></thead>
+<tbody>
+<tr><td>REHOST</td><td><code>reassign_where</code></td><td>Move everything held by one owner to another</td></tr>
+<tr><td>INHERIT</td><td><code>derive</code></td><td>Take a value from a source, with an increment and a cap</td></tr>
+<tr><td>FUSE</td><td><code>sum_into</code></td><td>Combine two values into one</td></tr>
+<tr><td>ROUTE</td><td><code>select_if</code></td><td>Choose a value according to a condition</td></tr>
+<tr><td>SCALE</td><td><code>multiply</code></td><td>Change a quantity by a factor, with a cap</td></tr>
+<tr><td>FLOW</td><td><code>derive_where</code></td><td>Change a value on every matching object (tested; awaiting its run)</td></tr>
+<tr><td>green dot</td><td><code>state_digest</code></td><td>One short mark that says two copies agree</td></tr>
+<tr><td>heal</td><td><code>reconcile</code></td><td>Restore a drifted copy from the agreed state</td></tr>
+</tbody></table></div>
+</div></section>
+
+<section id="versioning"><div class="wrap split">
+<div>
+<h2>Versioning and conformance</h2>
+<p class="intro">Core follows semantic versioning. Adding an operation is a minor change; changing semantics, an error
+code or an encoding is a major one. An implementation conforms when it passes the conformance tests, reproduces the
+digest vectors and keeps steps atomic.</p>
+</div>
+<div>
+<h3>Upgrading from 0.3.x</h3>
+<p>0.4.0 changes the state digest to the canonical encoding above, so digests from 0.3.x must not be compared with
+0.4.0 digests. A <code>SET</code> on a missing source key and a <code>SCALE</code> to a fraction are now errors.
+<code>rsoslang.state</code> remains available as an alias of <code>rsoslang.core.state</code>.</p>
+<p><a href="https://github.com/r-a-elu-architecture/RSOS-Language/blob/main/CHANGELOG.md">Changelog</a></p>
+</div>
+</div></section>
+</main>
+<footer><div class="wrap">
+<div><p>RSOS by R. A. Elu, <a href="https://orcid.org/0009-0000-1456-2467">ORCID 0009-0000-1456-2467</a>.
+Code under Apache 2.0, text under CC BY 4.0.</p>
+<p>Research and development software. Not a medical device.</p></div>
+<div><p><a href="https://github.com/r-a-elu-architecture/RSOS-Language">Source on GitHub</a></p><p><a href="https://github.com/r-a-elu-architecture/RSOS-Language/blob/main/spec/core/STATE_OPS.md">Core specification</a></p>
+<p><a href="https://doi.org/10.5281/zenodo.24359268">Software DOI</a></p><p><a href="https://github.com/r-a-elu-architecture/RSOS-Language/blob/main/RESPONSIBLE_USE.md">Responsible use</a></p>
+<p><a href="https://github.com/r-a-elu-architecture/RSOS-Language/blob/main/SECURITY.md">Security</a></p></div>
+<div><p><a href="try.html">The RSOS language: editor and keyboard</a></p><p><a href="origins.html">Origins of the operations</a></p>
+<p><a href="programme.html">Research programme</a></p><p><a href="family.html">The RSOS family</a></p></div>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+ "code_commit": "a9618c2fcee9ca60a526778e00bebab52bd7381e",
+ "experiment": "T7B-TOLERANT",
+ "numpy": "2.5.3",
+ "python": "3.13.18",
+ "results_sha256": "0c93f1ad5a640eb39fe0d22669f98447298e006a069ec054806f80bd1793c274",
+ "run_utc": "2026-11-16T20:07:23Z",
+ "summary": {
+  "H1_clean": {
+   "accuracy": 0.933,
+   "pass": false
+  },
+  "H2_noise_10": {
+   "accuracy": 0.892,
+   "pass": true,
+   "t7_exact_matcher": 0.475
+  },
+  "H3_more_noise": {
+   "20%": 0.692,
+   "30%": 0.675
+  },
+  "H4_names": {
+   "accuracy": 0.033,
+   "pass": true
+  }
+ }
+}

@@ -1,0 +1,73 @@
+{
+ "row": "neuro",
+ "model": "-",
+ "stage": 1,
+ "pair": 1,
+ "cells": {
+  "std|7": {
+   "default": {
+    "result": 0.12814715968356105,
+    "resource": 240.0,
+    "R": 0.0005339464986815044,
+    "choices": {
+     "present|standard": 60
+    }
+   },
+   "seed3v1": {
+    "result": 0.14353383889517646,
+    "resource": 240.0,
+    "R": 0.0005980576620632352,
+    "choices": {
+     "F:rel-std|policy": 9,
+     "P8:vote|own": 20,
+     "F:otrace-rel|policy": 14,
+     "F:rel-reads|own": 3,
+     "F:rel-reads|policy": 5,
+     "latent|own": 4,
+     "P1:surprise|policy": 1,
+     "P2:age-price|own": 1,
+     "F:otrace-rel|own": 2,
+     "past-2|own": 1
+    },
+    "policy_fallback_steps": 0
+   },
+   "sec": 1016
+  },
+  "std|8": {
+   "default": {
+    "result": 0.06328788855346013,
+    "resource": 240.0,
+    "R": 0.0002636995356394172,
+    "choices": {
+     "present|standard": 60
+    }
+   },
+   "seed3v1": {
+    "result": 0.06154077676447156,
+    "resource": 240.0,
+    "R": 0.00025641990318529817,
+    "choices": {
+     "F:rel-std|policy": 9,
+     "F:rel-reads|policy": 10,
+     "F:otrace-rel|policy": 4,
+     "past-1|own": 7,
+     "P8:vote|own": 10,
+     "present|own": 2,
+     "F:rel-std|own": 3,
+     "past-2|own": 1,
+     "F:otrace-rel|own": 1,
+     "P2:age-price|own": 2,
+     "latent|own": 2,
+     "P8:vote|standard": 2,
+     "future+1|own": 3,
+     "future+1|standard": 1,
+     "F:rel-reads|own": 1,
+     "P2:age-price|policy": 1,
+     "P1:surprise|own": 1
+    },
+    "policy_fallback_steps": 0
+   },
+   "sec": 981
+  }
+ }
+}

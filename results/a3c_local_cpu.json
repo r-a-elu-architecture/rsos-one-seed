@@ -1,0 +1,5 @@
+{
+ "process_cpu_sec_total": 16372,
+ "process_wall_sec": 6422,
+ "note": "whole Hl process (model + harness + 8 task threads), sampled every 30 s; includes model load and preamble"
+}

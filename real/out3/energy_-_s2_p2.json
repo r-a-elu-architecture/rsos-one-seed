@@ -1,0 +1,84 @@
+{
+ "row": "energy",
+ "model": "-",
+ "stage": 2,
+ "pair": 2,
+ "cells": {
+  "std|213": {
+   "default": {
+    "result": 10.592491811266163,
+    "resource": 168.72021783856505,
+    "R": 0.06278140193845218,
+    "choices": {
+     "present|standard": 168
+    }
+   },
+   "seed3v1": {
+    "result": 12.194964167971825,
+    "resource": 134.3174593073186,
+    "R": 0.09079209978257351,
+    "choices": {
+     "P4P5:scenario_mpc|policy": 91,
+     "P2:price_on_wear|policy": 23,
+     "P5:soc_dp_realpast_tree|policy": 10,
+     "F:coupled_hours:realpast_day_paths|policy": 12,
+     "past-1|standard": 1,
+     "P2:price_on_wear|standard": 10,
+     "future+1|standard": 1,
+     "P2:price_on_wear|own": 1,
+     "F:coupled_hours:realpast_day_paths|own": 5,
+     "future+2|own": 1,
+     "F:coupled_hours:realpast_day_paths|standard": 4,
+     "P4P5:scenario_mpc|own": 8,
+     "future+1|own": 1
+    },
+    "policy_fallback_steps": 0
+   },
+   "strongest": {
+    "result": 12.689466683920914,
+    "resource": 132.76505693918284,
+    "R": 0.09557836208162603,
+    "choices": {
+     "present|standard": 168
+    }
+   },
+   "sec": 8742
+  },
+  "std|214": {
+   "default": {
+    "result": 6.791698046276684,
+    "resource": 135.5493902634047,
+    "R": 0.05010496936267142,
+    "choices": {
+     "present|standard": 168
+    }
+   },
+   "seed3v1": {
+    "result": 6.986471557216314,
+    "resource": 87.96139481329465,
+    "R": 0.07942656630270221,
+    "choices": {
+     "P4P5:scenario_mpc|policy": 122,
+     "past-1|standard": 2,
+     "future+1|standard": 1,
+     "P2:price_on_wear|policy": 8,
+     "P4P5:scenario_mpc|standard": 23,
+     "F:coupled_hours:realpast_day_paths|policy": 2,
+     "P5:soc_dp_realpast_tree|policy": 8,
+     "P5:soc_dp_realpast_tree|standard": 1,
+     "P4P5:scenario_mpc|own": 1
+    },
+    "policy_fallback_steps": 0
+   },
+   "strongest": {
+    "result": 6.642437450515777,
+    "resource": 87.68024654220795,
+    "R": 0.07575751337923312,
+    "choices": {
+     "present|standard": 168
+    }
+   },
+   "sec": 8872
+  }
+ }
+}

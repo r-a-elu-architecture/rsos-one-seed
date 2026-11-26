@@ -1,0 +1,32 @@
+{
+ "cells": 40,
+ "Q1_joined_gt_best_alone": 39,
+ "Q2_joined_gt_notubes": 25,
+ "Q3_channels_not_worse": 19,
+ "Q4_each_not_worse_than_alone": 22,
+ "Q5_landed_above_bound_ticks": 67,
+ "mean_G": {
+  "joined": 0.9692899305555557,
+  "notubes": 0.9681874999999998,
+  "aloneA": 0.9512222222222224,
+  "aloneB": 0.9510607638888888,
+  "native": 0.9302065972222223
+ },
+ "mean_gain_joined_minus_notubes": 0.0011024305555555557,
+ "events_joined": {
+  "proposed": 4800,
+  "refused_p2": 213,
+  "fallback_p1": 80,
+  "refused_both": 133,
+  "p4": 401,
+  "landed_above": 6
+ },
+ "PASS": {
+  "Q1": true,
+  "Q2": false,
+  "Q3": false,
+  "Q4": false,
+  "Q5": false
+ },
+ "ROW_PASS": false
+}

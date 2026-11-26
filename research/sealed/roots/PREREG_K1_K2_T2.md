@@ -1,0 +1,7 @@
+# Layer-2 tests K1, K2, T2 (20 Nov 2026): predictions before the run
+
+| ID | Owner's idea | Layer-2 prediction | Pass when |
+|---|---|---|---|
+| K1 | The structure knows the events of its world, past, present and future | In robot-scene worlds (SC1 rule) where a fraction f of the 56 events per task comes from outside the rule (an independent random source), the structure, knowing only its rule and seed, names every event before it happens with accuracy 1 − f | at f = 0, 0.25, 0.5, 0.75, 1 (16 worlds each): accuracy within ±0.03 of 1 − f, and exactly 1.0 at f = 0 |
+| K2 | A quantum structure is a lightweight node that expands into the whole; in layer 2 every amplitude is readable | Structured states (product, GHZ, W, random tensor-network states of bond dimension 2) of n = 4…20 qubits held as a chain of small nodes (matrix product state, by successive SVD, threshold 1e-10) | structured: at n = 20 size ≤ 0.001× of the 2^20 amplitudes and overlap with the full state ≥ 1 − 1e-9; random states: no such compression (size ≥ 0.25× at n ≥ 12) |
+| T2 | The true hologram: every part carries the whole | A robot scene (50 objects × 6 fields) bound into one 10,000-dimensional holographic vector (role–filler binding, bundling); every field read back after 0%, 10%, 30% and 50% of the vector's components are destroyed | read-back accuracy ≥ 99% at 0, 10 and 30% loss and ≥ 95% at 50% loss; the vector ≤ 0.25× the bytes of the scene as JSON |

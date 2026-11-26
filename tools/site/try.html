@@ -1,0 +1,58 @@
+<div class="wrap">
+<div class="hero">
+<h1>Write RSOS three ways.</h1>
+<p class="lead">Compose a program as a painting, key it in with the RSOS keyboard, or write it as text and compile it.
+All three produce the same language and run through the same compiler checks. State programs compile to the same IR as <a href="core.html">RSOS Core</a>.</p>
+</div>
+</div>
+
+<section id="editor"><div class="wrap split">
+<div>
+<h2>The painting editor</h2>
+<p class="intro">Place objects in a scene, connect them, colour them and set their order. The editor compiles the
+painting to RSOS and back, so you can move between the picture and the text.</p>
+<a class="cta" href="editor.html">Open the editor</a>
+</div>
+<div class="card"><h3>Good first steps</h3>
+<ul class="plain">
+<li>Load an example and look at how each object becomes a statement.</li>
+<li>Move one object to another room and watch the compiled program change.</li>
+<li>Remove a consent line from a person-facing program to see the compiler refuse it (E018).</li>
+<li>Pick a speed-test task and watch the <b>REACH</b> panel: the task as a stretch target, the measured distance after each gesture, and a prompt to name what stops you.</li>
+</ul></div>
+</div></section>
+
+<section id="keyboard"><div class="wrap split">
+<div>
+<h2>The RSOS keyboard</h2>
+<p class="intro">One key or chord emits a whole component, operator, perspective, state, depth, order or direction,
+so a program goes in at the speed it is seen and no required slot can be left out silently. Practice mode runs short
+sessions and draws your learning curve.</p>
+<a class="cta" href="keyboard.html">Open the keyboard</a>
+</div>
+<div class="card"><h3>How it was checked</h3>
+<p>Twelve targets were keyed by a headless browser, compiled and decoded blind from the code alone. The first run
+passed 8 of 12 and found one bug (an operator key overwrote a finished model). After the fix: 12 of 12, with 88 of 89
+fields recovered (0.989). The human test, HT2, follows a learning phase.</p></div>
+</div></section>
+
+<section id="code"><div class="wrap split">
+<div>
+<h2>Text and the compiler</h2>
+<p class="intro">Install from the repository and check any example. The compiler reports errors and warnings by code,
+including the consent and harm checks.</p>
+<p class="muted small">An MCP server (<code>pip install rsoslang</code>, then <code>rsoslang mcp</code>; in the official MCP Registry as <code>io.github.r-a-elu-architecture/rsos</code>) lets an AI assistant compile and run RSOS
+programs as tools.</p>
+</div>
+<pre aria-label="Install and run"><code><span class="c"># get the code</span>
+git clone {REPO}
+cd RSOS-Language
+pip install -e .
+
+<span class="c"># check and compile an example</span>
+python -m rsoslang check examples/robot_head.rsl
+python -m rsoslang ir examples/sol_remote.rsl
+
+<span class="c"># reproduce every result</span>
+./reproduce.sh</code></pre>
+</div></section>

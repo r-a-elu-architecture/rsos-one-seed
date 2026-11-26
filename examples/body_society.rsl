@@ -1,0 +1,36 @@
+# The body–society architecture (owner, chat 1 T66), as a world in the language.
+# TV screen = what is shown; circuits = brain network; cables = veins; router = amygdala with gates;
+# server = heart (its frequency reaches others); grid = power; bones = institutions; muscle = people;
+# spine = the leader; meta-eye = sees, gathers, feeds back through all channels.
+LANGUAGE RSOS 0.2
+WORLD body_society
+HOST organism KIND human CHANNELS visual, auditory, kinesthetic
+HOST society KIND organisation
+OBJECT screen KIND display IN organism
+OBJECT circuits KIND brain_network IN organism
+OBJECT cables KIND veins IN organism
+OBJECT router KIND amygdala IN organism
+PART router.gates KIND gate
+OBJECT server KIND heart IN organism
+OBJECT grid KIND power IN organism
+OBJECT bones KIND institutions IN society
+OBJECT muscle KIND people IN society
+OBJECT spine KIND leader IN society
+OBJECT meta_eye KIND observer
+SCENE body ORDER grid, server, cables, router, circuits, screen
+RELATION server pumps cables
+RELATION router gates circuits
+RELATION circuits drives screen
+RELATION muscle holds bones
+RELATION spine leads muscle
+USE HOST organism
+CONSENT organism FOR practice
+BASELINE organism
+BASELINE society
+FLOW server DIRECTION horizontal TO cables       # the pulse moves through the blood
+FLOW server DIRECTION outward                     # its frequency is felt by others
+LINE information THROUGH server, cables, router.gates, circuits, screen
+HEAL router.gates BY meta_eye                     # the gates reopen: courage and white glow (T71)
+FLOW meta_eye DIRECTION vertical                  # sees and feeds back through all channels
+OBJECT rocket KIND engine
+TRANSPLANT rocket TO server AS rocket_heart       # chat 1 T95/T102: the rocket heart

@@ -1,0 +1,71 @@
+{
+ "row": "space",
+ "arm": "default",
+ "model": "-",
+ "cells": {
+  "1": {
+   "result": 509.8123885629942,
+   "resource": 16089.431903632003,
+   "choices": {
+    "present|standard": 24
+   },
+   "sec": 0.3
+  },
+  "2": {
+   "result": 622.2807025703129,
+   "resource": 14701.321650637843,
+   "choices": {
+    "present|standard": 24
+   },
+   "sec": 0.0
+  },
+  "3": {
+   "result": 421.08940191800355,
+   "resource": 14321.49580563651,
+   "choices": {
+    "present|standard": 24
+   },
+   "sec": 0.0
+  },
+  "4": {
+   "result": 545.0842239210901,
+   "resource": 15709.617158856496,
+   "choices": {
+    "present|standard": 26
+   },
+   "sec": 0.0
+  },
+  "5": {
+   "result": 503.61389633287666,
+   "resource": 15131.763891422177,
+   "choices": {
+    "present|standard": 25
+   },
+   "sec": 0.0
+  },
+  "6": {
+   "result": 590.7347474842134,
+   "resource": 16287.278234425094,
+   "choices": {
+    "present|standard": 26
+   },
+   "sec": 0.0
+  },
+  "7": {
+   "result": 507.88479172656736,
+   "resource": 15510.172540614129,
+   "choices": {
+    "present|standard": 24
+   },
+   "sec": 0.0
+  },
+  "8": {
+   "result": 580.0726696618688,
+   "resource": 15295.68114673188,
+   "choices": {
+    "present|standard": 24
+   },
+   "sec": 0.0
+  }
+ }
+}

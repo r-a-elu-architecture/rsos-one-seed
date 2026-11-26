@@ -1,0 +1,10 @@
+# REAL3 v2 biology quick (25 Nov), cells 1-2 (cancer/sym25, cancer/asym30), modes seed3,seed3v1,seed,rollout,default.
+# INCOMPLETE: no line finished in this session (first launch killed by a machine restart; the second ran ~40 min on the
+# shared 2-CPU machine). py-spy profile (30 s sample): 87% of the time in REAL3 v1's _policy_rollout, 95% in seed3.step3,
+# 5% in the v2 operators (seed3_ops.decide). Estimated ~95 min wall per seed3 cell here; it is for the cloud run.
+# Progress snapshot (py-spy, live state; trace = chosen key per real step so far):
+# cell 1 seed3 t=122/300: {"F:need-fill|policy": 2, "F:need|policy": 120}   (no operator replaced a*; v1's DATA LANDING won)
+# cell 2 seed3 t=95/300: {"op:pierce|Eagle": 1, "op:zoom|Eagle": 1, "op:enter|base": 1, "op:overlay|base": 1, "P1:deficit-share|own": 2, ...(truncated by py-spy)}
+# ops_bound (checked with seed3_ops.binding): heal, beam1, beam3, contain, compress, inherit, fuse, rehost, pierce, overlay
+# bound; enter bound (depth 2); carry NOT bound (needs carry: the per-step budget is the row's rule); zoom, colour, rooms,
+# transplant bound.

@@ -1,0 +1,6 @@
+bridge 4 6690 {'dry': 'B', 'drift': 'B', 'calm': 'B'} {'child_C': 0.8772, 'parA_C': 0.7771, 'parB_C': 0.8772, 'child_A': 0.8951, 'parA_A': 0.8951, 'child_B': 0.9576, 'parB_B': 0.9576} 42 s
+bridge 4 6691 {'dry': 'B', 'drift': 'B', 'calm': 'B'} {'child_C': 0.8561, 'parA_C': 0.7943, 'parB_C': 0.8561, 'child_A': 0.8819, 'parA_A': 0.8819, 'child_B': 0.9325, 'parB_B': 0.9325} 39 s
+bridge 10 6690 {'dry': 'B', 'drift': 'B', 'calm': 'B'} {'child_C': 0.9865, 'parA_C': 0.9835, 'parB_C': 0.9865, 'child_A': 0.9664, 'parA_A': 0.9664, 'child_B': 0.991, 'parB_B': 0.991} 43 s
+bridge 10 6691 {'dry': 'B', 'drift': 'B', 'calm': 'B'} {'child_C': 0.9875, 'parA_C': 0.9853, 'parB_C': 0.9875, 'child_A': 0.9378, 'parA_A': 0.9378, 'child_B': 0.9874, 'parB_B': 0.9874} 39 s
+bridge 16 6690 {'dry': 'A', 'drift': 'A', 'calm': 'A'} {'child_C': 0.9904, 'parA_C': 0.9904, 'parB_C': 0.9904, 'child_A': 0.99, 'parA_A': 0.99, 'child_B': 0.9925, 'parB_B': 0.9925} 44 s
+bridge 16 6691 {'dry': 'A', 'drift': 'A', 'calm': 'A'} {'child_C': 0.9864, 'parA_C': 0.9864, 'parB_C': 0.9892, 'child_A': 0.9889, 'parA_A': 0.9889, 'child_B': 0.9675, 'parB_B': 0.9669} 40 s

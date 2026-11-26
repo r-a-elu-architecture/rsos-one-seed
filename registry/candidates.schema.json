@@ -1,0 +1,85 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://github.com/r-a-elu-architecture/RSOS-Language/registry/candidates.schema.json",
+ "title": "Corpus finding (one JSONL row)",
+ "description": "A finding from the corpus scan. Hashes only: corpus text never enters the registry.",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "candidate_id",
+  "symbolic_name",
+  "source",
+  "first_seen",
+  "verbatim_sha256",
+  "scan_run_id",
+  "scanner_version",
+  "proposed_status"
+ ],
+ "properties": {
+  "candidate_id": {
+   "type": "string",
+   "pattern": "^X-\\d+$"
+  },
+  "symbolic_name": {
+   "type": "string",
+   "maxLength": 120
+  },
+  "source": {
+   "type": "object",
+   "required": [
+    "chat",
+    "turn",
+    "role"
+   ],
+   "additionalProperties": false,
+   "properties": {
+    "chat": {
+     "type": "string"
+    },
+    "turn": {
+     "type": "string"
+    },
+    "role": {
+     "enum": [
+      "owner",
+      "assistant"
+     ]
+    }
+   }
+  },
+  "first_seen": {
+   "type": "string",
+   "format": "date"
+  },
+  "verbatim_sha256": {
+   "type": "string",
+   "pattern": "^[0-9a-f]{64}$"
+  },
+  "mirror_of": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "alias_of": {
+   "type": [
+    "string",
+    "null"
+   ],
+   "description": "Core id (C-\u2026) or register id (U\u2026) when the finding re-describes a known operation"
+  },
+  "scan_run_id": {
+   "type": "string"
+  },
+  "scanner_version": {
+   "type": "string"
+  },
+  "proposed_status": {
+   "const": "proposed"
+  },
+  "note": {
+   "type": "string",
+   "maxLength": 280
+  }
+ }
+}

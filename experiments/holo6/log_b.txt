@@ -1,0 +1,16 @@
+5 500 1.8931 {'letters': 289, 'landed': 27, 'futures': 802}
+5 501 -0.2191 {'letters': 337, 'landed': 30, 'futures': 978}
+5 502 -0.3581 {'letters': 328, 'landed': 35, 'futures': 902}
+5 503 -0.8442 {'letters': 209, 'landed': 17, 'futures': 602}
+5 504 -1.8199 {'letters': 316, 'landed': 35, 'futures': 852}
+5 505 0.6165 {'letters': 309, 'landed': 35, 'futures': 895}
+5 506 0.1446 {'letters': 325, 'landed': 34, 'futures': 919}
+5 507 0.406 {'letters': 355, 'landed': 26, 'futures': 1024}
+5 508 1.0169 {'letters': 249, 'landed': 28, 'futures': 659}
+5 509 -0.3458 {'letters': 266, 'landed': 32, 'futures': 736}
+5 510 0.1579 {'letters': 358, 'landed': 25, 'futures': 1010}
+5 511 -4.2626 {'letters': 416, 'landed': 28, 'futures': 1194}
+5 512 1.6789 {'letters': 280, 'landed': 30, 'futures': 776}
+5 513 -1.6706 {'letters': 339, 'landed': 29, 'futures': 960}
+5 514 1.3456 {'letters': 321, 'landed': 34, 'futures': 907}
+5 515 0.5322 {'letters': 319, 'landed': 32, 'futures': 891}

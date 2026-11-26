@@ -1,0 +1,201 @@
+{
+ "row": "ai_ai",
+ "model": "openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct",
+ "cells_run": [
+  846,
+  847,
+  848,
+  849,
+  850
+ ],
+ "generated": true,
+ "cells": {
+  "std|846": {
+   "default": {
+    "result": 1.0,
+    "resource": 847.0,
+    "R": 0.0011806375442739079,
+    "choices": {
+     "present|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 0.9
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 856.0,
+    "R": 0.0011682242990654205,
+    "choices": {
+     "F:holo-vote|policy": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 1.2
+   },
+   "composed": {
+    "result": 1.0,
+    "resource": 831.0,
+    "R": 0.0012033694344163659,
+    "choices": {
+     "C:see>trace>compress>inherit>contain>act|policy": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 0.7
+   },
+   "sec": 3
+  },
+  "std|847": {
+   "default": {
+    "result": 1.0,
+    "resource": 1802.0,
+    "R": 0.0005549389567147614,
+    "choices": {
+     "present|standard": 2
+    },
+    "failed_calls": 0,
+    "sec": 2.7
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 1716.0,
+    "R": 0.0005827505827505828,
+    "choices": {
+     "F:holo-vote|policy": 1,
+     "F:holokey|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 1.9
+   },
+   "composed": {
+    "result": 1.0,
+    "resource": 1795.0,
+    "R": 0.0005571030640668524,
+    "choices": {
+     "C:see>trace>compress>inherit>contain>act|standard": 1,
+     "focus_home|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.9
+   },
+   "sec": 7
+  },
+  "std|848": {
+   "default": {
+    "result": 1.0,
+    "resource": 2721.0,
+    "R": 0.0003675119441381845,
+    "choices": {
+     "present|standard": 3
+    },
+    "failed_calls": 0,
+    "sec": 2.3
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 2678.0,
+    "R": 0.0003734129947722181,
+    "choices": {
+     "F:holo-vote|policy": 2,
+     "P3-repair|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 3.6
+   },
+   "composed": {
+    "result": 1.0,
+    "resource": 2653.0,
+    "R": 0.0003769317753486619,
+    "choices": {
+     "present|standard": 1,
+     "focus_team|own": 1,
+     "past-1|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 3.6
+   },
+   "sec": 10
+  },
+  "std|849": {
+   "default": {
+    "result": 1.0,
+    "resource": 1785.0,
+    "R": 0.0005602240896358543,
+    "choices": {
+     "present|standard": 2
+    },
+    "failed_calls": 0,
+    "sec": 1.9
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 824.0,
+    "R": 0.0012135922330097086,
+    "choices": {
+     "focus_office|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 1.0
+   },
+   "composed": {
+    "result": 1.0,
+    "resource": 824.0,
+    "R": 0.0012135922330097086,
+    "choices": {
+     "focus_office|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 0.8
+   },
+   "sec": 4
+  },
+  "std|850": {
+   "default": {
+    "result": 1.0,
+    "resource": 5859.0,
+    "R": 0.00017067759003242875,
+    "choices": {
+     "present|standard": 6
+    },
+    "failed_calls": 0,
+    "sec": 7.2
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 3725.0,
+    "R": 0.00026845637583892615,
+    "choices": {
+     "F:holo-vote|policy": 1,
+     "future+1|own": 1,
+     "F:holo-vote|standard": 1,
+     "past-1|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 5.8
+   },
+   "composed": {
+    "result": 1.0,
+    "resource": 4722.0,
+    "R": 0.00021177467174925878,
+    "choices": {
+     "C:see>trace>compress>inherit>contain>act|standard": 1,
+     "present|standard": 1,
+     "focus_home|standard": 1,
+     "future+1|own": 1,
+     "past-2|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 7.1
+   },
+   "sec": 20
+  }
+ }
+}

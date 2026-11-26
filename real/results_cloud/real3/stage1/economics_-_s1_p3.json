@@ -1,0 +1,71 @@
+{
+ "row": "economics",
+ "model": "-",
+ "stage": 1,
+ "pair": 3,
+ "cells": {
+  "std|207": {
+   "default": {
+    "result": 2424.381582614767,
+    "resource": 352.7192655534479,
+    "R": 6.873402786237652,
+    "choices": {
+     "present|standard": 26
+    }
+   },
+   "seed3v1": {
+    "result": 2455.7285064737216,
+    "resource": 346.4749639200571,
+    "R": 7.087751676742614,
+    "choices": {
+     "P4P5:stochastic_lp|policy": 21,
+     "future+1|own": 1,
+     "F:otrace:lp_corrected|policy": 2,
+     "P4P5:stochastic_lp|own": 2
+    },
+    "policy_fallback_steps": 0
+   },
+   "strongest": {
+    "result": 2455.6213371230406,
+    "resource": 346.9230588374859,
+    "R": 7.078288036983331,
+    "choices": {
+     "present|standard": 26
+    }
+   },
+   "sec": 899
+  },
+  "std|208": {
+   "default": {
+    "result": 2418.321544916261,
+    "resource": 353.9643155307919,
+    "R": 6.83210549427796,
+    "choices": {
+     "present|standard": 26
+    }
+   },
+   "seed3v1": {
+    "result": 2442.285477629355,
+    "resource": 347.87416839693987,
+    "R": 7.020600261536518,
+    "choices": {
+     "P4P5:stochastic_lp|policy": 18,
+     "F:otrace:lp_corrected|policy": 3,
+     "F:pool:capital_newsvendor|policy": 2,
+     "past-1|own": 1,
+     "P4P5:stochastic_lp|own": 2
+    },
+    "policy_fallback_steps": 0
+   },
+   "strongest": {
+    "result": 2443.51119939618,
+    "resource": 349.74194813219344,
+    "R": 6.986611736012278,
+    "choices": {
+     "present|standard": 26
+    }
+   },
+   "sec": 891
+  }
+ }
+}

@@ -1,0 +1,55 @@
+{
+ "row": "ai_ai",
+ "model": "openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct",
+ "stage": 1,
+ "pair": 3,
+ "cells": {
+  "std|207": {
+   "default": {
+    "result": 1.0,
+    "resource": 2666.0,
+    "R": 0.00037509377344336085,
+    "choices": {
+     "present|standard": 3
+    },
+    "failed_calls": 0
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 2615.0,
+    "R": 0.0003824091778202677,
+    "choices": {
+     "F:holo-vote|policy": 1,
+     "F:holokey|policy": 1,
+     "P3-repair|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0
+   },
+   "sec": 8
+  },
+  "std|208": {
+   "default": {
+    "result": 1.0,
+    "resource": 7085.0,
+    "R": 0.00014114326040931546,
+    "choices": {
+     "present|standard": 6
+    },
+    "failed_calls": 0
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 4058.0,
+    "R": 0.0002464268112370626,
+    "choices": {
+     "F:holo-vote|policy": 3,
+     "past-1|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0
+   },
+   "sec": 13
+  }
+ }
+}

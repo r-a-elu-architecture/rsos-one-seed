@@ -1,0 +1,28 @@
+{
+ "checks": {
+  "P1": true,
+  "P2": true,
+  "P3": true
+ },
+ "code_commit": "afe76b2da3d018c93ece8d345509bd32c3ab526e",
+ "experiment": "h3c_filter",
+ "numpy": "2.5.3",
+ "python": "3.13.18",
+ "results_sha256": "575e6ee8bf9dcf6305676901267ca9d57acadf0e1643ed437580dd0d33da4095",
+ "run_utc": "2026-11-17T08:25:22Z",
+ "summary": {
+  "filter": {
+   "harmful_share": 0.006,
+   "quality": 0.6658969668606106
+  },
+  "filter_capture_of_oracle_gain": 0.503117391126775,
+  "oracle": {
+   "harmful_share": 0.005166666666666667,
+   "quality": 1.5070453530374905
+  },
+  "restore": {
+   "harmful_share": 0.0495,
+   "quality": -0.1858059787576444
+  }
+ }
+}

@@ -1,0 +1,3 @@
+260740f695a78192b00cbdd8b830468f4ca9f05fc34bb27f656e10ce5b12d223  experiments/structure/structure6.py
+00c4eb1f0219e2659a8b896385e21b8be803bc346f0da9c0c940e29a639684f2  experiments/structure/diag/S5_grow_v4.json
+dfec5fcd46fa0a98c88a4dbb36f085a0ddb8344e2e388055a370ab04db5acbe5  experiments/structure/diag/S5_grow_v10.json

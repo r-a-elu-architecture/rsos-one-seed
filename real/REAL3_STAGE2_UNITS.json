@@ -1,0 +1,14 @@
+[
+ {
+  "row": "energy",
+  "model": "-"
+ },
+ {
+  "row": "quantum",
+  "model": "-"
+ },
+ {
+  "row": "ai_agents",
+  "model": "openrouter:meta-llama/llama-3.1-8b-instruct"
+ }
+]

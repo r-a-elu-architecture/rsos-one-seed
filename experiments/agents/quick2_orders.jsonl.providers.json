@@ -1,0 +1,4 @@
+{
+ "openai/gpt-oss-20b @ Amazon Bedrock": 360,
+ "meta-llama/llama-4-scout @ DeepInfra": 522
+}

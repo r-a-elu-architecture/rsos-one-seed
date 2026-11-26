@@ -1,0 +1,67 @@
+{
+ "pairs": [
+  [
+   "Distributed systems",
+   "Physics (layer 2)"
+  ],
+  [
+   "Cosmology",
+   "Earth and space"
+  ],
+  [
+   "Networks, satellites",
+   "Physics (layer 2)"
+  ],
+  [
+   "Chemistry",
+   "Physics (layer 2)"
+  ],
+  [
+   "Distributed systems",
+   "Mathematics"
+  ],
+  [
+   "Information theory",
+   "Mathematics"
+  ],
+  [
+   "Information theory",
+   "Network"
+  ],
+  [
+   "Human reasoning",
+   "Linguistics"
+  ],
+  [
+   "Human reasoning",
+   "Ledgers, finance"
+  ],
+  [
+   "Mathematics",
+   "Protocol theory"
+  ],
+  [
+   "Biology, medicine",
+   "Human reasoning"
+  ],
+  [
+   "Network",
+   "Networks, satellites"
+  ],
+  [
+   "Biology, medicine",
+   "Chemistry"
+  ],
+  [
+   "Mathematics",
+   "Physics (layer 2)"
+  ],
+  [
+   "Chemistry",
+   "Earth and space"
+  ]
+ ],
+ "mean_connected": 6.666666666666667,
+ "mean_all": 7.604395604395604,
+ "p": 0.2186
+}

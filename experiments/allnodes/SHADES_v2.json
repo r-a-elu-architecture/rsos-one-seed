@@ -1,0 +1,102 @@
+{
+ "centre": [
+  "Mathematics",
+  "Distributed systems",
+  "Level C"
+ ],
+ "shades": [
+  {
+   "shade": "v1",
+   "node": "Law 2 blind operation"
+  },
+  {
+   "shade": "v2",
+   "node": "Network"
+  },
+  {
+   "shade": "v3",
+   "node": "Networks, satellites"
+  },
+  {
+   "shade": "v4",
+   "node": "Physical comm layer"
+  },
+  {
+   "shade": "v5",
+   "node": "Human reasoning"
+  },
+  {
+   "shade": "v6",
+   "node": "Physics (layer 2)"
+  },
+  {
+   "shade": "v7",
+   "node": "Ledgers, finance"
+  },
+  {
+   "shade": "v8",
+   "node": "Chemistry"
+  },
+  {
+   "shade": "v9",
+   "node": "Databases"
+  },
+  {
+   "shade": "v10",
+   "node": "AI chips (layer 2)"
+  },
+  {
+   "shade": "v11",
+   "node": "Earth and space"
+  },
+  {
+   "shade": "v12",
+   "node": "Cosmology"
+  },
+  {
+   "shade": "v13",
+   "node": "Biology, medicine"
+  },
+  {
+   "shade": "v14",
+   "node": "Level E (layer 2)"
+  },
+  {
+   "shade": "v15",
+   "node": "Law 1 read scope"
+  },
+  {
+   "shade": "v16",
+   "node": "Linguistics"
+  },
+  {
+   "shade": "v17",
+   "node": "Level D"
+  },
+  {
+   "shade": "v18",
+   "node": "Protocol theory"
+  },
+  {
+   "shade": "v19",
+   "node": "Level B"
+  },
+  {
+   "shade": "v20",
+   "node": "Information theory"
+  },
+  {
+   "shade": "v21",
+   "node": "Operator algebra"
+  }
+ ],
+ "check": {
+  "organism_mean_connected": 1.5333333333333334,
+  "organism_mean_all": 1.6593406593406594,
+  "line_only_nonhub_connected": 5.4,
+  "line_only_nonhub_all": 6.618181818181818,
+  "perm_p_nonhub": 0.15315,
+  "n_pairs": 15,
+  "n_nonhub_pairs": 10
+ }
+}

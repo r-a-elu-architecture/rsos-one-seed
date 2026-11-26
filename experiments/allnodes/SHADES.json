@@ -1,0 +1,223 @@
+{
+ "code_sha256": "4680ac76c135d3906c7fa5726954f554097013d76fcc8ab0d73eca1483b1d87b",
+ "order": [
+  {
+   "shade": "v1",
+   "node": "Law 2 blind operation",
+   "features": [
+    "law:L2",
+    "pl:outside"
+   ]
+  },
+  {
+   "shade": "v2",
+   "node": "Distributed systems",
+   "features": [
+    "law:ERR",
+    "law:L2",
+    "pl:tube"
+   ]
+  },
+  {
+   "shade": "v3",
+   "node": "Level C",
+   "features": [
+    "law:ERR",
+    "law:L0",
+    "law:L1",
+    "law:L2",
+    "law:L3",
+    "law:L4",
+    "law:L5",
+    "pl:above",
+    "pl:inside",
+    "pl:line",
+    "pl:outside",
+    "pl:pierced",
+    "pl:tube"
+   ]
+  },
+  {
+   "shade": "v4",
+   "node": "Network",
+   "features": [
+    "law:ERR",
+    "pl:tube"
+   ]
+  },
+  {
+   "shade": "v5",
+   "node": "Earth and space",
+   "features": [
+    "law:L5",
+    "pl:tube"
+   ]
+  },
+  {
+   "shade": "v6",
+   "node": "Cosmology",
+   "features": [
+    "law:L4",
+    "pl:tube"
+   ]
+  },
+  {
+   "shade": "v7",
+   "node": "AI chips (layer 2)",
+   "features": [
+    "law:ERR",
+    "pl:inside"
+   ]
+  },
+  {
+   "shade": "v8",
+   "node": "Information theory",
+   "features": [
+    "law:L5",
+    "pl:inside",
+    "pl:tube"
+   ]
+  },
+  {
+   "shade": "v9",
+   "node": "Linguistics",
+   "features": [
+    "law:L5",
+    "pl:inside",
+    "pl:tube"
+   ]
+  },
+  {
+   "shade": "v10",
+   "node": "Biology, medicine",
+   "features": [
+    "law:L3",
+    "pl:inside",
+    "pl:tube"
+   ]
+  },
+  {
+   "shade": "v11",
+   "node": "Physics (layer 2)",
+   "features": [
+    "law:L4",
+    "pl:inside",
+    "pl:tube"
+   ]
+  },
+  {
+   "shade": "v12",
+   "node": "Databases",
+   "features": [
+    "law:ERR",
+    "pl:above",
+    "pl:inside"
+   ]
+  },
+  {
+   "shade": "v13",
+   "node": "Chemistry",
+   "features": [
+    "law:L5",
+    "pl:pierced",
+    "pl:tube"
+   ]
+  },
+  {
+   "shade": "v14",
+   "node": "Networks, satellites",
+   "features": [
+    "law:L5",
+    "pl:line",
+    "pl:tube"
+   ]
+  },
+  {
+   "shade": "v15",
+   "node": "Level E (layer 2)",
+   "features": [
+    "law:L3",
+    "pl:inside"
+   ]
+  },
+  {
+   "shade": "v16",
+   "node": "Human reasoning",
+   "features": [
+    "law:L3",
+    "pl:above",
+    "pl:inside"
+   ]
+  },
+  {
+   "shade": "v17",
+   "node": "Ledgers, finance",
+   "features": [
+    "law:L0",
+    "law:L4",
+    "pl:above",
+    "pl:inside"
+   ]
+  },
+  {
+   "shade": "v18",
+   "node": "Level D",
+   "features": [
+    "law:GEN",
+    "pl:inside",
+    "pl:line"
+   ]
+  },
+  {
+   "shade": "v19",
+   "node": "Physical comm layer",
+   "features": [
+    "law:L4",
+    "pl:line"
+   ]
+  },
+  {
+   "shade": "v20",
+   "node": "Law 1 read scope",
+   "features": [
+    "law:L1",
+    "pl:above",
+    "pl:line"
+   ]
+  },
+  {
+   "shade": "v21",
+   "node": "Operator algebra",
+   "features": [
+    "law:COMP",
+    "law:L0",
+    "pl:line",
+    "pl:pierced"
+   ]
+  },
+  {
+   "shade": "v22",
+   "node": "Mathematics",
+   "features": [
+    "law:L1B",
+    "pl:line"
+   ]
+  },
+  {
+   "shade": "v23",
+   "node": "Protocol theory",
+   "features": [
+    "law:L0",
+    "pl:pierced"
+   ]
+  },
+  {
+   "shade": "v24",
+   "node": "Level B",
+   "features": [
+    "law:L0",
+    "pl:pierced"
+   ]
+  }
+ ]
+}

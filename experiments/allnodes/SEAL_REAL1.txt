@@ -1,0 +1,5 @@
+ORG-REAL1 seal, 22 Nov 2026 (owner '1' 07:27), before run
+2abed56d322433bc9f55134e655957c8a9a2eaeb21077e28b54fa7d30edba36f  real6.py
+5f6e7ed6a27df5146354d494345e9335f38eb9286bf98cb314ff39701fdadc18  PREREG_REAL1.md
+43500aecb0cd20f013f87be7ed4a1808f1f8610b09bbe9a0eaddc70f66763180  analyze_real1.py
+570fb26674c35a0743b1fd1c11daadae627f9ec9cfc8f9bb673bc70775de3340  real_v5.py

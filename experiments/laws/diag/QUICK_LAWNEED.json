@@ -1,0 +1,26 @@
+{
+ "full": {
+  "landings": 48,
+  "agreement": 0.6041666666666666,
+  "wrongly_withheld": 0.22916666666666666,
+  "wrongly_kept": 0.16666666666666666,
+  "sec_per_tick_mean": 13.077589670817057
+ },
+ "open": {
+  "landings": 48,
+  "agreement": 0.7916666666666666,
+  "wrongly_withheld": 0.0,
+  "wrongly_kept": 0.20833333333333334,
+  "sec_per_tick_mean": 2.527538319428762
+ },
+ "h5": {
+  "landings": 48,
+  "agreement": 0.6875,
+  "wrongly_withheld": 0.16666666666666666,
+  "wrongly_kept": 0.14583333333333334,
+  "sec_per_tick_mean": 2.8270482420921326
+ },
+ "crn_sec_per_tick_mean": 13.015771369139353,
+ "crn_need_rate": 0.3541666666666667,
+ "PASS_open": false
+}

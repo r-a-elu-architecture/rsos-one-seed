@@ -1,0 +1,202 @@
+{
+ "row": "ai_ai",
+ "model": "openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct",
+ "cells_run": [
+  756,
+  757,
+  758,
+  759,
+  760
+ ],
+ "generated": true,
+ "cells": {
+  "std|756": {
+   "default": {
+    "result": 1.0,
+    "resource": 2697.0,
+    "R": 0.0003707823507601038,
+    "choices": {
+     "present|standard": 3
+    },
+    "failed_calls": 0,
+    "sec": 2.5
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 1736.0,
+    "R": 0.000576036866359447,
+    "choices": {
+     "F:holo-vote|policy": 1,
+     "F:holokey|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.6
+   },
+   "composed": {
+    "result": 1.0,
+    "resource": 1747.0,
+    "R": 0.0005724098454493417,
+    "choices": {
+     "focus_office|standard": 1,
+     "focus_team|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.6
+   },
+   "sec": 8
+  },
+  "std|757": {
+   "default": {
+    "result": 1.0,
+    "resource": 2725.0,
+    "R": 0.0003669724770642202,
+    "choices": {
+     "present|standard": 3
+    },
+    "failed_calls": 0,
+    "sec": 3.9
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 1725.0,
+    "R": 0.0005797101449275362,
+    "choices": {
+     "F:holo-vote|policy": 1,
+     "F:holokey|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 1.9
+   },
+   "composed": {
+    "result": 0.0,
+    "resource": 876.0,
+    "R": 0.0,
+    "choices": {
+     "present|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 1.1
+   },
+   "sec": 7
+  },
+  "std|758": {
+   "default": {
+    "result": 1.0,
+    "resource": 1718.0,
+    "R": 0.0005820721769499418,
+    "choices": {
+     "present|standard": 2
+    },
+    "failed_calls": 0,
+    "sec": 1.7
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 1672.0,
+    "R": 0.0005980861244019139,
+    "choices": {
+     "F:holokey|standard": 1,
+     "past-1|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 1.8
+   },
+   "composed": {
+    "result": 1.0,
+    "resource": 1702.0,
+    "R": 0.0005875440658049354,
+    "choices": {
+     "present|standard": 1,
+     "focus_home|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 1.8
+   },
+   "sec": 5
+  },
+  "std|759": {
+   "default": {
+    "result": 0.0,
+    "resource": 4017.0,
+    "R": 0.0,
+    "choices": {
+     "present|standard": 4
+    },
+    "failed_calls": 0,
+    "sec": 6.3
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 4476.0,
+    "R": 0.00022341376228775692,
+    "choices": {
+     "F:holo-vote|policy": 2,
+     "F:holokey|policy": 1,
+     "past-1|standard": 2
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 6.1
+   },
+   "composed": {
+    "result": 1.0,
+    "resource": 4431.0,
+    "R": 0.00022568269013766644,
+    "choices": {
+     "C:see>trace>compress>inherit>contain>act|policy": 1,
+     "C:see>trace>compress>inherit>contain>act|standard": 1,
+     "past-1|standard": 1,
+     "C:see>trace>fuse>contain>act|own": 1,
+     "past-2|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 4.8
+   },
+   "sec": 17
+  },
+  "std|760": {
+   "default": {
+    "result": 1.0,
+    "resource": 1713.0,
+    "R": 0.0005837711617046118,
+    "choices": {
+     "present|standard": 2
+    },
+    "failed_calls": 0,
+    "sec": 1.6
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 1707.0,
+    "R": 0.0005858230814294083,
+    "choices": {
+     "F:holo-vote|policy": 1,
+     "F:holokey|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 3.1
+   },
+   "composed": {
+    "result": 1.0,
+    "resource": 1731.0,
+    "R": 0.0005777007510109763,
+    "choices": {
+     "focus_office|standard": 1,
+     "C:see>trace>fuse>contain>act|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 3.0
+   },
+   "sec": 8
+  }
+ }
+}

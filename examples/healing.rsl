@@ -1,0 +1,27 @@
+# Healing a container and the higher order; the beam lands on all lower layers.
+# Source: owner, chat 1 T14-T15, T44-T47, T53, T70.
+LANGUAGE RSOS 0.2
+WORLD inner_world
+HOST person KIND human CHANNELS visual, auditory, kinesthetic, olfactory
+USE HOST person
+CONSENT person FOR practice, cues BY person
+BASELINE person
+OBJECT country KIND container
+OBJECT identity KIND level
+OBJECT white_dragon KIND archetype
+OBJECT lion KIND archetype
+PART white_dragon.light KIND light
+COLOUR white_dragon.light white
+HEAL country BY white_dragon.light SCOPE container
+BEAM identity DIRECTION down BY lion
+BALL family_sounds AS ball1 COLOUR orange
+HEAL ball1 BY white_dragon.light
+COMPRESS situation1, situation2, situation3 AS lion_symbol
+HEAL lion_symbol SCOPE higher
+OBJECT tv KIND object
+ROUTE tv BY slumped -> problems ; agency -> communication_strategy
+OBJECT earlier_self KIND self
+RESCRIPT earlier_self WITH lion.paw WHEN tension
+CUE lavender CODE "white_dragon" CHANNEL olfactory
+FUTUREPACE lion_symbol SCENARIOS 3
+SCHEDULE eagle_drill STATES associated, eagle DURATIONS 300, 60 PULSE 60 REPEAT 1 CHANNEL kinesthetic

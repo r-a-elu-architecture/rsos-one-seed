@@ -1,0 +1,12 @@
+# REAL3 v2 robotics quick (25 Nov), cells 1-2, modes seed3,seed3v1,seed,rollout,default (one process per cell x mode).
+# INCOMPLETE: no line finished in this session. A machine restart killed the first launch; the second launch ran ~40 min
+# on the shared 2-CPU machine (4 of my processes + others) and reached only step 32 of 200 in both seed3 v2 episodes
+# (~30 s CPU per step). py-spy profile (30 s sample): 99% of the time inside seed3.step3 -> _policy_rollout (REAL3 v1's
+# policy continuation; 98% in the host's CEM primitives, recomputed at every fork step); the v2 operators (seed3_ops.decide)
+# take <1%. A full v2 or v1 cell here takes about 100 CPU-min; it is for the cloud run.
+# Progress snapshot (py-spy, live state of the runs; trace = chosen key per real step so far):
+# cell 1 seed3 t=32: {"op:fuse|base": 4, "op:beam3|base": 3, "op:beam1|base": 1, "op:heal|base": 4, "op:zoom|base": 19, "op:pierce|base": 1}
+# cell 2 seed3 t=32: {"op:fuse|base": 12, "op:zoom|base": 10, "op:heal|base": 4, "op:rehost|base": 1, "op:beam3|base": 4, "op:beam1|base": 1}
+# (every one of the first 32 steps was an operator, not a*; all in the base room)
+# ops_bound (checked with seed3_ops.binding): heal, beam1, beam3, contain, compress, inherit, fuse, carry, rehost, pierce,
+# overlay bound; enter bound (depth 1: no sub-parts on one actuator); zoom, colour, rooms, transplant bound.

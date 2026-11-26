@@ -1,0 +1,133 @@
+{
+ "code_commit": "3c5143bb3242ad794b4ebacbb63416a400e0a2ab",
+ "experiment": "ht1_speed",
+ "numpy": "2.5.3",
+ "python": "3.13.18",
+ "results_sha256": "e1f8266bb5bba855353e0591950dc26a2008f6db50287169c114183e2dc0b997",
+ "rows": [
+  {
+   "K1_task": false,
+   "P": "head = making decision + associated + confidence + analogical reasonin",
+   "S": "head + inside + associated + relief + confidence + analogical reasoning",
+   "acc_P": 1.0,
+   "acc_S": 0.8,
+   "chars_P": 70,
+   "chars_S": 71,
+   "fields": [
+    "place",
+    "perspective",
+    "state",
+    "components",
+    "function"
+   ],
+   "task": 1,
+   "time_P": 12,
+   "time_S": 10
+  },
+  {
+   "K1_task": false,
+   "P": "robots hand - action model up view, diss + future + do",
+   "S": "robot hand + action model + top viev + dissociated + future + action",
+   "acc_P": 1.0,
+   "acc_S": 1.0,
+   "chars_P": 54,
+   "chars_S": 68,
+   "fields": [
+    "place",
+    "perspective",
+    "components",
+    "function"
+   ],
+   "task": 2,
+   "time_P": 15,
+   "time_S": 19
+  },
+  {
+   "K1_task": false,
+   "P": "couch hypothesis testing forward hypotheris backward contradiction",
+   "S": "couch hypothesis testing forward = hypoth back",
+   "acc_P": 1.0,
+   "acc_S": 0.75,
+   "chars_P": 66,
+   "chars_S": 46,
+   "fields": [
+    "place",
+    "function",
+    "forward=hypothesis",
+    "backward=contradiction"
+   ],
+   "task": 3,
+   "time_P": 25,
+   "time_S": 20
+  },
+  {
+   "K1_task": false,
+   "P": "eagle room calculator decisionn from the view above beffore any money decision",
+   "S": "eagle calc decision above before moeny decisoin",
+   "acc_P": 1.0,
+   "acc_S": 1.0,
+   "chars_P": 78,
+   "chars_S": 47,
+   "fields": [
+    "place",
+    "perspective",
+    "function",
+    "trigger"
+   ],
+   "task": 4,
+   "time_P": 22,
+   "time_S": 42
+  },
+  {
+   "K1_task": false,
+   "P": "kitchen microwave: the palm = clamness, the top = deep work with a tunnel image",
+   "S": "kitchen microv - the palm = calmness, the top = deep work with tunnel image",
+   "acc_P": 0.75,
+   "acc_S": 0.75,
+   "chars_P": 79,
+   "chars_S": 75,
+   "fields": [
+    "place",
+    "palm=calmness",
+    "top=deep work+tunnel",
+    "state anchors"
+   ],
+   "task": 5,
+   "time_P": 26,
+   "time_S": 28
+  },
+  {
+   "K1_task": null,
+   "P": "rocet heart transplanted into a team heat place deeply : strucutre order 1st efficiency gained",
+   "S": "heart rocket transplanted into team , deep: structure order 1 efficiency",
+   "acc_P": 1.0,
+   "acc_S": 1.0,
+   "chars_P": 94,
+   "chars_S": 72,
+   "fields": [
+    "source",
+    "host",
+    "depth",
+    "order",
+    "gain"
+   ],
+   "task": 6,
+   "time_P": null,
+   "time_S": null
+  }
+ ],
+ "run_utc": "2026-11-17T11:27:40Z",
+ "summary": {
+  "K1_can_still_pass": false,
+  "K1_pass": false,
+  "K1_tasks_with_times": 5,
+  "K1_wins": 0,
+  "acc_mean_P": 0.9583333333333334,
+  "acc_mean_S": 0.8833333333333333,
+  "chars_P": 441,
+  "chars_S": 379,
+  "deviation": "P was written as shorthand, not full sentences, on every task",
+  "time_P_T1_T5": 100,
+  "time_S_T1_T5": 119
+ }
+}

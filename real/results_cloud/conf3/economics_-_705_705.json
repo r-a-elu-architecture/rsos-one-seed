@@ -1,0 +1,44 @@
+{
+ "row": "economics",
+ "model": "-",
+ "cells_run": [
+  705
+ ],
+ "generated": true,
+ "cells": {
+  "std|705": {
+   "default": {
+    "result": 2405.6107948165295,
+    "resource": 357.8380621715162,
+    "R": 6.722624139584935,
+    "choices": {
+     "present|standard": 26
+    },
+    "sec": 0.0
+   },
+   "seed3v1": {
+    "result": 2424.9938468357095,
+    "resource": 348.76313053748225,
+    "R": 6.953125587267576,
+    "choices": {
+     "P4P5:stochastic_lp|policy": 22,
+     "F:pool:capital_newsvendor|policy": 1,
+     "F:otrace:lp_corrected|policy": 1,
+     "P4P5:stochastic_lp|own": 2
+    },
+    "policy_fallback_steps": 0,
+    "sec": 363.0
+   },
+   "strongest": {
+    "result": 2426.3204077658315,
+    "resource": 347.16400948325673,
+    "R": 6.988974494727541,
+    "choices": {
+     "present|standard": 26
+    },
+    "sec": 0.8
+   },
+   "sec": 364
+  }
+ }
+}

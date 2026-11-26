@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+title: "RSOS Language: a spatial-symbolic programming language for humans and AI"
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - name: "R. A. Elu"
+    alias: "r-a-elu-architecture"
+    orcid: "https://orcid.org/0009-0000-1456-2467"
+version: "0.4.0"
+doi: "10.5281/zenodo.24359268"
+date-released: "2026-11-19"
+license: Apache-2.0
+repository-code: "https://github.com/r-a-elu-architecture/RSOS-Language"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24359268"
+    description: "Software, version 0.4.0 (RSOS Core 1.0)"
+  - type: doi
+    value: "10.5281/zenodo.24358277"
+    description: "Software, version 0.3.2 (A8 across model families)"
+  - type: doi
+    value: "10.5281/zenodo.24339364"
+    description: "Software, version 0.3.1"
+  - type: doi
+    value: "10.5281/zenodo.24317657"
+    description: "Software, all versions (concept DOI)"
+  - type: doi
+    value: "10.5281/zenodo.24321030"
+    description: "Software, version 0.2.1"
+  - type: doi
+    value: "10.5281/zenodo.24320392"
+    description: "Whitepaper v2"
+  - type: doi
+    value: "10.5281/zenodo.24304403"
+    description: "Whitepaper, all versions (concept DOI)"
+keywords: [visual programming, human-AI interaction, mental models, agent systems, spatial language]
+references:
+  - type: report
+    title: "RSOS: an executable spatial-symbolic language for human–AI and AI–AI communication (whitepaper)"
+    authors:
+      - name: "R. A. Elu"
+    doi: "10.5281/zenodo.24304403"
+    year: 2026

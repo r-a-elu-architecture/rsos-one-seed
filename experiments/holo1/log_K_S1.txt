@@ -1,0 +1,39 @@
+{
+ "seed": 1,
+ "leak": 0.5,
+ "rho": 0.95,
+ "event_A": "in the kitchen the spoon is put on the table. ",
+ "event_B": "in the kitchen the spoon falls on the floor. ",
+ "trials": 40,
+ "frac_text_changed_per_node": [
+  0.675,
+  0.2,
+  0.1,
+  0.05,
+  0.025
+ ],
+ "reached_node5_frac": 0.025,
+ "patterns": {
+  "10000": 19,
+  "00000": 13,
+  "11000": 4,
+  "11110": 1,
+  "11111": 1,
+  "11100": 2
+ },
+ "mean_state_dist_per_node": [
+  2.516,
+  0.9742,
+  0.2454,
+  0.3329,
+  0.1367
+ ],
+ "amplify_nodes": [
+  "family"
+ ],
+ "dampen_nodes": [
+  "computer",
+  "company",
+  "school"
+ ]
+}

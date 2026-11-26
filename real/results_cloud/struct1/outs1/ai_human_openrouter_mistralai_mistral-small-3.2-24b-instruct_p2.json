@@ -1,0 +1,105 @@
+{
+ "row": "ai_human",
+ "model": "openrouter:mistralai/mistral-small-3.2-24b-instruct",
+ "pair": 2,
+ "cells": {
+  "std|305": {
+   "default": {
+    "result": 0.0,
+    "resource": 1.354,
+    "R": 0.0,
+    "choices": {
+     "present|standard": 8
+    },
+    "failed_calls": 0,
+    "sec": 36.4
+   },
+   "rollout": {
+    "result": 0.2857142857142857,
+    "resource": 1.341,
+    "R": 0.2130606157451795,
+    "choices": {
+     "unit-0|rollout": 1,
+     "unit-1|rollout": 3,
+     "top|rollout": 4
+    },
+    "failed_calls": 0,
+    "sec": 11.8
+   },
+   "seed3v1": {
+    "result": 0.33333333333333337,
+    "resource": 0.738,
+    "R": 0.4516711833785005,
+    "choices": {
+     "unit-0|standard": 1,
+     "F:holomin-top|standard": 7
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 18.5
+   },
+   "structure": {
+    "result": 0.2857142857142857,
+    "resource": 1.339,
+    "R": 0.2133788541555532,
+    "choices": {
+     "unit-0|standard": 1,
+     "unit-1|standard": 3,
+     "top|standard": 4
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 8.7
+   },
+   "sec": 75
+  },
+  "std|306": {
+   "default": {
+    "result": 0.0,
+    "resource": 1.41,
+    "R": 0.0,
+    "choices": {
+     "present|standard": 8
+    },
+    "failed_calls": 0,
+    "sec": 37.0
+   },
+   "rollout": {
+    "result": 0.14285714285714285,
+    "resource": 1.396,
+    "R": 0.10233319688907082,
+    "choices": {
+     "unit-0|rollout": 2,
+     "top|rollout": 6
+    },
+    "failed_calls": 0,
+    "sec": 9.9
+   },
+   "seed3v1": {
+    "result": 0.0,
+    "resource": 0.718,
+    "R": 0.0,
+    "choices": {
+     "unit-0|standard": 1,
+     "F:holomin-top|standard": 7
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 21.5
+   },
+   "structure": {
+    "result": 0.14285714285714285,
+    "resource": 1.397,
+    "R": 0.10225994477962981,
+    "choices": {
+     "unit-0|standard": 2,
+     "top|standard": 6
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 8.8
+   },
+   "sec": 77
+  }
+ }
+}

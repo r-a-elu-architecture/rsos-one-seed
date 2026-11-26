@@ -1,0 +1,1111 @@
+{
+ "shades": {
+  "1": {
+   "node": "Law 2 blind operation",
+   "structs": {
+    "own": "d1a1g0b1",
+    "nb": "d1a1g1b1",
+    "glob": "d1a1g0b0",
+    "rnd_nb": "d1a1g1b1",
+    "rnd_own": "d1a1g1b0"
+   },
+   "P0": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.0467013888888887,
+    "p": 0.000244140625
+   },
+   "P5": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.029571759259259135,
+    "p": 0.000244140625
+   },
+   "channels_ok": 8,
+   "repeat": [
+    6,
+    6
+   ],
+   "transfer": {
+    "wins": 0,
+    "nonzero": 0,
+    "of": 12,
+    "mean": 0.0,
+    "p": 1.0
+   },
+   "holm_P0": 0.005126953125,
+   "holm_P5": 0.005126953125,
+   "m": {
+    "control": true,
+    "m1": true,
+    "m2": false,
+    "m3": true,
+    "m4": true,
+    "m5": true,
+    "m6": true
+   },
+   "green": false
+  },
+  "2": {
+   "node": "Network",
+   "structs": {
+    "own": "d1a1g1b1",
+    "nb": "d1a1g0b1",
+    "glob": "d1a1g0b0",
+    "rnd_nb": "d1a1g1b0",
+    "rnd_own": "d1a1g1b1"
+   },
+   "P0": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.04612268518518506,
+    "p": 0.000244140625
+   },
+   "P5": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.021342592592592486,
+    "p": 0.000244140625
+   },
+   "channels_ok": 10,
+   "repeat": [
+    6,
+    6
+   ],
+   "transfer": {
+    "wins": 7,
+    "nonzero": 9,
+    "of": 12,
+    "mean": 0.007604166666666736,
+    "p": 0.08984375
+   },
+   "holm_P0": 0.005126953125,
+   "holm_P5": 0.005126953125,
+   "m": {
+    "control": true,
+    "m1": true,
+    "m2": true,
+    "m3": true,
+    "m4": true,
+    "m5": true,
+    "m6": true
+   },
+   "green": true
+  },
+  "3": {
+   "node": "Networks, satellites",
+   "structs": {
+    "own": "d1a1g0b1",
+    "nb": "d1a1g0b1",
+    "glob": "d1a1g0b0",
+    "rnd_nb": "d0a1g1b1",
+    "rnd_own": "d1a0g1b1"
+   },
+   "P0": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.046967592592592554,
+    "p": 0.000244140625
+   },
+   "P5": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.014837962962963006,
+    "p": 0.000244140625
+   },
+   "channels_ok": 11,
+   "repeat": [
+    6,
+    6
+   ],
+   "transfer": {
+    "wins": 11,
+    "nonzero": 11,
+    "of": 12,
+    "mean": 0.010081018518518494,
+    "p": 0.00048828125
+   },
+   "holm_P0": 0.005126953125,
+   "holm_P5": 0.005126953125,
+   "m": {
+    "control": true,
+    "m1": true,
+    "m2": true,
+    "m3": true,
+    "m4": true,
+    "m5": true,
+    "m6": true
+   },
+   "green": true
+  },
+  "4": {
+   "node": "Physical comm layer",
+   "structs": {
+    "own": "d1a1g0b1",
+    "nb": "d1a1g0b0",
+    "glob": "d1a1g0b0",
+    "rnd_nb": "d1a0g0b1",
+    "rnd_own": "d0a1g1b1"
+   },
+   "P0": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.07206018518518516,
+    "p": 0.000244140625
+   },
+   "P5": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.039328703703703644,
+    "p": 0.000244140625
+   },
+   "channels_ok": 9,
+   "repeat": [
+    6,
+    6
+   ],
+   "transfer": {
+    "wins": 8,
+    "nonzero": 8,
+    "of": 12,
+    "mean": 0.023020833333333306,
+    "p": 0.00390625
+   },
+   "holm_P0": 0.005126953125,
+   "holm_P5": 0.005126953125,
+   "m": {
+    "control": true,
+    "m1": true,
+    "m2": false,
+    "m3": true,
+    "m4": true,
+    "m5": true,
+    "m6": true
+   },
+   "green": false
+  },
+  "5": {
+   "node": "Human reasoning",
+   "structs": {
+    "own": "d1a0g0b0",
+    "nb": "d1a1g0b1",
+    "glob": "d1a1g0b0",
+    "rnd_nb": "d1a1g1b0",
+    "rnd_own": "d0a0g1b0"
+   },
+   "P0": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.03530092592592594,
+    "p": 0.000244140625
+   },
+   "P5": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.03262731481481484,
+    "p": 0.000244140625
+   },
+   "channels_ok": 7,
+   "repeat": [
+    6,
+    6
+   ],
+   "transfer": {
+    "wins": 1,
+    "nonzero": 6,
+    "of": 12,
+    "mean": -0.022268518518518503,
+    "p": 0.984375
+   },
+   "holm_P0": 0.005126953125,
+   "holm_P5": 0.005126953125,
+   "m": {
+    "control": true,
+    "m1": true,
+    "m2": false,
+    "m3": true,
+    "m4": true,
+    "m5": true,
+    "m6": true
+   },
+   "green": false
+  },
+  "6": {
+   "node": "Physics (layer 2)",
+   "structs": {
+    "own": "d1a1g1b1",
+    "nb": "d1a0g0b0",
+    "glob": "d1a1g0b0",
+    "rnd_nb": "d0a0g1b0",
+    "rnd_own": "d1a1g1b1"
+   },
+   "P0": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.06872685185185173,
+    "p": 0.000244140625
+   },
+   "P5": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.03549768518518507,
+    "p": 0.000244140625
+   },
+   "channels_ok": 11,
+   "repeat": [
+    6,
+    6
+   ],
+   "transfer": {
+    "wins": 9,
+    "nonzero": 10,
+    "of": 12,
+    "mean": 0.03592592592592586,
+    "p": 0.0107421875
+   },
+   "holm_P0": 0.005126953125,
+   "holm_P5": 0.005126953125,
+   "m": {
+    "control": true,
+    "m1": true,
+    "m2": true,
+    "m3": true,
+    "m4": true,
+    "m5": true,
+    "m6": true
+   },
+   "green": true
+  },
+  "7": {
+   "node": "Ledgers, finance",
+   "structs": {
+    "own": "d1a0g0b0",
+    "nb": "d1a1g1b0",
+    "glob": "d1a1g0b0",
+    "rnd_nb": "d0a1g1b1",
+    "rnd_own": "d0a1g0b0"
+   },
+   "P0": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.05956018518518513,
+    "p": 0.000244140625
+   },
+   "P5": {
+    "wins": 11,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.03254629629629621,
+    "p": 0.003173828125
+   },
+   "channels_ok": 9,
+   "repeat": [
+    5,
+    6
+   ],
+   "transfer": {
+    "wins": 8,
+    "nonzero": 8,
+    "of": 12,
+    "mean": 0.06186342592592594,
+    "p": 0.00390625
+   },
+   "holm_P0": 0.005126953125,
+   "holm_P5": 0.0380859375,
+   "m": {
+    "control": true,
+    "m1": true,
+    "m2": false,
+    "m3": true,
+    "m4": true,
+    "m5": true,
+    "m6": true
+   },
+   "green": false
+  },
+  "8": {
+   "node": "Chemistry",
+   "structs": {
+    "own": "d1a1g0b0",
+    "nb": "d1a0g0b0",
+    "glob": "d1a1g0b0",
+    "rnd_nb": "d0a0g1b0",
+    "rnd_own": "d1a0g0b1"
+   },
+   "P0": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.03254629629629632,
+    "p": 0.000244140625
+   },
+   "P5": {
+    "wins": 10,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.00995370370370377,
+    "p": 0.019287109375
+   },
+   "channels_ok": 12,
+   "repeat": [
+    6,
+    4
+   ],
+   "transfer": {
+    "wins": 3,
+    "nonzero": 6,
+    "of": 12,
+    "mean": 0.006874999999999946,
+    "p": 0.65625
+   },
+   "holm_P0": 0.005126953125,
+   "holm_P5": 0.173583984375,
+   "m": {
+    "control": true,
+    "m1": true,
+    "m2": true,
+    "m3": false,
+    "m4": true,
+    "m5": true,
+    "m6": true
+   },
+   "green": false
+  },
+  "9": {
+   "node": "Databases",
+   "structs": {
+    "own": "d1a1g0b0",
+    "nb": "d1a1g1b0",
+    "glob": "d1a1g0b0",
+    "rnd_nb": "d1a1g0b1",
+    "rnd_own": "d1a0g1b0"
+   },
+   "P0": {
+    "wins": 11,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.025231481481481428,
+    "p": 0.003173828125
+   },
+   "P5": {
+    "wins": 11,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.024097222222222187,
+    "p": 0.003173828125
+   },
+   "channels_ok": 8,
+   "repeat": [
+    6,
+    5
+   ],
+   "transfer": {
+    "wins": 9,
+    "nonzero": 9,
+    "of": 12,
+    "mean": 0.06113425925925927,
+    "p": 0.001953125
+   },
+   "holm_P0": 0.009521484375,
+   "holm_P5": 0.0380859375,
+   "m": {
+    "control": true,
+    "m1": true,
+    "m2": false,
+    "m3": true,
+    "m4": true,
+    "m5": true,
+    "m6": true
+   },
+   "green": false
+  },
+  "10": {
+   "node": "AI chips (layer 2)",
+   "structs": {
+    "own": "d1a1g1b1",
+    "nb": "d1a1g0b0",
+    "glob": "d1a1g0b0",
+    "rnd_nb": "d0a1g1b0",
+    "rnd_own": "d1a1g1b1"
+   },
+   "P0": {
+    "wins": 11,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.022430555555555464,
+    "p": 0.003173828125
+   },
+   "P5": {
+    "wins": 11,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.022430555555555464,
+    "p": 0.003173828125
+   },
+   "channels_ok": 7,
+   "repeat": [
+    6,
+    5
+   ],
+   "transfer": {
+    "wins": 6,
+    "nonzero": 9,
+    "of": 12,
+    "mean": 0.009664351851851827,
+    "p": 0.25390625
+   },
+   "holm_P0": 0.009521484375,
+   "holm_P5": 0.0380859375,
+   "m": {
+    "control": true,
+    "m1": true,
+    "m2": false,
+    "m3": true,
+    "m4": true,
+    "m5": true,
+    "m6": true
+   },
+   "green": false
+  },
+  "11": {
+   "node": "Earth and space",
+   "structs": {
+    "own": "d1a1g0b1",
+    "nb": "d1a1g1b1",
+    "glob": "d1a1g0b0",
+    "rnd_nb": "d1a1g1b1",
+    "rnd_own": "d1a1g1b0"
+   },
+   "P0": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.027164351851851926,
+    "p": 0.000244140625
+   },
+   "P5": {
+    "wins": 9,
+    "nonzero": 11,
+    "of": 12,
+    "mean": 0.006678240740740711,
+    "p": 0.03271484375
+   },
+   "channels_ok": 12,
+   "repeat": [
+    6,
+    3
+   ],
+   "transfer": {
+    "wins": 0,
+    "nonzero": 0,
+    "of": 12,
+    "mean": 0.0,
+    "p": 1.0
+   },
+   "holm_P0": 0.005126953125,
+   "holm_P5": 0.1962890625,
+   "m": {
+    "control": true,
+    "m1": true,
+    "m2": true,
+    "m3": false,
+    "m4": true,
+    "m5": false,
+    "m6": true
+   },
+   "green": false
+  },
+  "12": {
+   "node": "Cosmology",
+   "structs": {
+    "own": "d1a1g1b1",
+    "nb": "d1a1g1b1",
+    "glob": "d1a1g0b0",
+    "rnd_nb": "d1a1g1b1",
+    "rnd_own": "d1a1g1b1"
+   },
+   "P0": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.06177083333333324,
+    "p": 0.000244140625
+   },
+   "P5": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.029224537037036914,
+    "p": 0.000244140625
+   },
+   "channels_ok": 11,
+   "repeat": [
+    6,
+    6
+   ],
+   "transfer": {
+    "wins": 0,
+    "nonzero": 0,
+    "of": 12,
+    "mean": 0.0,
+    "p": 1.0
+   },
+   "holm_P0": 0.005126953125,
+   "holm_P5": 0.005126953125,
+   "m": {
+    "control": true,
+    "m1": true,
+    "m2": true,
+    "m3": true,
+    "m4": true,
+    "m5": true,
+    "m6": true
+   },
+   "green": true
+  },
+  "13": {
+   "node": "Biology, medicine",
+   "structs": {
+    "own": "d1a1g1b1",
+    "nb": "d1a1g1b1",
+    "glob": "d1a1g0b0",
+    "rnd_nb": "d1a1g1b1",
+    "rnd_own": "d1a1g1b1"
+   },
+   "P0": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.021967592592592632,
+    "p": 0.000244140625
+   },
+   "P5": {
+    "wins": 10,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.004675925925925982,
+    "p": 0.019287109375
+   },
+   "channels_ok": 11,
+   "repeat": [
+    5,
+    5
+   ],
+   "transfer": {
+    "wins": 0,
+    "nonzero": 0,
+    "of": 12,
+    "mean": 0.0,
+    "p": 1.0
+   },
+   "holm_P0": 0.005126953125,
+   "holm_P5": 0.173583984375,
+   "m": {
+    "control": true,
+    "m1": true,
+    "m2": true,
+    "m3": false,
+    "m4": true,
+    "m5": true,
+    "m6": true
+   },
+   "green": false
+  },
+  "14": {
+   "node": "Level E (layer 2)",
+   "structs": {
+    "own": "d1a1g1b1",
+    "nb": "d1a1g1b0",
+    "glob": "d1a1g0b0",
+    "rnd_nb": "d1a0g1b1",
+    "rnd_own": "d1a1g1b1"
+   },
+   "P0": {
+    "wins": 8,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.012314814814814778,
+    "p": 0.19384765625
+   },
+   "P5": {
+    "wins": 8,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.012314814814814778,
+    "p": 0.19384765625
+   },
+   "channels_ok": 7,
+   "repeat": [
+    4,
+    4
+   ],
+   "transfer": {
+    "wins": 3,
+    "nonzero": 5,
+    "of": 12,
+    "mean": 0.005474537037037023,
+    "p": 0.5
+   },
+   "holm_P0": 0.19384765625,
+   "holm_P5": 0.775390625,
+   "m": {
+    "control": true,
+    "m1": false,
+    "m2": false,
+    "m3": false,
+    "m4": true,
+    "m5": true,
+    "m6": true
+   },
+   "green": false
+  },
+  "15": {
+   "node": "Law 1 read scope",
+   "structs": {
+    "own": "d1a1g0b0",
+    "nb": "d1a1g1b1",
+    "glob": "d1a1g0b0",
+    "rnd_nb": "d1a1g1b1",
+    "rnd_own": "d0a0g1b1"
+   },
+   "P0": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.01594907407407405,
+    "p": 0.000244140625
+   },
+   "P5": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.008263888888888885,
+    "p": 0.000244140625
+   },
+   "channels_ok": 10,
+   "repeat": [
+    6,
+    6
+   ],
+   "transfer": {
+    "wins": 0,
+    "nonzero": 0,
+    "of": 12,
+    "mean": 0.0,
+    "p": 1.0
+   },
+   "holm_P0": 0.005126953125,
+   "holm_P5": 0.005126953125,
+   "m": {
+    "control": true,
+    "m1": true,
+    "m2": true,
+    "m3": true,
+    "m4": true,
+    "m5": true,
+    "m6": true
+   },
+   "green": true
+  },
+  "16": {
+   "node": "Linguistics",
+   "structs": {
+    "own": "d1a1g1b1",
+    "nb": "d1a1g0b0",
+    "glob": "d1a1g0b0",
+    "rnd_nb": "d1a0g0b1",
+    "rnd_own": "d1a1g1b1"
+   },
+   "P0": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.014224537037037058,
+    "p": 0.000244140625
+   },
+   "P5": {
+    "wins": 4,
+    "nonzero": 12,
+    "of": 12,
+    "mean": -0.0017013888888888866,
+    "p": 0.927001953125
+   },
+   "channels_ok": 12,
+   "repeat": [
+    2,
+    2
+   ],
+   "transfer": {
+    "wins": 11,
+    "nonzero": 11,
+    "of": 12,
+    "mean": 0.015902777777777804,
+    "p": 0.00048828125
+   },
+   "holm_P0": 0.005126953125,
+   "holm_P5": 1,
+   "m": {
+    "control": true,
+    "m1": true,
+    "m2": true,
+    "m3": false,
+    "m4": true,
+    "m5": false,
+    "m6": true
+   },
+   "green": false
+  },
+  "17": {
+   "node": "Level D",
+   "structs": {
+    "own": "d1a1g0b1",
+    "nb": "d1a1g0b0",
+    "glob": "d1a1g0b0",
+    "rnd_nb": "d1a0g0b1",
+    "rnd_own": "d1a1g0b1"
+   },
+   "P0": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.01570601851851856,
+    "p": 0.000244140625
+   },
+   "P5": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.008946759259259307,
+    "p": 0.000244140625
+   },
+   "channels_ok": 8,
+   "repeat": [
+    6,
+    6
+   ],
+   "transfer": {
+    "wins": 8,
+    "nonzero": 10,
+    "of": 12,
+    "mean": 0.0045023148148148244,
+    "p": 0.0546875
+   },
+   "holm_P0": 0.005126953125,
+   "holm_P5": 0.005126953125,
+   "m": {
+    "control": true,
+    "m1": true,
+    "m2": false,
+    "m3": true,
+    "m4": true,
+    "m5": true,
+    "m6": true
+   },
+   "green": false
+  },
+  "18": {
+   "node": "Protocol theory",
+   "structs": {
+    "own": "d1a1g0b0",
+    "nb": "d1a1g0b0",
+    "glob": "d1a1g0b0",
+    "rnd_nb": "d0a0g1b1",
+    "rnd_own": "d0a1g1b0"
+   },
+   "P0": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.013599537037037035,
+    "p": 0.000244140625
+   },
+   "P5": {
+    "wins": 8,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.007418981481481494,
+    "p": 0.19384765625
+   },
+   "channels_ok": 9,
+   "repeat": [
+    5,
+    3
+   ],
+   "transfer": {
+    "wins": 9,
+    "nonzero": 10,
+    "of": 12,
+    "mean": 0.014467592592592568,
+    "p": 0.0107421875
+   },
+   "holm_P0": 0.005126953125,
+   "holm_P5": 0.775390625,
+   "m": {
+    "control": true,
+    "m1": true,
+    "m2": false,
+    "m3": false,
+    "m4": true,
+    "m5": false,
+    "m6": true
+   },
+   "green": false
+  },
+  "19": {
+   "node": "Level B",
+   "structs": {
+    "own": "d1a1g0b0",
+    "nb": "d1a1g0b0",
+    "glob": "d1a1g0b0",
+    "rnd_nb": "d1a1g0b0",
+    "rnd_own": "d1a0g1b0"
+   },
+   "P0": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.013472222222222191,
+    "p": 0.000244140625
+   },
+   "P5": {
+    "wins": 9,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.007210648148148156,
+    "p": 0.072998046875
+   },
+   "channels_ok": 10,
+   "repeat": [
+    5,
+    4
+   ],
+   "transfer": {
+    "wins": 11,
+    "nonzero": 11,
+    "of": 12,
+    "mean": 0.012129629629629648,
+    "p": 0.00048828125
+   },
+   "holm_P0": 0.005126953125,
+   "holm_P5": 0.364990234375,
+   "m": {
+    "control": true,
+    "m1": true,
+    "m2": true,
+    "m3": false,
+    "m4": true,
+    "m5": true,
+    "m6": true
+   },
+   "green": false
+  },
+  "20": {
+   "node": "Information theory",
+   "structs": {
+    "own": "d1a1g1b1",
+    "nb": "d1a1g0b0",
+    "glob": "d1a1g0b0",
+    "rnd_nb": "d1a0g0b1",
+    "rnd_own": "d1a1g1b1"
+   },
+   "P0": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.012372685185185195,
+    "p": 0.000244140625
+   },
+   "P5": {
+    "wins": 5,
+    "nonzero": 11,
+    "of": 12,
+    "mean": -0.001747685185185227,
+    "p": 0.7255859375
+   },
+   "channels_ok": 12,
+   "repeat": [
+    3,
+    2
+   ],
+   "transfer": {
+    "wins": 10,
+    "nonzero": 10,
+    "of": 12,
+    "mean": 0.010266203703703689,
+    "p": 0.0009765625
+   },
+   "holm_P0": 0.005126953125,
+   "holm_P5": 1,
+   "m": {
+    "control": true,
+    "m1": true,
+    "m2": true,
+    "m3": false,
+    "m4": true,
+    "m5": false,
+    "m6": true
+   },
+   "green": false
+  },
+  "21": {
+   "node": "Operator algebra",
+   "structs": {
+    "own": "d1a1g0b0",
+    "nb": "d1a1g1b1",
+    "glob": "d1a1g0b0",
+    "rnd_nb": "d1a1g1b1",
+    "rnd_own": "d1a0g0b1"
+   },
+   "P0": {
+    "wins": 12,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.013043981481481457,
+    "p": 0.000244140625
+   },
+   "P5": {
+    "wins": 10,
+    "nonzero": 12,
+    "of": 12,
+    "mean": 0.004930555555555531,
+    "p": 0.019287109375
+   },
+   "channels_ok": 10,
+   "repeat": [
+    5,
+    5
+   ],
+   "transfer": {
+    "wins": 0,
+    "nonzero": 0,
+    "of": 12,
+    "mean": 0.0,
+    "p": 1.0
+   },
+   "holm_P0": 0.005126953125,
+   "holm_P5": 0.173583984375,
+   "m": {
+    "control": true,
+    "m1": true,
+    "m2": true,
+    "m3": false,
+    "m4": true,
+    "m5": true,
+    "m6": true
+   },
+   "green": false
+  }
+ },
+ "n_green": 5,
+ "control": {
+  "wins": 103,
+  "nonzero": 110,
+  "of": 252,
+  "mean": 0.012355048500881833,
+  "p": 2.6263547649022638e-23
+ },
+ "P14_transfer_A": {
+  "wins": 114,
+  "nonzero": 133,
+  "of": 252,
+  "mean": 0.01222111992945326,
+  "p": 5.275806890122021e-18
+ },
+ "claim_B_nb_vs_glob": {
+  "wins": 24,
+  "nonzero": 144,
+  "of": 252,
+  "mean": -0.009362874779541437,
+  "p": 1.0
+ },
+ "worlds": {
+  "WB": {
+   "wins": 19,
+   "nonzero": 21,
+   "of": 21,
+   "mean": 0.031117724867724888,
+   "p": 0.000110626220703125
+  },
+  "WC": {
+   "wins": 18,
+   "nonzero": 21,
+   "of": 21,
+   "mean": 0.02904761904761907,
+   "p": 0.0007448196411132812
+  }
+ },
+ "P8b": {
+  "wins": 245,
+  "nonzero": 252,
+  "of": 252,
+  "mean": 0.00699797451832034,
+  "p": 1.674137389489226e-63
+ },
+ "births": {
+  "wins": 4,
+  "nonzero": 12,
+  "of": 30,
+  "mean": 0.000703703703703736,
+  "p": 0.927001953125
+ },
+ "real": {
+  "control": {
+   "wins": 11,
+   "nonzero": 15,
+   "of": 24,
+   "mean": 0.04280376868096166,
+   "p": 0.05923461914062499
+  },
+  "transfer": {
+   "wins": 15,
+   "nonzero": 20,
+   "of": 24,
+   "mean": 0.09086257309941521,
+   "p": 0.020694732666015625
+  },
+  "tr_vs_best_native": {
+   "wins": 24,
+   "nonzero": 24,
+   "of": 24,
+   "mean": 0.10606319038336583,
+   "p": 5.960464477539063e-08
+  },
+  "own_vs_best_native": {
+   "wins": 20,
+   "nonzero": 24,
+   "of": 24,
+   "mean": 0.09314489928525015,
+   "p": 0.000771939754486084
+  },
+  "structs": [
+   [
+    "cancer",
+    "10111",
+    "11011"
+   ],
+   [
+    "digits",
+    "11100",
+    "11011"
+   ],
+   [
+    "wine",
+    "11011",
+    "11110"
+   ]
+  ]
+ }
+}

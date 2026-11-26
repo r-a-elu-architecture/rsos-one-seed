@@ -1,0 +1,32 @@
+cell 1 seed     result 0.64408 resource 240 R 2.6837e-03 [STAND-IN (interface check only)] choices {'latent|standard': 1, 'present|own': 51, 'latent|own': 4, 'focus_shank0|own': 2, 'past-1|own': 2}
+cell 1 default  result 0.64801 resource 240 R 2.7001e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 1 uniform  result 0.26149 resource 240 R 1.0896e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 1 time 9.1s
+cell 2 seed     result 0.27969 resource 240 R 1.1654e-03 [STAND-IN (interface check only)] choices {'present|standard': 1, 'focus_shank3|own': 6, 'latent|own': 12, 'present|own': 10, 'past-2|own': 10, 'focus_shank2|own': 5, 'focus_shank1|own': 7, 'past-1|own': 6, 'focus_shank0|own': 3}
+cell 2 default  result 0.27674 resource 240 R 1.1531e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 2 uniform  result 0.14518 resource 240 R 6.0491e-04 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 2 time 9.2s
+cell 3 seed     result 0.26500 resource 240 R 1.1041e-03 [STAND-IN (interface check only)] choices {'present|standard': 1, 'focus_shank2|own': 5, 'focus_shank3|own': 6, 'past-2|own': 7, 'present|own': 21, 'focus_shank0|own': 10, 'past-1|own': 5, 'latent|own': 4, 'focus_shank1|own': 1}
+cell 3 default  result 0.30576 resource 240 R 1.2740e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 3 uniform  result 0.14288 resource 240 R 5.9533e-04 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 3 time 9.0s
+cell 4 seed     result 0.29510 resource 240 R 1.2296e-03 [STAND-IN (interface check only)] choices {'present|standard': 1, 'latent|own': 10, 'past-1|own': 11, 'present|own': 15, 'past-2|own': 11, 'focus_shank0|own': 1, 'future+1|own': 2, 'focus_shank2|standard': 1, 'focus_shank2|own': 3, 'focus_shank3|own': 2, 'past-1|standard': 2, 'focus_shank1|own': 1}
+cell 4 default  result 0.30947 resource 240 R 1.2894e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 4 uniform  result 0.17175 resource 240 R 7.1563e-04 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 4 time 9.0s
+cell 5 seed     result 0.39487 resource 240 R 1.6453e-03 [STAND-IN (interface check only)] choices {'focus_shank3|standard': 1, 'present|own': 35, 'focus_shank0|own': 2, 'latent|own': 7, 'past-2|own': 3, 'past-1|own': 7, 'focus_shank3|own': 3, 'focus_shank1|own': 2}
+cell 5 default  result 0.41364 resource 240 R 1.7235e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 5 uniform  result 0.25649 resource 240 R 1.0687e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 5 time 8.7s
+cell 6 seed     result 0.56049 resource 240 R 2.3354e-03 [STAND-IN (interface check only)] choices {'present|standard': 1, 'present|own': 24, 'focus_shank3|standard': 4, 'past-2|own': 5, 'focus_shank2|standard': 6, 'past-1|own': 4, 'focus_shank0|own': 2, 'latent|own': 4, 'focus_shank3|own': 4, 'focus_shank1|own': 1, 'focus_shank2|own': 3, 'future+1|own': 1, 'past-1|standard': 1}
+cell 6 default  result 0.57360 resource 240 R 2.3900e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 6 uniform  result 0.48798 resource 240 R 2.0333e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 6 time 9.1s
+cell 7 seed     result 0.42380 resource 240 R 1.7658e-03 [STAND-IN (interface check only)] choices {'latent|standard': 1, 'present|own': 23, 'latent|own': 7, 'past-1|own': 8, 'focus_shank0|own': 1, 'past-2|own': 10, 'focus_shank2|own': 5, 'focus_shank3|own': 2, 'focus_shank1|own': 3}
+cell 7 default  result 0.44648 resource 240 R 1.8604e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 7 uniform  result 0.30891 resource 240 R 1.2871e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 7 time 9.6s
+cell 8 seed     result 0.40469 resource 240 R 1.6862e-03 [STAND-IN (interface check only)] choices {'latent|standard': 1, 'focus_shank3|own': 5, 'past-2|own': 3, 'present|own': 26, 'focus_shank2|own': 3, 'latent|own': 9, 'past-1|own': 5, 'focus_shank1|own': 3, 'focus_shank0|own': 5}
+cell 8 default  result 0.43755 resource 240 R 1.8231e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 8 uniform  result 0.27077 resource 240 R 1.1282e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 8 time 9.1s

@@ -1,0 +1,49 @@
+{
+ "row": "space",
+ "model": "-",
+ "cells_run": [
+  511
+ ],
+ "generated": false,
+ "cells": {
+  "std|511": {
+   "default": {
+    "result": 551.0068175504637,
+    "resource": 15599.051350381524,
+    "R": 0.03532309787139633,
+    "choices": {
+     "present|standard": 24
+    },
+    "sec": 0.1
+   },
+   "seed3v1": {
+    "result": 559.7791395578049,
+    "resource": 18130.893305900438,
+    "R": 0.030874327597285724,
+    "choices": {
+     "F:holo-plan|policy": 8,
+     "future+1|standard": 1,
+     "F:holo-carry|policy": 7,
+     "past-2|standard": 2,
+     "P3:repair-partial|standard": 1,
+     "P4P5:exact-planner|policy": 2,
+     "past-1|standard": 1,
+     "F:holo-carry|standard": 1,
+     "past-1|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 5523.6
+   },
+   "strongest": {
+    "result": 555.0197513478306,
+    "resource": 18126.1902409779,
+    "R": 0.030619768631419127,
+    "choices": {
+     "present|standard": 24
+    },
+    "sec": 58.1
+   },
+   "sec": 5582
+  }
+ }
+}

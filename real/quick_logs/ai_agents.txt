@@ -1,0 +1,17 @@
+ai_agents  model mock:0
+standard=react    cell 1 seed    result 0.750  resource 11.56  R 0.0649
+standard=react    cell 1 default result 0.750  resource 10.06  R 0.0746
+standard=react    cell 2 seed    result 1.000  resource 12.78  R 0.0782
+standard=react    cell 2 default result 1.000  resource 11.03  R 0.0907
+standard=react    cell 3 seed    result 0.750  resource 8.40  R 0.0893
+standard=react    cell 3 default result 0.750  resource 7.15  R 0.1049
+standard=react    cell 4 seed    result 0.750  resource 7.59  R 0.0988
+standard=react    cell 4 default result 0.750  resource 6.34  R 0.1183
+standard=selfcons cell 1 seed    result 0.750  resource 16.44  R 0.0456
+standard=selfcons cell 1 default result 0.750  resource 29.05  R 0.0258
+standard=selfcons cell 2 seed    result 1.000  resource 29.28  R 0.0342
+standard=selfcons cell 2 default result 1.000  resource 31.96  R 0.0313
+standard=selfcons cell 3 seed    result 0.500  resource 20.02  R 0.0250
+standard=selfcons cell 3 default result 0.750  resource 30.99  R 0.0242
+standard=selfcons cell 4 seed    result 0.750  resource 14.25  R 0.0526
+standard=selfcons cell 4 default result 0.750  resource 25.81  R 0.0291

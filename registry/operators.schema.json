@@ -1,0 +1,189 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://github.com/r-a-elu-architecture/RSOS-Language/registry/operators.schema.json",
+ "title": "RSOS operator registry",
+ "type": "object",
+ "required": [
+  "registry_version",
+  "core_version",
+  "status_ladder",
+  "publication_rule",
+  "entries"
+ ],
+ "properties": {
+  "registry_version": {
+   "type": "string"
+  },
+  "core_version": {
+   "type": "string"
+  },
+  "status_ladder": {
+   "const": [
+    "proposed",
+    "specified",
+    "implemented",
+    "tested",
+    "executed"
+   ]
+  },
+  "publication_rule": {
+   "type": "string"
+  },
+  "schema": {
+   "type": "string"
+  },
+  "entries": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "tech_name",
+     "symbolic_name",
+     "kind",
+     "signature",
+     "semantics",
+     "errors",
+     "deterministic",
+     "target",
+     "status",
+     "evidence",
+     "tests",
+     "safety_class",
+     "origin",
+     "since"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^(C|U|X)-?\\d+$"
+     },
+     "tech_name": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+     },
+     "symbolic_name": {
+      "type": "string"
+     },
+     "aliases": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "kind": {
+      "enum": [
+       "operation",
+       "function"
+      ]
+     },
+     "signature": {
+      "type": "string"
+     },
+     "semantics": {
+      "type": "string"
+     },
+     "preconditions": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "postconditions": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "errors": {
+      "type": "array",
+      "items": {
+       "enum": [
+        "E_PARSE",
+        "E_NOT_KEY",
+        "E_EMPTY",
+        "E_MISSING_KEY",
+        "E_NOT_INTEGER",
+        "E_FRACTION"
+       ]
+      }
+     },
+     "deterministic": {
+      "type": "boolean"
+     },
+     "familiar_equivalent": {
+      "type": "string"
+     },
+     "target": {
+      "type": "array",
+      "items": {
+       "enum": [
+        "state_runtime",
+        "simulation",
+        "cue_framework"
+       ]
+      }
+     },
+     "status": {
+      "enum": [
+       "proposed",
+       "specified",
+       "implemented",
+       "tested",
+       "executed"
+      ]
+     },
+     "evidence": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "id",
+        "report"
+       ],
+       "properties": {
+        "id": {
+         "type": "string"
+        },
+        "report": {
+         "type": "string"
+        }
+       }
+      }
+     },
+     "evidence_note": {
+      "type": "string"
+     },
+     "measured_uses_a7_a8": {
+      "type": [
+       "integer",
+       "null"
+      ]
+     },
+     "tests": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "safety_class": {
+      "enum": [
+       "machine",
+       "person_facing"
+      ]
+     },
+     "origin": {
+      "type": "object"
+     },
+     "since": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "interfaces": {
+   "type": "array"
+  }
+ }
+}

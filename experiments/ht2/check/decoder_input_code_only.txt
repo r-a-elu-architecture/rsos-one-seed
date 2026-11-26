@@ -1,0 +1,64 @@
+M1:
+MODEL robot.head = associated + confidence + analogical_reasoning FOR decision_making
+
+M2:
+MODEL robot.hand = top_view + dissociated + future_pacing FOR action
+
+M3:
+DEDICATE couch TO hypothesis_testing
+FORM couch DIRECTIONS forward -> hypothesis ; backward -> contradiction
+
+M4:
+ROOM eagle PERSPECTIVE above
+OBJECT calculator IN eagle
+MODEL calculator = top_view IN eagle FOR decision_making
+SELECTMODEL calculator BY trigger
+PROPERTY calculator.trigger = "before any money decision"
+
+M5:
+MODEL microwave.palm = calmness FOR state_anchor
+MODEL microwave.top = deep_work + tunnel_image FOR state_anchor
+
+M6:
+TRANSPLANT rocket_heart TO team.heart DEPTH structure ORDER 1 GAIN efficiency
+
+M7:
+PROPERTY white_dragon.light = golden
+PROPERTY white_dragon.style = lion
+PIERCE white_dragon THROUGH sphere
+PROPERTY sphere.order = 2
+PROPERTY sphere.depth = structure
+HEAL robot.leg BY rocket_heart
+
+M8:
+MODEL robot.head = dissociated + determination + contradiction FOR action
+FLOW rocket_heart DIRECTION inward TO team
+PROPERTY team.depth = inside
+PROPERTY team.gain = efficiency
+
+M9:
+DEDICATE couch TO decision_making
+FORM couch DIRECTIONS forward -> analogical_reasoning ; down -> future_pacing
+TRANSPLANT sphere TO team ORDER 3
+
+M10:
+ROOM owl PERSPECTIVE associated
+OBJECT calculator IN owl
+MODEL calculator = associated + relief + hypothesis IN owl FOR state_anchor
+SELECTMODEL calculator BY trigger
+PROPERTY calculator.trigger = "after lunch"
+
+M11:
+MODEL microwave.palm = confidence + hologram FOR hypothesis_testing
+MODEL microwave.top = calmness FOR state_anchor
+PROPERTY white_dragon.particles = green
+PROPERTY white_dragon.style = tiger
+BEAM white_dragon DIRECTION up TO team
+PROPERTY team.depth = surface
+
+M12:
+ROOM eagle PERSPECTIVE above
+MODEL robot.leg = top_view + deep_work + tunnel_image IN eagle FOR action
+PROPERTY robot.leg.order = 4
+WRAP team AROUND rocket_heart
+COMPRESS robot.hand, couch AS hand_symbol

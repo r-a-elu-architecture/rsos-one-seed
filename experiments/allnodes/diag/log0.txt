@@ -1,0 +1,7 @@
+diag 3
+diag 7
+diag 11
+diag 14
+diag 16
+diag 18
+diag 20

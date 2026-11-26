@@ -1,0 +1,48 @@
+cell 1 seed        result 284.07 resource 11340.3 lost 11.0 choices={'land_withheld': 12, 'land_retargeted': 3, 'present|standard': 14, 'future+1|standard': 3, 'past-1|standard': 3, 'future+2|standard': 1, 'focus_bulk|standard': 3, 'present|own': 3}
+cell 1 seed_noland result 282.85 resource 11343.1 lost 9.9 choices={'present|standard': 15, 'future+1|standard': 3, 'future+1|own': 1, 'future+2|standard': 3, 'focus_bulk|own': 1, 'present|own': 2, 'focus_bulk|standard': 2}
+cell 1 rollout     result 284.65 resource 11568.1 lost 9.9 choices={'present|standard': 18, 'focus_science|rollout': 3, 'focus_bulk|rollout': 6}
+cell 1 default     result 282.68 resource 10821.6 lost 9.9 stand_in=True
+cell 1 strongest   result 281.61 resource 11856.7 lost 9.9 choices={'present|standard': 27}
+cell 1 pass(result > default / > strongest): seed=WIN/WIN seed_noland=WIN/WIN rollout=WIN/WIN strongest=no/- time 13.0s
+cell 2 seed        result 328.41 resource 11963.7 lost 23.2 choices={'land_withheld': 13, 'land_retargeted': 6, 'present|standard': 15, 'future+1|standard': 2, 'past-1|standard': 2, 'future+2|standard': 5, 'past-2|standard': 1, 'focus_science|standard': 2, 'present|own': 1}
+cell 2 seed_noland result 328.41 resource 11969.7 lost 22.0 choices={'present|standard': 15, 'future+1|standard': 3, 'future+2|own': 1, 'future+2|standard': 2, 'focus_science|standard': 5, 'focus_bulk|standard': 1, 'present|own': 1}
+cell 2 rollout     result 325.49 resource 11101.0 lost 23.8 choices={'present|standard': 20, 'focus_bulk|rollout': 2, 'focus_science|rollout': 5, 'focus_alert|rollout': 1}
+cell 2 default     result 320.70 resource 10758.4 lost 29.8 stand_in=True
+cell 2 strongest   result 328.74 resource 12663.7 lost 23.2 choices={'present|standard': 28}
+cell 2 pass(result > default / > strongest): seed=WIN/no seed_noland=WIN/no rollout=WIN/no strongest=WIN/- time 12.4s
+cell 3 seed        result 399.17 resource 11646.0 lost 20.7 choices={'land_withheld': 16, 'land_retargeted': 2, 'focus_bulk|standard': 3, 'present|standard': 12, 'focus_science|standard': 5, 'future+2|standard': 3, 'future+1|standard': 2, 'past-2|standard': 1, 'present|own': 1}
+cell 3 seed_noland result 399.67 resource 11863.8 lost 19.5 choices={'focus_bulk|standard': 3, 'present|standard': 10, 'focus_science|standard': 6, 'future+2|standard': 4, 'future+1|standard': 2, 'future+1|own': 1, 'present|own': 1}
+cell 3 rollout     result 397.08 resource 11341.4 lost 19.5 choices={'focus_bulk|rollout': 4, 'present|standard': 15, 'focus_science|rollout': 8}
+cell 3 default     result 393.66 resource 9972.9 lost 20.7 stand_in=True
+cell 3 strongest   result 397.43 resource 12122.3 lost 20.7 choices={'present|standard': 27}
+cell 3 pass(result > default / > strongest): seed=WIN/WIN seed_noland=WIN/WIN rollout=WIN/no strongest=WIN/- time 19.8s
+cell 4 seed        result 400.55 resource 12595.6 lost 11.6 choices={'land_withheld': 18, 'land_retargeted': 7, 'present|standard': 8, 'future+1|standard': 7, 'focus_science|standard': 5, 'focus_bulk|standard': 2, 'future+2|standard': 2, 'past-1|standard': 2, 'present|own': 2}
+cell 4 seed_noland result 398.64 resource 12204.3 lost 11.6 choices={'present|standard': 14, 'future+1|standard': 4, 'focus_science|standard': 5, 'future+2|standard': 3, 'future+1|own': 1, 'present|own': 1}
+cell 4 rollout     result 398.36 resource 12264.8 lost 11.6 choices={'present|standard': 17, 'focus_science|rollout': 10, 'focus_bulk|rollout': 1}
+cell 4 default     result 393.19 resource 11549.8 lost 15.3 stand_in=True
+cell 4 strongest   result 394.59 resource 13380.0 lost 11.6 choices={'present|standard': 28}
+cell 4 pass(result > default / > strongest): seed=WIN/WIN seed_noland=WIN/WIN rollout=WIN/WIN strongest=WIN/- time 56.4s
+cell 5 seed        result 439.63 resource 12589.5 lost 45.1 choices={'land_withheld': 18, 'land_retargeted': 4, 'present|standard': 8, 'focus_bulk|standard': 4, 'present|own': 2, 'past-2|standard': 2, 'past-1|standard': 4, 'focus_science|standard': 3, 'future+1|standard': 1, 'future+2|standard': 2, 'urgent|own': 1}
+cell 5 seed_noland result 441.41 resource 12902.1 lost 45.1 choices={'present|standard': 11, 'focus_bulk|standard': 4, 'focus_science|own': 2, 'focus_science|standard': 3, 'future+1|standard': 2, 'future+2|standard': 2, 'urgent|standard': 1, 'present|own': 1, 'urgent|own': 1}
+cell 5 rollout     result 440.28 resource 12588.1 lost 45.1 choices={'present|standard': 14, 'focus_bulk|rollout': 4, 'focus_science|rollout': 8, 'urgent|rollout': 1}
+cell 5 default     result 429.65 resource 10690.5 lost 53.8 stand_in=True
+cell 5 strongest   result 434.14 resource 12816.5 lost 49.8 choices={'present|standard': 27}
+cell 5 pass(result > default / > strongest): seed=WIN/WIN seed_noland=WIN/WIN rollout=WIN/WIN strongest=WIN/- time 14.1s
+cell 6 seed        result 389.33 resource 12505.5 lost 1.3 choices={'land_withheld': 13, 'land_retargeted': 6, 'present|standard': 11, 'focus_science|standard': 4, 'present|own': 2, 'focus_bulk|standard': 3, 'future+2|standard': 1, 'future+1|own': 1, 'past-1|standard': 5}
+cell 6 seed_noland result 386.36 resource 11760.0 lost 1.3 choices={'present|standard': 13, 'focus_science|standard': 5, 'present|own': 2, 'focus_bulk|standard': 3, 'future+1|standard': 2, 'future+2|standard': 2}
+cell 6 rollout     result 384.88 resource 11401.4 lost 1.3 choices={'present|standard': 16, 'focus_science|rollout': 8, 'focus_bulk|rollout': 3}
+cell 6 default     result 381.90 resource 10546.6 lost 4.3 stand_in=True
+cell 6 strongest   result 391.61 resource 13472.0 lost 2.7 choices={'present|standard': 27}
+cell 6 pass(result > default / > strongest): seed=WIN/no seed_noland=WIN/no rollout=WIN/no strongest=WIN/- time 27.0s
+cell 7 seed        result 356.09 resource 12142.3 lost 0.0 choices={'land_withheld': 12, 'land_retargeted': 2, 'focus_bulk|standard': 2, 'present|own': 3, 'future+1|standard': 4, 'past-2|standard': 1, 'present|standard': 9, 'focus_science|standard': 5, 'past-1|standard': 2, 'future+2|standard': 1}
+cell 7 seed_noland result 356.24 resource 12937.2 lost 0.0 choices={'focus_bulk|standard': 7, 'present|own': 2, 'future+1|standard': 1, 'focus_science|standard': 3, 'present|standard': 6, 'future+2|standard': 8}
+cell 7 rollout     result 353.94 resource 12398.0 lost 0.0 choices={'focus_bulk|rollout': 7, 'present|standard': 13, 'focus_science|rollout': 7}
+cell 7 default     result 346.82 resource 10114.8 lost 1.7 stand_in=True
+cell 7 strongest   result 354.89 resource 12622.7 lost 0.0 choices={'present|standard': 27}
+cell 7 pass(result > default / > strongest): seed=WIN/WIN seed_noland=WIN/WIN rollout=WIN/no strongest=WIN/- time 7.5s
+cell 8 seed        result 363.62 resource 12523.3 lost 1.3 choices={'land_withheld': 25, 'land_retargeted': 5, 'present|standard': 11, 'focus_bulk|standard': 4, 'past-1|standard': 2, 'future+1|standard': 6, 'future+2|own': 1, 'future+2|standard': 2, 'present|own': 2}
+cell 8 seed_noland result 358.92 resource 12165.5 lost 0.0 choices={'present|standard': 17, 'future+2|standard': 2, 'focus_bulk|standard': 2, 'future+1|standard': 2, 'present|own': 3, 'focus_science|standard': 1, 'focus_science|own': 1}
+cell 8 rollout     result 360.19 resource 12548.2 lost 0.0 choices={'present|standard': 19, 'focus_bulk|rollout': 4, 'focus_science|rollout': 5}
+cell 8 default     result 352.36 resource 10724.4 lost 2.4 stand_in=True
+cell 8 strongest   result 360.78 resource 12307.9 lost 2.4 choices={'present|standard': 28}
+cell 8 pass(result > default / > strongest): seed=WIN/WIN seed_noland=WIN/no rollout=WIN/no strongest=WIN/- time 7.4s

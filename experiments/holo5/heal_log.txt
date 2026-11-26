@@ -1,0 +1,14 @@
+d=1: letters lit 3937, disagreeing letters read with all futures 1096
+d=2: letters lit 12817, disagreeing letters read with all futures 3666
+d=3: letters lit 26337, disagreeing letters read with all futures 7628
+d=4: letters lit 44831, disagreeing letters read with all futures 13139
+d=5: letters lit 68303, disagreeing letters read with all futures 20132
+{
+ "rules": {},
+ "n_letters_lit": 68303,
+ "n_letters_read": 20132,
+ "H": 60,
+ "EVERY": 3,
+ "n_rules_exact": 0,
+ "n_rules_tube": 0
+}

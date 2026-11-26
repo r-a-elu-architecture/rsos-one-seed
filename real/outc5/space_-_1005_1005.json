@@ -1,0 +1,44 @@
+{
+ "row": "space",
+ "model": "-",
+ "rsos_arm": "v1",
+ "cells_run": [
+  1005
+ ],
+ "cells": {
+  "1005": {
+   "default": {
+    "result": 488.5250920459447,
+    "resource": 13790.65140467228,
+    "choices": {
+     "present|standard": 24
+    },
+    "sec": 0.2
+   },
+   "rollout": {
+    "result": 493.0580144144011,
+    "resource": 14818.392031588539,
+    "choices": {
+     "present|standard": 18,
+     "focus_alert|rollout": 1,
+     "focus_science|rollout": 4,
+     "focus_bulk|rollout": 1
+    },
+    "sec": 0.8
+   },
+   "v1": {
+    "result": 498.0013995111908,
+    "resource": 16371.524461990171,
+    "choices": {
+     "F:holo-plan|policy": 7,
+     "F:holo-carry|policy": 13,
+     "F:holo-plan|standard": 1,
+     "focus_science|standard": 1,
+     "F:holo-carry|standard": 1,
+     "present|own": 1
+    },
+    "sec": 1920.7
+   }
+  }
+ }
+}

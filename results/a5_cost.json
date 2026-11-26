@@ -1,0 +1,1569 @@
+{
+ "code_commit": "fdc0e50d1e3cf0dea67008306ec3658172e586c1",
+ "experiment": "a5_cost",
+ "numpy": "2.5.3",
+ "predictions": {
+  "K1": {
+   "api (primary)": {
+    "ratios": {
+     "S1": {
+      "alt-fable-5-2": 0.5814130830755178,
+      "alt-sonnet-5-5": 0.5814130830755178,
+      "haiku-5-5": 0.5814130830755178
+     },
+     "S2": {
+      "alt-fable-5-2": 0.8278297481937776,
+      "alt-sonnet-5-5": 0.8278297481937776,
+      "haiku-5-5": 0.8278297481937777
+     }
+    },
+    "verdict": "fail"
+   },
+   "billed": {
+    "ratios": {
+     "S1": {
+      "alt-fable-5-2": 0.5770645955576247,
+      "alt-sonnet-5-5": 0.5774895845339096,
+      "haiku-5-5": 0.57833926491988
+     },
+     "S2": {
+      "alt-fable-5-2": 0.6432464884493226,
+      "alt-sonnet-5-5": 0.6456068587148573,
+      "haiku-5-5": 0.6503273546379719
+     }
+    },
+    "verdict": "fail"
+   }
+  },
+  "K1_secondary_X5": {
+   "api": {
+    "ratios": {
+     "S1": {
+      "alt-fable-5-2": 0.26807065143515824,
+      "alt-sonnet-5-5": 0.26807065143515824,
+      "haiku-5-5": 0.26807065143515824
+     },
+     "S2": {
+      "alt-fable-5-2": 0.354448795032684,
+      "alt-sonnet-5-5": 0.354448795032684,
+      "haiku-5-5": 0.354448795032684
+     }
+    },
+    "verdict": "fail"
+   },
+   "billed": {
+    "ratios": {
+     "S1": {
+      "alt-fable-5-2": 0.17212035296659886,
+      "alt-sonnet-5-5": 0.17228623922494038,
+      "haiku-5-5": 0.17261789559223473
+     },
+     "S2": {
+      "alt-fable-5-2": 0.19916646110790487,
+      "alt-sonnet-5-5": 0.19955905846505578,
+      "haiku-5-5": 0.2003442124940303
+     }
+    },
+    "verdict": "fail"
+   }
+  },
+  "K2": {
+   "S1": {
+    "B1_calls": 43.125,
+    "X1s_calls": 22.0625,
+    "ratio": 0.5115942028985507
+   },
+   "S2": {
+    "B1_calls": 42.125,
+    "X1s_calls": 26.5,
+    "ratio": 0.629080118694362
+   },
+   "verdict": "fail"
+  },
+  "K3": {
+   "S1": {
+    "B1_out": 5497.5,
+    "X2_out": 1997.0625,
+    "ratio": 0.3632673942701228
+   },
+   "S2": {
+    "B1_out": 4169.8125,
+    "X2_out": 2238.9375,
+    "ratio": 0.5369396105940015
+   },
+   "verdict": "fail"
+  },
+  "K4": {
+   "S1": {
+    "B1_exact": 16,
+    "exact": 15,
+    "replica": 15,
+    "tasks": 16
+   },
+   "S2": {
+    "B1_exact": 15,
+    "exact": 15,
+    "replica": 15,
+    "tasks": 16
+   },
+   "verdict": "fail"
+  },
+  "K4_secondary_X5": {
+   "S1": {
+    "B1_exact": 16,
+    "exact": 16,
+    "replica": 16,
+    "tasks": 16
+   },
+   "S2": {
+    "B1_exact": 15,
+    "exact": 16,
+    "replica": 16,
+    "tasks": 16
+   },
+   "verdict": "pass"
+  },
+  "K5": {
+   "B1_traced": 0,
+   "traced": 0,
+   "verdict": "pass"
+  },
+  "K5_secondary_X5": {
+   "B1_traced": 0,
+   "traced": 0,
+   "verdict": "pass"
+  },
+  "K6": {
+   "S1": {
+    "dev": -0.11815784426543918,
+    "live": 0.004597925,
+    "offline": 0.005214
+   },
+   "S2": {
+    "dev": -0.09297729434141688,
+    "live": 0.0038149375,
+    "offline": 0.004206
+   },
+   "verdict": "pass"
+  }
+ },
+ "prices": {
+  "alt_sheet_note": "All three first-party sheets share output/input = 5; they differ in cache economics (read 0.1x, 0.05x, 0.025x input). An RSOS-vs-B1 ratio can change across sheets only through the token-class mix.",
+  "batch_discount": 0.5,
+  "batch_note": "50% on input and output (pricing page, Batch processing). The A5 pipelines are sequential (each call depends on the previous call's result), so the runs do not qualify; a batch-priced sensitivity multiplies every arm by 0.5 and leaves every ratio unchanged.",
+  "checked_utc": "2026-11-18T00:31:12Z",
+  "run_time_sheet": "haiku-5-5",
+  "sheets": {
+   "alt-fable-5-2": {
+    "cache_read": 0.2,
+    "cache_write_1h": 16.0,
+    "cache_write_5m": 10.0,
+    "input": 8.0,
+    "model": "claude-fable-5-2",
+    "note": "cache read 0.025x input",
+    "output": 40.0
+   },
+   "alt-sonnet-5-5": {
+    "cache_read": 0.1,
+    "cache_write_1h": 4.0,
+    "cache_write_5m": 2.5,
+    "input": 2.0,
+    "model": "claude-sonnet-5-5",
+    "note": "cache read 0.05x input",
+    "output": 10.0
+   },
+   "haiku-5-5": {
+    "cache_read": 0.01,
+    "cache_write_1h": 0.2,
+    "cache_write_5m": 0.125,
+    "input": 0.1,
+    "model": "claude-haiku-5-5",
+    "note": "prompts up to 100,000 tokens (every A5 call is below 3,000)",
+    "output": 0.5
+   }
+  },
+  "source_note": "Fetched 18 Nov 2026 (model pricing table, cache-hit footnote 2, batch processing section). Re-checked at run time by a5_run.py (checked_utc updated if unchanged). Cross-check: the CLI's total_cost_usd per call equals tokens x the run-time sheet (results/a5_cache_diagnosis.json, cost_crosscheck).",
+  "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+  "unit": "USD per million tokens"
+ },
+ "python": "3.13.18",
+ "results_sha256": "9cd1eb92c31085ba103cfddae6acb5da9c156e118680288e42146818a7f04b84",
+ "run_utc": "2026-11-18T01:21:30Z",
+ "scaffold": {
+  "S1": {
+   "calls": [
+    571,
+    571,
+    571,
+    571,
+    571,
+    571
+   ],
+   "mean": 571
+  },
+  "S2": {
+   "calls": [
+    571,
+    571,
+    571,
+    571,
+    571,
+    571
+   ],
+   "mean": 571
+  }
+ },
+ "tables": {
+  "S1": {
+   "B1": {
+    "billed_tok_mean": 48613.625,
+    "calls_mean": 43.125,
+    "calls_ratio": 1.0,
+    "channel_bpe_mean": 870.75,
+    "channel_tok_mean": 777.6875,
+    "cli_cost_usd_mean": 0.00809262125,
+    "content_in_mean": 18491.75,
+    "cost_by_class_billed": {
+     "cache_read": 3.7775000000000003e-06,
+     "cache_write": 0.0053312812499999975,
+     "input": 8.812500000000106e-06,
+     "output": 0.0027487500000000025
+    },
+    "cost_by_role_api": {
+     "checker": {
+      "calls": 14.5625,
+      "content_in": 3771.375,
+      "cost_api": 0.001579575,
+      "out": 2404.875,
+      "think": 1296.625
+     },
+     "planner": {
+      "calls": 14.0,
+      "content_in": 5871.0,
+      "cost_api": 0.0018275062499999997,
+      "out": 2480.8125,
+      "think": 837.5
+     },
+     "worker": {
+      "calls": 14.5625,
+      "content_in": 8849.375,
+      "cost_api": 0.0011908437499999994,
+      "out": 611.8125,
+      "think": 409.625
+     }
+    },
+    "cost_mean": {
+     "alt-fable-5-2": {
+      "api": 0.367834,
+      "billed": 0.64718305
+     },
+     "alt-sonnet-5-5": {
+      "api": 0.0919585,
+      "billed": 0.16181465
+     },
+     "haiku-5-5": {
+      "api": 0.004597925,
+      "billed": 0.00809262125
+     }
+    },
+    "drift": {
+     "events": 48,
+     "healed": 48,
+     "healed_zero_call": 48,
+     "in_any_copy_final": 0,
+     "in_authoritative_final": 0
+    },
+    "in_mean": 43116.125,
+    "out_mean": 5497.5,
+    "out_ratio": 1.0,
+    "ratio_vs_B1": {
+     "alt-fable-5-2": {
+      "api": 1.0,
+      "billed": 1.0
+     },
+     "alt-sonnet-5-5": {
+      "api": 1.0,
+      "billed": 1.0
+     },
+     "haiku-5-5": {
+      "api": 1.0,
+      "billed": 1.0
+     }
+    },
+    "replica_success": 16,
+    "seeds": [
+     100,
+     101,
+     102,
+     103,
+     104,
+     105,
+     106,
+     107,
+     300,
+     301,
+     302,
+     303,
+     304,
+     305,
+     306,
+     307
+    ],
+    "steps_failed": 0,
+    "success": 16,
+    "tasks": 16,
+    "think_mean": 2543.75,
+    "wall_sec_mean": 106.22722144424915,
+    "wrong_final_lines": 0
+   },
+   "X1": {
+    "audit_calls_mean": 16.125,
+    "audit_miss_list": [],
+    "audit_misses": {
+     "approved": 0,
+     "unsampled": 0
+    },
+    "audit_rejects": 37,
+    "billed_tok_mean": 41492.625,
+    "calls_mean": 32.3125,
+    "calls_ratio": 0.7492753623188406,
+    "channel_bpe_mean": 1131.1875,
+    "channel_tok_mean": 1098.25,
+    "cli_cost_usd_mean": 0.0070945159375,
+    "content_in_mean": 17479.0625,
+    "cost_by_class_billed": {
+     "cache_read": 1.5358124999999996e-05,
+     "cache_write": 0.004291132812500002,
+     "input": 6.462500000000052e-06,
+     "output": 0.0027815625000000006
+    },
+    "cost_by_role_api": {
+     "auditor": {
+      "calls": 16.125,
+      "content_in": 6727.9375,
+      "cost_api": 0.0014238250000000003,
+      "out": 1502.0625,
+      "think": 958.3125
+     },
+     "planner": {
+      "calls": 16.1875,
+      "content_in": 10751.125,
+      "cost_api": 0.0031056437500000013,
+      "out": 4061.0625,
+      "think": 2755.9375
+     }
+    },
+    "cost_mean": {
+     "alt-fable-5-2": {
+      "api": 0.3623575,
+      "billed": 0.5666397875
+     },
+     "alt-sonnet-5-5": {
+      "api": 0.090589375,
+      "billed": 0.1417367375
+     },
+     "haiku-5-5": {
+      "api": 0.0045294687500000005,
+      "billed": 0.0070945159374999995
+     }
+    },
+    "drift": {
+     "events": 48,
+     "healed": 48,
+     "healed_zero_call": 48,
+     "in_any_copy_final": 0,
+     "in_authoritative_final": 0
+    },
+    "in_mean": 35929.5,
+    "invalid_ops": 1,
+    "out_mean": 5563.125,
+    "out_ratio": 1.01193724420191,
+    "planner_attempts_mean": 16.1875,
+    "ratio_ci_api_runtime": [
+     0.8829637317423553,
+     1.1073689715756705
+    ],
+    "ratio_vs_B1": {
+     "alt-fable-5-2": {
+      "api": 0.9851114905093058,
+      "billed": 0.8755479419617062
+     },
+     "alt-sonnet-5-5": {
+      "api": 0.9851114905093058,
+      "billed": 0.8759203044965335
+     },
+     "haiku-5-5": {
+      "api": 0.9851114905093059,
+      "billed": 0.8766647688473003
+     }
+    },
+    "replica_success": 15,
+    "seeds": [
+     100,
+     101,
+     102,
+     103,
+     104,
+     105,
+     106,
+     107,
+     300,
+     301,
+     302,
+     303,
+     304,
+     305,
+     306,
+     307
+    ],
+    "steps_failed": 3,
+    "steps_wrong": 0,
+    "success": 15,
+    "tasks": 16,
+    "think_mean": 3714.25,
+    "wall_sec_mean": 90.51242637634277,
+    "wrong_final_lines": 1
+   },
+   "X1s": {
+    "audit_calls_mean": 7.125,
+    "audit_miss_list": [],
+    "audit_misses": {
+     "approved": 0,
+     "unsampled": 0
+    },
+    "audit_rejects": 16,
+    "billed_tok_mean": 29357.25,
+    "calls_mean": 22.0625,
+    "calls_ratio": 0.5115942028985507,
+    "channel_bpe_mean": 542.8125,
+    "channel_tok_mean": 520.8125,
+    "cli_cost_usd_mean": 0.0026331031250000003,
+    "content_in_mean": 12700.6875,
+    "cost_by_class_billed": {
+     "cache_read": 0.00022239375000000002,
+     "cache_write": 0.00037685937499999997,
+     "input": 4.412500000000002e-06,
+     "output": 0.002029437499999999
+    },
+    "cost_by_role_api": {
+     "auditor": {
+      "calls": 7.125,
+      "content_in": 2956.125,
+      "cost_api": 0.0005240500000000002,
+      "out": 456.875,
+      "think": 236.5
+     },
+     "planner": {
+      "calls": 14.9375,
+      "content_in": 9744.5625,
+      "cost_api": 0.0027754562500000002,
+      "out": 3602.0,
+      "think": 2398.5625
+     }
+    },
+    "cost_mean": {
+     "alt-fable-5-2": {
+      "api": 0.2639605,
+      "billed": 0.19730462499999998
+     },
+     "alt-sonnet-5-5": {
+      "api": 0.065990125,
+      "billed": 0.050438125
+     },
+     "haiku-5-5": {
+      "api": 0.00329950625,
+      "billed": 0.002633103125
+     }
+    },
+    "drift": {
+     "events": 48,
+     "healed": 48,
+     "healed_zero_call": 48,
+     "in_any_copy_final": 0,
+     "in_authoritative_final": 0
+    },
+    "in_mean": 25298.375,
+    "invalid_ops": 0,
+    "out_mean": 4058.875,
+    "out_ratio": 0.7383128694861301,
+    "planner_attempts_mean": 14.9375,
+    "ratio_ci_api_runtime": [
+     0.6664177215694399,
+     0.7684599818983059
+    ],
+    "ratio_vs_B1": {
+     "alt-fable-5-2": {
+      "api": 0.7176076708515254,
+      "billed": 0.30486679927726784
+     },
+     "alt-sonnet-5-5": {
+      "api": 0.7176076708515254,
+      "billed": 0.31170308127230756
+     },
+     "haiku-5-5": {
+      "api": 0.7176076708515254,
+      "billed": 0.32537085866955656
+     }
+    },
+    "replica_success": 16,
+    "seeds": [
+     100,
+     101,
+     102,
+     103,
+     104,
+     105,
+     106,
+     107,
+     300,
+     301,
+     302,
+     303,
+     304,
+     305,
+     306,
+     307
+    ],
+    "steps_failed": 1,
+    "steps_wrong": 0,
+    "success": 16,
+    "tasks": 16,
+    "think_mean": 2635.0625,
+    "wall_sec_mean": 61.481220319867134,
+    "wrong_final_lines": 0
+   },
+   "X2": {
+    "audit_calls_mean": 10.8125,
+    "audit_miss_list": [],
+    "audit_misses": {
+     "approved": 0,
+     "unsampled": 0
+    },
+    "audit_rejects": 11,
+    "billed_tok_mean": 29953.875,
+    "calls_mean": 25.5625,
+    "calls_ratio": 0.5927536231884057,
+    "channel_bpe_mean": 769.25,
+    "channel_tok_mean": 732.1875,
+    "cli_cost_usd_mean": 0.0037468703125,
+    "content_in_mean": 13360.625,
+    "cost_by_class_billed": {
+     "cache_read": 6.478124999999998e-05,
+     "cache_write": 0.0026784453125000027,
+     "input": 5.112500000000019e-06,
+     "output": 0.0009985312500000012
+    },
+    "cost_by_role_api": {
+     "auditor": {
+      "calls": 10.8125,
+      "content_in": 4629.625,
+      "cost_api": 0.0008689625000000003,
+      "out": 812.0,
+      "think": 615.125
+     },
+     "planner": {
+      "calls": 14.75,
+      "content_in": 8731.0,
+      "cost_api": 0.0014656312499999997,
+      "out": 1185.0625,
+      "think": 905.25
+     }
+    },
+    "cost_mean": {
+     "alt-fable-5-2": {
+      "api": 0.1867675,
+      "billed": 0.29586275
+     },
+     "alt-sonnet-5-5": {
+      "api": 0.046691875,
+      "billed": 0.07428959375
+     },
+     "haiku-5-5": {
+      "api": 0.0023345937500000003,
+      "billed": 0.0037468703124999996
+     }
+    },
+    "drift": {
+     "events": 48,
+     "healed": 48,
+     "healed_zero_call": 48,
+     "in_any_copy_final": 0,
+     "in_authoritative_final": 0
+    },
+    "in_mean": 27956.8125,
+    "invalid_ops": 2,
+    "out_mean": 1997.0625,
+    "out_ratio": 0.3632673942701228,
+    "planner_attempts_mean": 14.75,
+    "ratio_ci_api_runtime": [
+     0.4620947129002748,
+     0.5625808855797205
+    ],
+    "ratio_vs_B1": {
+     "alt-fable-5-2": {
+      "api": 0.5077494195751344,
+      "billed": 0.4571546643565526
+     },
+     "alt-sonnet-5-5": {
+      "api": 0.5077494195751344,
+      "billed": 0.4591030153944652
+     },
+     "haiku-5-5": {
+      "api": 0.5077494195751345,
+      "billed": 0.46299835328386335
+     }
+    },
+    "replica_success": 15,
+    "seeds": [
+     100,
+     101,
+     102,
+     103,
+     104,
+     105,
+     106,
+     107,
+     300,
+     301,
+     302,
+     303,
+     304,
+     305,
+     306,
+     307
+    ],
+    "steps_failed": 1,
+    "steps_wrong": 0,
+    "success": 15,
+    "tasks": 16,
+    "think_mean": 1520.375,
+    "wall_sec_mean": 61.121708050370216,
+    "wrong_final_lines": 1
+   },
+   "X3": {
+    "audit_calls_mean": 10.875,
+    "audit_miss_list": [],
+    "audit_misses": {
+     "approved": 0,
+     "unsampled": 0
+    },
+    "audit_rejects": 14,
+    "billed_tok_mean": 30616.5,
+    "calls_mean": 26.1875,
+    "calls_ratio": 0.6072463768115942,
+    "channel_bpe_mean": 683.75,
+    "channel_tok_mean": 637,
+    "cli_cost_usd_mean": 0.004680280625,
+    "content_in_mean": 12896.0625,
+    "cost_by_class_billed": {
+     "cache_read": 1.5933750000000003e-05,
+     "cache_write": 0.0032754218749999993,
+     "input": 5.237500000000022e-06,
+     "output": 0.001383687499999999
+    },
+    "cost_by_role_api": {
+     "auditor": {
+      "calls": 10.875,
+      "content_in": 6006.1875,
+      "cost_api": 0.0012543062499999994,
+      "out": 1307.375,
+      "think": 861.0
+     },
+     "planner": {
+      "calls": 15.3125,
+      "content_in": 6889.875,
+      "cost_api": 0.0014189875000000002,
+      "out": 1460.0,
+      "think": 1243.5625
+     }
+    },
+    "cost_mean": {
+     "alt-fable-5-2": {
+      "api": 0.21386349999999998,
+      "billed": 0.373466425
+     },
+     "alt-sonnet-5-5": {
+      "api": 0.053465874999999996,
+      "billed": 0.093446275
+     },
+     "haiku-5-5": {
+      "api": 0.0026732937500000002,
+      "billed": 0.004680280625
+     }
+    },
+    "drift": {
+     "events": 48,
+     "healed": 48,
+     "healed_zero_call": 48,
+     "in_any_copy_final": 0,
+     "in_authoritative_final": 0
+    },
+    "in_mean": 27849.125,
+    "invalid_ops": 8,
+    "out_mean": 2767.375,
+    "out_ratio": 0.503387903592542,
+    "planner_attempts_mean": 15.3125,
+    "ratio_ci_api_runtime": [
+     0.5290847674949859,
+     0.6350640854063484
+    ],
+    "ratio_vs_B1": {
+     "alt-fable-5-2": {
+      "api": 0.5814130830755178,
+      "billed": 0.5770645955576247
+     },
+     "alt-sonnet-5-5": {
+      "api": 0.5814130830755178,
+      "billed": 0.5774895845339096
+     },
+     "haiku-5-5": {
+      "api": 0.5814130830755178,
+      "billed": 0.57833926491988
+     }
+    },
+    "replica_success": 15,
+    "seeds": [
+     100,
+     101,
+     102,
+     103,
+     104,
+     105,
+     106,
+     107,
+     300,
+     301,
+     302,
+     303,
+     304,
+     305,
+     306,
+     307
+    ],
+    "steps_failed": 1,
+    "steps_wrong": 0,
+    "success": 15,
+    "tasks": 16,
+    "think_mean": 2104.5625,
+    "wall_sec_mean": 67.0136111676693,
+    "wrong_final_lines": 1
+   },
+   "X5": {
+    "audit_miss_list": [],
+    "audit_misses": {
+     "approved": 0,
+     "unsampled": 0
+    },
+    "audit_rounds_mean": 1.1875,
+    "audited_steps_mean": 10.3125,
+    "billed_tok_mean": 5875.0625,
+    "calls_mean": 2.375,
+    "calls_ratio": 0.05507246376811594,
+    "channel_bpe_mean": 803.125,
+    "channel_tok_mean": 693.4375,
+    "cli_cost_usd_mean": 0.00139693125,
+    "content_in_mean": 2567.25,
+    "cost_by_class_billed": {
+     "cache_read": 6.018749999999998e-06,
+     "cache_write": 0.00041459375000000003,
+     "input": 4.749999999999999e-07,
+     "output": 0.00097584375
+    },
+    "cost_by_role_api": {
+     "auditor": {
+      "calls": 1.1875,
+      "content_in": 1517.125,
+      "cost_api": 0.0005909312499999999,
+      "out": 878.4375,
+      "think": 812.0
+     },
+     "planner": {
+      "calls": 1.1875,
+      "content_in": 1050.125,
+      "cost_api": 0.0006416375000000001,
+      "out": 1073.25,
+      "think": 870.8125
+     }
+    },
+    "cost_mean": {
+     "alt-fable-5-2": {
+      "api": 0.0986055,
+      "billed": 0.111393375
+     },
+     "alt-sonnet-5-5": {
+      "api": 0.024651375,
+      "billed": 0.0278784375
+     },
+     "haiku-5-5": {
+      "api": 0.00123256875,
+      "billed": 0.00139693125
+     }
+    },
+    "drift": {
+     "events": 48,
+     "healed": 48,
+     "healed_zero_call": 48,
+     "in_any_copy_final": 0,
+     "in_authoritative_final": 0
+    },
+    "in_mean": 3923.375,
+    "invalid_ops": 1,
+    "out_mean": 1951.6875,
+    "out_ratio": 0.35501364256480217,
+    "ratio_ci_api_runtime": [
+     0.2396887027520373,
+     0.30013695577395133
+    ],
+    "ratio_vs_B1": {
+     "alt-fable-5-2": {
+      "api": 0.26807065143515824,
+      "billed": 0.17212035296659886
+     },
+     "alt-sonnet-5-5": {
+      "api": 0.26807065143515824,
+      "billed": 0.17228623922494038
+     },
+     "haiku-5-5": {
+      "api": 0.26807065143515824,
+      "billed": 0.17261789559223473
+     }
+    },
+    "replica_success": 16,
+    "seeds": [
+     100,
+     101,
+     102,
+     103,
+     104,
+     105,
+     106,
+     107,
+     300,
+     301,
+     302,
+     303,
+     304,
+     305,
+     306,
+     307
+    ],
+    "steps_failed": 0,
+    "steps_wrong": 0,
+    "success": 16,
+    "tasks": 16,
+    "think_mean": 1682.8125,
+    "wall_sec_mean": 12.240484282374382,
+    "wrong_final_lines": 0
+   }
+  },
+  "S2": {
+   "B1": {
+    "billed_tok_mean": 45523.5,
+    "calls_mean": 42.125,
+    "calls_ratio": 1.0,
+    "channel_bpe_mean": 534.5,
+    "channel_tok_mean": 433,
+    "cli_cost_usd_mean": 0.007246250625,
+    "computes": {
+     "correct": 127,
+     "drift_reading": {
+      "correct": 96,
+      "other_wrong": 0,
+      "traced": 0
+     },
+     "other_wrong": 1,
+     "traced": 0
+    },
+    "content_in_mean": 17300.3125,
+    "cost_by_class_billed": {
+     "cache_read": 5.00625e-07,
+     "cache_write": 0.00515240625,
+     "input": 8.4375000000001e-06,
+     "output": 0.0020849062500000013
+    },
+    "cost_by_role_api": {
+     "checker": {
+      "calls": 14.0625,
+      "content_in": 3617.25,
+      "cost_api": 0.0014901312499999994,
+      "out": 2256.8125,
+      "think": 1190.0625
+     },
+     "planner": {
+      "calls": 14.0,
+      "content_in": 7120.375,
+      "cost_api": 0.0014575375,
+      "out": 1491.0,
+      "think": 885.9375
+     },
+     "worker": {
+      "calls": 14.0625,
+      "content_in": 6562.6875,
+      "cost_api": 0.0008672687499999996,
+      "out": 422.0,
+      "think": 237.6875
+     }
+    },
+    "cost_mean": {
+     "alt-fable-5-2": {
+      "api": 0.305195,
+      "billed": 0.5796700125
+     },
+     "alt-sonnet-5-5": {
+      "api": 0.07629875,
+      "billed": 0.14492000625
+     },
+     "haiku-5-5": {
+      "api": 0.0038149375,
+      "billed": 0.007246250625
+     }
+    },
+    "drift": {
+     "events": 48,
+     "healed": 48,
+     "healed_zero_call": 48,
+     "in_any_copy_final": 0,
+     "in_authoritative_final": 0
+    },
+    "in_mean": 41353.6875,
+    "out_mean": 4169.8125,
+    "out_ratio": 1.0,
+    "ratio_vs_B1": {
+     "alt-fable-5-2": {
+      "api": 1.0,
+      "billed": 1.0
+     },
+     "alt-sonnet-5-5": {
+      "api": 1.0,
+      "billed": 1.0
+     },
+     "haiku-5-5": {
+      "api": 1.0,
+      "billed": 1.0
+     }
+    },
+    "replica_success": 15,
+    "seeds": [
+     400,
+     401,
+     402,
+     403,
+     404,
+     405,
+     406,
+     407,
+     408,
+     409,
+     410,
+     411,
+     412,
+     413,
+     414,
+     415
+    ],
+    "steps_failed": 0,
+    "success": 15,
+    "tasks": 16,
+    "think_mean": 2313.6875,
+    "wall_sec_mean": 98.54918949306011,
+    "wrong_final_lines": 1
+   },
+   "X1": {
+    "audit_calls_mean": 15.1875,
+    "audit_miss_list": [],
+    "audit_misses": {
+     "approved": 0,
+     "unsampled": 0
+    },
+    "audit_rejects": 19,
+    "billed_tok_mean": 43401.875,
+    "calls_mean": 31.25,
+    "calls_ratio": 0.7418397626112759,
+    "channel_bpe_mean": 1069.8125,
+    "channel_tok_mean": 1029.9375,
+    "cli_cost_usd_mean": 0.0074480384375,
+    "computes": {
+     "correct": 128,
+     "drift_reading": {
+      "correct": 96,
+      "other_wrong": 0,
+      "traced": 0
+     },
+     "other_wrong": 0,
+     "traced": 0
+    },
+    "content_in_mean": 20042.4375,
+    "cost_by_class_billed": {
+     "cache_read": 3.827499999999999e-06,
+     "cache_write": 0.004680117187500003,
+     "input": 6.250000000000047e-06,
+     "output": 0.002757843750000001
+    },
+    "cost_by_role_api": {
+     "auditor": {
+      "calls": 15.1875,
+      "content_in": 7440.4375,
+      "cost_api": 0.001319418749999999,
+      "out": 1150.75,
+      "think": 894.0
+     },
+     "planner": {
+      "calls": 16.0625,
+      "content_in": 12602.0,
+      "cost_api": 0.003442668749999998,
+      "out": 4364.9375,
+      "think": 3454.375
+     }
+    },
+    "cost_mean": {
+     "alt-fable-5-2": {
+      "api": 0.380967,
+      "billed": 0.595613425
+     },
+     "alt-sonnet-5-5": {
+      "api": 0.09524175,
+      "billed": 0.14892249375
+     },
+     "haiku-5-5": {
+      "api": 0.0047620875,
+      "billed": 0.0074480384374999995
+     }
+    },
+    "drift": {
+     "events": 48,
+     "healed": 48,
+     "healed_zero_call": 48,
+     "in_any_copy_final": 0,
+     "in_authoritative_final": 0
+    },
+    "in_mean": 37886.1875,
+    "invalid_ops": 14,
+    "out_mean": 5515.6875,
+    "out_ratio": 1.3227663114348667,
+    "planner_attempts_mean": 16.0625,
+    "ratio_ci_api_runtime": [
+     1.186947552973417,
+     1.3150564968268839
+    ],
+    "ratio_vs_B1": {
+     "alt-fable-5-2": {
+      "api": 1.248274054293157,
+      "billed": 1.0275042906415657
+     },
+     "alt-sonnet-5-5": {
+      "api": 1.248274054293157,
+      "billed": 1.0276185987260815
+     },
+     "haiku-5-5": {
+      "api": 1.2482740542931567,
+      "billed": 1.027847203049232
+     }
+    },
+    "replica_success": 16,
+    "seeds": [
+     400,
+     401,
+     402,
+     403,
+     404,
+     405,
+     406,
+     407,
+     408,
+     409,
+     410,
+     411,
+     412,
+     413,
+     414,
+     415
+    ],
+    "steps_failed": 0,
+    "steps_wrong": 0,
+    "success": 16,
+    "tasks": 16,
+    "think_mean": 4348.375,
+    "wall_sec_mean": 86.49754296243191,
+    "wrong_final_lines": 0
+   },
+   "X1s": {
+    "audit_calls_mean": 10.625,
+    "audit_miss_list": [
+     {
+      "kind": "unsampled",
+      "ops": "SET search.retries 0",
+      "seed": 403,
+      "step": 2
+     }
+    ],
+    "audit_misses": {
+     "approved": 0,
+     "unsampled": 1
+    },
+    "audit_rejects": 13,
+    "billed_tok_mean": 37777.5625,
+    "calls_mean": 26.5,
+    "calls_ratio": 0.629080118694362,
+    "channel_bpe_mean": 829.6875,
+    "channel_tok_mean": 789.5625,
+    "cli_cost_usd_mean": 0.00327999,
+    "computes": {
+     "correct": 127,
+     "drift_reading": {
+      "correct": 96,
+      "other_wrong": 0,
+      "traced": 0
+     },
+     "other_wrong": 1,
+     "traced": 0
+    },
+    "content_in_mean": 17747.375,
+    "cost_by_class_billed": {
+     "cache_read": 0.0002850337500000003,
+     "cache_write": 0.0005403125000000001,
+     "input": 5.300000000000024e-06,
+     "output": 0.0024493437499999993
+    },
+    "cost_by_role_api": {
+     "auditor": {
+      "calls": 10.625,
+      "content_in": 5289.1875,
+      "cost_api": 0.0008896374999999999,
+      "out": 721.4375,
+      "think": 573.9375
+     },
+     "planner": {
+      "calls": 15.875,
+      "content_in": 12458.1875,
+      "cost_api": 0.0033344437500000008,
+      "out": 4177.25,
+      "think": 3271.375
+     }
+    },
+    "cost_mean": {
+     "alt-fable-5-2": {
+      "api": 0.3379265,
+      "billed": 0.245297175
+     },
+     "alt-sonnet-5-5": {
+      "api": 0.084481625,
+      "billed": 0.06274946249999999
+     },
+     "haiku-5-5": {
+      "api": 0.00422408125,
+      "billed": 0.00327999
+     }
+    },
+    "drift": {
+     "events": 48,
+     "healed": 48,
+     "healed_zero_call": 48,
+     "in_any_copy_final": 0,
+     "in_authoritative_final": 0
+    },
+    "in_mean": 32878.875,
+    "invalid_ops": 17,
+    "out_mean": 4898.6875,
+    "out_ratio": 1.1747980274892456,
+    "planner_attempts_mean": 15.875,
+    "ratio_ci_api_runtime": [
+     1.036880326699022,
+     1.1731705686433151
+    ],
+    "ratio_vs_B1": {
+     "alt-fable-5-2": {
+      "api": 1.1072478251609628,
+      "billed": 0.4231669220598159
+     },
+     "alt-sonnet-5-5": {
+      "api": 1.1072478251609628,
+      "billed": 0.432993788254132
+     },
+     "haiku-5-5": {
+      "api": 1.1072478251609625,
+      "billed": 0.452646502273029
+     }
+    },
+    "replica_success": 15,
+    "seeds": [
+     400,
+     401,
+     402,
+     403,
+     404,
+     405,
+     406,
+     407,
+     408,
+     409,
+     410,
+     411,
+     412,
+     413,
+     414,
+     415
+    ],
+    "steps_failed": 0,
+    "steps_wrong": 1,
+    "success": 15,
+    "tasks": 16,
+    "think_mean": 3845.3125,
+    "wall_sec_mean": 73.18132634460926,
+    "wrong_final_lines": 1
+   },
+   "X2": {
+    "audit_calls_mean": 11.6875,
+    "audit_miss_list": [],
+    "audit_misses": {
+     "approved": 0,
+     "unsampled": 0
+    },
+    "audit_rejects": 0,
+    "billed_tok_mean": 32196.8125,
+    "calls_mean": 26.125,
+    "calls_ratio": 0.6201780415430267,
+    "channel_bpe_mean": 840,
+    "channel_tok_mean": 805.6875,
+    "cli_cost_usd_mean": 0.0038384840625,
+    "computes": {
+     "correct": 128,
+     "drift_reading": {
+      "correct": 96,
+      "other_wrong": 0,
+      "traced": 0
+     },
+     "other_wrong": 0,
+     "traced": 0
+    },
+    "content_in_mean": 15040.5,
+    "cost_by_class_billed": {
+     "cache_read": 8.907937500000001e-05,
+     "cache_write": 0.0026247109375000023,
+     "input": 5.225000000000022e-06,
+     "output": 0.0011194687499999992
+    },
+    "cost_by_role_api": {
+     "auditor": {
+      "calls": 11.6875,
+      "content_in": 5845.9375,
+      "cost_api": 0.0010048437499999999,
+      "out": 840.5,
+      "think": 766.1875
+     },
+     "planner": {
+      "calls": 14.4375,
+      "content_in": 9194.5625,
+      "cost_api": 0.0016186750000000006,
+      "out": 1398.4375,
+      "think": 1080.125
+     }
+    },
+    "cost_mean": {
+     "alt-fable-5-2": {
+      "api": 0.2098815,
+      "billed": 0.3017339625
+     },
+     "alt-sonnet-5-5": {
+      "api": 0.052470375,
+      "billed": 0.0758788875
+     },
+     "haiku-5-5": {
+      "api": 0.00262351875,
+      "billed": 0.0038384840625
+     }
+    },
+    "drift": {
+     "events": 48,
+     "healed": 48,
+     "healed_zero_call": 48,
+     "in_any_copy_final": 0,
+     "in_authoritative_final": 0
+    },
+    "in_mean": 29957.875,
+    "invalid_ops": 7,
+    "out_mean": 2238.9375,
+    "out_ratio": 0.5369396105940015,
+    "planner_attempts_mean": 14.4375,
+    "ratio_ci_api_runtime": [
+     0.6506517401313625,
+     0.7256212258990279
+    ],
+    "ratio_vs_B1": {
+     "alt-fable-5-2": {
+      "api": 0.687696390832091,
+      "billed": 0.5205271205917349
+     },
+     "alt-sonnet-5-5": {
+      "api": 0.687696390832091,
+      "billed": 0.5235915279295676
+     },
+     "haiku-5-5": {
+      "api": 0.687696390832091,
+      "billed": 0.529720025037086
+     }
+    },
+    "replica_success": 16,
+    "seeds": [
+     400,
+     401,
+     402,
+     403,
+     404,
+     405,
+     406,
+     407,
+     408,
+     409,
+     410,
+     411,
+     412,
+     413,
+     414,
+     415
+    ],
+    "steps_failed": 0,
+    "steps_wrong": 0,
+    "success": 16,
+    "tasks": 16,
+    "think_mean": 1846.3125,
+    "wall_sec_mean": 64.21429194509983,
+    "wrong_final_lines": 0
+   },
+   "X3": {
+    "audit_calls_mean": 12.25,
+    "audit_miss_list": [],
+    "audit_misses": {
+     "approved": 0,
+     "unsampled": 0
+    },
+    "audit_rejects": 10,
+    "billed_tok_mean": 34285.4375,
+    "calls_mean": 27.5,
+    "calls_ratio": 0.6528189910979229,
+    "channel_bpe_mean": 797.125,
+    "channel_tok_mean": 751.6875,
+    "cli_cost_usd_mean": 0.004712435,
+    "computes": {
+     "correct": 128,
+     "drift_reading": {
+      "correct": 96,
+      "other_wrong": 0,
+      "traced": 0
+     },
+     "other_wrong": 0,
+     "traced": 0
+    },
+    "content_in_mean": 15333.375,
+    "cost_by_class_billed": {
+     "cache_read": 6.8735e-05,
+     "cache_write": 0.0030134062499999974,
+     "input": 5.512500000000029e-06,
+     "output": 0.001624781249999998
+    },
+    "cost_by_role_api": {
+     "auditor": {
+      "calls": 12.25,
+      "content_in": 7622.375,
+      "cost_api": 0.0015304249999999998,
+      "out": 1536.375,
+      "think": 1143.9375
+     },
+     "planner": {
+      "calls": 15.25,
+      "content_in": 7711.0,
+      "cost_api": 0.0016276937500000008,
+      "out": 1713.1875,
+      "think": 1492.5625
+     }
+    },
+    "cost_mean": {
+     "alt-fable-5-2": {
+      "api": 0.25264949999999997,
+      "billed": 0.3728707
+     },
+     "alt-sonnet-5-5": {
+      "api": 0.06316237499999999,
+      "billed": 0.09356135
+     },
+     "haiku-5-5": {
+      "api": 0.00315811875,
+      "billed": 0.004712435
+     }
+    },
+    "drift": {
+     "events": 48,
+     "healed": 48,
+     "healed_zero_call": 48,
+     "in_any_copy_final": 0,
+     "in_authoritative_final": 0
+    },
+    "in_mean": 31035.875,
+    "invalid_ops": 11,
+    "out_mean": 3249.5625,
+    "out_ratio": 0.779306623499258,
+    "planner_attempts_mean": 15.25,
+    "ratio_ci_api_runtime": [
+     0.770369072272574,
+     0.8897838283639181
+    ],
+    "ratio_vs_B1": {
+     "alt-fable-5-2": {
+      "api": 0.8278297481937776,
+      "billed": 0.6432464884493226
+     },
+     "alt-sonnet-5-5": {
+      "api": 0.8278297481937776,
+      "billed": 0.6456068587148573
+     },
+     "haiku-5-5": {
+      "api": 0.8278297481937777,
+      "billed": 0.6503273546379719
+     }
+    },
+    "replica_success": 15,
+    "seeds": [
+     400,
+     401,
+     402,
+     403,
+     404,
+     405,
+     406,
+     407,
+     408,
+     409,
+     410,
+     411,
+     412,
+     413,
+     414,
+     415
+    ],
+    "steps_failed": 1,
+    "steps_wrong": 0,
+    "success": 15,
+    "tasks": 16,
+    "think_mean": 2636.5,
+    "wall_sec_mean": 72.14475700259209,
+    "wrong_final_lines": 1
+   },
+   "X5": {
+    "audit_miss_list": [],
+    "audit_misses": {
+     "approved": 0,
+     "unsampled": 0
+    },
+    "audit_rounds_mean": 1.0625,
+    "audited_steps_mean": 11.8125,
+    "billed_tok_mean": 6370.3125,
+    "calls_mean": 2.1875,
+    "calls_ratio": 0.05192878338278932,
+    "channel_bpe_mean": 1000.3125,
+    "channel_tok_mean": 885.3125,
+    "cli_cost_usd_mean": 0.001451744375,
+    "computes": {
+     "correct": 128,
+     "drift_reading": {
+      "correct": 96,
+      "other_wrong": 0,
+      "traced": 0
+     },
+     "other_wrong": 0,
+     "traced": 0
+    },
+    "content_in_mean": 3021.0625,
+    "cost_by_class_billed": {
+     "cache_read": 1.1478749999999992e-05,
+     "cache_write": 0.00038973437500000005,
+     "input": 4.3749999999999994e-07,
+     "output": 0.0010500937500000002
+    },
+    "cost_by_role_api": {
+     "auditor": {
+      "calls": 1.0625,
+      "content_in": 1802.3125,
+      "cost_api": 0.0006779187499999999,
+      "out": 995.375,
+      "think": 931.1875
+     },
+     "planner": {
+      "calls": 1.125,
+      "content_in": 1218.75,
+      "cost_api": 0.0006742812500000001,
+      "out": 1104.8125,
+      "think": 886.25
+     }
+    },
+    "cost_mean": {
+     "alt-fable-5-2": {
+      "api": 0.108176,
+      "billed": 0.11545082499999999
+     },
+     "alt-sonnet-5-5": {
+      "api": 0.027044,
+      "billed": 0.0289201
+     },
+     "haiku-5-5": {
+      "api": 0.0013522,
+      "billed": 0.0014517443749999998
+     }
+    },
+    "drift": {
+     "events": 48,
+     "healed": 48,
+     "healed_zero_call": 48,
+     "in_any_copy_final": 0,
+     "in_authoritative_final": 0
+    },
+    "in_mean": 4270.125,
+    "invalid_ops": 1,
+    "out_mean": 2100.1875,
+    "out_ratio": 0.5036647331264895,
+    "ratio_ci_api_runtime": [
+     0.335674748666606,
+     0.3743933509813326
+    ],
+    "ratio_vs_B1": {
+     "alt-fable-5-2": {
+      "api": 0.354448795032684,
+      "billed": 0.19916646110790487
+     },
+     "alt-sonnet-5-5": {
+      "api": 0.354448795032684,
+      "billed": 0.19955905846505578
+     },
+     "haiku-5-5": {
+      "api": 0.354448795032684,
+      "billed": 0.2003442124940303
+     }
+    },
+    "replica_success": 16,
+    "seeds": [
+     400,
+     401,
+     402,
+     403,
+     404,
+     405,
+     406,
+     407,
+     408,
+     409,
+     410,
+     411,
+     412,
+     413,
+     414,
+     415
+    ],
+    "steps_failed": 0,
+    "steps_wrong": 0,
+    "success": 16,
+    "tasks": 16,
+    "think_mean": 1817.4375,
+    "wall_sec_mean": 12.132956460118294,
+    "wrong_final_lines": 0
+   }
+  }
+ }
+}

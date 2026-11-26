@@ -1,0 +1,52 @@
+{
+ "features": [
+  "scan",
+  "log1p_stale",
+  "log1p_matched",
+  "nonscan_stale",
+  "depth"
+ ],
+ "coef": {
+  "scan": 1.0339898002314356,
+  "log1p_stale": 1.3311737699072337,
+  "log1p_matched": 0.06957720564043651,
+  "nonscan_stale": 0.5926733065015758,
+  "depth": 1.6489051356329343
+ },
+ "bias": -8.127659827086923,
+ "n_steps": 14560,
+ "n_fail": 36,
+ "leave_one_model_out": {
+  "codex_gpt62sol": {
+   "steps": 1120,
+   "fails": 2,
+   "auc": 0.985
+  },
+  "default": {
+   "steps": 5824,
+   "fails": 8,
+   "auc": 0.9074
+  },
+  "gemini_38flash": {
+   "steps": 2016,
+   "fails": 2,
+   "auc": 0.9908
+  },
+  "haiku_b2s": {
+   "steps": 1120,
+   "fails": 4,
+   "auc": 0.9932
+  },
+  "mistral_large40": {
+   "steps": 2016,
+   "fails": 19,
+   "auc": 0.8181
+  },
+  "sonnet55": {
+   "steps": 1120,
+   "fails": 1,
+   "auc": 0.9857
+  }
+ },
+ "auc_in_sample": 0.8899
+}

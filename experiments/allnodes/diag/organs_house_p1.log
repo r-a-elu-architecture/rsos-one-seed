@@ -1,0 +1,6 @@
+house 4 6720 {'v': 4, 'sd': 6720, 'house': 0.784, 'single_heart': 0.7528, 'single_kidney': 0.7819, 'single_liver': 0.7817, 'single_lungs': 0.791, 'flat': 0.7661, 'shuffled': 0.7854, 'native': 0.7326388888888886, 'sec': 51}
+house 4 6721 {'v': 4, 'sd': 6721, 'house': 0.8069, 'single_heart': 0.7906, 'single_kidney': 0.8215, 'single_liver': 0.8092, 'single_lungs': 0.7981, 'flat': 0.7904, 'shuffled': 0.8203, 'native': 0.7409722222222221, 'sec': 51}
+house 10 6720 {'v': 10, 'sd': 6720, 'house': 0.8854, 'single_heart': 0.8476, 'single_kidney': 0.8732, 'single_liver': 0.8733, 'single_lungs': 0.8721, 'flat': 0.8565, 'shuffled': 0.8692, 'native': 0.8330555555555557, 'sec': 46}
+house 10 6721 {'v': 10, 'sd': 6721, 'house': 0.8826, 'single_heart': 0.86, 'single_kidney': 0.8932, 'single_liver': 0.8911, 'single_lungs': 0.8854, 'flat': 0.8471, 'shuffled': 0.8969, 'native': 0.8356944444444445, 'sec': 48}
+house 16 6720 {'v': 16, 'sd': 6720, 'house': 0.9015, 'single_heart': 0.8522, 'single_kidney': 0.8738, 'single_liver': 0.8892, 'single_lungs': 0.8632, 'flat': 0.8463, 'shuffled': 0.879, 'native': 0.8229166666666667, 'sec': 50}
+house 16 6721 {'v': 16, 'sd': 6721, 'house': 0.9814, 'single_heart': 0.9601, 'single_kidney': 0.9481, 'single_liver': 0.9724, 'single_lungs': 0.9475, 'flat': 0.9422, 'shuffled': 0.9692, 'native': 0.9230555555555555, 'sec': 53}

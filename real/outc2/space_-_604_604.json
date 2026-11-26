@@ -1,0 +1,50 @@
+{
+ "row": "space",
+ "model": "-",
+ "cells_run": [
+  604
+ ],
+ "generated": true,
+ "cells": {
+  "std|604": {
+   "default": {
+    "result": 458.14691306659745,
+    "resource": 14911.65096464057,
+    "R": 0.03072409045470443,
+    "choices": {
+     "present|standard": 26
+    },
+    "sec": 0.0
+   },
+   "strongest": {
+    "result": 463.1671306788023,
+    "resource": 17191.523248668684,
+    "R": 0.0269415992974718,
+    "choices": {
+     "present|standard": 26
+    },
+    "sec": 26.1
+   },
+   "generated": {
+    "result": 464.2806709678944,
+    "resource": 16572.48095851963,
+    "R": 0.028015157907254413,
+    "choices": {
+     "present|standard": 1,
+     "G:carry|policy": 1,
+     "G:compress|policy": 13,
+     "focus_bulk|standard": 1,
+     "G:carry|standard": 3,
+     "G:beam|policy": 3,
+     "G:zoom|policy": 1,
+     "G:pierce|standard": 1,
+     "G:compress|standard": 1,
+     "G:compress|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 11.9
+   },
+   "sec": 38
+  }
+ }
+}

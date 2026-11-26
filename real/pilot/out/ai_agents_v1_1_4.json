@@ -1,0 +1,70 @@
+{
+ "row": "ai_agents",
+ "arm": "v1",
+ "model": "openrouter:openai/gpt-oss-20b",
+ "cells": {
+  "1": {
+   "result": 0.5,
+   "resource": 14.207,
+   "choices": {
+    "F:blind-b0|standard": 3,
+    "present|standard": 10,
+    "stop|own": 2,
+    "present|own": 7,
+    "future+2|standard": 1,
+    "P4P5-cges|policy": 1,
+    "future+1|own": 2,
+    "past-2|own": 1
+   },
+   "sec": 30.9
+  },
+  "2": {
+   "result": 1.0,
+   "resource": 11.719,
+   "choices": {
+    "F:blind-b0|standard": 4,
+    "F:blind-b1|standard": 1,
+    "present|standard": 7,
+    "stop|own": 3,
+    "past-2|own": 2,
+    "future+1|own": 2,
+    "F:blind-b1|own": 1,
+    "future+2|standard": 3,
+    "open|own": 1,
+    "future+1|standard": 1
+   },
+   "sec": 22.6
+  },
+  "3": {
+   "result": 1.0,
+   "resource": 17.204,
+   "choices": {
+    "F:blind-b0|standard": 3,
+    "F:blind-b1|own": 2,
+    "present|standard": 15,
+    "present|own": 4,
+    "stop|own": 4,
+    "open|own": 2,
+    "future+1|own": 1,
+    "past-1|own": 1
+   },
+   "sec": 27.8
+  },
+  "4": {
+   "result": 0.75,
+   "resource": 12.02,
+   "choices": {
+    "F:blind-b0|standard": 4,
+    "present|own": 1,
+    "open|standard": 1,
+    "past-2|standard": 2,
+    "past-1|standard": 9,
+    "past-1|own": 3,
+    "stop|own": 3,
+    "F:blind-b1|own": 1,
+    "past-2|own": 1
+   },
+   "sec": 23.6
+  }
+ }
+}

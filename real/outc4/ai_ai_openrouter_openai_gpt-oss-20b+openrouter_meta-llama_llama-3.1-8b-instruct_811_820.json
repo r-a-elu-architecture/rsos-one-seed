@@ -1,0 +1,986 @@
+{
+ "row": "ai_ai",
+ "model": "openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct",
+ "cells_run": [
+  811,
+  812,
+  813,
+  814,
+  815,
+  816,
+  817,
+  818,
+  819,
+  820
+ ],
+ "cells": {
+  "std|811": {
+   "default": {
+    "result": 1.0,
+    "resource": 5594.0,
+    "R": 0.0001787629603146228,
+    "choices": {
+     "present|standard": 6
+    },
+    "failed_calls": 0,
+    "sec": 7.4
+   },
+   "structure": {
+    "result": 1.0,
+    "resource": 2602.0,
+    "R": 0.0003843197540353574,
+    "choices": {
+     "focus_home|standard": 1,
+     "focus_team|standard": 1,
+     "past-1|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 6.8
+   },
+   "R1": {
+    "result": 0.0,
+    "resource": 1660.0,
+    "R": 0.0,
+    "choices": {
+     "R1:key_chain_house|policy": 2
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.6
+   },
+   "R2": {
+    "result": 1.0,
+    "resource": 3420.0,
+    "R": 0.00029239766081871346,
+    "choices": {
+     "R2:house_chain_key|policy": 2,
+     "past-1|standard": 2
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 4.7
+   },
+   "R3": {
+    "result": 0.0,
+    "resource": 1664.0,
+    "R": 0.0,
+    "choices": {
+     "R3:key_prefix_house|policy": 2
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.3
+   },
+   "C1": {
+    "result": 1.0,
+    "resource": 3417.0,
+    "R": 0.000292654375182909,
+    "choices": {
+     "C1:chain_ask|policy": 2,
+     "past-1|standard": 2
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 4.0
+   },
+   "C2": {
+    "result": 1.0,
+    "resource": 2499.0,
+    "R": 0.00040016006402561027,
+    "choices": {
+     "C2:chain_ask|policy": 2,
+     "past-1|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 3.1
+   },
+   "C3": {
+    "result": 1.0,
+    "resource": 2510.0,
+    "R": 0.00039840637450199205,
+    "choices": {
+     "C3:chain_ask|policy": 2,
+     "past-1|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.4
+   },
+   "sec": 33
+  },
+  "std|812": {
+   "default": {
+    "result": 0.0,
+    "resource": 1941.0,
+    "R": 0.0,
+    "choices": {
+     "present|standard": 2
+    },
+    "failed_calls": 0,
+    "sec": 4.4
+   },
+   "structure": {
+    "result": 0.0,
+    "resource": 1844.0,
+    "R": 0.0,
+    "choices": {
+     "focus_team|standard": 1,
+     "present|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 3.0
+   },
+   "R1": {
+    "result": 0.0,
+    "resource": 1767.0,
+    "R": 0.0,
+    "choices": {
+     "R1:key_chain_house|policy": 2
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 3.4
+   },
+   "R2": {
+    "result": 0.0,
+    "resource": 1714.0,
+    "R": 0.0,
+    "choices": {
+     "R2:chain_key_first|policy": 1,
+     "past-1|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.3
+   },
+   "R3": {
+    "result": 1.0,
+    "resource": 2867.0,
+    "R": 0.0003487966515521451,
+    "choices": {
+     "R3:key_prefix_house|policy": 2,
+     "R3:key_prefix_house|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 5.0
+   },
+   "C1": {
+    "result": 0.0,
+    "resource": 1796.0,
+    "R": 0.0,
+    "choices": {
+     "C1:chain_ask|policy": 1,
+     "past-1|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.9
+   },
+   "C2": {
+    "result": 1.0,
+    "resource": 3688.0,
+    "R": 0.00027114967462039046,
+    "choices": {
+     "C2:chain_ask|policy": 2,
+     "future+2|own": 1,
+     "C2:chain_ask|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 5.2
+   },
+   "C3": {
+    "result": 0.0,
+    "resource": 2856.0,
+    "R": 0.0,
+    "choices": {
+     "C3:ask_then_push|policy": 1,
+     "C3:chain_ask|policy": 2
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 3.8
+   },
+   "sec": 30
+  },
+  "std|813": {
+   "default": {
+    "result": 0.0,
+    "resource": 2961.0,
+    "R": 0.0,
+    "choices": {
+     "present|standard": 3
+    },
+    "failed_calls": 0,
+    "sec": 3.3
+   },
+   "structure": {
+    "result": 0.0,
+    "resource": 1810.0,
+    "R": 0.0,
+    "choices": {
+     "present|standard": 1,
+     "future+1|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.5
+   },
+   "R1": {
+    "result": 0.0,
+    "resource": 2852.0,
+    "R": 0.0,
+    "choices": {
+     "R1:chain_facts_first|policy": 1,
+     "R1:key_chain_house|policy": 2
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 3.6
+   },
+   "R2": {
+    "result": 0.0,
+    "resource": 2904.0,
+    "R": 0.0,
+    "choices": {
+     "R2:chain_compact|policy": 1,
+     "R2:house_chain_key|policy": 2
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 3.8
+   },
+   "R3": {
+    "result": 0.0,
+    "resource": 2813.0,
+    "R": 0.0,
+    "choices": {
+     "R3:lion_prefix_house|policy": 1,
+     "R3:key_prefix_house|policy": 2
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 6.7
+   },
+   "C1": {
+    "result": 0.0,
+    "resource": 2887.0,
+    "R": 0.0,
+    "choices": {
+     "C1:chain_push|policy": 1,
+     "C1:chain_ask|policy": 2
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 3.5
+   },
+   "C2": {
+    "result": 0.0,
+    "resource": 3107.0,
+    "R": 0.0,
+    "choices": {
+     "C2:chain_compact|policy": 3
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 6.0
+   },
+   "C3": {
+    "result": 0.0,
+    "resource": 2841.0,
+    "R": 0.0,
+    "choices": {
+     "C3:chain_push|policy": 3
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 4.3
+   },
+   "sec": 34
+  },
+  "std|814": {
+   "default": {
+    "result": 1.0,
+    "resource": 2601.0,
+    "R": 0.00038446751249519417,
+    "choices": {
+     "present|standard": 3
+    },
+    "failed_calls": 0,
+    "sec": 2.9
+   },
+   "structure": {
+    "result": 1.0,
+    "resource": 1664.0,
+    "R": 0.0006009615384615385,
+    "choices": {
+     "chain|standard": 1,
+     "future+1|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 1.9
+   },
+   "R1": {
+    "result": 1.0,
+    "resource": 2562.0,
+    "R": 0.00039032006245121,
+    "choices": {
+     "R1:key_chain_house|policy": 1,
+     "future+1|own": 1,
+     "past-2|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.6
+   },
+   "R2": {
+    "result": 1.0,
+    "resource": 2523.0,
+    "R": 0.00039635354736424893,
+    "choices": {
+     "R2:house_chain_key|policy": 1,
+     "future+1|own": 1,
+     "past-2|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.9
+   },
+   "R3": {
+    "result": 1.0,
+    "resource": 2528.0,
+    "R": 0.00039556962025316455,
+    "choices": {
+     "R3:key_prefix_house|policy": 1,
+     "future+1|own": 1,
+     "past-2|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 4.8
+   },
+   "C1": {
+    "result": 1.0,
+    "resource": 2559.0,
+    "R": 0.00039077764751856197,
+    "choices": {
+     "C1:chain_ask|policy": 1,
+     "future+1|own": 1,
+     "past-2|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.9
+   },
+   "C2": {
+    "result": 1.0,
+    "resource": 1705.0,
+    "R": 0.0005865102639296188,
+    "choices": {
+     "C2:chain_compact|policy": 2
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 3.0
+   },
+   "C3": {
+    "result": 1.0,
+    "resource": 1660.0,
+    "R": 0.0006024096385542169,
+    "choices": {
+     "C3:chain_push|policy": 1,
+     "future+1|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 1.8
+   },
+   "sec": 23
+  },
+  "std|815": {
+   "default": {
+    "result": 1.0,
+    "resource": 2728.0,
+    "R": 0.00036656891495601173,
+    "choices": {
+     "present|standard": 3
+    },
+    "failed_calls": 0,
+    "sec": 2.8
+   },
+   "structure": {
+    "result": 0.0,
+    "resource": 874.0,
+    "R": 0.0,
+    "choices": {
+     "chain|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 1.0
+   },
+   "R1": {
+    "result": 1.0,
+    "resource": 2712.0,
+    "R": 0.0003687315634218289,
+    "choices": {
+     "R1:key_chain_house|standard": 1,
+     "future+2|own": 1,
+     "R1:key_chain_house|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 4.8
+   },
+   "R2": {
+    "result": 1.0,
+    "resource": 2728.0,
+    "R": 0.00036656891495601173,
+    "choices": {
+     "R2:house_chain_key|policy": 1,
+     "future+2|own": 1,
+     "R2:house_chain_key|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 4.8
+   },
+   "R3": {
+    "result": 1.0,
+    "resource": 2650.0,
+    "R": 0.0003773584905660377,
+    "choices": {
+     "R3:key_prefix_house|standard": 1,
+     "future+2|own": 1,
+     "R3:key_prefix_house|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.6
+   },
+   "C1": {
+    "result": 1.0,
+    "resource": 2642.0,
+    "R": 0.0003785011355034065,
+    "choices": {
+     "C1:chain_ask|policy": 1,
+     "future+2|own": 1,
+     "C1:chain_ask|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 3.8
+   },
+   "C2": {
+    "result": 1.0,
+    "resource": 2654.0,
+    "R": 0.00037678975131876413,
+    "choices": {
+     "C2:chain_compact|policy": 1,
+     "C2:chain_ask|policy": 1,
+     "past-2|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.8
+   },
+   "C3": {
+    "result": 1.0,
+    "resource": 2770.0,
+    "R": 0.00036101083032490973,
+    "choices": {
+     "C3:chain_push|policy": 2,
+     "C3:chain_ask|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 4.4
+   },
+   "sec": 27
+  },
+  "std|816": {
+   "default": {
+    "result": 1.0,
+    "resource": 4953.0,
+    "R": 0.0002018978396931153,
+    "choices": {
+     "present|standard": 5
+    },
+    "failed_calls": 0,
+    "sec": 4.6
+   },
+   "structure": {
+    "result": 1.0,
+    "resource": 2596.0,
+    "R": 0.0003852080123266564,
+    "choices": {
+     "present|standard": 1,
+     "chain|standard": 1,
+     "past-1|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 3.8
+   },
+   "R1": {
+    "result": 1.0,
+    "resource": 3553.0,
+    "R": 0.00028145229383619476,
+    "choices": {
+     "R1:key_chain_house|policy": 2,
+     "future+2|own": 1,
+     "past-1|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 5.1
+   },
+   "R2": {
+    "result": 1.0,
+    "resource": 3533.0,
+    "R": 0.0002830455703368242,
+    "choices": {
+     "R2:house_chain_key|policy": 2,
+     "future+2|own": 1,
+     "past-1|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 4.3
+   },
+   "R3": {
+    "result": 1.0,
+    "resource": 2634.0,
+    "R": 0.00037965072133637056,
+    "choices": {
+     "R3:key_prefix_house|policy": 2,
+     "R3:sentence_prefix|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 3.5
+   },
+   "C1": {
+    "result": 1.0,
+    "resource": 3526.0,
+    "R": 0.0002836074872376631,
+    "choices": {
+     "C1:chain_ask|policy": 2,
+     "future+2|own": 1,
+     "past-1|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 4.9
+   },
+   "C2": {
+    "result": 1.0,
+    "resource": 2681.0,
+    "R": 0.0003729951510630362,
+    "choices": {
+     "C2:chain_compact|policy": 1,
+     "focus_city|own": 1,
+     "future+1|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 8.0
+   },
+   "C3": {
+    "result": 1.0,
+    "resource": 1688.0,
+    "R": 0.0005924170616113745,
+    "choices": {
+     "C3:chain_push|policy": 1,
+     "past-1|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.7
+   },
+   "sec": 37
+  },
+  "std|817": {
+   "default": {
+    "result": 0.0,
+    "resource": 4886.0,
+    "R": 0.0,
+    "choices": {
+     "present|standard": 5
+    },
+    "failed_calls": 0,
+    "sec": 11.6
+   },
+   "structure": {
+    "result": 1.0,
+    "resource": 2802.0,
+    "R": 0.00035688793718772306,
+    "choices": {
+     "focus_office|standard": 1,
+     "chain|own": 1,
+     "focus_home|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 6.9
+   },
+   "R1": {
+    "result": 1.0,
+    "resource": 1777.0,
+    "R": 0.0005627462014631402,
+    "choices": {
+     "R1:key_chain_house|policy": 1,
+     "R1:key_chain_house|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 3.4
+   },
+   "R2": {
+    "result": 0.0,
+    "resource": 846.0,
+    "R": 0.0,
+    "choices": {
+     "R2:chain_key_first|policy": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 5.0
+   },
+   "R3": {
+    "result": 1.0,
+    "resource": 1829.0,
+    "R": 0.0005467468562055768,
+    "choices": {
+     "R3:key_prefix_house|policy": 1,
+     "R3:key_prefix_house|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.0
+   },
+   "C1": {
+    "result": 0.0,
+    "resource": 1752.0,
+    "R": 0.0,
+    "choices": {
+     "C1:chain_ask|policy": 1,
+     "C1:chain_ask|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 3.8
+   },
+   "C2": {
+    "result": 1.0,
+    "resource": 3066.0,
+    "R": 0.00032615786040443573,
+    "choices": {
+     "C2:chain_compact|policy": 1,
+     "C2:chain_compact|own": 1,
+     "C2:chain_ask|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 5.5
+   },
+   "C3": {
+    "result": 1.0,
+    "resource": 2787.0,
+    "R": 0.0003588087549336204,
+    "choices": {
+     "C3:chain_push|policy": 1,
+     "C3:chain_push|own": 1,
+     "C3:chain_ask|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 6.0
+   },
+   "sec": 44
+  },
+  "std|818": {
+   "default": {
+    "result": 0.0,
+    "resource": 836.0,
+    "R": 0.0,
+    "choices": {
+     "present|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 4.8
+   },
+   "structure": {
+    "result": 0.0,
+    "resource": 833.0,
+    "R": 0.0,
+    "choices": {
+     "present|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.8
+   },
+   "R1": {
+    "result": 0.0,
+    "resource": 817.0,
+    "R": 0.0,
+    "choices": {
+     "R1:key_chain_house|policy": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.6
+   },
+   "R2": {
+    "result": 0.0,
+    "resource": 819.0,
+    "R": 0.0,
+    "choices": {
+     "R2:house_chain_key|policy": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 1.4
+   },
+   "R3": {
+    "result": 0.0,
+    "resource": 822.0,
+    "R": 0.0,
+    "choices": {
+     "R3:key_prefix_house|policy": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 3.2
+   },
+   "C1": {
+    "result": 0.0,
+    "resource": 819.0,
+    "R": 0.0,
+    "choices": {
+     "C1:chain_ask|policy": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 1.1
+   },
+   "C2": {
+    "result": 0.0,
+    "resource": 819.0,
+    "R": 0.0,
+    "choices": {
+     "C2:chain_compact|policy": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 1.3
+   },
+   "C3": {
+    "result": 0.0,
+    "resource": 816.0,
+    "R": 0.0,
+    "choices": {
+     "C3:chain_push|policy": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 1.0
+   },
+   "sec": 18
+  },
+  "std|819": {
+   "default": {
+    "result": 1.0,
+    "resource": 1789.0,
+    "R": 0.0005589714924538849,
+    "choices": {
+     "present|standard": 2
+    },
+    "failed_calls": 0,
+    "sec": 2.1
+   },
+   "structure": {
+    "result": 1.0,
+    "resource": 851.0,
+    "R": 0.0011750881316098707,
+    "choices": {
+     "focus_team|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 0.8
+   },
+   "R1": {
+    "result": 1.0,
+    "resource": 846.0,
+    "R": 0.001182033096926714,
+    "choices": {
+     "R1:chain_facts_first|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 0.8
+   },
+   "R2": {
+    "result": 1.0,
+    "resource": 846.0,
+    "R": 0.001182033096926714,
+    "choices": {
+     "R2:chain_compact|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 1.0
+   },
+   "R3": {
+    "result": 1.0,
+    "resource": 846.0,
+    "R": 0.001182033096926714,
+    "choices": {
+     "R3:lion_prefix_house|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 0.9
+   },
+   "C1": {
+    "result": 1.0,
+    "resource": 846.0,
+    "R": 0.001182033096926714,
+    "choices": {
+     "C1:chain_push|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.1
+   },
+   "C2": {
+    "result": 1.0,
+    "resource": 846.0,
+    "R": 0.001182033096926714,
+    "choices": {
+     "C2:chain_compact|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 0.8
+   },
+   "C3": {
+    "result": 1.0,
+    "resource": 850.0,
+    "R": 0.001176470588235294,
+    "choices": {
+     "C3:chain_push|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 0.7
+   },
+   "sec": 9
+  },
+  "std|820": {
+   "default": {
+    "result": 0.0,
+    "resource": 1791.0,
+    "R": 0.0,
+    "choices": {
+     "present|standard": 2
+    },
+    "failed_calls": 0,
+    "sec": 2.1
+   },
+   "structure": {
+    "result": 0.0,
+    "resource": 1768.0,
+    "R": 0.0,
+    "choices": {
+     "present|standard": 1,
+     "present|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 1.6
+   },
+   "R1": {
+    "result": 1.0,
+    "resource": 1768.0,
+    "R": 0.0005656108597285068,
+    "choices": {
+     "R1:key_twin_question|policy": 1,
+     "future+1|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.0
+   },
+   "R2": {
+    "result": 1.0,
+    "resource": 2735.0,
+    "R": 0.00036563071297989033,
+    "choices": {
+     "R2:house_chain_key|policy": 1,
+     "future+1|own": 1,
+     "past-1|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 3.0
+   },
+   "R3": {
+    "result": 1.0,
+    "resource": 1763.0,
+    "R": 0.0005672149744753262,
+    "choices": {
+     "R3:lion_prefix_house|policy": 1,
+     "future+1|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 1.7
+   },
+   "C1": {
+    "result": 1.0,
+    "resource": 1766.0,
+    "R": 0.0005662514156285391,
+    "choices": {
+     "C1:ask_lookahead|policy": 1,
+     "future+1|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.7
+   },
+   "C2": {
+    "result": 1.0,
+    "resource": 1774.0,
+    "R": 0.0005636978579481398,
+    "choices": {
+     "C2:route_gap|policy": 1,
+     "future+1|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 3.6
+   },
+   "C3": {
+    "result": 1.0,
+    "resource": 1771.0,
+    "R": 0.000564652738565782,
+    "choices": {
+     "C3:ask_then_push|policy": 1,
+     "past-1|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 3.5
+   },
+   "sec": 20
+  }
+ }
+}

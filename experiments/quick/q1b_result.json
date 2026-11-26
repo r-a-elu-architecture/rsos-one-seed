@@ -1,0 +1,37 @@
+{
+ "structure": {
+  "loc": 123,
+  "type": 159
+ },
+ "blind": {
+  "loc": 74,
+  "type": 50
+ },
+ "n": 200,
+ "by_type": {
+  "kick": {
+   "n": 50,
+   "s_loc": 4,
+   "s_type": 46,
+   "b_loc": 2
+  },
+  "order": {
+   "n": 50,
+   "s_loc": 38,
+   "s_type": 38,
+   "b_loc": 7
+  },
+  "operator": {
+   "n": 50,
+   "s_loc": 42,
+   "s_type": 38,
+   "b_loc": 29
+  },
+  "relation": {
+   "n": 50,
+   "s_loc": 39,
+   "s_type": 37,
+   "b_loc": 36
+  }
+ }
+}

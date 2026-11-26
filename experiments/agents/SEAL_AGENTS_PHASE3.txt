@@ -1,0 +1,12 @@
+SEAL_AGENTS_PHASE3 (sealed before any phase 3 call, 22 Nov 2026, Kyiv)
+Rules: PREREG_AGENTS_PHASE3.md. Phase 1d fixed: RESULTS_PHASE1D.md, phase1d.jsonl, calib1d.jsonl, smoke1d.jsonl (commit 3b70aa3).
+
+40b39ee2450c06d0585d1b945a6e7c2d9707d7852241de706641c6e3095aa2e2  PREREG_AGENTS_PHASE3.md
+245f554efd76e8340798afb68c2d4d8daf201f6c5d392916e0f45f94f1e872f5  RESULTS_PHASE1D.md
+77107833cadef59d91d3c46a31f137301744886ab3a23f99799eb776b3a14592  analyze_phase3.py
+ec22e9192bde446a772739ae1aeba3d0fd680c2a6e78caa753ff01aadd480f99  phase1d.jsonl
+53397a85fcd8bd6c47591e60feb5b3e72132b4f9d276965153489292d9376f33  agent.py
+716c301847ab4674f1735edde360a3ddb6cb98b8412e18a6b8b9fcbdc7c7fe9f  llm.py
+1818cf2d3fa07ccc8a59af5e8b015d23afcc1752b1666b50e2eb518da68baced  run.py
+c07ff0610d3d525ebe1582ccc10ce871f43fba315a927789479c7cd96f30fcd1  tasks.py
+15ecd5c1bcd618e81dd1566d2e0fd98bdb613c880c72e3950f83ee94dc9d12f7  emptycheck.py

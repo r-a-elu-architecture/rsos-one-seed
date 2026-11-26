@@ -1,0 +1,13 @@
+bridge 1 {'parA': 'bcdg', 'parB': 'abcd', 'gA': 'bcdgjm', 'gB': 'abcdjm', 'child': 'abcdgm'}
+bridge 5 {'parA': 'cdg', 'parB': 'abcd', 'gA': 'cdjm', 'gB': 'acdjm', 'child': 'acdgjm'}
+bridge 7 {'parA': 'acdg', 'parB': 'acd', 'gA': 'acdm', 'gB': 'acdm', 'child': 'acdm'}
+bridge 3 {'parA': 'abcdg', 'parB': 'abcd', 'gA': 'abcdj', 'gB': 'abcdj', 'child': 'abcdj'}
+bridge 13 {'parA': 'abcd', 'parB': 'abcdg', 'gA': 'abcjm', 'gB': 'abcgj', 'child': 'abcgj'}
+bridge 9 {'parA': 'cd', 'parB': 'abcdg', 'gA': 'cdjm', 'gB': 'cdgjm', 'child': 'cdgjm'}
+bridge 15 {'parA': 'acdg', 'parB': 'abcd', 'gA': 'acgjm', 'gB': 'acdjm', 'child': 'acdgjm'}
+bridge 11 {'parA': 'abcd', 'parB': 'abcd', 'gA': 'abcdj', 'gB': 'abcdj', 'child': 'abcdj'}
+bridge 17 {'parA': 'abcdg', 'parB': 'cdg', 'gA': 'acdgj', 'gB': 'cdjm', 'child': 'acdgj'}
+bridge 19 {'parA': 'acdg', 'parB': 'abc', 'gA': 'acgjm', 'gB': 'acjm', 'child': 'acgjm'}
+D1 child > max(parA,parB) wins 15 losses 14 ties 1 p 0.5
+D2 child > max(gA,gB) wins 2 losses 14 ties 14 p 0.9997
+mean child - max(parA,parB): 0.002

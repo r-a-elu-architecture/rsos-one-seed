@@ -1,0 +1,73 @@
+{
+ "row": "space",
+ "model": "-",
+ "stage": 1,
+ "pair": 2,
+ "cells": {
+  "std|205": {
+   "default": {
+    "result": 401.61136386977756,
+    "resource": 16779.776620171808,
+    "R": 0.02393424971980738,
+    "choices": {
+     "present|standard": 26
+    }
+   },
+   "seed3v1": {
+    "result": 407.5404889167455,
+    "resource": 18872.172338672037,
+    "R": 0.021594784193530874,
+    "choices": {
+     "F:holo-plan|policy": 13,
+     "F:holo-carry|policy": 7,
+     "F:holo-carry|standard": 1,
+     "F:holo-plan|standard": 4,
+     "present|own": 1
+    },
+    "policy_fallback_steps": 0
+   },
+   "strongest": {
+    "result": 402.48662134524557,
+    "resource": 18397.617879808022,
+    "R": 0.02187710517604497,
+    "choices": {
+     "present|standard": 26
+    }
+   },
+   "sec": 2709
+  },
+  "std|206": {
+   "default": {
+    "result": 490.71233750608616,
+    "resource": 15907.961698882116,
+    "R": 0.030846964984871033,
+    "choices": {
+     "present|standard": 27
+    }
+   },
+   "seed3v1": {
+    "result": 499.3920520017183,
+    "resource": 18690.76681244172,
+    "R": 0.02671864974899223,
+    "choices": {
+     "P4P5:exact-planner|policy": 1,
+     "F:holo-plan|policy": 11,
+     "F:holo-carry|policy": 10,
+     "F:holo-plan|standard": 3,
+     "F:holo-carry|standard": 1,
+     "present|own": 1
+    },
+    "policy_fallback_steps": 0
+   },
+   "strongest": {
+    "result": 495.7679493293839,
+    "resource": 18445.057424169307,
+    "R": 0.02687809194238447,
+    "choices": {
+     "present|standard": 27
+    }
+   },
+   "sec": 3723
+  }
+ }
+}

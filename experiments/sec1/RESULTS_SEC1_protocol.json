@@ -1,0 +1,25 @@
+{
+ "code_sha256": "61b2101c81aeb07c8f9469cb251a33899b63890ab2ad2e477373f38f71745594",
+ "P4_whole_zero_wrong": {
+  "wrong_total": 0,
+  "pass": true
+ },
+ "P4_whole_fewer_bytes_per_correct_than_bare": {
+  "wins": 48,
+  "of": 48,
+  "p": 3.552713678800501e-15
+ },
+ "P0_reading_whole_beats_unchecked_correct": {
+  "wins": 48,
+  "of": 48,
+  "p": 3.552713678800501e-15
+ },
+ "unchecked_wrong_total": 7769,
+ "bytes_per_correct_mean": {
+  "whole": 229.35000000000002,
+  "unchecked": 1877.7768777132999,
+  "bare": 1938.3626041666666
+ },
+ "P1": "not measurable in this host",
+ "P3": "not measurable in this host"
+}

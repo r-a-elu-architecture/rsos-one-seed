@@ -1,0 +1,73 @@
+{
+ "code_sha256": "a0859ebaf3e88d0fa5d6421e6ad41daa1fa17f07643973d676978e4cdd753a7c",
+ "drift": {
+  "P0_exact_beats_unhealed": {
+   "wins": 80,
+   "of": 80,
+   "p": 8.271806125530277e-25
+  },
+  "P1_spreads_further_with_living_structure": {
+   "wins": 22,
+   "of": 80,
+   "p": 0.9999873544487177
+  },
+  "P2_exact_beats_global_same_size": {
+   "wins": 80,
+   "of": 80,
+   "p": 8.271806125530277e-25
+  },
+  "P3_gain_grows_with_density": {
+   "rho": 0.1548429297568273,
+   "p": 0.17023551877293117
+  },
+  "P5_beats_best_native": {
+   "wins": 80,
+   "of": 80,
+   "p": 8.271806125530277e-25
+  },
+  "means_by_d": {
+   "1": {
+    "dragon": 0.984421875,
+    "global": 0.958484375,
+    "unhealed": 0.954609375,
+    "best_native": 0.97303125,
+    "spread_live": 0.375,
+    "spread_off": 0.0
+   },
+   "2": {
+    "dragon": 0.990171875,
+    "global": 0.9512812500000001,
+    "unhealed": 0.950671875,
+    "best_native": 0.9802656249999999,
+    "spread_live": 0.3125,
+    "spread_off": 0.0
+   },
+   "3": {
+    "dragon": 0.99503125,
+    "global": 0.941515625,
+    "unhealed": 0.955125,
+    "best_native": 0.983203125,
+    "spread_live": 0.3125,
+    "spread_off": 0.0
+   },
+   "4": {
+    "dragon": 0.99553125,
+    "global": 0.930125,
+    "unhealed": 0.95471875,
+    "best_native": 0.98628125,
+    "spread_live": 0.3125,
+    "spread_off": 0.0
+   },
+   "5": {
+    "dragon": 0.99721875,
+    "global": 0.92475,
+    "unhealed": 0.9622812500000001,
+    "best_native": 0.98903125,
+    "spread_live": 0.0625,
+    "spread_off": 0.0
+   }
+  },
+  "P4": "not measurable in this host",
+  "P6": "not measurable in this host"
+ }
+}

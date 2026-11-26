@@ -1,0 +1,45 @@
+{
+ "row": "space",
+ "model": "-",
+ "cells_run": [
+  718
+ ],
+ "generated": true,
+ "cells": {
+  "std|718": {
+   "default": {
+    "result": 551.7575363599502,
+    "resource": 15245.28472011299,
+    "R": 0.036192012578946504,
+    "choices": {
+     "present|standard": 26
+    },
+    "sec": 0.1
+   },
+   "strongest": {
+    "result": 562.6819350007246,
+    "resource": 17949.898432339127,
+    "R": 0.03134736038321968,
+    "choices": {
+     "present|standard": 26
+    },
+    "sec": 72.7
+   },
+   "composed": {
+    "result": 556.4814276066594,
+    "resource": 16428.43734127158,
+    "R": 0.03387305901631099,
+    "choices": {
+     "present|standard": 1,
+     "C:see>future>compress>inherit>contain>act|policy": 21,
+     "future+1|standard": 2,
+     "focus_bulk|standard": 1,
+     "C:see>future>compress>inherit>contain>act|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 6.7
+   },
+   "sec": 80
+  }
+ }
+}

@@ -1,0 +1,11 @@
+SEAL_AGENTS_PHASE1 (exploratory phase 1, sealed before the run, 22 Nov 2026 11:26 Kyiv)
+Command: python run.py --models openrouter:openai/gpt-oss-20b --family warehouse --seeds 1000-1099 --arms all --out phase1.jsonl
+Decision: python select_structure.py phase1.jsonl  (best rsos arm; CONTINUE only if >= react + 0.03)
+Provider: OpenRouter (Groq paid tier unavailable 22 Nov). Phase 3 models planned: openai/gpt-oss-120b, qwen/qwen3.8-27b, meta-llama/llama-4-scout, openai/gpt-oss-20b.
+
+204fa1aa2a59b0f7e92a68d197e5eeb22777b4a598dd35f4affa9f55241acbb1  agent.py
+1e4c243dcf72e10b4bee7c17d426e039a3e13ae2183076765537d6556da6d027  analyze.py
+4209b8308755f10861976c51dfdf65ffb5e0650feead2e7ab9b6b803b05cc59e  llm.py
+74dbdb10a97d5371b2582462b1c323d8b9ea2a153eb011989c2ddee8b1a6f49a  run.py
+839e1f26bf3a4510b9f40fedc043588d5480ed218d1a4dd41094650789a9d4a7  select_structure.py
+a4e75578c066f7a2b73193b7f943f2d546d6425402302b337643a497de1faf0a  tasks.py

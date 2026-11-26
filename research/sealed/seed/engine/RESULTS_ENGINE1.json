@@ -1,0 +1,145 @@
+{
+ "targets": {
+  "T1": {
+   "incumbent_cal": {
+    "precision": 1.0,
+    "recall": 0.3115
+   },
+   "incumbent_rep": 0.31825,
+   "alloc": {
+    "Tiger": 4,
+    "Lion": 4,
+    "Leopard": 6,
+    "Bear": 20,
+    "Dragon": 5,
+    "WhiteDragon": 6
+   },
+   "successes": {
+    "Tiger": 0,
+    "Lion": 0,
+    "Leopard": 1,
+    "Bear": 15,
+    "Dragon": 0,
+    "WhiteDragon": 1
+   },
+   "challenge": {
+    "champion": {
+     "passes": 3,
+     "sigma_mult": 1.871,
+     "eps": 0.011,
+     "c": 1.794,
+     "r6": 0,
+     "margin": 1.0,
+     "rounds": 2
+    },
+    "champion_id": 66,
+    "cal": 0.3265,
+    "rep": 0.32975,
+    "hold": {
+     "precision": 1.0,
+     "recall": 0.32612
+    },
+    "incumbent_hold": {
+     "precision": 1.0,
+     "recall": 0.31288
+    },
+    "promoted": false
+   }
+  },
+  "T2": {
+   "incumbent_cal": {
+    "accuracy": 0.55083
+   },
+   "incumbent_rep": 0.5416666666666666,
+   "alloc": {
+    "Tiger": 4,
+    "Lion": 4,
+    "Leopard": 4,
+    "Bear": 25,
+    "Dragon": 4,
+    "WhiteDragon": 4
+   },
+   "successes": {
+    "Tiger": 1,
+    "Lion": 1,
+    "Leopard": 0,
+    "Bear": 25,
+    "Dragon": 0,
+    "WhiteDragon": 0
+   },
+   "challenge": {
+    "champion": {
+     "passes": 5,
+     "sigma_mult": 1.871,
+     "eps": 0.001,
+     "gate": 0.456,
+     "c": 1.794,
+     "r6": 1
+    },
+    "champion_id": 58,
+    "cal": 0.5583333333333333,
+    "rep": 0.5558333333333333,
+    "hold": {
+     "accuracy": 0.56458
+    },
+    "incumbent_hold": {
+     "accuracy": 0.55875
+    },
+    "promoted": false
+   }
+  },
+  "T3": {
+   "incumbent_cal": {
+    "precision": 0.1042,
+    "recall": 1.0
+   },
+   "incumbent_rep": 0.11650485436893204,
+   "alloc": {
+    "Tiger": 6,
+    "Lion": 4,
+    "Leopard": 4,
+    "Bear": 23,
+    "Dragon": 4,
+    "WhiteDragon": 4
+   },
+   "successes": {
+    "Tiger": 1,
+    "Lion": 0,
+    "Leopard": 0,
+    "Bear": 20,
+    "Dragon": 0,
+    "WhiteDragon": 0
+   },
+   "challenge": {
+    "champion": {
+     "passes": 3,
+     "sigma_mult": 1.04,
+     "eps": 0.151,
+     "c": 1.118,
+     "mode": 1
+    },
+    "champion_id": 5,
+    "cal": 1.0,
+    "rep": 1.0,
+    "hold": {
+     "precision": 1.0,
+     "recall": 1.0
+    },
+    "incumbent_hold": {
+     "precision": 0.1318,
+     "recall": 0.98765
+    },
+    "promoted": true
+   }
+  }
+ },
+ "law0": {
+  "out_of_range_proposed": 1,
+  "refused": 1,
+  "in_range_refused": 0
+ },
+ "genome": {
+  "entries": 141,
+  "chain_verifies": true
+ }
+}

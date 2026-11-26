@@ -1,0 +1,16 @@
+# The painting read left to right; a line with dots; whole vs part; entering 3D; a region from the centre.
+# Source: owner, chat 1 T108.
+LANGUAGE RSOS 0.2
+WORLD thermal_engineering
+SCENE painting ORDER mountains, sky, house, grass, car, road LIGHT engineering
+PART house.door KIND module
+PART car.seat KIND module
+SELECT mountains.top PART
+SELECT house.door WHOLE
+SELECT house.door.middle PART
+ENTER car.seat DEPTH 2
+REGION r1 SHAPE triangle CENTER car SIZE 0.4 INCLUDES engine, seat, window
+LINE l1 THROUGH mountains.top, house.door.middle, car.seat, road.white_line PAUSE car.seat
+LINE l2 THROUGH grass.top, sky, car, road FROM left
+REGION r2 SHAPE square CENTER road.white_line SIZE 0.2
+WIDEN l1 TO tube RADIUS 0.2

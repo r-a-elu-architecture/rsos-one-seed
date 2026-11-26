@@ -1,0 +1,5 @@
+collect 4 6670 {'v3': 0.9922, 'v5m': 0.9922, 'report+popular': 0.9844, 'round+round': 0.9547, 'random+random': 0.924, 'B': 0.9891}
+collect 10 6670 {'v3': 0.9844, 'v5m': 0.9828, 'report+popular': 0.975, 'round+round': 0.9667, 'random+random': 0.9516, 'B': 0.975}
+local 4
+local 10
+laws done 126

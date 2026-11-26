@@ -1,0 +1,123 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>PAINT-1</title>
+<style>body{font-family:sans-serif;max-width:1150px;margin:24px auto;color:#222}table{border-collapse:collapse;font-size:13px}
+td,th{border:1px solid #ccc;padding:4px 8px}code{font-size:12px}</style></head><body>
+<h1>PAINT-1: a program edited as a painting</h1>
+<p>Twelve-module support workflow. Gestures are RSOS statements compiled into exact program changes; every number is
+measured by running the program on held-out tickets (A: seed 2, B: seed 3; 30% typos, 30% unseen phrasing).
+Squares are guests at a place: above = head, centre = heart, purple = brain, right = near.</p>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 430" font-family="sans-serif">
+<rect width="1100" height="430" fill="#eaf2f8"/>
+<rect y="340" width="1100" height="90" fill="#dfe8d0"/>
+<text x="16" y="24" font-size="15" font-weight="bold">The workflow as a painting: before</text>
+<line x1="60" y1="325" x2="145" y2="240" stroke="#4a7ba6" stroke-width="2" opacity="0.6"/>
+<line x1="145" y1="240" x2="230" y2="155" stroke="#4a7ba6" stroke-width="2" opacity="0.6"/>
+<line x1="230" y1="155" x2="315" y2="240" stroke="#4a7ba6" stroke-width="2" opacity="0.6"/>
+<line x1="315" y1="240" x2="400" y2="240" stroke="#4a7ba6" stroke-width="2" opacity="0.6"/>
+<line x1="400" y1="240" x2="485" y2="155" stroke="#4a7ba6" stroke-width="2" opacity="0.6"/>
+<line x1="485" y1="155" x2="570" y2="155" stroke="#4a7ba6" stroke-width="2" opacity="0.6"/>
+<line x1="570" y1="155" x2="655" y2="70" stroke="#4a7ba6" stroke-width="2" opacity="0.6"/>
+<line x1="655" y1="70" x2="740" y2="240" stroke="#4a7ba6" stroke-width="2" opacity="0.6"/>
+<line x1="740" y1="240" x2="825" y2="155" stroke="#4a7ba6" stroke-width="2" opacity="0.6"/>
+<line x1="825" y1="155" x2="910" y2="325" stroke="#4a7ba6" stroke-width="2" opacity="0.6"/>
+<line x1="910" y1="325" x2="995" y2="325" stroke="#4a7ba6" stroke-width="2" opacity="0.6"/>
+<circle cx="60" cy="325" r="16.0" fill="#f4f1e8" stroke="#333"/>
+<text x="60" y="330" font-size="16" text-anchor="middle" fill="#222">▯</text>
+<text x="60" y="355.02440356947733" font-size="11" text-anchor="middle">intake</text>
+<circle cx="145" cy="240" r="16.0" fill="#f4f1e8" stroke="#333"/>
+<text x="145" y="245" font-size="16" text-anchor="middle" fill="#222">≈</text>
+<text x="145" y="270.02440356947733" font-size="11" text-anchor="middle">normalize</text>
+<circle cx="230" cy="155" r="17.0" fill="#d9534f" stroke="#333"/>
+<text x="230" y="160" font-size="16" text-anchor="middle" fill="#222">⋎</text>
+<text x="230" y="186.04880713895466" font-size="11" text-anchor="middle">classify</text>
+<circle cx="315" cy="240" r="17.0" fill="#f4f1e8" stroke="#333"/>
+<text x="315" y="245" font-size="16" text-anchor="middle" fill="#222">≈</text>
+<text x="315" y="271.04880713895466" font-size="11" text-anchor="middle">extract</text>
+<circle cx="400" cy="240" r="16.0" fill="#f4f1e8" stroke="#333"/>
+<text x="400" y="245" font-size="16" text-anchor="middle" fill="#222">◡</text>
+<text x="400" y="270.02440356947733" font-size="11" text-anchor="middle">memory</text>
+<circle cx="485" cy="155" r="16.0" fill="#f4f1e8" stroke="#333"/>
+<text x="485" y="160" font-size="16" text-anchor="middle" fill="#222">⋎</text>
+<text x="485" y="185.02440356947733" font-size="11" text-anchor="middle">priority</text>
+<circle cx="570" cy="155" r="17.0" fill="#f4f1e8" stroke="#333"/>
+<text x="570" y="160" font-size="16" text-anchor="middle" fill="#222">⋎</text>
+<text x="570" y="186.04880713895466" font-size="11" text-anchor="middle">plan</text>
+<circle cx="655" cy="70" r="16.0" fill="#f4f1e8" stroke="#333"/>
+<text x="655" y="75" font-size="16" text-anchor="middle" fill="#222">☁</text>
+<text x="655" y="100.02440356947733" font-size="11" text-anchor="middle">policy</text>
+<circle cx="740" cy="240" r="19.4" fill="#222" stroke="#333"/>
+<text x="740" y="245" font-size="16" text-anchor="middle" fill="#fff">⚙</text>
+<text x="740" y="273.42542342014207" font-size="11" text-anchor="middle">act</text>
+<circle cx="825" cy="155" r="16.0" fill="#f4f1e8" stroke="#333"/>
+<text x="825" y="160" font-size="16" text-anchor="middle" fill="#222">◉</text>
+<text x="825" y="184.96089054816974" font-size="11" text-anchor="middle">verify</text>
+<circle cx="910" cy="325" r="16.0" fill="#f4f1e8" stroke="#333"/>
+<text x="910" y="330" font-size="16" text-anchor="middle" fill="#222">⌒</text>
+<text x="910" y="354.96089054816974" font-size="11" text-anchor="middle">respond</text>
+<circle cx="995" cy="325" r="15.4" fill="#f4f1e8" stroke="#333"/>
+<text x="995" y="330" font-size="16" text-anchor="middle" fill="#222">⌒</text>
+<text x="995" y="354.3843562192679" font-size="11" text-anchor="middle">log</text>
+<text x="16" y="414" font-size="13">accuracy 0.488 · crashed 0.062 · cost per ticket 11.79 · score 0.370</text>
+</svg><br><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 430" font-family="sans-serif">
+<rect width="1100" height="430" fill="#eaf2f8"/>
+<rect y="340" width="1100" height="90" fill="#dfe8d0"/>
+<text x="16" y="24" font-size="15" font-weight="bold">After the gestures (measured on held-out A)</text>
+<line x1="60" y1="325" x2="145" y2="240" stroke="#4a7ba6" stroke-width="2" opacity="0.6"/>
+<line x1="145" y1="240" x2="230" y2="155" stroke="#4a7ba6" stroke-width="2" opacity="0.6"/>
+<line x1="230" y1="155" x2="315" y2="240" stroke="#4a7ba6" stroke-width="2" opacity="0.6"/>
+<line x1="315" y1="240" x2="400" y2="240" stroke="#4a7ba6" stroke-width="2" opacity="0.6"/>
+<line x1="400" y1="240" x2="485" y2="155" stroke="#4a7ba6" stroke-width="2" opacity="0.6"/>
+<line x1="485" y1="155" x2="570" y2="155" stroke="#4a7ba6" stroke-width="2" opacity="0.6"/>
+<line x1="570" y1="155" x2="655" y2="70" stroke="#4a7ba6" stroke-width="2" opacity="0.6"/>
+<line x1="655" y1="70" x2="740" y2="240" stroke="#4a7ba6" stroke-width="2" opacity="0.6"/>
+<line x1="740" y1="240" x2="825" y2="155" stroke="#4a7ba6" stroke-width="2" opacity="0.6"/>
+<line x1="825" y1="155" x2="910" y2="325" stroke="#4a7ba6" stroke-width="2" opacity="0.6"/>
+<line x1="910" y1="325" x2="995" y2="325" stroke="#4a7ba6" stroke-width="2" opacity="0.6"/>
+<circle cx="60" cy="325" r="16.0" fill="#f4f1e8" stroke="#333"/>
+<text x="60" y="330" font-size="16" text-anchor="middle" fill="#222">▯</text>
+<text x="60" y="354.9851138353765" font-size="11" text-anchor="middle">intake</text>
+<circle cx="145" cy="240" r="16.0" fill="#f4f1e8" stroke="#333"/>
+<text x="145" y="245" font-size="16" text-anchor="middle" fill="#222">≈</text>
+<text x="145" y="269.9851138353765" font-size="11" text-anchor="middle">normalize</text>
+<circle cx="230" cy="155" r="17.0" fill="#f4f1e8" stroke="#333"/>
+<text x="230" y="160" font-size="16" text-anchor="middle" fill="#222">⋎</text>
+<text x="230" y="185.97022767075308" font-size="11" text-anchor="middle">classify</text>
+<rect x="225" y="141.51488616462348" width="10" height="10" fill="#7b5ea7" stroke="#333"><title>spell_corrector at brain</title></rect>
+<rect x="236" y="141.51488616462348" width="10" height="10" fill="#7b5ea7" stroke="#333"><title>synonym_expander at brain</title></rect>
+<circle cx="315" cy="240" r="17.0" fill="#f4f1e8" stroke="#333"/>
+<text x="315" y="245" font-size="16" text-anchor="middle" fill="#222">≈</text>
+<text x="315" y="270.97022767075305" font-size="11" text-anchor="middle">extract</text>
+<circle cx="400" cy="240" r="16.0" fill="#f4f1e8" stroke="#333"/>
+<text x="400" y="245" font-size="16" text-anchor="middle" fill="#222">◡</text>
+<text x="400" y="269.9851138353765" font-size="11" text-anchor="middle">memory</text>
+<rect x="395" y="235" width="10" height="10" fill="#f0ad4e" stroke="#333"><title>cache at heart</title></rect>
+<circle cx="485" cy="155" r="16.0" fill="#f4f1e8" stroke="#333"/>
+<text x="485" y="160" font-size="16" text-anchor="middle" fill="#222">⋎</text>
+<text x="485" y="184.98511383537652" font-size="11" text-anchor="middle">priority</text>
+<circle cx="570" cy="155" r="17.0" fill="#f4f1e8" stroke="#333"/>
+<text x="570" y="160" font-size="16" text-anchor="middle" fill="#222">⋎</text>
+<text x="570" y="185.97022767075308" font-size="11" text-anchor="middle">plan</text>
+<circle cx="655" cy="70" r="16.0" fill="#f4f1e8" stroke="#333"/>
+<text x="655" y="75" font-size="16" text-anchor="middle" fill="#222">☁</text>
+<text x="655" y="99.98511383537654" font-size="11" text-anchor="middle">policy</text>
+<circle cx="740" cy="240" r="19.8" fill="#9a9a9a" stroke="#333"/>
+<text x="740" y="245" font-size="16" text-anchor="middle" fill="#222">⚙</text>
+<text x="740" y="273.79947460595446" font-size="11" text-anchor="middle">act</text>
+<rect x="735" y="235" width="10" height="10" fill="#f0ad4e" stroke="#333"><title>fast_retry at heart</title></rect>
+<circle cx="825" cy="155" r="16.0" fill="#f4f1e8" stroke="#333"/>
+<text x="825" y="160" font-size="16" text-anchor="middle" fill="#222">◉</text>
+<text x="825" y="184.98511383537652" font-size="11" text-anchor="middle">verify</text>
+<circle cx="910" cy="325" r="16.0" fill="#f4f1e8" stroke="#333"/>
+<text x="910" y="330" font-size="16" text-anchor="middle" fill="#222">⌒</text>
+<text x="910" y="354.9851138353765" font-size="11" text-anchor="middle">respond</text>
+<circle cx="995" cy="325" r="15.4" fill="#f4f1e8" stroke="#333"/>
+<text x="995" y="330" font-size="16" text-anchor="middle" fill="#222">⌒</text>
+<text x="995" y="354.3940455341506" font-size="11" text-anchor="middle">log</text>
+<text x="16" y="414" font-size="13">accuracy 0.780 · crashed 0.000 · cost per ticket 11.79 · score 0.662</text>
+</svg>
+<h2>Every gesture, measured</h2><table><tr><th>Gesture</th><th>RSOS</th><th>Accuracy A</th><th>Crashed A</th>
+<th>Cost/ticket A</th><th>Score A</th><th>Score B</th></tr><tr><td>baseline</td><td><code>—</code></td><td>0.488</td><td>0.062</td><td>11.79</td><td>0.370</td><td>0.410</td></tr><tr><td>spell_corrector@classify.head</td><td><code>PIERCE spell_corrector THROUGH classify.head</code></td><td>0.664</td><td>0.062</td><td>13.29</td><td>0.531</td><td>0.537</td></tr><tr><td>spell_corrector@classify.heart</td><td><code>PIERCE spell_corrector THROUGH classify.heart</code></td><td>0.672</td><td>0.062</td><td>14.29</td><td>0.529</td><td>0.529</td></tr><tr><td>spell_corrector@classify.brain</td><td><code>PIERCE spell_corrector THROUGH classify.brain</code></td><td>0.672</td><td>0.062</td><td>11.79</td><td>0.554</td><td>0.554</td></tr><tr><td>spell_corrector@near.classify</td><td><code>PLACE spell_corrector NEAR classify</code></td><td>0.488</td><td>0.062</td><td>13.29</td><td>0.355</td><td>0.395</td></tr><tr><td>synonym_expander@classify.head</td><td><code>PIERCE synonym_expander THROUGH classify.head</code></td><td>0.574</td><td>0.062</td><td>12.79</td><td>0.446</td><td>0.532</td></tr><tr><td>synonym_expander@classify.heart</td><td><code>PIERCE synonym_expander THROUGH classify.heart</code></td><td>0.574</td><td>0.062</td><td>13.79</td><td>0.436</td><td>0.522</td></tr><tr><td>synonym_expander@classify.brain</td><td><code>PIERCE synonym_expander THROUGH classify.brain</code></td><td>0.574</td><td>0.062</td><td>11.79</td><td>0.456</td><td>0.542</td></tr><tr><td>synonym_expander@near.classify</td><td><code>PLACE synonym_expander NEAR classify</code></td><td>0.488</td><td>0.062</td><td>12.79</td><td>0.360</td><td>0.400</td></tr><tr><td>cache@memory.head</td><td><code>PIERCE cache THROUGH memory.head</code></td><td>0.488</td><td>0.062</td><td>11.99</td><td>0.368</td><td>0.408</td></tr><tr><td>cache@memory.heart</td><td><code>PIERCE cache THROUGH memory.heart</code></td><td>0.488</td><td>0.062</td><td>11.36</td><td>0.374</td><td>0.415</td></tr><tr><td>cache@memory.brain</td><td><code>PIERCE cache THROUGH memory.brain</code></td><td>0.488</td><td>0.062</td><td>10.29</td><td>0.385</td><td>0.425</td></tr><tr><td>fast_retry@act.heart</td><td><code>PIERCE fast_retry THROUGH act.heart</code></td><td>0.494</td><td>0.074</td><td>11.90</td><td>0.375</td><td>0.412</td></tr><tr><td>act grey</td><td><code>SHIFT act TO grey</code></td><td>0.502</td><td>0.000</td><td>12.06</td><td>0.381</td><td>0.417</td></tr><tr><td>heal act</td><td><code>HEAL act</code></td><td>0.496</td><td>0.072</td><td>11.83</td><td>0.378</td><td>0.415</td></tr><tr><td>amount_validator dot extract</td><td><code>DOT amount_validator INTO extract</code></td><td>0.488</td><td>0.062</td><td>12.09</td><td>0.367</td><td>0.407</td></tr><tr><td>composed</td><td><code>PIERCE spell_corrector THROUGH classify.brain
+PIERCE synonym_expander THROUGH classify.brain
+PIERCE cache THROUGH memory.heart
+PIERCE fast_retry THROUGH act.heart
+SHIFT act TO grey</code></td><td>0.780</td><td>0.000</td><td>11.79</td><td>0.662</td><td>0.705</td></tr></table>
+<p>results_sha256 8cff158e5efe8bba8cdede96c17e4b43e70676b6938a195a9a4f7b86847d8501</p></body></html>

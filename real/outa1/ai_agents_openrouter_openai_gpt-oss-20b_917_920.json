@@ -1,0 +1,218 @@
+{
+ "row": "ai_agents",
+ "model": "openrouter:openai/gpt-oss-20b",
+ "cells_run": [
+  917,
+  918,
+  919,
+  920
+ ],
+ "cells": {
+  "selfcons|917": {
+   "default": {
+    "result": 0.75,
+    "resource": 28.469,
+    "R": 0.026344444834732514,
+    "choices": {
+     "present|standard": 48
+    },
+    "failed_calls": 0,
+    "sec": 46.3
+   },
+   "full": {
+    "result": 1.0,
+    "resource": 14.256,
+    "R": 0.07014590347923681,
+    "choices": {
+     "present|standard": 13,
+     "stop|own": 4,
+     "open|standard": 2,
+     "present|own": 5,
+     "focus-b0|standard": 2,
+     "open|own": 1,
+     "future+1|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 29.7
+   },
+   "minus": {
+    "result": 0.5,
+    "resource": 15.012,
+    "R": 0.033306687982946975,
+    "choices": {
+     "present|standard": 11,
+     "stop|own": 3,
+     "open|standard": 2,
+     "present|own": 6,
+     "focus-b0|standard": 3,
+     "open|own": 1,
+     "focus-b0|own": 2,
+     "future+1|own": 1,
+     "C:see>trace>beam>step|policy": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 29.9
+   },
+   "sec": 106
+  },
+  "selfcons|918": {
+   "default": {
+    "result": 0.5,
+    "resource": 26.441,
+    "R": 0.018910026095836013,
+    "choices": {
+     "present|standard": 45
+    },
+    "failed_calls": 0,
+    "sec": 50.5
+   },
+   "full": {
+    "result": 1.0,
+    "resource": 16.204,
+    "R": 0.06171315724512466,
+    "choices": {
+     "present|standard": 7,
+     "future+2|own": 2,
+     "present|own": 4,
+     "stop|own": 3,
+     "C:see>trace>beam>step|policy": 2,
+     "C:see>trace>beam>step|own": 2,
+     "C:see>trace>beam>step|standard": 2,
+     "future+1|own": 2,
+     "past-2|standard": 1,
+     "past-1|own": 3
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 23.9
+   },
+   "minus": {
+    "result": 0.75,
+    "resource": 17.97,
+    "R": 0.041736227045075125,
+    "choices": {
+     "present|standard": 10,
+     "present|own": 7,
+     "stop|own": 2,
+     "C:see>trace>beam>step|policy": 2,
+     "past-2|standard": 1,
+     "future+2|own": 1,
+     "future+1|own": 2,
+     "past-1|own": 3,
+     "past-1|standard": 1,
+     "past-2|own": 2
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 33.4
+   },
+   "sec": 108
+  },
+  "selfcons|919": {
+   "default": {
+    "result": 1.0,
+    "resource": 22.109,
+    "R": 0.04523044913835994,
+    "choices": {
+     "present|standard": 42
+    },
+    "failed_calls": 0,
+    "sec": 31.3
+   },
+   "full": {
+    "result": 1.0,
+    "resource": 13.278,
+    "R": 0.07531254707034192,
+    "choices": {
+     "present|standard": 3,
+     "present|own": 4,
+     "stop|own": 3,
+     "future+1|own": 5,
+     "open|own": 1,
+     "C:see>trace>beam>step|policy": 1,
+     "past-2|own": 1,
+     "past-1|standard": 2,
+     "future+1|standard": 3,
+     "future+2|standard": 1,
+     "past-1|own": 1,
+     "focus-b0|own": 1,
+     "future+2|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 28.9
+   },
+   "minus": {
+    "result": 0.75,
+    "resource": 12.733,
+    "R": 0.05890206549909683,
+    "choices": {
+     "present|standard": 5,
+     "future+1|own": 4,
+     "present|own": 3,
+     "stop|own": 3,
+     "open|own": 1,
+     "C:see>trace>beam>step|policy": 1,
+     "C:see>trace>beam>step|own": 3,
+     "C:see>trace>beam>step|standard": 3,
+     "future+2|standard": 1,
+     "past-1|own": 1,
+     "focus-b0|own": 1,
+     "future+2|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 22.0
+   },
+   "sec": 82
+  },
+  "selfcons|920": {
+   "default": {
+    "result": 0.75,
+    "resource": 25.074,
+    "R": 0.02991146207226609,
+    "choices": {
+     "present|standard": 44
+    },
+    "failed_calls": 0,
+    "sec": 32.7
+   },
+   "full": {
+    "result": 1.0,
+    "resource": 14.474,
+    "R": 0.0690894016857814,
+    "choices": {
+     "present|standard": 7,
+     "present|own": 3,
+     "stop|own": 4,
+     "future+2|standard": 1,
+     "past-2|standard": 1,
+     "past-1|standard": 8,
+     "past-1|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 21.0
+   },
+   "minus": {
+    "result": 1.0,
+    "resource": 17.212,
+    "R": 0.05809900069718801,
+    "choices": {
+     "present|standard": 17,
+     "present|own": 7,
+     "stop|own": 4,
+     "open|own": 2,
+     "past-1|own": 2,
+     "future+1|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 27.1
+   },
+   "sec": 81
+  }
+ }
+}

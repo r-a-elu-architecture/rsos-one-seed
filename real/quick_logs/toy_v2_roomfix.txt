@@ -1,0 +1,41 @@
+REAL1/REAL2 modes (unchanged code paths):
+  Toy      default      [(np.float64(0.400367), 90), (np.float64(0.479549), 90), (np.float64(0.344728), 90), (np.float64(0.358665), 90)]
+  Toy      seed         [(np.float64(0.528744), 90), (np.float64(0.567967), 90), (np.float64(0.480956), 90), (np.float64(0.465436), 90)]
+  Toy      seed_noland  [(np.float64(0.528744), 90), (np.float64(0.567967), 90), (np.float64(0.480956), 90), (np.float64(0.465436), 90)]
+  Toy      rollout      [(np.float64(0.561842), 90), (np.float64(0.557014), 90), (np.float64(0.416924), 90), (np.float64(0.498613), 90)]
+  ToyLand  default      [(np.float64(0.400367), 90), (np.float64(0.479549), 90), (np.float64(0.344728), 90), (np.float64(0.358665), 90)]
+  ToyLand  seed         [(np.float64(0.580672), 87), (np.float64(0.591873), 87), (np.float64(0.499993), 87), (np.float64(0.520644), 87)]
+  ToyLand  seed_noland  [(np.float64(0.528744), 90), (np.float64(0.567967), 90), (np.float64(0.480956), 90), (np.float64(0.465436), 90)]
+  ToyLand  rollout      [(np.float64(0.561842), 90), (np.float64(0.557014), 90), (np.float64(0.416924), 90), (np.float64(0.498613), 90)]
+
+ToyOps:
+  cell 1: default 0.400367/90  seed3v1 0.557603/90  seed3v2 0.577217/90  obj v2-default +5.3055  v2-v1 +0.5884  membrane(v2>=default) True  time v1 2.04s v2 3.92s
+     chosen {'heal': 1, 'contain': 2, 'fuse': 2, 'carry': 2, 'overlay': 1, 'enter': 1, 'colour': 30, 'rooms': 30, 'transplant': 29} rooms {'Eagle': 9, 'Owl': 8, 'Associated': 3, 'base': 10} rollouts v1/ops 524 508 vetoed 2
+  cell 2: default 0.479549/90  seed3v1 0.597125/90  seed3v2 0.585304/90  obj v2-default +3.1727  v2-v1 -0.3547  membrane(v2>=default) True  time v1 2.23s v2 3.91s
+     chosen {'contain': 1, 'fuse': 4, 'carry': 8, 'colour': 30, 'rooms': 30, 'transplant': 30} rooms {'Eagle': 9, 'Owl': 7, 'Associated': 3, 'base': 11} rollouts v1/ops 524 510 vetoed 2
+  cell 3: default 0.344728/90  seed3v1 0.538539/90  seed3v2 0.507301/90  obj v2-default +4.8772  v2-v1 -0.9372  membrane(v2>=default) True  time v1 2.22s v2 4.12s
+     chosen {'heal': 1, 'beam3': 1, 'inherit': 1, 'carry': 2, 'enter': 1, 'colour': 30, 'rooms': 30, 'transplant': 30} rooms {'Eagle': 7, 'Owl': 4, 'Associated': 3, 'base': 16} rollouts v1/ops 524 528 vetoed 0
+  cell 4: default 0.358665/90  seed3v1 0.526642/90  seed3v2 0.523246/90  obj v2-default +4.9374  v2-v1 -0.1019  membrane(v2>=default) True  time v1 2.04s v2 4.02s
+     chosen {'fuse': 1, 'carry': 3, 'enter': 1, 'colour': 30, 'rooms': 30, 'transplant': 30} rooms {'Eagle': 10, 'Owl': 14, 'Associated': 3, 'base': 3} rollouts v1/ops 524 514 vetoed 2
+  total chosen {'heal': 2, 'beam1': 0, 'beam3': 1, 'contain': 3, 'compress': 0, 'inherit': 1, 'fuse': 7, 'carry': 15, 'rehost': 0, 'pierce': 0, 'overlay': 1, 'enter': 3, 'zoom': 0, 'colour': 120, 'rooms': 120, 'transplant': 119}
+  time v1 8.53s v2 15.97s ratio 1.87
+  bound {"heal": "bound", "beam1": "bound", "beam3": "bound", "contain": "bound", "compress": "bound", "inherit": "bound", "fuse": "bound", "carry": "bound", "rehost": "bound", "pierce": "bound", "overlay": "bound", "enter": "bound (depth 2)", "zoom": "bound (generic)", "colour": "bound", "rooms": "bound (generic)", "transplant": "bound (generic; file: SEED3_POOL_IN / SEED3_POOL_OUT)"}
+  tried {'heal': 27, 'beam1': 30, 'beam3': 29, 'contain': 27, 'compress': 28, 'inherit': 28, 'fuse': 29, 'carry': 30, 'rehost': 28, 'pierce': 28, 'overlay': 28, 'enter': 27, 'zoom': 28}
+  passed membrane {'heal': 21, 'beam1': 23, 'beam3': 18, 'contain': 15, 'compress': 9, 'inherit': 8, 'fuse': 51, 'carry': 21, 'rehost': 17, 'pierce': 27, 'overlay': 25, 'enter': 26, 'zoom': 16}
+  colour {'failing': 28, 'recovering': 19, 'healthy': 43} zoom scales {5: 13, 20: 4, 10: 11} enter depth {1: 28, 2: 28} fallback 0 inherit 56 shapes 75 pool in None pool out None
+
+Toy:
+  cell 1: default 0.400367/90  seed3v1 0.528744/90  seed3v2 0.528744/90  obj v2-default +3.8513  v2-v1 +0.0000  membrane(v2>=default) True  time v1 0.97s v2 1.26s
+     chosen {'rooms': 30} rooms {'Eagle': 11, 'Owl': 3, 'Associated': 3, 'base': 13} rollouts v1/ops 524 90 vetoed 0
+  cell 2: default 0.479549/90  seed3v1 0.567967/90  seed3v2 0.567967/90  obj v2-default +2.6525  v2-v1 +0.0000  membrane(v2>=default) True  time v1 1.0s v2 1.27s
+     chosen {'zoom': 1, 'rooms': 30, 'transplant': 1} rooms {'Eagle': 9, 'Owl': 1, 'Associated': 3, 'base': 17} rollouts v1/ops 524 89 vetoed 0
+  cell 3: default 0.344728/90  seed3v1 0.480956/90  seed3v2 0.480956/90  obj v2-default +4.0869  v2-v1 +0.0000  membrane(v2>=default) True  time v1 1.01s v2 1.32s
+     chosen {'zoom': 1, 'rooms': 30, 'transplant': 30} rooms {'Eagle': 6, 'Owl': 2, 'Associated': 3, 'base': 19} rollouts v1/ops 524 90 vetoed 1
+  cell 4: default 0.358665/90  seed3v1 0.465436/90  seed3v2 0.465436/90  obj v2-default +3.2031  v2-v1 +0.0000  membrane(v2>=default) True  time v1 0.94s v2 1.41s
+     chosen {'rooms': 30, 'transplant': 30} rooms {'Eagle': 3, 'Owl': 2, 'Associated': 3, 'base': 22} rollouts v1/ops 524 90 vetoed 0
+  total chosen {'heal': 0, 'beam1': 0, 'beam3': 0, 'contain': 0, 'compress': 0, 'inherit': 0, 'fuse': 0, 'carry': 0, 'rehost': 0, 'pierce': 0, 'overlay': 0, 'enter': 0, 'zoom': 2, 'colour': 0, 'rooms': 120, 'transplant': 61}
+  time v1 3.92s v2 5.26s ratio 1.34
+  bound {"heal": "not bound: needs parts+merge+part_objective (worst part)", "beam1": "not bound: needs parts+merge+focus", "beam3": "not bound: needs parts+merge+focus", "contain": "not bound: needs parts+merge+part_objective (colour: failing part)", "compress": "not bound: needs shape or parts+part_objective", "inherit": "not bound: needs shape or parts+part_objective", "fuse": "not bound: needs parts+merge or joint", "carry": "not bound: needs carry", "rehost": "not bound: needs parts+merge+map_part", "pierce": "not bound: needs parts+merge", "overlay": "not bound: needs parts+merge", "enter": "not bound: needs parts+merge", "zoom": "bound (generic)", "colour": "not bound: needs parts+part_objective", "rooms": "bound (generic)", "transplant": "bound (generic; file: SEED3_POOL_IN / SEED3_POOL_OUT)"}
+  tried {'heal': 0, 'beam1': 0, 'beam3': 0, 'contain': 0, 'compress': 0, 'inherit': 0, 'fuse': 0, 'carry': 0, 'rehost': 0, 'pierce': 0, 'overlay': 0, 'enter': 0, 'zoom': 30}
+  passed membrane {'heal': 0, 'beam1': 0, 'beam3': 0, 'contain': 0, 'compress': 0, 'inherit': 0, 'fuse': 0, 'carry': 0, 'rehost': 0, 'pierce': 0, 'overlay': 0, 'enter': 0, 'zoom': 19}
+  colour {'failing': 0, 'recovering': 0, 'healthy': 0} zoom scales {10: 12, 5: 7} enter depth {1: 0, 2: 0} fallback 0 inherit 56 shapes 75 pool in None pool out None

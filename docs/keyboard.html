@@ -1,0 +1,639 @@
+<title>RSOS Keyboard</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: instrument console. Left: task bar + keyboard; right: slots and live compiled output. Stacks on phones. */
+:root {
+  --bg:#f3f2ee; --panel:#ffffff; --ink:#1d2230; --muted:#5d6577; --line:#dcd9cf; --accent:#b7650f;
+  --k-place:#b7650f; --k-op:#b23b3b; --k-persp:#2f62a8; --k-state:#2e7d4f; --k-reason:#6e4fa3;
+  --k-dragon:#a68a12; --k-func:#16808a; --k-depth:#5d6577; --empty:#fbe7cf; --empty-ink:#8a4a06; --ok:#2e7d4f;
+  --code-bg:#1d2230; --code-ink:#e9e6dc;
+  --f-display:"Space Grotesk", system-ui, sans-serif; --f-body:Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg:#15171d; --panel:#1e2129; --ink:#e7e5df; --muted:#9aa1b0; --line:#323642; --accent:#e39a46;
+  --k-place:#e39a46; --k-op:#e07070; --k-persp:#7fa8e6; --k-state:#6cc28f; --k-reason:#b096e0;
+  --k-dragon:#d8bd4a; --k-func:#5cc3cc; --k-depth:#9aa1b0; --empty:#3d2a14; --empty-ink:#f3c48a; --ok:#6cc28f;
+  --code-bg:#0e1015; --code-ink:#e9e6dc; color-scheme:dark } }
+:root[data-theme="dark"] {
+  --bg:#15171d; --panel:#1e2129; --ink:#e7e5df; --muted:#9aa1b0; --line:#323642; --accent:#e39a46;
+  --k-place:#e39a46; --k-op:#e07070; --k-persp:#7fa8e6; --k-state:#6cc28f; --k-reason:#b096e0;
+  --k-dragon:#d8bd4a; --k-func:#5cc3cc; --k-depth:#9aa1b0; --empty:#3d2a14; --empty-ink:#f3c48a; --ok:#6cc28f;
+  --code-bg:#0e1015; --code-ink:#e9e6dc; color-scheme:dark }
+* { box-sizing:border-box }
+body { background:var(--bg); color:var(--ink); font:14px/1.45 var(--f-body);
+  padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px)); padding-block:16px 32px }
+h1,h2 { font-family:var(--f-display); margin:0; text-wrap:balance }
+h1 { font-size:22px } h2 { font-size:13px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); font-weight:500 }
+.top { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 16px; margin-bottom:12px }
+.top p { margin:0; color:var(--muted); max-width:70ch }
+main { display:grid; grid-template-columns:minmax(0,1.35fr) minmax(0,1fr); gap:16px; align-items:start }
+@media (max-width:900px) { main { grid-template-columns:1fr } }
+.col { display:grid; gap:16px; min-width:0 }
+.panel { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:14px; min-width:0 }
+/* task bar */
+.taskbar { display:grid; gap:10px }
+.taskrow { display:flex; flex-wrap:wrap; gap:8px; align-items:center }
+select, button, input, textarea { font:inherit; color:var(--ink) }
+select, input[type=text], textarea { background:var(--bg); border:1px solid var(--line); border-radius:8px; padding:6px 8px }
+button { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:6px 12px; cursor:pointer }
+button:focus-visible, .key:focus-visible, select:focus-visible, input:focus-visible, textarea:focus-visible { outline:2px solid var(--accent); outline-offset:2px }
+button.primary { background:var(--accent); border-color:var(--accent); color:var(--bg); font-weight:600 }
+button:disabled { opacity:.45; cursor:default }
+.clock { font:500 26px/1 var(--f-mono); font-variant-numeric:tabular-nums; min-width:5.5ch }
+.meta { color:var(--muted); font-size:12.5px; font-variant-numeric:tabular-nums }
+.target { border-left:3px solid var(--accent); padding:6px 10px; background:var(--bg); border-radius:0 8px 8px 0; font-weight:500 }
+.arm { display:inline-block; font:600 11px/1 var(--f-mono); padding:4px 7px; border-radius:20px; border:1px solid currentColor; letter-spacing:.05em }
+.arm.K { color:var(--k-persp) } .arm.P { color:var(--k-op) }
+/* keyboard */
+.groups { display:grid; gap:12px }
+.group { display:grid; gap:6px }
+.keys { display:grid; grid-template-columns:repeat(auto-fill, minmax(92px, 1fr)); gap:6px }
+.keys.small { grid-template-columns:repeat(auto-fill, minmax(48px, 1fr)) }
+.key { position:relative; display:flex; flex-direction:column; align-items:flex-start; gap:2px; text-align:left;
+  border:1px solid var(--line); border-left:4px solid var(--kc, var(--line)); border-radius:8px; padding:6px 8px 6px 8px;
+  background:var(--panel); min-height:48px; cursor:pointer; user-select:none; touch-action:manipulation }
+.key:active, .key.flash { background:var(--bg); transform:translateY(1px) }
+.key .g { font-size:15px; line-height:1; color:var(--kc) }
+.key .l { font-size:12.5px; font-weight:500; line-height:1.15 }
+.key kbd { position:absolute; top:5px; right:6px; font:500 10.5px/1 var(--f-mono); color:var(--muted) }
+.keys.small .key { align-items:center; min-height:44px }
+.keys.small .key .l { font:500 14px/1 var(--f-mono) }
+[data-kind=place] { --kc:var(--k-place) } [data-kind=op] { --kc:var(--k-op) } [data-kind=persp] { --kc:var(--k-persp) }
+[data-kind=state] { --kc:var(--k-state) } [data-kind=reason] { --kc:var(--k-reason) } [data-kind=prop],[data-kind=visual] { --kc:var(--k-dragon) }
+[data-kind=func],[data-kind=gain],[data-kind=trigger] { --kc:var(--k-func) } [data-kind=depth],[data-kind=order],[data-kind=dir],[data-kind=edit] { --kc:var(--k-depth) }
+.kbhidden .groups { display:none }
+/* output */
+.strip { display:flex; flex-wrap:wrap; gap:4px; min-height:30px; padding:6px; border:1px dashed var(--line); border-radius:8px }
+.tok { display:inline-flex; gap:4px; align-items:center; font-size:12.5px; padding:2px 7px; border-radius:20px; border:1px solid var(--kc); color:var(--kc) }
+.frames { display:grid; gap:10px }
+.frame { border:1px solid var(--line); border-radius:8px; padding:8px 10px; display:grid; gap:6px }
+.frame.cur { border-color:var(--accent) }
+.frame .fh { font-family:var(--f-display); font-weight:700 }
+.slots { display:flex; flex-wrap:wrap; gap:5px }
+.slot { font-size:12px; padding:3px 8px; border-radius:6px; background:var(--bg); border:1px solid var(--line) }
+.slot b { font-weight:600; color:var(--muted); margin-right:4px }
+.slot.empty { background:var(--empty); color:var(--empty-ink); border-color:var(--empty-ink) }
+.slot.opt.empty { background:transparent; border-style:dashed; color:var(--muted); border-color:var(--line) }
+.slot input { width:16ch; padding:2px 6px; font-size:12px }
+pre { margin:0; background:var(--code-bg); color:var(--code-ink); border-radius:8px; padding:10px; font:12.5px/1.5 var(--f-mono); white-space:pre-wrap; word-break:break-word; min-height:48px }
+.plain { font-size:14px; padding:8px 10px; border-radius:8px; background:var(--bg); min-height:36px }
+.status { font-size:12.5px; color:var(--muted) } .status.ok { color:var(--ok) } .status.warn { color:var(--empty-ink) }
+textarea { width:100%; resize:vertical }
+#ptext { min-height:120px; font-size:15px }
+#export { min-height:110px; font:12px/1.4 var(--f-mono) }
+table { width:100%; border-collapse:collapse; font-size:12.5px; font-variant-numeric:tabular-nums }
+th, td { text-align:left; padding:4px 6px; border-bottom:1px solid var(--line) } th { color:var(--muted); font-weight:500 }
+.tablewrap { overflow-x:auto }
+.seg { display:inline-flex; border:1px solid var(--line); border-radius:8px; overflow:hidden }
+.seg button { border:0; border-radius:0; padding:6px 12px }
+.seg button[aria-pressed="true"] { background:var(--ink); color:var(--bg); font-weight:600 }
+#curve svg { width:100%; height:auto; display:block }
+#curve .axis { fill:var(--muted); font:11px var(--f-mono) }
+#curve .grid { stroke:var(--line); stroke-width:1 }
+#curve .line { fill:none; stroke:var(--k-persp); stroke-width:2 }
+#curve .pt { fill:var(--panel); stroke:var(--k-persp); stroke-width:2 }
+#curve .pt.last { fill:var(--accent); stroke:var(--accent) }
+#curve .band { fill:var(--accent); opacity:.14 }
+#curve .empty { fill:var(--muted); font:13px var(--f-body) }
+.gate { display:flex; flex-wrap:wrap; gap:6px 10px; align-items:center; font-size:13px }
+.pill { font:600 11px/1 var(--f-mono); padding:4px 8px; border-radius:20px; border:1px solid currentColor; letter-spacing:.04em }
+.pill.met { color:var(--ok) } .pill.not { color:var(--empty-ink) }
+@media (prefers-reduced-motion: reduce) { .key:active, .key.flash { transform:none } }
+</style>
+
+<div class="top">
+  <h1>RSOS Keyboard</h1>
+  <p>One key is one whole component with its properties. Keys compile live into RSOS statements and a plain line. Empty slots light up so nothing is dropped. Built for HT2.</p>
+</div>
+
+<main>
+  <div class="col">
+    <section class="panel taskbar" aria-label="Task and timer">
+      <div class="taskrow">
+        <div class="seg" role="group" aria-label="Mode">
+          <button id="m-practice" aria-pressed="true">Practice</button><button id="m-test" aria-pressed="false">HT2 test</button>
+        </div>
+        <button id="newsession">New practice session</button>
+        <span class="meta" id="sessinfo"></span>
+      </div>
+      <div class="taskrow">
+        <label for="task" class="meta">Task</label>
+        <select id="task"></select>
+        <span id="arm" class="arm K">K</span>
+        <button id="start" class="primary">Start</button>
+        <button id="done" disabled>Done <span class="meta">(Enter)</span></button>
+        <span class="clock" id="clock">0.0</span>
+        <span class="meta" id="kcount">0 keys</span>
+      </div>
+      <div id="target" class="target" hidden></div>
+      <div class="status" id="tstatus">Practice: press Start. The clock runs from your first key to Done.</div>
+    </section>
+
+    <section class="panel" id="kbpanel" aria-label="Keyboard">
+      <div class="groups" id="groups"></div>
+      <div id="parm" hidden>
+        <h2 style="margin-bottom:6px">Plain text arm</h2>
+        <textarea id="ptext" placeholder="Write the target in your own plain words, then press Done (Ctrl+Enter)."></textarea>
+      </div>
+    </section>
+  </div>
+
+  <div class="col">
+    <section class="panel" style="display:grid;gap:10px" aria-label="Output">
+      <h2>Keys pressed</h2>
+      <div class="strip" id="strip"></div>
+      <h2>Models and slots</h2>
+      <div class="frames" id="frames"></div>
+      <div class="status" id="slotstatus"></div>
+      <h2>RSOS</h2>
+      <pre id="rsos"></pre>
+      <h2>Plain line</h2>
+      <div class="plain" id="plain"></div>
+    </section>
+
+    <section class="panel" style="display:grid;gap:10px" aria-label="Learning curve">
+      <h2>Learning curve · seconds per field</h2>
+      <div id="curve"></div>
+      <div class="gate" id="gate"></div>
+    </section>
+
+    <section class="panel" style="display:grid;gap:10px" aria-label="Log">
+      <h2>Log</h2>
+      <div class="tablewrap"><table id="logtable"><thead><tr><th>Mode</th><th>Task</th><th>Arm</th><th>s</th><th>Keys</th><th>Empty slots</th></tr></thead><tbody></tbody></table></div>
+      <div class="taskrow">
+        <button id="copy">Copy JSON</button>
+        <button id="clearlog">Clear log</button>
+        <span class="status" id="copystatus"></span>
+      </div>
+      <textarea id="export" readonly aria-label="Exported log JSON"></textarea>
+      <p class="meta" style="margin:0">Shortcuts: letters as shown, Shift for the second layer, 1–9 order, arrows direction, Backspace undo, Esc clear, Enter done.</p>
+    </section>
+  </div>
+</main>
+
+<script>
+(() => {
+// ---------- key table ----------
+const K = [
+ // places / components
+ ["head","robot head","◉","place","h"],["hand","robot hand","✋","place","j"],["leg","robot leg","┃","place","l"],
+ ["couch","couch","▭","place","c"],["eagle","Eagle room","▲","place","e"],["owl","Owl room","◎","place","o"],
+ ["calc","calculator","▦","place","k"],["palm","microwave palm","▢","place","m"],["mtop","microwave top","▔","place","u"],
+ ["dragon","White Dragon","✧","place","w"],["rocket","rocket heart","♥","place","r"],["sphere","sphere","●","place","s"],
+ ["team","team (host)","⁂","place","g"],
+ // operators
+ ["heal","heal","✚","op","H"],["beam","beam","↧","op","B"],["pierce","pierce","➶","op","P"],["transplant","transplant","⇄","op","T"],
+ ["flow","flow","≋","op","F"],["contain","contain","◌","op","C"],["compress","compress","⊙","op","X"],
+ // perspective
+ ["assoc","associated","◐","persp","a"],["dissoc","dissociated","◑","persp","d"],["topview","top view","⌃","persp","v"],
+ // state
+ ["confidence","confidence","▲","state","f"],["calm","calmness","∼","state","z"],["determination","determination","➤","state","b"],
+ ["relief","relief","○","state","y"],["deepwork","deep work","▼","state","W"],
+ // reasoning
+ ["analogical","analogical reasoning","≈","reason","n"],["futurepacing","future pacing","⇢","reason","p"],
+ ["hypothesis","hypothesis","?","reason","t"],["contradiction","contradiction","≠","reason","x"],
+ // dragon properties and visuals
+ ["golden","golden light","☀","prop","G"],["green","green particles","∴","prop","J"],["lion","lion style","♌","prop","L"],
+ ["tiger","tiger style","≡","prop","Y"],["tunnel","tunnel image","◎","visual","U"],["hologram","hologram","⬡","visual","I"],
+ // function, gain, trigger
+ ["decision","decision-making","◆","func","D"],["action","action","▶","func","A"],["hyptest","hypothesis testing","⚖","func","R"],
+ ["anchor","state anchor","⚓","func","N"],["efficiency","gain: efficiency","↗","gain","E"],["trigger","trigger: before…","⏱","trigger","K"],
+ // depth
+ ["surface","surface","─","depth","q"],["inside","inside","▣","depth","i"],["structure","structure","⌗","depth","S"],
+];
+const DIRS = [["forward","forward","→","ArrowRight"],["backward","backward","←","ArrowLeft"],["up","up","↑","ArrowUp"],["down","down","↓","ArrowDown"]];
+const KEY = {}, BYSHORT = {};
+for (const [id,label,glyph,kind,sc] of K) { KEY[id] = {id,label,glyph,kind,sc}; BYSHORT[sc] = id; }
+for (const [id,label,glyph,sc] of DIRS) { KEY[id] = {id,label,glyph,kind:"dir",sc}; BYSHORT[sc] = id; }
+for (let n=1;n<=9;n++) { KEY["o"+n] = {id:"o"+n,label:String(n),glyph:String(n),kind:"order",sc:String(n)}; BYSHORT[String(n)] = "o"+n; }
+
+const PLACE = {
+ head:{path:"robot.head",type:"model"}, hand:{path:"robot.hand",type:"model"}, leg:{path:"robot.leg",type:"model"},
+ couch:{path:"couch",type:"couch"}, eagle:{path:"eagle",type:"room",persp:"topview"}, owl:{path:"owl",type:"room"},
+ calc:{path:"calculator",type:"object"}, palm:{path:"microwave.palm",type:"anchor"}, mtop:{path:"microwave.top",type:"anchor"},
+ dragon:{path:"white_dragon",type:"bundle"}, rocket:{path:"rocket_heart",type:"bundle"}, sphere:{path:"sphere",type:"object"},
+ team:{path:"team",type:"host"},
+};
+const TOK = { assoc:"associated", dissoc:"dissociated", topview:"top_view", confidence:"confidence", calm:"calmness",
+ determination:"determination", relief:"relief", deepwork:"deep_work", analogical:"analogical_reasoning",
+ futurepacing:"future_pacing", hypothesis:"hypothesis", contradiction:"contradiction", tunnel:"tunnel_image",
+ hologram:"hologram", decision:"decision_making", action:"action", hyptest:"hypothesis_testing", anchor:"state_anchor" };
+const PROP = { golden:["light","golden"], green:["particles","green"], lion:["style","lion"], tiger:["style","tiger"] };
+const PLAINP = { topview:"view from above", team:"team" };
+
+// ---------- tasks ----------
+const T = [
+ ["T1","robot head · associated + state of confidence · analogical reasoning · decision-making"],
+ ["T2","robot hand · top view, dissociated · future pacing · action"],
+ ["T3","couch · moving forward = hypothesis, moving backward = contradiction · hypothesis testing"],
+ ["T4","Eagle room + calculator · view from above · decision · trigger: before any money decision"],
+ ["T5","kitchen microwave · palm = calmness, top = deep work with a tunnel image · state anchors"],
+ ["T6","rocket heart transplanted into a team (host) · depth: structure · order 1 · gain: efficiency"],
+];
+// Novel targets, sealed for HT2 (sha256 of the decoded JSON is in experiments/PREREGISTRATION_HT2.md). Shown only on Start.
+const SEALED = "W3siaWQiOiJOMSIsInRhcmdldCI6InJvYm90IGxlZyDCtyBkaXNzb2NpYXRlZCArIHN0YXRlIG9mIGRldGVybWluYXRpb24gwrcgZnV0dXJlIHBhY2luZyDCtyBmdW5jdGlvbjogYWN0aW9uIMK3IG9yZGVyIDIifSx7ImlkIjoiTjIiLCJ0YXJnZXQiOiJPd2wgcm9vbSArIHNwaGVyZSDCtyBhc3NvY2lhdGVkICsgcmVsaWVmIMK3IGNvbnRyYWRpY3Rpb24gwrcgZnVuY3Rpb246IGh5cG90aGVzaXMgdGVzdGluZyJ9LHsiaWQiOiJOMyIsInRhcmdldCI6IldoaXRlIERyYWdvbiBoZWFscyB0aGUgdGVhbSDCtyBnb2xkZW4gbGlnaHQgKyBncmVlbiBwYXJ0aWNsZXMgwrcgdGlnZXIgc3R5bGUgwrcgZGVwdGg6IGluc2lkZSJ9LHsiaWQiOiJONCIsInRhcmdldCI6InJvY2tldCBoZWFydCBiZWFtcyBkb3duIGludG8gdGhlIHNwaGVyZSDCtyBkZXB0aDogc3VyZmFjZSDCtyBvcmRlciAzIMK3IGdhaW46IGVmZmljaWVuY3kifV0=";
+let NT = null; // decoded only when an N task is started
+const sealed = id => { if (!NT) NT = Object.fromEntries(JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(SEALED), c => c.charCodeAt(0)))).map(x => [x.id, x.target])); return NT[id]; };
+// Practice targets (PREREGISTRATION_HT2.md, amendment 1): [id, target, fields]. Never T1-T6 or N1-N4.
+const PRACTICE = [
+ ["P1","White Dragon pierces the sphere · golden light + lion style · depth: structure · order 2 ‖ rocket heart heals the robot leg",10],
+ ["P2","robot head · dissociated + state of determination · contradiction · function: action ‖ rocket heart flows backward into the team · depth: inside · gain: efficiency",11],
+ ["P3","couch · moving forward = analogical reasoning, moving down = future pacing · function: decision-making ‖ sphere transplanted into the team · order 3",8],
+ ["P4","Owl room + calculator · associated + relief · hypothesis · function: state anchor · trigger: after lunch",7],
+ ["P5","microwave palm · confidence + hologram · function: hypothesis testing ‖ microwave top · calmness · function: state anchor ‖ White Dragon beams up into the team · green particles + tiger style · depth: surface",14],
+ ["P6","Eagle room + robot leg · top view · deep work + tunnel image · function: action · order 4 ‖ the team contains the rocket heart ‖ compress the robot hand with the couch",13],
+];
+const PT = Object.fromEntries(PRACTICE.map(x => [x[0], x[1]])), PF = Object.fromEntries(PRACTICE.map(x => [x[0], x[2]]));
+const SESSION_FIELDS = PRACTICE.reduce((a, x) => a + x[2], 0); // 63
+const GATE_RATIO = 1.10;
+const RUN = [...T.map(([id]) => [id,"K"]),
+ ["N1","K"],["N1","P"],["N2","P"],["N2","K"],["N3","K"],["N3","P"],["N4","P"],["N4","K"]];
+const targetOf = id => PT[id] || (T.find(t => t[0] === id) || [])[1] || sealed(id);
+
+// ---------- state ----------
+let frames = [], pendingDir = null, hist = [], strip = [];
+let running = false, t0 = null, tStart = null, keys = 0, events = [], timer = null;
+let log = [];
+try { log = JSON.parse(localStorage.getItem("rsos-ht2-log") || "[]"); } catch (e) { log = []; }
+const $ = id => document.getElementById(id);
+
+function snapshot() { hist.push(JSON.stringify({frames, pendingDir, strip})); if (hist.length > 200) hist.shift(); }
+function newFrame(o) { const f = {place:null,obj:null,op:null,target:null,persp:[],state:[],comps:[],props:[],func:null,trigger:"",dirs:[],depth:null,order:null,gain:null,dir:null,autoPersp:false,...o}; frames.push(f); return f; }
+function cur() { return frames[frames.length - 1] || null; }
+
+function apply(id) {
+  const k = KEY[id]; if (!k) return;
+  if (k.kind === "edit") return;
+  snapshot(); strip.push(id);
+  let f = cur();
+  const need = () => (f = cur() || newFrame({}));
+  switch (k.kind) {
+    case "place": {
+      const P = PLACE[id];
+      if (f && f.op && !f.place) { f.place = id; }
+      else if (f && f.op && f.place && !f.target) { f.target = id; }
+      else if (f && f.place && PLACE[f.place].type === "room" && !f.obj && P.type !== "room" && P.type !== "host") { f.obj = id; }
+      else if (f && !f.place && !f.op) { f.place = id; if (P.persp && !f.persp.includes(P.persp)) { f.persp.push(P.persp); f.autoPersp = true; } }
+      else { f = newFrame({place:id}); if (P.persp) { f.persp.push(P.persp); f.autoPersp = true; } }
+      break; }
+    case "op": {
+      // An operator joins the open frame only when that frame is a bare bundle/object/host waiting for an action
+      // (rocket heart, then transplant). After a model with content it always opens a new frame, so nothing is lost.
+      const bare = f && !f.op && f.place && ["bundle","object","host"].includes(PLACE[f.place].type) && !f.obj &&
+        !f.persp.length && !f.state.length && !f.comps.length && !f.func && !f.dirs.length && !f.trigger;
+      if (bare) f.op = id; else newFrame({op:id}); break; }
+    case "persp": need(); if (!f.persp.includes(id)) f.persp.push(id); break;
+    case "state": need(); f.state.push(id); break;
+    case "reason":
+      need();
+      if (pendingDir) { f.dirs.push([pendingDir, id]); pendingDir = null; } else f.comps.push(id);
+      break;
+    case "visual": need(); f.comps.push(id); break;
+    case "prop": need(); f.props.push(id); break;
+    case "func": need(); f.func = id; break;
+    case "gain": need(); f.gain = "efficiency"; break;
+    case "depth": need(); f.depth = id; break;
+    case "order": need(); f.order = Number(k.label); break;
+    case "dir": need(); if (f.op === "beam" || f.op === "flow") f.dir = id; else pendingDir = id; break;
+    case "trigger": need(); if (!f.trigger) f.trigger = "before "; render(); const inp = document.querySelector(".frame.cur input"); if (inp) { inp.focus(); inp.setSelectionRange(inp.value.length, inp.value.length); } return;
+  }
+  render();
+}
+function undo() { const s = hist.pop(); if (!s) return; ({frames, pendingDir, strip} = JSON.parse(s)); render(); }
+function clearAll() { snapshot(); frames = []; pendingDir = null; strip = []; render(); }
+
+// ---------- slots ----------
+function slotsOf(f) {
+  const t = f.place ? PLACE[f.place].type : null, S = [];
+  const add = (name, val, opt) => S.push({name, val, opt:!!opt});
+  const L = a => a.map(x => KEY[x].label).join(" + ");
+  if (f.op) {
+    add("operator", KEY[f.op].label); add("source", f.place && KEY[f.place].label); add("host / target", f.target && KEY[f.target].label);
+    if (f.op === "beam" || f.op === "flow") add("direction", f.dir && KEY[f.dir].label, f.op === "beam");
+    add("depth", f.depth && KEY[f.depth].label, true); add("order", f.order, true); add("gain", f.gain, true);
+    if (f.place === "dragon" || f.props.length) add("properties", L(f.props), f.place !== "dragon");
+    if (f.state.length || f.comps.length) add("components", L([...f.state, ...f.comps]));
+    return S;
+  }
+  if (t === "model") { add("perspective", L(f.persp)); add("state", L(f.state), true); add("components", L(f.comps)); add("function", f.func && KEY[f.func].label); add("trigger", f.trigger.trim(), true); add("order", f.order, true); add("depth", f.depth && KEY[f.depth].label, true); }
+  else if (t === "couch") { add("function", f.func && KEY[f.func].label); add("directions", f.dirs.map(([d,r]) => KEY[d].label + " = " + KEY[r].label).join(", ") + (pendingDir && f === cur() ? " " + KEY[pendingDir].glyph + " …" : "")); if (f.comps.length) add("components", L(f.comps)); add("trigger", f.trigger.trim(), true); }
+  else if (t === "room") { add("perspective", L(f.persp)); add("object", f.obj && KEY[f.obj].label); add("function", f.func && KEY[f.func].label); if (f.state.length || f.comps.length) add("components", L([...f.state, ...f.comps])); add("trigger", f.trigger.trim(), true); }
+  else if (t === "anchor") { add("state", L([...f.state, ...f.comps])); add("function", f.func && KEY[f.func].label); add("trigger", f.trigger.trim(), true); }
+  else if (t === "bundle" && f.place === "dragon") { add("properties", L(f.props)); add("operator", null, true); }
+  else { add("perspective", L(f.persp), true); add("state / components", L([...f.state, ...f.comps]), !f.func); add("function", f.func && KEY[f.func].label); add("trigger", f.trigger.trim(), true); if (t === "bundle" || t === "host") add("operator", null, true); }
+  if (!f.place) S.unshift({name:"place", val:null, opt:false});
+  return S;
+}
+const isEmpty = v => v === null || v === undefined || v === "";
+
+// ---------- compile ----------
+function comp(f) { return [...f.persp, ...f.state, ...f.comps].map(x => TOK[x]); }
+function compileFrame(f) {
+  const out = [], P = f.place ? PLACE[f.place] : null, path = P ? P.path : "_";
+  const extra = (p, skip) => {
+    if (f.order != null && !skip.includes("order")) out.push(`PROPERTY ${p}.order = ${f.order}`);
+    if (f.depth && !skip.includes("depth")) out.push(`PROPERTY ${p}.depth = ${f.depth}`);
+    if (f.gain && !skip.includes("gain")) out.push(`PROPERTY ${p}.gain = ${f.gain}`);
+    if (f.trigger.trim()) { out.push(`SELECTMODEL ${p} BY trigger`); out.push(`PROPERTY ${p}.trigger = "${f.trigger.trim().replace(/"/g,"'")}"`); }
+  };
+  const props = p => { for (const x of f.props) { const [k,v] = PROP[x]; out.push(`PROPERTY ${p}.${k} = ${v}`); } };
+  if (f.op) {
+    const tgt = f.target ? (f.op === "transplant" && f.place === "rocket" ? PLACE[f.target].path + ".heart" : PLACE[f.target].path) : "_";
+    if (f.place === "dragon" || f.props.length) props(path);
+    const c = [...f.state, ...f.comps].map(x => TOK[x]);
+    if (c.length) out.push(`PROPERTY ${path}.with = "${c.join(" + ")}"`);
+    const by = f.op === "heal" && f.props.includes("golden") ? path + ".light" : path;
+    switch (f.op) {
+      case "transplant": out.push(`TRANSPLANT ${path} TO ${tgt}` + (f.depth ? ` DEPTH ${f.depth}` : "") + (f.order != null ? ` ORDER ${f.order}` : "") + (f.gain ? ` GAIN ${f.gain}` : "")); extra(path, ["order","depth","gain"]); break;
+      case "heal": out.push(`HEAL ${tgt} BY ${by}`); extra(tgt === "_" ? path : tgt, []); break;
+      case "beam": out.push(`BEAM ${path}` + (f.dir ? ` DIRECTION ${f.dir === "forward" ? "outward" : f.dir === "backward" ? "inward" : f.dir}` : "") + ` TO ${tgt}`); extra(tgt, []); break;
+      case "flow": out.push(`FLOW ${path} DIRECTION ${f.dir ? (f.dir === "forward" ? "outward" : f.dir === "backward" ? "inward" : f.dir) : "_"} TO ${tgt}`); extra(tgt, []); break;
+      case "pierce": out.push(`PIERCE ${path} THROUGH ${tgt}`); extra(tgt, []); break;
+      case "contain": out.push(`WRAP ${path} AROUND ${tgt}`); extra(tgt, []); break;
+      case "compress": out.push(`COMPRESS ${path}, ${tgt} AS ${(f.place||"x")}_symbol`); extra(path, []); break;
+    }
+    return out;
+  }
+  if (!P) { const c = comp(f); if (c.length || f.func) out.push(`MODEL _ = ${c.join(" + ") || "_"}` + (f.func ? ` FOR ${TOK[f.func]}` : "")); return out; }
+  if (P.type === "room") {
+    out.push(`ROOM ${path} PERSPECTIVE ${f.persp.includes("topview") ? "above" : f.persp.map(x => TOK[x]).join("_") || "_"}`);
+    if (f.obj) {
+      const op = PLACE[f.obj].path; if (!op.includes(".")) out.push(`OBJECT ${op} IN ${path}`);
+      const c = comp(f); out.push(`MODEL ${op} = ${c.join(" + ") || "_"} IN ${path}` + (f.func ? ` FOR ${TOK[f.func]}` : "")); extra(op, []);
+    } else if (f.func || f.state.length || f.comps.length) { const c = comp(f); out.push(`MODEL ${path} = ${c.join(" + ") || "_"}` + (f.func ? ` FOR ${TOK[f.func]}` : "")); extra(path, []); }
+    else extra(path, []);
+    return out;
+  }
+  if (P.type === "couch") {
+    if (f.func) out.push(`DEDICATE ${path} TO ${TOK[f.func]}`);
+    if (f.dirs.length) out.push(`FORM ${path} DIRECTIONS ` + f.dirs.map(([d,r]) => `${d} -> ${TOK[r]}`).join(" ; "));
+    const c = comp(f); if (c.length) out.push(`MODEL ${path} = ${c.join(" + ")}`);
+    extra(path, []); return out;
+  }
+  if (f.props.length) props(path);
+  const c = comp(f);
+  if (c.length) out.push(`MODEL ${path} = ${c.join(" + ")}` + (f.func ? ` FOR ${TOK[f.func]}` : ""));
+  else if (f.func) out.push(`DEDICATE ${path} TO ${TOK[f.func]}`);
+  else if (!f.props.length) out.push(`OBJECT ${path.replace(".", "_")}`);
+  extra(path, []); return out;
+}
+function plainFrame(f) {
+  const lab = x => PLAINP[x] || KEY[x].label, L = a => a.map(lab).join(", ");
+  const bits = [];
+  if (f.op) {
+    const src = f.place ? lab(f.place) : "?", tgt = f.target ? lab(f.target) : "?";
+    const verb = {transplant:"Transplant", heal:"Heal", beam:"Beam", flow:"Flow", pierce:"Pierce", contain:"Contain", compress:"Compress"}[f.op];
+    let s = f.op === "heal" ? `${src} heals the ${tgt}` : f.op === "transplant" ? `Transplant the ${src} into the ${tgt}${f.place === "rocket" ? " (its heart place)" : ""}` :
+      f.op === "beam" || f.op === "flow" ? `${src} ${f.op}s ${f.dir ? f.dir + " " : ""}into the ${tgt}` : f.op === "pierce" ? `${src} pierces the ${tgt}` :
+      f.op === "contain" ? `${src} contains the ${tgt}` : `${verb} ${src} with ${tgt}`;
+    bits.push(s.charAt(0).toUpperCase() + s.slice(1));
+    if (f.props.length) bits.push(L(f.props));
+    if (f.state.length || f.comps.length) bits.push("with " + L([...f.state, ...f.comps]));
+  } else {
+    let head = f.place ? lab(f.place) : "Model"; if (f.obj) head += " with " + lab(f.obj);
+    head = head.charAt(0).toUpperCase() + head.slice(1);
+    const parts = [];
+    if (f.persp.length) parts.push(L(f.persp));
+    if (f.state.length) parts.push("state of " + L(f.state));
+    if (f.comps.length) parts.push(L(f.comps));
+    if (f.props.length) parts.push(L(f.props));
+    if (f.dirs.length) parts.push(f.dirs.map(([d,r]) => `moving ${KEY[d].label} = ${KEY[r].label}`).join(", "));
+    bits.push(head + (parts.length ? ": " + parts.join("; ") : ""));
+    if (f.func) bits.push("function: " + KEY[f.func].label);
+    if (f.trigger.trim()) bits.push("trigger: " + f.trigger.trim());
+  }
+  if (f.depth) bits.push("depth: " + f.depth);
+  if (f.order != null) bits.push("order " + f.order);
+  if (f.gain) bits.push("gain: " + f.gain);
+  return bits.join("; ") + ".";
+}
+
+// ---------- render ----------
+function render() {
+  $("strip").innerHTML = strip.map(id => { const k = KEY[id]; return `<span class="tok" data-kind="${k.kind}">${k.kind === "order" ? "order " + k.label : `<span>${k.glyph}</span>${k.label}`}</span>`; }).join("") || `<span class="meta">Press a key or a shortcut to begin.</span>`;
+  let empties = 0;
+  $("frames").innerHTML = frames.map((f, i) => {
+    const S = slotsOf(f);
+    const head = (f.op ? KEY[f.op].label + " · " : "") + (f.place ? KEY[f.place].label : "—") + (f.obj ? " + " + KEY[f.obj].label : "") + (f.target ? " → " + KEY[f.target].label : "");
+    const chips = S.map(s => {
+      const e = isEmpty(s.val); if (e && !s.opt) empties++;
+      if (s.name === "trigger" && (f.trigger || i === frames.length - 1)) return `<span class="slot ${e ? "empty opt" : ""}"><b>trigger</b><input type="text" id="trig${i}" data-i="${i}" value="${f.trigger.replace(/"/g,"&quot;")}" placeholder="before …" aria-label="Trigger text"></span>`;
+      return `<span class="slot ${e ? "empty" : ""} ${s.opt ? "opt" : ""}"><b>${s.name}</b>${e ? (s.opt ? "optional" : "empty") : s.val}</span>`;
+    }).join("");
+    return `<div class="frame ${i === frames.length - 1 ? "cur" : ""}"><div class="fh">${i + 1}. ${head}</div><div class="slots">${chips}</div></div>`;
+  }).join("") || `<span class="meta">A place key (robot head, couch, Eagle room…) or an operator opens a model and shows its slots.</span>`;
+  const st = $("slotstatus");
+  st.textContent = frames.length ? (empties ? `${empties} required slot${empties > 1 ? "s" : ""} empty` : "All required slots filled") : "";
+  st.className = "status " + (frames.length ? (empties ? "warn" : "ok") : "");
+  $("rsos").textContent = frames.flatMap(compileFrame).join("\n");
+  $("plain").textContent = frames.map(plainFrame).join(" ");
+  document.querySelectorAll(".frame input").forEach(inp => {
+    inp.addEventListener("input", e => { const f = frames[+e.target.dataset.i]; f.trigger = e.target.value; tick("type"); refreshOut(); });
+    inp.addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); e.target.blur(); } else if (e.key === "Escape") e.target.blur(); });
+  });
+  return empties;
+}
+function refreshOut() { $("rsos").textContent = frames.flatMap(compileFrame).join("\n"); $("plain").textContent = frames.map(plainFrame).join(" "); }
+
+// ---------- keyboard build ----------
+const GROUPS = [["Places and components","place"],["Operators","op"],["Perspective","persp"],["State","state"],["Reasoning","reason"],
+ ["White Dragon and images",["prop","visual"]],["Function, gain, trigger",["func","gain","trigger"]],["Depth","depth"]];
+let html = "";
+for (const [title, kinds] of GROUPS) {
+  const ks = Object.values(KEY).filter(k => [].concat(kinds).includes(k.kind));
+  html += `<div class="group"><h2>${title}</h2><div class="keys">` + ks.map(btn).join("") + `</div></div>`;
+}
+html += `<div class="group"><h2>Order and direction</h2><div class="keys small">` +
+  Object.values(KEY).filter(k => k.kind === "order" || k.kind === "dir").map(k => `<button class="key" data-id="${k.id}" data-kind="${k.kind}" aria-label="${k.kind === "dir" ? k.label : "order " + k.label}"><span class="l">${k.glyph}</span></button>`).join("") +
+  `<button class="key" data-act="undo" data-kind="edit" aria-label="Undo"><span class="l">⌫</span></button><button class="key" data-act="clear" data-kind="edit" aria-label="Clear"><span class="l">Esc</span></button></div></div>`;
+function btn(k) { const sc = k.sc.length === 1 && k.sc === k.sc.toUpperCase() && /[A-Z]/.test(k.sc) ? "⇧" + k.sc : k.sc; return `<button class="key" data-id="${k.id}" data-kind="${k.kind}"><kbd>${sc}</kbd><span class="g">${k.glyph}</span><span class="l">${k.label}</span></button>`; }
+$("groups").innerHTML = html;
+$("groups").addEventListener("click", e => {
+  const b = e.target.closest(".key"); if (!b) return;
+  if (b.dataset.act === "undo") { tick("undo"); undo(); return; }
+  if (b.dataset.act === "clear") { tick("clear"); clearAll(); return; }
+  tick(b.dataset.id); apply(b.dataset.id);
+});
+function flash(id) { const b = document.querySelector(`.key[data-id="${id}"]`); if (b) { b.classList.add("flash"); setTimeout(() => b.classList.remove("flash"), 120); } }
+
+document.addEventListener("keydown", e => {
+  const tag = (e.target.tagName || "").toLowerCase();
+  if (tag === "textarea") { if (e.key === "Enter" && (e.ctrlKey || e.metaKey) && running) { e.preventDefault(); finish(); } return; }
+  if (tag === "input" || tag === "select") return;
+  if (e.ctrlKey || e.metaKey || e.altKey) return;
+  if (e.key === "Enter") { if (running) { e.preventDefault(); finish(); } return; }
+  if (curArm() === "P") return;
+  if (e.key === "Backspace") { e.preventDefault(); tick("undo"); undo(); return; }
+  if (e.key === "Escape") { tick("clear"); clearAll(); return; }
+  const id = BYSHORT[e.key]; if (!id) return;
+  e.preventDefault(); tick(id); flash(id); apply(id);
+});
+
+// ---------- modes, practice sessions, gate ----------
+let mode = "practice";
+let pstate = null;
+try { pstate = JSON.parse(localStorage.getItem("rsos-ht2-practice") || "null"); } catch (e) { pstate = null; }
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+function savePstate() { try { localStorage.setItem("rsos-ht2-practice", JSON.stringify(pstate)); } catch (e) {} }
+function sessions() {
+  const by = {};
+  for (const r of log) if (r.mode === "practice") (by[r.session] = by[r.session] || {})[r.task] = r; // last record per task wins
+  return Object.keys(by).map(Number).sort((a, b) => a - b).map(n => {
+    const recs = by[n], ids = Object.keys(recs), complete = PRACTICE.every(x => recs[x[0]]);
+    const secs = ids.reduce((a, id) => a + recs[id].seconds, 0);
+    return { session:n, done:ids.length, complete, seconds:+secs.toFixed(2), tpf: complete ? secs / SESSION_FIELDS : null,
+      empty_slots: ids.reduce((a, id) => a + (recs[id].empty_required_slots || 0), 0) };
+  });
+}
+function gate() {
+  const done = sessions().filter(x => x.complete), last = done.slice(-3);
+  if (last.length < 3) return { met:false, last, ratio:null, need:3 - last.length };
+  const v = last.map(x => x.tpf), ratio = Math.max(...v) / Math.min(...v);
+  return { met: ratio <= GATE_RATIO, last, ratio };
+}
+function newSession() {
+  const maxS = Math.max(0, ...log.filter(r => r.mode === "practice").map(r => r.session));
+  pstate = { session: maxS + 1, order: shuffle(PRACTICE.map(x => x[0])) }; savePstate();
+}
+if (!pstate || sessions().some(x => x.session === pstate.session && x.complete)) newSession();
+const queue = () => mode === "practice" ? pstate.order.map(id => [id, "K"]) : RUN;
+const sel = $("task");
+function doneInSession(id) { return log.find(r => r.mode === "practice" && r.session === pstate.session && r.task === id); }
+function buildSelect(keep) {
+  const g = gate(), locked = mode === "test" && !g.met;
+  sel.innerHTML = queue().map(([id, arm], i) => {
+    const d = mode === "practice" && doneInSession(id);
+    return `<option value="${i}">${id} · ${arm === "K" ? "keyboard" : "plain text"}${d ? " · done " + d.seconds.toFixed(1) + " s" : ""}</option>`;
+  }).join("");
+  if (keep != null) sel.value = String(keep);
+  else if (mode === "practice") { const i = queue().findIndex(([id]) => !doneInSession(id)); sel.value = String(Math.max(0, i)); }
+  else { const i = RUN.findIndex(([id, arm]) => !log.some(r => r.mode === "test" && r.task === id && r.arm === arm)); sel.value = String(Math.max(0, i)); }
+  sel.disabled = locked; $("start").disabled = locked;
+  $("newsession").hidden = mode !== "practice";
+  $("sessinfo").textContent = mode === "practice"
+    ? `Session ${pstate.session} · ${pstate.order.filter(doneInSession).length}/6 done`
+    : (g.met ? "Gate met · HT2 unlocked" : "Locked until the practice gate is met");
+  if (!running) $("tstatus").textContent = locked
+    ? "HT2 test tasks stay locked until 3 consecutive complete practice sessions are within 10% of each other in seconds per field."
+    : mode === "practice" ? "Practice: press Start. The clock runs from your first key to Done." : "HT2: press Start. The clock runs from your first key to Done, as in HT1.";
+  setArm();
+}
+function setMode(m) {
+  if (running) return; mode = m;
+  $("m-practice").setAttribute("aria-pressed", m === "practice"); $("m-test").setAttribute("aria-pressed", m === "test");
+  $("target").hidden = true; buildSelect();
+}
+$("m-practice").addEventListener("click", () => setMode("practice"));
+$("m-test").addEventListener("click", () => setMode("test"));
+$("newsession").addEventListener("click", () => { if (running) return; newSession(); buildSelect(); $("tstatus").textContent = `Session ${pstate.session} ready, new order. An unfinished session does not count.`; });
+
+const curArm = () => (queue()[+sel.value] || [0, "K"])[1];
+function setArm() {
+  const arm = curArm(); $("arm").textContent = arm; $("arm").className = "arm " + arm;
+  $("kbpanel").classList.toggle("kbhidden", arm === "P"); $("parm").hidden = arm !== "P";
+}
+sel.addEventListener("change", () => { if (!running) { $("target").hidden = true; setArm(); } });
+function tick(what) {
+  if (!running) return;
+  const now = performance.now();
+  if (t0 === null) t0 = now;
+  keys++; events.push([Math.round(now - tStart), what]);
+  $("kcount").textContent = keys + " keys";
+}
+$("ptext").addEventListener("input", () => tick("type"));
+$("start").addEventListener("click", () => {
+  if (mode === "test" && !gate().met) return;
+  frames = []; pendingDir = null; hist = []; strip = []; $("ptext").value = "";
+  running = true; t0 = null; keys = 0; events = []; tStart = performance.now();
+  const [id] = queue()[+sel.value];
+  $("target").textContent = id + " · " + targetOf(id); $("target").hidden = false;
+  $("start").disabled = true; $("done").disabled = false; sel.disabled = true;
+  $("m-practice").disabled = $("m-test").disabled = $("newsession").disabled = true;
+  $("tstatus").textContent = "Clock starts at your first key.";
+  $("kcount").textContent = "0 keys"; $("clock").textContent = "0.0";
+  clearInterval(timer); timer = setInterval(() => { $("clock").textContent = t0 === null ? "0.0" : ((performance.now() - t0) / 1000).toFixed(1); }, 100);
+  render(); setArm();
+  if (curArm() === "P") $("ptext").focus(); else document.activeElement && document.activeElement.blur();
+});
+$("done").addEventListener("click", finish);
+function finish() {
+  if (!running) return;
+  const end = performance.now(); running = false; clearInterval(timer);
+  const idx = +sel.value, [id, arm] = queue()[idx];
+  const empties = arm === "K" ? render() : null;
+  const rsos = frames.flatMap(compileFrame).join("\n"), plain = frames.map(plainFrame).join(" ");
+  const rec = { mode, session: mode === "practice" ? pstate.session : null, task:id, arm, target:targetOf(id),
+    fields: PF[id] ?? null,
+    seconds: t0 === null ? 0 : +((end - t0) / 1000).toFixed(2), seconds_from_start: +((end - tStart) / 1000).toFixed(2),
+    keystrokes: keys, empty_required_slots: empties,
+    rsos: arm === "K" ? rsos : null, plain: arm === "K" ? plain : null,
+    message: arm === "K" ? rsos + "\n\n" + plain : $("ptext").value,
+    keys_pressed: arm === "K" ? strip.slice() : null, events, at: new Date().toISOString() };
+  log.push(rec); saveLog();
+  $("clock").textContent = rec.seconds.toFixed(1);
+  let msg = `${id} ${arm} saved: ${rec.seconds.toFixed(1)} s, ${keys} keys` + (empties ? `, ${empties} required slot(s) left empty` : "") + ".";
+  $("start").disabled = false; $("done").disabled = true; sel.disabled = false;
+  $("m-practice").disabled = $("m-test").disabled = $("newsession").disabled = false;
+  $("target").hidden = true;
+  if (mode === "practice") {
+    const s = sessions().find(x => x.session === pstate.session);
+    if (s && s.complete) {
+      msg += ` Session ${s.session} complete: ${s.tpf.toFixed(2)} s per field.`;
+      const g = gate(); if (g.met) msg += " Gate met: HT2 is unlocked."; newSession(); msg += ` Session ${pstate.session} is ready.`;
+    }
+    buildSelect();
+  } else buildSelect(idx < RUN.length - 1 ? idx + 1 : idx);
+  $("tstatus").textContent = msg;
+}
+function renderCurve() {
+  const S = sessions().filter(x => x.complete), g = gate();
+  const W = 360, H = 170, L = 38, R = 10, Tp = 10, B = 24;
+  if (!S.length) {
+    $("curve").innerHTML = `<svg viewBox="0 0 ${W} 70" role="img" aria-label="No complete session yet"><text class="empty" x="0" y="28">Finish all six practice targets in one session</text><text class="empty" x="0" y="48">to plot your first point.</text></svg>`;
+  } else {
+    const v = S.map(x => x.tpf), ymax = Math.max(...v) * 1.15, n = S.length;
+    const x = i => n === 1 ? L + (W - L - R) / 2 : L + i * (W - L - R) / (n - 1), y = t => Tp + (H - Tp - B) * (1 - t / ymax);
+    const ticks = [0, 1, 2, 3].map(k => ymax * k / 3);
+    let svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Seconds per field by practice session">`;
+    for (const t of ticks) svg += `<line class="grid" x1="${L}" x2="${W - R}" y1="${y(t)}" y2="${y(t)}"/><text class="axis" x="${L - 6}" y="${y(t) + 4}" text-anchor="end">${t.toFixed(ymax < 3 ? 2 : ymax < 30 ? 1 : 0)}</text>`;
+    if (g.last.length === 3) { const lv = g.last.map(s => s.tpf), lo = Math.min(...lv); svg += `<rect class="band" x="${x(n - 3)}" width="${x(n - 1) - x(n - 3) || 8}" y="${y(lo * GATE_RATIO)}" height="${y(lo) - y(lo * GATE_RATIO)}"/>`; }
+    svg += `<polyline class="line" points="${S.map((s, i) => x(i) + "," + y(s.tpf)).join(" ")}"/>`;
+    const step = Math.ceil(n / 12);
+    S.forEach((s, i) => { svg += `<circle class="pt ${i >= n - 3 && g.met ? "last" : ""}" cx="${x(i)}" cy="${y(s.tpf)}" r="4"><title>Session ${s.session}: ${s.tpf.toFixed(2)} s per field</title></circle>`;
+      if (i % step === 0 || i === n - 1) svg += `<text class="axis" x="${x(i)}" y="${H - 6}" text-anchor="middle">${s.session}</text>`; });
+    $("curve").innerHTML = svg + `</svg>`;
+  }
+  $("gate").innerHTML = g.ratio == null
+    ? `<span class="pill not">GATE NOT MET</span><span>${g.need} more complete session${g.need > 1 ? "s" : ""} needed before the gate can be checked.</span>`
+    : `<span class="pill ${g.met ? "met" : "not"}">${g.met ? "GATE MET" : "GATE NOT MET"}</span><span>Last 3: ${g.last.map(s => s.tpf.toFixed(2)).join(" · ")} s/field · spread ${((g.ratio - 1) * 100).toFixed(1)}% (needs ≤ 10%)</span>`;
+}
+function saveLog() {
+  try { localStorage.setItem("rsos-ht2-log", JSON.stringify(log)); } catch (e) {}
+  const g = gate();
+  $("export").value = JSON.stringify({experiment:"HT2", page:"docs/keyboard.html", sessions:sessions(),
+    gate:{met:g.met, ratio:g.ratio, last_sessions:g.last.map(s => s.session)}, records:log}, null, 1);
+  $("logtable").querySelector("tbody").innerHTML = log.map(r => `<tr><td>${r.mode === "practice" ? "practice " + r.session : (r.mode || "test")}</td><td>${r.task}</td><td>${r.arm}</td><td>${r.seconds.toFixed(1)}</td><td>${r.keystrokes}</td><td>${r.empty_required_slots ?? "—"}</td></tr>`).join("");
+  renderCurve();
+}
+$("copy").addEventListener("click", () => {
+  const txt = $("export").value;
+  const fallback = () => { $("export").focus(); $("export").select(); $("copystatus").textContent = "Selected. Copy it with your system's copy."; };
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(() => { $("copystatus").textContent = "Copied. Paste it into the chat."; }, fallback); else fallback();
+});
+let armed = false;
+$("clearlog").addEventListener("click", () => {
+  if (!armed) { armed = true; $("clearlog").textContent = "Press again to clear"; setTimeout(() => { armed = false; $("clearlog").textContent = "Clear log"; }, 3000); return; }
+  log = []; newSession(); saveLog(); buildSelect(); armed = false; $("clearlog").textContent = "Clear log";
+});
+
+// Sample state so the first view shows what the keyboard does (cleared on Start).
+for (const id of ["head","assoc","confidence","analogical","decision"]) apply(id);
+hist = [];
+saveLog(); buildSelect();
+// self-test hook for checks
+window.__rsosKB = { apply, sessions, gate, frames: () => frames, compile: () => frames.flatMap(compileFrame).join("\n"), plain: () => frames.map(plainFrame).join(" "), reset: () => { frames=[]; strip=[]; pendingDir=null; render(); } };
+})();
+</script>

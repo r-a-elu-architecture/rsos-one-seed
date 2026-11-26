@@ -1,0 +1,72 @@
+{
+ "d1": {
+  "adv_live": 0.09395582689201792,
+  "adv_unhealed": -0.0634931268951068,
+  "adv_holo4": -0.059423658963266845,
+  "wins_vs_best_baseline": 12,
+  "letters": 799,
+  "landed": 113,
+  "futures": 2174
+ },
+ "d2": {
+  "adv_live": 0.036398939620577386,
+  "adv_unhealed": -0.22078161117397554,
+  "adv_holo4": -0.2626365054986863,
+  "wins_vs_best_baseline": 11,
+  "letters": 1883,
+  "landed": 190,
+  "futures": 5257
+ },
+ "d3": {
+  "adv_live": -0.03489206135537248,
+  "adv_unhealed": -0.501996911181901,
+  "adv_holo4": -0.660496274390321,
+  "wins_vs_best_baseline": 8,
+  "letters": 3010,
+  "landed": 321,
+  "futures": 8493
+ },
+ "d4": {
+  "adv_live": 0.1769553693475534,
+  "adv_unhealed": -0.5351880875250868,
+  "adv_holo4": -0.5056955916515912,
+  "wins_vs_best_baseline": 11,
+  "letters": 4234,
+  "landed": 390,
+  "futures": 11949
+ },
+ "d5": {
+  "adv_live": -0.1080244543331279,
+  "adv_unhealed": -0.9430006569257956,
+  "adv_holo4": -0.986778700404927,
+  "wins_vs_best_baseline": 9,
+  "letters": 5016,
+  "landed": 477,
+  "futures": 14107
+ },
+ "W1_live_beats_best_baseline_d5": {
+  "wins": 9,
+  "of": 16,
+  "p": 0.4018096923828125
+ },
+ "W2_advantage_grows_with_density": {
+  "rho": 0.07195938324069129,
+  "p": 0.5258735019219145
+ },
+ "W3_coupled_beats_uncoupled_d5": {
+  "wins": 8,
+  "of": 16,
+  "p": 0.5981903076171875
+ },
+ "W4_live_beats_unhealed_all": {
+  "wins": 80,
+  "of": 80,
+  "p": 8.271806125530277e-25
+ },
+ "W5_live_beats_holo4_all": {
+  "wins": 69,
+  "of": 80,
+  "p": 1.0247576593587948e-11
+ },
+ "landed_share_of_letters": 0.09978583857582653
+}

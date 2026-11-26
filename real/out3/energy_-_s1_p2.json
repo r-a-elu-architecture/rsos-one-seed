@@ -1,0 +1,88 @@
+{
+ "row": "energy",
+ "model": "-",
+ "stage": 1,
+ "pair": 2,
+ "cells": {
+  "std|205": {
+   "default": {
+    "result": 11.498453555527426,
+    "resource": 133.36435123607535,
+    "R": 0.08621834432481436,
+    "choices": {
+     "present|standard": 168
+    }
+   },
+   "seed3v1": {
+    "result": 12.829341297825172,
+    "resource": 161.79670471293645,
+    "R": 0.07929297027765364,
+    "choices": {
+     "present|standard": 1,
+     "future+1|standard": 2,
+     "P4P5:scenario_mpc|policy": 90,
+     "P2:price_on_wear|policy": 16,
+     "P2:price_on_wear|standard": 22,
+     "P4P5:scenario_mpc|standard": 3,
+     "P5:soc_dp_realpast_tree|policy": 9,
+     "F:coupled_hours:realpast_day_paths|policy": 13,
+     "charge_half|own": 1,
+     "future+1|own": 2,
+     "P2:price_on_wear|own": 5,
+     "hold|standard": 1,
+     "discharge_half|standard": 1,
+     "past-1|standard": 1,
+     "charge_full|standard": 1
+    },
+    "policy_fallback_steps": 0
+   },
+   "strongest": {
+    "result": 13.435438128929938,
+    "resource": 161.7443961509317,
+    "R": 0.08306586471405579,
+    "choices": {
+     "present|standard": 168
+    }
+   },
+   "sec": 5246
+  },
+  "std|206": {
+   "default": {
+    "result": 8.890114819996505,
+    "resource": 129.8231889333743,
+    "R": 0.06847863538892841,
+    "choices": {
+     "present|standard": 168
+    }
+   },
+   "seed3v1": {
+    "result": 9.11139722717865,
+    "resource": 138.08378371591763,
+    "R": 0.06598455649161308,
+    "choices": {
+     "present|standard": 3,
+     "P4P5:scenario_mpc|policy": 88,
+     "P4P5:scenario_mpc|standard": 8,
+     "P2:price_on_wear|policy": 19,
+     "P5:soc_dp_realpast_tree|policy": 15,
+     "charge_half|own": 1,
+     "P2:price_on_wear|own": 10,
+     "P2:price_on_wear|standard": 17,
+     "F:coupled_hours:realpast_day_paths|policy": 5,
+     "past-1|own": 1,
+     "past-2|own": 1
+    },
+    "policy_fallback_steps": 0
+   },
+   "strongest": {
+    "result": 9.717657402919507,
+    "resource": 149.3510115089254,
+    "R": 0.06506589613782941,
+    "choices": {
+     "present|standard": 168
+    }
+   },
+   "sec": 5439
+  }
+ }
+}

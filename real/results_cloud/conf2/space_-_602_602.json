@@ -1,0 +1,45 @@
+{
+ "row": "space",
+ "model": "-",
+ "cells_run": [
+  602
+ ],
+ "generated": true,
+ "cells": {
+  "std|602": {
+   "default": {
+    "result": 481.66357816304,
+    "resource": 14684.724930317976,
+    "R": 0.03280031328122469,
+    "choices": {
+     "present|standard": 24
+    },
+    "sec": 0.0
+   },
+   "strongest": {
+    "result": 481.80832574137753,
+    "resource": 15740.808098896581,
+    "R": 0.03060886853548211,
+    "choices": {
+     "present|standard": 24
+    },
+    "sec": 5.8
+   },
+   "generated": {
+    "result": 482.80432622808536,
+    "resource": 15039.507104851584,
+    "R": 0.03210240354701105,
+    "choices": {
+     "G:compress|policy": 19,
+     "present|standard": 1,
+     "G:beam|policy": 1,
+     "G:heal|policy": 1,
+     "G:beam|own": 2
+    },
+    "policy_fallback_steps": 0,
+    "sec": 13.6
+   },
+   "sec": 20
+  }
+ }
+}

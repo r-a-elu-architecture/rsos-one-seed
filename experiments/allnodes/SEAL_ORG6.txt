@@ -1,0 +1,7 @@
+SEAL_ORG6 (sealed before any ORG6 seed runs, 22 Nov 2026 ~14:35 Kyiv). Dry run only on throwaway seeds 11-14 (not kept).
+
+389ae8eb9343259032e722de1573ee5892f300f8fbc29911ec3f1d77dfa384a8  PREREG_ORG6.md
+ee24a9d9fe19df202034b2f9f4cf8003a67c338bf6f462e6c73f867e2386e2db  org6.py
+7a55d442e839651fa255f4feb67adc7c941940b1b453173da707730328fc0622  analyze_org6.py
+1c4ebd50e23008d794e07a8c287d10881cd35075f2f3fabe5696d21748d18d8a  org5.py
+78d7826cd325c7f6b0f41ab144a4a198638ff0510b8f764ddf4b0aa7686c2737  organism.py

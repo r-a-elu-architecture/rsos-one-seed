@@ -1,0 +1,117 @@
+{
+ "nodes": {
+  "N2": {
+   "key": 0.02575,
+   "pair": 0.0454,
+   "condition": 0.563,
+   "scan": 0.9935,
+   "class": "element",
+   "pair_minus_key": 0.01965,
+   "ci": [
+    0.01602,
+    0.02328
+   ],
+   "bound": {
+    "key": 0.02575,
+    "pair": 0.05084,
+    "condition": 0.72866,
+    "scan": 0.9996
+   }
+  },
+  "N3": {
+   "key": 0.2493,
+   "pair": 0.32375,
+   "condition": 0.993,
+   "scan": 1.0,
+   "class": "element",
+   "pair_minus_key": 0.07445,
+   "ci": [
+    0.06562,
+    0.08328
+   ],
+   "bound": {
+    "key": 0.2493,
+    "pair": 0.43645,
+    "condition": 1.0,
+    "scan": 1.0
+   }
+  },
+  "N5": {
+   "key": 0.0177,
+   "pair": 0.03545,
+   "condition": 0.6165,
+   "scan": 0.99475,
+   "class": "element",
+   "pair_minus_key": 0.01775,
+   "ci": [
+    0.0146,
+    0.0209
+   ],
+   "bound": {
+    "key": 0.0177,
+    "pair": 0.03509,
+    "condition": 0.59054,
+    "scan": 0.99529
+   }
+  },
+  "N6": {
+   "key": 0.2984,
+   "pair": 0.2997,
+   "condition": 0.3055,
+   "scan": 0.3295,
+   "class": "time",
+   "pair_minus_key": 0.0013,
+   "ci": [
+    -0.00767,
+    0.01027
+   ],
+   "bound": {
+    "key": 0.2984,
+    "pair": 0.50776,
+    "condition": 1.0,
+    "scan": 1.0
+   }
+  },
+  "N7": {
+   "key": 0.0358,
+   "pair": 0.06605,
+   "condition": 0.8365,
+   "scan": 1.0,
+   "class": "element",
+   "pair_minus_key": 0.03025,
+   "ci": [
+    0.02595,
+    0.03455
+   ],
+   "bound": {
+    "key": 0.0358,
+    "pair": 0.07032,
+    "condition": 0.83843,
+    "scan": 0.99998
+   }
+  }
+ },
+ "healing": {
+  "0.85": {
+   "alone": 0.75549,
+   "with_N3": 0.81869
+  },
+  "0.95": {
+   "alone": 0.40608,
+   "with_N3": 0.43591
+  }
+ },
+ "orbit_theory": {
+  "key": 0.3,
+  "pair": 0.3001,
+  "condition": 0.3049,
+  "scan": 0.3299
+ },
+ "verdicts": {
+  "T1": false,
+  "T2": false,
+  "T3": true,
+  "T4": false,
+  "T5": false
+ }
+}

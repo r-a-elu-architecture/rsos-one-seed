@@ -1,0 +1,74 @@
+{
+ "row": "space",
+ "model": "-",
+ "stage": 1,
+ "pair": 1,
+ "cells": {
+  "std|203": {
+   "default": {
+    "result": 552.132984297454,
+    "resource": 15103.610620302175,
+    "R": 0.03655635716371557,
+    "choices": {
+     "present|standard": 24
+    }
+   },
+   "seed3v1": {
+    "result": 559.0401737975142,
+    "resource": 16987.704696158242,
+    "R": 0.03290851729509642,
+    "choices": {
+     "F:holo-plan|policy": 7,
+     "F:holo-carry|policy": 14,
+     "F:holo-carry|standard": 2,
+     "present|own": 1
+    },
+    "policy_fallback_steps": 0
+   },
+   "strongest": {
+    "result": 556.7571208024813,
+    "resource": 17085.55969194004,
+    "R": 0.03258641395664237,
+    "choices": {
+     "present|standard": 24
+    }
+   },
+   "sec": 2408
+  },
+  "std|204": {
+   "default": {
+    "result": 516.9153510828809,
+    "resource": 16205.045225360926,
+    "R": 0.03189842076305393,
+    "choices": {
+     "present|standard": 26
+    }
+   },
+   "seed3v1": {
+    "result": 519.5122187294033,
+    "resource": 17376.75851457206,
+    "R": 0.029896957956441827,
+    "choices": {
+     "F:holo-plan|policy": 13,
+     "future+2|standard": 1,
+     "F:holo-carry|policy": 6,
+     "F:holo-plan|standard": 2,
+     "past-1|standard": 1,
+     "focus_science|standard": 1,
+     "F:holo-carry|standard": 1,
+     "focus_science|own": 1
+    },
+    "policy_fallback_steps": 0
+   },
+   "strongest": {
+    "result": 519.3243114004849,
+    "resource": 17785.126762361862,
+    "R": 0.02919992184140715,
+    "choices": {
+     "present|standard": 26
+    }
+   },
+   "sec": 2211
+  }
+ }
+}

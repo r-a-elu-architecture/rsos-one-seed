@@ -1,0 +1,48 @@
+{
+ "row": "space",
+ "model": "-",
+ "cells_run": [
+  502
+ ],
+ "generated": false,
+ "cells": {
+  "std|502": {
+   "default": {
+    "result": 491.03778865933555,
+    "resource": 15884.562024134073,
+    "R": 0.03091289441366287,
+    "choices": {
+     "present|standard": 26
+    },
+    "sec": 0.0
+   },
+   "seed3v1": {
+    "result": 497.03240212266354,
+    "resource": 17290.14602466485,
+    "R": 0.028746570527144983,
+    "choices": {
+     "P4P5:exact-planner|policy": 1,
+     "F:holo-carry|policy": 13,
+     "F:holo-plan|policy": 6,
+     "F:holo-plan|standard": 1,
+     "future+1|standard": 1,
+     "F:holo-carry|standard": 2,
+     "focus_science|standard": 1,
+     "focus_science|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 8500.3
+   },
+   "strongest": {
+    "result": 493.3696867371028,
+    "resource": 17776.08298103834,
+    "R": 0.027754690797932132,
+    "choices": {
+     "present|standard": 26
+    },
+    "sec": 109.7
+   },
+   "sec": 8610
+  }
+ }
+}

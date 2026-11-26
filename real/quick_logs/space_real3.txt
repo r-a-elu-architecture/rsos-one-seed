@@ -1,0 +1,26 @@
+loss 0.0
+cell 1 seed3     result 288.13 resource 12753.6 lost 9.9 frag_mb 2311 repair_mb 0 rec/lost_frames 0/0 choices={'present|standard': 1, 'future+1|standard': 3, 'F:holo-carry|standard': 14, 'F:holo-carry|own': 2, 'focus_bulk|standard': 2, 'future+2|standard': 1, 'F:holo-plan|standard': 2, 'F:holo-plan|own': 1, 'present|own': 1}
+cell 1 seed      result 284.07 resource 11340.3 lost 11.0 frag_mb 0 repair_mb 0 rec/lost_frames 0/0 choices={'land_withheld': 12, 'land_retargeted': 3, 'present|standard': 14, 'future+1|standard': 3, 'past-1|standard': 3, 'future+2|standard': 1, 'focus_bulk|standard': 3, 'present|own': 3}
+cell 1 rollout   result 284.65 resource 11568.1 lost 9.9 frag_mb 0 repair_mb 0 rec/lost_frames 0/0 choices={'present|standard': 18, 'focus_science|rollout': 3, 'focus_bulk|rollout': 6}
+cell 1 default   result 282.68 resource 10821.6 lost 9.9 frag_mb 0 repair_mb 0 rec/lost_frames 0/0 stand_in=True
+cell 1 strongest result 281.61 resource 11856.7 lost 9.9 frag_mb 0 repair_mb 0 rec/lost_frames 0/0 choices={'present|standard': 27}
+cell 1 pass(result > default / > strongest): seed3=WIN/WIN seed=WIN/WIN rollout=WIN/WIN strongest=no/- time 4.9s
+cell 2 seed3     result 334.53 resource 14050.4 lost 20.9 frag_mb 2228 repair_mb 0 rec/lost_frames 0/0 choices={'F:holo-carry|standard': 18, 'F:holo-carry|own': 1, 'F:holo-plan|standard': 5, 'future+1|standard': 1, 'focus_science|standard': 1, 'future+2|standard': 1, 'P4P5:exact-planner|own': 1}
+cell 2 seed      result 328.41 resource 11963.7 lost 23.2 frag_mb 0 repair_mb 0 rec/lost_frames 0/0 choices={'land_withheld': 13, 'land_retargeted': 6, 'present|standard': 15, 'future+1|standard': 2, 'past-1|standard': 2, 'future+2|standard': 5, 'past-2|standard': 1, 'focus_science|standard': 2, 'present|own': 1}
+cell 2 rollout   result 325.49 resource 11101.0 lost 23.8 frag_mb 0 repair_mb 0 rec/lost_frames 0/0 choices={'present|standard': 20, 'focus_bulk|rollout': 2, 'focus_science|rollout': 5, 'focus_alert|rollout': 1}
+cell 2 default   result 320.70 resource 10758.4 lost 29.8 frag_mb 0 repair_mb 0 rec/lost_frames 0/0 stand_in=True
+cell 2 strongest result 328.74 resource 12663.7 lost 23.2 frag_mb 0 repair_mb 0 rec/lost_frames 0/0 choices={'present|standard': 28}
+cell 2 pass(result > default / > strongest): seed3=WIN/WIN seed=WIN/no rollout=WIN/no strongest=WIN/- time 7.5s
+cell 3 seed3     result 403.89 resource 13046.0 lost 20.7 frag_mb 1801 repair_mb 0 rec/lost_frames 0/0 choices={'F:holo-carry|standard': 9, 'F:holo-plan|standard': 4, 'past-2|standard': 2, 'future+2|standard': 2, 'focus_science|own': 1, 'future+1|standard': 4, 'P3:repair-partial|standard': 1, 'past-1|standard': 2, 'future+1|own': 1, 'past-1|own': 1}
+cell 3 seed      result 399.17 resource 11646.0 lost 20.7 frag_mb 0 repair_mb 0 rec/lost_frames 0/0 choices={'land_withheld': 16, 'land_retargeted': 2, 'focus_bulk|standard': 3, 'present|standard': 12, 'focus_science|standard': 5, 'future+2|standard': 3, 'future+1|standard': 2, 'past-2|standard': 1, 'present|own': 1}
+cell 3 rollout   result 397.08 resource 11341.4 lost 19.5 frag_mb 0 repair_mb 0 rec/lost_frames 0/0 choices={'focus_bulk|rollout': 4, 'present|standard': 15, 'focus_science|rollout': 8}
+cell 3 default   result 393.66 resource 9972.9 lost 20.7 frag_mb 0 repair_mb 0 rec/lost_frames 0/0 stand_in=True
+cell 3 strongest result 397.43 resource 12122.3 lost 20.7 frag_mb 0 repair_mb 0 rec/lost_frames 0/0 choices={'present|standard': 27}
+cell 3 pass(result > default / > strongest): seed3=WIN/WIN seed=WIN/WIN rollout=WIN/no strongest=WIN/- time 24.3s
+cell 4 seed3     result 404.77 resource 13736.6 lost 11.6 frag_mb 926 repair_mb 0 rec/lost_frames 0/0 choices={'P4P5:exact-planner|standard': 1, 'F:holo-carry|own': 2, 'future+2|standard': 5, 'F:holo-carry|standard': 6, 'F:holo-plan|standard': 8, 'future+1|standard': 4, 'future+1|own': 2}
+cell 4 seed      result 400.55 resource 12595.6 lost 11.6 frag_mb 0 repair_mb 0 rec/lost_frames 0/0 choices={'land_withheld': 18, 'land_retargeted': 7, 'present|standard': 8, 'future+1|standard': 7, 'focus_science|standard': 5, 'focus_bulk|standard': 2, 'future+2|standard': 2, 'past-1|standard': 2, 'present|own': 2}
+cell 4 rollout   result 398.36 resource 12264.8 lost 11.6 frag_mb 0 repair_mb 0 rec/lost_frames 0/0 choices={'present|standard': 17, 'focus_science|rollout': 10, 'focus_bulk|rollout': 1}
+cell 4 default   result 393.19 resource 11549.8 lost 15.3 frag_mb 0 repair_mb 0 rec/lost_frames 0/0 stand_in=True
+cell 4 strongest result 394.59 resource 13380.0 lost 11.6 frag_mb 0 repair_mb 0 rec/lost_frames 0/0 choices={'present|standard': 28}
+cell 4 pass(result > default / > strongest): seed3=WIN/WIN seed=WIN/WIN rollout=WIN/WIN strongest=WIN/- time 82.8s
+exit 0

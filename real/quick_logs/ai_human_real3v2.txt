@@ -1,0 +1,33 @@
+ai_human  model mock:0  cells 1-4  modes ('seed3', 'seed3v1', 'seed', 'rollout', 'default')  pool in None
+cell 1 seed3    result 0.857  resource 0.929  R 0.9227  in 705 out 224 parity -8 mention 1 holo 7  failed 0 [18.9s]  choices={'unit-1|standard': 1, 'F:holomin-top|standard': 1, 'op:enter|Associated': 6}
+        seed3 ops used {'enter': 6, 'colour': 8, 'rooms': 8, 'transplant': 7}  rooms {'Eagle': 0, 'Owl': 0, 'Associated': 8, 'base': 0}  vetoed 1  rollouts v1/ops 113/236  passed {heal: 8, beam1: 8, beam3: 8, contain: 6, compress: 2, inherit: 2, fuse: 13, rehost: 5, pierce: 6, overlay: 5, enter: 8, zoom: 5}  enter depth {1: 8, 2: 8}  inherit 5 shapes 6 fallback 0 pool_saved /tmp/pool_ai_human.json
+cell 1 seed3v1  result 0.857  resource 0.829  R 1.0339  in 632 out 197 parity -8 mention 1 holo 7  failed 0 [7.9s]  choices={'unit-1|standard': 1, 'F:holomin-top|standard': 7}
+cell 1 seed     result 0.786  resource 1.715  R 0.4581  in 1526 out 189 parity -8 mention 8 holo 0  failed 0  land w0 r3 [0.5s]
+cell 1 rollout  result 0.857  resource 1.717  R 0.4992  in 1527 out 190 parity -8 mention 8 holo 0  failed 0 [0.1s]
+cell 1 default  result 0.286  resource 1.769  R 0.1615  in 1601 out 168 parity 0 mention 0 holo 0  failed 0 [0.0s]
+cell 1 pareto vs default: seed3 WIN, seed3v1 WIN, seed WIN, rollout WIN; strongest = default (row C)
+cell 2 seed3    result 1.000  resource 0.582  R 1.7182  in 404 out 178 parity -8 mention 2 holo 6  failed 0 [5.1s]  choices={'unit-0|standard': 1, 'top|standard': 1, 'op:enter|Associated': 2, 'F:holomin-top|standard': 4}
+        seed3 ops used {'enter': 2, 'colour': 8, 'rooms': 8, 'transplant': 8}  rooms {'Eagle': 0, 'Owl': 0, 'Associated': 8, 'base': 0}  vetoed 0  rollouts v1/ops 79/110  passed {heal: 8, beam1: 7, beam3: 7, contain: 1, compress: 2, inherit: 2, fuse: 11, rehost: 2, pierce: 7, overlay: 7, enter: 8, zoom: 7}  enter depth {1: 9, 2: 9}  inherit 10 shapes 12 fallback 0 pool_saved /tmp/pool_ai_human.json
+cell 2 seed3v1  result 1.000  resource 0.573  R 1.7452  in 396 out 177 parity -8 mention 2 holo 6  failed 0 [2.4s]  choices={'unit-0|standard': 1, 'top|standard': 1, 'F:holomin-top|standard': 6}
+cell 2 seed     result 1.000  resource 0.974  R 1.0267  in 804 out 170 parity -6 mention 8 holo 0  failed 0  land w0 r2 [0.2s]
+cell 2 rollout  result 1.000  resource 0.974  R 1.0267  in 804 out 170 parity -6 mention 8 holo 0  failed 0 [0.0s]
+cell 2 default  result 1.000  resource 0.996  R 1.0040  in 872 out 124 parity 0 mention 0 holo 0  failed 0 [0.0s]
+cell 2 pareto vs default: seed3 WIN, seed3v1 WIN, seed WIN, rollout WIN; strongest = default (row C)
+cell 3 seed3    result 0.150  resource 0.664  R 0.2259  in 454 out 210 parity -11 mention 1 holo 7  failed 0 [9.8s]  choices={'top|standard': 1, 'F:holomin-top|standard': 3, 'op:enter|Associated': 3, 'op:rehost|Associated': 1}
+        seed3 ops used {'rehost': 1, 'enter': 3, 'colour': 8, 'rooms': 8, 'transplant': 8}  rooms {'Eagle': 0, 'Owl': 0, 'Associated': 8, 'base': 0}  vetoed 0  rollouts v1/ops 101/170  passed {heal: 8, beam1: 7, beam3: 7, contain: 3, compress: 6, inherit: 5, fuse: 15, rehost: 5, pierce: 7, overlay: 7, enter: 8, zoom: 7}  enter depth {1: 12, 2: 12}  inherit 11 shapes 13 fallback 0 pool_saved /tmp/pool_ai_human.json
+cell 3 seed3v1  result 0.150  resource 0.640  R 0.2344  in 432 out 208 parity -11 mention 1 holo 7  failed 0 [5.0s]  choices={'top|standard': 1, 'F:holomin-top|standard': 7}
+cell 3 seed     result 0.150  resource 1.233  R 0.1217  in 1041 out 192 parity -7 mention 8 holo 0  failed 0  land w0 r2 [0.5s]
+cell 3 rollout  result 0.150  resource 1.236  R 0.1214  in 1042 out 194 parity -6 mention 8 holo 0  failed 0 [0.1s]
+cell 3 default  result 0.050  resource 1.275  R 0.0392  in 1113 out 162 parity 0 mention 0 holo 0  failed 0 [0.0s]
+cell 3 pareto vs default: seed3 WIN, seed3v1 WIN, seed WIN, rollout WIN; strongest = default (row C)
+cell 4 seed3    result 0.200  resource 0.713  R 0.2805  in 528 out 185 parity -8 mention 2 holo 6  failed 0 [7.1s]  choices={'unit-0|standard': 1, 'F:holomin-top|standard': 4, 'op:enter|Associated': 1, 'top|standard': 1, 'F:holo-top|standard': 1}
+        seed3 ops used {'enter': 1, 'colour': 8, 'rooms': 8, 'transplant': 8}  rooms {'Eagle': 0, 'Owl': 0, 'Associated': 8, 'base': 0}  vetoed 2  rollouts v1/ops 92/139  passed {heal: 8, beam1: 8, beam3: 8, contain: 4, compress: 6, inherit: 6, fuse: 13, rehost: 4, pierce: 8, overlay: 8, enter: 8, zoom: 8}  enter depth {1: 10, 2: 10}  inherit 11 shapes 13 fallback 0 pool_saved /tmp/pool_ai_human.json
+cell 4 seed3v1  result 0.200  resource 0.727  R 0.2751  in 542 out 185 parity -8 mention 2 holo 6  failed 0 [2.2s]  choices={'unit-0|standard': 1, 'F:holomin-top|standard': 4, 'top|standard': 1, 'F:holo-top|standard': 2}
+cell 4 seed     result 0.200  resource 1.056  R 0.1894  in 882 out 174 parity -7 mention 8 holo 0  failed 0  land w0 r2 [0.3s]
+cell 4 rollout  result 0.200  resource 1.060  R 0.1887  in 884 out 176 parity -7 mention 8 holo 0  failed 0 [0.1s]
+cell 4 default  result 0.200  resource 1.089  R 0.1837  in 952 out 137 parity 0 mention 0 holo 0  failed 0 [0.0s]
+cell 4 pareto vs default: seed3 WIN, seed3v1 WIN, seed WIN, rollout WIN; strongest = default (row C)
+seed3 v2 operators chosen (cells 1-4): {'enter': 12, 'rehost': 1}
+ops bound: {"heal": "bound", "beam1": "bound", "beam3": "bound", "contain": "bound", "compress": "bound", "inherit": "bound", "fuse": "bound", "carry": "not bound: needs carry", "rehost": "bound", "pierce": "bound", "overlay": "bound", "enter": "bound (depth 2)", "zoom": "bound (generic)", "colour": "bound", "rooms": "bound (generic)", "transplant": "bound (generic; file: SEED3_POOL_IN / SEED3_POOL_OUT)"}
+bounded calls: {"consecutive_fail": 0, "calls": 0, "failed": 0, "requests": 0, "retries": 0, "seconds_waited": 0.0, "broken_calls": 0, "last_reason": ""}
+total 60.4s

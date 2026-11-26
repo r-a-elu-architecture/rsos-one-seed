@@ -1,0 +1,134 @@
+{
+ "row": "space",
+ "model": "-",
+ "pair": 0,
+ "cells": {
+  "std|301": {
+   "default": {
+    "result": 628.5422452366278,
+    "resource": 16417.085020184033,
+    "R": 0.03828586161695969,
+    "choices": {
+     "present|standard": 24
+    },
+    "sec": 0.0
+   },
+   "rollout": {
+    "result": 635.3057003379473,
+    "resource": 17541.029726587552,
+    "R": 0.036218267128012,
+    "choices": {
+     "focus_bulk|rollout": 3,
+     "present|standard": 12,
+     "focus_science|rollout": 9
+    },
+    "sec": 1.5
+   },
+   "seed3v1": {
+    "result": 637.0488174152232,
+    "resource": 18148.459645617582,
+    "R": 0.03510208744184277,
+    "choices": {
+     "F:holo-plan|policy": 8,
+     "F:holo-plan|standard": 3,
+     "F:holo-carry|policy": 9,
+     "focus_science|standard": 1,
+     "P4P5:exact-planner|policy": 1,
+     "F:holo-carry|standard": 1,
+     "P4P5:exact-planner|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 3923.0
+   },
+   "structure": {
+    "result": 635.6736369975188,
+    "resource": 17704.62334887658,
+    "R": 0.035904386355547886,
+    "choices": {
+     "focus_bulk|standard": 3,
+     "future+1|standard": 9,
+     "future+2|standard": 4,
+     "focus_science|standard": 6,
+     "present|standard": 1,
+     "present|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 3.9
+   },
+   "strongest": {
+    "result": 626.607218318433,
+    "resource": 17994.44728928492,
+    "R": 0.03482225423459137,
+    "choices": {
+     "present|standard": 24
+    },
+    "sec": 64.7
+   },
+   "sec": 3993
+  },
+  "std|302": {
+   "default": {
+    "result": 420.5510760362989,
+    "resource": 13861.240605794514,
+    "R": 0.030340074744860352,
+    "choices": {
+     "present|standard": 24
+    },
+    "sec": 0.1
+   },
+   "rollout": {
+    "result": 423.76231809964037,
+    "resource": 14825.874639678723,
+    "R": 0.028582618455812284,
+    "choices": {
+     "present|standard": 16,
+     "focus_bulk|rollout": 2,
+     "focus_science|rollout": 6
+    },
+    "sec": 1.4
+   },
+   "seed3v1": {
+    "result": 427.37206848469697,
+    "resource": 15942.802534264883,
+    "R": 0.026806583570622072,
+    "choices": {
+     "P4P5:exact-planner|policy": 2,
+     "F:holo-carry|policy": 13,
+     "F:holo-plan|policy": 4,
+     "F:holo-plan|standard": 1,
+     "past-1|standard": 1,
+     "focus_science|standard": 1,
+     "F:holo-carry|standard": 1,
+     "P4P5:exact-planner|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 1795.0
+   },
+   "structure": {
+    "result": 423.76231809964037,
+    "resource": 14825.874639678721,
+    "R": 0.028582618455812288,
+    "choices": {
+     "present|standard": 1,
+     "focus_bulk|standard": 2,
+     "focus_science|standard": 14,
+     "future+2|standard": 3,
+     "future+1|standard": 1,
+     "focus_science|own": 3
+    },
+    "policy_fallback_steps": 0,
+    "sec": 6.4
+   },
+   "strongest": {
+    "result": 417.99470464318944,
+    "resource": 15295.910685336332,
+    "R": 0.027327219231471238,
+    "choices": {
+     "present|standard": 24
+    },
+    "sec": 19.8
+   },
+   "sec": 1823
+  }
+ }
+}

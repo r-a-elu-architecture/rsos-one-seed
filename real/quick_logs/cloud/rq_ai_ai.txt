@@ -1,0 +1,24 @@
+cell 1 seed    result 1 resource 1737 R 0.000576 rounds 2 calls 4 choices={'present|standard': 1, 'focus_team|own': 1}
+cell 1 default result 1 resource 1738 R 0.000575 rounds 2 calls 4
+cell 1 pareto WIN
+cell 2 seed    result 1 resource 845 R 0.001183 rounds 1 calls 2 choices={'present|standard': 1}
+cell 2 default result 1 resource 845 R 0.001183 rounds 1 calls 2
+cell 2 pareto TIE
+cell 3 seed    result 1 resource 2742 R 0.000365 rounds 3 calls 6 choices={'focus_manager|standard': 1, 'chain|own': 1, 'focus_home|own': 1}
+cell 3 default result 1 resource 3729 R 0.000268 rounds 4 calls 8
+cell 3 pareto WIN
+cell 4 seed    result 0 resource 1730 R 0.000000 rounds 2 calls 4 choices={'focus_home|standard': 1, 'present|standard': 1}
+cell 4 default result 1 resource 1745 R 0.000573 rounds 2 calls 4
+cell 4 pareto no
+cell 5 seed    result 1 resource 1736 R 0.000576 rounds 2 calls 4 choices={'present|standard': 1, 'focus_home|standard': 1}
+cell 5 default result 1 resource 1852 R 0.000540 rounds 2 calls 4
+cell 5 pareto WIN
+cell 6 seed    result 1 resource 1728 R 0.000579 rounds 2 calls 4 choices={'present|standard': 1, 'focus_office|own': 1}
+cell 6 default result 1 resource 4589 R 0.000218 rounds 5 calls 10
+cell 6 pareto WIN
+cell 7 seed    result 1 resource 854 R 0.001171 rounds 1 calls 2 choices={'focus_team|standard': 1}
+cell 7 default result 1 resource 1772 R 0.000564 rounds 2 calls 4
+cell 7 pareto WIN
+cell 8 seed    result 1 resource 851 R 0.001175 rounds 1 calls 2 choices={'present|standard': 1}
+cell 8 default result 1 resource 852 R 0.001174 rounds 1 calls 2
+cell 8 pareto WIN

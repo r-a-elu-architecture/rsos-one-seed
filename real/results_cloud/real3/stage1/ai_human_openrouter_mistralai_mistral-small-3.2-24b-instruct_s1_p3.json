@@ -1,0 +1,54 @@
+{
+ "row": "ai_human",
+ "model": "openrouter:mistralai/mistral-small-3.2-24b-instruct",
+ "stage": 1,
+ "pair": 3,
+ "cells": {
+  "std|207": {
+   "default": {
+    "result": 0.08888888888888889,
+    "resource": 1.308,
+    "R": 0.06795786612300374,
+    "choices": {
+     "present|standard": 8
+    },
+    "failed_calls": 0
+   },
+   "seed3v1": {
+    "result": 0.7666666666666666,
+    "resource": 0.742,
+    "R": 1.0332434860736748,
+    "choices": {
+     "unit-0|standard": 1,
+     "F:holomin-top|standard": 7
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0
+   },
+   "sec": 36
+  },
+  "std|208": {
+   "default": {
+    "result": 0.4,
+    "resource": 1.032,
+    "R": 0.3875968992248062,
+    "choices": {
+     "present|standard": 8
+    },
+    "failed_calls": 0
+   },
+   "seed3v1": {
+    "result": 0.8,
+    "resource": 0.707,
+    "R": 1.1315417256011318,
+    "choices": {
+     "unit-0|standard": 3,
+     "F:holomin-top|standard": 5
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0
+   },
+   "sec": 35
+  }
+ }
+}

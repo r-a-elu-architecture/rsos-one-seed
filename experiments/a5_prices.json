@@ -1,0 +1,39 @@
+{
+ "checked_utc": "2026-11-18T00:31:12Z",
+ "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+ "source_note": "Fetched 18 Nov 2026 (model pricing table, cache-hit footnote 2, batch processing section). Re-checked at run time by a5_run.py (checked_utc updated if unchanged). Cross-check: the CLI's total_cost_usd per call equals tokens x the run-time sheet (results/a5_cache_diagnosis.json, cost_crosscheck).",
+ "unit": "USD per million tokens",
+ "run_time_sheet": "haiku-5-5",
+ "sheets": {
+  "haiku-5-5": {
+   "model": "claude-haiku-5-5",
+   "input": 0.1,
+   "cache_write_5m": 0.125,
+   "cache_write_1h": 0.2,
+   "cache_read": 0.01,
+   "output": 0.5,
+   "note": "prompts up to 100,000 tokens (every A5 call is below 3,000)"
+  },
+  "alt-sonnet-5-5": {
+   "model": "claude-sonnet-5-5",
+   "input": 2.0,
+   "cache_write_5m": 2.5,
+   "cache_write_1h": 4.0,
+   "cache_read": 0.1,
+   "output": 10.0,
+   "note": "cache read 0.05x input"
+  },
+  "alt-fable-5-2": {
+   "model": "claude-fable-5-2",
+   "input": 8.0,
+   "cache_write_5m": 10.0,
+   "cache_write_1h": 16.0,
+   "cache_read": 0.2,
+   "output": 40.0,
+   "note": "cache read 0.025x input"
+  }
+ },
+ "batch_discount": 0.5,
+ "batch_note": "50% on input and output (pricing page, Batch processing). The A5 pipelines are sequential (each call depends on the previous call's result), so the runs do not qualify; a batch-priced sensitivity multiplies every arm by 0.5 and leaves every ratio unchanged.",
+ "alt_sheet_note": "All three first-party sheets share output/input = 5; they differ in cache economics (read 0.1x, 0.05x, 0.025x input). An RSOS-vs-B1 ratio can change across sheets only through the token-class mix."
+}

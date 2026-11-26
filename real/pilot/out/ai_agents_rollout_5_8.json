@@ -1,0 +1,52 @@
+{
+ "row": "ai_agents",
+ "arm": "rollout",
+ "model": "openrouter:openai/gpt-oss-20b",
+ "cells": {
+  "5": {
+   "result": 1.0,
+   "resource": 11.136,
+   "choices": {
+    "present|standard": 14,
+    "stop|rollout": 4,
+    "open|rollout": 3,
+    "focus-b1|rollout": 1
+   },
+   "sec": 10.5
+  },
+  "6": {
+   "result": 1.0,
+   "resource": 13.309,
+   "choices": {
+    "present|standard": 17,
+    "stop|rollout": 4,
+    "open|rollout": 1,
+    "focus-b0|rollout": 5
+   },
+   "sec": 14.9
+  },
+  "7": {
+   "result": 1.0,
+   "resource": 24.291,
+   "choices": {
+    "present|standard": 25,
+    "open|rollout": 4,
+    "focus-b0|rollout": 5,
+    "focus-b1|rollout": 2,
+    "stop|rollout": 3
+   },
+   "sec": 33.3
+  },
+  "8": {
+   "result": 1.0,
+   "resource": 9.981,
+   "choices": {
+    "present|standard": 18,
+    "stop|rollout": 3,
+    "open|rollout": 1,
+    "focus-b0|rollout": 1
+   },
+   "sec": 15.9
+  }
+ }
+}

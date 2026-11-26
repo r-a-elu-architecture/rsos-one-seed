@@ -1,0 +1,4 @@
+select cancer/asym30
+select wine/asym30
+select digits/asym30
+select iris/asym30

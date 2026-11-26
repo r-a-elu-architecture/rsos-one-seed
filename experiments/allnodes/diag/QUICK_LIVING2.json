@@ -1,0 +1,15 @@
+{
+ "cells": 14,
+ "E1_vobs2_gt_best_native": 12,
+ "E1_margin_mean": 0.024573412698412598,
+ "E2_vobs2_minus_v3": {
+  "mean": -0.0019444444444445183,
+  "wins": 5,
+  "losses": 9
+ },
+ "retargets_mean": 37.42857142857143,
+ "PASS": {
+  "E1": false
+ },
+ "ROW_PASS": false
+}

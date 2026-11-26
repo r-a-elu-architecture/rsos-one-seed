@@ -1,0 +1,103 @@
+{
+ "O1": {
+  "messages": 2000,
+  "bad_sender": 41,
+  "delivered_legit": 1956,
+  "delivered_share": 0.99847,
+  "wrong_adoptions": 0,
+  "refusals": 618
+ },
+ "O2": {
+  "precision": 1.0,
+  "recall": 0.31569,
+  "acc_before": 0.99938,
+  "acc_after": 0.99979,
+  "landings": 5051
+ },
+ "O3": {
+  "1": {
+   "located": 50,
+   "trials": 50,
+   "checks_max": 25,
+   "bound": 24,
+   "served_from_isolated": 0
+  },
+  "4": {
+   "located": 50,
+   "trials": 50,
+   "checks_max": 87,
+   "bound": 96,
+   "served_from_isolated": 0
+  },
+  "16": {
+   "located": 50,
+   "trials": 50,
+   "checks_max": 279,
+   "bound": 384,
+   "served_from_isolated": 0
+  }
+ },
+ "O4": {
+  "plain": 0.93125,
+  "grow": 0.96646
+ },
+ "O5": {
+  "recall": 0.99697,
+  "precision": 0.13434,
+  "acc_seer1": 0.93125,
+  "acc_witness": 0.99958,
+  "passes_max": 3
+ },
+ "O6": {
+  "see_calibration": {
+   "0.5": {
+    "0.7": 0.96875,
+    "0.9": 0.54625
+   },
+   "0.7": {
+    "0.7": 0.96875,
+    "0.9": 0.54625
+   },
+   "0.9": {
+    "0.7": 0.99667,
+    "0.9": 0.54625
+   }
+  },
+  "built": "0.9",
+  "held_out_best": {
+   "0.7": 0.99208,
+   "0.9": 0.54583
+  },
+  "held_out_old": {
+   "0.7": 0.96667,
+   "0.9": 0.54583
+  },
+  "accepted": true
+ },
+ "monitor": {
+  "O1_open": {
+   "inj": 618,
+   "inj_refused": 618,
+   "legit": 1956,
+   "legit_refused": 0
+  },
+  "O2_land": {
+   "inj": 1600,
+   "inj_refused": 1600,
+   "legit": 5051,
+   "legit_refused": 0
+  },
+  "O3_serve": {
+   "inj": 26,
+   "inj_refused": 26,
+   "legit": 14974,
+   "legit_refused": 0
+  },
+  "O4_budget": {
+   "inj": 32,
+   "inj_refused": 32,
+   "legit": 32,
+   "legit_refused": 0
+  }
+ }
+}

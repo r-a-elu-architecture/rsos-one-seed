@@ -1,0 +1,61 @@
+# REAL3 FIX1 (PREREG_REAL3_FIX1.md): runs the units listed in cloud/real3_fix1_units.json through cloud/real3_unit_fix1.py
+# (seal real/SEAL_REAL3_FIX1.txt); outputs to cloud-results/real3_fix1/<run id>/ (analysis combines them with stage 1).
+name: rsos-real3-fix1
+on:
+  push:
+    branches: [core-v1]
+    paths: ["cloud/trigger_real3_fix1.txt"]
+permissions:
+  contents: write
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      m: ${{ steps.m.outputs.m }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: m
+        run: echo "m=$(python3 -c 'import json;print(json.dumps(json.load(open("cloud/real3_fix1_units.json"))))')" >> $GITHUB_OUTPUT
+  unit:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 345
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        u: ${{ fromJSON(needs.plan.outputs.m) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install numpy scipy pandas scikit-learn requests qiskit qiskit-aer pvlib gymnasium skyfield dandi pynwb tiktoken mistral-common && pip install --no-deps llama-models
+      - name: real data for this row
+        run: |
+          set -- ${{ matrix.u }}
+          if [ "$1" = space ]; then python real/hosts/space_fetch.py; fi
+          if [ "$1" = neuro ]; then python real/hosts/neuro_fetch.py --out /tmp/neuro.npz --dir /tmp/dandi; fi
+          if [ "$1" = ai_human ]; then python real/hosts/ai_human_fetch.py; fi
+      - run: PYTHONPATH=$GITHUB_WORKSPACE/experiments/sec1 python cloud/real3_unit_fix1.py ${{ matrix.u }}
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          REASONING_EFFORT: low
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: real3fix1-${{ strategy.job-index }}
+          path: real/out3/
+  collect:
+    needs: unit
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: /tmp/art
+      - run: |
+          git config user.name "rsos-cloud"; git config user.email "rsos-cloud@users.noreply.github.com"
+          git fetch origin cloud-results && git checkout cloud-results
+          mkdir -p real3_fix1/${{ github.run_id }} && cp /tmp/art/*/*.json real3_fix1/${{ github.run_id }}/ 2>/dev/null || true
+          git add real3_fix1 && git commit -qm "REAL3 FIX1 ${{ github.run_id }}" && (git push -q origin cloud-results || (git pull -q --rebase origin cloud-results && git push -q origin cloud-results))

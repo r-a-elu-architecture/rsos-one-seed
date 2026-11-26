@@ -1,0 +1,17 @@
+ai_human  model mock:0
+cell 1 seed    result 0.429  resource 1.799  R 0.2382
+cell 1 default result 0.286  resource 1.769  R 0.1615
+cell 2 seed    result 1.000  resource 0.996  R 1.0040
+cell 2 default result 1.000  resource 0.996  R 1.0040
+cell 3 seed    result 0.050  resource 1.282  R 0.0390
+cell 3 default result 0.050  resource 1.275  R 0.0392
+cell 4 seed    result 0.200  resource 1.110  R 0.1802
+cell 4 default result 0.200  resource 1.089  R 0.1837
+cell 5 seed    result 0.333  resource 0.865  R 0.3854
+cell 5 default result 0.333  resource 0.865  R 0.3854
+cell 6 seed    result 0.750  resource 1.329  R 0.5643
+cell 6 default result 0.500  resource 1.323  R 0.3779
+cell 7 seed    result 0.333  resource 1.495  R 0.2230
+cell 7 default result 0.476  resource 1.478  R 0.3222
+cell 8 seed    result 0.000  resource 1.202  R 0.0000
+cell 8 default result 0.000  resource 1.189  R 0.0000

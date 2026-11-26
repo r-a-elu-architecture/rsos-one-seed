@@ -1,0 +1,16 @@
+# REAL3 v2 energy quick (local, dev cell 1 only, --T 48 smoke episode: the row's T=168 takes ~1 h per seed3 cell here; NOT the row's episode).
+# host code: commit 7f56769 + 80e9492 (forks reach 2H); seed3.py before 013f329. Two processes: A = baselines + seed3v1, B = seed3 (v2), so v1/v2 do not share seed3's in-process pool.
+# REAL1/REAL2 check: default/seed/seed_noland/rollout/strongest at full T=168, cells 1-2, identical before/after the hooks (repr equality); seed_noland = the 'seed' lines of energy_v3.txt.
+## A
+energy quick: T = 48 h, cells [1], modes ['default', 'strongest', 'seed', 'rollout', 'seed3v1'], pool in None out None
+cell 1 default   result 2.209 resource 47.599 R 0.04642 vs default +0.000 seconds 0.0
+cell 1 strongest result 2.639 resource 22.407 R 0.11779 vs default +0.430 vs strongest +0.000 seconds 4.7
+cell 1 seed      result 2.931 resource 24.646 R 0.11894 vs default +0.722 vs strongest +0.292 seconds 7.2
+cell 1 rollout   result 3.036 resource 55.607 R 0.05460 vs default +0.827 vs strongest +0.397 seconds 2.7
+cell 1 seed3v1   result 2.526 resource 21.084 R 0.11980 vs default +0.316 vs strongest -0.114 seconds 2638.1 chosen {'P4P5:scenario_mpc': 42, 'F:coupled_hours:realpast_day_paths': 5, 'present': 1} disabled {}
+## B
+energy quick: T = 48 h, cells [1], modes ['default', 'strongest', 'seed3'], pool in None out /tmp/pool_energy.json
+cell 1 default   result 2.209 resource 47.599 R 0.04642 vs default +0.000 seconds 0.0
+cell 1 strongest result 2.639 resource 22.407 R 0.11779 vs default +0.430 vs strongest +0.000 seconds 3.8
+cell 1 seed3     result 2.526 resource 21.084 R 0.11980 vs default +0.316 vs strongest -0.114 seconds 2589.3 chosen {'P4P5:scenario_mpc': 34, 'op:fuse': 6, 'F:coupled_hours:realpast_day_paths': 4, 'op:zoom': 2, 'op:overlay': 1, 'present': 1} disabled {} ops_used {fuse: 6, overlay: 1, zoom: 2, colour: 48, rooms: 48, transplant: 47} rooms {'Eagle': 5, 'Owl': 6, 'Associated': 24, 'base': 13} vetoed 1 rollouts v1/ops 1505/369 passed {heal: 32, beam1: 35, beam3: 27, contain: 21, fuse: 79, carry: 28, rehost: 34, pierce: 48, overlay: 35, enter: 42, zoom: 24} colour {'failing': 24, 'recovering': 5, 'healthy': 115} zoom {12: 36, 24: 12} enter {1: 48, 2: 0} fallback 0 inherit 16 shapes 48 pool_saved /tmp/pool_energy.json
+  ops_bound {"heal": "bound", "beam1": "bound", "beam3": "bound", "contain": "bound", "compress": "bound", "inherit": "bound", "fuse": "bound", "carry": "bound", "rehost": "bound", "pierce": "bound", "overlay": "bound", "enter": "bound (depth 1: parts(state, within) not offered)", "zoom": "bound (generic)", "colour": "bound", "rooms": "bound (generic)", "transplant": "bound (generic; file: SEED3_POOL_IN / SEED3_POOL_OUT)"}

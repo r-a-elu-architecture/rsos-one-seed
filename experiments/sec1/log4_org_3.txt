@@ -1,0 +1,16 @@
+3 7600 0.0009 0.0093 128 480 {'inside': 352, 'above': 8, 'outside': 34, 'pierced': 42, 'line': 28, 'tube': 16}
+3 7601 -0.025 0.0116 213 480 {'inside': 267, 'above': 10, 'outside': 41, 'pierced': 67, 'line': 53, 'tube': 42}
+3 7602 -0.0081 0.0173 218 480 {'inside': 262, 'above': 10, 'outside': 78, 'pierced': 48, 'line': 46, 'tube': 36}
+3 7603 -0.0114 0.0181 174 480 {'inside': 306, 'above': 6, 'outside': 39, 'pierced': 54, 'line': 43, 'tube': 32}
+3 7604 -0.007 0.0035 179 480 {'inside': 301, 'above': 6, 'outside': 57, 'pierced': 50, 'line': 42, 'tube': 24}
+3 7605 0.0005 0.0208 221 480 {'inside': 259, 'above': 11, 'outside': 47, 'pierced': 50, 'line': 81, 'tube': 32}
+3 7606 0.0293 0.0454 256 480 {'inside': 224, 'above': 8, 'outside': 98, 'pierced': 35, 'line': 70, 'tube': 45}
+3 7607 -0.0021 -0.0018 134 480 {'inside': 346, 'above': 8, 'outside': 44, 'pierced': 33, 'line': 33, 'tube': 16}
+3 7608 -0.0017 0.0134 217 480 {'inside': 263, 'above': 4, 'outside': 87, 'pierced': 45, 'line': 47, 'tube': 34}
+3 7609 0.0016 0.0131 184 480 {'inside': 296, 'above': 10, 'outside': 49, 'pierced': 43, 'line': 53, 'tube': 29}
+3 7610 -0.0099 0.0277 229 480 {'inside': 251, 'above': 3, 'outside': 82, 'pierced': 50, 'line': 45, 'tube': 49}
+3 7611 -0.002 0.0147 128 480 {'inside': 352, 'above': 7, 'outside': 34, 'pierced': 45, 'line': 23, 'tube': 19}
+3 7612 -0.0064 0.0281 171 480 {'inside': 309, 'above': 6, 'outside': 44, 'pierced': 43, 'line': 38, 'tube': 40}
+3 7613 -0.0028 0.0046 220 480 {'inside': 260, 'above': 4, 'outside': 58, 'pierced': 66, 'line': 52, 'tube': 40}
+3 7614 -0.0052 0.0202 161 480 {'inside': 319, 'above': 3, 'outside': 46, 'pierced': 60, 'line': 29, 'tube': 23}
+3 7615 -0.0114 0.0039 142 480 {'inside': 338, 'above': 8, 'outside': 37, 'pierced': 26, 'line': 40, 'tube': 31}

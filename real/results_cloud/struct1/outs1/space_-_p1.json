@@ -1,0 +1,130 @@
+{
+ "row": "space",
+ "model": "-",
+ "pair": 1,
+ "cells": {
+  "std|303": {
+   "default": {
+    "result": 473.24466591645296,
+    "resource": 14298.970438295333,
+    "R": 0.033096415434849404,
+    "choices": {
+     "present|standard": 24
+    },
+    "sec": 0.1
+   },
+   "rollout": {
+    "result": 474.96087403016105,
+    "resource": 15091.20582573414,
+    "R": 0.03147269207741096,
+    "choices": {
+     "present|standard": 14,
+     "focus_science|rollout": 7,
+     "focus_bulk|rollout": 3
+    },
+    "sec": 1.6
+   },
+   "seed3v1": {
+    "result": 482.7235168501542,
+    "resource": 15995.449624231154,
+    "R": 0.030178802608892406,
+    "choices": {
+     "P4P5:exact-planner|policy": 2,
+     "F:holo-plan|policy": 8,
+     "F:holo-plan|standard": 3,
+     "F:holo-carry|policy": 10,
+     "P4P5:exact-planner|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 3011.4
+   },
+   "structure": {
+    "result": 483.0916420575218,
+    "resource": 15772.105523330938,
+    "R": 0.03062949593780659,
+    "choices": {
+     "present|standard": 5,
+     "focus_science|standard": 13,
+     "focus_bulk|standard": 2,
+     "future+1|standard": 1,
+     "focus_alert|standard": 2,
+     "focus_alert|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 7.1
+   },
+   "strongest": {
+    "result": 480.27822187647274,
+    "resource": 16014.936312994381,
+    "R": 0.029989393182087095,
+    "choices": {
+     "present|standard": 24
+    },
+    "sec": 30.9
+   },
+   "sec": 3051
+  },
+  "std|304": {
+   "default": {
+    "result": 468.18541589006134,
+    "resource": 15603.535248739077,
+    "R": 0.030005085926145834,
+    "choices": {
+     "present|standard": 26
+    },
+    "sec": 0.0
+   },
+   "rollout": {
+    "result": 473.55264004164985,
+    "resource": 16403.095764947782,
+    "R": 0.028869711353731,
+    "choices": {
+     "present|standard": 21,
+     "focus_bulk|rollout": 1,
+     "focus_science|rollout": 4
+    },
+    "sec": 1.7
+   },
+   "seed3v1": {
+    "result": 478.06137850696575,
+    "resource": 17673.033567266037,
+    "R": 0.027050329344274558,
+    "choices": {
+     "P4P5:exact-planner|policy": 1,
+     "F:holo-plan|policy": 5,
+     "F:holo-carry|policy": 16,
+     "F:holo-plan|standard": 2,
+     "F:holo-carry|standard": 1,
+     "present|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 4520.9
+   },
+   "structure": {
+    "result": 473.55264004164985,
+    "resource": 16403.095764947782,
+    "R": 0.028869711353731,
+    "choices": {
+     "present|standard": 5,
+     "focus_bulk|standard": 1,
+     "focus_science|standard": 12,
+     "future+1|standard": 3,
+     "future+2|standard": 4,
+     "future+1|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 3.9
+   },
+   "strongest": {
+    "result": 466.81937141582,
+    "resource": 17271.82485272145,
+    "R": 0.0270277967381232,
+    "choices": {
+     "present|standard": 26
+    },
+    "sec": 34.7
+   },
+   "sec": 4561
+  }
+ }
+}

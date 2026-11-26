@@ -1,0 +1,50 @@
+{
+ "R1": {
+  "eps": 0.001404,
+  "pair": {
+   "observed": 0.00168,
+   "bound": 0.00281,
+   "pass": true
+  },
+  "scan": {
+   "observed": 0.02309,
+   "bound_n19": 0.02633,
+   "bound_mean_n122": 0.15747,
+   "pass": true
+  },
+  "R1b_sc2_flow": {
+   "observed": 0.14844,
+   "bound_n300": 0.34384,
+   "pass": true
+  }
+ },
+ "R2": {
+  "rates": {
+   "pull|1": 0.335,
+   "blind|1": 0.333,
+   "pull|2": 0.345,
+   "blind|2": 0.324,
+   "pull|5": 0.317,
+   "blind|5": 0.334,
+   "pull|20": 0.322,
+   "blind|20": 0.326,
+   "pull|300": 0.369,
+   "blind|300": 0.263
+  },
+  "eps": 0.335,
+  "law1_bound": {
+   "1": 0.335,
+   "2": 0.55777,
+   "5": 0.86995,
+   "20": 0.99971,
+   "300": 1.0
+  },
+  "partial_served": 0,
+  "verdicts": {
+   "S1": false,
+   "S2": true,
+   "S3": false,
+   "S4": true
+  }
+ }
+}

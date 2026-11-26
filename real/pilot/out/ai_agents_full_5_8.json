@@ -1,0 +1,148 @@
+{
+ "row": "ai_agents",
+ "arm": "full",
+ "model": "openrouter:openai/gpt-oss-20b",
+ "cells": {
+  "5": {
+   "result": 1.0,
+   "resource": 12.973,
+   "choices": {
+    "F:blind-b0|standard": 3,
+    "op:heal|base": 2,
+    "stop|own": 3,
+    "open|standard": 1,
+    "present|own": 1,
+    "present|standard": 5,
+    "F:blind-b1|own": 1,
+    "op:fuse|base": 1,
+    "C:see>trace>beam>step|policy": 1,
+    "open|own": 1,
+    "future+1|own": 1,
+    "past-2|own": 1,
+    "past-1|standard": 1,
+    "future+2|own": 1
+   },
+   "ops_passed_membrane": {
+    "heal": 18,
+    "beam1": 18,
+    "beam3": 17,
+    "contain": 2,
+    "compress": 0,
+    "inherit": 0,
+    "fuse": 23,
+    "carry": 0,
+    "rehost": 9,
+    "pierce": 23,
+    "overlay": 12,
+    "enter": 23,
+    "zoom": 21
+   },
+   "vote_vetoed": 7,
+   "sec": 24.6
+  },
+  "6": {
+   "result": 1.0,
+   "resource": 6.781,
+   "choices": {
+    "F:reuse-b0|standard": 1,
+    "F:blind-b1|standard": 1,
+    "future+2|own": 1,
+    "F:blind-b0|standard": 2,
+    "F:blind-b1|own": 2,
+    "present|own": 4,
+    "op:fuse|base": 1,
+    "present|standard": 2,
+    "op:heal|base": 1,
+    "stop|own": 1,
+    "past-2|own": 1
+   },
+   "ops_passed_membrane": {
+    "heal": 17,
+    "beam1": 17,
+    "beam3": 17,
+    "contain": 2,
+    "compress": 1,
+    "inherit": 1,
+    "fuse": 19,
+    "carry": 0,
+    "rehost": 8,
+    "pierce": 17,
+    "overlay": 6,
+    "enter": 17,
+    "zoom": 17
+   },
+   "vote_vetoed": 7,
+   "sec": 12.1
+  },
+  "7": {
+   "result": 1.0,
+   "resource": 22.196,
+   "choices": {
+    "op:fuse|base": 6,
+    "present|standard": 2,
+    "stop|own": 3,
+    "op:heal|base": 5,
+    "past-2|standard": 1,
+    "op:beam3|base": 2,
+    "op:beam3|Associated": 1,
+    "past-1|own": 4,
+    "F:reuse-b0|standard": 1,
+    "op:compress|base": 1,
+    "F:blind-b0|standard": 1,
+    "past-1|standard": 4
+   },
+   "ops_passed_membrane": {
+    "heal": 27,
+    "beam1": 31,
+    "beam3": 31,
+    "contain": 5,
+    "compress": 3,
+    "inherit": 1,
+    "fuse": 32,
+    "carry": 0,
+    "rehost": 8,
+    "pierce": 31,
+    "overlay": 9,
+    "enter": 31,
+    "zoom": 30
+   },
+   "vote_vetoed": 9,
+   "sec": 46.2
+  },
+  "8": {
+   "result": 1.0,
+   "resource": 6.958,
+   "choices": {
+    "present|standard": 1,
+    "past-1|standard": 2,
+    "past-1|own": 1,
+    "stop|own": 4,
+    "F:blind-b0|standard": 2,
+    "past-2|standard": 1,
+    "past-2|own": 1,
+    "op:fuse|Associated": 1,
+    "F:reuse-b0|standard": 1,
+    "op:heal|base": 2,
+    "op:fuse|base": 1,
+    "op:overlay|Owl": 1
+   },
+   "ops_passed_membrane": {
+    "heal": 14,
+    "beam1": 18,
+    "beam3": 18,
+    "contain": 0,
+    "compress": 0,
+    "inherit": 0,
+    "fuse": 22,
+    "carry": 0,
+    "rehost": 9,
+    "pierce": 18,
+    "overlay": 9,
+    "enter": 16,
+    "zoom": 15
+   },
+   "vote_vetoed": 6,
+   "sec": 18.1
+  }
+ }
+}

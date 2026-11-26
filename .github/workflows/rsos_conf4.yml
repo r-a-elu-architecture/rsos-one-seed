@@ -1,0 +1,117 @@
+# CONF4 (real/PREREG_CONF4.md, real/SEAL_CONF4.txt): RSOS language vs control programs. Results to cloud-results/conf4/<run id>/.
+name: rsos-conf4
+on:
+  push:
+    branches: [core-v1]
+    paths: ["cloud/trigger_conf4.txt"]
+permissions:
+  contents: write
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        u: ["ai_agents openrouter:openai/gpt-oss-20b 801 802",
+            "ai_agents openrouter:openai/gpt-oss-20b 803 804",
+            "ai_agents openrouter:openai/gpt-oss-20b 805 806",
+            "ai_agents openrouter:openai/gpt-oss-20b 807 808",
+            "ai_agents openrouter:openai/gpt-oss-20b 809 810",
+            "ai_agents openrouter:openai/gpt-oss-20b 811 812",
+            "ai_agents openrouter:openai/gpt-oss-20b 813 814",
+            "ai_agents openrouter:openai/gpt-oss-20b 815 816",
+            "ai_agents openrouter:openai/gpt-oss-20b 817 818",
+            "ai_agents openrouter:openai/gpt-oss-20b 819 820",
+            "ai_agents openrouter:openai/gpt-oss-20b 821 822",
+            "ai_agents openrouter:openai/gpt-oss-20b 823 824",
+            "ai_agents openrouter:openai/gpt-oss-20b 825 826",
+            "ai_agents openrouter:openai/gpt-oss-20b 827 828",
+            "ai_agents openrouter:openai/gpt-oss-20b 829 830",
+            "ai_agents openrouter:openai/gpt-oss-20b 831 832",
+            "ai_agents openrouter:openai/gpt-oss-20b 833 834",
+            "ai_agents openrouter:openai/gpt-oss-20b 835 836",
+            "ai_agents openrouter:openai/gpt-oss-20b 837 838",
+            "ai_agents openrouter:openai/gpt-oss-20b 839 840",
+            "ai_human openrouter:mistralai/mistral-small-3.2-24b-instruct 441 444",
+            "ai_human openrouter:mistralai/mistral-small-3.2-24b-instruct 445 448",
+            "ai_human openrouter:mistralai/mistral-small-3.2-24b-instruct 449 452",
+            "ai_human openrouter:mistralai/mistral-small-3.2-24b-instruct 453 456",
+            "ai_human openrouter:mistralai/mistral-small-3.2-24b-instruct 457 460",
+            "ai_human openrouter:mistralai/mistral-small-3.2-24b-instruct 461 464",
+            "ai_human openrouter:mistralai/mistral-small-3.2-24b-instruct 465 468",
+            "ai_human openrouter:mistralai/mistral-small-3.2-24b-instruct 469 472",
+            "ai_human openrouter:mistralai/mistral-small-3.2-24b-instruct 473 476",
+            "ai_human openrouter:mistralai/mistral-small-3.2-24b-instruct 477 480",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 801 810",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 811 820",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 821 830",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 831 840",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 841 850",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 851 860",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 861 870",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 871 880",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 881 890",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 891 900",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 901 910",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 911 920",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 921 930",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 931 940",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 941 950",
+            "space - 801 804",
+            "space - 805 808",
+            "space - 809 812",
+            "space - 813 816",
+            "space - 817 820",
+            "space - 821 824"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install numpy scipy pandas scikit-learn requests qiskit qiskit-aer pvlib gymnasium skyfield dandi pynwb tiktoken mistral-common && pip install --no-deps llama-models
+      - name: OpenRouter credit check (AI rows; prints usage and limit only)
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          set -- ${{ matrix.u }}
+          case "$1" in ai_*)
+            python - <<'EOF'
+          import os, json, sys, urllib.request
+          r = urllib.request.Request("https://openrouter.ai/api/v1/key", headers={"Authorization": "Bearer " + os.environ["OPENROUTER_API_KEY"]})
+          d = json.load(urllib.request.urlopen(r, timeout=30)).get("data", {})
+          print("OPENROUTER usage", d.get("usage"), "limit", d.get("limit"), "remaining", d.get("limit_remaining"))
+          rem = d.get("limit_remaining")
+          if rem is not None and rem < 1.0: sys.exit("STOP: less than $1 OpenRouter credit left")
+          EOF
+            ;; esac
+      - name: real data for this row
+        run: |
+          set -- ${{ matrix.u }}
+          if [ "$1" = space ]; then cp real/hosts/data/space_tle_frozen.txt real/hosts/data/space_tle.txt; fi
+          if [ "$1" = ai_human ]; then python real/hosts/ai_human_fetch.py; fi
+      - name: CONF4 seal check
+        run: grep -v '^#' real/SEAL_CONF4.txt | sha256sum -c --quiet
+      - run: python cloud/conf4_unit.py ${{ matrix.u }}
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          REASONING_EFFORT: low
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: conf4-${{ strategy.job-index }}
+          path: real/outc4/
+  collect:
+    needs: unit
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: /tmp/art
+      - run: |
+          git config user.name "rsos-cloud"; git config user.email "rsos-cloud@users.noreply.github.com"
+          git fetch origin cloud-results && git checkout cloud-results
+          mkdir -p conf4/${{ github.run_id }} && cp /tmp/art/*/*.json conf4/${{ github.run_id }}/ 2>/dev/null || true
+          git add conf4 && git commit -qm "CONF4 ${{ github.run_id }}" && (git push -q origin cloud-results || (git pull -q --rebase origin cloud-results && git push -q origin cloud-results))

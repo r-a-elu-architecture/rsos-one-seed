@@ -1,0 +1,27 @@
+{
+ "conversations": 1775,
+ "scored_fused": 1688,
+ "scored_unfused": 6573,
+ "mean_carry_fused": 0.25617417739751863,
+ "mean_carry_unfused": 0.33591019221462093,
+ "F1_ratio": 0.762626985827935,
+ "F1_ci95": [
+  0.7127424003567376,
+  0.8162458794989292
+ ],
+ "F1_pass": false,
+ "F2_conversations": 151,
+ "F2_above_1": 40,
+ "F2_median": 0.8056879048524515,
+ "F2_p_sign": 0.9999999988642748,
+ "F2_pass": false,
+ "F3_decay_fused_l5_over_l1": [
+  0.23201443681650447,
+  1591
+ ],
+ "F3_decay_unfused_l5_over_l1": [
+  0.23381954285487724,
+  5663
+ ],
+ "F3_pass": false
+}

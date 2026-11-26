@@ -1,0 +1,58 @@
+{
+ "row": "space",
+ "model": "-",
+ "cells_run": [
+  707
+ ],
+ "generated": true,
+ "cells": {
+  "std|707": {
+   "default": {
+    "result": 510.2649601431025,
+    "resource": 14886.052175139752,
+    "R": 0.03427805801965839,
+    "choices": {
+     "present|standard": 25
+    },
+    "sec": 0.0
+   },
+   "seed3v1": {
+    "result": 522.8405252853955,
+    "resource": 16994.470089768376,
+    "R": 0.030765332636065824,
+    "choices": {
+     "F:holo-carry|policy": 13,
+     "F:holo-plan|policy": 7,
+     "past-1|standard": 1,
+     "F:holo-plan|standard": 2,
+     "future+2|standard": 1,
+     "past-1|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 2912.1
+   },
+   "strongest": {
+    "result": 515.1886696524648,
+    "resource": 16990.698028019473,
+    "R": 0.030321807191373996,
+    "choices": {
+     "present|standard": 25
+    },
+    "sec": 35.5
+   },
+   "composed": {
+    "result": 518.6263370974216,
+    "resource": 16448.901839803726,
+    "R": 0.03152954173769998,
+    "choices": {
+     "C:see>future>compress>inherit>contain>act|policy": 23,
+     "present|standard": 1,
+     "C:see>future>compress>inherit>contain>act|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 5.0
+   },
+   "sec": 2953
+  }
+ }
+}

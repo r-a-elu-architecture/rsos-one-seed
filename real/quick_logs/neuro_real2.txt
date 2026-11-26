@@ -1,0 +1,48 @@
+cell 1 seed        result 0.64634 resource 240 R 2.6931e-03 [STAND-IN (interface check only)] choices {'land_withheld': 0, 'land_retargeted': 40, 'present|standard': 1, 'past-1|own': 21, 'present|own': 25, 'past-2|own': 11, 'past-1|standard': 1, 'latent|own': 1}
+cell 1 seed_noland result 0.64332 resource 240 R 2.6805e-03 [STAND-IN (interface check only)] choices {'present|standard': 1, 'present|own': 56, 'latent|own': 2, 'focus_shank3|own': 1}
+cell 1 rollout     result 0.64332 resource 240 R 2.6805e-03 [STAND-IN (interface check only)] choices {'present|standard': 57, 'latent|rollout': 2, 'focus_shank3|rollout': 1}
+cell 1 default     result 0.64801 resource 240 R 2.7001e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 1 uniform     result 0.26149 resource 240 R 1.0896e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 1 time 122.0s
+cell 2 seed        result 0.29494 resource 240 R 1.2289e-03 [STAND-IN (interface check only)] choices {'land_withheld': 0, 'land_retargeted': 77, 'focus_shank3|standard': 1, 'focus_shank3|own': 5, 'past-1|own': 20, 'present|own': 11, 'past-2|own': 13, 'latent|own': 10}
+cell 2 seed_noland result 0.27091 resource 240 R 1.1288e-03 [STAND-IN (interface check only)] choices {'focus_shank3|standard': 1, 'present|own': 18, 'latent|own': 10, 'past-2|own': 8, 'focus_shank3|own': 2, 'past-1|own': 16, 'focus_shank1|own': 2, 'focus_shank2|own': 2, 'future+1|own': 1}
+cell 2 rollout     result 0.26644 resource 240 R 1.1102e-03 [STAND-IN (interface check only)] choices {'focus_shank3|rollout': 5, 'present|standard': 20, 'latent|rollout': 31, 'focus_shank1|rollout': 2, 'focus_shank2|rollout': 2}
+cell 2 default     result 0.27674 resource 240 R 1.1531e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 2 uniform     result 0.14518 resource 240 R 6.0491e-04 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 2 time 122.5s
+cell 3 seed        result 0.30523 resource 240 R 1.2718e-03 [STAND-IN (interface check only)] choices {'land_withheld': 0, 'land_retargeted': 64, 'present|standard': 1, 'past-1|own': 19, 'latent|own': 5, 'present|own': 17, 'past-2|own': 14, 'focus_shank0|own': 3, 'focus_shank3|own': 1}
+cell 3 seed_noland result 0.30835 resource 240 R 1.2848e-03 [STAND-IN (interface check only)] choices {'present|standard': 1, 'present|own': 42, 'focus_shank2|own': 1, 'focus_shank3|own': 4, 'latent|own': 5, 'past-2|own': 3, 'focus_shank0|own': 3, 'past-1|own': 1}
+cell 3 rollout     result 0.30835 resource 240 R 1.2848e-03 [STAND-IN (interface check only)] choices {'present|standard': 43, 'focus_shank2|rollout': 1, 'focus_shank3|rollout': 5, 'latent|rollout': 7, 'focus_shank0|rollout': 4}
+cell 3 default     result 0.30576 resource 240 R 1.2740e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 3 uniform     result 0.14288 resource 240 R 5.9533e-04 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 3 time 51.6s
+cell 4 seed        result 0.28140 resource 240 R 1.1725e-03 [STAND-IN (interface check only)] choices {'land_withheld': 0, 'land_retargeted': 72, 'present|standard': 1, 'latent|standard': 1, 'latent|own': 14, 'past-1|own': 14, 'present|own': 15, 'past-2|own': 12, 'future+1|own': 1, 'focus_shank2|own': 2}
+cell 4 seed_noland result 0.30524 resource 240 R 1.2718e-03 [STAND-IN (interface check only)] choices {'present|standard': 1, 'latent|standard': 1, 'latent|own': 10, 'past-1|own': 12, 'present|own': 24, 'past-2|own': 6, 'focus_shank2|own': 4, 'future+1|own': 1, 'focus_shank2|standard': 1}
+cell 4 rollout     result 0.29708 resource 240 R 1.2378e-03 [STAND-IN (interface check only)] choices {'present|standard': 29, 'latent|rollout': 22, 'focus_shank2|rollout': 8, 'focus_shank3|rollout': 1}
+cell 4 default     result 0.30947 resource 240 R 1.2894e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 4 uniform     result 0.17175 resource 240 R 7.1563e-04 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 4 time 50.9s
+cell 5 seed        result 0.41201 resource 240 R 1.7167e-03 [STAND-IN (interface check only)] choices {'land_withheld': 0, 'land_retargeted': 61, 'present|standard': 1, 'present|own': 27, 'past-1|own': 12, 'focus_shank3|own': 1, 'latent|own': 7, 'past-2|own': 11, 'focus_shank1|own': 1}
+cell 5 seed_noland result 0.41137 resource 240 R 1.7140e-03 [STAND-IN (interface check only)] choices {'present|standard': 1, 'present|own': 35, 'focus_shank3|own': 5, 'latent|own': 10, 'past-2|own': 3, 'past-1|own': 5, 'focus_shank1|own': 1}
+cell 5 rollout     result 0.41137 resource 240 R 1.7140e-03 [STAND-IN (interface check only)] choices {'present|standard': 37, 'focus_shank3|rollout': 6, 'latent|rollout': 16, 'focus_shank1|rollout': 1}
+cell 5 default     result 0.41364 resource 240 R 1.7235e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 5 uniform     result 0.25649 resource 240 R 1.0687e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 5 time 50.1s
+cell 6 seed        result 0.58394 resource 240 R 2.4331e-03 [STAND-IN (interface check only)] choices {'land_withheld': 0, 'land_retargeted': 46, 'focus_shank2|standard': 4, 'present|own': 22, 'past-1|own': 16, 'future+1|own': 2, 'past-2|own': 5, 'latent|own': 3, 'focus_shank1|own': 2, 'focus_shank3|standard': 3, 'focus_shank2|own': 2, 'focus_shank0|own': 1}
+cell 6 seed_noland result 0.56986 resource 240 R 2.3744e-03 [STAND-IN (interface check only)] choices {'focus_shank2|standard': 4, 'present|own': 27, 'past-2|own': 6, 'latent|own': 6, 'past-1|own': 8, 'focus_shank2|own': 2, 'past-2|standard': 1, 'focus_shank3|standard': 2, 'focus_shank3|own': 1, 'focus_shank1|own': 2, 'focus_shank0|own': 1}
+cell 6 rollout     result 0.56888 resource 240 R 2.3703e-03 [STAND-IN (interface check only)] choices {'focus_shank2|rollout': 9, 'present|standard': 38, 'latent|rollout': 8, 'focus_shank3|rollout': 3, 'focus_shank1|rollout': 1, 'focus_shank0|rollout': 1}
+cell 6 default     result 0.57360 resource 240 R 2.3900e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 6 uniform     result 0.48798 resource 240 R 2.0333e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 6 time 50.8s
+cell 7 seed        result 0.45605 resource 240 R 1.9002e-03 [STAND-IN (interface check only)] choices {'land_withheld': 0, 'land_retargeted': 68, 'latent|standard': 1, 'present|own': 15, 'latent|own': 11, 'past-2|own': 17, 'past-1|own': 16}
+cell 7 seed_noland result 0.43678 resource 240 R 1.8199e-03 [STAND-IN (interface check only)] choices {'latent|standard': 1, 'present|own': 29, 'latent|own': 8, 'past-1|own': 11, 'past-2|own': 9, 'focus_shank2|own': 1, 'focus_shank3|own': 1}
+cell 7 rollout     result 0.43678 resource 240 R 1.8199e-03 [STAND-IN (interface check only)] choices {'latent|rollout': 29, 'present|standard': 29, 'focus_shank2|rollout': 1, 'focus_shank3|rollout': 1}
+cell 7 default     result 0.44648 resource 240 R 1.8604e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 7 uniform     result 0.30891 resource 240 R 1.2871e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 7 time 49.8s
+cell 8 seed        result 0.42773 resource 240 R 1.7822e-03 [STAND-IN (interface check only)] choices {'land_withheld': 0, 'land_retargeted': 60, 'latent|standard': 1, 'latent|own': 10, 'present|own': 25, 'past-1|own': 16, 'past-2|own': 8}
+cell 8 seed_noland result 0.43669 resource 240 R 1.8196e-03 [STAND-IN (interface check only)] choices {'latent|standard': 1, 'past-1|own': 7, 'present|own': 35, 'past-2|own': 5, 'focus_shank2|own': 2, 'latent|own': 9, 'focus_shank0|own': 1}
+cell 8 rollout     result 0.43328 resource 240 R 1.8053e-03 [STAND-IN (interface check only)] choices {'latent|rollout': 22, 'present|standard': 35, 'focus_shank2|rollout': 1, 'focus_shank3|rollout': 1, 'focus_shank0|rollout': 1}
+cell 8 default     result 0.43755 resource 240 R 1.8231e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 8 uniform     result 0.27077 resource 240 R 1.1282e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 8 time 50.3s

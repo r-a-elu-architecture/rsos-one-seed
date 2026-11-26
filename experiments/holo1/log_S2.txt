@@ -1,0 +1,130 @@
+{
+ "seed": 1,
+ "leak": 0.15,
+ "rho": 0.99,
+ "N": 700,
+ "V": 31,
+ "beta": 14,
+ "readout_heldout_acc": 0.7233,
+ "corpus_chars": 329247,
+ "corpus_sha256": "e1410f9b5e2b6541420d02795e6f52b667892be9cfc362d77c3dae246bbe5135",
+ "H1": {
+  "snapshots": 92,
+  "identical_consecutive": 0,
+  "min_dist": 1.0177796505052044,
+  "median_dist": 1.2975654644188177
+ },
+ "H2": {
+  "pairs": 15,
+  "identical_pairs": 0,
+  "min_dist": 0.4641000209349359,
+  "mean_dist": 0.7856844118124006
+ },
+ "H3": {
+  "messages": 240,
+  "distinct_messages": 230,
+  "chance": 0.1667,
+  "acc_words_free": 0.1792,
+  "perm_p": 0.35065,
+  "maxdist_identical_words_control": 0.0,
+  "examples": {
+   "tired": "go eat the soup.",
+   "happy": "go he atnd b: oeat the seoup.",
+   "angry": "ore athe soupi.",
+   "worried": "go eat the soup : ourop .",
+   "hungry": "the soup ro enda'aaaaaysagast t the : .",
+   "calm": "he asoup tin, go the at."
+  }
+ },
+ "H5": {
+  "acc_decode_A_pre": 1.0,
+  "acc_decode_A_post": 0.4167,
+  "horizon_chars": 10,
+  "profile_words_holo_random_by_horizon": {
+   "0": [
+    0.1792,
+    0.8833,
+    0.1667
+   ],
+   "5": [
+    0.1667,
+    0.8958,
+    0.175
+   ],
+   "10": [
+    0.1708,
+    0.8917,
+    0.1708
+   ],
+   "20": [
+    0.175,
+    0.8875,
+    0.1625
+   ],
+   "43": [
+    0.1792,
+    0.825,
+    0.1667
+   ]
+  },
+  "acc_words_only": 0.1708,
+  "acc_words_plus_hologram": 0.8917,
+  "acc_words_plus_random_same_norm": 0.1708,
+  "perm_p_hologram": 0.001,
+  "align_to_A_words": 0.0286,
+  "align_to_A_hologram": 0.4472
+ },
+ "H4": {
+  "effect": 1.4008069642377714,
+  "noise_floor_median": 1.9730489535370848,
+  "ratio": 0.71,
+  "messages": 40
+ },
+ "H6": {
+  "trials": 40,
+  "frac_text_changed_per_node": [
+   0.725,
+   0.725,
+   0.725,
+   0.725,
+   0.725
+  ],
+  "mean_state_dist_per_node": [
+   2.4529,
+   2.0623,
+   2.1523,
+   2.3418,
+   2.0607
+  ],
+  "reached_node5_frac": 0.725,
+  "amplify_nodes": [
+   "company",
+   "family"
+  ],
+  "dampen_nodes": [
+   "computer",
+   "school"
+  ]
+ },
+ "H7": {
+  "effect_per_turn_oldest_first": [
+   0.0017393525175139028,
+   0.006140784548234175,
+   0.020629565579671605,
+   0.1032254312017703,
+   0.2973774232846855,
+   0.7178185487692547,
+   3.165225718678156,
+   8.455242503501434
+  ],
+  "zero_effects": 0,
+  "min_effect": 0.0017393525175139028
+ },
+ "H8": {
+  "mean_cross_domain_rdm_spearman": 0.9397,
+  "null_mean": 0.0001,
+  "null_95pct": 0.0487,
+  "perm_p": 0.001
+ },
+ "runtime_s": 135.1
+}

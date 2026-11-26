@@ -1,0 +1,278 @@
+{
+ "K1": {
+  "by_outside_fraction": {
+   "0.0": {
+    "events": 896,
+    "named_correctly": 896,
+    "accuracy": 1.0,
+    "expected": 1.0
+   },
+   "0.25": {
+    "events": 896,
+    "named_correctly": 663,
+    "accuracy": 0.74,
+    "expected": 0.75
+   },
+   "0.5": {
+    "events": 896,
+    "named_correctly": 448,
+    "accuracy": 0.5,
+    "expected": 0.5
+   },
+   "0.75": {
+    "events": 896,
+    "named_correctly": 232,
+    "accuracy": 0.2589,
+    "expected": 0.25
+   },
+   "1.0": {
+    "events": 896,
+    "named_correctly": 0,
+    "accuracy": 0.0,
+    "expected": 0.0
+   }
+  },
+  "pass": true
+ },
+ "T2": {
+  "fields_read": 4800,
+  "accuracy_by_loss": {
+   "0.0": 0.99479,
+   "0.1": 0.99042,
+   "0.3": 0.97771,
+   "0.5": 0.93583
+  },
+  "bytes_ratio": 0.222,
+  "pass": false
+ },
+ "K2": {
+  "rows": [
+   {
+    "n": 4,
+    "state": "product",
+    "amplitudes": 16,
+    "nodes_size": 8,
+    "ratio": 0.5,
+    "max_bond": 1,
+    "overlap": 0.9999999999999993
+   },
+   {
+    "n": 4,
+    "state": "GHZ",
+    "amplitudes": 16,
+    "nodes_size": 24,
+    "ratio": 1.5,
+    "max_bond": 2,
+    "overlap": 0.9999999999999998
+   },
+   {
+    "n": 4,
+    "state": "W",
+    "amplitudes": 16,
+    "nodes_size": 24,
+    "ratio": 1.5,
+    "max_bond": 2,
+    "overlap": 0.9999999999999999
+   },
+   {
+    "n": 4,
+    "state": "tensor_network_bond2",
+    "amplitudes": 16,
+    "nodes_size": 24,
+    "ratio": 1.5,
+    "max_bond": 2,
+    "overlap": 1.0000000000000002
+   },
+   {
+    "n": 4,
+    "state": "random_haar",
+    "amplitudes": 16,
+    "nodes_size": 40,
+    "ratio": 2.5,
+    "max_bond": 4,
+    "overlap": 1.0000000000000002
+   },
+   {
+    "n": 8,
+    "state": "product",
+    "amplitudes": 256,
+    "nodes_size": 16,
+    "ratio": 0.0625,
+    "max_bond": 1,
+    "overlap": 0.9999999999999996
+   },
+   {
+    "n": 8,
+    "state": "GHZ",
+    "amplitudes": 256,
+    "nodes_size": 56,
+    "ratio": 0.21875,
+    "max_bond": 2,
+    "overlap": 0.9999999999999998
+   },
+   {
+    "n": 8,
+    "state": "W",
+    "amplitudes": 256,
+    "nodes_size": 56,
+    "ratio": 0.21875,
+    "max_bond": 2,
+    "overlap": 0.9999999999999998
+   },
+   {
+    "n": 8,
+    "state": "tensor_network_bond2",
+    "amplitudes": 256,
+    "nodes_size": 56,
+    "ratio": 0.21875,
+    "max_bond": 2,
+    "overlap": 1.0
+   },
+   {
+    "n": 8,
+    "state": "random_haar",
+    "amplitudes": 256,
+    "nodes_size": 680,
+    "ratio": 2.65625,
+    "max_bond": 16,
+    "overlap": 1.0000000000000002
+   },
+   {
+    "n": 12,
+    "state": "product",
+    "amplitudes": 4096,
+    "nodes_size": 24,
+    "ratio": 0.005859,
+    "max_bond": 1,
+    "overlap": 1.0
+   },
+   {
+    "n": 12,
+    "state": "GHZ",
+    "amplitudes": 4096,
+    "nodes_size": 88,
+    "ratio": 0.021484,
+    "max_bond": 2,
+    "overlap": 0.9999999999999998
+   },
+   {
+    "n": 12,
+    "state": "W",
+    "amplitudes": 4096,
+    "nodes_size": 88,
+    "ratio": 0.021484,
+    "max_bond": 2,
+    "overlap": 1.0000000000000004
+   },
+   {
+    "n": 12,
+    "state": "tensor_network_bond2",
+    "amplitudes": 4096,
+    "nodes_size": 88,
+    "ratio": 0.021484,
+    "max_bond": 2,
+    "overlap": 1.0
+   },
+   {
+    "n": 12,
+    "state": "random_haar",
+    "amplitudes": 4096,
+    "nodes_size": 10920,
+    "ratio": 2.666016,
+    "max_bond": 64,
+    "overlap": 1.0000000000000002
+   },
+   {
+    "n": 16,
+    "state": "product",
+    "amplitudes": 65536,
+    "nodes_size": 32,
+    "ratio": 0.000488,
+    "max_bond": 1,
+    "overlap": 1.000000000000001
+   },
+   {
+    "n": 16,
+    "state": "GHZ",
+    "amplitudes": 65536,
+    "nodes_size": 120,
+    "ratio": 0.001831,
+    "max_bond": 2,
+    "overlap": 0.9999999999999998
+   },
+   {
+    "n": 16,
+    "state": "W",
+    "amplitudes": 65536,
+    "nodes_size": 120,
+    "ratio": 0.001831,
+    "max_bond": 2,
+    "overlap": 1.0000000000000002
+   },
+   {
+    "n": 16,
+    "state": "tensor_network_bond2",
+    "amplitudes": 65536,
+    "nodes_size": 120,
+    "ratio": 0.001831,
+    "max_bond": 2,
+    "overlap": 1.0000000000000024
+   },
+   {
+    "n": 16,
+    "state": "random_haar",
+    "amplitudes": 65536,
+    "nodes_size": 174760,
+    "ratio": 2.666626,
+    "max_bond": 256,
+    "overlap": 0.9999999999999986
+   },
+   {
+    "n": 20,
+    "state": "product",
+    "amplitudes": 1048576,
+    "nodes_size": 40,
+    "ratio": 3.8e-05,
+    "max_bond": 1,
+    "overlap": 1.0000000000000024
+   },
+   {
+    "n": 20,
+    "state": "GHZ",
+    "amplitudes": 1048576,
+    "nodes_size": 152,
+    "ratio": 0.000145,
+    "max_bond": 2,
+    "overlap": 0.9999999999999998
+   },
+   {
+    "n": 20,
+    "state": "W",
+    "amplitudes": 1048576,
+    "nodes_size": 152,
+    "ratio": 0.000145,
+    "max_bond": 2,
+    "overlap": 1.0000000000000002
+   },
+   {
+    "n": 20,
+    "state": "tensor_network_bond2",
+    "amplitudes": 1048576,
+    "nodes_size": 152,
+    "ratio": 0.000145,
+    "max_bond": 2,
+    "overlap": 0.9999999999999931
+   },
+   {
+    "n": 20,
+    "state": "random_haar",
+    "amplitudes": 1048576,
+    "nodes_size": 2796200,
+    "ratio": 2.666664,
+    "max_bond": 1024,
+    "overlap": 0.9999999999999987
+   }
+  ],
+  "pass": true
+ }
+}

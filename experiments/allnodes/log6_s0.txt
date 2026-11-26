@@ -1,0 +1,4 @@
+select cancer/sym25
+select wine/sym25
+select digits/sym25
+select iris/sym25

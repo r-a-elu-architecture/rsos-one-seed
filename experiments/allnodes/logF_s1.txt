@@ -1,0 +1,10 @@
+w1 select 2
+w1 select 4
+w1 select 6
+w1 select 8
+w1 select 10
+w1 select 12
+w1 select 14
+w1 select 16
+w1 select 18
+w1 select 20

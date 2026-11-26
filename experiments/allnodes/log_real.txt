@@ -1,0 +1,24 @@
+cancer 7900 -0.117 {'reg_double': 50, 'inside': 30, 'outside': 27, 'core': 30, 'reg_half': 49, 'tube': 26, 'above': 88}
+cancer 7901 0.0292 {'outside': 13, 'reg_double': 51, 'above': 100, 'inside': 33, 'tube': 27, 'core': 27, 'reg_half': 49}
+cancer 7902 -0.2105 {'above': 78, 'reg_double': 64, 'outside': 30, 'inside': 40, 'core': 35, 'reg_half': 38, 'tube': 15}
+cancer 7903 0.117 {'core': 29, 'above': 90, 'reg_half': 44, 'outside': 41, 'reg_double': 63, 'tube': 23, 'inside': 10}
+cancer 7904 0.0819 {'inside': 27, 'outside': 49, 'reg_double': 42, 'above': 88, 'reg_half': 54, 'core': 25, 'tube': 15}
+cancer 7905 -0.0702 {'inside': 21, 'tube': 32, 'reg_double': 58, 'above': 89, 'core': 33, 'reg_half': 50, 'outside': 17}
+cancer 7906 0.0877 {'outside': 34, 'reg_double': 55, 'reg_half': 38, 'above': 102, 'inside': 20, 'tube': 22, 'core': 29}
+cancer 7907 0.0994 {'inside': 18, 'reg_double': 60, 'outside': 18, 'above': 115, 'tube': 25, 'core': 34, 'reg_half': 30}
+wine 7900 0.1481 {'core': 2, 'tube': 35, 'reg_double': 42, 'above': 177, 'reg_half': 43, 'outside': 1}
+wine 7901 0.0741 {'reg_double': 25, 'above': 156, 'tube': 56, 'reg_half': 59, 'core': 4}
+wine 7902 -0.0185 {'outside': 1, 'above': 176, 'inside': 1, 'reg_double': 24, 'tube': 52, 'reg_half': 43, 'core': 3}
+wine 7903 0.1111 {'reg_double': 26, 'core': 5, 'above': 175, 'tube': 56, 'outside': 6, 'reg_half': 32}
+wine 7904 -0.0556 {'reg_half': 85, 'tube': 59, 'inside': 7, 'reg_double': 35, 'above': 101, 'outside': 10, 'core': 3}
+wine 7905 0.1111 {'tube': 33, 'above': 163, 'reg_double': 39, 'reg_half': 54, 'core': 11}
+wine 7906 0.0185 {'reg_double': 38, 'above': 169, 'tube': 35, 'reg_half': 47, 'inside': 2, 'core': 9}
+wine 7907 0.037 {'outside': 3, 'reg_double': 31, 'inside': 6, 'above': 145, 'tube': 56, 'reg_half': 52, 'core': 7}
+digits 7900 -0.0537 {'core': 164, 'reg_double': 10, 'reg_half': 38, 'tube': 32, 'above': 44, 'inside': 5, 'outside': 7}
+digits 7901 -0.0278 {'core': 157, 'reg_double': 17, 'above': 31, 'inside': 14, 'tube': 36, 'reg_half': 39, 'outside': 6}
+digits 7902 -0.0204 {'core': 150, 'above': 45, 'tube': 36, 'reg_half': 40, 'outside': 16, 'inside': 4, 'reg_double': 9}
+digits 7903 -0.0389 {'reg_double': 10, 'core': 169, 'tube': 48, 'outside': 3, 'inside': 6, 'above': 21, 'reg_half': 43}
+digits 7904 -0.0222 {'core': 159, 'reg_double': 12, 'tube': 27, 'above': 44, 'reg_half': 43, 'outside': 9, 'inside': 6}
+digits 7905 -0.0056 {'core': 167, 'above': 54, 'tube': 32, 'outside': 7, 'reg_double': 12, 'reg_half': 27, 'inside': 1}
+digits 7906 -0.0315 {'core': 161, 'reg_double': 12, 'tube': 39, 'above': 37, 'inside': 7, 'reg_half': 40, 'outside': 4}
+digits 7907 -0.0315 {'inside': 6, 'reg_half': 35, 'core': 168, 'reg_double': 10, 'above': 38, 'tube': 30, 'outside': 13}

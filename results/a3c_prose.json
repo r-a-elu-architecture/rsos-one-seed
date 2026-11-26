@@ -1,0 +1,244 @@
+{
+ "D": {
+  "bpe": 1860.0,
+  "tok": 1468.0
+ },
+ "Hdragon": {
+  "bpe": 1023.3125,
+  "tok": 932.4375
+ },
+ "Hl": {
+  "billed_tok": 83004.0,
+  "channel_bpe": 197.375,
+  "channel_bytes": 1271.5625,
+  "channel_tok": 197.375,
+  "channel_tok_ci95": [
+   188.0625,
+   208.625
+  ],
+  "cost_usd_total": 0.2720522,
+  "drift_events": 48,
+  "drift_in_any_copy_end": 0,
+  "edits_fallback": 0,
+  "exact": 16,
+  "heal0": 48,
+  "instr_bpc": 0.41498109811573575,
+  "llm_calls": 42.5,
+  "llm_ctx_fallback": 3,
+  "mode_hpred": 59,
+  "mode_llm": 169,
+  "n": 16,
+  "n_reasons": 4,
+  "nak": 0,
+  "per_edge_tok_bpe": {
+   "door": [
+    19.4375,
+    19.4375
+   ],
+   "edits": [
+    29.8125,
+    29.8125
+   ],
+   "forward": [
+    29.125,
+    29.125
+   ],
+   "instruction": [
+    119.0,
+    119.0
+   ]
+  },
+  "reason_bpc": 1.192441761875287,
+  "replica": 16,
+  "steps_failed": 0,
+  "trunc": {
+   "0.1": {
+    "correct": 0,
+    "detected": 228,
+    "silent_wrong": 0
+   },
+   "0.2": {
+    "correct": 0,
+    "detected": 228,
+    "silent_wrong": 0
+   },
+   "0.3": {
+    "correct": 0,
+    "detected": 228,
+    "silent_wrong": 0
+   },
+   "0.4": {
+    "correct": 0,
+    "detected": 228,
+    "silent_wrong": 0
+   },
+   "0.5": {
+    "correct": 0,
+    "detected": 228,
+    "silent_wrong": 0
+   }
+  },
+  "trunc_silent": 0,
+  "trunc_total": 1140,
+  "verdicts": {
+   "C3": true,
+   "C4_analogue_Hl": true,
+   "exact_ge_16": true,
+   "integrity": true
+  },
+  "wall_sec": 3181.9926877468824,
+  "wrong_final_lines": 0,
+  "x_D_bpe": 0.10611559139784946,
+  "x_D_regex": 0.1344516348773842,
+  "x_Hdragon_regex": 0.21167638581674375
+ },
+ "Hp": {
+  "billed_tok": 83563.375,
+  "channel_bpe": 261.75,
+  "channel_bytes": 1729.25,
+  "channel_tok": 261.75,
+  "channel_tok_ci95": [
+   239.125,
+   290.625
+  ],
+  "cost_usd_total": 0.29674527,
+  "drift_events": 48,
+  "drift_in_any_copy_end": 0,
+  "edits_fallback": 0,
+  "exact": 15,
+  "heal0": 48,
+  "instr_bpc": 0.5980093708360118,
+  "llm_calls": 43.0,
+  "llm_ctx_fallback": 0,
+  "mode_hpred": 0,
+  "mode_llm": 0,
+  "n": 16,
+  "n_reasons": 9,
+  "nak": 0,
+  "per_edge_tok_bpe": {
+   "door": [
+    34.5625,
+    34.5625
+   ],
+   "edits": [
+    29.8125,
+    29.8125
+   ],
+   "forward": [
+    28.625,
+    28.625
+   ],
+   "instruction": [
+    168.75,
+    168.75
+   ]
+  },
+  "reason_bpc": 1.7873296185765133,
+  "replica": 15,
+  "steps_failed": 1,
+  "trunc": {
+   "0.1": {
+    "correct": 0,
+    "detected": 232,
+    "silent_wrong": 0
+   },
+   "0.2": {
+    "correct": 0,
+    "detected": 232,
+    "silent_wrong": 0
+   },
+   "0.3": {
+    "correct": 0,
+    "detected": 232,
+    "silent_wrong": 0
+   },
+   "0.4": {
+    "correct": 0,
+    "detected": 232,
+    "silent_wrong": 0
+   },
+   "0.5": {
+    "correct": 0,
+    "detected": 232,
+    "silent_wrong": 0
+   }
+  },
+  "trunc_silent": 0,
+  "trunc_total": 1160,
+  "verdicts": {
+   "C1": false,
+   "C2": false,
+   "C4": true,
+   "integrity": false
+  },
+  "wall_sec": 217.53565774857998,
+  "wrong_final_lines": 1,
+  "x_D_bpe": 0.1407258064516129,
+  "x_D_regex": 0.17830381471389645,
+  "x_Hdragon_regex": 0.2807158656746431
+ },
+ "code_commit": "1fa19e52ae24fcd0fa83342c3e67c2e1c44dcc3a",
+ "experiment": "a3c_prose",
+ "gate": {
+  "bpe_mean": 233.125,
+  "chan_mean": 233.125,
+  "design_honest_prediction_if_above": 236.88244427003676,
+  "design_threshold_bpc": 0.72,
+  "folds": 32,
+  "heldout_instr_bpc": 0.5606564768169644,
+  "instr_per_task": 14.0
+ },
+ "local_model": {
+  "encoder_passes": 20486,
+  "llm_mode_messages": 169,
+  "payload_tokens": 20258,
+  "process": {
+   "note": "whole Hl process (model + harness + 8 task threads), sampled every 30 s; includes model load and preamble",
+   "process_cpu_sec_total": 16372,
+   "process_wall_sec": 6422
+  },
+  "prose_messages": 228
+ },
+ "numpy": "2.5.3",
+ "predicted": {
+  "Hl": 205,
+  "Hp": 276
+ },
+ "priming": {
+  "corpus_bpe": 38389,
+  "corpus_bytes": 138479,
+  "corpus_regex_tok": 37924,
+  "frozen_bytes": 341451,
+  "frozen_sha256": "0d40a312eab05e660d4633882f50745ba6dbdc73bb51e0577093d157203facc1",
+  "n_instr": 448,
+  "n_reasons": 12,
+  "ppm_contexts": 13760,
+  "sec": 1.6968488693237305,
+  "vocab": 360
+ },
+ "python": "3.13.18",
+ "replay_a3P_Hp": {
+  "bpe": 271.0,
+  "chan": 271.0,
+  "edits_fallback": 0,
+  "heal0": 48,
+  "instr_bpc": 0.5774424801103857,
+  "reason_bpc": 1.6210105051253274,
+  "replica": 16,
+  "runs": 16,
+  "success": 16,
+  "trunc_silent": 0
+ },
+ "results_sha256": "1d7976246d1222d10b5eabe63dac05ae6d26fc5fa8870e648aaad2f47f75ae7f",
+ "reuse": {
+  "D_mismatches": [],
+  "D_replayed": 16,
+  "Hd_bpe_mean": 1023.3125,
+  "Hd_chan_mean": 932.4375,
+  "Hd_mismatches": [],
+  "Hd_replayed": 16,
+  "frozen_diff_empty": true,
+  "pass": true
+ },
+ "run_utc": "2026-11-17T21:32:34Z"
+}

@@ -1,0 +1,68 @@
+ai_ai  models ('mock:0', 'mock:0')  pack False  cells 1-4  modes ('seed3', 'seed3v1', 'seed', 'rollout', 'default')  pool in None
+cell 1 seed3    result 1 resource  1266 R 0.000790 rounds 2 msg 41 calls 0 failed 0 held 1 holo 2 keys 0 [0.6s] choices={'op:fuse|Associated': 1, 'F:holokey|own': 1}
+        seed3 ops used {'fuse': 1, 'colour': 2, 'rooms': 2, 'transplant': 1}  rooms {'Eagle': 0, 'Owl': 0, 'Associated': 2, 'base': 0}  vetoed 0  rollouts v1/ops 48/24  passed {heal: 1, beam1: 1, beam3: 1, fuse: 2, rehost: 1, pierce: 2, overlay: 1, zoom: 1}  enter depth {1: 2, 2: 0}  inherit 0 shapes 2 fallback 0 pool_saved /tmp/pool_ai_ai.json
+cell 1 seed3v1  result 1 resource  1259 R 0.000794 rounds 2 msg 37 calls 0 failed 0 held 2 holo 2 keys 0 [0.3s] choices={'F:holo-vote|policy': 1, 'F:holokey|standard': 1}
+cell 1 seed     result 1 resource  1250 R 0.000800 rounds 2 msg 34 calls 0 failed 0 held 3 holo 0 keys 0 [0.2s] choices={'land_withheld': 2, 'land_retargeted': 1, 'present|standard': 1, 'past-1|own': 1}
+cell 1 rollout  result 1 resource  1294 R 0.000773 rounds 2 msg 53 calls 0 failed 0 held 0 holo 0 keys 0 [0.1s] choices={'present|standard': 1, 'focus_team|rollout': 1}
+cell 1 default  result 1 resource  1295 R 0.000772 rounds 2 msg 54 calls 0 failed 0 held 0 holo 0 keys 0 [0.0s]
+cell 1 pareto vs default: seed3 WIN, seed3v1 WIN, seed WIN, rollout WIN; strongest = default (row C)
+cell 2 seed3    result 1 resource   633 R 0.001580 rounds 1 msg 23 calls 0 failed 0 held 0 holo 1 keys 0 [0.4s] choices={'op:zoom|Associated': 1}
+        seed3 ops used {'zoom': 1, 'colour': 1, 'rooms': 1, 'transplant': 1}  rooms {'Eagle': 0, 'Owl': 0, 'Associated': 1, 'base': 0}  vetoed 0  rollouts v1/ops 17/13  passed {fuse: 1, pierce: 1, overlay: 1, enter: 1, zoom: 1}  enter depth {1: 1, 2: 0}  inherit 1 shapes 3 fallback 0 pool_saved /tmp/pool_ai_ai.json
+cell 2 seed3v1  result 1 resource   633 R 0.001580 rounds 1 msg 23 calls 0 failed 0 held 0 holo 1 keys 0 [0.3s] choices={'F:holo-vote|policy': 1}
+cell 2 seed     result 1 resource   627 R 0.001595 rounds 1 msg 20 calls 0 failed 0 held 1 holo 0 keys 0 [0.1s] choices={'land_withheld': 1, 'land_retargeted': 0, 'present|standard': 1}
+cell 2 rollout  result 1 resource   639 R 0.001565 rounds 1 msg 26 calls 0 failed 0 held 0 holo 0 keys 0 [0.1s] choices={'present|standard': 1}
+cell 2 default  result 1 resource   639 R 0.001565 rounds 1 msg 26 calls 0 failed 0 held 0 holo 0 keys 0 [0.0s]
+cell 2 pareto vs default: seed3 WIN, seed3v1 WIN, seed WIN, rollout TIE; strongest = default (row C)
+cell 3 seed3    result 1 resource   620 R 0.001613 rounds 1 msg 20 calls 0 failed 0 held 0 holo 1 keys 1 [0.5s] choices={'op:rehost|Associated': 1}
+        seed3 ops used {'rehost': 1, 'colour': 1, 'rooms': 1, 'transplant': 1}  rooms {'Eagle': 0, 'Owl': 0, 'Associated': 1, 'base': 0}  vetoed 0  rollouts v1/ops 17/13  passed {heal: 1, beam1: 1, fuse: 1, rehost: 1, pierce: 1, overlay: 1, enter: 1, zoom: 1}  enter depth {1: 1, 2: 0}  inherit 2 shapes 4 fallback 0 pool_saved /tmp/pool_ai_ai.json
+cell 3 seed3v1  result 1 resource   624 R 0.001603 rounds 1 msg 22 calls 0 failed 0 held 0 holo 1 keys 1 [0.3s] choices={'F:holokey|standard': 1}
+cell 3 seed     result 1 resource  2623 R 0.000381 rounds 4 msg 75 calls 0 failed 0 held 5 holo 0 keys 0 [0.6s] choices={'land_withheld': 2, 'land_retargeted': 1, 'focus_manager|standard': 1, 'chain|own': 1, 'past-1|own': 2}
+cell 3 rollout  result 1 resource  1991 R 0.000502 rounds 3 msg 77 calls 0 failed 0 held 0 holo 0 keys 0 [0.2s] choices={'focus_manager|rollout': 1, 'chain|rollout': 1, 'focus_home|rollout': 1}
+cell 3 default  result 1 resource  2702 R 0.000370 rounds 4 msg 105 calls 0 failed 0 held 0 holo 0 keys 0 [0.0s]
+cell 3 pareto vs default: seed3 WIN, seed3v1 WIN, seed WIN, rollout WIN; strongest = default (row C)
+cell 4 seed3    result 1 resource  1258 R 0.000795 rounds 2 msg 36 calls 0 failed 0 held 2 holo 2 keys 0 [0.4s] choices={'op:zoom|Associated': 1, 'past-1|standard': 1}
+        seed3 ops used {'zoom': 1, 'colour': 2, 'rooms': 2, 'transplant': 2}  rooms {'Eagle': 0, 'Owl': 0, 'Associated': 2, 'base': 0}  vetoed 0  rollouts v1/ops 35/25  passed {compress: 1, fuse: 2, rehost: 1, pierce: 2, enter: 1, zoom: 2}  enter depth {1: 2, 2: 0}  inherit 2 shapes 5 fallback 0 pool_saved /tmp/pool_ai_ai.json
+cell 4 seed3v1  result 1 resource  1258 R 0.000795 rounds 2 msg 36 calls 0 failed 0 held 2 holo 2 keys 0 [0.2s] choices={'F:holokey|policy': 1, 'past-1|standard': 1}
+cell 4 seed     result 1 resource  1265 R 0.000791 rounds 2 msg 39 calls 0 failed 0 held 2 holo 0 keys 0 [0.1s] choices={'land_withheld': 1, 'land_retargeted': 0, 'focus_home|standard': 1, 'past-1|standard': 1}
+cell 4 rollout  result 1 resource  1293 R 0.000773 rounds 2 msg 50 calls 0 failed 0 held 0 holo 0 keys 0 [0.0s] choices={'focus_home|rollout': 1, 'present|standard': 1}
+cell 4 default  result 1 resource  1299 R 0.000770 rounds 2 msg 52 calls 0 failed 0 held 0 holo 0 keys 0 [0.0s]
+cell 4 pareto vs default: seed3 WIN, seed3v1 WIN, seed WIN, rollout WIN; strongest = default (row C)
+seed3 v2 operators chosen (cells 1-4): {'fuse': 1, 'zoom': 2, 'rehost': 1}
+ops bound: {"heal": "bound", "beam1": "bound", "beam3": "bound", "contain": "bound", "compress": "bound", "inherit": "bound", "fuse": "bound", "carry": "not bound: needs carry", "rehost": "bound", "pierce": "bound", "overlay": "bound", "enter": "bound (depth 1: parts(state, within) not offered)", "zoom": "bound (generic)", "colour": "bound", "rooms": "bound (generic)", "transplant": "bound (generic; file: SEED3_POOL_IN / SEED3_POOL_OUT)"}
+bounded calls: {"consecutive_fail": 0, "calls": 0, "failed": 0, "requests": 0, "retries": 0, "seconds_waited": 0.0, "broken_calls": 0, "last_reason": ""}
+total 4.4s
+
+=== TRANSPLANT CHECK: SEED3_POOL_IN=AI-agents pool (mock run above, 96 entries) ===
+ai_ai  models ('mock:0', 'mock:0')  pack False  cells 1-4  modes ('seed3', 'seed3v1', 'seed', 'rollout', 'default')  pool in /tmp/pool_ai_agents.json
+cell 1 seed3    result 1 resource  1266 R 0.000790 rounds 2 msg 41 calls 0 failed 0 held 1 holo 2 keys 0 [0.6s] choices={'op:fuse|Associated': 1, 'F:holokey|own': 1}
+        seed3 ops used {'fuse': 1, 'colour': 2, 'rooms': 2, 'transplant': 2}  rooms {'Eagle': 0, 'Owl': 0, 'Associated': 2, 'base': 0}  vetoed 0  rollouts v1/ops 48/26  passed {heal: 1, fuse: 2, rehost: 1, pierce: 2, overlay: 1, zoom: 1}  enter depth {1: 2, 2: 0}  inherit 0 shapes 88 fallback 0 pool_saved None
+cell 1 seed3v1  result 1 resource  1259 R 0.000794 rounds 2 msg 37 calls 0 failed 0 held 2 holo 2 keys 0 [0.3s] choices={'F:holo-vote|policy': 1, 'F:holokey|standard': 1}
+cell 1 seed     result 1 resource  1250 R 0.000800 rounds 2 msg 34 calls 0 failed 0 held 3 holo 0 keys 0 [0.2s] choices={'land_withheld': 2, 'land_retargeted': 1, 'present|standard': 1, 'past-1|own': 1}
+cell 1 rollout  result 1 resource  1294 R 0.000773 rounds 2 msg 53 calls 0 failed 0 held 0 holo 0 keys 0 [0.1s] choices={'present|standard': 1, 'focus_team|rollout': 1}
+cell 1 default  result 1 resource  1295 R 0.000772 rounds 2 msg 54 calls 0 failed 0 held 0 holo 0 keys 0 [0.0s]
+cell 1 pareto vs default: seed3 WIN, seed3v1 WIN, seed WIN, rollout WIN; strongest = default (row C)
+cell 2 seed3    result 1 resource   633 R 0.001580 rounds 1 msg 23 calls 0 failed 0 held 0 holo 1 keys 0 [0.5s] choices={'op:zoom|Associated': 1}
+        seed3 ops used {'zoom': 1, 'colour': 1, 'rooms': 1, 'transplant': 1}  rooms {'Eagle': 0, 'Owl': 0, 'Associated': 1, 'base': 0}  vetoed 0  rollouts v1/ops 17/13  passed {fuse: 1, pierce: 1, overlay: 1, enter: 1, zoom: 1}  enter depth {1: 1, 2: 0}  inherit 1 shapes 89 fallback 0 pool_saved None
+cell 2 seed3v1  result 1 resource   633 R 0.001580 rounds 1 msg 23 calls 0 failed 0 held 0 holo 1 keys 0 [0.3s] choices={'F:holo-vote|policy': 1}
+cell 2 seed     result 1 resource   627 R 0.001595 rounds 1 msg 20 calls 0 failed 0 held 1 holo 0 keys 0 [0.1s] choices={'land_withheld': 1, 'land_retargeted': 0, 'present|standard': 1}
+cell 2 rollout  result 1 resource   639 R 0.001565 rounds 1 msg 26 calls 0 failed 0 held 0 holo 0 keys 0 [0.1s] choices={'present|standard': 1}
+cell 2 default  result 1 resource   639 R 0.001565 rounds 1 msg 26 calls 0 failed 0 held 0 holo 0 keys 0 [0.0s]
+cell 2 pareto vs default: seed3 WIN, seed3v1 WIN, seed WIN, rollout TIE; strongest = default (row C)
+cell 3 seed3    result 1 resource   620 R 0.001613 rounds 1 msg 20 calls 0 failed 0 held 0 holo 1 keys 1 [0.5s] choices={'op:rehost|Associated': 1}
+        seed3 ops used {'rehost': 1, 'colour': 1, 'rooms': 1, 'transplant': 1}  rooms {'Eagle': 0, 'Owl': 0, 'Associated': 1, 'base': 0}  vetoed 0  rollouts v1/ops 17/14  passed {heal: 1, fuse: 1, rehost: 1, pierce: 1, overlay: 1, enter: 1, zoom: 1}  enter depth {1: 1, 2: 0}  inherit 2 shapes 90 fallback 0 pool_saved None
+cell 3 seed3v1  result 1 resource   624 R 0.001603 rounds 1 msg 22 calls 0 failed 0 held 0 holo 1 keys 1 [0.3s] choices={'F:holokey|standard': 1}
+cell 3 seed     result 1 resource  2623 R 0.000381 rounds 4 msg 75 calls 0 failed 0 held 5 holo 0 keys 0 [0.8s] choices={'land_withheld': 2, 'land_retargeted': 1, 'focus_manager|standard': 1, 'chain|own': 1, 'past-1|own': 2}
+cell 3 rollout  result 1 resource  1991 R 0.000502 rounds 3 msg 77 calls 0 failed 0 held 0 holo 0 keys 0 [0.2s] choices={'focus_manager|rollout': 1, 'chain|rollout': 1, 'focus_home|rollout': 1}
+cell 3 default  result 1 resource  2702 R 0.000370 rounds 4 msg 105 calls 0 failed 0 held 0 holo 0 keys 0 [0.0s]
+cell 3 pareto vs default: seed3 WIN, seed3v1 WIN, seed WIN, rollout WIN; strongest = default (row C)
+cell 4 seed3    result 1 resource  1258 R 0.000795 rounds 2 msg 36 calls 0 failed 0 held 2 holo 2 keys 0 [0.4s] choices={'op:compress|Associated': 1, 'past-1|standard': 1}
+        seed3 ops used {'compress': 1, 'colour': 2, 'rooms': 2, 'transplant': 2}  rooms {'Eagle': 0, 'Owl': 0, 'Associated': 2, 'base': 0}  vetoed 0  rollouts v1/ops 35/25  passed {compress: 1, fuse: 2, rehost: 1, pierce: 2, enter: 1, zoom: 2}  enter depth {1: 2, 2: 0}  inherit 2 shapes 91 fallback 0 pool_saved None
+cell 4 seed3v1  result 1 resource  1258 R 0.000795 rounds 2 msg 36 calls 0 failed 0 held 2 holo 2 keys 0 [0.2s] choices={'F:holokey|policy': 1, 'past-1|standard': 1}
+cell 4 seed     result 1 resource  1265 R 0.000791 rounds 2 msg 39 calls 0 failed 0 held 2 holo 0 keys 0 [0.1s] choices={'land_withheld': 1, 'land_retargeted': 0, 'focus_home|standard': 1, 'past-1|standard': 1}
+cell 4 rollout  result 1 resource  1293 R 0.000773 rounds 2 msg 50 calls 0 failed 0 held 0 holo 0 keys 0 [0.1s] choices={'focus_home|rollout': 1, 'present|standard': 1}
+cell 4 default  result 1 resource  1299 R 0.000770 rounds 2 msg 52 calls 0 failed 0 held 0 holo 0 keys 0 [0.0s]
+cell 4 pareto vs default: seed3 WIN, seed3v1 WIN, seed WIN, rollout WIN; strongest = default (row C)
+seed3 v2 operators chosen (cells 1-4): {'fuse': 1, 'zoom': 1, 'rehost': 1, 'compress': 1}
+ops bound: {"heal": "bound", "beam1": "bound", "beam3": "bound", "contain": "bound", "compress": "bound", "inherit": "bound", "fuse": "bound", "carry": "not bound: needs carry", "rehost": "bound", "pierce": "bound", "overlay": "bound", "enter": "bound (depth 1: parts(state, within) not offered)", "zoom": "bound (generic)", "colour": "bound", "rooms": "bound (generic)", "transplant": "bound (generic; file: SEED3_POOL_IN / SEED3_POOL_OUT)"}
+bounded calls: {"consecutive_fail": 0, "calls": 0, "failed": 0, "requests": 0, "retries": 0, "seconds_waited": 0.0, "broken_calls": 0, "last_reason": ""}
+total 4.8s

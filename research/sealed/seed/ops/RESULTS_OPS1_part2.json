@@ -1,0 +1,56 @@
+{
+ "memory": {
+  "observed": {
+   "key": 0.0175,
+   "pair": 0.04688,
+   "condition": 0.58656,
+   "scan": 0.99875
+  },
+  "law1": {
+   "key": 0.0175,
+   "pair": 0.03469,
+   "condition": 0.58635,
+   "scan": 0.99499
+  }
+ },
+ "network": {
+  "observed": {
+   "key": 0.02375,
+   "pair": 0.03969,
+   "condition": 0.57,
+   "scan": 0.99156
+  },
+  "law1": {
+   "key": 0.02375,
+   "pair": 0.04694,
+   "condition": 0.69936,
+   "scan": 0.99926
+  },
+  "blind": {
+   "key": 0.04031,
+   "pair": 0.04281,
+   "condition": 0.04063,
+   "scan": 0.04531
+  }
+ },
+ "ledger": {
+  "observed": {
+   "key": 0.25969,
+   "pair": 0.31562,
+   "condition": 0.99375,
+   "scan": 1.0
+  },
+  "law1": {
+   "key": 0.25969,
+   "pair": 0.45194,
+   "condition": 1.0,
+   "scan": 1.0
+  },
+  "blind": {
+   "key": 0.26281,
+   "pair": 0.23906,
+   "condition": 0.24281,
+   "scan": 0.25188
+  }
+ }
+}

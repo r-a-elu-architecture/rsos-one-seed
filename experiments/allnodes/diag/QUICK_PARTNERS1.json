@@ -1,0 +1,22 @@
+{
+ "cells": 40,
+ "P1_joined_gt_each_alone": 40,
+ "P2_joined_gt_notubes": 20,
+ "P3_channels_not_worse": 12,
+ "mean_G": {
+  "joined": 0.9539982638888891,
+  "notubes": 0.9548038194444445,
+  "aloneA": 0.9309201388888889,
+  "aloneB": 0.9345503472222223,
+  "native": 0.9037690972222222
+ },
+ "Law5_mean_gain_joined_minus_notubes": -0.0008055555555555594,
+ "mean_gain_joined_minus_best_alone": 0.013083333333333327,
+ "p4_changed_ticks_mean": 14.825,
+ "PASS": {
+  "P1": true,
+  "P2": false,
+  "P3": false
+ },
+ "ROW_PASS": false
+}

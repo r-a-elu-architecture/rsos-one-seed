@@ -1,0 +1,19 @@
+fetched /home/runner/work/RSOS-Multimodal-World/RSOS-Multimodal-World/real/hosts/data/topical_chat/test_freq.json 3c65693d59e40a1fb58ead35dcfe85fbcc88ea93a4d74557df620996f72c8f08
+ok /home/runner/work/RSOS-Multimodal-World/RSOS-Multimodal-World/real/hosts/data/topical_chat/test_freq.json 3c65693d59e40a1fb58ead35dcfe85fbcc88ea93a4d74557df620996f72c8f08
+ai_human  model openrouter:meta-llama/llama-3.1-8b-instruct
+cell 1 seed    result 0.286  resource 2.126  R 0.1344
+cell 1 default result 0.286  resource 2.081  R 0.1373
+cell 2 seed    result 0.667  resource 1.395  R 0.4779
+cell 2 default result 0.667  resource 1.405  R 0.4745
+cell 3 seed    result 0.000  resource 1.587  R 0.0000
+cell 3 default result 0.000  resource 1.572  R 0.0000
+cell 4 seed    result 0.000  resource 1.509  R 0.0000
+cell 4 default result 0.000  resource 1.501  R 0.0000
+cell 5 seed    result 0.333  resource 1.268  R 0.2629
+cell 5 default result 0.333  resource 1.268  R 0.2629
+cell 6 seed    result 0.250  resource 1.669  R 0.1498
+cell 6 default result 0.500  resource 1.664  R 0.3005
+cell 7 seed    result 0.095  resource 1.780  R 0.0535
+cell 7 default result 0.095  resource 1.743  R 0.0546
+cell 8 seed    result 0.000  resource 1.580  R 0.0000
+cell 8 default result 0.000  resource 1.558  R 0.0000

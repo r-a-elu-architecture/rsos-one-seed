@@ -1,0 +1,10 @@
+SEAL_ORG7 (sealed before any ORG7 seed runs, 22 Nov 2026 ~19:40 Kyiv). Dry run only on throwaway seeds 11-12 (not kept).
+
+2c679aac3b407da7491c1fd60d1ba777cc82a6adb9abe921eb7dcfe5751ad88d  PREREG_ORG7.md
+d5e9a9e5b4ad45a3201007761b3132546a504f05057fd18dce8f543703214b5b  org7run.py
+f49501e07ead1bcb9ac3399876bc050cc314ab808c2b1c219f6e3d17e8843be5  org7.py
+0e3e558d1ef3a2c6b7e8f00cf3c7b8f46b505c382b3ac9ddb88c6a0582c98c26  analyze_org7.py
+ee24a9d9fe19df202034b2f9f4cf8003a67c338bf6f462e6c73f867e2386e2db  org6.py
+1c4ebd50e23008d794e07a8c287d10881cd35075f2f3fabe5696d21748d18d8a  org5.py
+78d7826cd325c7f6b0f41ab144a4a198638ff0510b8f764ddf4b0aa7686c2737  organism.py
+63c826b6fb81a8b8599fcf9b8532834c023cca562c90cafac409a7f4c78951a0  diag/QUICK7_RESULTS.md

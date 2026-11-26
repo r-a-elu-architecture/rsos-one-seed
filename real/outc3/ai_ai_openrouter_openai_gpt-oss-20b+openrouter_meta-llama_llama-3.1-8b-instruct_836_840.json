@@ -1,0 +1,210 @@
+{
+ "row": "ai_ai",
+ "model": "openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct",
+ "cells_run": [
+  836,
+  837,
+  838,
+  839,
+  840
+ ],
+ "generated": true,
+ "cells": {
+  "std|836": {
+   "default": {
+    "result": 0.0,
+    "resource": 6444.0,
+    "R": 0.0,
+    "choices": {
+     "present|standard": 6
+    },
+    "failed_calls": 0,
+    "sec": 8.3
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 5730.0,
+    "R": 0.00017452006980802793,
+    "choices": {
+     "F:holo-vote|policy": 1,
+     "future+1|own": 1,
+     "F:holokey|standard": 1,
+     "F:holo-vote|standard": 1,
+     "past-2|standard": 1,
+     "past-1|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 6.1
+   },
+   "composed": {
+    "result": 1.0,
+    "resource": 5992.0,
+    "R": 0.00016688918558077436,
+    "choices": {
+     "C:see>trace>compress>inherit>contain>act|standard": 1,
+     "focus_home|standard": 1,
+     "focus_team|standard": 1,
+     "present|standard": 1,
+     "past-1|standard": 2
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 9.6
+   },
+   "sec": 24
+  },
+  "std|837": {
+   "default": {
+    "result": 1.0,
+    "resource": 5769.0,
+    "R": 0.0001733402669440111,
+    "choices": {
+     "present|standard": 6
+    },
+    "failed_calls": 0,
+    "sec": 5.2
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 1740.0,
+    "R": 0.0005747126436781609,
+    "choices": {
+     "F:holo-vote|policy": 1,
+     "P3-repair|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.6
+   },
+   "composed": {
+    "result": 1.0,
+    "resource": 2671.0,
+    "R": 0.00037439161362785476,
+    "choices": {
+     "present|standard": 1,
+     "present|own": 1,
+     "past-1|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 3.6
+   },
+   "sec": 11
+  },
+  "std|838": {
+   "default": {
+    "result": 1.0,
+    "resource": 1708.0,
+    "R": 0.000585480093676815,
+    "choices": {
+     "present|standard": 2
+    },
+    "failed_calls": 0,
+    "sec": 1.9
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 1786.0,
+    "R": 0.0005599104143337066,
+    "choices": {
+     "F:holo-vote|policy": 1,
+     "F:holo-vote|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 1.8
+   },
+   "composed": {
+    "result": 1.0,
+    "resource": 1769.0,
+    "R": 0.0005652911249293386,
+    "choices": {
+     "C:see>trace>compress>inherit>contain>act|policy": 1,
+     "focus_home|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.3
+   },
+   "sec": 6
+  },
+  "std|839": {
+   "default": {
+    "result": 1.0,
+    "resource": 4708.0,
+    "R": 0.00021240441801189465,
+    "choices": {
+     "present|standard": 5
+    },
+    "failed_calls": 0,
+    "sec": 4.7
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 3698.0,
+    "R": 0.00027041644131963225,
+    "choices": {
+     "F:holo-vote|policy": 2,
+     "F:holo-vote|standard": 1,
+     "past-1|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 4.5
+   },
+   "composed": {
+    "result": 1.0,
+    "resource": 3767.0,
+    "R": 0.0002654632333421821,
+    "choices": {
+     "C:see>trace>choose>contain>act|policy": 1,
+     "C:see>trace>compress>inherit>contain>act|policy": 1,
+     "future+1|standard": 1,
+     "past-1|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 6.0
+   },
+   "sec": 15
+  },
+  "std|840": {
+   "default": {
+    "result": 1.0,
+    "resource": 2682.0,
+    "R": 0.0003728560775540641,
+    "choices": {
+     "present|standard": 3
+    },
+    "failed_calls": 0,
+    "sec": 1.8
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 1760.0,
+    "R": 0.0005681818181818182,
+    "choices": {
+     "F:holo-vote|policy": 1,
+     "F:holokey|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.2
+   },
+   "composed": {
+    "result": 1.0,
+    "resource": 1775.0,
+    "R": 0.0005633802816901409,
+    "choices": {
+     "focus_office|standard": 1,
+     "focus_home|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.0
+   },
+   "sec": 6
+  }
+ }
+}

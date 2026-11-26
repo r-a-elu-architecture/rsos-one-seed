@@ -1,0 +1,160 @@
+{
+ "row": "ai_human",
+ "model": "openrouter:mistralai/mistral-small-3.2-24b-instruct",
+ "cells_run": [
+  413,
+  414,
+  415,
+  416
+ ],
+ "generated": true,
+ "cells": {
+  "std|413": {
+   "default": {
+    "result": 0.05555555555555555,
+    "resource": 1.757,
+    "R": 0.03161955353190413,
+    "choices": {
+     "present|standard": 8
+    },
+    "failed_calls": 0,
+    "sec": 39.7
+   },
+   "seed3v1": {
+    "result": 0.16666666666666666,
+    "resource": 0.797,
+    "R": 0.20911752404851525,
+    "choices": {
+     "F:holo-top|standard": 2,
+     "F:holomin-top|standard": 6
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 23.3
+   },
+   "composed": {
+    "result": 0.05555555555555555,
+    "resource": 1.719,
+    "R": 0.032318531445931095,
+    "choices": {
+     "top|standard": 5,
+     "unit-0|standard": 3
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 16.6
+   },
+   "sec": 80
+  },
+  "std|414": {
+   "default": {
+    "result": 0.0,
+    "resource": 1.2,
+    "R": 0.0,
+    "choices": {
+     "present|standard": 8
+    },
+    "failed_calls": 0,
+    "sec": 32.8
+   },
+   "seed3v1": {
+    "result": 0.5,
+    "resource": 0.66,
+    "R": 0.7575757575757576,
+    "choices": {
+     "F:holo-top|standard": 1,
+     "F:holomin-top|standard": 7
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 20.4
+   },
+   "composed": {
+    "result": 0.3,
+    "resource": 1.21,
+    "R": 0.24793388429752067,
+    "choices": {
+     "unit-0|standard": 3,
+     "top|standard": 5
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 16.0
+   },
+   "sec": 69
+  },
+  "std|415": {
+   "default": {
+    "result": 0.2333333333333333,
+    "resource": 1.178,
+    "R": 0.1980758347481607,
+    "choices": {
+     "present|standard": 8
+    },
+    "failed_calls": 0,
+    "sec": 16.2
+   },
+   "seed3v1": {
+    "result": 0.06666666666666667,
+    "resource": 0.644,
+    "R": 0.10351966873706003,
+    "choices": {
+     "unit-0|standard": 1,
+     "F:holomin-top|standard": 7
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 20.6
+   },
+   "composed": {
+    "result": 0.0,
+    "resource": 1.146,
+    "R": 0.0,
+    "choices": {
+     "unit-0|standard": 4,
+     "top|standard": 4
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 12.3
+   },
+   "sec": 49
+  },
+  "std|416": {
+   "default": {
+    "result": 0.4523809523809524,
+    "resource": 1.509,
+    "R": 0.2997885701663038,
+    "choices": {
+     "present|standard": 8
+    },
+    "failed_calls": 0,
+    "sec": 17.1
+   },
+   "seed3v1": {
+    "result": 0.5476190476190477,
+    "resource": 0.745,
+    "R": 0.7350591243208694,
+    "choices": {
+     "top|standard": 1,
+     "F:holomin-top|standard": 7
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 20.4
+   },
+   "composed": {
+    "result": 0.35714285714285715,
+    "resource": 1.501,
+    "R": 0.23793661368611405,
+    "choices": {
+     "top|standard": 8
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 12.8
+   },
+   "sec": 50
+  }
+ }
+}

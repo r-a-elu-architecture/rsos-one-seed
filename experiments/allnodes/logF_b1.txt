@@ -1,0 +1,10 @@
+w1 birth 2
+w1 birth 4
+w1 birth 6
+w1 birth 8
+w1 birth 10
+w1 birth 12
+w1 birth 14
+w1 birth 16
+w1 birth 18
+w1 birth 20

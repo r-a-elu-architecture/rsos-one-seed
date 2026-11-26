@@ -1,0 +1,76 @@
+# PILOT2 (development cells 1-16; screening only): AI-AI whole-system binding. Results to cloud-results/pilot2/<run id>/.
+name: rsos-pilot2
+on:
+  push:
+    branches: [core-v1]
+    paths: ["cloud/trigger_pilot2.txt"]
+permissions:
+  contents: write
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        u: ["openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct rollout 1 4",
+            "openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct rollout 5 8",
+            "openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct rollout 9 12",
+            "openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct rollout 13 16",
+            "openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct v1 1 4",
+            "openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct v1 5 8",
+            "openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct v1 9 12",
+            "openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct v1 13 16",
+            "openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct whole 1 4",
+            "openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct whole 5 8",
+            "openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct whole 9 12",
+            "openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct whole 13 16"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install numpy scipy pandas scikit-learn requests qiskit qiskit-aer pvlib gymnasium skyfield dandi pynwb tiktoken mistral-common && pip install --no-deps llama-models
+      - name: OpenRouter credit check (AI rows; prints usage and limit only)
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          set -- ${{ matrix.u }}
+          case "$1" in ai_*)
+            python - <<'EOF'
+          import os, json, sys, urllib.request
+          r = urllib.request.Request("https://openrouter.ai/api/v1/key", headers={"Authorization": "Bearer " + os.environ["OPENROUTER_API_KEY"]})
+          d = json.load(urllib.request.urlopen(r, timeout=30)).get("data", {})
+          print("OPENROUTER usage", d.get("usage"), "limit", d.get("limit"), "remaining", d.get("limit_remaining"))
+          rem = d.get("limit_remaining")
+          if rem is not None and rem < 1.0: sys.exit("STOP: less than $1 OpenRouter credit left")
+          EOF
+            ;; esac
+      - name: real data for this row
+        run: |
+          set -- ${{ matrix.u }}
+          if [ "$1" = space ]; then cp real/hosts/data/space_tle_frozen.txt real/hosts/data/space_tle.txt; fi
+          if [ "$1" = ai_human ]; then python real/hosts/ai_human_fetch.py; fi
+      - run: python real/pilot/pilot2_whole.py ${{ matrix.u }}
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          REASONING_EFFORT: low
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pilot2-${{ strategy.job-index }}
+          path: real/pilot/out2/
+  collect:
+    needs: unit
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: /tmp/art
+      - run: |
+          git config user.name "rsos-cloud"; git config user.email "rsos-cloud@users.noreply.github.com"
+          git fetch origin cloud-results && git checkout cloud-results
+          mkdir -p pilot2/${{ github.run_id }} && cp /tmp/art/*/*.json pilot2/${{ github.run_id }}/ 2>/dev/null || true
+          git add pilot2 && git commit -qm "PILOT2 ${{ github.run_id }}" && (git push -q origin cloud-results || (git pull -q --rebase origin cloud-results && git push -q origin cloud-results))

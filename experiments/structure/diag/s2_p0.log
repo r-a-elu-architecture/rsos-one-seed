@@ -1,0 +1,5 @@
+collect 4 6670 {'v3': 0.9867, 'v5m': 0.9853, 'report+popular': 0.9789, 'round+round': 0.9247, 'random+random': 0.8939, 'B': 0.9833}
+local 4
+laws 4 308
+le+pairs 4 384
+{"v": 4, "S_org": 0.9202777777777778, "S_org_br": {"t": 8, "room_kidney": 8, "t+1": 1, "organ_kidney": 2, "t-2": 2, "organ_lungs": 3, "t+2": 2, "coupled": 1, "room_liver": 2, "room_lungs": 1}, "best_single": 0.8819444444444444, "child": 0.8913888888888889, "child_src": {"A+2": 4, "B0": 16, "A-1": 1, "B+2": 3, "B-1": 3, "B+1": 1, "A+1": 1, "A0": 1}, "best_parent": 0.8688888888888888, "S_living": 0.8891666666666668, "S_living_br": {"t": 18, "organ_heart": 1, "t+2": 2, "t-1": 2, "organ_liver": 1, "organ_lungs": 3, "organ_kidney": 3}, "v3_living": 0.886388888888889, "best_native": 0.8402777777777777, "sec": 489}

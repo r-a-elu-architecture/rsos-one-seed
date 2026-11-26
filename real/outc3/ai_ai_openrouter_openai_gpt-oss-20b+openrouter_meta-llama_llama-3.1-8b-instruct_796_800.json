@@ -1,0 +1,206 @@
+{
+ "row": "ai_ai",
+ "model": "openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct",
+ "cells_run": [
+  796,
+  797,
+  798,
+  799,
+  800
+ ],
+ "generated": true,
+ "cells": {
+  "std|796": {
+   "default": {
+    "result": 1.0,
+    "resource": 845.0,
+    "R": 0.001183431952662722,
+    "choices": {
+     "present|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 1.4
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 849.0,
+    "R": 0.001177856301531213,
+    "choices": {
+     "P4P5-joint|policy": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 0.9
+   },
+   "composed": {
+    "result": 1.0,
+    "resource": 853.0,
+    "R": 0.0011723329425556857,
+    "choices": {
+     "C:see>trace>pierce>contain>act|policy": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 1.1
+   },
+   "sec": 3
+  },
+  "std|797": {
+   "default": {
+    "result": 0.0,
+    "resource": 5779.0,
+    "R": 0.0,
+    "choices": {
+     "present|standard": 6
+    },
+    "failed_calls": 0,
+    "sec": 6.2
+   },
+   "seed3v1": {
+    "result": 0.0,
+    "resource": 5794.0,
+    "R": 0.0,
+    "choices": {
+     "F:holo-vote|policy": 2,
+     "F:holo-vote|standard": 1,
+     "past-1|standard": 3
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 8.5
+   },
+   "composed": {
+    "result": 1.0,
+    "resource": 3845.0,
+    "R": 0.0002600780234070221,
+    "choices": {
+     "C:see>trace>compress>inherit>contain>act|policy": 1,
+     "focus_home|standard": 1,
+     "past-1|standard": 2
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 4.3
+   },
+   "sec": 19
+  },
+  "std|798": {
+   "default": {
+    "result": 0.0,
+    "resource": 5871.0,
+    "R": 0.0,
+    "choices": {
+     "present|standard": 6
+    },
+    "failed_calls": 0,
+    "sec": 10.3
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 5661.0,
+    "R": 0.0001766472354707649,
+    "choices": {
+     "P4P5-joint|policy": 1,
+     "F:holo-vote|own": 1,
+     "F:holo-vote|standard": 1,
+     "past-1|standard": 3
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 7.2
+   },
+   "composed": {
+    "result": 1.0,
+    "resource": 5700.0,
+    "R": 0.00017543859649122806,
+    "choices": {
+     "C:see>trace>choose>contain>act|policy": 1,
+     "future+1|own": 1,
+     "C:see>trace>compress>inherit>contain>act|policy": 1,
+     "C:see>trace>compress>inherit>contain>act|standard": 1,
+     "focus_mentor|standard": 1,
+     "past-1|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 15.2
+   },
+   "sec": 33
+  },
+  "std|799": {
+   "default": {
+    "result": 1.0,
+    "resource": 2742.0,
+    "R": 0.00036469730123997083,
+    "choices": {
+     "present|standard": 3
+    },
+    "failed_calls": 0,
+    "sec": 3.4
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 1784.0,
+    "R": 0.0005605381165919282,
+    "choices": {
+     "F:holo-vote|policy": 2
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.5
+   },
+   "composed": {
+    "result": 1.0,
+    "resource": 1723.0,
+    "R": 0.0005803830528148578,
+    "choices": {
+     "C:see>trace>compress>inherit>contain>act|standard": 1,
+     "past-1|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.4
+   },
+   "sec": 8
+  },
+  "std|800": {
+   "default": {
+    "result": 0.0,
+    "resource": 1754.0,
+    "R": 0.0,
+    "choices": {
+     "present|standard": 2
+    },
+    "failed_calls": 0,
+    "sec": 2.6
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 2579.0,
+    "R": 0.00038774718883288094,
+    "choices": {
+     "F:holo-vote|policy": 1,
+     "F:holokey|standard": 1,
+     "past-1|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 3.1
+   },
+   "composed": {
+    "result": 1.0,
+    "resource": 2598.0,
+    "R": 0.00038491147036181676,
+    "choices": {
+     "present|standard": 1,
+     "focus_home|standard": 1,
+     "past-1|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 3.5
+   },
+   "sec": 9
+  }
+ }
+}

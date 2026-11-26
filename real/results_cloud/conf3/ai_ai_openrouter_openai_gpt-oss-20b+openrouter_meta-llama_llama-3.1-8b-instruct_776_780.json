@@ -1,0 +1,204 @@
+{
+ "row": "ai_ai",
+ "model": "openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct",
+ "cells_run": [
+  776,
+  777,
+  778,
+  779,
+  780
+ ],
+ "generated": true,
+ "cells": {
+  "std|776": {
+   "default": {
+    "result": 0.0,
+    "resource": 2680.0,
+    "R": 0.0,
+    "choices": {
+     "present|standard": 3
+    },
+    "failed_calls": 0,
+    "sec": 3.0
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 4757.0,
+    "R": 0.00021021652301870928,
+    "choices": {
+     "F:holo-vote|policy": 3,
+     "future+1|own": 1,
+     "F:holo-vote|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 7.9
+   },
+   "composed": {
+    "result": 0.0,
+    "resource": 3906.0,
+    "R": 0.0,
+    "choices": {
+     "C:see>trace>choose>contain>act|standard": 1,
+     "C:see>trace>compress>inherit>contain>act|standard": 1,
+     "C:see>trace>fuse>contain>act|standard": 1,
+     "present|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 3.8
+   },
+   "sec": 15
+  },
+  "std|777": {
+   "default": {
+    "result": 1.0,
+    "resource": 1786.0,
+    "R": 0.0005599104143337066,
+    "choices": {
+     "present|standard": 2
+    },
+    "failed_calls": 0,
+    "sec": 1.7
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 1767.0,
+    "R": 0.0005659309564233164,
+    "choices": {
+     "F:holo-vote|policy": 1,
+     "F:holo-vote|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.8
+   },
+   "composed": {
+    "result": 1.0,
+    "resource": 1696.0,
+    "R": 0.0005896226415094339,
+    "choices": {
+     "present|standard": 1,
+     "past-1|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 1.6
+   },
+   "sec": 6
+  },
+  "std|778": {
+   "default": {
+    "result": 1.0,
+    "resource": 1750.0,
+    "R": 0.0005714285714285715,
+    "choices": {
+     "present|standard": 2
+    },
+    "failed_calls": 0,
+    "sec": 1.8
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 3713.0,
+    "R": 0.00026932399676811203,
+    "choices": {
+     "F:holo-vote|policy": 1,
+     "F:holo-vote|standard": 2,
+     "F:holokey|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 4.5
+   },
+   "composed": {
+    "result": 1.0,
+    "resource": 1708.0,
+    "R": 0.000585480093676815,
+    "choices": {
+     "C:see>trace>pierce>contain>act|policy": 1,
+     "present|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 1.4
+   },
+   "sec": 8
+  },
+  "std|779": {
+   "default": {
+    "result": 1.0,
+    "resource": 1730.0,
+    "R": 0.0005780346820809249,
+    "choices": {
+     "present|standard": 2
+    },
+    "failed_calls": 0,
+    "sec": 1.7
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 2668.0,
+    "R": 0.0003748125937031484,
+    "choices": {
+     "F:holo-vote|policy": 1,
+     "P4P5-joint|standard": 1,
+     "past-2|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.9
+   },
+   "composed": {
+    "result": 0.0,
+    "resource": 902.0,
+    "R": 0.0,
+    "choices": {
+     "C:see>trace>pierce>contain>act|policy": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.8
+   },
+   "sec": 7
+  },
+  "std|780": {
+   "default": {
+    "result": 1.0,
+    "resource": 2710.0,
+    "R": 0.00036900369003690036,
+    "choices": {
+     "present|standard": 3
+    },
+    "failed_calls": 0,
+    "sec": 4.1
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 1751.0,
+    "R": 0.0005711022272986865,
+    "choices": {
+     "F:holo-vote|policy": 1,
+     "F:holo-vote|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 1.4
+   },
+   "composed": {
+    "result": 1.0,
+    "resource": 2743.0,
+    "R": 0.0003645643456069996,
+    "choices": {
+     "focus_office|standard": 1,
+     "C:see>trace>choose>contain>act|policy": 1,
+     "C:see>trace>choose>contain>act|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 3.5
+   },
+   "sec": 9
+  }
+ }
+}

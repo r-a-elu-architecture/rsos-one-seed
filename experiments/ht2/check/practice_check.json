@@ -1,0 +1,66 @@
+{
+ "checks": {
+  "test_locked_before": true,
+  "test_unlocked_after": true,
+  "test_first_task": "T1 · keyboard",
+  "sealed_not_decoded": true,
+  "export_has_gate": {
+   "met": true,
+   "ratio": 1.0460526315789476,
+   "last_sessions": [
+    1,
+    2,
+    3
+   ]
+  }
+ },
+ "s1_P6_rsos_ok": true,
+ "s1_P3_rsos_ok": true,
+ "s1_P5_rsos_ok": true,
+ "s1_P4_rsos_ok": true,
+ "s1_P2_rsos_ok": true,
+ "s1_P1_rsos_ok": true,
+ "s2_P6_rsos_ok": true,
+ "s2_P2_rsos_ok": true,
+ "s2_P5_rsos_ok": true,
+ "s2_P4_rsos_ok": true,
+ "s2_P1_rsos_ok": true,
+ "s2_P3_rsos_ok": true,
+ "s3_P1_rsos_ok": true,
+ "s3_P6_rsos_ok": true,
+ "s3_P3_rsos_ok": true,
+ "s3_P5_rsos_ok": true,
+ "s3_P4_rsos_ok": true,
+ "s3_P2_rsos_ok": true,
+ "sessions": [
+  {
+   "session": 1,
+   "done": 6,
+   "complete": true,
+   "seconds": 4.56,
+   "tpf": 0.07238095238095238,
+   "empty_slots": 0
+  },
+  {
+   "session": 2,
+   "done": 6,
+   "complete": true,
+   "seconds": 4.72,
+   "tpf": 0.07492063492063493,
+   "empty_slots": 0
+  },
+  {
+   "session": 3,
+   "done": 6,
+   "complete": true,
+   "seconds": 4.77,
+   "tpf": 0.07571428571428572,
+   "empty_slots": 0
+  }
+ ],
+ "gate": {
+  "met": true,
+  "ratio": 1.0460526315789476
+ },
+ "errors": []
+}

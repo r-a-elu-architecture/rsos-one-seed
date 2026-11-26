@@ -1,0 +1,114 @@
+{
+ "page": "docs/keyboard.html",
+ "errors": [],
+ "results": {
+  "T1": {
+   "keys": "h a f n D",
+   "rsos": "MODEL robot.head = associated + confidence + analogical_reasoning FOR decision_making",
+   "expected": "MODEL robot.head = associated + confidence + analogical_reasoning FOR decision_making",
+   "rsos_match": true,
+   "plain": "Robot head: associated; state of confidence; analogical reasoning; function: decision-making.",
+   "plain_missing": [],
+   "slot_status": "All required slots filled"
+  },
+  "T2": {
+   "keys": "j v d p A",
+   "rsos": "MODEL robot.hand = top_view + dissociated + future_pacing FOR action",
+   "expected": "MODEL robot.hand = top_view + dissociated + future_pacing FOR action",
+   "rsos_match": true,
+   "plain": "Robot hand: view from above, dissociated; future pacing; function: action.",
+   "plain_missing": [],
+   "slot_status": "All required slots filled"
+  },
+  "T3": {
+   "keys": "c R ArrowRight t ArrowLeft x",
+   "rsos": "DEDICATE couch TO hypothesis_testing\nFORM couch DIRECTIONS forward -> hypothesis ; backward -> contradiction",
+   "expected": "DEDICATE couch TO hypothesis_testing\nFORM couch DIRECTIONS forward -> hypothesis ; backward -> contradiction",
+   "rsos_match": true,
+   "plain": "Couch: moving forward = hypothesis, moving backward = contradiction; function: hypothesis testing.",
+   "plain_missing": [],
+   "slot_status": "All required slots filled"
+  },
+  "T4": {
+   "keys": "e k D TRIG:before any money decision",
+   "rsos": "ROOM eagle PERSPECTIVE above\nOBJECT calculator IN eagle\nMODEL calculator = top_view IN eagle FOR decision_making\nSELECTMODEL calculator BY trigger\nPROPERTY calculator.trigger = \"before any money decision\"",
+   "expected": "ROOM eagle PERSPECTIVE above\nOBJECT calculator IN eagle\nMODEL calculator = top_view IN eagle FOR decision_making\nSELECTMODEL calculator BY trigger\nPROPERTY calculator.trigger = \"before any money decision\"",
+   "rsos_match": true,
+   "plain": "Eagle room with calculator: view from above; function: decision-making; trigger: before any money decision.",
+   "plain_missing": [],
+   "slot_status": "All required slots filled"
+  },
+  "T5": {
+   "keys": "m z N u W U N",
+   "rsos": "MODEL microwave.palm = calmness FOR state_anchor\nMODEL microwave.top = deep_work + tunnel_image FOR state_anchor",
+   "expected": "MODEL microwave.palm = calmness FOR state_anchor\nMODEL microwave.top = deep_work + tunnel_image FOR state_anchor",
+   "rsos_match": true,
+   "plain": "Microwave palm: state of calmness; function: state anchor. Microwave top: state of deep work; tunnel image; function: state anchor.",
+   "plain_missing": [],
+   "slot_status": "All required slots filled"
+  },
+  "T6": {
+   "keys": "T r g S 1 E",
+   "rsos": "TRANSPLANT rocket_heart TO team.heart DEPTH structure ORDER 1 GAIN efficiency",
+   "expected": "TRANSPLANT rocket_heart TO team.heart DEPTH structure ORDER 1 GAIN efficiency",
+   "rsos_match": true,
+   "plain": "Transplant the rocket heart into the team (its heart place); depth: structure; order 1; gain: efficiency.",
+   "plain_missing": [],
+   "slot_status": "All required slots filled"
+  },
+  "P1": {
+   "keys": "P w s G L S 2 H r l",
+   "rsos": "PROPERTY white_dragon.light = golden\nPROPERTY white_dragon.style = lion\nPIERCE white_dragon THROUGH sphere\nPROPERTY sphere.order = 2\nPROPERTY sphere.depth = structure\nHEAL robot.leg BY rocket_heart",
+   "expected": "PROPERTY white_dragon.light = golden\nPROPERTY white_dragon.style = lion\nPIERCE white_dragon THROUGH sphere\nPROPERTY sphere.order = 2\nPROPERTY sphere.depth = structure\nHEAL robot.leg BY rocket_heart",
+   "rsos_match": true,
+   "plain": "White Dragon pierces the sphere; golden light, lion style; depth: structure; order 2. Rocket heart heals the robot leg.",
+   "plain_missing": [],
+   "slot_status": "All required slots filled"
+  },
+  "P2": {
+   "keys": "h d b x A F r g ArrowLeft i E",
+   "rsos": "MODEL robot.head = dissociated + determination + contradiction FOR action\nFLOW rocket_heart DIRECTION inward TO team\nPROPERTY team.depth = inside\nPROPERTY team.gain = efficiency",
+   "expected": "MODEL robot.head = dissociated + determination + contradiction FOR action\nFLOW rocket_heart DIRECTION inward TO team\nPROPERTY team.depth = inside\nPROPERTY team.gain = efficiency",
+   "rsos_match": true,
+   "plain": "Robot head: dissociated; state of determination; contradiction; function: action. Rocket heart flows backward into the team; depth: inside; gain: efficiency.",
+   "plain_missing": [],
+   "slot_status": "All required slots filled"
+  },
+  "P3": {
+   "keys": "c ArrowRight n ArrowDown p D T s g 3",
+   "rsos": "DEDICATE couch TO decision_making\nFORM couch DIRECTIONS forward -> analogical_reasoning ; down -> future_pacing\nTRANSPLANT sphere TO team ORDER 3",
+   "expected": "DEDICATE couch TO decision_making\nFORM couch DIRECTIONS forward -> analogical_reasoning ; down -> future_pacing\nTRANSPLANT sphere TO team ORDER 3",
+   "rsos_match": true,
+   "plain": "Couch: moving forward = analogical reasoning, moving down = future pacing; function: decision-making. Transplant the sphere into the team; order 3.",
+   "plain_missing": [],
+   "slot_status": "All required slots filled"
+  },
+  "P4": {
+   "keys": "o k a y t N TRIG:after lunch",
+   "rsos": "ROOM owl PERSPECTIVE associated\nOBJECT calculator IN owl\nMODEL calculator = associated + relief + hypothesis IN owl FOR state_anchor\nSELECTMODEL calculator BY trigger\nPROPERTY calculator.trigger = \"after lunch\"",
+   "expected": "ROOM owl PERSPECTIVE associated\nOBJECT calculator IN owl\nMODEL calculator = associated + relief + hypothesis IN owl FOR state_anchor\nSELECTMODEL calculator BY trigger\nPROPERTY calculator.trigger = \"after lunch\"",
+   "rsos_match": true,
+   "plain": "Owl room with calculator: associated; state of relief; hypothesis; function: state anchor; trigger: after lunch.",
+   "plain_missing": [],
+   "slot_status": "All required slots filled"
+  },
+  "P5": {
+   "keys": "m f I R u z N B w g ArrowUp J Y q",
+   "rsos": "MODEL microwave.palm = confidence + hologram FOR hypothesis_testing\nMODEL microwave.top = calmness FOR state_anchor\nPROPERTY white_dragon.particles = green\nPROPERTY white_dragon.style = tiger\nBEAM white_dragon DIRECTION up TO team\nPROPERTY team.depth = surface",
+   "expected": "MODEL microwave.palm = confidence + hologram FOR hypothesis_testing\nMODEL microwave.top = calmness FOR state_anchor\nPROPERTY white_dragon.particles = green\nPROPERTY white_dragon.style = tiger\nBEAM white_dragon DIRECTION up TO team\nPROPERTY team.depth = surface",
+   "rsos_match": true,
+   "plain": "Microwave palm: state of confidence; hologram; function: hypothesis testing. Microwave top: state of calmness; function: state anchor. White Dragon beams up into the team; green particles, tiger style; depth: surface.",
+   "plain_missing": [],
+   "slot_status": "All required slots filled"
+  },
+  "P6": {
+   "keys": "e l W U A 4 C g r X j c",
+   "rsos": "ROOM eagle PERSPECTIVE above\nMODEL robot.leg = top_view + deep_work + tunnel_image IN eagle FOR action\nPROPERTY robot.leg.order = 4\nWRAP team AROUND rocket_heart\nCOMPRESS robot.hand, couch AS hand_symbol",
+   "expected": "ROOM eagle PERSPECTIVE above\nMODEL robot.leg = top_view + deep_work + tunnel_image IN eagle FOR action\nPROPERTY robot.leg.order = 4\nWRAP team AROUND rocket_heart\nCOMPRESS robot.hand, couch AS hand_symbol",
+   "rsos_match": true,
+   "plain": "Eagle room with robot leg: view from above; state of deep work; tunnel image; function: action; order 4. Team contains the rocket heart. Compress robot hand with couch.",
+   "plain_missing": [],
+   "slot_status": "All required slots filled"
+  }
+ }
+}

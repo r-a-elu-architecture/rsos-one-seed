@@ -1,0 +1,33 @@
+{
+ "cells": 14,
+ "M1_best_single": {
+  "wins": 8,
+  "mean": -0.0013789682539682554,
+  "pass": false
+ },
+ "M2_flat": {
+  "wins": 12,
+  "mean": 0.02293650793650794,
+  "pass": true
+ },
+ "M3_shuffled": {
+  "wins": 8,
+  "mean": 0.002559523809523734,
+  "pass": false
+ },
+ "M4_channels": {
+  "ok": 6,
+  "pass": false
+ },
+ "mean_G": {
+  "house": 0.881488095238095,
+  "flat": 0.8585515873015873,
+  "shuffled": 0.8789285714285713,
+  "single_heart": 0.8584226190476189,
+  "single_kidney": 0.8720734126984127,
+  "single_liver": 0.8800198412698412,
+  "single_lungs": 0.8709126984126986,
+  "native": 0.8273015873015872
+ },
+ "ROW_PASS": false
+}

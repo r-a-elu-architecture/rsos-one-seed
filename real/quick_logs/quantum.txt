@@ -1,0 +1,16 @@
+cell 1 seed     result 0.97724 resource 2520 R 3.8779e-04 rmse 0.02276 choices {'focus_nlocal_Y|standard': 1, 'past-1|standard': 2, 'future+2|standard': 4, 'focus_qft_X|standard': 1, 'future+1|standard': 1, 'future+2|own': 1, 'present|own': 2}
+cell 1 default  result 0.97567 resource 2520 R 3.8717e-04 rmse 0.02433 choices {'present|standard': 12}
+cell 1 uniform  result 0.97040 resource 2520 R 3.8508e-04 rmse 0.02960 choices {'present|standard': 12}
+cell 1 time 8.9s
+cell 2 seed     result 0.97087 resource 2520 R 3.8526e-04 rmse 0.02913 choices {'focus_ghz_X|standard': 1, 'focus_qaoa_ring_ZZ|standard': 2, 'focus_su2_Z|standard': 2, 'present|standard': 2, 'future+2|standard': 2, 'future+2|own': 2, 'present|own': 1}
+cell 2 default  result 0.97845 resource 2520 R 3.8827e-04 rmse 0.02155 choices {'present|standard': 12}
+cell 2 uniform  result 0.98021 resource 2520 R 3.8897e-04 rmse 0.01979 choices {'present|standard': 12}
+cell 2 time 5.0s
+cell 3 seed     result 0.98246 resource 2520 R 3.8986e-04 rmse 0.01754 choices {'present|standard': 2, 'past-1|standard': 2, 'future+1|standard': 1, 'future+2|standard': 2, 'present|own': 2, 'focus_qaoa_ring_ZZ|standard': 1, 'focus_realamp_XX|standard': 1, 'future+1|own': 1}
+cell 3 default  result 0.97401 resource 2520 R 3.8651e-04 rmse 0.02599 choices {'present|standard': 12}
+cell 3 uniform  result 0.98042 resource 2520 R 3.8905e-04 rmse 0.01958 choices {'present|standard': 12}
+cell 3 time 4.3s
+cell 4 seed     result 0.98336 resource 2520 R 3.9022e-04 rmse 0.01664 choices {'focus_nlocal_Y|standard': 1, 'focus_realamp_XX|standard': 1, 'focus_ghz_X|standard': 1, 'past-2|standard': 3, 'future+2|own': 1, 'focus_qaoa_ring_ZZ|standard': 1, 'present|standard': 2, 'past-1|standard': 1, 'present|own': 1}
+cell 4 default  result 0.97415 resource 2520 R 3.8657e-04 rmse 0.02585 choices {'present|standard': 12}
+cell 4 uniform  result 0.96984 resource 2520 R 3.8486e-04 rmse 0.03016 choices {'present|standard': 12}
+cell 4 time 4.9s

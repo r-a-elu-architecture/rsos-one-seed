@@ -1,0 +1,107 @@
+{
+ "row": "ai_ai",
+ "model": "openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct",
+ "pair": 3,
+ "cells": {
+  "std|307": {
+   "default": {
+    "result": 0.0,
+    "resource": 5673.0,
+    "R": 0.0,
+    "choices": {
+     "present|standard": 6
+    },
+    "failed_calls": 0,
+    "sec": 7.0
+   },
+   "rollout": {
+    "result": 1.0,
+    "resource": 4669.0,
+    "R": 0.00021417862497322766,
+    "choices": {
+     "present|standard": 1,
+     "focus_office|rollout": 1,
+     "focus_home|rollout": 1,
+     "focus_team|rollout": 1,
+     "focus_city|rollout": 1
+    },
+    "failed_calls": 0,
+    "sec": 9.8
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 4568.0,
+    "R": 0.00021891418563922942,
+    "choices": {
+     "F:holo-vote|policy": 2,
+     "F:holo-vote|standard": 1,
+     "past-1|standard": 2
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 5.3
+   },
+   "structure": {
+    "result": 1.0,
+    "resource": 4472.0,
+    "R": 0.00022361359570661896,
+    "choices": {
+     "present|standard": 1,
+     "future+2|own": 1,
+     "past-1|standard": 3
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 5.8
+   },
+   "sec": 28
+  },
+  "std|308": {
+   "default": {
+    "result": 1.0,
+    "resource": 1798.0,
+    "R": 0.0005561735261401557,
+    "choices": {
+     "present|standard": 2
+    },
+    "failed_calls": 0,
+    "sec": 2.9
+   },
+   "rollout": {
+    "result": 1.0,
+    "resource": 1784.0,
+    "R": 0.0005605381165919282,
+    "choices": {
+     "chain|rollout": 1,
+     "focus_home|rollout": 1
+    },
+    "failed_calls": 0,
+    "sec": 1.8
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 1075.0,
+    "R": 0.0009302325581395349,
+    "choices": {
+     "F:holo-vote|policy": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 3.0
+   },
+   "structure": {
+    "result": 1.0,
+    "resource": 1829.0,
+    "R": 0.0005467468562055768,
+    "choices": {
+     "chain|standard": 1,
+     "past-1|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 3.5
+   },
+   "sec": 11
+  }
+ }
+}

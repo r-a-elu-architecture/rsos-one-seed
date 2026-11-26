@@ -1,0 +1,70 @@
+wins 91 losses 75
+WINS (rsos right, react wrong)
+   fam:orders 37
+   fam:staff 54
+   model:gpt-oss-120b 9
+   model:gpt-oss-20b 36
+   model:llama-4-scout 46
+   react_answered 77
+   react_calls<12 82
+   react_calls>=12 9
+   react_noans 14
+   rsos_answered 91
+   rsos_calls<12 84
+   rsos_calls>=12 7
+   rsos_has_repeat 15
+   rsos_norepeat 76
+   rsos_tok<15000 89
+   rsos_tok>=16000 2
+   rsos_verdict_never_wrong 83
+   rsos_verdict_wrong>0 8
+LOSSES (react right, rsos wrong)
+   fam:orders 30
+   fam:staff 45
+   model:gpt-oss-120b 4
+   model:gpt-oss-20b 34
+   model:llama-4-scout 37
+   react_answered 75
+   react_calls<12 75
+   rsos_answered 51
+   rsos_calls<12 56
+   rsos_calls>=12 19
+   rsos_has_repeat 21
+   rsos_noans 24
+   rsos_norepeat 54
+   rsos_tok<15000 66
+   rsos_tok>=16000 9
+   rsos_verdict_never_wrong 65
+   rsos_verdict_wrong>0 10
+
+--- mechanism ---
+WINS
+   83 path diverged (same loop, verdict OK) = run-to-run variance
+   6 verify caught wrong first answer -> fixed
+   2 verify WRONG but first was right(?)
+LOSSES
+   38 path diverged (same loop, verdict OK) = run-to-run variance
+   19 rsos no answer (budget/token exhausted), no WRONG verdict
+   8 same-path drift + repeated actions
+   7 verify caught wrong, re-plan still wrong/none
+   3 verify flipped a RIGHT first answer to wrong/none
+loss no-ans: calls>=12 17 tok>=15000 8 with repeats 12
+react noans 25 of 1200
+reflexion noans 31 of 1200
+selfcons noans 27 of 1200
+planexec noans 30 of 1200
+rsos_01100 noans 45 of 1200
+
+--- verdict-OK discordant: where do paths split? ---
+WINS {'split at step 0': 43, 'react_wrong_answer': 69, 'split at step 1': 21, 'react_noans': 14, 'split at step 3+': 7, 'split at step 2': 12}
+LOSSES {'split at step 0': 23, 'react_wrong_answer': 38, 'split at step 3+': 4, 'split at step 2': 3, 'split at step 1': 8}
+
+--- fallback: rsos had an answer earlier but ended with none ---
+('openrouter:meta-llama/llama-4-scout', 'B5012') first: 1 truth: 0 match False
+('openrouter:meta-llama/llama-4-scout', 'B5016') first: 29500 truth: 23000 match False
+('openrouter:meta-llama/llama-4-scout', 'B5116') first: 1 truth: 0 match False
+('openrouter:meta-llama/llama-4-scout', 'C3035') first: value truth: 2680 match False
+('openrouter:meta-llama/llama-4-scout', 'C3097') first: Juna truth: Juna match True
+('openrouter:meta-llama/llama-4-scout', 'C3122') first: Ada truth: Ada match True
+('openrouter:meta-llama/llama-4-scout', 'C3125') first: 60 truth: 95 match False
+all rsos rows with an earlier answer but final none: 17

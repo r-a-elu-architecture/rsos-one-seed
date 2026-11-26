@@ -1,0 +1,24 @@
+cell 1 seed    result 2391.050 resource 354.010 R 6.75419
+cell 1 default result 2362.339 resource 361.547 R 6.53397
+cell 1 Pareto WIN (result +28.711, resource -7.537)
+cell 2 seed    result 2410.042 resource 365.038 R 6.60217
+cell 2 default result 2411.924 resource 357.799 R 6.74101
+cell 2 Pareto no (result -1.882, resource +7.239)
+cell 3 seed    result 2402.008 resource 339.144 R 7.08256
+cell 3 default result 2379.112 resource 358.482 R 6.63663
+cell 3 Pareto WIN (result +22.896, resource -19.338)
+cell 4 seed    result 2382.449 resource 346.881 R 6.86820
+cell 4 default result 2360.940 resource 356.414 R 6.62416
+cell 4 Pareto WIN (result +21.509, resource -9.532)
+cell 5 seed    result 2394.763 resource 356.742 R 6.71287
+cell 5 default result 2360.940 resource 356.414 R 6.62416
+cell 5 Pareto no (result +33.823, resource +0.329)
+cell 6 seed    result 2471.569 resource 380.323 R 6.49860
+cell 6 default result 2460.324 resource 364.133 R 6.75665
+cell 6 Pareto no (result +11.246, resource +16.190)
+cell 7 seed    result 2407.849 resource 361.799 R 6.65520
+cell 7 default result 2385.944 resource 366.892 R 6.50313
+cell 7 Pareto WIN (result +21.905, resource -5.092)
+cell 8 seed    result 2394.804 resource 334.363 R 7.16228
+cell 8 default result 2372.821 resource 354.330 R 6.69663
+cell 8 Pareto WIN (result +21.983, resource -19.967)

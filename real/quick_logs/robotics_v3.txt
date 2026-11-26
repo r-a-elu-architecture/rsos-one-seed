@@ -1,0 +1,16 @@
+1 seed result 200.0 resource 33.994 R 5.8834
+1 default result 200.0 resource 42.492 R 4.7068
+2 seed result 182.0 resource 61.956 R 2.9376
+2 default result 178.0 resource 50.042 R 3.557
+3 seed result 162.0 resource 81.634 R 1.9845
+3 default result 159.0 resource 88.023 R 1.8063
+4 seed result 162.0 resource 82.739 R 1.958
+4 default result 160.0 resource 91.822 R 1.7425
+5 seed result 178.0 resource 53.441 R 3.3308
+5 default result 178.0 resource 61.264 R 2.9055
+6 seed result 200.0 resource 22.843 R 8.7552
+6 default result 200.0 resource 32.049 R 6.2404
+7 seed result 164.0 resource 73.784 R 2.2227
+7 default result 176.0 resource 48.466 R 3.6314
+8 seed result 180.0 resource 54.662 R 3.293
+8 default result 174.0 resource 58.495 R 2.9746

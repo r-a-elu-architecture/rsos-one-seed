@@ -1,0 +1,56 @@
+{
+ "row": "ai_human",
+ "model": "openrouter:meta-llama/llama-3.1-8b-instruct",
+ "stage": 1,
+ "pair": 1,
+ "cells": {
+  "std|203": {
+   "default": {
+    "result": 0.0,
+    "resource": 1.49,
+    "R": 0.0,
+    "choices": {
+     "present|standard": 8
+    },
+    "failed_calls": 0
+   },
+   "seed3v1": {
+    "result": 0.0,
+    "resource": 0.95,
+    "R": 0.0,
+    "choices": {
+     "F:holo-top|standard": 1,
+     "F:holomin-top|standard": 6,
+     "unit-0|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0
+   },
+   "sec": 6
+  },
+  "std|204": {
+   "default": {
+    "result": 0.0,
+    "resource": 1.266,
+    "R": 0.0,
+    "choices": {
+     "present|standard": 8
+    },
+    "failed_calls": 0
+   },
+   "seed3v1": {
+    "result": 0.5,
+    "resource": 0.925,
+    "R": 0.5405405405405405,
+    "choices": {
+     "unit-0|standard": 1,
+     "F:holomin-top|standard": 6,
+     "top|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0
+   },
+   "sec": 6
+  }
+ }
+}

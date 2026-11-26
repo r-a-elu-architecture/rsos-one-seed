@@ -1,0 +1,88 @@
+# CONF2 (real/PREREG_CONF2.md, real/SEAL_CONF2.txt): AI-AI cells 601-640 (4 per job) and satellite 601-612 (1 per job, frozen orbit file) . Results to cloud-results/conf2/<run id>/.
+name: rsos-conf2
+on:
+  push:
+    branches: [core-v1]
+    paths: ["cloud/trigger_conf2.txt"]
+permissions:
+  contents: write
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        u: ["space - 601 601",
+            "space - 602 602",
+            "space - 603 603",
+            "space - 604 604",
+            "space - 605 605",
+            "space - 606 606",
+            "space - 607 607",
+            "space - 608 608",
+            "space - 609 609",
+            "space - 610 610",
+            "space - 611 611",
+            "space - 612 612",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 601 604",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 605 608",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 609 612",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 613 616",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 617 620",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 621 624",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 625 628",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 629 632",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 633 636",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 637 640"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install numpy scipy pandas scikit-learn requests qiskit qiskit-aer pvlib gymnasium skyfield dandi pynwb tiktoken mistral-common && pip install --no-deps llama-models
+      - name: OpenRouter credit check (AI rows; prints usage and limit only)
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          set -- ${{ matrix.u }}
+          case "$1" in ai_*)
+            python - <<'EOF'
+          import os, json, sys, urllib.request
+          r = urllib.request.Request("https://openrouter.ai/api/v1/key", headers={"Authorization": "Bearer " + os.environ["OPENROUTER_API_KEY"]})
+          d = json.load(urllib.request.urlopen(r, timeout=30)).get("data", {})
+          print("OPENROUTER usage", d.get("usage"), "limit", d.get("limit"), "remaining", d.get("limit_remaining"))
+          rem = d.get("limit_remaining")
+          if rem is not None and rem < 1.0: sys.exit("STOP: less than $1 OpenRouter credit left")
+          EOF
+            ;; esac
+      - name: real data for this row
+        run: |
+          set -- ${{ matrix.u }}
+          if [ "$1" = space ]; then cp real/hosts/data/space_tle_frozen.txt real/hosts/data/space_tle.txt; fi
+          if [ "$1" = ai_human ]; then python real/hosts/ai_human_fetch.py; fi
+      - name: CONF2 seal check
+        run: grep -v '^#' real/SEAL_CONF2.txt | sha256sum -c --quiet
+      - run: python cloud/conf2_unit.py ${{ matrix.u }}
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          REASONING_EFFORT: low
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: conf2-${{ strategy.job-index }}
+          path: real/outc2/
+  collect:
+    needs: unit
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: /tmp/art
+      - run: |
+          git config user.name "rsos-cloud"; git config user.email "rsos-cloud@users.noreply.github.com"
+          git fetch origin cloud-results && git checkout cloud-results
+          mkdir -p conf2/${{ github.run_id }} && cp /tmp/art/*/*.json conf2/${{ github.run_id }}/ 2>/dev/null || true
+          git add conf2 && git commit -qm "CONF2 ${{ github.run_id }}" && (git push -q origin cloud-results || (git pull -q --rebase origin cloud-results && git push -q origin cloud-results))

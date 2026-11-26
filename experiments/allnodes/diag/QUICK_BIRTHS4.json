@@ -1,0 +1,26 @@
+{
+ "cells": 14,
+ "B1_child_gt_max_parents": {
+  "wins": 2,
+  "mean": -0.00011904761904762973
+ },
+ "B2_child_ge_parent_own_host": [
+  26,
+  28
+ ],
+ "mixed_books": 4,
+ "mean_G": {
+  "child_C": 0.9559424603174601,
+  "parA_C": 0.93828373015873,
+  "parB_C": 0.9548214285714284,
+  "child_A": 0.942628968253968,
+  "parA_A": 0.9421626984126984,
+  "child_B": 0.9758531746031746,
+  "parB_B": 0.9758035714285713
+ },
+ "PASS": {
+  "B1": false,
+  "B2": true
+ },
+ "ROW_PASS": false
+}

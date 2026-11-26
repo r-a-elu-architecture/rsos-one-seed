@@ -1,0 +1,60 @@
+{
+ "row": "space",
+ "model": "-",
+ "cells_run": [
+  705
+ ],
+ "generated": true,
+ "cells": {
+  "std|705": {
+   "default": {
+    "result": 485.30913306181174,
+    "resource": 14072.589686554875,
+    "R": 0.03448612827285671,
+    "choices": {
+     "present|standard": 24
+    },
+    "sec": 0.0
+   },
+   "seed3v1": {
+    "result": 497.84642691499675,
+    "resource": 16389.701770044925,
+    "R": 0.030375563503229754,
+    "choices": {
+     "F:holo-plan|policy": 4,
+     "F:holo-carry|policy": 13,
+     "focus_science|standard": 2,
+     "F:holo-plan|standard": 2,
+     "P4P5:exact-planner|policy": 1,
+     "F:holo-carry|standard": 1,
+     "P4P5:exact-planner|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 4536.5
+   },
+   "strongest": {
+    "result": 489.94405862767496,
+    "resource": 16629.69446851718,
+    "R": 0.029462000011799484,
+    "choices": {
+     "present|standard": 24
+    },
+    "sec": 53.2
+   },
+   "composed": {
+    "result": 491.22386080886497,
+    "resource": 14981.23695683093,
+    "R": 0.03278927248960466,
+    "choices": {
+     "C:see>future>compress>inherit>contain>act|policy": 19,
+     "C:see>colour>route>contain>act|standard": 2,
+     "C:see>future>compress>inherit>contain>act|standard": 2,
+     "C:see>future>compress>inherit>contain>act|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 8.9
+   },
+   "sec": 4599
+  }
+ }
+}

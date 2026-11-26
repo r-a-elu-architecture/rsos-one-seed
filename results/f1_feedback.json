@@ -1,0 +1,44 @@
+{
+ "checks": {
+  "P1": false,
+  "P2": false,
+  "P3": true,
+  "P4": true
+ },
+ "code_commit": "ddffee71e14926becc4154549598efce8a465ce0",
+ "experiment": "f1_feedback",
+ "numpy": "2.5.3",
+ "python": "3.13.18",
+ "results_sha256": "93f4c71046da5a26cdf89b3f77dcdfbda2554e24d6477bb2f11db82645030b71",
+ "run_utc": "2026-11-17T09:23:55Z",
+ "summary": {
+  "feedback": {
+   "cv": 0.3548024911215901,
+   "domains_gen6": 8.0,
+   "root_drop": 0.22975446428571425,
+   "useful_counts_seed300": [
+    15,
+    41,
+    121,
+    139,
+    160,
+    169
+   ],
+   "useful_share": 0.12619489937748501
+  },
+  "open": {
+   "cv": 0.3284537999362331,
+   "domains_gen6": 8.0,
+   "root_drop": 0.0,
+   "useful_counts_seed300": [
+    38,
+    89,
+    268,
+    303,
+    299,
+    314
+   ],
+   "useful_share": 0.24522498652307445
+  }
+ }
+}

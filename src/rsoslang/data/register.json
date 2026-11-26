@@ -1,0 +1,974 @@
+[
+ {
+  "id": "U1",
+  "family": "Healing, state and flow (chat 1). Absent from the 102 and the package",
+  "name": "Heal a node, a container (country), a higher image",
+  "owner_source": "c1 T14–T15, T44–T53, T70",
+  "chatgpt_tables": "c1 T15.10 (\"healing symbol\"; \"whole network healed\", rated \"not established\"); c1 T15.11; c1 T15.12; c1 T15.14; c1 T22.2; c1 T23.2",
+  "in_102": "—",
+  "build_status": "Practised; cue framework `ssit_*`"
+ },
+ {
+  "id": "U2",
+  "family": "Healing, state and flow (chat 1). Absent from the 102 and the package",
+  "name": "Beam (the Golden Lion beam); beam down from a superordinate node to the levels below",
+  "owner_source": "c1 T14–T15; c1 T44–T47",
+  "chatgpt_tables": "c1 T15.1 (\"Golden Lion beam\": agency, approach motivation); c1 T15.12 (\"Lion beam removes an obstruction\": \"literal obstruction removal unsupported\"); c1 T15.14",
+  "in_102": "—",
+  "build_status": "Practised; formalised (`ssit_*`)"
+ },
+ {
+  "id": "U3",
+  "family": "Healing, state and flow (chat 1). Absent from the 102 and the package",
+  "name": "Directional flow (vertical, horizontal, outward)",
+  "owner_source": "c1 T94–T106",
+  "chatgpt_tables": "c1 T101.4 \"Directional flows\"; c1 T94.1 cascade",
+  "in_102": "—",
+  "build_status": "Executed C1-EXP-002 (directional attachments)"
+ },
+ {
+  "id": "U4",
+  "family": "Healing, state and flow (chat 1). Absent from the 102 and the package",
+  "name": "Colour state transition (black → grey: destructive only → good and bad held together, then protection added; white → gold)",
+  "owner_source": "c1 T95; c1 T16–T23",
+  "chatgpt_tables": "c1 T101.4 \"Colors with functional meaning\"; c1 T23.2 white-to-gold; c2 #6; c2 T53.1 #20–21",
+  "in_102": "#6 core (as a static label)",
+  "build_status": "Specified; C1-EXP-002 explorer colours"
+ },
+ {
+  "id": "U5",
+  "family": "Healing, state and flow (chat 1). Absent from the 102 and the package",
+  "name": "Route by state (the same TV leads to a different chain by state)",
+  "owner_source": "c1 T54",
+  "chatgpt_tables": "c2 #86 (context-dependent retrieval)",
+  "in_102": "#86 planned (partial)",
+  "build_status": "Formalised W·g(S,G,C)"
+ },
+ {
+  "id": "U6",
+  "family": "Healing, state and flow (chat 1). Absent from the 102 and the package",
+  "name": "Resonate / synchronise (bones resonate at the heart's frequency; bridge)",
+  "owner_source": "c1 T95",
+  "chatgpt_tables": "c1 T101.4 \"Frequency and synchronization\"",
+  "in_102": "—",
+  "build_status": "Specified"
+ },
+ {
+  "id": "U7",
+  "family": "Healing, state and flow (chat 1). Absent from the 102 and the package",
+  "name": "Ball-ify (one trigger → one coloured ball)",
+  "owner_source": "c1 T70",
+  "chatgpt_tables": "c1 T70.5 (what each ball encodes)",
+  "in_102": "—",
+  "build_status": "In cue framework (`NODES.md` §1)"
+ },
+ {
+  "id": "U8",
+  "family": "Healing, state and flow (chat 1). Absent from the 102 and the package",
+  "name": "Chain → compress → heal the higher image (HAAG)",
+  "owner_source": "c1 T53",
+  "chatgpt_tables": "c2 #3 compress",
+  "in_102": "#3 planned (compress only)",
+  "build_status": "Formalised (HAAG)"
+ },
+ {
+  "id": "U9",
+  "family": "Healing, state and flow (chat 1). Absent from the 102 and the package",
+  "name": "Choose target by personal weight (pinky finger)",
+  "owner_source": "c1 T15",
+  "chatgpt_tables": "c1 T15.10 (rated \"suggestion\")",
+  "in_102": "—",
+  "build_status": "Proposed (B14)"
+ },
+ {
+  "id": "U10",
+  "family": "Healing, state and flow (chat 1). Absent from the 102 and the package",
+  "name": "Locate the mechanism (clock: fix the mechanism, the output follows)",
+  "owner_source": "c1 T44",
+  "chatgpt_tables": "c2 #59",
+  "in_102": "#59 planned (partial)",
+  "build_status": "Formalised"
+ },
+ {
+  "id": "U11",
+  "family": "Healing, state and flow (chat 1). Absent from the 102 and the package",
+  "name": "Rescript with a protector (Lion paw on an earlier self)",
+  "owner_source": "c1 T14–T16",
+  "chatgpt_tables": "c1 T16.1; c1 T23.2",
+  "in_102": "#90 planned (partial)",
+  "build_status": "Practised"
+ },
+ {
+  "id": "U12",
+  "family": "Healing, state and flow (chat 1). Absent from the 102 and the package",
+  "name": "Integrate (golden particles absorb earlier selves)",
+  "owner_source": "c1 T16",
+  "chatgpt_tables": "c1 T23.2",
+  "in_102": "#90 (partial)",
+  "build_status": "Practised"
+ },
+ {
+  "id": "U13",
+  "family": "Healing, state and flow (chat 1). Absent from the 102 and the package",
+  "name": "Modify on feedback (Lion light introduced when tension appears)",
+  "owner_source": "c1 T15",
+  "chatgpt_tables": "c1 T15.10",
+  "in_102": "—",
+  "build_status": "Practised"
+ },
+ {
+  "id": "U14",
+  "family": "Healing, state and flow (chat 1). Absent from the 102 and the package",
+  "name": "Swish; physical anchors (fist, finger)",
+  "owner_source": "c1 T23",
+  "chatgpt_tables": "c1 T23.2",
+  "in_102": "#85 planned (partial)",
+  "build_status": "Practised"
+ },
+ {
+  "id": "U15",
+  "family": "Healing, state and flow (chat 1). Absent from the 102 and the package",
+  "name": "Aroma → archetype (lavender = White Dragon, sweet orange = Lion)",
+  "owner_source": "c1 T23",
+  "chatgpt_tables": "c1 T23.2",
+  "in_102": "#87 protocol (partial)",
+  "build_status": "Practised"
+ },
+ {
+  "id": "U16",
+  "family": "Placement, host and world",
+  "name": "Place / position (rocket in the heart's place; above the brain, below the lungs)",
+  "owner_source": "c1 T101–T102",
+  "chatgpt_tables": "c1 T101.4 \"Spatial organs\"; c2 #23",
+  "in_102": "#23 core",
+  "build_status": "Executed C1-EXP-001/002 (organ sites)"
+ },
+ {
+  "id": "U17",
+  "family": "Placement, host and world",
+  "name": "Transplant a whole functional system (its properties travel with it)",
+  "owner_source": "c1 T102",
+  "chatgpt_tables": "c1 T102.1 (8 travelling properties); c1 T103.2",
+  "in_102": "#44 planned (partial)",
+  "build_status": "Executed C1-EXP-002 (transplant vs native, per host)"
+ },
+ {
+  "id": "U18",
+  "family": "Placement, host and world",
+  "name": "Re-host (the same bundle in human, social, planet, interplanetary hosts)",
+  "owner_source": "c1 T102; D67",
+  "chatgpt_tables": "c1 T102.2 (four worlds); c1 T95.1 (six heart representations)",
+  "in_102": "#63, #64 planned (partial)",
+  "build_status": "Executed C1-EXP-002 (different result per host)"
+ },
+ {
+  "id": "U19",
+  "family": "Placement, host and world",
+  "name": "Externalise (the rocket heart outside the body, perceived by others)",
+  "owner_source": "c1 T102",
+  "chatgpt_tables": "c1 T102.2 social world (\"functions become externally observable\")",
+  "in_102": "—",
+  "build_status": "Specified"
+ },
+ {
+  "id": "U20",
+  "family": "Placement, host and world",
+  "name": "Type the host's channels (VAK per host; bacteria have senses)",
+  "owner_source": "c3 T11",
+  "chatgpt_tables": "c3 T11.2 (8 domains: cue, state, response)",
+  "in_102": "—",
+  "build_status": "Executed toy (C3-EXP-001)"
+ },
+ {
+  "id": "U21",
+  "family": "Placement, host and world",
+  "name": "Host loop observe → estimate → intervene → measure → adapt",
+  "owner_source": "c3 T11",
+  "chatgpt_tables": "c1 T89.2 (7-step pipeline); c3 T11.2",
+  "in_102": "—",
+  "build_status": "Executed toy (C3-EXP-001)"
+ },
+ {
+  "id": "U22",
+  "family": "Placement, host and world",
+  "name": "Planet → planet link; cascade",
+  "owner_source": "c1 T94",
+  "chatgpt_tables": "c1 T101.4; c1 T94.1; c1 T102.3",
+  "in_102": "—",
+  "build_status": "Executed C1-EXP-002 (propagation 21/27 nodes)"
+ },
+ {
+  "id": "U23",
+  "family": "Placement, host and world",
+  "name": "Room as world; room light = domain",
+  "owner_source": "c1 T106",
+  "chatgpt_tables": "c1 T106.3 #5; c1 T106.1 \"hang in a room\"; c2 #9",
+  "in_102": "#9 core (scene only)",
+  "build_status": "Formalised (multiple decoders)"
+ },
+ {
+  "id": "U24",
+  "family": "Placement, host and world",
+  "name": "Human movement as input; view-dependent reading",
+  "owner_source": "c1 T106",
+  "chatgpt_tables": "c1 T106.3 #4, #6; c1 T106.1",
+  "in_102": "—",
+  "build_status": "Formalised"
+ },
+ {
+  "id": "U25",
+  "family": "Placement, host and world",
+  "name": "Upgrade (superhero body)",
+  "owner_source": "c1 T94",
+  "chatgpt_tables": "—",
+  "in_102": "—",
+  "build_status": "C1-EXP-002 hosts"
+ },
+ {
+  "id": "U26",
+  "family": "Spatial contact: the pierce family",
+  "name": "Touch",
+  "owner_source": "c2 T35",
+  "chatgpt_tables": "c2 T35.3; c2 T50.6; #25",
+  "in_102": "#25 planned",
+  "build_status": "Specified"
+ },
+ {
+  "id": "U27",
+  "family": "Spatial contact: the pierce family",
+  "name": "Attach",
+  "owner_source": "c2 T35",
+  "chatgpt_tables": "c2 T35.3; c2 T50.4/6; #26",
+  "in_102": "#26 core, symbolic only",
+  "build_status": "Specified"
+ },
+ {
+  "id": "U28",
+  "family": "Spatial contact: the pierce family",
+  "name": "Pierce A through B",
+  "owner_source": "c1 T106; c2 T35",
+  "chatgpt_tables": "c1 T106.1; c1 T106.3 #1; #27; c2 T50.4/6",
+  "in_102": "#27 core, \"symbolic inheritance only\"",
+  "build_status": "Executed with its own semantics: C1-EXP-003 (pierce alone −0.1097; move then pierce +0.1063; non-additive interaction +0.1825, 40/40 worlds; ablation → 0)"
+ },
+ {
+  "id": "U29",
+  "family": "Spatial contact: the pierce family",
+  "name": "Directional asymmetry (A through B ≠ B through A)",
+  "owner_source": "c1 T106",
+  "chatgpt_tables": "c1 T106.3 #2",
+  "in_102": "#29 (stored token, no effect)",
+  "build_status": "Formalised"
+ },
+ {
+  "id": "U30",
+  "family": "Spatial contact: the pierce family",
+  "name": "Penetration depth",
+  "owner_source": "c2 T35",
+  "chatgpt_tables": "c2 T35.3; #28",
+  "in_102": "#28 core (token)",
+  "build_status": "Specified"
+ },
+ {
+  "id": "U31",
+  "family": "Spatial contact: the pierce family",
+  "name": "Meaning of the entry side",
+  "owner_source": "Owner's rules (`OWNER_SPATIAL_GRAMMAR.md`): touch at the top = one place; pierce = surface → body → sub-code → neighbouring processes; the side changes the sequence (c2 T35); vertical = hierarchy, beam lands on lower layers (c1 T44, T47, T88); horizontal = spread across (c1 T73, T95); inside vs outside the host (c1 T66); couch directions (c2 T28, T33; D39)",
+  "chatgpt_tables": "c2 T35.3: top = supervisory layer, side = lateral connection",
+  "in_102": "#29",
+  "build_status": "Specified"
+ },
+ {
+  "id": "U32",
+  "family": "Spatial contact: the pierce family",
+  "name": "Pass completely through",
+  "owner_source": "c1 T106 (four dimensions)",
+  "chatgpt_tables": "c2 T35.3",
+  "in_102": "—",
+  "build_status": "Formalised"
+ },
+ {
+  "id": "U33",
+  "family": "Spatial contact: the pierce family",
+  "name": "Contain / wrap / enclose",
+  "owner_source": "c1 (country container); c2",
+  "chatgpt_tables": "c2 T35.3; #33, #34",
+  "in_102": "#33, #34 core",
+  "build_status": "Specified"
+ },
+ {
+  "id": "U34",
+  "family": "Spatial contact: the pierce family",
+  "name": "Split inside an object",
+  "owner_source": "—",
+  "chatgpt_tables": "c2 T35.3",
+  "in_102": "—",
+  "build_status": "ChatGPT proposal"
+ },
+ {
+  "id": "U35",
+  "family": "Spatial contact: the pierce family",
+  "name": "Merge with a subcomponent",
+  "owner_source": "c2",
+  "chatgpt_tables": "c2 T35.3; #40–41",
+  "in_102": "#41 core (partial)",
+  "build_status": "Specified"
+ },
+ {
+  "id": "U36",
+  "family": "Spatial contact: the pierce family",
+  "name": "Inject / leave a functional dot",
+  "owner_source": "c1 T108; c2 T33–T38",
+  "chatgpt_tables": "c2 T35.3; #46; c2 T50.6; c2 T34.4 (immunisation, symbiosis, regulation dots)",
+  "in_102": "#46 planned",
+  "build_status": "Executed C2-EXP-014 (same dot: wine −2.160 pp, digits +0.586 pp)"
+ },
+ {
+  "id": "U37",
+  "family": "Spatial contact: the pierce family",
+  "name": "Move the intersection point (rewire)",
+  "owner_source": "c1 T106",
+  "chatgpt_tables": "c1 T106.1",
+  "in_102": "—",
+  "build_status": "Formalised"
+ },
+ {
+  "id": "U38",
+  "family": "Spatial contact: the pierce family",
+  "name": "Rotate perpendicular",
+  "owner_source": "c1 T106",
+  "chatgpt_tables": "c1 T106.1; #30",
+  "in_102": "#30 core (token)",
+  "build_status": "Executed C1-EXP-003 (one rotation = 46 links vs 1)"
+ },
+ {
+  "id": "U39",
+  "family": "Spatial contact: the pierce family",
+  "name": "Flip a painting (exposes other functions)",
+  "owner_source": "c1 T106",
+  "chatgpt_tables": "c1 T106.1",
+  "in_102": "—",
+  "build_status": "Formalised"
+ },
+ {
+  "id": "U40",
+  "family": "Spatial contact: the pierce family",
+  "name": "Hide half / partial exposure (flat overlay, half seen from each side)",
+  "owner_source": "c1 T106",
+  "chatgpt_tables": "c1 T106.1; c1 T106.3 #3",
+  "in_102": "#32 planned (partial)",
+  "build_status": "Formalised"
+ },
+ {
+  "id": "U41",
+  "family": "Spatial contact: the pierce family",
+  "name": "Protrude into the room (interferes with passers-by)",
+  "owner_source": "c1 T106",
+  "chatgpt_tables": "c1 T106.3 #5–6",
+  "in_102": "—",
+  "build_status": "Formalised"
+ },
+ {
+  "id": "U42",
+  "family": "Spatial contact: the pierce family",
+  "name": "Move B onto A",
+  "owner_source": "c1 T106",
+  "chatgpt_tables": "c1 T107.1 (+0.0203)",
+  "in_102": "#31 planned",
+  "build_status": "Executed C1-EXP-003"
+ },
+ {
+  "id": "U43",
+  "family": "Selection and navigation",
+  "name": "Dot on a module: whole vs partial (top of the mountain, the car seat)",
+  "owner_source": "c1 T108",
+  "chatgpt_tables": "c1 T108.2",
+  "in_102": "#46 (partial)",
+  "build_status": "Executed C1-EXP-004 (whole car −0.0075)"
+ },
+ {
+  "id": "U44",
+  "family": "Selection and navigation",
+  "name": "Region drawn from the centre (triangle or square, size varies: engine + part of the seat + window)",
+  "owner_source": "c1 T108",
+  "chatgpt_tables": "c1 T108.2 (full triangle +0.1078 vs point −0.0075)",
+  "in_102": "—",
+  "build_status": "Executed C1-EXP-004"
+ },
+ {
+  "id": "U45",
+  "family": "Selection and navigation",
+  "name": "Enter → 3D; the inside and hidden parts (the car becomes 3D; window, seat, hidden part)",
+  "owner_source": "c1 T108; c2 T53",
+  "chatgpt_tables": "c2 T53.1 #6–7 (door, emblem as portals); c2 T29.1 (hidden compartment)",
+  "in_102": "#15 planned",
+  "build_status": "Partly executed (C1-EXP-004 depth filter)"
+ },
+ {
+  "id": "U46",
+  "family": "Selection and navigation",
+  "name": "Zoom in / out, layers, depth",
+  "owner_source": "c1 T108; c2 T25–T29",
+  "chatgpt_tables": "#11–#14; c2 T50.6",
+  "in_102": "#11–14 planned",
+  "build_status": "Executed C1-EXP-004"
+ },
+ {
+  "id": "U47",
+  "family": "Selection and navigation",
+  "name": "Path direction (the line sequences modules; reversal)",
+  "owner_source": "c1 T108",
+  "chatgpt_tables": "c1 T108.2 (reversed −0.0175); c2 T53.1 #13",
+  "in_102": "#73 planned (partial)",
+  "build_status": "Executed C1-EXP-004"
+ },
+ {
+  "id": "U48",
+  "family": "Selection and navigation",
+  "name": "The scene read left to right as the program (mountains, sky, house, grass, car, road)",
+  "owner_source": "c1 T108",
+  "chatgpt_tables": "—",
+  "in_102": "#73 (partial)",
+  "build_status": "Executed C1-EXP-004"
+ },
+ {
+  "id": "U49",
+  "family": "Selection and navigation",
+  "name": "Ten-axis transformation space (abstraction, depth, position, domain, time, causality, function, perspective, generation, representation)",
+  "owner_source": "—",
+  "chatgpt_tables": "c2 T49.12",
+  "in_102": "—",
+  "build_status": "ChatGPT proposal"
+ },
+ {
+  "id": "U50",
+  "family": "Cinematic and path operators (chat 2 T53; after the package)",
+  "name": "Play, pause, slow, fast-forward, rewind, tempo",
+  "owner_source": "c2 T53",
+  "chatgpt_tables": "c2 T53.1 #1–5, #22; c2 T54.3",
+  "in_102": "—",
+  "build_status": "Executed C2-EXP-020 (video 56.7%, painting 60.1%; union 72.5% with two passes; at equal budget uniform inspection 66.1% wins)"
+ },
+ {
+  "id": "U51",
+  "family": "Cinematic and path operators (chat 2 T53; after the package)",
+  "name": "Camera movement; change perspective",
+  "owner_source": "c2 T53",
+  "chatgpt_tables": "c2 T53.1 #8–9",
+  "in_102": "#79–82 interface (partial)",
+  "build_status": "Specified"
+ },
+ {
+  "id": "U52",
+  "family": "Cinematic and path operators (chat 2 T53; after the package)",
+  "name": "Cut, switch, merge scenes",
+  "owner_source": "c2 T53",
+  "chatgpt_tables": "c2 T53.1 #10–12",
+  "in_102": "—",
+  "build_status": "Specified"
+ },
+ {
+  "id": "U53",
+  "family": "Cinematic and path operators (chat 2 T53; after the package)",
+  "name": "3D line: curve, thickness, speed, pause point",
+  "owner_source": "c2 T53 (S106)",
+  "chatgpt_tables": "c2 T53.1 #13–19; c2 T54.3",
+  "in_102": "—",
+  "build_status": "Executed C2-EXP-019 (line + slow motion 66.7% vs conventional sampling 90.8% at equal budget)"
+ },
+ {
+  "id": "U54",
+  "family": "Cinematic and path operators (chat 2 T53; after the package)",
+  "name": "Widen the line into a tube or volume",
+  "owner_source": "c2 T53",
+  "chatgpt_tables": "c2 T53.1 #15–16; c2 T54.3",
+  "in_102": "—",
+  "build_status": "Executed C2-EXP-019 (volume 86.3% vs conventional 90.8%)"
+ },
+ {
+  "id": "U55",
+  "family": "Cinematic and path operators (chat 2 T53; after the package)",
+  "name": "Colour, black-and-white, background, as state operators",
+  "owner_source": "c2 T53 (continues U4)",
+  "chatgpt_tables": "c2 T53.1 #20–23",
+  "in_102": "#6 (partial)",
+  "build_status": "Specified"
+ },
+ {
+  "id": "U56",
+  "family": "Cinematic and path operators (chat 2 T53; after the package)",
+  "name": "Branch a video, compare videos, record a descendant",
+  "owner_source": "c2 T53",
+  "chatgpt_tables": "c2 T53.1 #24–26",
+  "in_102": "#98, #77 (partial)",
+  "build_status": "Specified"
+ },
+ {
+  "id": "U57",
+  "family": "Cinematic and path operators (chat 2 T53; after the package)",
+  "name": "Extract a function from video; convert the route into a program",
+  "owner_source": "c2 T53",
+  "chatgpt_tables": "c2 T53.1 #27–28",
+  "in_102": "#54 (partial)",
+  "build_status": "Executed C2-EXP-019/020"
+ },
+ {
+  "id": "U58",
+  "family": "Cinematic and path operators (chat 2 T53; after the package)",
+  "name": "Mode flag: change the view vs change the system",
+  "owner_source": "—",
+  "chatgpt_tables": "c2 T53.3",
+  "in_102": "—",
+  "build_status": "ChatGPT proposal"
+ },
+ {
+  "id": "U59",
+  "family": "Painting composition and the representation cipher",
+  "name": "Paint, add a layer, reveal the underlying sketch, foreground/background, repaint, move a figure, merge, cut out and place in another painting, lighting, step away, brushstrokes",
+  "owner_source": "c1 T104–T107; c2 T49",
+  "chatgpt_tables": "c2 T49.11 (11 operations)",
+  "in_102": "#1, #19, #31, #41, #43, #79–82, #11–12 (partial)",
+  "build_status": "Specified"
+ },
+ {
+  "id": "U60",
+  "family": "Painting composition and the representation cipher",
+  "name": "Painting → painting (pierce each other; the fused painting becomes a new painting that pierces another)",
+  "owner_source": "c1 T106",
+  "chatgpt_tables": "c1 T106.3 #7 (recursive spatial encoding)",
+  "in_102": "#20 planned (partial)",
+  "build_status": "Executed C1-EXP-003"
+ },
+ {
+  "id": "U61",
+  "family": "Painting composition and the representation cipher",
+  "name": "Encode → transform → decode (exact, controlled, generative modes; several decoders for one painting)",
+  "owner_source": "c1 T104–T105 (S45)",
+  "chatgpt_tables": "c1 T105.1; c1 T105.5; c1 T105.6",
+  "in_102": "#10 planned (partial)",
+  "build_status": "Executed C1-EXP-003 (reconstruction 256/256)"
+ },
+ {
+  "id": "U62",
+  "family": "Painting composition and the representation cipher",
+  "name": "Evolve the grammar itself (what pierce, fold, rotate mean can change)",
+  "owner_source": "c1 T105–T106",
+  "chatgpt_tables": "c1 T105.5; c1 T106.3 #8; c2 T54.2 #8",
+  "in_102": "#54, #102 planned",
+  "build_status": "Executed C2-EXP-018 (operator → generation 2)"
+ },
+ {
+  "id": "U63",
+  "family": "Mental-model construction (pillar 2)",
+  "name": "Bind a model to an object's part (part = perspective + composition of components: robot head = associated + confidence + analogical reasoning)",
+  "owner_source": "D64; c2 T27–T29",
+  "chatgpt_tables": "c2 T29.1 (couch frame = assumptions, cushions = alternatives…); c2 T33.1 (couch parts → AI-system parts); c2 T29.4; c2 T29.2",
+  "in_102": "#84 (mnemonic navigation), #10",
+  "build_status": "Practised (c1 T69–T70)"
+ },
+ {
+  "id": "U64",
+  "family": "Mental-model construction (pillar 2)",
+  "name": "Room = cognitive state (Eagle, Owl, Associated)",
+  "owner_source": "c2 T27–T29",
+  "chatgpt_tables": "c2 T29.4",
+  "in_102": "#79–82 interface",
+  "build_status": "Formalised"
+ },
+ {
+  "id": "U65",
+  "family": "Mental-model construction (pillar 2)",
+  "name": "Dedicate an object to one function (the couch only for hypothesis testing)",
+  "owner_source": "D64",
+  "chatgpt_tables": "—",
+  "in_102": "—",
+  "build_status": "Specified"
+ },
+ {
+  "id": "U66",
+  "family": "Mental-model construction (pillar 2)",
+  "name": "The object's form gives the movement operators (couch: forward, backward, up, down, sides)",
+  "owner_source": "c2 T28; D39",
+  "chatgpt_tables": "— (U31 conflict)",
+  "in_102": "#29 (token)",
+  "build_status": "Specified"
+ },
+ {
+  "id": "U67",
+  "family": "Mental-model construction (pillar 2)",
+  "name": "Material = inner level / surface (user interface, code manual)",
+  "owner_source": "Owner, session",
+  "chatgpt_tables": "—",
+  "in_102": "—",
+  "build_status": "Specified"
+ },
+ {
+  "id": "U68",
+  "family": "Mental-model construction (pillar 2)",
+  "name": "Method: map → frame symbol → VAK conditioning → three future scenarios → automatic and conscious access",
+  "owner_source": "D65",
+  "chatgpt_tables": "c2 #85, #87, #89",
+  "in_102": "#89 planned (future pacing)",
+  "build_status": "Practised"
+ },
+ {
+  "id": "U69",
+  "family": "Mental-model construction (pillar 2)",
+  "name": "Control panel: consciously select a model or identity",
+  "owner_source": "c3 T0 (28 May 2025); c2 T28",
+  "chatgpt_tables": "c2 #82 (architect perspective)",
+  "in_102": "#82 interface (partial)",
+  "build_status": "Practised"
+ },
+ {
+  "id": "U70",
+  "family": "Mental-model construction (pillar 2)",
+  "name": "The real environment as the house (work table → robot; microwave → palm, top, leaf, trunk)",
+  "owner_source": "D66",
+  "chatgpt_tables": "—",
+  "in_102": "—",
+  "build_status": "Specified"
+ },
+ {
+  "id": "U71",
+  "family": "Mental-model construction (pillar 2)",
+  "name": "Cognitive relation operations: coordination, distinction, comparison, hierarchy, temporal relations, perspective, analogy",
+  "owner_source": "—",
+  "chatgpt_tables": "c2 T27.2",
+  "in_102": "#56–58 (partial)",
+  "build_status": "ChatGPT proposal"
+ },
+ {
+  "id": "U72",
+  "family": "Mental-model construction (pillar 2)",
+  "name": "Labels for the owner's cognitive operations (abstraction, recursion, hypothesis generation, counterfactual reasoning, and others)",
+  "owner_source": "Owner's practice (chat 1)",
+  "chatgpt_tables": "About 20 chat 1 assessment tables (c1 T16.7, T17.8, T22.16, T39.5, T53.3, T55.5, T56.6, T63.8, T65.5, T67.2, T71.3, T73.1, T74.1…)",
+  "in_102": "—",
+  "build_status": "—"
+ },
+ {
+  "id": "U73",
+  "family": "Governance and control (chat 3; public repo)",
+  "name": "Act through the Spine (virtue checks)",
+  "owner_source": "c3 T0; D70",
+  "chatgpt_tables": "c1 T70.8; c1 T77.3; c1 T86.1; c1 T87.2; c1 T105.4 (as subsystems)",
+  "in_102": "—",
+  "build_status": "In code (`rsxv/AGENTS.md`)"
+ },
+ {
+  "id": "U74",
+  "family": "Governance and control (chat 3; public repo)",
+  "name": "The Watchdog switches archetypes and guards",
+  "owner_source": "c3 T0",
+  "chatgpt_tables": "c1 T77.3; c1 T86.1; c1 T87.2; c2 T29.4 (as subsystems)",
+  "in_102": "—",
+  "build_status": "In code"
+ },
+ {
+  "id": "U75",
+  "family": "Governance and control (chat 3; public repo)",
+  "name": "Meta-Architect: set strategy, lock archetypes, create hybrids, retire modes, reset",
+  "owner_source": "c3 T0",
+  "chatgpt_tables": "c1 T86.1; c1 T87.2; c1 T105.4 (as subsystems)",
+  "in_102": "—",
+  "build_status": "In code (partly)"
+ },
+ {
+  "id": "U76",
+  "family": "Governance and control (chat 3; public repo)",
+  "name": "Return to baseline (always available, tested)",
+  "owner_source": "D71",
+  "chatgpt_tables": "#91; c1 T70.8 \"Baseline return\"",
+  "in_102": "#91 plan (partial)",
+  "build_status": "In code"
+ },
+ {
+  "id": "U77",
+  "family": "Governance and control (chat 3; public repo)",
+  "name": "Choose the type of Override per person (drive vs calmness)",
+  "owner_source": "c3 T4",
+  "chatgpt_tables": "c3 T4.1",
+  "in_102": "—",
+  "build_status": "Specified"
+ },
+ {
+  "id": "U78",
+  "family": "Governance and control (chat 3; public repo)",
+  "name": "Evidence-gated autonomy",
+  "owner_source": "c3 T3 (assistant)",
+  "chatgpt_tables": "c3 T3.1–3.2",
+  "in_102": "—",
+  "build_status": "Candidate"
+ },
+ {
+  "id": "U79",
+  "family": "Language meta and communication",
+  "name": "Statements LANGUAGE … OP (23)",
+  "owner_source": "—",
+  "chatgpt_tables": "c2 T50.4; manual §4–5",
+  "in_102": "Package syntax",
+  "build_status": "Parser implemented"
+ },
+ {
+  "id": "U80",
+  "family": "Language meta and communication",
+  "name": "Input → output signatures for 38 operators",
+  "owner_source": "—",
+  "chatgpt_tables": "c2 T50.6",
+  "in_102": "—",
+  "build_status": "ChatGPT proposal"
+ },
+ {
+  "id": "U81",
+  "family": "Language meta and communication",
+  "name": "compile_backend, register_operator, induce_operator, calibrate, compress_semantics, verify_contract",
+  "owner_source": "c2 (grammar expansion)",
+  "chatgpt_tables": "c2 T50.6",
+  "in_102": "#55, #102 planned; the three in bold are not in the 102",
+  "build_status": "Planned"
+ },
+ {
+  "id": "U82",
+  "family": "Language meta and communication",
+  "name": "MESSAGE / CUE / PERSPECTIVE (the D69 interface)",
+  "owner_source": "c2 T26–T27",
+  "chatgpt_tables": "c2 T50.4",
+  "in_102": "#8, #87, #79–82",
+  "build_status": "Protocol plan"
+ },
+ {
+  "id": "U83",
+  "family": "Language meta and communication",
+  "name": "Cue protocol layers L0–L5 (physical, agent message, cognitive operation, context, adaptation, verification)",
+  "owner_source": "c2 T26",
+  "chatgpt_tables": "c2 T26.4",
+  "in_102": "—",
+  "build_status": "ChatGPT proposal"
+ },
+ {
+  "id": "U84",
+  "family": "Language meta and communication",
+  "name": "Transfer Unit schema (origin, source function, relational structure, target, adaptation, compatibility, benefit, discriminating test, lineage)",
+  "owner_source": "c2 T33",
+  "chatgpt_tables": "c2 T33.5",
+  "in_102": "—",
+  "build_status": "ChatGPT proposal"
+ },
+ {
+  "id": "U85",
+  "family": "Language meta and communication",
+  "name": "Biological transfer mechanisms (selective transfer, boundary crossing, integration, symbiosis, feedback, inheritance, rejection)",
+  "owner_source": "c2 T33–T34",
+  "chatgpt_tables": "c2 T33.3; c2 T34.3",
+  "in_102": "#43–45, #62 (partial)",
+  "build_status": "Specified"
+ },
+ {
+  "id": "U86",
+  "family": "Language meta and communication",
+  "name": "Re-enter an earlier node with a discovered operator",
+  "owner_source": "c2",
+  "chatgpt_tables": "c2 T50.6; #21",
+  "in_102": "#21 planned",
+  "build_status": "Planned"
+ },
+ {
+  "id": "U87",
+  "family": "Discovery and testing",
+  "name": "Assumption reversal / removal test (flip or remove one relation and observe the effect)",
+  "owner_source": "c3 T12",
+  "chatgpt_tables": "c3 T12.2",
+  "in_102": "—",
+  "build_status": "Executed C3-EXP-001 (−€6,142 ↔ +€3,662)"
+ },
+ {
+  "id": "U88",
+  "family": "Language meta and communication",
+  "name": "Node palace: a symbol opens that node's books; message = symbol + change",
+  "owner_source": "owner 17 Nov 2026; c2 T28",
+  "chatgpt_tables": "c2 T28 (cue retrieves structure)",
+  "in_102": "—",
+  "build_status": "Executed C1: in sync 280/280 exact; 65 B median vs 896 B program"
+ },
+ {
+  "id": "U89",
+  "family": "Language meta and communication",
+  "name": "Green-dot signal: the book's hash travels with the symbol; the receiver checks before opening",
+  "owner_source": "owner 17 Nov 2026",
+  "chatgpt_tables": "—",
+  "in_102": "—",
+  "build_status": "Executed C1: drift detected 366/366, 0 silent wrong decodes"
+ },
+ {
+  "id": "U90",
+  "family": "Language meta and communication",
+  "name": "White Dragon find / show / heal across nodes: locate the differing chunks, heal only those",
+  "owner_source": "owner 17 Nov 2026; c1 T15–T17 (white light heals books and networks of words)",
+  "chatgpt_tables": "—",
+  "in_102": "—",
+  "build_status": "Executed C1: healed 366/366 exact at 0.36× a full resend"
+ },
+ {
+  "id": "U91",
+  "family": "Language meta and communication",
+  "name": "Perception radius: the seed grows and senses more (smell → house → soup → memory → secret → behaviour)",
+  "owner_source": "owner 17 Nov 2026; c3 T11",
+  "chatgpt_tables": "—",
+  "in_102": "—",
+  "build_status": "Specified"
+ },
+ {
+  "id": "U92",
+  "family": "Language meta and communication",
+  "name": "Foundation lattice: one figure whose foundations link economy, aerodynamics, physics, chemistry, biology, neuroscience, socio-technical, visual/Morse/touch/smell",
+  "owner_source": "owner 17 Nov 2026; c2 T35",
+  "chatgpt_tables": "c2 T35; c2 T49.4 #44",
+  "in_102": "—",
+  "build_status": "Specified; transfer partly executed (T9 0.339 → 0.805)"
+ },
+ {
+  "id": "U93",
+  "family": "Language meta and communication",
+  "name": "Language level stack (today's language = C level; higher levels above language)",
+  "owner_source": "c2 T7; c1 T44/T47",
+  "chatgpt_tables": "c2 T7.1",
+  "in_102": "—",
+  "build_status": "Specified"
+ },
+ {
+  "id": "U94",
+  "family": "Language meta and communication",
+  "name": "Universe carrier + accent layers (main vibration constant; each pair adds a layer; a third object adds one more)",
+  "owner_source": "c2 T14, T18",
+  "chatgpt_tables": "c2 T17–T18",
+  "in_102": "—",
+  "build_status": "Structural carrier executed (T7/T7b/T7c); multisensory carrier not built"
+ },
+ {
+  "id": "U95",
+  "family": "Language meta and communication",
+  "name": "Morse per glyph = felt wording",
+  "owner_source": "c2 T25",
+  "chatgpt_tables": "c2 T26.1",
+  "in_102": "—",
+  "build_status": "Measured C1: full program 991 s at 10 wpm, palace message 84 s: per-glyph too slow, per-symbol codes needed"
+ },
+ {
+  "id": "U96",
+  "family": "Language meta and communication",
+  "name": "Message envelope with contract (version, sender, recipient, operation, types, preconditions, effects, invariants, evidence, lineage, uncertainty)",
+  "owner_source": "—",
+  "chatgpt_tables": "c2 T50.13",
+  "in_102": "—",
+  "build_status": "ChatGPT proposal; not built"
+ },
+ {
+  "id": "U97",
+  "family": "Language meta and communication",
+  "name": "Semantic compression under behaviour and safety contracts",
+  "owner_source": "c2 T9",
+  "chatgpt_tables": "c2 T9.2–T9.3, T9.100",
+  "in_102": "—",
+  "build_status": "ChatGPT EXP-008 historical (94.21%; 379/379 safe constrained); not reproduced in RSOS"
+ },
+ {
+  "id": "U98",
+  "family": "Language meta and communication",
+  "name": "Visual communication standard: image quality = quality of the language",
+  "owner_source": "c2 T6",
+  "chatgpt_tables": "—",
+  "in_102": "—",
+  "build_status": "Not built"
+ },
+ {
+  "id": "U99",
+  "family": "Language meta and communication",
+  "name": "Multi-observer rendering: others see, smell and feel the external organ",
+  "owner_source": "c1 T102",
+  "chatgpt_tables": "—",
+  "in_102": "—",
+  "build_status": "Specified"
+ },
+ {
+  "id": "U100",
+  "family": "Language meta and communication",
+  "name": "State-dependent association chain (the same object leads elsewhere in another body state)",
+  "owner_source": "c1 T53, T55",
+  "chatgpt_tables": "—",
+  "in_102": "—",
+  "build_status": "Specified"
+ },
+ {
+  "id": "U101",
+  "family": "Language meta and communication",
+  "name": "Golden light: find the best paths between a sphere and the domain library by shared relations",
+  "owner_source": "owner 17 Nov 2026",
+  "chatgpt_tables": "—",
+  "in_102": "—",
+  "build_status": "Executed E1: 48 spheres → 407 paths in gen 1"
+ },
+ {
+  "id": "U102",
+  "family": "Language meta and communication",
+  "name": "Green particle: land on the shared relation, become part of the sphere, open its library, create a child sphere",
+  "owner_source": "owner 17 Nov 2026",
+  "chatgpt_tables": "—",
+  "in_102": "—",
+  "build_status": "Executed E1: 8/8 domains reached; children measurable"
+ },
+ {
+  "id": "U103",
+  "family": "Language meta and communication",
+  "name": "Deficit: the lack of a sphere; the effect of a particle is bounded by it (the water drop)",
+  "owner_source": "owner 17 Nov 2026",
+  "chatgpt_tables": "—",
+  "in_102": "—",
+  "build_status": "Executed E1: deficit-targeted landing 2.5× uniform (partly by construction)"
+ },
+ {
+  "id": "U104",
+  "family": "Language meta and communication",
+  "name": "Archetype style of healing (lion = courage / boldest path; tiger = precision / closest path)",
+  "owner_source": "owner 17 Nov 2026",
+  "chatgpt_tables": "—",
+  "in_102": "—",
+  "build_status": "Executed E1: tiger reached more domains (7.2 vs 6.5) and lower deficit"
+ },
+ {
+  "id": "U105",
+  "family": "Governance and control",
+  "name": "Standing consent in a visible network under the Spine laws (consented shadow, autonomous propagation)",
+  "owner_source": "owner 17 Nov 2026 (D82)",
+  "chatgpt_tables": "—",
+  "in_102": "—",
+  "build_status": "Built (E021); tested U1b"
+ },
+ {
+  "id": "U106",
+  "family": "Mental-model construction",
+  "name": "VAKOG key: any presented channels of an anchored state open the whole (partial-key completion)",
+  "owner_source": "owner 17 Nov 2026",
+  "chatgpt_tables": "—",
+  "in_102": "—",
+  "build_status": "Executed V1: one rich channel opens 0.90-0.92; two channels 1.00; name-only 0.18-0.37"
+ },
+ {
+  "id": "U107",
+  "family": "White Dragon",
+  "name": "Knowing transplant: the White Dragon selects a host part, its best cross-domain equivalent, the landing depth and order; the ordered landings form the 3D connection map (the build plan)",
+  "owner_source": "owner 17 Nov 2026 10:42",
+  "chatgpt_tables": "—",
+  "in_102": "—",
+  "build_status": "Specified (A2 in BRIEF_A1_AGENT_TEST.md)"
+ },
+ {
+  "id": "U108",
+  "family": "White Dragon",
+  "name": "Reach: a stretch target (10x, 1000x) used as an instrument, not a claim; it opens one planet per blocker for the White Dragon's landings and returns the verdict as the measured distance, the baseline and the named limit; the next target starts from that verdict",
+  "owner_source": "owner 18 Nov 2026 03:37-03:41",
+  "chatgpt_tables": "—",
+  "in_102": "—",
+  "build_status": "Formalised (REACH, rsoslang 0.2; example examples/reach_a5.rsl with A5's measured result)"
+ }
+]

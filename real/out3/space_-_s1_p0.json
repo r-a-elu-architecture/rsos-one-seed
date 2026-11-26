@@ -1,0 +1,78 @@
+{
+ "row": "space",
+ "model": "-",
+ "stage": 1,
+ "pair": 0,
+ "cells": {
+  "std|201": {
+   "default": {
+    "result": 514.346026663973,
+    "resource": 16212.582563241578,
+    "R": 0.03172511379094766,
+    "choices": {
+     "present|standard": 25
+    }
+   },
+   "seed3v1": {
+    "result": 524.8684617748544,
+    "resource": 18705.268391622198,
+    "R": 0.028059926796342304,
+    "choices": {
+     "F:holo-plan|policy": 11,
+     "F:holo-carry|policy": 8,
+     "past-2|standard": 1,
+     "F:holo-plan|standard": 2,
+     "future+1|standard": 1,
+     "focus_science|standard": 1,
+     "future+1|own": 1
+    },
+    "policy_fallback_steps": 0
+   },
+   "strongest": {
+    "result": 518.4959322609483,
+    "resource": 17735.262468692967,
+    "R": 0.029235312033087706,
+    "choices": {
+     "present|standard": 25
+    }
+   },
+   "sec": 3940
+  },
+  "std|202": {
+   "default": {
+    "result": 413.4304244021303,
+    "resource": 14152.793784650068,
+    "R": 0.029211930216246875,
+    "choices": {
+     "present|standard": 24
+    }
+   },
+   "seed3v1": {
+    "result": 422.4300227359556,
+    "resource": 17151.84897824345,
+    "R": 0.02462883291893451,
+    "choices": {
+     "F:holo-plan|policy": 8,
+     "P4P5:exact-planner|policy": 3,
+     "F:holo-carry|policy": 6,
+     "F:holo-plan|standard": 1,
+     "past-1|standard": 1,
+     "future+2|standard": 2,
+     "future+1|standard": 1,
+     "F:holo-carry|standard": 1,
+     "future+1|own": 1
+    },
+    "policy_fallback_steps": 0
+   },
+   "strongest": {
+    "result": 418.16553789246785,
+    "resource": 16448.761710059996,
+    "R": 0.025422311129762398,
+    "choices": {
+     "present|standard": 24
+    }
+   },
+   "sec": 3854
+  }
+ }
+}

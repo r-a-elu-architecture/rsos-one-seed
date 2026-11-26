@@ -1,0 +1,22 @@
+{
+ "models": {
+  "mistral_large40": {
+   "flow_steps": 128,
+   "B2_failed_flow_wording": 19,
+   "B2_failed_named_wording": 15,
+   "X5b_exact_SC2C": 14
+  }
+ },
+ "pooled": {
+  "flow_fail": 19,
+  "named_fail": 15,
+  "steps": 128,
+  "rate_flow_wording": 0.1484375,
+  "rate_named_wording": 0.1171875
+ },
+ "verdicts": {
+  "Q10_finding_is_the_cause": false,
+  "Q11_blind_exact_control": false
+ },
+ "sha256": "006429a6484abc6399b2d4e480568210dba1e58568dbcc073d1e899cb7aeb9f0"
+}

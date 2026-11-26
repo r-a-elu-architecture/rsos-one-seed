@@ -1,0 +1,41 @@
+{
+ "cells": 6,
+ "R1_joined_gt_best_alone": 6,
+ "R2_joined_gt_notubes": 6,
+ "R3_mean_gain2": 0.018252314814814836,
+ "R3_cells_gain2_pos": 6,
+ "R4_each_not_worse_than_alone": 6,
+ "R5_landed_above_joined": 0,
+ "R6_pool_over_ticks": 0,
+ "R7_transfer_need_precision": 1.0,
+ "events_joined": {
+  "freed": 1174,
+  "transfers": 62,
+  "refused": 1,
+  "would_harm": 17,
+  "landed_above": 0,
+  "pool_over": 0,
+  "tr_need": 61,
+  "tr_total": 61,
+  "no_consent": 0,
+  "rotation_hold": 38,
+  "joint_gate": 0
+ },
+ "mean_G": {
+  "joined": 0.9876041666666667,
+  "notubes": 0.9693518518518518,
+  "aloneA": 0.9513541666666668,
+  "aloneB": 0.9520949074074075,
+  "native": 0.9285069444444445
+ },
+ "PASS": {
+  "R1": true,
+  "R2": true,
+  "R3": true,
+  "R4": true,
+  "R5": true,
+  "R6": true,
+  "R7": true
+ },
+ "ROW_PASS": true
+}

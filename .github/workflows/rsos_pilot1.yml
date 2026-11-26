@@ -1,0 +1,72 @@
+# PILOT1 (development cells 1-8 only; screening, never confirmation): the ladder default/rollout/v1/full. Results to cloud-results/pilot1/<run id>/.
+name: rsos-pilot1
+on:
+  push:
+    branches: [core-v1]
+    paths: ["cloud/trigger_pilot1.txt"]
+permissions:
+  contents: write
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        u: ["ai_agents openrouter:openai/gpt-oss-20b default 1 4",
+            "ai_agents openrouter:openai/gpt-oss-20b default 5 8",
+            "ai_agents openrouter:openai/gpt-oss-20b rollout 1 4",
+            "ai_agents openrouter:openai/gpt-oss-20b rollout 5 8",
+            "ai_agents openrouter:openai/gpt-oss-20b v1 1 4",
+            "ai_agents openrouter:openai/gpt-oss-20b v1 5 8",
+            "ai_agents openrouter:openai/gpt-oss-20b full 1 4",
+            "ai_agents openrouter:openai/gpt-oss-20b full 5 8"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install numpy scipy pandas scikit-learn requests qiskit qiskit-aer pvlib gymnasium skyfield dandi pynwb tiktoken mistral-common && pip install --no-deps llama-models
+      - name: OpenRouter credit check (AI rows; prints usage and limit only)
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          set -- ${{ matrix.u }}
+          case "$1" in ai_*)
+            python - <<'EOF'
+          import os, json, sys, urllib.request
+          r = urllib.request.Request("https://openrouter.ai/api/v1/key", headers={"Authorization": "Bearer " + os.environ["OPENROUTER_API_KEY"]})
+          d = json.load(urllib.request.urlopen(r, timeout=30)).get("data", {})
+          print("OPENROUTER usage", d.get("usage"), "limit", d.get("limit"), "remaining", d.get("limit_remaining"))
+          rem = d.get("limit_remaining")
+          if rem is not None and rem < 1.0: sys.exit("STOP: less than $1 OpenRouter credit left")
+          EOF
+            ;; esac
+      - name: real data for this row
+        run: |
+          set -- ${{ matrix.u }}
+          if [ "$1" = space ]; then cp real/hosts/data/space_tle_frozen.txt real/hosts/data/space_tle.txt; fi
+          if [ "$1" = ai_human ]; then python real/hosts/ai_human_fetch.py; fi
+      - run: python real/pilot/pilot_ladder.py ${{ matrix.u }}
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          REASONING_EFFORT: low
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pilot1-${{ strategy.job-index }}
+          path: real/pilot/out/
+  collect:
+    needs: unit
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: /tmp/art
+      - run: |
+          git config user.name "rsos-cloud"; git config user.email "rsos-cloud@users.noreply.github.com"
+          git fetch origin cloud-results && git checkout cloud-results
+          mkdir -p pilot1/${{ github.run_id }} && cp /tmp/art/*/*.json pilot1/${{ github.run_id }}/ 2>/dev/null || true
+          git add pilot1 && git commit -qm "PILOT1 ${{ github.run_id }}" && (git push -q origin cloud-results || (git pull -q --rebase origin cloud-results && git push -q origin cloud-results))

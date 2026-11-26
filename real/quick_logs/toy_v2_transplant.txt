@@ -1,0 +1,2 @@
+loaded 222 entries; op order ['past', 'beam', 'carry', 'overlay', 'future', 'zoom']
+0.577217 90 quick_logs/toy_v2_pool.json {'heal': 1, 'compress': 3, 'carry': 3, 'rehost': 1, 'enter': 1, 'colour': 30, 'rooms': 30, 'transplant': 30} 3.22

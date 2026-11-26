@@ -1,0 +1,434 @@
+{
+ "row": "ai_agents",
+ "model": "openrouter:openai/gpt-oss-20b",
+ "cells_run": [
+  729,
+  730,
+  731,
+  732
+ ],
+ "generated": true,
+ "cells": {
+  "react|729": {
+   "default": {
+    "result": 0.75,
+    "resource": 8.738,
+    "R": 0.08583199816891737,
+    "choices": {
+     "present|standard": 17
+    },
+    "failed_calls": 0,
+    "sec": 22.1
+   },
+   "seed3v1": {
+    "result": 0.75,
+    "resource": 14.952,
+    "R": 0.05016051364365971,
+    "choices": {
+     "F:blind-b0|standard": 4,
+     "present|own": 17
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 1581,
+    "sec": 24.1
+   },
+   "strongest": {
+    "result": 1.0,
+    "resource": 27.881,
+    "R": 0.035866719271188265,
+    "choices": {
+     "present|standard": 41
+    },
+    "failed_calls": 0,
+    "sec": 38.9
+   },
+   "composed": {
+    "result": 0.75,
+    "resource": 8.816,
+    "R": 0.08507259528130671,
+    "choices": {
+     "present|standard": 4,
+     "present|own": 14
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 14.4
+   },
+   "sec": 100
+  },
+  "react|730": {
+   "default": {
+    "result": 0.5,
+    "resource": 12.666,
+    "R": 0.03947576188220433,
+    "choices": {
+     "present|standard": 26
+    },
+    "failed_calls": 0,
+    "sec": 21.2
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 2.055,
+    "R": 0.48661800486618,
+    "choices": {
+     "F:blind-b0|standard": 3,
+     "present|own": 4,
+     "F:reuse-b0|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 1053,
+    "sec": 9.5
+   },
+   "strongest": {
+    "result": 0.75,
+    "resource": 20.198,
+    "R": 0.03713238934547975,
+    "choices": {
+     "present|standard": 40
+    },
+    "failed_calls": 0,
+    "sec": 26.6
+   },
+   "composed": {
+    "result": 0.75,
+    "resource": 9.651,
+    "R": 0.0777121541809139,
+    "choices": {
+     "present|standard": 4,
+     "present|own": 16,
+     "restart-b0|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 15.0
+   },
+   "sec": 72
+  },
+  "react|731": {
+   "default": {
+    "result": 1.0,
+    "resource": 8.311,
+    "R": 0.1203224642040669,
+    "choices": {
+     "present|standard": 18
+    },
+    "failed_calls": 0,
+    "sec": 8.3
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 2.105,
+    "R": 0.4750593824228029,
+    "choices": {
+     "F:blind-b0|standard": 3,
+     "present|own": 5,
+     "F:reuse-b0|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 1091,
+    "sec": 3.4
+   },
+   "strongest": {
+    "result": 0.75,
+    "resource": 13.272,
+    "R": 0.05650994575045208,
+    "choices": {
+     "present|standard": 27
+    },
+    "failed_calls": 0,
+    "sec": 17.0
+   },
+   "composed": {
+    "result": 0.75,
+    "resource": 7.447,
+    "R": 0.10071169598496038,
+    "choices": {
+     "present|standard": 4,
+     "present|own": 12
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 8.0
+   },
+   "sec": 37
+  },
+  "react|732": {
+   "default": {
+    "result": 0.75,
+    "resource": 10.101,
+    "R": 0.07425007425007424,
+    "choices": {
+     "present|standard": 19
+    },
+    "failed_calls": 0,
+    "sec": 7.8
+   },
+   "seed3v1": {
+    "result": 0.75,
+    "resource": 8.839,
+    "R": 0.0848512275144247,
+    "choices": {
+     "F:blind-b0|standard": 4,
+     "present|own": 12
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 1451,
+    "sec": 8.8
+   },
+   "strongest": {
+    "result": 0.75,
+    "resource": 18.107,
+    "R": 0.04142044513171702,
+    "choices": {
+     "present|standard": 34
+    },
+    "failed_calls": 0,
+    "sec": 12.7
+   },
+   "composed": {
+    "result": 0.75,
+    "resource": 10.177,
+    "R": 0.07369558809079296,
+    "choices": {
+     "present|standard": 4,
+     "present|own": 15
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 8.5
+   },
+   "sec": 38
+  },
+  "selfcons|729": {
+   "default": {
+    "result": 0.75,
+    "resource": 26.354,
+    "R": 0.02845867799954466,
+    "choices": {
+     "present|standard": 43
+    },
+    "failed_calls": 0,
+    "sec": 36.5
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 10.65,
+    "R": 0.09389671361502347,
+    "choices": {
+     "F:blind-b0|standard": 3,
+     "F:blind-b1|standard": 1,
+     "stop|own": 4,
+     "present|standard": 6,
+     "F:blind-b1|own": 2,
+     "present|own": 1,
+     "F:blind-b0|own": 1,
+     "future+1|own": 2,
+     "future+1|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 4036,
+    "sec": 20.4
+   },
+   "strongest": {
+    "result": 0.75,
+    "resource": 30.177,
+    "R": 0.02485336514564072,
+    "choices": {
+     "present|standard": 43
+    },
+    "failed_calls": 0,
+    "sec": 37.8
+   },
+   "composed": {
+    "result": 0.5,
+    "resource": 17.106,
+    "R": 0.029229510113410496,
+    "choices": {
+     "present|standard": 13,
+     "stop|own": 3,
+     "future+2|standard": 1,
+     "present|own": 9,
+     "past-2|own": 1,
+     "open|standard": 1,
+     "open|own": 1,
+     "future+1|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 28.0
+   },
+   "sec": 123
+  },
+  "selfcons|730": {
+   "default": {
+    "result": 0.75,
+    "resource": 22.568,
+    "R": 0.03323289613612194,
+    "choices": {
+     "present|standard": 44
+    },
+    "failed_calls": 0,
+    "sec": 24.1
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 4.627,
+    "R": 0.2161227577263886,
+    "choices": {
+     "F:blind-b0|standard": 3,
+     "F:blind-b1|own": 4,
+     "stop|own": 4,
+     "present|standard": 1,
+     "F:reuse-b0|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 3635,
+    "sec": 14.9
+   },
+   "strongest": {
+    "result": 0.75,
+    "resource": 20.297,
+    "R": 0.03695127358722964,
+    "choices": {
+     "present|standard": 40
+    },
+    "failed_calls": 0,
+    "sec": 28.7
+   },
+   "composed": {
+    "result": 1.0,
+    "resource": 15.659,
+    "R": 0.06386103838048407,
+    "choices": {
+     "present|standard": 17,
+     "present|own": 8,
+     "stop|own": 3,
+     "past-1|own": 1,
+     "open|own": 2,
+     "future+1|own": 2
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 19.9
+   },
+   "sec": 88
+  },
+  "selfcons|731": {
+   "default": {
+    "result": 0.75,
+    "resource": 24.19,
+    "R": 0.03100454733360893,
+    "choices": {
+     "present|standard": 44
+    },
+    "failed_calls": 0,
+    "sec": 32.7
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 6.541,
+    "R": 0.15288182235132242,
+    "choices": {
+     "open|standard": 1,
+     "F:blind-b0|standard": 3,
+     "present|own": 4,
+     "present|standard": 2,
+     "stop|own": 3,
+     "F:blind-b1|own": 2,
+     "F:blind-b1|standard": 1,
+     "F:reuse-b0|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 3587,
+    "sec": 12.5
+   },
+   "strongest": {
+    "result": 0.75,
+    "resource": 17.307,
+    "R": 0.04333506673600278,
+    "choices": {
+     "present|standard": 32
+    },
+    "failed_calls": 0,
+    "sec": 19.4
+   },
+   "composed": {
+    "result": 1.0,
+    "resource": 10.332,
+    "R": 0.0967866821525358,
+    "choices": {
+     "open|standard": 2,
+     "C:see>trace>beam>step|policy": 2,
+     "past-1|standard": 9,
+     "stop|own": 4,
+     "past-1|own": 2,
+     "future+2|standard": 1,
+     "past-2|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 13.6
+   },
+   "sec": 78
+  },
+  "selfcons|732": {
+   "default": {
+    "result": 1.0,
+    "resource": 23.107,
+    "R": 0.043276929069113255,
+    "choices": {
+     "present|standard": 41
+    },
+    "failed_calls": 0,
+    "sec": 19.3
+   },
+   "seed3v1": {
+    "result": 0.75,
+    "resource": 13.467,
+    "R": 0.05569169079973268,
+    "choices": {
+     "F:blind-b0|standard": 4,
+     "F:blind-b1|own": 2,
+     "stop|own": 2,
+     "present|standard": 3,
+     "past-2|own": 1,
+     "future+1|standard": 3,
+     "future+2|own": 1,
+     "future+1|own": 5,
+     "present|own": 3
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 3947,
+    "sec": 15.6
+   },
+   "strongest": {
+    "result": 1.0,
+    "resource": 13.234,
+    "R": 0.07556294393229561,
+    "choices": {
+     "present|standard": 28
+    },
+    "failed_calls": 0,
+    "sec": 12.7
+   },
+   "composed": {
+    "result": 0.5,
+    "resource": 14.565,
+    "R": 0.03432887058015791,
+    "choices": {
+     "present|standard": 11,
+     "stop|own": 3,
+     "open|standard": 2,
+     "present|own": 8,
+     "focus-b0|standard": 1,
+     "focus-b1|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 14.8
+   },
+   "sec": 62
+  }
+ }
+}

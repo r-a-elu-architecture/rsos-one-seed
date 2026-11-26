@@ -1,0 +1,7 @@
+{
+ "url": "https://celestrak.org/NORAD/elements/gp.php?GROUP=planet&FORMAT=tle",
+ "fetched_utc": "2026-11-25T12:36:35+00:00",
+ "satellites": 116,
+ "first": "SKYSAT-A",
+ "sha256": "adc60fc7d0d46ae11c1330e1d09a78a00ac29b6701551720ae418f2cc9bfe037"
+}

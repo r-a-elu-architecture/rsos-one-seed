@@ -1,0 +1,30 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.r-a-elu-architecture/rsos",
+  "title": "RSOS State Runtime",
+  "description": "Multi-agent shared state in 2 model calls, not 42: hash-checked copies, drift healed at 0 calls",
+  "version": "0.4.0",
+  "websiteUrl": "https://r-a-elu-architecture.github.io/RSOS-Language/",
+  "repository": {
+    "url": "https://github.com/r-a-elu-architecture/RSOS-Language",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "rsoslang",
+      "version": "0.4.0",
+      "runtimeHint": "uvx",
+      "transport": {
+        "type": "stdio"
+      },
+      "packageArguments": [
+        {
+          "type": "positional",
+          "value": "mcp"
+        }
+      ]
+    }
+  ]
+}

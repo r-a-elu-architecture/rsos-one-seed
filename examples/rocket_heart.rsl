@@ -1,0 +1,23 @@
+# The rocket heart: a whole bundle transplanted, re-hosted, its frequency spreading; black becomes grey.
+# Source: owner, chat 1 T66, T95, T102; executed in C1-EXP-002 (the same bundle behaves differently per host).
+LANGUAGE RSOS 0.2
+WORLD rocket_worlds
+HOST body KIND human CHANNELS visual, auditory, kinesthetic
+HOST planet KIND planet
+OBJECT rocket KIND engine DOMAIN engineering
+PROPERTY rocket.propulsion = 1.0
+PROPERTY rocket.boundaries = "strong"
+PART body.heart KIND organ
+PART body.bones KIND structure
+USE HOST body
+CONSENT body FOR practice, cues BY body
+BASELINE body
+TRANSPLANT rocket TO body.heart AS rocket_heart
+FLOW rocket_heart DIRECTION vertical TO body
+FLOW rocket_heart DIRECTION horizontal TO body
+RESONATE body.bones WITH rocket_heart
+FLOW rocket_heart DIRECTION outward
+SHIFT planet.surface FROM black TO grey
+REHOST rocket_heart IN planet AS planet_core
+# D84 knowing form: the White Dragon chooses the part, depth, order and expected gain
+TRANSPLANT rocket TO body.heart FROM engineering DEPTH structure ORDER 1 GAIN efficiency

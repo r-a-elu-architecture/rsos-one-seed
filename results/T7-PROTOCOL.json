@@ -1,0 +1,25 @@
+{
+ "code_commit": "2f3a289dc8d623cd3cffced50aa8062b727d5564",
+ "experiment": "T7-PROTOCOL",
+ "numpy": "2.5.3",
+ "python": "3.13.18",
+ "results_sha256": "4f5a79bcc7d9e0eda0f775fa296844b2417e0ce495b888c07aea4d95d5d410aa",
+ "run_utc": "2026-11-16T19:33:24Z",
+ "summary": {
+  "H1_structure_vs_names": {
+   "names": 0.033,
+   "pass": true,
+   "structure": 0.983
+  },
+  "H2_constant_carrier": {
+   "pass": true,
+   "three": 0.983,
+   "two": 0.983
+  },
+  "H3_noise_10pct": {
+   "pass": false,
+   "structure": 0.475
+  },
+  "chat_reference": "EXP-008: relations 100% vs symbols 19.85%"
+ }
+}

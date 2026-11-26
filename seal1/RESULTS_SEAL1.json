@@ -1,0 +1,430 @@
+{
+ "road8": {
+  "cells": {
+   "B3|light|0.1": {
+    "beam": 0.8917,
+    "lockstep": 0.0472,
+    "whole": 0.4591
+   },
+   "B4|light|0.1": {
+    "beam": 0.9552,
+    "lockstep": 0.5452,
+    "whole": 0.9349
+   },
+   "B29|light|0.1": {
+    "beam": 0.9734,
+    "lockstep": 0.9734,
+    "whole": 0.9734
+   },
+   "B3|light|0.3": {
+    "beam": 0.1643,
+    "lockstep": 0.0103,
+    "whole": 0.0492
+   },
+   "B4|light|0.3": {
+    "beam": 0.746,
+    "lockstep": 0.023,
+    "whole": 0.1821
+   },
+   "B29|light|0.3": {
+    "beam": 0.9786,
+    "lockstep": 0.9774,
+    "whole": 0.9786
+   },
+   "B3|light|0.5": {
+    "beam": 0.0302,
+    "lockstep": 0.004,
+    "whole": 0.0187
+   },
+   "B4|light|0.5": {
+    "beam": 0.1187,
+    "lockstep": 0.0071,
+    "whole": 0.0369
+   },
+   "B29|light|0.5": {
+    "beam": 0.9671,
+    "lockstep": 0.9492,
+    "whole": 0.9496
+   },
+   "B3|radio|0.1": {
+    "beam": 0.7103,
+    "lockstep": 0.071,
+    "whole": 0.4266
+   },
+   "B4|radio|0.1": {
+    "beam": 0.8095,
+    "lockstep": 0.4952,
+    "whole": 0.6667
+   },
+   "B29|radio|0.1": {
+    "beam": 0.9762,
+    "lockstep": 0.9655,
+    "whole": 0.977
+   },
+   "B3|radio|0.3": {
+    "beam": 0.1635,
+    "lockstep": 0.0163,
+    "whole": 0.0825
+   },
+   "B4|radio|0.3": {
+    "beam": 0.396,
+    "lockstep": 0.0563,
+    "whole": 0.1829
+   },
+   "B29|radio|0.3": {
+    "beam": 0.9687,
+    "lockstep": 0.9452,
+    "whole": 0.9599
+   },
+   "B3|radio|0.5": {
+    "beam": 0.0298,
+    "lockstep": 0.004,
+    "whole": 0.0198
+   },
+   "B4|radio|0.5": {
+    "beam": 0.0806,
+    "lockstep": 0.0079,
+    "whole": 0.0476
+   },
+   "B29|radio|0.5": {
+    "beam": 0.975,
+    "lockstep": 0.9341,
+    "whole": 0.9365
+   },
+   "B3|matter|0.1": {
+    "beam": 0.9258,
+    "lockstep": 0.0401,
+    "whole": 0.594
+   },
+   "B4|matter|0.1": {
+    "beam": 0.9909,
+    "lockstep": 0.5956,
+    "whole": 0.9587
+   },
+   "B29|matter|0.1": {
+    "beam": 0.979,
+    "lockstep": 0.9786,
+    "whole": 0.9786
+   },
+   "B3|matter|0.3": {
+    "beam": 0.2036,
+    "lockstep": 0.0079,
+    "whole": 0.0595
+   },
+   "B4|matter|0.3": {
+    "beam": 0.802,
+    "lockstep": 0.027,
+    "whole": 0.2274
+   },
+   "B29|matter|0.3": {
+    "beam": 0.9806,
+    "lockstep": 0.9806,
+    "whole": 0.9798
+   },
+   "B3|matter|0.5": {
+    "beam": 0.0238,
+    "lockstep": 0.0008,
+    "whole": 0.0095
+   },
+   "B4|matter|0.5": {
+    "beam": 0.1794,
+    "lockstep": 0.004,
+    "whole": 0.0258
+   },
+   "B29|matter|0.5": {
+    "beam": 0.9841,
+    "lockstep": 0.9825,
+    "whole": 0.9774
+   }
+  },
+  "holo_share_beam": {
+   "B3|light|0.1": 0.132,
+   "B4|light|0.1": 0.115,
+   "B29|light|0.1": 0.097,
+   "B3|light|0.3": 0.104,
+   "B4|light|0.3": 0.385,
+   "B29|light|0.3": 0.305,
+   "B3|light|0.5": 0.033,
+   "B4|light|0.5": 0.13,
+   "B29|light|0.5": 0.481,
+   "B3|radio|0.1": 0.088,
+   "B4|radio|0.1": 0.104,
+   "B29|radio|0.1": 0.109,
+   "B3|radio|0.3": 0.069,
+   "B4|radio|0.3": 0.182,
+   "B29|radio|0.3": 0.278,
+   "B3|radio|0.5": 0.028,
+   "B4|radio|0.5": 0.081,
+   "B29|radio|0.5": 0.462,
+   "B3|matter|0.1": 0.11,
+   "B4|matter|0.1": 0.091,
+   "B29|matter|0.1": 0.102,
+   "B3|matter|0.3": 0.088,
+   "B4|matter|0.3": 0.308,
+   "B29|matter|0.3": 0.296,
+   "B3|matter|0.5": 0.032,
+   "B4|matter|0.5": 0.169,
+   "B29|matter|0.5": 0.468
+  },
+  "C1_beam_gt_lockstep": [
+   18,
+   18
+  ],
+  "C3_beam_gt_whole": [
+   18,
+   18
+  ],
+  "T29_max_abs_beam_minus_lockstep": 0.040899999999999936,
+  "caught_by_READY_beam": 531,
+  "zero": {
+   "exact": 42,
+   "sync_1": 42,
+   "runs": 42
+  },
+  "PASS": {
+   "C1": true,
+   "C3": true,
+   "C2": true
+  },
+  "ROW_PASS": true
+ },
+ "road10": {
+  "cells": 10,
+  "R1_joined_gt_best_alone": 10,
+  "R2_joined_gt_notubes": 9,
+  "R3_mean_gain2": 0.03412500000000004,
+  "R3_cells_gain2_pos": 9,
+  "R4_each_not_worse_than_alone": 9,
+  "R5_landed_above_joined": 0,
+  "R6_pool_over_ticks": 0,
+  "R7_transfer_need_precision": 0.9671052631578947,
+  "events_joined": {
+   "freed": 1676,
+   "transfers": 181,
+   "refused": 29,
+   "would_harm": 40,
+   "landed_above": 0,
+   "pool_over": 0,
+   "tr_need": 147,
+   "tr_total": 152,
+   "no_consent": 2,
+   "rotation_hold": 297,
+   "joint_gate": 39
+  },
+  "mean_G": {
+   "joined": 0.9658472222222223,
+   "notubes": 0.9317222222222222,
+   "aloneA": 0.898076388888889,
+   "aloneB": 0.9101666666666667,
+   "native": 0.87525
+  },
+  "PASS": {
+   "R1": true,
+   "R2": true,
+   "R3": true,
+   "R4": false,
+   "R5": true,
+   "R6": true,
+   "R7": true
+  },
+  "ROW_PASS": false
+ },
+ "laws": {
+  "EXACT": [
+   6,
+   6
+  ],
+  "v5m_events": {
+   "withheld": 1727,
+   "retarget": 51,
+   "refused": 12,
+   "gate": 287
+  },
+  "L0": [
+   19,
+   21
+  ],
+  "L4": [
+   21,
+   21
+  ],
+  "v5m_made_precision_median": 0.9947089947089947,
+  "L1p": [
+   184,
+   184
+  ],
+  "L1": [
+   213,
+   214
+  ],
+  "L2": [
+   214,
+   214
+  ],
+  "C2": [
+   209,
+   214
+  ],
+  "LE": [
+   55,
+   65
+  ],
+  "L5": [
+   17,
+   21
+  ],
+  "L3": [
+   14,
+   21
+  ],
+  "L3_parts": {
+   "keep": 21,
+   "gradual": 19,
+   "drop<=nat": 14
+  },
+  "PR": {
+   "neg_cells": 21,
+   "cells": 21,
+   "mean_rho": -0.6893528389927939
+  },
+  "RC": {
+   "cost": 20,
+   "margin": 21,
+   "cells": 21
+  },
+  "C1_conflicts": 0,
+  "PASS": {
+   "EXACT": true,
+   "L0": true,
+   "L1p": true,
+   "L1": true,
+   "L2": true,
+   "LE": false,
+   "L4": true,
+   "L5": false,
+   "L3": false,
+   "C2": true,
+   "C1": true,
+   "PR": true,
+   "RC": true
+  },
+  "ROW_PASS": false
+ },
+ "law4_noise_free": {
+  "shades": [
+   {
+    "v": 1,
+    "precision": 0.9704142011834319,
+    "landings": 169
+   },
+   {
+    "v": 3,
+    "precision": 0.9832402234636871,
+    "landings": 179
+   },
+   {
+    "v": 5,
+    "precision": 0.9497206703910615,
+    "landings": 179
+   },
+   {
+    "v": 7,
+    "precision": 0.9704142011834319,
+    "landings": 169
+   },
+   {
+    "v": 9,
+    "precision": 0.9813664596273292,
+    "landings": 161
+   },
+   {
+    "v": 11,
+    "precision": 0.8932584269662921,
+    "landings": 178
+   },
+   {
+    "v": 13,
+    "precision": 0.9746192893401016,
+    "landings": 197
+   },
+   {
+    "v": 15,
+    "precision": 0.9935064935064936,
+    "landings": 154
+   },
+   {
+    "v": 17,
+    "precision": 0.9189189189189189,
+    "landings": 148
+   },
+   {
+    "v": 19,
+    "precision": 0.7721518987341772,
+    "landings": 158
+   },
+   {
+    "v": 21,
+    "precision": 0.7945205479452055,
+    "landings": 146
+   }
+  ],
+  "pass": false
+ },
+ "org8": {
+  "n_green": 21,
+  "green": {
+   "1": true,
+   "2": true,
+   "3": true,
+   "4": true,
+   "5": true,
+   "6": true,
+   "7": true,
+   "8": true,
+   "9": true,
+   "10": true,
+   "11": true,
+   "12": true,
+   "13": true,
+   "14": true,
+   "15": true,
+   "16": true,
+   "17": true,
+   "18": true,
+   "19": true,
+   "20": true,
+   "21": true
+  },
+  "rows": {
+   "Information theory": true,
+   "Protocol theory": true,
+   "Databases": true,
+   "Ledgers, finance, economics": true,
+   "Human reasoning (the house)": true,
+   "Linguistics, human-AI comms": true,
+   "Earth and space sciences": true,
+   "B \u00b7 protocol between machines; first beam": true,
+   "Mathematics: operator algebra, theorems, zoom": true,
+   "Distributed systems": true,
+   "Mathematics (domain)": true,
+   "C \u00b7 same laws on many hosts": true
+  }
+ },
+ "COLOURS": {
+  "8 Physical layer and first beam": "turquoise",
+  "10 Domains with partners": "not turquoise",
+  "All laws as mathematics": "not turquoise",
+  "Information theory (re-check)": "turquoise",
+  "Protocol theory (re-check)": "turquoise",
+  "Databases (re-check)": "turquoise",
+  "Ledgers, finance, economics (re-check)": "turquoise",
+  "Human reasoning (the house) (re-check)": "turquoise",
+  "Linguistics, human-AI comms (re-check)": "turquoise",
+  "Earth and space sciences (re-check)": "turquoise",
+  "B \u00b7 protocol between machines; first beam (re-check)": "turquoise",
+  "Mathematics: operator algebra, theorems, zoom (re-check)": "turquoise",
+  "Distributed systems (re-check)": "turquoise",
+  "Mathematics (domain) (re-check)": "turquoise",
+  "C \u00b7 same laws on many hosts (re-check)": "turquoise"
+ }
+}

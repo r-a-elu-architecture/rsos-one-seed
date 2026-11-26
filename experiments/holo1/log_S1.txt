@@ -1,0 +1,127 @@
+{
+ "seed": 1,
+ "leak": 0.5,
+ "rho": 0.95,
+ "N": 700,
+ "V": 31,
+ "beta": 14,
+ "readout_heldout_acc": 0.8325,
+ "corpus_chars": 329247,
+ "corpus_sha256": "e1410f9b5e2b6541420d02795e6f52b667892be9cfc362d77c3dae246bbe5135",
+ "H1": {
+  "snapshots": 92,
+  "identical_consecutive": 0,
+  "min_dist": 3.2358264247300377,
+  "median_dist": 5.027155174623966
+ },
+ "H2": {
+  "pairs": 15,
+  "identical_pairs": 0,
+  "min_dist": 0.03801667098675927,
+  "mean_dist": 0.08560242734081358
+ },
+ "H3": {
+  "messages": 240,
+  "distinct_messages": 115,
+  "chance": 0.1667,
+  "acc_words_free": 0.1458,
+  "perm_p": 0.8012,
+  "maxdist_identical_words_control": 0.0,
+  "examples": {
+   "tired": "go eat the soup.",
+   "happy": "go eat the soup.",
+   "angry": "go eat the soup.",
+   "worried": "go eat the soup.",
+   "hungry": "go eat the soup.",
+   "calm": "go eat the soup."
+  }
+ },
+ "H5": {
+  "acc_decode_A_pre": 1.0,
+  "acc_decode_A_post": 0.15,
+  "horizon_chars": 10,
+  "profile_words_holo_random_by_horizon": {
+   "0": [
+    0.1458,
+    0.3375,
+    0.1458
+   ],
+   "5": [
+    0.1417,
+    0.3875,
+    0.1375
+   ],
+   "10": [
+    0.1125,
+    0.4667,
+    0.1167
+   ],
+   "20": [
+    0.1292,
+    0.4583,
+    0.1375
+   ],
+   "43": [
+    0.1542,
+    0.3292,
+    0.1458
+   ]
+  },
+  "acc_words_only": 0.1125,
+  "acc_words_plus_hologram": 0.4667,
+  "acc_words_plus_random_same_norm": 0.1167,
+  "perm_p_hologram": 0.001,
+  "align_to_A_words": -0.0056,
+  "align_to_A_hologram": 0.0515
+ },
+ "H4": {
+  "effect": 2.197814593328322,
+  "noise_floor_median": 3.1327376603436745,
+  "ratio": 0.702,
+  "messages": 40
+ },
+ "H6": {
+  "trials": 40,
+  "frac_text_changed_per_node": [
+   0.075,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "mean_state_dist_per_node": [
+   0.1839,
+   0.0039,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "reached_node5_frac": 0.0,
+  "amplify_nodes": [],
+  "dampen_nodes": [
+   "computer",
+   "company"
+  ]
+ },
+ "H7": {
+  "effect_per_turn_oldest_first": [
+   3.4853191028568327e-13,
+   5.0915892330780315e-11,
+   2.3502498818343666e-09,
+   3.7211596792012475e-07,
+   1.1380199752951653e-05,
+   0.0009161142226198981,
+   0.19424739423161289,
+   9.668822513824264
+  ],
+  "zero_effects": 0,
+  "min_effect": 3.4853191028568327e-13
+ },
+ "H8": {
+  "mean_cross_domain_rdm_spearman": 0.9595,
+  "null_mean": 0.0019,
+  "null_95pct": 0.0694,
+  "perm_p": 0.001
+ },
+ "runtime_s": 134.4
+}

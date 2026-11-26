@@ -1,0 +1,42 @@
+{
+ "M1_best_single": {
+  "wins": 0,
+  "mean": -0.008472222222222199,
+  "cells": 14,
+  "pass": false
+ },
+ "M2_flat": {
+  "wins": 6,
+  "mean": -0.0003968253968254113,
+  "cells": 14,
+  "pass": false
+ },
+ "M3_shuffled": {
+  "wins": 4,
+  "mean": -0.003392857142857118,
+  "cells": 14,
+  "pass": false
+ },
+ "M4_channels": {
+  "ok": 5,
+  "cells": 14,
+  "pass": false
+ },
+ "mean_G": {
+  "house": 0.9099107142857141,
+  "flat": 0.9103075396825396,
+  "shuffled": 0.9133035714285717,
+  "single_vote": 0.9116964285714285,
+  "single_memory": 0.912390873015873,
+  "single_cs": 0.9148908730158732,
+  "single_apoptosis": 0.9120436507936507,
+  "single_membrane": 0.9100595238095238,
+  "native": 0.8649007936507936
+ },
+ "rooms_used": {
+  "stable": 261,
+  "uncertain": 265,
+  "overload": 314
+ },
+ "ROW_PASS": false
+}

@@ -1,0 +1,151 @@
+{
+ "row": "ai_agents",
+ "model": "openrouter:meta-llama/llama-3.1-8b-instruct",
+ "stage": 1,
+ "pair": 0,
+ "cells": {
+  "react|201": {
+   "default": {
+    "result": 0.25,
+    "resource": 5.634,
+    "R": 0.04437344692935747,
+    "choices": {
+     "present|standard": 13
+    },
+    "failed_calls": 3
+   },
+   "seed3v1": {
+    "result": 0.0,
+    "resource": 4.365,
+    "R": 0.0,
+    "choices": {
+     "F:blind-b0|standard": 3,
+     "present|own": 12,
+     "present|standard": 1
+    },
+    "failed_calls": 3,
+    "policy_fallback_steps": 1106
+   },
+   "strongest": {
+    "result": 0.0,
+    "resource": 27.318,
+    "R": 0.0,
+    "choices": {
+     "present|standard": 31
+    },
+    "failed_calls": 2
+   },
+   "sec": 110
+  },
+  "react|202": {
+   "default": {
+    "result": 0.0,
+    "resource": 3.937,
+    "R": 0.0,
+    "choices": {
+     "present|standard": 12
+    },
+    "failed_calls": 3
+   },
+   "seed3v1": {
+    "result": 0.0,
+    "resource": 10.126,
+    "R": 0.0,
+    "choices": {
+     "F:blind-b0|standard": 4,
+     "present|own": 20
+    },
+    "failed_calls": 3,
+    "policy_fallback_steps": 1523
+   },
+   "strongest": {
+    "result": 0.0,
+    "resource": 44.417,
+    "R": 0.0,
+    "choices": {
+     "present|standard": 43
+    },
+    "failed_calls": 1
+   },
+   "sec": 116
+  },
+  "selfcons|201": {
+   "default": {
+    "result": 0.25,
+    "resource": 56.175,
+    "R": 0.004450378282153983,
+    "choices": {
+     "present|standard": 43
+    },
+    "failed_calls": 0
+   },
+   "seed3v1": {
+    "result": 0.0,
+    "resource": 15.328,
+    "R": 0.0,
+    "choices": {
+     "F:blind-b0|standard": 3,
+     "present|standard": 2,
+     "open|own": 2,
+     "present|own": 8,
+     "focus-b0|own": 7,
+     "stop|own": 1,
+     "F:reuse-b0|standard": 1,
+     "past-2|own": 2,
+     "future+1|standard": 1
+    },
+    "failed_calls": 1,
+    "policy_fallback_steps": 2445
+   },
+   "strongest": {
+    "result": 0.0,
+    "resource": 33.516,
+    "R": 0.0,
+    "choices": {
+     "present|standard": 32
+    },
+    "failed_calls": 2
+   },
+   "sec": 107
+  },
+  "selfcons|202": {
+   "default": {
+    "result": 0.0,
+    "resource": 59.388,
+    "R": 0.0,
+    "choices": {
+     "present|standard": 52
+    },
+    "failed_calls": 0
+   },
+   "seed3v1": {
+    "result": 0.25,
+    "resource": 18.871,
+    "R": 0.013247840601981878,
+    "choices": {
+     "F:blind-b0|standard": 2,
+     "F:blind-b1|own": 3,
+     "present|standard": 4,
+     "stop|own": 1,
+     "open|standard": 3,
+     "past-1|own": 2,
+     "F:blind-b0|own": 1,
+     "future+1|standard": 1,
+     "present|own": 8
+    },
+    "failed_calls": 2,
+    "policy_fallback_steps": 2045
+   },
+   "strongest": {
+    "result": 0.0,
+    "resource": 39.608,
+    "R": 0.0,
+    "choices": {
+     "present|standard": 44
+    },
+    "failed_calls": 0
+   },
+   "sec": 88
+  }
+ }
+}

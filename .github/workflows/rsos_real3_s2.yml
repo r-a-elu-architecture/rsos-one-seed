@@ -1,0 +1,73 @@
+# REAL3 sealed run, stage 2: only the units the sealed rule left UNDECIDED after stage 1 (real/REAL3_STAGE2_UNITS.json,
+# written by analyze_real3.py in stage 1 and committed unchanged); cells 209-216.
+name: rsos-real3-s2
+on:
+  push:
+    branches: [core-v1]
+    paths: ["cloud/trigger_real3_s2.txt"]
+permissions:
+  contents: write
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      m: ${{ steps.m.outputs.m }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: m
+        run: python3 -c "import json;u=json.load(open('real/REAL3_STAGE2_UNITS.json'));print('m='+json.dumps([f\"{x['row']} {x['model']} {p} 2\" for x in u for p in range(4)]))" >> $GITHUB_OUTPUT
+  unit:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 345
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        u: ${{ fromJSON(needs.plan.outputs.m) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install numpy scipy pandas scikit-learn requests qiskit qiskit-aer pvlib gymnasium skyfield dandi pynwb tiktoken mistral-common && pip install --no-deps llama-models
+      - name: real data for this row
+        run: |
+          set -- ${{ matrix.u }}
+          if [ "$1" = space ]; then python real/hosts/space_fetch.py; fi
+          if [ "$1" = neuro ]; then python real/hosts/neuro_fetch.py --out /tmp/neuro.npz --dir /tmp/dandi; fi
+          if [ "$1" = ai_human ]; then python real/hosts/ai_human_fetch.py; fi
+      - run: python cloud/real3_unit.py ${{ matrix.u }}
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          REASONING_EFFORT: low
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: real3-s2-${{ strategy.job-index }}
+          path: real/out3/
+  analyze:
+    needs: unit
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install scipy
+      - name: collect (stage 2 also reads the stage-1 outputs from cloud-results)
+        run: |
+          mkdir -p real/out3
+          git fetch origin cloud-results
+          if [ 2 = 2 ]; then git archive origin/cloud-results real3/out3 | tar -x -C /tmp && cp /tmp/real3/out3/*.json real/out3/; fi
+      - uses: actions/download-artifact@v4
+        with:
+          path: /tmp/art
+      - run: cp /tmp/art/*/*.json real/out3/ 2>/dev/null; ls real/out3 | wc -l && python real/analyze_real3.py
+      - name: push results to cloud-results
+        if: always()
+        run: |
+          git config user.name "rsos-cloud"; git config user.email "rsos-cloud@users.noreply.github.com"
+          mkdir -p /tmp/r3 && cp -r real/out3 real/RESULTS_REAL3.* real/REAL3_22_UNITS.json /tmp/r3/ 2>/dev/null || true
+          git checkout cloud-results
+          rm -rf real3 && mkdir -p real3 && cp -r /tmp/r3/. real3/
+          git add real3 && git commit -qm "REAL3 sealed run stage 2 ${{ github.run_id }}" && git push -q origin cloud-results

@@ -1,0 +1,15 @@
+{
+ "chosen": "rsos_01100",
+ "continue": true,
+ "accuracy": {
+  "plain": 0.01,
+  "react": 0.83,
+  "reflexion": 0.87,
+  "planexec": 0.87,
+  "rsos_01100": 0.91,
+  "rsos_11011": 0.89,
+  "rsos_11111": 0.88,
+  "rsos_11110": 0.86,
+  "selfcons": 0.89
+ }
+}

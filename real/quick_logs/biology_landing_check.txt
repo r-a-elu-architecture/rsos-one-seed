@@ -1,0 +1,28 @@
+1 [cancer/sym25] seed(landing) test 0.9766 resource 170 (REAL2 log check) steps with 0 examples 282/300; examples per step hist {0: 282, 4: 1, 5: 1, 6: 3, 7: 1, 10: 4, 12: 8}
+1 default     test 0.8713 val 0.8125 resource 3600
+1 seed_replay test 0.9766 val 1.0000 resource 170
+1 rand_same   test mean 0.7649 [0.7018 0.7778 0.8363 0.7485 0.7602] val mean 0.6825 resource 170
+1 small_same  test 0.9708 val 0.9500 resource 170
+1 warm_only   test 0.9649 val 0.9625 resource 0
+1 time 158s
+2 [cancer/asym30] seed(landing) test 0.9708 resource 215 (REAL2 log check) steps with 0 examples 275/300; examples per step hist {0: 275, 2: 1, 4: 1, 5: 2, 6: 2, 7: 2, 8: 2, 9: 4, 11: 11}
+2 default     test 0.9181 val 0.9625 resource 3300
+2 seed_replay test 0.9708 val 0.9875 resource 215
+2 rand_same   test mean 0.6503 [0.6199 0.6316 0.5906 0.6725 0.7368] val mean 0.7350 resource 215
+2 small_same  test 0.9006 val 0.9250 resource 215
+2 warm_only   test 0.1228 val 0.1375 resource 0
+2 time 167s
+3 [wine/sym25] seed(landing) test 0.9074 resource 105 (REAL2 log check) steps with 0 examples 287/300; examples per step hist {0: 287, 2: 1, 4: 2, 5: 2, 7: 1, 9: 1, 10: 1, 11: 1, 12: 4}
+3 default     test 0.8704 val 0.8800 resource 3600
+3 seed_replay test 0.9074 val 1.0000 resource 105
+3 rand_same   test mean 0.9037 [0.9259 0.8889 0.9074 0.9074 0.8889] val mean 0.9120 resource 105
+3 small_same  test 0.9074 val 0.8400 resource 105
+3 warm_only   test 0.8704 val 0.8400 resource 0
+3 time 293s
+4 [wine/asym30] seed(landing) test 0.8889 resource 161 (REAL2 log check) steps with 0 examples 276/300; examples per step hist {0: 276, 2: 2, 3: 1, 4: 5, 5: 1, 6: 5, 7: 2, 8: 1, 11: 7}
+4 default     test 0.6481 val 0.7200 resource 3300
+4 seed_replay test 0.8889 val 1.0000 resource 161
+4 rand_same   test mean 0.7000 [0.7593 0.6481 0.6481 0.6852 0.7593] val mean 0.8000 resource 161
+4 small_same  test 0.7407 val 0.7600 resource 161
+4 warm_only   test 0.5000 val 0.4400 resource 0
+4 time 279s

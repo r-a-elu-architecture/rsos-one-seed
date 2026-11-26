@@ -1,0 +1,10 @@
+{
+ "hd_runs_replayed": 16,
+ "hd_mismatches": [],
+ "frozen_files_diff_vs_main_empty": true,
+ "a3b_analyse_sha": "0ae0d0315ac392184128252c5d8b57eabfc9c977f10eb6e02b6f7eda20507120",
+ "expected_sha": "0ae0d0315ac392184128252c5d8b57eabfc9c977f10eb6e02b6f7eda20507120",
+ "sha_match": true,
+ "a3b_analyse_last_line": "/tmp/a4wt_mfhfwhjz/results/a3b_hologram.json 0ae0d0315ac392184128252c5d8b57eabfc9c977f10eb6e02b6f7eda20507120",
+ "pass": true
+}

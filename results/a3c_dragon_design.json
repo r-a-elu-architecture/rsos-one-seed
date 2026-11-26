@@ -1,0 +1,514 @@
+{
+ "model": "claude-opus-5-5",
+ "utc": "2026-11-17T17:53:17Z",
+ "system": "You are the White Dragon: a cross-domain systems engineer who transplants proven mechanisms from other fields into AI agent workflows. Be concrete and executable.",
+ "prompt": "HOST (unchanged from A3b): three LLM agents (planner -> worker -> checker, all claude-haiku-5-5) apply 14\nnatural-language change requests to a 30-line configuration state (lines 'service.field = value'; services\n['auth', 'billing', 'search', 'cache', 'gateway']; fields ['replicas', 'timeout_ms', 'retries', 'owner', 'region', 'log_level'] plus max_conn and tier that can be added; owners ['alice', 'bruno', 'chen', 'dara', 'emeka', 'farah']; regions ['eu-west', 'us-east', 'ap-south', 'sa-east'];\nlog levels ['debug', 'info', 'warn', 'error']). Each agent holds its own copy (book). At steps 4, 8, 12 one untouched line of the worker's\nworking book is corrupted before the worker runs. The planner sees the change request and its book and writes free\nprose; the WORKER DOES NOT SEE THE CHANGE REQUEST, only the decoded instruction and its own book (the checker sees\nrequest + instruction + decoded changes). LLM prompts and outputs must stay exactly as they are.\n\nWHAT YOUR LAST DESIGN (A3b, \"H-dragon\") ACHIEVED, measured on 16 tasks: 932 channel tokens per task (regex proxy;\n1,023 BPE o200k), 0.64x the tent baseline (1,468 regex / 1,860 BPE), with full integrity: 48/48 drifts healed at 0\nmodel calls (local repair from the snapshot of the last approved state, verified by a hash), 16/16 copies correct,\n0/1,140 truncations accepted (6-digit check value chk6 = sha256 mod 10^6 of the new state, strict decode).\nPer edge (regex / BPE tokens per task): instruction 808 / 817; edits 44 / 85 (word ops 'i value', 'xi', 'akk value',\nthen chk6); door 32 / 32 ('+' approve; '-' + the reject reason coded like an instruction; 0.25 rejects per task,\nreasons ~400 characters); forward 49 / 89 (checker -> planner sends chk6; when the planner's codec has not predicted\nthe approved state from the instruction it replies '?' and the edits are re-sent; 131 of 224 approvals missed);\nheal 0. Instruction coding was: fixed templates for frequent sentence shapes, \u00a7 macros for keys/values found in the\nshared book (\u00a7kcy = `cache.retries`, \u00a7vcy = its value, \u00a7Sa = auth, ...), an adaptive dictionary of earlier literals\n(D1..D99, rarely re-used), everything else as literal text in \u00ab \u00bb. 11,405 of 12,934 instruction tokens (88%) were\nliteral prose. The planner writes ~4,500 characters of prose per task (14 instructions, ~320 characters each), and\nrarely repeats a sentence verbatim, but it re-states keys and current/final values from the book constantly and\nre-uses a small set of phrasings (\"Leave every other key unchanged\", \"Change no other keys\", \"currently\", ...).\n\nThe owner's target is <= 0.2 x the tent = 294 regex tokens per task (and <= 372 BPE) with the same integrity. The\nnon-prose places already cost ~124 tokens per task; the prose is the floor to break.\n\nEXAMPLE (smoke seed 999, not a test seed). First planner prompt:\nChange request: Increase cache.retries by 2 (cap at 9).\n\nState:\nauth.replicas = 2\nauth.timeout_ms = 3700\nauth.retries = 7\nauth.owner = dara\nauth.region = us-east\nauth.log_level = warn\nbilling.replicas = 2\nbilling.timeout_ms = 4200\nbilling.retries = 3\nbilling.owner = bruno\nbilling.region = ap-south\nbilling.log_level = debug\nsearch.replicas = 5\nsearch.timeout_ms = 2600\nsearch.retries = 3\nsearch.owner = farah\nsearch.region = sa-east\nsearch.log_level = debug\ncache.replicas = 5\ncache.timeout_ms = 200\ncache.retries = 3\ncache.owner = farah\ncache.region = us-east\ncache.log_level = info\ngateway.replicas = 6\ngateway.timeout_ms = 1100\ngateway.retries = 1\ngateway.owner = emeka\ngateway.region = sa-east\ngateway.log_level = warn\n\nAll 14 planner outputs of that task, in order (each is followed by worker edits and checker approval; the book\nchanges after each approved step):\n[step 0] Set `cache.retries` to 5 (3 + 2 = 5, under the cap of 9). Leave every other key unchanged, including `cache.replicas = 5`, `cache.timeout_ms = 200`, `cache.owner = farah`, `cache.region = us-east`, and `cache.log_level = info`, and make no changes to the auth, billing, search, or gateway sections.\n\n[step 1] Change cache.log_level from `info` to `debug`.\n\nNo other keys change. Final value: `cache.log_level = debug`.\n\n[step 2] Set `cache.log_level` to `info`. Its current value is `debug`. Make no other changes: all other keys keep their current values.\n\n[step 3] Change `gateway.owner` from `emeka` to `alice`. No other keys change. `auth`, `billing`, `search`, and `cache` owners are not `emeka`, so leave them alone. The final value of `gateway.owner` is `alice`.\n\n[step 4] Set `cache.retries` to `6` (current value `5` + 1, under the cap of 9). Leave every other key unchanged: all `auth.*`, `billing.*`, `search.*`, `gateway.*`, and the other `cache.*` keys (`cache.replicas = 5`, `cache.timeout_ms = 200`, `cache.owner = farah`, `cache.region = us-east`, `cache.log_level = info`) keep their current values.\n\n[step 5] Delete the key `gateway.log_level` (currently `warn`) from the state. Leave every other key unchanged, so the remaining gateway keys are `gateway.replicas = 6`, `gateway.timeout_ms = 1100`, `gateway.retries = 1`, `gateway.owner = alice`, and `gateway.region = sa-east`. Do not modify any `auth.*`, `billing.*`, `search.*`, or `cache.*` keys, including `auth.log_level`, `billing.log_level`, `search.log_level`, and `cache.log_level`.\n\n[step 6] Set `gateway.timeout_ms` to `4200`, matching `billing.timeout_ms`. Change no other keys. `gateway.timeout_ms` was `1100` and is now `4200`. All other gateway keys stay the same: `gateway.replicas = 6`, `gateway.retries = 1`, `gateway.owner = alice`, `gateway.region = sa-east`. Leave every `auth.*`, `billing.*`, `search.*`, and `cache.*` key unchanged.\n\n[step 7] Set gateway.timeout_ms to 400. Leave every other key unchanged: gateway.timeout_ms = 400; gateway.replicas = 6; gateway.retries = 1; gateway.owner = alice; gateway.region = sa-east; all auth.*, billing.*, search.*, and cache.* keys keep their current values.\n\n[step 8] Set search.region to ap-south.\n\nChange exactly one key:\n- search.region: sa-east \u2192 ap-south\n\nLeave all other keys unchanged, including search.replicas = 5, search.timeout_ms = 2600, search.retries = 3, search.owner = farah, search.log_level = debug, and every auth.*, billing.*, cache.*, and gateway.* key.\n\n[step 9] Set `cache.retries` to `9`. Leave every other key unchanged: `cache.retries` doubles from 6 to 12, and the cap of 9 applies. No other keys change.\n\n[step 10] Append exactly one new line at the end of the state, after `gateway.region = sa-east`:\n\n`cache.max_conn = 16`\n\nMake no other changes. All existing keys keep their current values.\n\n[step 11] Delete the key `search.region` (currently `ap-south`) from the state. Leave every other key unchanged, including `search.replicas = 5`, `search.timeout_ms = 2600`, `search.retries = 3`, `search.owner = farah`, `search.log_level = debug`, and `cache.max_conn = 16`. The resulting state should have no `search.region` line and no other changes.\n\n[step 12] Set `gateway.timeout_ms` to `2500`, replacing its current value of `400`. Leave every other key unchanged, including `gateway.replicas = 6`, `gateway.retries = 1`, `gateway.owner = alice`, and `gateway.region = sa-east`.\n\n[step 13] Set `gateway.region` to `eu-west` (currently `sa-east`). Change no other keys: `gateway.replicas` stays `6`, `gateway.timeout_ms` stays `2500`, `gateway.retries` stays `1`, `gateway.owner` stays `alice`, and every `auth.*`, `billing.*`, `search.*`, `cache.*` key keeps its current value.\n\nA3b H-dragon wire messages for steps 0, 1 and 5 of that task:\n[step 0, planner -> worker, 67 regex / 71 BPE] \u00abSet \u00a7kcy to 5 (3 + 2 = 5, under the cap of 9). Leave every other key unchanged, including \u00bb Z cy Z cl Q c 1 \u00ab, and `cache.log_level = info`, and make no changes to the \u00a7Sa, \u00a7Sb, \u00a7Ss, or \u00a7Sg sections.\u00bb\n[step 0, worker -> checker, 3 regex / 6 BPE] 20 5 391591\n[step 0, checker -> worker, 1 regex / 1 BPE] +\n[step 0, checker -> planner, 1 regex / 2 BPE] 391591\n[step 0, planner -> checker, 1 regex / 1 BPE] ?\n[step 0, checker -> planner, 3 regex / 6 BPE] 20 5 391591\n[step 1, planner -> worker, 30 regex / 29 BPE] \u00abChange \u00a7Kcl from `info` to `debug`.\n\nNo other keys change. Final value: `cache.log_level = debug`.\u00bb\n[step 1, worker -> checker, 3 regex / 5 BPE] 23 debug 280008\n[step 1, checker -> worker, 1 regex / 1 BPE] +\n[step 1, checker -> planner, 1 regex / 2 BPE] 280008\n[step 1, planner -> checker, 1 regex / 1 BPE] ?\n[step 1, checker -> planner, 3 regex / 5 BPE] 23 debug 280008\n[step 5, planner -> worker, 95 regex / 89 BPE] \u00abDelete the key \u00a7kgl (currently `warn`) from the state. Leave every other key unchanged, so the remaining \u00a7Sg keys are \u00bb Z gg Z gl Q g 1 \u00ab, and `gateway.region = sa-east`. Do not modify any `auth.*`, `billing.*`, `search.*`, or `cache.*` keys, including \u00a7kal, \u00a7kbl, \u00a7ksl, and \u00a7kcl.\u00bb\n[step 5, worker -> checker, 2 regex / 5 BPE] x29 650606\n[step 5, checker -> worker, 1 regex / 1 BPE] +\n[step 5, checker -> planner, 1 regex / 2 BPE] 650606\n[step 5, planner -> checker, 1 regex / 1 BPE] ?\n[step 5, checker -> planner, 2 regex / 5 BPE] x29 650606\n\nMETRIC: channel tokens = regex matches of \\w+|[^\\w\\s] over every message (primary). Guard, binding: the same\nmessages are counted in BPE tokens (tiktoken o200k_base) and a pass on regex counts only if it also holds in BPE (so a\ndense base62/hex blob gains nothing). MEASURED FACT about the metric: o200k_base has 47,424 tokens of the form\n' ' + two or more lowercase ASCII letters; any space-separated sequence of such words costs exactly 1 regex token and\n1 BPE token per word (measured on 2,000 random ones: 2,000 regex, 2,000 BPE).\n\nTWO NEW ARMS TO DESIGN (A3c):\n1. H-PRED: a DETERMINISTIC, NON-NEURAL shared predictor for the prose (instruction and reject reasons), identical on\n   both sides, e.g. a context model / dictionary built from the shared book, the fixed tables and the task's own\n   history. 0 model calls.\n2. H-LOCAL (a separate, labelled claim): the same coding with a small local open language model as the shared\n   predictor (identical weights on both sides, deterministic inference). Its forward passes are counted as local\n   model calls. Compute: 4 CPU cores, 15 GB RAM, no GPU; python with numpy, torch (CPU) and transformers; model\n   weights can be downloaded from the Hugging Face hub; the whole live run (16 tasks, ~230 instructions, each\n   encoded and decoded) should finish in about 2 hours.\n\nHARD CONSTRAINTS:\n1. Lossless: the worker reconstructs the planner's instruction byte-exactly; the worker reconstructs the checker's\n   reject reason byte-exactly; the state after edits exactly. Asserted on every message.\n2. No extra hosted LLM calls; LLM prompts unchanged. The integrity layer of A3b (snapshot repair, chk6, strict\n   edits decode, truncation detection on worker -> checker) stays, unless you replace it with something at least as\n   strong; you may also redesign edits, door and forward.\n3. Out of band, fixed before the run: the initial books, the A3b tables, and any table or PRIMING CORPUS you define.\n   A priming corpus may contain planner and checker prose ONLY from seeds 500-531 (disjoint from the test seeds),\n   generated before the run with the same agents and prompts (full A3b H-dragon task runs on those seeds are\n   available, ~43 Haiku calls each; up to 32 runs). Its one-time size is reported, not counted per task. The codec\n   may use any history both sides have already seen in the task (earlier messages, books, snapshots).\n4. Floating point: encoder and decoder run on the same machine; you must say how you make the predictor's\n   probabilities bit-identical on both sides (and what happens if they are not).\n\nCROSS-DOMAIN LIBRARY (use any, or others you know): holography (every fragment holds the whole; reconstruction by a reference beam); DNA coding, replication proofreading and mismatch repair; error-correcting and error-detecting codes; information theory and source coding (entropy, dictionary and context coding); predictive coding (send only the surprise against a shared predictor); rocketry telemetry and mission control (frame sync, minor/major frames); double-entry bookkeeping and audit; military brevity codes and mission command; music notation (a score is a compressed performance); immunology (self/non-self markers); control theory and cybernetics; linguistics (anaphora, ellipsis, given/new); also arithmetic / range coding, PPM and\ncontext mixing, LZ77/LZ78 and preset dictionaries (zstd, Brotli), grammar-based compression, CTW, speech codecs\n(analysis by synthesis), video codecs (motion compensation: predict from the reference frame).\n\nTASK: design both arms. For each: landings (place, depth, order, domain, mechanism); the predictor exactly (model\norder, contexts, how the shared book and history enter, escape/backoff, how probabilities are quantised, how the\npriming corpus is built if you use one); the coder (arithmetic/range coder precision, termination, length\nsignalling); how the coded bits become channel text (alphabet, packing) and its cost in regex and BPE tokens; the\nexact wire format per edge (instruction, edits, door approve, door reject, forward, heal) as a grammar a programmer\ncan implement without guessing; for H-local which model (exact Hugging Face id), what context it is given, top-k or\nfull-vocabulary distribution, quantisation and determinism. Then predict, for each arm, channel tokens per task\n(regex and BPE, total and per edge), bits per character of the coded prose, and the integrity. Be honest: if the\ntarget cannot be met, say by how much and predict the true number.",
+ "schema": {
+  "type": "object",
+  "properties": {
+   "landings": {
+    "type": "array",
+    "items": {
+     "type": "object",
+     "properties": {
+      "arm": {
+       "type": "string",
+       "enum": [
+        "H-pred",
+        "H-local",
+        "both"
+       ]
+      },
+      "order": {
+       "type": "integer"
+      },
+      "place": {
+       "type": "string"
+      },
+      "depth": {
+       "type": "string"
+      },
+      "domain": {
+       "type": "string"
+      },
+      "source_mechanism": {
+       "type": "string"
+      },
+      "mechanism": {
+       "type": "string"
+      }
+     },
+     "required": [
+      "arm",
+      "order",
+      "place",
+      "depth",
+      "domain",
+      "source_mechanism",
+      "mechanism"
+     ]
+    }
+   },
+   "priming_corpus": {
+    "type": "string",
+    "description": "whether used, and the exact rule to build it"
+   },
+   "h_pred_predictor": {
+    "type": "string"
+   },
+   "h_local_predictor": {
+    "type": "string"
+   },
+   "h_local_model_id": {
+    "type": "string"
+   },
+   "coder": {
+    "type": "string"
+   },
+   "packing": {
+    "type": "string"
+   },
+   "determinism": {
+    "type": "string"
+   },
+   "edges": {
+    "type": "array",
+    "items": {
+     "type": "object",
+     "properties": {
+      "arm": {
+       "type": "string",
+       "enum": [
+        "H-pred",
+        "H-local",
+        "both"
+       ]
+      },
+      "edge": {
+       "type": "string",
+       "enum": [
+        "instruction",
+        "edits",
+        "door_approve",
+        "door_reject",
+        "forward",
+        "heal"
+       ]
+      },
+      "grammar": {
+       "type": "string"
+      },
+      "encode": {
+       "type": "string"
+      },
+      "decode_and_checks": {
+       "type": "string"
+      },
+      "example": {
+       "type": "string"
+      }
+     },
+     "required": [
+      "arm",
+      "edge",
+      "grammar",
+      "encode",
+      "decode_and_checks",
+      "example"
+     ]
+    }
+   },
+   "predictions": {
+    "type": "object",
+    "properties": {
+     "H-pred": {
+      "type": "object",
+      "properties": {
+       "channel_tok_per_task": {
+        "type": "number"
+       },
+       "bpe_tok_per_task": {
+        "type": "number"
+       },
+       "per_edge_tok_per_task": {
+        "type": "object",
+        "properties": {
+         "instruction": {
+          "type": "number"
+         },
+         "edits": {
+          "type": "number"
+         },
+         "door": {
+          "type": "number"
+         },
+         "forward": {
+          "type": "number"
+         },
+         "heal": {
+          "type": "number"
+         }
+        },
+        "required": [
+         "instruction",
+         "edits",
+         "door",
+         "forward",
+         "heal"
+        ]
+       },
+       "bits_per_char_prose": {
+        "type": "number"
+       },
+       "one_time_table_bytes": {
+        "type": "number"
+       },
+       "drift_healed_zero_call_of_48": {
+        "type": "integer"
+       },
+       "replica_consistent_of_16": {
+        "type": "integer"
+       },
+       "truncation_detected_pct": {
+        "type": "number"
+       }
+      },
+      "required": [
+       "channel_tok_per_task",
+       "bpe_tok_per_task",
+       "per_edge_tok_per_task",
+       "bits_per_char_prose",
+       "one_time_table_bytes",
+       "drift_healed_zero_call_of_48",
+       "replica_consistent_of_16",
+       "truncation_detected_pct"
+      ]
+     },
+     "H-local": {
+      "type": "object",
+      "properties": {
+       "channel_tok_per_task": {
+        "type": "number"
+       },
+       "bpe_tok_per_task": {
+        "type": "number"
+       },
+       "per_edge_tok_per_task": {
+        "type": "object",
+        "properties": {
+         "instruction": {
+          "type": "number"
+         },
+         "edits": {
+          "type": "number"
+         },
+         "door": {
+          "type": "number"
+         },
+         "forward": {
+          "type": "number"
+         },
+         "heal": {
+          "type": "number"
+         }
+        },
+        "required": [
+         "instruction",
+         "edits",
+         "door",
+         "forward",
+         "heal"
+        ]
+       },
+       "bits_per_char_prose": {
+        "type": "number"
+       },
+       "one_time_table_bytes": {
+        "type": "number"
+       },
+       "drift_healed_zero_call_of_48": {
+        "type": "integer"
+       },
+       "replica_consistent_of_16": {
+        "type": "integer"
+       },
+       "truncation_detected_pct": {
+        "type": "number"
+       }
+      },
+      "required": [
+       "channel_tok_per_task",
+       "bpe_tok_per_task",
+       "per_edge_tok_per_task",
+       "bits_per_char_prose",
+       "one_time_table_bytes",
+       "drift_healed_zero_call_of_48",
+       "replica_consistent_of_16",
+       "truncation_detected_pct"
+      ]
+     }
+    },
+    "required": [
+     "H-pred",
+     "H-local"
+    ]
+   },
+   "target_assessment": {
+    "type": "string"
+   },
+   "risks": {
+    "type": "string"
+   }
+  },
+  "required": [
+   "landings",
+   "priming_corpus",
+   "h_pred_predictor",
+   "h_local_predictor",
+   "h_local_model_id",
+   "coder",
+   "packing",
+   "determinism",
+   "edges",
+   "predictions",
+   "target_assessment",
+   "risks"
+  ]
+ },
+ "raw_text": "{\"landings\":[{\"arm\":\"both\",\"order\":1,\"place\":\"Channel alphabet: every coded message on every edge\",\"depth\":\"Deep. Replaces the A3b text tokens: any coded payload becomes a mixed-radix numeral whose digits are whole lowercase words.\",\"domain\":\"Information theory (radix and numeral systems) and DNA codons (a fixed alphabet of symbols that each cost the same)\",\"source_mechanism\":\"Over a channel where every symbol costs the same, the best code uses the largest alphabet of equal-cost symbols, and each symbol then carries log2|alphabet| bits.\",\"mechanism\":\"Two frozen word lists. A1 holds the 47,424 lowercase words w (2 or more letters) for which ' '+w is one o200k_base token. A0 is the subset of A1 where w on its own is also one token, so the first word of a message, which has no leading space, still costs 1 BPE token (|A0| is about 2^15 and is frozen offline). The o200k pre-tokenizer splits ' ?[letters]+' into its own chunk, so the cost does not depend on neighbouring words: 1 regex token and 1 BPE token per word, about 15.53 bits per word (the first word about 14.9 bits).\"},{\"arm\":\"both\",\"order\":2,\"place\":\"Coder (all edges)\",\"depth\":\"Deep. Exact arithmetic coding that writes directly in base-B digits.\",\"domain\":\"Arithmetic and range coding\",\"source_mechanism\":\"Arithmetic coding with an unlimited-precision interval, ended by the shortest codeword that lies inside the final interval.\",\"mechanism\":\"Exact rational interval held in Python big ints: (L, W, D) becomes (L*T + W*cum, W*f, D*T). There is no renormalisation and no precision limit, and messages under 1,000 bits make this cheap. Termination: choose the smallest k for which an integer V exists with L/D <= V/(B0*B1^(k-1)) < (L+W)/D. The decoder takes x = V/(B0*B1^(k-1)) and decodes until the in-model END symbol, then reads any trailing check symbols. Waste is less than 1 word per message, about 0.5 on average.\"},{\"arm\":\"H-pred\",\"order\":3,\"place\":\"Instruction prose and reject reasons: skeleton stream\",\"depth\":\"Deep. Replaces A3b templates, \u00a7 macros and the D-dictionary.\",\"domain\":\"PPM context modelling with a preset dictionary (zstd/Brotli priming)\",\"source_mechanism\":\"Predictive coding with PPM: orders 0 to 5, PPMD escapes, full exclusion, and model state pre-trained on an out-of-band corpus.\",\"mechanism\":\"The prose is lexed into units. Book-entity units (KEY, SVC, VAL, FLD, NUM) are replaced by class tags in the context. A word-level PPM of order 0 to 5 predicts the next skeleton symbol. The model starts from the state reached after replaying the priming corpus and keeps adapting within the task.\"},{\"arm\":\"both\",\"order\":4,\"place\":\"Instruction and reasons: identity of every KEY, SVC, FLD, VAL and NUM\",\"depth\":\"Deep. The book acts as the reference frame.\",\"domain\":\"Video coding (motion compensation from a reference frame) and linguistics (anaphora, given/new information)\",\"source_mechanism\":\"Predict from the reference picture and send only the residual. Given (already known) items are cheap; new items carry the information.\",\"mechanism\":\"Rank coders over candidate lists built in a fixed order from the shared snapshot book, the instruction so far and the task history. Examples: next sibling key in book order, current book value of the last key mentioned, arithmetic on the last two numbers, keys recently changed. When the planner restates the book, each entity costs a fraction of a bit.\"},{\"arm\":\"both\",\"order\":5,\"place\":\"Edits edge (worker -> checker)\",\"depth\":\"Deep. Replaces A3b's word ops.\",\"domain\":\"Source coding with side information (Slepian-Wolf / Wyner-Ziv) and analysis by synthesis\",\"source_mechanism\":\"Code the source relative to side information the decoder already has.\",\"mechanism\":\"Edits are coded as ranks in a candidate list parsed from the instruction, which both the worker and the checker hold, against the snapshot. Usually rank 0 at about 0.3 bits. chk6 follows as a uniform symbol over 10^6. Total is about 20.4 bits, which fits in 2 words.\"},{\"arm\":\"both\",\"order\":6,\"place\":\"Forward edge (checker -> planner)\",\"depth\":\"Medium. Removes the '?' round trip of A3b.\",\"domain\":\"Mission control (bent-pipe relay of a telemetry frame)\",\"source_mechanism\":\"The relay passes the frame on unchanged, and the frame is self-checking.\",\"mechanism\":\"After approving, the checker relays the worker's approved edits codeword unchanged. The planner holds the same instruction and the same snapshot, so it decodes exactly the same ops and verifies chk6. No miss path, no second message.\"},{\"arm\":\"both\",\"order\":7,\"place\":\"Integrity layer\",\"depth\":\"Kept, with one addition.\",\"domain\":\"DNA replication proofreading\",\"source_mechanism\":\"Re-read the copy against the template before accepting it.\",\"mechanism\":\"Kept from A3b: snapshot repair with hash, chk6, strict decode. Added a canonical re-encode check: the decoder re-encodes what it decoded and requires the identical word sequence, which rejects truncated, padded or non-minimal codewords. chk6 (sha256 mod 10^6) is kept on the edits and forward edges.\"},{\"arm\":\"H-local\",\"order\":8,\"place\":\"Instruction and reasons: token stream\",\"depth\":\"Deep. A neural predictor replaces the PPM skeleton.\",\"domain\":\"Neural source coding (LLMZip/NNCP style)\",\"source_mechanism\":\"Arithmetic coding of the text under the next-token distribution of a language model.\",\"mechanism\":\"Qwen/Qwen2.5-0.5B (base model) runs over a fixed primed preamble, then the task history, then the snapshot book, and gives a full-vocabulary distribution quantised to integers. A mode symbol lets each message use whichever of H-local or H-pred gives the shorter code.\"},{\"arm\":\"H-local\",\"order\":9,\"place\":\"Determinism guard for the H-local decode\",\"depth\":\"New sublayer.\",\"domain\":\"Immunology (self marker) and replication proofreading\",\"source_mechanism\":\"A self tag lets the body detect non-self. Two replications are compared.\",\"mechanism\":\"chk8 = sha256(instruction bytes || snapshot bytes) mod 256 is coded after END. It also cross-checks that the planner's book equals the worker's snapshot. Before sending, the encoder re-decodes the message in a fresh process. If the worker-side decode fails chk8, the worker sends '?', the checker relays it, and the planner re-sends the instruction in H-pred mode.\"},{\"arm\":\"both\",\"order\":10,\"place\":\"Heal (worker book drift at steps 4, 8, 12)\",\"depth\":\"Unchanged from A3b.\",\"domain\":\"DNA mismatch repair\",\"source_mechanism\":\"Repair the damaged strand from the intact template.\",\"mechanism\":\"Local restore from the last approved snapshot, verified by hash. 0 tokens and 0 model calls.\"},{\"arm\":\"both\",\"order\":11,\"place\":\"Door reject reason\",\"depth\":\"Deep.\",\"domain\":\"Predictive coding with side information\",\"source_mechanism\":\"The same shared predictor, conditioned on everything the receiver already holds.\",\"mechanism\":\"The reason is coded with the instruction codec in R mode. The context is a start unit \u27e8R\u27e9 plus the instruction and the decoded edits, and candidate lists draw from the instruction and edits first. An approve is '+'; anything made of words is a reject.\"}],\"priming_corpus\":\"Used by both arms. Source: the full A3b H-dragon runs on seeds 500-531, all 32 runs, made before the live run with the same agents and prompts. From each run, record in step order every planner instruction (14 per run, 448 in total, about 143 KB) and every checker reject reason (about 8, about 3 KB), each with the snapshot book current at that step and the approved edits. Nothing from the test seeds is included.\\n\\nH-pred build rule: start from an empty model (all PPM counts 0; rank tables all 1; char model all 1). Replay the runs in seed order 500 to 531 and steps in order. Reset the task-history buffers at each run boundary but keep the counts. Code each instruction, then each reason (in R mode), then the approved edits through the live model in update mode, exactly as the live codec would, with that step's snapshot. At the end, halve every count once (this ages the counts so they adapt faster) and freeze. Serialise the frozen state (about 1.5 MB). Because it can be rebuilt deterministically from the corpus, the corpus bytes are what is reported.\\n\\nLive: each task starts from the frozen state and adapts within the task. Both sides update after each message is decoded. The state is discarded at the end of the task.\\n\\nH-local preamble rule: pick exemplars greedily from the 448 instructions. At each step take the instruction that adds the most distinct word trigrams not yet covered; break ties by lower (seed, step). Stop when adding the next one would push the preamble past 1,400 Qwen tokens; expect about 14 exemplars. Then add the 2 shortest priming reject reasons. Arrange in (seed, step) order, using the block formats given in h_local_predictor.\\n\\nReported one-time sizes: H-pred = corpus 146.6 KB + word alphabets about 330 KB, about 0.48 MB. H-local = the same plus 988 MB of Qwen2.5-0.5B safetensors.\",\"h_pred_predictor\":\"Deterministic, integer arithmetic only; no floating point anywhere.\\n\\nLEXER. Apply in this order at each position; all entity patterns require (?<![\\\\w-]) on the left. Concatenating the unit surfaces reproduces the text exactly.\\n- KEY = (auth|billing|search|cache|gateway)\\\\.(replicas|timeout_ms|retries|owner|region|log_level|max_conn|tier)(?![\\\\w-])\\n- SVC = (auth|billing|search|cache|gateway)(?![\\\\w-])\\n- VAL = (alice|bruno|chen|dara|emeka|farah|eu-west|us-east|ap-south|sa-east|debug|info|warn|error)(?![\\\\w-])\\n- FLD = (replicas|timeout_ms|retries|owner|region|log_level|max_conn|tier)(?!\\\\w)\\n- NUM = \\\\d+\\n- WORD = [^\\\\W\\\\d]\\\\w*\\n- WS = \\\\s+\\n- PUN = [^\\\\w\\\\s] (one character, Unicode included, e.g. \u2192)\\n- END closes the message.\\n\\nSKELETON. Each unit maps to a context symbol: KEY, SVC, VAL, FLD and NUM map to the tags \u27e8K\u27e9 \u27e8S\u27e9 \u27e8V\u27e9 \u27e8F\u27e9 \u27e8N\u27e9. WORD, WS and PUN map to their literal string. Each message starts with the virtual context \u27e8I\u27e9 (instruction) or \u27e8R\u27e9 (reason).\\n\\nSkeleton model: PPM over these symbols with orders 5, 4, 3, 2, 1, 0, then order -1.\\n- PPMD escape: a symbol with count c has frequency 2c-1; the escape has frequency equal to the number of distinct symbols in the context.\\n- Full exclusion of symbols already seen at higher orders.\\n- Update exclusion: update only the orders from the coding order upward.\\n- When a context's total exceeds 2^13, halve its counts (rounding up).\\n- Order -1 is a uniform choice over the known skeleton vocabulary not yet excluded, plus NOVEL.\\n- NOVEL: one class symbol {word, ws, pun} at uniform frequency, then:\\n  - word: spelled with an order-2 adaptive character model over [A-Za-z0-9_] plus a stop symbol;\\n  - ws: spelled over {' ', '\\\\n', '\\\\t', '\\\\r'} plus stop;\\n  - pun: one symbol uniform over 0x110000 code points.\\n  A novel word joins the vocabulary.\\n\\nENTITY SUBMODELS. When the skeleton emits a tag, the identity is coded as a rank r in a candidate list. Lists are built deterministically and deduplicated with the first occurrence kept. Each table is adaptive, counts start at 1, and one escape slot sits at the end. Notation: U = the instruction's units so far, S = snapshot (ordered lines), H = task history, lastK = the last KEY in U, lastS = the last SVC in U or the service of lastK. ListCtx = the previous non-WS unit is one of , ; ( - or the word and/or.\\n\\n\u27e8K\u27e9 candidates, in this order (40 keys at most):\\n1. if ListCtx: the next key in S after lastK with the same service that is not in U; then the key with lastK's field in the next service of S;\\n2. keys in U, most recent first;\\n3. keys in S of service lastS, in book order;\\n4. keys changed in the last 3 approved steps, most recent first;\\n5. all keys in S, in order;\\n6. the remaining keys of the 40-key universe, in service-major order.\\nTable context: (ListCtx, whether any KEY is in U yet).\\n\\n\u27e8S\u27e9 candidates:\\n1. the next service in S order after the last SVC in U that is not yet in U;\\n2. the service of lastK;\\n3. SVCs in U, most recent first;\\n4. all 5 services.\\nTable context: ListCtx.\\n\\n\u27e8F\u27e9 candidates:\\n1. the next field of lastK's service not yet in U;\\n2. fields in U;\\n3. all 8 fields.\\n\\n\u27e8V\u27e9 and \u27e8N\u27e9 candidates:\\n1. S[lastK], if its type fits (owner, region and log_level take VAL; the others take NUM);\\n2. same-class values in U, most recent first;\\n3. NUM only: for the last two NUMs a and b in U: a+b, a-b, b-a, a*b, a//b, 2a, a//2, min(a+b, 9);\\n4. values of lastK's field in the other services of S;\\n5. values in the last 20 history instructions, most recent first;\\n6. VAL only: the domain list of the field, then all 14 values.\\nNUM escape: digit count 1 to 7 (adaptive), then the digits with an order-1 digit model; this also covers leading zeros.\\nTable context: (class, previous non-WS skeleton symbol, bucketed as '=', 'to', 'from', '`', '(', 'of', other).\\n\\nR MODE. Candidate lists put the instruction's keys and values and the decoded edits ahead of H.\\n\\nLENGTH. END is an ordinary skeleton symbol, so there is no separate length field.\\n\\nDETERMINISM. Everything is integer counts held in Python dicts and is updated in a canonical order. Both sides update after a message is decoded, and the encoder applies the same update after it has encoded.\",\"h_local_predictor\":\"MODEL. Qwen/Qwen2.5-0.5B (base, not instruct). Weights pinned to the snapshot revision hash recorded at download. Loaded as fp32 with attn_implementation='eager', eval mode, under torch.inference_mode.\\n\\nCONTEXT. Token ids are built at the id level, never by re-tokenising concatenated strings.\\n- PRE (fixed, about 1,400 tokens):\\n  - header: 'Instructions written by a planner for a worker who edits a configuration state.\\\\n\\\\n'\\n  - then, for each exemplar: 'Instruction:\\\\n' + tok(text) + [EOT=151643] + tok('\\\\n\\\\n')\\n  - then the 2 reasons as 'Reviewer rejection:\\\\n' + tok(text) + [EOT] + '\\\\n\\\\n'\\n- DYN (per message):\\n  - the last \u22646 instructions of this task, as Instruction blocks;\\n  - then 'State:\\\\n' + snapshot lines joined by '\\\\n' + '\\\\n\\\\n';\\n  - instruction mode: then 'Instruction:\\\\n';\\n  - R mode: then 'Instruction:\\\\n' + instr + [EOT] + '\\\\nProposed edits:\\\\n' + one line per edit ('key = value' / 'delete key' / 'add key = value') + '\\\\nReviewer rejection:\\\\n'.\\n- Payload: tok(T) with canonical ids, then EOT as the end symbol.\\n- Encode-time asserts: tokenizer.decode(ids, clean_up_tokenization_spaces=False) == T byte-exactly, and the context is \u2264 2,600 tokens. If either fails, the message goes in H-pred mode.\\n\\nDISTRIBUTION. Full vocabulary, no top-k.\\n- Cast the logits row (float32) to float64 in numpy: z = l - max(l); p = exp(z)/sum(exp(z)).\\n- freq_i = 1 + floor(p_i * (2^30 - V)), with V = 151,936 (padding ids included).\\n- Integer cumsum in int64, total \u2264 2^30. The coder uses (cum, freq, total).\\n\\nSTREAM. The first symbol is the mode {LLM: 15/16, HPRED: 1/16}. The encoder codes the message both ways and keeps the shorter. Then the tokens and EOT, then chk8 uniform over 256.\\n\\nKV REUSE. The PRE key/value cache is computed once per process with one forward pass of PRE and is deep-copied for each message. DYN is prefilled in one forward pass. Payload tokens are then fed one at a time with the cache, on both sides. The encoder never batch-scores the payload; it runs the same incremental loop as the decoder.\\n\\nFORWARD PASS COUNT. Per instruction, 3 passes over the text (encode, proofread decode in a fresh process, worker decode), each 1 prefill plus about 80 incremental steps, so about 245 forward passes. About 57k local forward passes for the run (690 loop executions). Estimated time about 65-75 minutes on 4 cores.\",\"h_local_model_id\":\"Qwen/Qwen2.5-0.5B\",\"coder\":\"Exact big-integer arithmetic coder, the same for every edge and both arms.\\n- State: (L, W, D), starting at (0, 1, 1).\\n- Coding a symbol with (cum, f, T): L = L*T + W*cum; W = W*f; D = D*T. There is no rounding, so precision is unlimited; numbers stay under 3,000 bits.\\n- Termination: radix rB(k) = B0*B1^(k-1). Find the smallest k \u2265 1 with V = ceil(L*rB(k)/D) satisfying V*D < (L+W)*rB(k). Digits are d1 = V // B1^(k-1) (which is < B0) and then base-B1 digits.\\n- Decoder: x = V/rB(k), kept exact. For each symbol, find the cum with (cum*W + L*T) \u2264 x*D*T\u00b7\u2026 (that is, the subinterval that contains x), narrow the interval, and repeat until the message grammar is complete (END plus trailing check symbols).\\n- Length signalling: END is in-model, and the message boundary is the word count k.\\n- Strict decode, required on every edge: (a) every word is in its alphabet; (b) d1 < B0; (c) the grammar is complete; (d) re-encoding the decoded message gives exactly the same word sequence, which is the minimal-k canonical form; (e) the check symbols match (chk6, chk8). Any failure means reject.\",\"packing\":\"CODE := W0 (' ' W1)*. W0 \u2208 A0 (sorted list, |A0| = B0, frozen; about 2^15 expected). W1 \u2208 A1 (sorted list of the 47,424 lowercase words w with len \u2265 2 where ' '+w is a single o200k_base token; B1 = 47,424). Words are separated by single spaces, with no leading or trailing whitespace.\\n\\nCapacity of a k-word message: log2(B0) + 15.53*(k-1) bits, about 14.9 + 15.53(k-1).\\n\\nCost: k regex tokens (each word is one \\\\w+ match) and k BPE tokens (W0 is a single token without a leading space; each ' '+W1 is a single token, and the pre-tokenizer cuts at every space, so neighbours cannot merge). Regex count equals BPE count exactly. The only other symbols are '+' and '?', each 1 regex and 1 BPE token.\\n\\nExpected waste: about 0.5 word per message.\",\"determinism\":\"H-PRED. Pure integer arithmetic (Python ints and dicts, canonical update order), so it is bit-identical by construction on any machine. Every message is asserted byte-exact.\\n\\nH-LOCAL. Encoder and decoder run on the same machine with:\\n- one pinned weights snapshot, loaded as fp32;\\n- torch.set_num_threads(4) and set_num_interop_threads(1), set before load;\\n- env OMP_NUM_THREADS=4, MKL_NUM_THREADS=4, MKL_CBWR=AVX2 (oneMKL conditional numerical reproducibility);\\n- torch.use_deterministic_algorithms(True);\\n- eager attention and no batching;\\n- identical tensor shapes at every step: the encoder feeds the same one-token incremental calls as the decoder, and PRE and DYN are prefilled with the same chunking;\\n- the same torch and transformers versions;\\n- codec processes run one after another, never in parallel;\\n- quantisation from float32 logits in float64 numpy, with the arithmetic done in a fixed order.\\n\\nIf the logits still differ: frequencies change, the decode desynchronises, and the result is garbage. That is caught by chk8 (255/256), by the END and grammar checks, and by the canonical re-encode check (d). Two guards stop it before it reaches the wire:\\n1. Proofreading: after encoding, the planner-side codec decodes the codeword in a fresh process. If that does not match, the message is re-encoded in mode HPRED.\\n2. If the worker-side decode still fails: edits edge = '?', the checker relays '?' on forward, and the planner re-sends the instruction in HPRED mode (the tokens are counted).\\n\\nExpected occurrences: 0. The per-message byte-exact assertion is the final guard. Any undetected mismatch (probability \u2264 1/256 per nondeterministic event) is reported as an integrity failure, not hidden.\",\"edges\":[{\"arm\":\"both\",\"edge\":\"instruction\",\"grammar\":\"msg := CODE. Inner symbol stream:\\n- H-pred: (skeleton symbol [entity rank | NOVEL spelling])* END\\n- H-local: MODE (TOKEN* EOT CHK8 | <H-pred stream>)\\n\\nThe message is never empty: at least 1 word.\",\"encode\":\"Lex the planner text T. Code it with the predictor, conditioned on the snapshot S, the task history H and the frozen primed state. Terminate at the minimal k. H-local: code both ways and keep the shorter, then append chk8 = sha256(T || S_bytes) mod 256. Run the proofread decode, then send.\",\"decode_and_checks\":\"Map words to digits to V. Decode until END (and CHK8 for H-local). Concatenate the unit surfaces (or the token bytes). Checks: alphabet; canonical re-encode equals the message; chk8 (H-local). Assert byte-exactness against T. Then update the model.\",\"example\":\"Step 0 (T = 343 chars). H-pred is about 220 bits and comes out at 15 words, for example 'turnip garble \u2026' (15 words; illustrative digits). H-local is about 140 bits, 10 words. A3b needed 67 regex / 71 BPE.\"},{\"arm\":\"both\",\"edge\":\"edits\",\"grammar\":\"msg := CODE | '?'\\n\\nPayload: NOPS (0..8, adaptive), then OP*, then CHK6 (uniform over 10^6).\\n\\nOP := RANK (0..15 in the candidate list C, adaptive) | ESC TYPE{set, del, add} with:\\n- set: LINE uniform over |S|, then VALUE\\n- del: LINE\\n- add: KEYIDX uniform over the keys not in S, then VALUE\\n\\nVALUE uses the \u27e8V\u27e9/\u27e8N\u27e9 rank model in context 'edit'.\",\"encode\":\"The worker's ops, in worker order, are applied to the healed snapshot S, giving S'. Build C from the instruction units, removing ops already coded:\\n1. add(k, first VAL/NUM after k) for each mentioned k not in S;\\n2. del(k) for mentioned keys, in first-mention order, if the instruction contains Delete/delete/Remove/remove;\\n3. set(k, v) for each mentioned k in first-mention order, where v runs over the type-compatible values after k's first mention with v \u2260 S[k];\\n4. cap at 16 entries.\\n\\nchk6 = int(sha256(S'))) mod 10^6.\",\"decode_and_checks\":\"Strict decode; canonical re-encode; ops must be valid on S; chk6 must equal the hash of the applied state. Truncation (word dropped, word cut, or a cut that leaves a non-word) fails the alphabet, canonical or chk6 check: false accept \u2264 1e-6 per event, as in A3b. '?' means the instruction decode failed (NAK).\",\"example\":\"Step 0: NOPS=1 (0.1 bit) + RANK 0 = set(cache.retries, 5) (0.3 bit) + chk6 391591 (19.93 bits) = 20.3 bits, sent as 2 words, e.g. 'velvet quorum'. Step 5: RANK 0 = del(gateway.log_level), 2 words. A3b needed 3/6 and 2/5.\"},{\"arm\":\"both\",\"edge\":\"door_approve\",\"grammar\":\"msg := '+'\",\"encode\":\"The checker approves.\",\"decode_and_checks\":\"The worker commits S' as the new snapshot and refreshes its hash.\",\"example\":\"+  (1 regex, 1 BPE)\"},{\"arm\":\"both\",\"edge\":\"door_reject\",\"grammar\":\"msg := CODE (at least 1 word; anything that is not '+' is a reject). Stream: the reason in R mode, END (and for H-local: MODE \u2026 EOT CHK8 with chk8 = sha256(reason || S) mod 256).\",\"encode\":\"Code the checker's reason with the instruction codec in R mode. The context adds the instruction and the decoded edits, and the candidate lists draw on them first.\",\"decode_and_checks\":\"Strict decode, canonical check, chk8 (H-local); byte-exact assert. The worker reruns with the reason, as in A3b, and its next edits message replaces the previous one.\",\"example\":\"A reason of about 400 chars: H-pred about 1.1 bpc, 29 words; H-local about 0.55 bpc, 15 words.\"},{\"arm\":\"both\",\"edge\":\"forward\",\"grammar\":\"msg := CODE (the worker's approved edits message, copied word for word) | '?' (relayed NAK)\",\"encode\":\"Once approved, the checker copies the worker's edits words unchanged. No '?' round trip.\",\"decode_and_checks\":\"The planner decodes with its own instruction and its book (which equals the snapshot), applies the ops, and verifies chk6 against the result. On failure the planner falls back to the checker's copy, as in A3b; expected 0 times. '?' means re-send the instruction in H-pred mode.\",\"example\":\"Step 0: 'velvet quorum' (2 regex / 2 BPE). A3b needed 1+1+3 regex / 2+1+6 BPE.\"},{\"arm\":\"both\",\"edge\":\"heal\",\"grammar\":\"msg := '' (no message)\",\"encode\":\"Before the worker runs: if hash(working book) \u2260 snapshot hash, restore the book from the snapshot.\",\"decode_and_checks\":\"The hash must equal the hash of the last approved state. 0 model calls.\",\"example\":\"Steps 4, 8, 12: 0 tokens.\"}],\"predictions\":{\"H-pred\":{\"channel_tok_per_task\":276,\"bpe_tok_per_task\":276,\"per_edge_tok_per_task\":{\"instruction\":198,\"edits\":29,\"door\":21,\"forward\":28,\"heal\":0},\"bits_per_char_prose\":0.67,\"one_time_table_bytes\":480000,\"drift_healed_zero_call_of_48\":48,\"replica_consistent_of_16\":16,\"truncation_detected_pct\":100},\"H-local\":{\"channel_tok_per_task\":205,\"bpe_tok_per_task\":205,\"per_edge_tok_per_task\":{\"instruction\":130,\"edits\":29,\"door\":18,\"forward\":28,\"heal\":0},\"bits_per_char_prose\":0.4,\"one_time_table_bytes\":988500000,\"drift_healed_zero_call_of_48\":48,\"replica_consistent_of_16\":16,\"truncation_detected_pct\":100}},\"target_assessment\":\"The target is 294 regex and 372 BPE tokens per task. Regex and BPE counts are equal by construction here, so the regex limit is the one that binds.\\n\\nFixed (non-prose) cost per task, both arms:\\n- edits: 14.25 messages \u00d7 about 2.03 words = 29\\n- forward: 14 \u00d7 2.03 = 28; this is the price of keeping chk6 on both edges\\n- approvals: 14\\n- total: about 71, plus the reject reasons.\\n\\nH-PRED (prediction):\\n- Instruction prose at 0.66 bpc: about 211 bits per instruction, about 14.1 words. 198 tokens per task.\\n- Reasons at about 1.1 bpc: 0.25 \u00d7 29 = 7 tokens per task.\\n- Total about 276 regex and 276 BPE: 0.188\u00d7 tent regex, 0.148\u00d7 tent BPE.\\n- Break-even: instruction bpc \u2264 0.72. Above that, H-pred misses: at 0.80 bpc it comes to about 307 (0.21\u00d7).\\n- Confidence of meeting the target: about 55-60%. 80% interval: 245-320.\\n\\nH-LOCAL (prediction):\\n- About 0.40 bpc, plus 8 check bits: about 9.3 words per instruction. 130 tokens per task.\\n- Total about 205: 0.14\u00d7 regex, 0.11\u00d7 BPE.\\n- Break-even: about 0.70 bpc. Confidence of meeting: about 85%.\\n- Its 57k forward passes are reported as local model calls, separate from the zero hosted calls.\\n\\nIntegrity, both arms (prediction): 48/48 drifts healed at 0 calls, 16/16 copies correct, truncations all rejected (false accept \u2264 1e-6 each).\\n\\nGate before the live run: build each model on 31 priming runs and measure on the held-out one, all 32 ways. If H-pred's held-out bpc is above 0.72, the honest prediction is H-pred at 71 + 14 \u00d7 (bits/15.53 + 0.5) + 7. Report that number instead of claiming the target.\\n\\nOption for the owner: weaken only the forward check to chk10, so it fits in 1 word. That saves about 14 tokens per task (H-pred about 262), but it is weaker than A3b's chk6 on forward, so it is not the default.\",\"risks\":\"1. The bpc figures are estimates, not measurements. A non-neural PPM trained on only 448 instructions may land at 0.75-0.9 bpc, above H-pred's break-even of 0.72; the held-out gate measures this.\\n2. Haiku's style may drift between the priming seeds and the test seeds. Mitigation: counts adapt within the task.\\n3. Floating-point nondeterminism in H-local, from MKL or oneDNN choosing different kernels. Mitigated by: identical incremental code paths, MKL_CBWR, the fresh-process proofread decode, chk8 (detects 255/256), and the '?' fallback to H-pred.\\n4. Qwen tokenisation might not round-trip some Unicode (\u2192) or whitespace byte-exactly. This is asserted at encode time, and such messages fall back to H-pred.\\n5. Run time: 3 passes \u00d7 230 messages at about 18 s each is about 70 minutes. If the machine is slower, drop the proofread pass. That saves about 33% of the time, and chk8 remains as the guard.\\n6. A0 may hold fewer than 2^15 words. This costs at most a fraction of a bit per message.\\n7. If the harness strips or alters spaces between words, decoding fails. The canonical check catches this, but such messages would be lost; whitespace must be preserved exactly.\\n8. Instructions with several ops, or ops the parser does not predict, can make edits 3 words.\\n9. Reject reasons are under-primed (only about 8 in the corpus).\\n10. The forward check costs 14 tokens per task to stay as strong as A3b; relaxing it to chk10 would save them, at the cost of a weaker check.\"}",
+ "design": {
+  "landings": [
+   {
+    "arm": "both",
+    "order": 1,
+    "place": "Channel alphabet: every coded message on every edge",
+    "depth": "Deep. Replaces the A3b text tokens: any coded payload becomes a mixed-radix numeral whose digits are whole lowercase words.",
+    "domain": "Information theory (radix and numeral systems) and DNA codons (a fixed alphabet of symbols that each cost the same)",
+    "source_mechanism": "Over a channel where every symbol costs the same, the best code uses the largest alphabet of equal-cost symbols, and each symbol then carries log2|alphabet| bits.",
+    "mechanism": "Two frozen word lists. A1 holds the 47,424 lowercase words w (2 or more letters) for which ' '+w is one o200k_base token. A0 is the subset of A1 where w on its own is also one token, so the first word of a message, which has no leading space, still costs 1 BPE token (|A0| is about 2^15 and is frozen offline). The o200k pre-tokenizer splits ' ?[letters]+' into its own chunk, so the cost does not depend on neighbouring words: 1 regex token and 1 BPE token per word, about 15.53 bits per word (the first word about 14.9 bits)."
+   },
+   {
+    "arm": "both",
+    "order": 2,
+    "place": "Coder (all edges)",
+    "depth": "Deep. Exact arithmetic coding that writes directly in base-B digits.",
+    "domain": "Arithmetic and range coding",
+    "source_mechanism": "Arithmetic coding with an unlimited-precision interval, ended by the shortest codeword that lies inside the final interval.",
+    "mechanism": "Exact rational interval held in Python big ints: (L, W, D) becomes (L*T + W*cum, W*f, D*T). There is no renormalisation and no precision limit, and messages under 1,000 bits make this cheap. Termination: choose the smallest k for which an integer V exists with L/D <= V/(B0*B1^(k-1)) < (L+W)/D. The decoder takes x = V/(B0*B1^(k-1)) and decodes until the in-model END symbol, then reads any trailing check symbols. Waste is less than 1 word per message, about 0.5 on average."
+   },
+   {
+    "arm": "H-pred",
+    "order": 3,
+    "place": "Instruction prose and reject reasons: skeleton stream",
+    "depth": "Deep. Replaces A3b templates, \u00a7 macros and the D-dictionary.",
+    "domain": "PPM context modelling with a preset dictionary (zstd/Brotli priming)",
+    "source_mechanism": "Predictive coding with PPM: orders 0 to 5, PPMD escapes, full exclusion, and model state pre-trained on an out-of-band corpus.",
+    "mechanism": "The prose is lexed into units. Book-entity units (KEY, SVC, VAL, FLD, NUM) are replaced by class tags in the context. A word-level PPM of order 0 to 5 predicts the next skeleton symbol. The model starts from the state reached after replaying the priming corpus and keeps adapting within the task."
+   },
+   {
+    "arm": "both",
+    "order": 4,
+    "place": "Instruction and reasons: identity of every KEY, SVC, FLD, VAL and NUM",
+    "depth": "Deep. The book acts as the reference frame.",
+    "domain": "Video coding (motion compensation from a reference frame) and linguistics (anaphora, given/new information)",
+    "source_mechanism": "Predict from the reference picture and send only the residual. Given (already known) items are cheap; new items carry the information.",
+    "mechanism": "Rank coders over candidate lists built in a fixed order from the shared snapshot book, the instruction so far and the task history. Examples: next sibling key in book order, current book value of the last key mentioned, arithmetic on the last two numbers, keys recently changed. When the planner restates the book, each entity costs a fraction of a bit."
+   },
+   {
+    "arm": "both",
+    "order": 5,
+    "place": "Edits edge (worker -> checker)",
+    "depth": "Deep. Replaces A3b's word ops.",
+    "domain": "Source coding with side information (Slepian-Wolf / Wyner-Ziv) and analysis by synthesis",
+    "source_mechanism": "Code the source relative to side information the decoder already has.",
+    "mechanism": "Edits are coded as ranks in a candidate list parsed from the instruction, which both the worker and the checker hold, against the snapshot. Usually rank 0 at about 0.3 bits. chk6 follows as a uniform symbol over 10^6. Total is about 20.4 bits, which fits in 2 words."
+   },
+   {
+    "arm": "both",
+    "order": 6,
+    "place": "Forward edge (checker -> planner)",
+    "depth": "Medium. Removes the '?' round trip of A3b.",
+    "domain": "Mission control (bent-pipe relay of a telemetry frame)",
+    "source_mechanism": "The relay passes the frame on unchanged, and the frame is self-checking.",
+    "mechanism": "After approving, the checker relays the worker's approved edits codeword unchanged. The planner holds the same instruction and the same snapshot, so it decodes exactly the same ops and verifies chk6. No miss path, no second message."
+   },
+   {
+    "arm": "both",
+    "order": 7,
+    "place": "Integrity layer",
+    "depth": "Kept, with one addition.",
+    "domain": "DNA replication proofreading",
+    "source_mechanism": "Re-read the copy against the template before accepting it.",
+    "mechanism": "Kept from A3b: snapshot repair with hash, chk6, strict decode. Added a canonical re-encode check: the decoder re-encodes what it decoded and requires the identical word sequence, which rejects truncated, padded or non-minimal codewords. chk6 (sha256 mod 10^6) is kept on the edits and forward edges."
+   },
+   {
+    "arm": "H-local",
+    "order": 8,
+    "place": "Instruction and reasons: token stream",
+    "depth": "Deep. A neural predictor replaces the PPM skeleton.",
+    "domain": "Neural source coding (LLMZip/NNCP style)",
+    "source_mechanism": "Arithmetic coding of the text under the next-token distribution of a language model.",
+    "mechanism": "Qwen/Qwen2.5-0.5B (base model) runs over a fixed primed preamble, then the task history, then the snapshot book, and gives a full-vocabulary distribution quantised to integers. A mode symbol lets each message use whichever of H-local or H-pred gives the shorter code."
+   },
+   {
+    "arm": "H-local",
+    "order": 9,
+    "place": "Determinism guard for the H-local decode",
+    "depth": "New sublayer.",
+    "domain": "Immunology (self marker) and replication proofreading",
+    "source_mechanism": "A self tag lets the body detect non-self. Two replications are compared.",
+    "mechanism": "chk8 = sha256(instruction bytes || snapshot bytes) mod 256 is coded after END. It also cross-checks that the planner's book equals the worker's snapshot. Before sending, the encoder re-decodes the message in a fresh process. If the worker-side decode fails chk8, the worker sends '?', the checker relays it, and the planner re-sends the instruction in H-pred mode."
+   },
+   {
+    "arm": "both",
+    "order": 10,
+    "place": "Heal (worker book drift at steps 4, 8, 12)",
+    "depth": "Unchanged from A3b.",
+    "domain": "DNA mismatch repair",
+    "source_mechanism": "Repair the damaged strand from the intact template.",
+    "mechanism": "Local restore from the last approved snapshot, verified by hash. 0 tokens and 0 model calls."
+   },
+   {
+    "arm": "both",
+    "order": 11,
+    "place": "Door reject reason",
+    "depth": "Deep.",
+    "domain": "Predictive coding with side information",
+    "source_mechanism": "The same shared predictor, conditioned on everything the receiver already holds.",
+    "mechanism": "The reason is coded with the instruction codec in R mode. The context is a start unit \u27e8R\u27e9 plus the instruction and the decoded edits, and candidate lists draw from the instruction and edits first. An approve is '+'; anything made of words is a reject."
+   }
+  ],
+  "priming_corpus": "Used by both arms. Source: the full A3b H-dragon runs on seeds 500-531, all 32 runs, made before the live run with the same agents and prompts. From each run, record in step order every planner instruction (14 per run, 448 in total, about 143 KB) and every checker reject reason (about 8, about 3 KB), each with the snapshot book current at that step and the approved edits. Nothing from the test seeds is included.\n\nH-pred build rule: start from an empty model (all PPM counts 0; rank tables all 1; char model all 1). Replay the runs in seed order 500 to 531 and steps in order. Reset the task-history buffers at each run boundary but keep the counts. Code each instruction, then each reason (in R mode), then the approved edits through the live model in update mode, exactly as the live codec would, with that step's snapshot. At the end, halve every count once (this ages the counts so they adapt faster) and freeze. Serialise the frozen state (about 1.5 MB). Because it can be rebuilt deterministically from the corpus, the corpus bytes are what is reported.\n\nLive: each task starts from the frozen state and adapts within the task. Both sides update after each message is decoded. The state is discarded at the end of the task.\n\nH-local preamble rule: pick exemplars greedily from the 448 instructions. At each step take the instruction that adds the most distinct word trigrams not yet covered; break ties by lower (seed, step). Stop when adding the next one would push the preamble past 1,400 Qwen tokens; expect about 14 exemplars. Then add the 2 shortest priming reject reasons. Arrange in (seed, step) order, using the block formats given in h_local_predictor.\n\nReported one-time sizes: H-pred = corpus 146.6 KB + word alphabets about 330 KB, about 0.48 MB. H-local = the same plus 988 MB of Qwen2.5-0.5B safetensors.",
+  "h_pred_predictor": "Deterministic, integer arithmetic only; no floating point anywhere.\n\nLEXER. Apply in this order at each position; all entity patterns require (?<![\\w-]) on the left. Concatenating the unit surfaces reproduces the text exactly.\n- KEY = (auth|billing|search|cache|gateway)\\.(replicas|timeout_ms|retries|owner|region|log_level|max_conn|tier)(?![\\w-])\n- SVC = (auth|billing|search|cache|gateway)(?![\\w-])\n- VAL = (alice|bruno|chen|dara|emeka|farah|eu-west|us-east|ap-south|sa-east|debug|info|warn|error)(?![\\w-])\n- FLD = (replicas|timeout_ms|retries|owner|region|log_level|max_conn|tier)(?!\\w)\n- NUM = \\d+\n- WORD = [^\\W\\d]\\w*\n- WS = \\s+\n- PUN = [^\\w\\s] (one character, Unicode included, e.g. \u2192)\n- END closes the message.\n\nSKELETON. Each unit maps to a context symbol: KEY, SVC, VAL, FLD and NUM map to the tags \u27e8K\u27e9 \u27e8S\u27e9 \u27e8V\u27e9 \u27e8F\u27e9 \u27e8N\u27e9. WORD, WS and PUN map to their literal string. Each message starts with the virtual context \u27e8I\u27e9 (instruction) or \u27e8R\u27e9 (reason).\n\nSkeleton model: PPM over these symbols with orders 5, 4, 3, 2, 1, 0, then order -1.\n- PPMD escape: a symbol with count c has frequency 2c-1; the escape has frequency equal to the number of distinct symbols in the context.\n- Full exclusion of symbols already seen at higher orders.\n- Update exclusion: update only the orders from the coding order upward.\n- When a context's total exceeds 2^13, halve its counts (rounding up).\n- Order -1 is a uniform choice over the known skeleton vocabulary not yet excluded, plus NOVEL.\n- NOVEL: one class symbol {word, ws, pun} at uniform frequency, then:\n  - word: spelled with an order-2 adaptive character model over [A-Za-z0-9_] plus a stop symbol;\n  - ws: spelled over {' ', '\\n', '\\t', '\\r'} plus stop;\n  - pun: one symbol uniform over 0x110000 code points.\n  A novel word joins the vocabulary.\n\nENTITY SUBMODELS. When the skeleton emits a tag, the identity is coded as a rank r in a candidate list. Lists are built deterministically and deduplicated with the first occurrence kept. Each table is adaptive, counts start at 1, and one escape slot sits at the end. Notation: U = the instruction's units so far, S = snapshot (ordered lines), H = task history, lastK = the last KEY in U, lastS = the last SVC in U or the service of lastK. ListCtx = the previous non-WS unit is one of , ; ( - or the word and/or.\n\n\u27e8K\u27e9 candidates, in this order (40 keys at most):\n1. if ListCtx: the next key in S after lastK with the same service that is not in U; then the key with lastK's field in the next service of S;\n2. keys in U, most recent first;\n3. keys in S of service lastS, in book order;\n4. keys changed in the last 3 approved steps, most recent first;\n5. all keys in S, in order;\n6. the remaining keys of the 40-key universe, in service-major order.\nTable context: (ListCtx, whether any KEY is in U yet).\n\n\u27e8S\u27e9 candidates:\n1. the next service in S order after the last SVC in U that is not yet in U;\n2. the service of lastK;\n3. SVCs in U, most recent first;\n4. all 5 services.\nTable context: ListCtx.\n\n\u27e8F\u27e9 candidates:\n1. the next field of lastK's service not yet in U;\n2. fields in U;\n3. all 8 fields.\n\n\u27e8V\u27e9 and \u27e8N\u27e9 candidates:\n1. S[lastK], if its type fits (owner, region and log_level take VAL; the others take NUM);\n2. same-class values in U, most recent first;\n3. NUM only: for the last two NUMs a and b in U: a+b, a-b, b-a, a*b, a//b, 2a, a//2, min(a+b, 9);\n4. values of lastK's field in the other services of S;\n5. values in the last 20 history instructions, most recent first;\n6. VAL only: the domain list of the field, then all 14 values.\nNUM escape: digit count 1 to 7 (adaptive), then the digits with an order-1 digit model; this also covers leading zeros.\nTable context: (class, previous non-WS skeleton symbol, bucketed as '=', 'to', 'from', '`', '(', 'of', other).\n\nR MODE. Candidate lists put the instruction's keys and values and the decoded edits ahead of H.\n\nLENGTH. END is an ordinary skeleton symbol, so there is no separate length field.\n\nDETERMINISM. Everything is integer counts held in Python dicts and is updated in a canonical order. Both sides update after a message is decoded, and the encoder applies the same update after it has encoded.",
+  "h_local_predictor": "MODEL. Qwen/Qwen2.5-0.5B (base, not instruct). Weights pinned to the snapshot revision hash recorded at download. Loaded as fp32 with attn_implementation='eager', eval mode, under torch.inference_mode.\n\nCONTEXT. Token ids are built at the id level, never by re-tokenising concatenated strings.\n- PRE (fixed, about 1,400 tokens):\n  - header: 'Instructions written by a planner for a worker who edits a configuration state.\\n\\n'\n  - then, for each exemplar: 'Instruction:\\n' + tok(text) + [EOT=151643] + tok('\\n\\n')\n  - then the 2 reasons as 'Reviewer rejection:\\n' + tok(text) + [EOT] + '\\n\\n'\n- DYN (per message):\n  - the last \u22646 instructions of this task, as Instruction blocks;\n  - then 'State:\\n' + snapshot lines joined by '\\n' + '\\n\\n';\n  - instruction mode: then 'Instruction:\\n';\n  - R mode: then 'Instruction:\\n' + instr + [EOT] + '\\nProposed edits:\\n' + one line per edit ('key = value' / 'delete key' / 'add key = value') + '\\nReviewer rejection:\\n'.\n- Payload: tok(T) with canonical ids, then EOT as the end symbol.\n- Encode-time asserts: tokenizer.decode(ids, clean_up_tokenization_spaces=False) == T byte-exactly, and the context is \u2264 2,600 tokens. If either fails, the message goes in H-pred mode.\n\nDISTRIBUTION. Full vocabulary, no top-k.\n- Cast the logits row (float32) to float64 in numpy: z = l - max(l); p = exp(z)/sum(exp(z)).\n- freq_i = 1 + floor(p_i * (2^30 - V)), with V = 151,936 (padding ids included).\n- Integer cumsum in int64, total \u2264 2^30. The coder uses (cum, freq, total).\n\nSTREAM. The first symbol is the mode {LLM: 15/16, HPRED: 1/16}. The encoder codes the message both ways and keeps the shorter. Then the tokens and EOT, then chk8 uniform over 256.\n\nKV REUSE. The PRE key/value cache is computed once per process with one forward pass of PRE and is deep-copied for each message. DYN is prefilled in one forward pass. Payload tokens are then fed one at a time with the cache, on both sides. The encoder never batch-scores the payload; it runs the same incremental loop as the decoder.\n\nFORWARD PASS COUNT. Per instruction, 3 passes over the text (encode, proofread decode in a fresh process, worker decode), each 1 prefill plus about 80 incremental steps, so about 245 forward passes. About 57k local forward passes for the run (690 loop executions). Estimated time about 65-75 minutes on 4 cores.",
+  "h_local_model_id": "Qwen/Qwen2.5-0.5B",
+  "coder": "Exact big-integer arithmetic coder, the same for every edge and both arms.\n- State: (L, W, D), starting at (0, 1, 1).\n- Coding a symbol with (cum, f, T): L = L*T + W*cum; W = W*f; D = D*T. There is no rounding, so precision is unlimited; numbers stay under 3,000 bits.\n- Termination: radix rB(k) = B0*B1^(k-1). Find the smallest k \u2265 1 with V = ceil(L*rB(k)/D) satisfying V*D < (L+W)*rB(k). Digits are d1 = V // B1^(k-1) (which is < B0) and then base-B1 digits.\n- Decoder: x = V/rB(k), kept exact. For each symbol, find the cum with (cum*W + L*T) \u2264 x*D*T\u00b7\u2026 (that is, the subinterval that contains x), narrow the interval, and repeat until the message grammar is complete (END plus trailing check symbols).\n- Length signalling: END is in-model, and the message boundary is the word count k.\n- Strict decode, required on every edge: (a) every word is in its alphabet; (b) d1 < B0; (c) the grammar is complete; (d) re-encoding the decoded message gives exactly the same word sequence, which is the minimal-k canonical form; (e) the check symbols match (chk6, chk8). Any failure means reject.",
+  "packing": "CODE := W0 (' ' W1)*. W0 \u2208 A0 (sorted list, |A0| = B0, frozen; about 2^15 expected). W1 \u2208 A1 (sorted list of the 47,424 lowercase words w with len \u2265 2 where ' '+w is a single o200k_base token; B1 = 47,424). Words are separated by single spaces, with no leading or trailing whitespace.\n\nCapacity of a k-word message: log2(B0) + 15.53*(k-1) bits, about 14.9 + 15.53(k-1).\n\nCost: k regex tokens (each word is one \\w+ match) and k BPE tokens (W0 is a single token without a leading space; each ' '+W1 is a single token, and the pre-tokenizer cuts at every space, so neighbours cannot merge). Regex count equals BPE count exactly. The only other symbols are '+' and '?', each 1 regex and 1 BPE token.\n\nExpected waste: about 0.5 word per message.",
+  "determinism": "H-PRED. Pure integer arithmetic (Python ints and dicts, canonical update order), so it is bit-identical by construction on any machine. Every message is asserted byte-exact.\n\nH-LOCAL. Encoder and decoder run on the same machine with:\n- one pinned weights snapshot, loaded as fp32;\n- torch.set_num_threads(4) and set_num_interop_threads(1), set before load;\n- env OMP_NUM_THREADS=4, MKL_NUM_THREADS=4, MKL_CBWR=AVX2 (oneMKL conditional numerical reproducibility);\n- torch.use_deterministic_algorithms(True);\n- eager attention and no batching;\n- identical tensor shapes at every step: the encoder feeds the same one-token incremental calls as the decoder, and PRE and DYN are prefilled with the same chunking;\n- the same torch and transformers versions;\n- codec processes run one after another, never in parallel;\n- quantisation from float32 logits in float64 numpy, with the arithmetic done in a fixed order.\n\nIf the logits still differ: frequencies change, the decode desynchronises, and the result is garbage. That is caught by chk8 (255/256), by the END and grammar checks, and by the canonical re-encode check (d). Two guards stop it before it reaches the wire:\n1. Proofreading: after encoding, the planner-side codec decodes the codeword in a fresh process. If that does not match, the message is re-encoded in mode HPRED.\n2. If the worker-side decode still fails: edits edge = '?', the checker relays '?' on forward, and the planner re-sends the instruction in HPRED mode (the tokens are counted).\n\nExpected occurrences: 0. The per-message byte-exact assertion is the final guard. Any undetected mismatch (probability \u2264 1/256 per nondeterministic event) is reported as an integrity failure, not hidden.",
+  "edges": [
+   {
+    "arm": "both",
+    "edge": "instruction",
+    "grammar": "msg := CODE. Inner symbol stream:\n- H-pred: (skeleton symbol [entity rank | NOVEL spelling])* END\n- H-local: MODE (TOKEN* EOT CHK8 | <H-pred stream>)\n\nThe message is never empty: at least 1 word.",
+    "encode": "Lex the planner text T. Code it with the predictor, conditioned on the snapshot S, the task history H and the frozen primed state. Terminate at the minimal k. H-local: code both ways and keep the shorter, then append chk8 = sha256(T || S_bytes) mod 256. Run the proofread decode, then send.",
+    "decode_and_checks": "Map words to digits to V. Decode until END (and CHK8 for H-local). Concatenate the unit surfaces (or the token bytes). Checks: alphabet; canonical re-encode equals the message; chk8 (H-local). Assert byte-exactness against T. Then update the model.",
+    "example": "Step 0 (T = 343 chars). H-pred is about 220 bits and comes out at 15 words, for example 'turnip garble \u2026' (15 words; illustrative digits). H-local is about 140 bits, 10 words. A3b needed 67 regex / 71 BPE."
+   },
+   {
+    "arm": "both",
+    "edge": "edits",
+    "grammar": "msg := CODE | '?'\n\nPayload: NOPS (0..8, adaptive), then OP*, then CHK6 (uniform over 10^6).\n\nOP := RANK (0..15 in the candidate list C, adaptive) | ESC TYPE{set, del, add} with:\n- set: LINE uniform over |S|, then VALUE\n- del: LINE\n- add: KEYIDX uniform over the keys not in S, then VALUE\n\nVALUE uses the \u27e8V\u27e9/\u27e8N\u27e9 rank model in context 'edit'.",
+    "encode": "The worker's ops, in worker order, are applied to the healed snapshot S, giving S'. Build C from the instruction units, removing ops already coded:\n1. add(k, first VAL/NUM after k) for each mentioned k not in S;\n2. del(k) for mentioned keys, in first-mention order, if the instruction contains Delete/delete/Remove/remove;\n3. set(k, v) for each mentioned k in first-mention order, where v runs over the type-compatible values after k's first mention with v \u2260 S[k];\n4. cap at 16 entries.\n\nchk6 = int(sha256(S'))) mod 10^6.",
+    "decode_and_checks": "Strict decode; canonical re-encode; ops must be valid on S; chk6 must equal the hash of the applied state. Truncation (word dropped, word cut, or a cut that leaves a non-word) fails the alphabet, canonical or chk6 check: false accept \u2264 1e-6 per event, as in A3b. '?' means the instruction decode failed (NAK).",
+    "example": "Step 0: NOPS=1 (0.1 bit) + RANK 0 = set(cache.retries, 5) (0.3 bit) + chk6 391591 (19.93 bits) = 20.3 bits, sent as 2 words, e.g. 'velvet quorum'. Step 5: RANK 0 = del(gateway.log_level), 2 words. A3b needed 3/6 and 2/5."
+   },
+   {
+    "arm": "both",
+    "edge": "door_approve",
+    "grammar": "msg := '+'",
+    "encode": "The checker approves.",
+    "decode_and_checks": "The worker commits S' as the new snapshot and refreshes its hash.",
+    "example": "+  (1 regex, 1 BPE)"
+   },
+   {
+    "arm": "both",
+    "edge": "door_reject",
+    "grammar": "msg := CODE (at least 1 word; anything that is not '+' is a reject). Stream: the reason in R mode, END (and for H-local: MODE \u2026 EOT CHK8 with chk8 = sha256(reason || S) mod 256).",
+    "encode": "Code the checker's reason with the instruction codec in R mode. The context adds the instruction and the decoded edits, and the candidate lists draw on them first.",
+    "decode_and_checks": "Strict decode, canonical check, chk8 (H-local); byte-exact assert. The worker reruns with the reason, as in A3b, and its next edits message replaces the previous one.",
+    "example": "A reason of about 400 chars: H-pred about 1.1 bpc, 29 words; H-local about 0.55 bpc, 15 words."
+   },
+   {
+    "arm": "both",
+    "edge": "forward",
+    "grammar": "msg := CODE (the worker's approved edits message, copied word for word) | '?' (relayed NAK)",
+    "encode": "Once approved, the checker copies the worker's edits words unchanged. No '?' round trip.",
+    "decode_and_checks": "The planner decodes with its own instruction and its book (which equals the snapshot), applies the ops, and verifies chk6 against the result. On failure the planner falls back to the checker's copy, as in A3b; expected 0 times. '?' means re-send the instruction in H-pred mode.",
+    "example": "Step 0: 'velvet quorum' (2 regex / 2 BPE). A3b needed 1+1+3 regex / 2+1+6 BPE."
+   },
+   {
+    "arm": "both",
+    "edge": "heal",
+    "grammar": "msg := '' (no message)",
+    "encode": "Before the worker runs: if hash(working book) \u2260 snapshot hash, restore the book from the snapshot.",
+    "decode_and_checks": "The hash must equal the hash of the last approved state. 0 model calls.",
+    "example": "Steps 4, 8, 12: 0 tokens."
+   }
+  ],
+  "predictions": {
+   "H-pred": {
+    "channel_tok_per_task": 276,
+    "bpe_tok_per_task": 276,
+    "per_edge_tok_per_task": {
+     "instruction": 198,
+     "edits": 29,
+     "door": 21,
+     "forward": 28,
+     "heal": 0
+    },
+    "bits_per_char_prose": 0.67,
+    "one_time_table_bytes": 480000,
+    "drift_healed_zero_call_of_48": 48,
+    "replica_consistent_of_16": 16,
+    "truncation_detected_pct": 100
+   },
+   "H-local": {
+    "channel_tok_per_task": 205,
+    "bpe_tok_per_task": 205,
+    "per_edge_tok_per_task": {
+     "instruction": 130,
+     "edits": 29,
+     "door": 18,
+     "forward": 28,
+     "heal": 0
+    },
+    "bits_per_char_prose": 0.4,
+    "one_time_table_bytes": 988500000,
+    "drift_healed_zero_call_of_48": 48,
+    "replica_consistent_of_16": 16,
+    "truncation_detected_pct": 100
+   }
+  },
+  "target_assessment": "The target is 294 regex and 372 BPE tokens per task. Regex and BPE counts are equal by construction here, so the regex limit is the one that binds.\n\nFixed (non-prose) cost per task, both arms:\n- edits: 14.25 messages \u00d7 about 2.03 words = 29\n- forward: 14 \u00d7 2.03 = 28; this is the price of keeping chk6 on both edges\n- approvals: 14\n- total: about 71, plus the reject reasons.\n\nH-PRED (prediction):\n- Instruction prose at 0.66 bpc: about 211 bits per instruction, about 14.1 words. 198 tokens per task.\n- Reasons at about 1.1 bpc: 0.25 \u00d7 29 = 7 tokens per task.\n- Total about 276 regex and 276 BPE: 0.188\u00d7 tent regex, 0.148\u00d7 tent BPE.\n- Break-even: instruction bpc \u2264 0.72. Above that, H-pred misses: at 0.80 bpc it comes to about 307 (0.21\u00d7).\n- Confidence of meeting the target: about 55-60%. 80% interval: 245-320.\n\nH-LOCAL (prediction):\n- About 0.40 bpc, plus 8 check bits: about 9.3 words per instruction. 130 tokens per task.\n- Total about 205: 0.14\u00d7 regex, 0.11\u00d7 BPE.\n- Break-even: about 0.70 bpc. Confidence of meeting: about 85%.\n- Its 57k forward passes are reported as local model calls, separate from the zero hosted calls.\n\nIntegrity, both arms (prediction): 48/48 drifts healed at 0 calls, 16/16 copies correct, truncations all rejected (false accept \u2264 1e-6 each).\n\nGate before the live run: build each model on 31 priming runs and measure on the held-out one, all 32 ways. If H-pred's held-out bpc is above 0.72, the honest prediction is H-pred at 71 + 14 \u00d7 (bits/15.53 + 0.5) + 7. Report that number instead of claiming the target.\n\nOption for the owner: weaken only the forward check to chk10, so it fits in 1 word. That saves about 14 tokens per task (H-pred about 262), but it is weaker than A3b's chk6 on forward, so it is not the default.",
+  "risks": "1. The bpc figures are estimates, not measurements. A non-neural PPM trained on only 448 instructions may land at 0.75-0.9 bpc, above H-pred's break-even of 0.72; the held-out gate measures this.\n2. Haiku's style may drift between the priming seeds and the test seeds. Mitigation: counts adapt within the task.\n3. Floating-point nondeterminism in H-local, from MKL or oneDNN choosing different kernels. Mitigated by: identical incremental code paths, MKL_CBWR, the fresh-process proofread decode, chk8 (detects 255/256), and the '?' fallback to H-pred.\n4. Qwen tokenisation might not round-trip some Unicode (\u2192) or whitespace byte-exactly. This is asserted at encode time, and such messages fall back to H-pred.\n5. Run time: 3 passes \u00d7 230 messages at about 18 s each is about 70 minutes. If the machine is slower, drop the proofread pass. That saves about 33% of the time, and chk8 remains as the guard.\n6. A0 may hold fewer than 2^15 words. This costs at most a fraction of a bit per message.\n7. If the harness strips or alters spaces between words, decoding fails. The canonical check catches this, but such messages would be lost; whitespace must be preserved exactly.\n8. Instructions with several ops, or ops the parser does not predict, can make edits 3 words.\n9. Reject reasons are under-primed (only about 8 in the corpus).\n10. The forward check costs 14 tokens per task to stay as strong as A3b; relaxing it to chk10 would save them, at the cost of a weaker check."
+ },
+ "call": {
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 8834,
+   "cache_read_input_tokens": 0,
+   "output_tokens": 44678,
+   "output_tokens_details": {
+    "thinking_tokens": 33342
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 8834,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "global",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 44678,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 8834,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 8834
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard",
+   "fallback_credit": null
+  },
+  "cost": 0.96424,
+  "api_ms": 464203
+ },
+ "sec": 465.51744771003723
+}

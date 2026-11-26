@@ -1,0 +1,1010 @@
+{
+ "code_commit": "8df3b0c3ce1f5c8e21d5bf25741b746bc6455ad2",
+ "experiment": "PAINT-1",
+ "numpy": "2.5.3",
+ "python": "3.13.18",
+ "results": {
+  "act grey": {
+   "A": {
+    "accuracy": 0.502,
+    "contained": 28,
+    "cost_per_ticket": 12.06,
+    "crashed": 0.0,
+    "errors": {
+     "classify": 236
+    },
+    "score": 0.3814,
+    "visits": {
+     "act": 590,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 500,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 500,
+     "verify": 500
+    }
+   },
+   "B": {
+    "accuracy": 0.538,
+    "contained": 35,
+    "cost_per_ticket": 12.124,
+    "crashed": 0.0,
+    "errors": {
+     "classify": 213
+    },
+    "score": 0.4168,
+    "visits": {
+     "act": 606,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 500,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 500,
+     "verify": 500
+    }
+   },
+   "changes": [
+    "act turned grey: its power is kept, its crashes are contained"
+   ],
+   "gesture": "SHIFT act TO grey"
+  },
+  "amount_validator dot extract": {
+   "A": {
+    "accuracy": 0.488,
+    "contained": 0,
+    "cost_per_ticket": 12.0856,
+    "crashed": 0.062,
+    "errors": {
+     "act": 31,
+     "classify": 220
+    },
+    "score": 0.3671,
+    "visits": {
+     "act": 540,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 469,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 469,
+     "verify": 469
+    }
+   },
+   "B": {
+    "accuracy": 0.528,
+    "contained": 0,
+    "cost_per_ticket": 12.1192,
+    "crashed": 0.054,
+    "errors": {
+     "act": 27,
+     "classify": 202
+    },
+    "score": 0.4068,
+    "visits": {
+     "act": 546,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 473,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 473,
+     "verify": 473
+    }
+   },
+   "changes": [
+    "amount_validator dotted into extract (adds a check after it; replaces nothing)"
+   ],
+   "gesture": "DOT amount_validator INTO extract"
+  },
+  "baseline": {
+   "A": {
+    "accuracy": 0.488,
+    "contained": 0,
+    "cost_per_ticket": 11.7856,
+    "crashed": 0.062,
+    "errors": {
+     "act": 31,
+     "classify": 220
+    },
+    "score": 0.3701,
+    "visits": {
+     "act": 540,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 469,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 469,
+     "verify": 469
+    }
+   },
+   "B": {
+    "accuracy": 0.528,
+    "contained": 0,
+    "cost_per_ticket": 11.8192,
+    "crashed": 0.054,
+    "errors": {
+     "act": 27,
+     "classify": 202
+    },
+    "score": 0.4098,
+    "visits": {
+     "act": 546,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 473,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 473,
+     "verify": 473
+    }
+   },
+   "changes": []
+  },
+  "cache@memory.brain": {
+   "A": {
+    "accuracy": 0.488,
+    "contained": 0,
+    "cost_per_ticket": 10.2856,
+    "crashed": 0.062,
+    "errors": {
+     "act": 31,
+     "classify": 220
+    },
+    "score": 0.3851,
+    "visits": {
+     "act": 540,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 469,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 469,
+     "verify": 469
+    }
+   },
+   "B": {
+    "accuracy": 0.528,
+    "contained": 0,
+    "cost_per_ticket": 10.3192,
+    "crashed": 0.054,
+    "errors": {
+     "act": 27,
+     "classify": 202
+    },
+    "score": 0.4248,
+    "visits": {
+     "act": 546,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 473,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 473,
+     "verify": 473
+    }
+   },
+   "changes": [
+    "cache pierced into the brain of memory"
+   ],
+   "gesture": "PIERCE cache THROUGH memory.brain"
+  },
+  "cache@memory.head": {
+   "A": {
+    "accuracy": 0.488,
+    "contained": 0,
+    "cost_per_ticket": 11.9856,
+    "crashed": 0.062,
+    "errors": {
+     "act": 31,
+     "classify": 220
+    },
+    "score": 0.3681,
+    "visits": {
+     "act": 540,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 469,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 469,
+     "verify": 469
+    }
+   },
+   "B": {
+    "accuracy": 0.528,
+    "contained": 0,
+    "cost_per_ticket": 12.0192,
+    "crashed": 0.054,
+    "errors": {
+     "act": 27,
+     "classify": 202
+    },
+    "score": 0.4078,
+    "visits": {
+     "act": 546,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 473,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 473,
+     "verify": 473
+    }
+   },
+   "changes": [
+    "cache pierced into the head of memory"
+   ],
+   "gesture": "PIERCE cache THROUGH memory.head"
+  },
+  "cache@memory.heart": {
+   "A": {
+    "accuracy": 0.488,
+    "contained": 0,
+    "cost_per_ticket": 11.3616,
+    "crashed": 0.062,
+    "errors": {
+     "act": 31,
+     "classify": 220
+    },
+    "score": 0.3744,
+    "visits": {
+     "act": 540,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 469,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 469,
+     "verify": 469
+    }
+   },
+   "B": {
+    "accuracy": 0.528,
+    "contained": 0,
+    "cost_per_ticket": 11.3052,
+    "crashed": 0.054,
+    "errors": {
+     "act": 27,
+     "classify": 202
+    },
+    "score": 0.4149,
+    "visits": {
+     "act": 546,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 473,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 473,
+     "verify": 473
+    }
+   },
+   "changes": [
+    "cache pierced into the heart of memory"
+   ],
+   "gesture": "PIERCE cache THROUGH memory.heart"
+  },
+  "composed": {
+   "A": {
+    "accuracy": 0.78,
+    "contained": 32,
+    "cost_per_ticket": 11.787,
+    "crashed": 0.0,
+    "errors": {
+     "classify": 88
+    },
+    "score": 0.6621,
+    "visits": {
+     "act": 609,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 500,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 500,
+     "verify": 500
+    }
+   },
+   "B": {
+    "accuracy": 0.822,
+    "contained": 35,
+    "cost_per_ticket": 11.709,
+    "crashed": 0.0,
+    "errors": {
+     "classify": 64
+    },
+    "score": 0.7049,
+    "visits": {
+     "act": 613,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 500,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 500,
+     "verify": 500
+    }
+   },
+   "changes": [
+    "spell_corrector pierced into the brain of classify",
+    "synonym_expander pierced into the brain of classify",
+    "cache pierced into the heart of memory",
+    "fast_retry pierced into the heart of act",
+    "act turned grey: its power is kept, its crashes are contained"
+   ],
+   "gesture": "PIERCE spell_corrector THROUGH classify.brain\nPIERCE synonym_expander THROUGH classify.brain\nPIERCE cache THROUGH memory.heart\nPIERCE fast_retry THROUGH act.heart\nSHIFT act TO grey"
+  },
+  "fast_retry@act.heart": {
+   "A": {
+    "accuracy": 0.494,
+    "contained": 0,
+    "cost_per_ticket": 11.9012,
+    "crashed": 0.074,
+    "errors": {
+     "act": 37,
+     "classify": 216
+    },
+    "score": 0.375,
+    "visits": {
+     "act": 553,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 463,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 463,
+     "verify": 463
+    }
+   },
+   "B": {
+    "accuracy": 0.532,
+    "contained": 0,
+    "cost_per_ticket": 11.9488,
+    "crashed": 0.066,
+    "errors": {
+     "act": 33,
+     "classify": 201
+    },
+    "score": 0.4125,
+    "visits": {
+     "act": 562,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 467,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 467,
+     "verify": 467
+    }
+   },
+   "changes": [
+    "fast_retry pierced into the heart of act"
+   ],
+   "gesture": "PIERCE fast_retry THROUGH act.heart"
+  },
+  "heal act": {
+   "A": {
+    "accuracy": 0.496,
+    "contained": 0,
+    "cost_per_ticket": 11.8256,
+    "crashed": 0.072,
+    "errors": {
+     "act": 36,
+     "classify": 215
+    },
+    "score": 0.3777,
+    "visits": {
+     "act": 553,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 464,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 464,
+     "verify": 464
+    }
+   },
+   "B": {
+    "accuracy": 0.534,
+    "contained": 0,
+    "cost_per_ticket": 11.8712,
+    "crashed": 0.064,
+    "errors": {
+     "act": 32,
+     "classify": 201
+    },
+    "score": 0.4153,
+    "visits": {
+     "act": 562,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 468,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 468,
+     "verify": 468
+    }
+   },
+   "changes": [
+    "act healed: one more recovery attempt"
+   ],
+   "gesture": "HEAL act"
+  },
+  "spell_corrector@classify.brain": {
+   "A": {
+    "accuracy": 0.672,
+    "contained": 0,
+    "cost_per_ticket": 11.7856,
+    "crashed": 0.062,
+    "errors": {
+     "act": 31,
+     "classify": 125
+    },
+    "score": 0.5541,
+    "visits": {
+     "act": 540,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 469,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 469,
+     "verify": 469
+    }
+   },
+   "B": {
+    "accuracy": 0.672,
+    "contained": 0,
+    "cost_per_ticket": 11.8192,
+    "crashed": 0.054,
+    "errors": {
+     "act": 27,
+     "classify": 129
+    },
+    "score": 0.5538,
+    "visits": {
+     "act": 546,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 473,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 473,
+     "verify": 473
+    }
+   },
+   "changes": [
+    "spell_corrector pierced into the brain of classify"
+   ],
+   "gesture": "PIERCE spell_corrector THROUGH classify.brain"
+  },
+  "spell_corrector@classify.head": {
+   "A": {
+    "accuracy": 0.664,
+    "contained": 0,
+    "cost_per_ticket": 13.2856,
+    "crashed": 0.062,
+    "errors": {
+     "act": 31,
+     "classify": 129
+    },
+    "score": 0.5311,
+    "visits": {
+     "act": 540,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 469,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 469,
+     "verify": 469
+    }
+   },
+   "B": {
+    "accuracy": 0.67,
+    "contained": 0,
+    "cost_per_ticket": 13.3192,
+    "crashed": 0.054,
+    "errors": {
+     "act": 27,
+     "classify": 130
+    },
+    "score": 0.5368,
+    "visits": {
+     "act": 546,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 473,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 473,
+     "verify": 473
+    }
+   },
+   "changes": [
+    "spell_corrector pierced into the head of classify"
+   ],
+   "gesture": "PIERCE spell_corrector THROUGH classify.head"
+  },
+  "spell_corrector@classify.heart": {
+   "A": {
+    "accuracy": 0.672,
+    "contained": 0,
+    "cost_per_ticket": 14.2856,
+    "crashed": 0.062,
+    "errors": {
+     "act": 31,
+     "classify": 125
+    },
+    "score": 0.5291,
+    "visits": {
+     "act": 540,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 469,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 469,
+     "verify": 469
+    }
+   },
+   "B": {
+    "accuracy": 0.672,
+    "contained": 0,
+    "cost_per_ticket": 14.3192,
+    "crashed": 0.054,
+    "errors": {
+     "act": 27,
+     "classify": 129
+    },
+    "score": 0.5288,
+    "visits": {
+     "act": 546,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 473,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 473,
+     "verify": 473
+    }
+   },
+   "changes": [
+    "spell_corrector pierced into the heart of classify"
+   ],
+   "gesture": "PIERCE spell_corrector THROUGH classify.heart"
+  },
+  "spell_corrector@near.classify": {
+   "A": {
+    "accuracy": 0.488,
+    "contained": 0,
+    "cost_per_ticket": 13.2856,
+    "crashed": 0.062,
+    "errors": {
+     "act": 31,
+     "classify": 220
+    },
+    "score": 0.3551,
+    "visits": {
+     "act": 540,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 469,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 469,
+     "verify": 469
+    }
+   },
+   "B": {
+    "accuracy": 0.528,
+    "contained": 0,
+    "cost_per_ticket": 13.3192,
+    "crashed": 0.054,
+    "errors": {
+     "act": 27,
+     "classify": 202
+    },
+    "score": 0.3948,
+    "visits": {
+     "act": 546,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 473,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 473,
+     "verify": 473
+    }
+   },
+   "changes": [
+    "spell_corrector placed near classify"
+   ],
+   "gesture": "PLACE spell_corrector NEAR classify"
+  },
+  "synonym_expander@classify.brain": {
+   "A": {
+    "accuracy": 0.574,
+    "contained": 0,
+    "cost_per_ticket": 11.7856,
+    "crashed": 0.062,
+    "errors": {
+     "act": 31,
+     "classify": 175
+    },
+    "score": 0.4561,
+    "visits": {
+     "act": 540,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 469,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 469,
+     "verify": 469
+    }
+   },
+   "B": {
+    "accuracy": 0.66,
+    "contained": 0,
+    "cost_per_ticket": 11.8192,
+    "crashed": 0.054,
+    "errors": {
+     "act": 27,
+     "classify": 136
+    },
+    "score": 0.5418,
+    "visits": {
+     "act": 546,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 473,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 473,
+     "verify": 473
+    }
+   },
+   "changes": [
+    "synonym_expander pierced into the brain of classify"
+   ],
+   "gesture": "PIERCE synonym_expander THROUGH classify.brain"
+  },
+  "synonym_expander@classify.head": {
+   "A": {
+    "accuracy": 0.574,
+    "contained": 0,
+    "cost_per_ticket": 12.7856,
+    "crashed": 0.062,
+    "errors": {
+     "act": 31,
+     "classify": 175
+    },
+    "score": 0.4461,
+    "visits": {
+     "act": 540,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 469,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 469,
+     "verify": 469
+    }
+   },
+   "B": {
+    "accuracy": 0.66,
+    "contained": 0,
+    "cost_per_ticket": 12.8192,
+    "crashed": 0.054,
+    "errors": {
+     "act": 27,
+     "classify": 136
+    },
+    "score": 0.5318,
+    "visits": {
+     "act": 546,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 473,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 473,
+     "verify": 473
+    }
+   },
+   "changes": [
+    "synonym_expander pierced into the head of classify"
+   ],
+   "gesture": "PIERCE synonym_expander THROUGH classify.head"
+  },
+  "synonym_expander@classify.heart": {
+   "A": {
+    "accuracy": 0.574,
+    "contained": 0,
+    "cost_per_ticket": 13.7856,
+    "crashed": 0.062,
+    "errors": {
+     "act": 31,
+     "classify": 175
+    },
+    "score": 0.4361,
+    "visits": {
+     "act": 540,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 469,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 469,
+     "verify": 469
+    }
+   },
+   "B": {
+    "accuracy": 0.66,
+    "contained": 0,
+    "cost_per_ticket": 13.8192,
+    "crashed": 0.054,
+    "errors": {
+     "act": 27,
+     "classify": 136
+    },
+    "score": 0.5218,
+    "visits": {
+     "act": 546,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 473,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 473,
+     "verify": 473
+    }
+   },
+   "changes": [
+    "synonym_expander pierced into the heart of classify"
+   ],
+   "gesture": "PIERCE synonym_expander THROUGH classify.heart"
+  },
+  "synonym_expander@near.classify": {
+   "A": {
+    "accuracy": 0.488,
+    "contained": 0,
+    "cost_per_ticket": 12.7856,
+    "crashed": 0.062,
+    "errors": {
+     "act": 31,
+     "classify": 220
+    },
+    "score": 0.3601,
+    "visits": {
+     "act": 540,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 469,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 469,
+     "verify": 469
+    }
+   },
+   "B": {
+    "accuracy": 0.528,
+    "contained": 0,
+    "cost_per_ticket": 12.8192,
+    "crashed": 0.054,
+    "errors": {
+     "act": 27,
+     "classify": 202
+    },
+    "score": 0.3998,
+    "visits": {
+     "act": 546,
+     "classify": 500,
+     "extract": 500,
+     "intake": 500,
+     "log": 473,
+     "memory": 500,
+     "normalize": 500,
+     "plan": 500,
+     "policy": 500,
+     "priority": 500,
+     "respond": 473,
+     "verify": 473
+    }
+   },
+   "changes": [
+    "synonym_expander placed near classify"
+   ],
+   "gesture": "PLACE synonym_expander NEAR classify"
+  }
+ },
+ "results_sha256": "8cff158e5efe8bba8cdede96c17e4b43e70676b6938a195a9a4f7b86847d8501",
+ "run_utc": "2026-11-16T19:05:30Z",
+ "summary": {
+  "H1_place_decides": {
+   "distinct_outcomes": {
+    "spell_corrector": 4,
+    "synonym_expander": 4
+   },
+   "pass": true
+  },
+  "H2_near_acts_on_neighbours": {
+   "classify_errors_baseline": 220,
+   "classify_errors_near": 220,
+   "pass": true
+  },
+  "H3_grey_contains": {
+   "accuracy_A": [
+    0.488,
+    0.502
+   ],
+   "accuracy_B": [
+    0.528,
+    0.538
+   ],
+   "crashed_A": 0.0,
+   "crashed_B": 0.0,
+   "pass": true
+  },
+  "H4_cache_where_it_means": {
+   "baseline": 11.7856,
+   "cost": {
+    "brain": 10.2856,
+    "head": 11.9856,
+    "heart": 11.3616
+   },
+   "pass": true
+  },
+  "H5_composed_beats_baseline": {
+   "accuracy_A": [
+    0.488,
+    0.78
+   ],
+   "pass": true,
+   "score_A": [
+    0.3701,
+    0.6621
+   ],
+   "score_B": [
+    0.4098,
+    0.7049
+   ]
+  }
+ }
+}

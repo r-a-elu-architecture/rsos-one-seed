@@ -1,0 +1,36 @@
+{
+ "N2": {
+  "eps_inside": 0.02009,
+  "joint_failure": 0.56175,
+  "bound": 0.6375,
+  "gap_pp": -7.575,
+  "se_pp": 0.555
+ },
+ "N3": {
+  "eps_inside": 0.248535,
+  "joint_failure": 0.992,
+  "bound": 1.0,
+  "gap_pp": -0.8,
+  "se_pp": 0.1
+ },
+ "N5": {
+  "eps_inside": 0.01836,
+  "joint_failure": 0.606,
+  "bound": 0.60408,
+  "gap_pp": 0.192,
+  "se_pp": 0.546
+ },
+ "N7": {
+  "eps_inside": 0.033247,
+  "joint_failure": 0.84375,
+  "bound": 0.8156,
+  "gap_pp": 2.815,
+  "se_pp": 0.406
+ },
+ "verdicts": {
+  "U1": true,
+  "U2": true,
+  "U3": false,
+  "U4": true
+ }
+}

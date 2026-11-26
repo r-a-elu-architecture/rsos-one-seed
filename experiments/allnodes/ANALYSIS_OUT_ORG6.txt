@@ -1,0 +1,68 @@
+v 1 Law 2 blind operation  own d1a0g1b1 nb d1a1g0b1 P0 12/12 P5 12/12 holm5 0.0051 ch 11/12 rep [6, 6] tr 7/12 GREEN []
+v 2 Network                own d1a1g0b1 nb d1a1g1b1 P0 12/12 P5 12/12 holm5 0.0051 ch 11/12 rep [6, 6] tr 0/0 GREEN []
+v 3 Networks, satellites   own d1a1g1b1 nb d1a1g0b1 P0 12/12 P5 10/12 holm5 0.1929 ch 10/12 rep [6, 4] tr 9/9 - ['m3']
+v 4 Physical comm layer    own d1a1g0b1 nb d1a1g1b0 P0 12/12 P5 12/12 holm5 0.0051 ch 10/12 rep [6, 6] tr 9/11 GREEN []
+v 5 Human reasoning        own d1a0g1b0 nb d1a1g0b1 P0 12/12 P5 12/12 holm5 0.0051 ch 8/12 rep [6, 6] tr 1/9 - ['m2']
+v 6 Physics (layer 2)      own d1a1g0b1 nb d1a0g1b0 P0 12/12 P5 12/12 holm5 0.0051 ch 12/12 rep [6, 6] tr 5/9 GREEN []
+v 7 Ledgers, finance       own d1a1g1b0 nb d1a1g0b0 P0 12/12 P5 12/12 holm5 0.0051 ch 7/12 rep [6, 6] tr 9/10 - ['m2']
+v 8 Chemistry              own d1a1g0b0 nb d1a1g1b0 P0 12/12 P5 11/12 holm5 0.0349 ch 12/12 rep [6, 5] tr 6/7 GREEN []
+v 9 Databases              own d1a0g0b0 nb d1a1g1b0 P0 12/12 P5 12/12 holm5 0.0051 ch 8/12 rep [6, 6] tr 8/8 - ['m2']
+v10 AI chips (layer 2)     own d1a1g1b1 nb d1a1g1b0 P0 12/12 P5 12/12 holm5 0.0051 ch 11/12 rep [6, 6] tr 4/4 GREEN []
+v11 Earth and space        own d1a1g0b1 nb d1a1g1b1 P0 12/12 P5 10/12 holm5 0.1929 ch 12/12 rep [6, 4] tr 0/0 - ['m3']
+v12 Cosmology              own d1a1g0b1 nb d1a1g0b1 P0 12/12 P5 12/12 holm5 0.0051 ch 8/12 rep [6, 6] tr 9/9 - ['m2']
+v13 Biology, medicine      own d1a1g0b1 nb d1a1g1b1 P0 12/12 P5 12/12 holm5 0.0051 ch 10/12 rep [6, 6] tr 0/0 GREEN []
+v14 Level E (layer 2)      own d1a1g1b1 nb d1a1g0b0 P0 10/12 P5 10/12 holm5 0.1929 ch 10/12 rep [5, 5] tr 3/4 - ['m3']
+v15 Law 1 read scope       own d1a1g1b0 nb d1a1g1b1 P0 12/12 P5 8/11 holm5 0.4531 ch 10/12 rep [3, 5] tr 0/0 - ['m3', 'm5']
+v16 Linguistics            own d1a1g0b1 nb d1a1g1b0 P0 12/12 P5 9/12 holm5 0.4380 ch 12/12 rep [6, 3] tr 7/9 - ['m3', 'm5']
+v17 Level D                own d1a1g1b1 nb d1a1g0b0 P0 12/12 P5 9/11 holm5 0.2290 ch 10/12 rep [3, 6] tr 7/8 - ['m3', 'm5']
+v18 Protocol theory        own d1a0g1b0 nb d1a1g1b0 P0 9/12 P5 8/11 holm5 0.4531 ch 10/12 rep [3, 5] tr 8/10 - ['m1', 'm3', 'm5']
+v19 Level B                own d1a1g1b0 nb d1a1g1b0 P0 11/12 P5 9/12 holm5 0.4380 ch 12/12 rep [4, 5] tr 7/9 - ['m3']
+v20 Information theory     own d0a1g0b1 nb d1a1g1b0 P0 12/12 P5 0/0 holm5 1.0000 ch 12/12 rep [0, 0] tr 3/9 - ['m3', 'm5']
+v21 Operator algebra       own d1a1g1b0 nb d0a1g0b1 P0 10/10 P5 5/12 holm5 1.0000 ch 12/12 rep [1, 4] tr 5/9 - ['m3', 'm5']
+{
+ "n_green": 7,
+ "control": {
+  "wins": 144,
+  "nonzero": 157,
+  "of": 252,
+  "mean": 0.02146439594356259,
+  "p": 2.039043659402436e-29
+ },
+ "P14_transfer_A": {
+  "wins": 107,
+  "nonzero": 146,
+  "of": 252,
+  "mean": 0.009820877425044092,
+  "p": 8.156421415443483e-09
+ },
+ "claim_B_nb_vs_glob": {
+  "wins": 51,
+  "nonzero": 120,
+  "of": 252,
+  "mean": -0.006244488536155201,
+  "p": 0.9587962603362368
+ },
+ "worlds": {
+  "WB": {
+   "wins": 18,
+   "nonzero": 21,
+   "of": 21,
+   "mean": 0.02666005291005286,
+   "p": 0.0007448196411132812
+  },
+  "WC": {
+   "wins": 17,
+   "nonzero": 21,
+   "of": 21,
+   "mean": 0.039675925925925906,
+   "p": 0.0035986900329589844
+  }
+ },
+ "P8b": {
+  "wins": 245,
+  "nonzero": 252,
+  "of": 252,
+  "mean": 0.007287246247755191,
+  "p": 1.674137389489226e-63
+ }
+}

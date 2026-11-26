@@ -1,0 +1,102 @@
+# CONF5 (real/PREREG_CONF5.md, real/SEAL_CONF5.txt): identified RSOS structure vs plain rollout. Results to cloud-results/conf5/<run id>/.
+name: rsos-conf5
+on:
+  push:
+    branches: [core-v1]
+    paths: ["cloud/trigger_conf5.txt"]
+permissions:
+  contents: write
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        u: ["space - 1001 1001",
+            "space - 1002 1002",
+            "space - 1003 1003",
+            "space - 1004 1004",
+            "space - 1005 1005",
+            "space - 1006 1006",
+            "space - 1007 1007",
+            "space - 1008 1008",
+            "space - 1009 1009",
+            "space - 1010 1010",
+            "space - 1011 1011",
+            "space - 1012 1012",
+            "space - 1013 1013",
+            "space - 1014 1014",
+            "space - 1015 1015",
+            "space - 1016 1016",
+            "space - 1017 1017",
+            "space - 1018 1018",
+            "space - 1019 1019",
+            "space - 1020 1020",
+            "ai_agents openrouter:openai/gpt-oss-20b 1001 1004",
+            "ai_agents openrouter:openai/gpt-oss-20b 1005 1008",
+            "ai_agents openrouter:openai/gpt-oss-20b 1009 1012",
+            "ai_agents openrouter:openai/gpt-oss-20b 1013 1016",
+            "ai_agents openrouter:openai/gpt-oss-20b 1017 1020",
+            "ai_agents openrouter:openai/gpt-oss-20b 1021 1024",
+            "ai_agents openrouter:openai/gpt-oss-20b 1025 1028",
+            "ai_agents openrouter:openai/gpt-oss-20b 1029 1032",
+            "ai_agents openrouter:openai/gpt-oss-20b 1033 1036",
+            "ai_agents openrouter:openai/gpt-oss-20b 1037 1040",
+            "ai_agents openrouter:openai/gpt-oss-20b 1041 1044",
+            "ai_agents openrouter:openai/gpt-oss-20b 1045 1048",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 1201 1225",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 1226 1250",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 1251 1275",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 1276 1300"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install numpy scipy pandas scikit-learn requests qiskit qiskit-aer pvlib gymnasium skyfield dandi pynwb tiktoken mistral-common && pip install --no-deps llama-models
+      - name: OpenRouter credit check (AI rows; prints usage and limit only)
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          set -- ${{ matrix.u }}
+          case "$1" in ai_*)
+            python - <<'EOF'
+          import os, json, sys, urllib.request
+          r = urllib.request.Request("https://openrouter.ai/api/v1/key", headers={"Authorization": "Bearer " + os.environ["OPENROUTER_API_KEY"]})
+          d = json.load(urllib.request.urlopen(r, timeout=30)).get("data", {})
+          print("OPENROUTER usage", d.get("usage"), "limit", d.get("limit"), "remaining", d.get("limit_remaining"))
+          rem = d.get("limit_remaining")
+          if rem is not None and rem < 1.0: sys.exit("STOP: less than $1 OpenRouter credit left")
+          EOF
+            ;; esac
+      - name: real data for this row
+        run: |
+          set -- ${{ matrix.u }}
+          if [ "$1" = space ]; then cp real/hosts/data/space_tle_frozen.txt real/hosts/data/space_tle.txt; fi
+          if [ "$1" = ai_human ]; then python real/hosts/ai_human_fetch.py; fi
+      - name: CONF5 seal check
+        run: grep -v '^#' real/SEAL_CONF5.txt | sha256sum -c --quiet
+      - run: python cloud/conf5_unit.py ${{ matrix.u }}
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          REASONING_EFFORT: low
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: conf5-${{ strategy.job-index }}
+          path: real/outc5/
+  collect:
+    needs: unit
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: /tmp/art
+      - run: |
+          git config user.name "rsos-cloud"; git config user.email "rsos-cloud@users.noreply.github.com"
+          git fetch origin cloud-results && git checkout cloud-results
+          mkdir -p conf5/${{ github.run_id }} && cp /tmp/art/*/*.json conf5/${{ github.run_id }}/ 2>/dev/null || true
+          git add conf5 && git commit -qm "CONF5 ${{ github.run_id }}" && (git push -q origin cloud-results || (git pull -q --rebase origin cloud-results && git push -q origin cloud-results))

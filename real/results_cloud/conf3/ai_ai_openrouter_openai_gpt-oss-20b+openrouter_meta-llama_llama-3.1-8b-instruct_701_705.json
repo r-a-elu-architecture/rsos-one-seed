@@ -1,0 +1,202 @@
+{
+ "row": "ai_ai",
+ "model": "openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct",
+ "cells_run": [
+  701,
+  702,
+  703,
+  704,
+  705
+ ],
+ "generated": true,
+ "cells": {
+  "std|701": {
+   "default": {
+    "result": 1.0,
+    "resource": 5670.0,
+    "R": 0.0001763668430335097,
+    "choices": {
+     "present|standard": 6
+    },
+    "failed_calls": 0,
+    "sec": 5.1
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 1761.0,
+    "R": 0.0005678591709256105,
+    "choices": {
+     "F:holo-path|policy": 1,
+     "P3-repair|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 1.7
+   },
+   "composed": {
+    "result": 1.0,
+    "resource": 1778.0,
+    "R": 0.0005624296962879641,
+    "choices": {
+     "C:see>trace>pierce>contain>act|policy": 1,
+     "future+1|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 1.8
+   },
+   "sec": 9
+  },
+  "std|702": {
+   "default": {
+    "result": 1.0,
+    "resource": 850.0,
+    "R": 0.001176470588235294,
+    "choices": {
+     "present|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 1.1
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 849.0,
+    "R": 0.001177856301531213,
+    "choices": {
+     "P4P5-joint|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 0.8
+   },
+   "composed": {
+    "result": 1.0,
+    "resource": 850.0,
+    "R": 0.001176470588235294,
+    "choices": {
+     "present|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 0.6
+   },
+   "sec": 2
+  },
+  "std|703": {
+   "default": {
+    "result": 1.0,
+    "resource": 2728.0,
+    "R": 0.00036656891495601173,
+    "choices": {
+     "present|standard": 3
+    },
+    "failed_calls": 0,
+    "sec": 1.8
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 2823.0,
+    "R": 0.00035423308537017357,
+    "choices": {
+     "F:holo-vote|policy": 1,
+     "F:holokey|own": 1,
+     "past-1|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 4.4
+   },
+   "composed": {
+    "result": 1.0,
+    "resource": 2635.0,
+    "R": 0.0003795066413662239,
+    "choices": {
+     "C:see>trace>compress>inherit>contain>act|policy": 1,
+     "focus_home|standard": 1,
+     "past-1|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.7
+   },
+   "sec": 9
+  },
+  "std|704": {
+   "default": {
+    "result": 0.0,
+    "resource": 2657.0,
+    "R": 0.0,
+    "choices": {
+     "present|standard": 3
+    },
+    "failed_calls": 0,
+    "sec": 3.1
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 1707.0,
+    "R": 0.0005858230814294083,
+    "choices": {
+     "F:holo-std|policy": 1,
+     "P3-repair|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.1
+   },
+   "composed": {
+    "result": 1.0,
+    "resource": 2599.0,
+    "R": 0.00038476337052712584,
+    "choices": {
+     "present|standard": 1,
+     "C:see>trace>compress>inherit>contain>act|own": 1,
+     "past-1|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 1.8
+   },
+   "sec": 7
+  },
+  "std|705": {
+   "default": {
+    "result": 0.0,
+    "resource": 6188.0,
+    "R": 0.0,
+    "choices": {
+     "present|standard": 6
+    },
+    "failed_calls": 0,
+    "sec": 5.1
+   },
+   "seed3v1": {
+    "result": 1.0,
+    "resource": 3730.0,
+    "R": 0.00026809651474530834,
+    "choices": {
+     "F:holo-vote|policy": 1,
+     "F:holo-vote|standard": 2,
+     "past-1|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 5.5
+   },
+   "composed": {
+    "result": 1.0,
+    "resource": 2562.0,
+    "R": 0.00039032006245121,
+    "choices": {
+     "C:see>trace>choose>contain>act|policy": 1,
+     "C:see>trace>compress>inherit>contain>act|own": 1,
+     "focus_office|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 2.2
+   },
+   "sec": 13
+  }
+ }
+}

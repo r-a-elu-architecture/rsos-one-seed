@@ -1,0 +1,25 @@
+{
+ "code_commit": "2f3a289dc8d623cd3cffced50aa8062b727d5564",
+ "experiment": "T8-TWO-RUNTIMES",
+ "numpy": "2.5.3",
+ "python": "3.13.18",
+ "results_sha256": "28ff1555e7b48dbf2e70e57823dfab20d9d72f366aaef3596b61b5c5c0e7b50b",
+ "run_utc": "2026-11-16T19:33:57Z",
+ "summary": {
+  "agent_gestures": [
+   "PIERCE spell_corrector THROUGH classify.head",
+   "HEAL act",
+   "PIERCE synonym_expander THROUGH classify.brain"
+  ],
+  "baseline_accuracy": 0.488,
+  "equivalence": {
+   "causal": true,
+   "intent": true,
+   "trace": true
+  },
+  "house_accuracy": 0.762,
+  "person_session_steps": 5,
+  "person_timeline_events": 37,
+  "without_analogy": 0.668
+ }
+}

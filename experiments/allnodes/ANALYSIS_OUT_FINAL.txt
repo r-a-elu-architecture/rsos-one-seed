@@ -1,0 +1,122 @@
+v 1 Law 2 blind operation  own d1a1g0b1 nb d1a1g1b1 P0 12/12 P5 12/12 holm5 0.0051 ch 8/12 rep [6, 6] tr 0/0 - ['m2']
+v 2 Network                own d1a1g1b1 nb d1a1g0b1 P0 12/12 P5 12/12 holm5 0.0051 ch 10/12 rep [6, 6] tr 7/9 GREEN []
+v 3 Networks, satellites   own d1a1g0b1 nb d1a1g0b1 P0 12/12 P5 12/12 holm5 0.0051 ch 11/12 rep [6, 6] tr 11/11 GREEN []
+v 4 Physical comm layer    own d1a1g0b1 nb d1a1g0b0 P0 12/12 P5 12/12 holm5 0.0051 ch 9/12 rep [6, 6] tr 8/8 - ['m2']
+v 5 Human reasoning        own d1a0g0b0 nb d1a1g0b1 P0 12/12 P5 12/12 holm5 0.0051 ch 7/12 rep [6, 6] tr 1/6 - ['m2']
+v 6 Physics (layer 2)      own d1a1g1b1 nb d1a0g0b0 P0 12/12 P5 12/12 holm5 0.0051 ch 11/12 rep [6, 6] tr 9/10 GREEN []
+v 7 Ledgers, finance       own d1a0g0b0 nb d1a1g1b0 P0 12/12 P5 11/12 holm5 0.0381 ch 9/12 rep [5, 6] tr 8/8 - ['m2']
+v 8 Chemistry              own d1a1g0b0 nb d1a0g0b0 P0 12/12 P5 10/12 holm5 0.1736 ch 12/12 rep [6, 4] tr 3/6 - ['m3']
+v 9 Databases              own d1a1g0b0 nb d1a1g1b0 P0 11/12 P5 11/12 holm5 0.0381 ch 8/12 rep [6, 5] tr 9/9 - ['m2']
+v10 AI chips (layer 2)     own d1a1g1b1 nb d1a1g0b0 P0 11/12 P5 11/12 holm5 0.0381 ch 7/12 rep [6, 5] tr 6/9 - ['m2']
+v11 Earth and space        own d1a1g0b1 nb d1a1g1b1 P0 12/12 P5 9/11 holm5 0.1963 ch 12/12 rep [6, 3] tr 0/0 - ['m3', 'm5']
+v12 Cosmology              own d1a1g1b1 nb d1a1g1b1 P0 12/12 P5 12/12 holm5 0.0051 ch 11/12 rep [6, 6] tr 0/0 GREEN []
+v13 Biology, medicine      own d1a1g1b1 nb d1a1g1b1 P0 12/12 P5 10/12 holm5 0.1736 ch 11/12 rep [5, 5] tr 0/0 - ['m3']
+v14 Level E (layer 2)      own d1a1g1b1 nb d1a1g1b0 P0 8/12 P5 8/12 holm5 0.7754 ch 7/12 rep [4, 4] tr 3/5 - ['m1', 'm2', 'm3']
+v15 Law 1 read scope       own d1a1g0b0 nb d1a1g1b1 P0 12/12 P5 12/12 holm5 0.0051 ch 10/12 rep [6, 6] tr 0/0 GREEN []
+v16 Linguistics            own d1a1g1b1 nb d1a1g0b0 P0 12/12 P5 4/12 holm5 1.0000 ch 12/12 rep [2, 2] tr 11/11 - ['m3', 'm5']
+v17 Level D                own d1a1g0b1 nb d1a1g0b0 P0 12/12 P5 12/12 holm5 0.0051 ch 8/12 rep [6, 6] tr 8/10 - ['m2']
+v18 Protocol theory        own d1a1g0b0 nb d1a1g0b0 P0 12/12 P5 8/12 holm5 0.7754 ch 9/12 rep [5, 3] tr 9/10 - ['m2', 'm3', 'm5']
+v19 Level B                own d1a1g0b0 nb d1a1g0b0 P0 12/12 P5 9/12 holm5 0.3650 ch 10/12 rep [5, 4] tr 11/11 - ['m3']
+v20 Information theory     own d1a1g1b1 nb d1a1g0b0 P0 12/12 P5 5/11 holm5 1.0000 ch 12/12 rep [3, 2] tr 10/10 - ['m3', 'm5']
+v21 Operator algebra       own d1a1g0b0 nb d1a1g1b1 P0 12/12 P5 10/12 holm5 0.1736 ch 10/12 rep [5, 5] tr 0/0 - ['m3']
+{
+ "n_green": 5,
+ "control": {
+  "wins": 103,
+  "nonzero": 110,
+  "of": 252,
+  "mean": 0.012355048500881833,
+  "p": 2.6263547649022638e-23
+ },
+ "P14_transfer_A": {
+  "wins": 114,
+  "nonzero": 133,
+  "of": 252,
+  "mean": 0.01222111992945326,
+  "p": 5.275806890122021e-18
+ },
+ "claim_B_nb_vs_glob": {
+  "wins": 24,
+  "nonzero": 144,
+  "of": 252,
+  "mean": -0.009362874779541437,
+  "p": 1.0
+ },
+ "worlds": {
+  "WB": {
+   "wins": 19,
+   "nonzero": 21,
+   "of": 21,
+   "mean": 0.031117724867724888,
+   "p": 0.000110626220703125
+  },
+  "WC": {
+   "wins": 18,
+   "nonzero": 21,
+   "of": 21,
+   "mean": 0.02904761904761907,
+   "p": 0.0007448196411132812
+  }
+ },
+ "P8b": {
+  "wins": 245,
+  "nonzero": 252,
+  "of": 252,
+  "mean": 0.00699797451832034,
+  "p": 1.674137389489226e-63
+ },
+ "births": {
+  "wins": 4,
+  "nonzero": 12,
+  "of": 30,
+  "mean": 0.000703703703703736,
+  "p": 0.927001953125
+ },
+ "real": {
+  "control": {
+   "wins": 11,
+   "nonzero": 15,
+   "of": 24,
+   "mean": 0.04280376868096166,
+   "p": 0.05923461914062499
+  },
+  "transfer": {
+   "wins": 15,
+   "nonzero": 20,
+   "of": 24,
+   "mean": 0.09086257309941521,
+   "p": 0.020694732666015625
+  },
+  "tr_vs_best_native": {
+   "wins": 24,
+   "nonzero": 24,
+   "of": 24,
+   "mean": 0.10606319038336583,
+   "p": 5.960464477539063e-08
+  },
+  "own_vs_best_native": {
+   "wins": 20,
+   "nonzero": 24,
+   "of": 24,
+   "mean": 0.09314489928525015,
+   "p": 0.000771939754486084
+  },
+  "structs": [
+   [
+    "cancer",
+    "10111",
+    "11011"
+   ],
+   [
+    "digits",
+    "11100",
+    "11011"
+   ],
+   [
+    "wine",
+    "11011",
+    "11110"
+   ]
+  ]
+ }
+}

@@ -1,0 +1,61 @@
+{
+ "row": "space",
+ "model": "-",
+ "cells_run": [
+  708
+ ],
+ "generated": true,
+ "cells": {
+  "std|708": {
+   "default": {
+    "result": 475.5317055722131,
+    "resource": 16042.21112526129,
+    "R": 0.029642528817203046,
+    "choices": {
+     "present|standard": 26
+    },
+    "sec": 0.0
+   },
+   "seed3v1": {
+    "result": 481.2288810444932,
+    "resource": 17835.36113143574,
+    "R": 0.026981729021247715,
+    "choices": {
+     "P4P5:exact-planner|policy": 3,
+     "F:holo-plan|policy": 9,
+     "F:holo-carry|policy": 9,
+     "F:holo-plan|standard": 1,
+     "future+2|standard": 1,
+     "focus_science|standard": 2,
+     "P4P5:exact-planner|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 2061.4
+   },
+   "strongest": {
+    "result": 479.3299507617489,
+    "resource": 17200.408814092818,
+    "R": 0.027867358034479928,
+    "choices": {
+     "present|standard": 26
+    },
+    "sec": 34.7
+   },
+   "composed": {
+    "result": 480.24467513067924,
+    "resource": 16688.099236474543,
+    "R": 0.02877767373776318,
+    "choices": {
+     "present|standard": 1,
+     "C:see>future>compress>inherit>contain>act|policy": 21,
+     "future+2|standard": 2,
+     "focus_science|standard": 1,
+     "C:see>future>compress>inherit>contain>act|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 10.0
+   },
+   "sec": 2106
+  }
+ }
+}

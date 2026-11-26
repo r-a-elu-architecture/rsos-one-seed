@@ -1,0 +1,126 @@
+{
+ "nodes": {
+  "N1": {
+   "key": 0.035,
+   "pair": 0.055,
+   "condition": 0.63,
+   "scan": 1.0,
+   "class": "element",
+   "bound": {
+    "key": 0.035,
+    "pair": 0.06878,
+    "condition": 0.83159,
+    "scan": 0.99998
+   }
+  },
+  "N2": {
+   "key": 0.035,
+   "pair": 0.0275,
+   "condition": 0.6025,
+   "scan": 0.9975,
+   "class": "time",
+   "bound": {
+    "key": 0.035,
+    "pair": 0.06878,
+    "condition": 0.83159,
+    "scan": 0.99998
+   }
+  },
+  "N3": {
+   "key": 0.2575,
+   "pair": 0.3175,
+   "condition": 0.99,
+   "scan": 1.0,
+   "class": "time",
+   "bound": {
+    "key": 0.2575,
+    "pair": 0.44869,
+    "condition": 1.0,
+    "scan": 1.0
+   }
+  },
+  "N4": {
+   "key": 0.565,
+   "pair": 0.5475,
+   "condition": 0.59,
+   "scan": 0.55,
+   "class": "time",
+   "bound": {
+    "key": 0.565,
+    "pair": 0.81077,
+    "condition": 1.0,
+    "scan": 1.0
+   }
+  },
+  "N5": {
+   "key": 0.0375,
+   "pair": 0.0225,
+   "condition": 0.625,
+   "scan": 0.9975,
+   "class": "time",
+   "bound": {
+    "key": 0.0375,
+    "pair": 0.07359,
+    "condition": 0.85208,
+    "scan": 0.99999
+   }
+  },
+  "N6": {
+   "key": 0.3075,
+   "pair": 0.3275,
+   "condition": 0.285,
+   "scan": 0.365,
+   "class": "time",
+   "bound": {
+    "key": 0.3075,
+    "pair": 0.52044,
+    "condition": 1.0,
+    "scan": 1.0
+   }
+  },
+  "N7": {
+   "key": 0.04,
+   "pair": 0.05,
+   "condition": 0.87,
+   "scan": 1.0,
+   "class": "time",
+   "bound": {
+    "key": 0.04,
+    "pair": 0.0784,
+    "condition": 0.87011,
+    "scan": 1.0
+   }
+  }
+ },
+ "S2": {
+  "alone": 0.4092,
+  "with_N3": 0.44982
+ },
+ "S3": {
+  "recall": 0.79299,
+  "precision": 0.57704,
+  "errors": 1483
+ },
+ "S4_sphere": {
+  "observed": 0.29,
+  "bound": 0.38026
+ },
+ "S5_S6": {
+  "legit": 1913,
+  "delivered": 1907,
+  "wrong": 0,
+  "legit_refused_clean": 0,
+  "inj": 87,
+  "inj_refused": 87,
+  "delivered_share": 0.99686
+ },
+ "verdicts": {
+  "S1": false,
+  "S2": false,
+  "S3": false,
+  "S4": true,
+  "S5": true,
+  "S6": true,
+  "S8": false
+ }
+}

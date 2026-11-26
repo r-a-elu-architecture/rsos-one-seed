@@ -1,0 +1,12 @@
+# Two paintings: moved, pierced through each other, laid flat half over half, protruding into the room.
+# Source: owner, chat 1 T106; executed in C1-EXP-003 (move +0.0203; pierce alone -0.1097; both +0.1063).
+LANGUAGE RSOS 0.2
+WORLD invention_room
+OBJECT room KIND context REPRESENTS universe
+OBJECT painting_a KIND painting IN room REPRESENTS engine_system
+OBJECT painting_b KIND painting IN room REPRESENTS cooling_system
+MOVE painting_b ONTO painting_a
+PIERCE painting_b THROUGH painting_a AS painting_ab
+ROTATE painting_b BY 90 RELATIVE painting_a
+OVERLAY painting_b ON painting_a SHOW half AS flat_ab
+PROTRUDE painting_ab.middle INTO room

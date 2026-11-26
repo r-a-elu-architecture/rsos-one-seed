@@ -1,0 +1,19 @@
+fetched /home/runner/work/RSOS-Multimodal-World/RSOS-Multimodal-World/real/hosts/data/topical_chat/test_freq.json 3c65693d59e40a1fb58ead35dcfe85fbcc88ea93a4d74557df620996f72c8f08
+ok /home/runner/work/RSOS-Multimodal-World/RSOS-Multimodal-World/real/hosts/data/topical_chat/test_freq.json 3c65693d59e40a1fb58ead35dcfe85fbcc88ea93a4d74557df620996f72c8f08
+ai_human  model openrouter:mistralai/mistral-small-3.2-24b-instruct
+cell 1 seed    result 0.143  resource 1.777  R 0.0804
+cell 1 default result 0.000  resource 1.719  R 0.0000
+cell 2 seed    result 0.333  resource 1.044  R 0.3193
+cell 2 default result 0.333  resource 1.044  R 0.3193
+cell 3 seed    result 0.000  resource 1.253  R 0.0000
+cell 3 default result 0.000  resource 1.226  R 0.0000
+cell 4 seed    result 0.000  resource 1.223  R 0.0000
+cell 4 default result 0.000  resource 1.224  R 0.0000
+cell 5 seed    result 0.333  resource 0.911  R 0.3659
+cell 5 default result 0.333  resource 0.911  R 0.3659
+cell 6 seed    result 0.750  resource 1.321  R 0.5678
+cell 6 default result 0.500  resource 1.286  R 0.3888
+cell 7 seed    result 0.000  resource 1.446  R 0.0000
+cell 7 default result 0.143  resource 1.433  R 0.0997
+cell 8 seed    result 0.000  resource 1.207  R 0.0000
+cell 8 default result 0.000  resource 1.162  R 0.0000

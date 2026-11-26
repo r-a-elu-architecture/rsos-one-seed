@@ -1,0 +1,17 @@
+{
+ "cells": 8,
+ "B1": {
+  "wins": 0,
+  "mean": -0.026510416666666745
+ },
+ "B2": [
+  8,
+  16
+ ],
+ "mixed_books": 8,
+ "PASS": {
+  "B1": false,
+  "B2": false
+ },
+ "ROW_PASS": false
+}

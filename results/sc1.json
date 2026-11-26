@@ -1,0 +1,107 @@
+{
+ "cells": {
+  "gemini_38flash": {
+   "B2": {
+    "tasks": 16,
+    "exact": 15,
+    "failed_steps": 1,
+    "failed_dependent": 1,
+    "failed_by_kind": {
+     "REHOST": 1
+    },
+    "failed_named_steps": [],
+    "invalid_ops": 3,
+    "invalid_per_task": 0.188,
+    "drifts": 48,
+    "healed_zero_call": 48,
+    "tokens_per_correct": 12921.133333333333
+   },
+   "X5b": {
+    "tasks": 16,
+    "exact": 16,
+    "failed_steps": 0,
+    "failed_dependent": 0,
+    "failed_by_kind": {},
+    "failed_named_steps": [],
+    "invalid_ops": 0,
+    "invalid_per_task": 0.0,
+    "drifts": 48,
+    "healed_zero_call": 48,
+    "tokens_per_correct": 7917.5
+   }
+  },
+  "mistral_large40": {
+   "B2": {
+    "tasks": 16,
+    "exact": 14,
+    "failed_steps": 5,
+    "failed_dependent": 5,
+    "failed_by_kind": {
+     "INHERIT": 2,
+     "REHOST": 3
+    },
+    "failed_named_steps": [
+     [
+      913,
+      49
+     ],
+     [
+      913,
+      53
+     ]
+    ],
+    "invalid_ops": 38,
+    "invalid_per_task": 2.375,
+    "drifts": 48,
+    "healed_zero_call": 48,
+    "tokens_per_correct": 33562.71428571428,
+    "usd_per_correct": 0.11163349285714286
+   },
+   "X5b": {
+    "tasks": 16,
+    "exact": 16,
+    "failed_steps": 0,
+    "failed_dependent": 0,
+    "failed_by_kind": {},
+    "failed_named_steps": [],
+    "invalid_ops": 53,
+    "invalid_per_task": 3.312,
+    "drifts": 48,
+    "healed_zero_call": 48,
+    "tokens_per_correct": 17593.25,
+    "usd_per_correct": 0.0561456725
+   }
+  }
+ },
+ "complete_models": [
+  "gemini_38flash",
+  "mistral_large40"
+ ],
+ "verdicts": {
+  "P1_blind_exact": true,
+  "P2_json_patch_fails": true,
+  "P3_failures_state_dependent": true,
+  "P4_named_handover": true,
+  "P5_cost": true,
+  "P6_drift_zero_call": true,
+  "P7_channel_bpe": null
+ },
+ "channel_sha256": "f5a7a3ae6e39401aecff2c1b154aedcd6b722f4114574eedcedc189854d81d6c",
+ "channel_ratios": {
+  "bytes": {
+   "R_vs_P": 0.4916,
+   "R_vs_G": 0.0054,
+   "C_vs_P": 0.6522,
+   "X5b_vs_B2_planner_input": 0.3443,
+   "digest_vs_full_replica_check": 0.0015
+  },
+  "regex_tokens": {
+   "R_vs_P": 0.2176,
+   "R_vs_G": 0.0018,
+   "C_vs_P": 0.4278,
+   "X5b_vs_B2_planner_input": 0.3452,
+   "digest_vs_full_replica_check": 0.0002
+  }
+ },
+ "sha256": "3ad4cbe35bd37df35ce17f8cfefb8a5bac4150d10958b6629bb7df6cf2c4da73"
+}

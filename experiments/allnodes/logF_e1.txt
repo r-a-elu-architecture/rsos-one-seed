@@ -1,0 +1,10 @@
+w1 eval 2 {'own': 'd1a1g1b1', 'nb': 'd1a1g0b1', 'glob': 'd1a1g0b0'}
+w1 eval 4 {'own': 'd1a1g0b1', 'nb': 'd1a1g0b0', 'glob': 'd1a1g0b0'}
+w1 eval 6 {'own': 'd1a1g1b1', 'nb': 'd1a0g0b0', 'glob': 'd1a1g0b0'}
+w1 eval 8 {'own': 'd1a1g0b0', 'nb': 'd1a0g0b0', 'glob': 'd1a1g0b0'}
+w1 eval 10 {'own': 'd1a1g1b1', 'nb': 'd1a1g0b0', 'glob': 'd1a1g0b0'}
+w1 eval 12 {'own': 'd1a1g1b1', 'nb': 'd1a1g1b1', 'glob': 'd1a1g0b0'}
+w1 eval 14 {'own': 'd1a1g1b1', 'nb': 'd1a1g1b0', 'glob': 'd1a1g0b0'}
+w1 eval 16 {'own': 'd1a1g1b1', 'nb': 'd1a1g0b0', 'glob': 'd1a1g0b0'}
+w1 eval 18 {'own': 'd1a1g0b0', 'nb': 'd1a1g0b0', 'glob': 'd1a1g0b0'}
+w1 eval 20 {'own': 'd1a1g1b1', 'nb': 'd1a1g0b0', 'glob': 'd1a1g0b0'}

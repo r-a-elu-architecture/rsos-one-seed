@@ -1,0 +1,60 @@
+{
+ "checks": {
+  "P1": false,
+  "P2": false,
+  "P3": false
+ },
+ "code_commit": "fd1dfb66ba62a94d961beea9c4245bfd16f6601e",
+ "experiment": "h1_predictive_heal",
+ "numpy": "2.5.3",
+ "python": "3.13.18",
+ "results_sha256": "43d409991be00bd04d44d8a140b4a375db71dd30187bc13203ccd2b2a41d74ef",
+ "run_utc": "2026-11-17T07:37:22Z",
+ "summary": {
+  "G10": {
+   "bytes_per_use": 134.132025,
+   "ci": [
+    0.949155,
+    0.9536450000000001
+   ],
+   "first_use_success": 0.951395,
+   "round_trips_per_use": 1.09721
+  },
+  "G5": {
+   "bytes_per_use": 114.940625,
+   "ci": [
+    0.932545,
+    0.938575125
+   ],
+   "first_use_success": 0.9355150000000002,
+   "round_trips_per_use": 1.12897
+  },
+  "R0": {
+   "bytes_per_use": 98.538025,
+   "ci": [
+    0.9042796250000001,
+    0.9118401250000001
+   ],
+   "first_use_success": 0.9081150000000001,
+   "round_trips_per_use": 1.1837699999999998
+  },
+  "U10": {
+   "bytes_per_use": 136.09902499999998,
+   "ci": [
+    0.9353150000000001,
+    0.9418451250000002
+   ],
+   "first_use_success": 0.9386349999999999,
+   "round_trips_per_use": 1.1227300000000002
+  },
+  "U5": {
+   "bytes_per_use": 118.15115,
+   "ci": [
+    0.9239748749999999,
+    0.930665125
+   ],
+   "first_use_success": 0.92737,
+   "round_trips_per_use": 1.14526
+  }
+ }
+}

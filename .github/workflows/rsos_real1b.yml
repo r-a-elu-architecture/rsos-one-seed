@@ -1,0 +1,63 @@
+# REAL1b addendum (24 Nov 2026): preflight + AI agents on Llama 4 Scout; logs kept even on failure; results to cloud-results/real1b.
+name: rsos-real1b
+on:
+  push:
+    branches: [core-v1]
+    paths: ["cloud/trigger_real1b.txt"]
+permissions:
+  contents: write
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install requests
+      - run: python cloud/preflight_tools.py | tee preflight.txt
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: {name: real1b-preflight, path: preflight.txt}
+  unit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 345
+    strategy:
+      fail-fast: false
+      matrix:
+        u: ["ai_agents openrouter:meta-llama/llama-4-scout 0", "ai_agents openrouter:meta-llama/llama-4-scout 1", "ai_agents openrouter:meta-llama/llama-4-scout 2", "ai_agents openrouter:meta-llama/llama-4-scout 3"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install numpy scipy scikit-learn requests
+      - run: mkdir -p real/out && python cloud/real1_unit.py ${{ matrix.u }} 2>&1 | tee real/out/log_${{ strategy.job-index }}.txt; exit ${PIPESTATUS[0]}
+        shell: bash
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          REASONING_EFFORT: low
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: real1b-${{ strategy.job-index }}
+          path: real/out/
+  collect:
+    needs: [preflight, unit]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - uses: actions/download-artifact@v4
+        with: {path: /tmp/art}
+      - run: mkdir -p real/out && cp /tmp/art/real1b-[0-9]*/* real/out/ 2>/dev/null; python real/analyze_real1.py || true
+      - name: push results to cloud-results
+        if: always()
+        run: |
+          git config user.name "rsos-cloud"; git config user.email "rsos-cloud@users.noreply.github.com"
+          mkdir -p /tmp/r && cp -r real/out real/RESULTS_REAL1.* /tmp/r/ 2>/dev/null; cp /tmp/art/real1b-preflight/preflight.txt /tmp/r/ 2>/dev/null || true
+          git fetch origin cloud-results && git checkout cloud-results
+          rm -rf real1b && mkdir -p real1b && cp -r /tmp/r/. real1b/
+          git add real1b && git commit -qm "REAL1b run ${{ github.run_id }}" && git push -q origin cloud-results

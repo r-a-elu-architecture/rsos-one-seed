@@ -1,0 +1,342 @@
+{
+ "biology": [
+  {
+   "measure": "homeostatic set-point error",
+   "relations": [
+    "drift",
+    "recovery"
+   ]
+  },
+  {
+   "measure": "allostatic load",
+   "relations": [
+    "drift",
+    "persistence",
+    "balance"
+   ]
+  },
+  {
+   "measure": "immune memory",
+   "relations": [
+    "persistence",
+    "recovery"
+   ]
+  },
+  {
+   "measure": "wound-healing rate",
+   "relations": [
+    "recovery"
+   ]
+  },
+  {
+   "measure": "mutation rate",
+   "relations": [
+    "lineage",
+    "drift"
+   ]
+  },
+  {
+   "measure": "signal transduction gain",
+   "relations": [
+    "propagation",
+    "coupling"
+   ]
+  }
+ ],
+ "neuroscience": [
+  {
+   "measure": "prediction error",
+   "relations": [
+    "anticipation",
+    "drift"
+   ]
+  },
+  {
+   "measure": "pattern completion",
+   "relations": [
+    "recovery",
+    "integrity"
+   ]
+  },
+  {
+   "measure": "myelin conduction velocity",
+   "relations": [
+    "propagation"
+   ]
+  },
+  {
+   "measure": "attention gating",
+   "relations": [
+    "bias",
+    "containment"
+   ]
+  },
+  {
+   "measure": "memory consolidation",
+   "relations": [
+    "persistence",
+    "compression"
+   ]
+  },
+  {
+   "measure": "metacognitive confidence",
+   "relations": [
+    "awareness",
+    "integrity"
+   ]
+  }
+ ],
+ "economics": [
+  {
+   "measure": "inflation drift",
+   "relations": [
+    "drift"
+   ]
+  },
+  {
+   "measure": "network effect",
+   "relations": [
+    "coupling",
+    "propagation"
+   ]
+  },
+  {
+   "measure": "liquidity",
+   "relations": [
+    "propagation",
+    "balance"
+   ]
+  },
+  {
+   "measure": "contagion",
+   "relations": [
+    "propagation",
+    "coupling"
+   ]
+  },
+  {
+   "measure": "reserve buffer",
+   "relations": [
+    "containment",
+    "recovery"
+   ]
+  },
+  {
+   "measure": "forward guidance",
+   "relations": [
+    "anticipation",
+    "bias"
+   ]
+  }
+ ],
+ "physics": [
+  {
+   "measure": "phase coherence",
+   "relations": [
+    "resonance",
+    "integrity"
+   ]
+  },
+  {
+   "measure": "resonance quality factor",
+   "relations": [
+    "resonance",
+    "persistence"
+   ]
+  },
+  {
+   "measure": "damping ratio",
+   "relations": [
+    "recovery",
+    "containment"
+   ]
+  },
+  {
+   "measure": "hysteresis",
+   "relations": [
+    "persistence",
+    "lineage"
+   ]
+  },
+  {
+   "measure": "entropy",
+   "relations": [
+    "compression"
+   ]
+  },
+  {
+   "measure": "feedforward control",
+   "relations": [
+    "anticipation",
+    "containment"
+   ]
+  }
+ ],
+ "chemistry": [
+  {
+   "measure": "reaction rate",
+   "relations": [
+    "propagation"
+   ]
+  },
+  {
+   "measure": "catalysis",
+   "relations": [
+    "coupling",
+    "recovery"
+   ]
+  },
+  {
+   "measure": "equilibrium constant",
+   "relations": [
+    "balance"
+   ]
+  },
+  {
+   "measure": "half-life",
+   "relations": [
+    "persistence"
+   ]
+  },
+  {
+   "measure": "diffusion",
+   "relations": [
+    "propagation"
+   ]
+  },
+  {
+   "measure": "bond energy",
+   "relations": [
+    "coupling",
+    "integrity"
+   ]
+  }
+ ],
+ "aerodynamics": [
+  {
+   "measure": "lift-to-drag ratio",
+   "relations": [
+    "balance"
+   ]
+  },
+  {
+   "measure": "Reynolds regime",
+   "relations": [
+    "propagation",
+    "integrity"
+   ]
+  },
+  {
+   "measure": "boundary layer",
+   "relations": [
+    "containment"
+   ]
+  },
+  {
+   "measure": "stall margin",
+   "relations": [
+    "anticipation",
+    "containment"
+   ]
+  },
+  {
+   "measure": "laminar flow",
+   "relations": [
+    "integrity"
+   ]
+  },
+  {
+   "measure": "vortex shedding",
+   "relations": [
+    "resonance",
+    "propagation"
+   ]
+  }
+ ],
+ "socio_technical": [
+  {
+   "measure": "adoption S-curve",
+   "relations": [
+    "propagation",
+    "lineage"
+   ]
+  },
+  {
+   "measure": "trust index",
+   "relations": [
+    "integrity",
+    "coupling"
+   ]
+  },
+  {
+   "measure": "norm diffusion",
+   "relations": [
+    "propagation",
+    "ethics"
+   ]
+  },
+  {
+   "measure": "coordination cost",
+   "relations": [
+    "coupling",
+    "compression"
+   ]
+  },
+  {
+   "measure": "consent coverage",
+   "relations": [
+    "ethics",
+    "containment"
+   ]
+  },
+  {
+   "measure": "autonomy delegation",
+   "relations": [
+    "autonomy",
+    "containment"
+   ]
+  }
+ ],
+ "communication": [
+  {
+   "measure": "channel capacity",
+   "relations": [
+    "compression",
+    "propagation"
+   ]
+  },
+  {
+   "measure": "bit error rate",
+   "relations": [
+    "integrity",
+    "drift"
+   ]
+  },
+  {
+   "measure": "latency",
+   "relations": [
+    "propagation"
+   ]
+  },
+  {
+   "measure": "coding gain",
+   "relations": [
+    "recovery",
+    "compression"
+   ]
+  },
+  {
+   "measure": "haptic discrimination",
+   "relations": [
+    "integrity"
+   ]
+  },
+  {
+   "measure": "predictive prefetch",
+   "relations": [
+    "anticipation",
+    "compression"
+   ]
+  }
+ ]
+}

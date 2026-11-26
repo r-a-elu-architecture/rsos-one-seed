@@ -1,0 +1,99 @@
+{
+ "level": "NOT SHOWN",
+ "rows_passed": 0,
+ "rows": {
+  "ai_agents": {
+   "operator": "Law 2 (blind plan) off",
+   "cells": 40,
+   "mean_full_vs_minus": -0.0368749999999999,
+   "pct_full_vs_minus": -0.2546273119296773,
+   "p_cause": 0.5269764381197837,
+   "wins": 20,
+   "p_full_vs_standard": 1.0718769464832246e-25,
+   "mean_full_vs_standard": 11.509925,
+   "guard": true,
+   "law0": true,
+   "harmed_cells": 8,
+   "result_full_vs_minus": 0.0375,
+   "result_full_vs_standard": 0.03125,
+   "means": {
+    "default": {
+     "result": 0.78125,
+     "resource": 26.02875
+    },
+    "full": {
+     "result": 0.8125,
+     "resource": 14.518825
+    },
+    "minus": {
+     "result": 0.775,
+     "resource": 14.48195
+    }
+   },
+   "holm_p": 1.0,
+   "pass": false
+  },
+  "ai_ai": {
+   "operator": "Law 5 (hologram / key) off",
+   "cells": 150,
+   "mean_full_vs_minus": 28.486666666666668,
+   "pct_full_vs_minus": 1.298634200305132,
+   "p_cause": 0.16932143377646713,
+   "wins": 66,
+   "p_full_vs_standard": 3.2756831503583704e-16,
+   "mean_full_vs_standard": 840.94,
+   "guard": true,
+   "law0": true,
+   "harmed_cells": 2,
+   "result_full_vs_minus": 0.006666666666666667,
+   "result_full_vs_standard": 0.07333333333333333,
+   "means": {
+    "default": {
+     "result": 0.9066666666666666,
+     "resource": 3006.04
+    },
+    "full": {
+     "result": 0.98,
+     "resource": 2165.1
+    },
+    "minus": {
+     "result": 0.9733333333333334,
+     "resource": 2193.5866666666666
+    }
+   },
+   "holm_p": 0.5079643013294014,
+   "pass": false
+  },
+  "space": {
+   "operator": "composition + Law 4 landing off",
+   "cells": 48,
+   "mean_full_vs_minus": -0.6267884183520801,
+   "pct_full_vs_minus": -0.1213500945753483,
+   "p_cause": 0.9800591682583504,
+   "wins": 20,
+   "p_full_vs_standard": 1.4591992796564178e-15,
+   "mean_full_vs_standard": 5.8376752858044965,
+   "guard": true,
+   "law0": true,
+   "harmed_cells": 1,
+   "result_full_vs_minus": -0.6267884183520801,
+   "result_full_vs_standard": 5.8376752858044965,
+   "means": {
+    "default": {
+     "result": 510.04804545000536,
+     "resource": 15206.777725628586
+    },
+    "full": {
+     "result": 515.8857207358099,
+     "resource": 16272.923337768862
+    },
+    "minus": {
+     "result": 516.512509154162,
+     "resource": 16618.616733034112
+    }
+   },
+   "holm_p": 1.0,
+   "pass": false
+  }
+ }
+}

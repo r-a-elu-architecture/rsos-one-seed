@@ -1,0 +1,232 @@
+{
+ "row": "ai_agents",
+ "model": "openrouter:openai/gpt-oss-20b",
+ "rsos_arm": "full",
+ "cells_run": [
+  1001,
+  1002,
+  1003,
+  1004
+ ],
+ "cells": {
+  "1001": {
+   "default": {
+    "result": 0.75,
+    "resource": 32.291,
+    "choices": {
+     "present|standard": 46
+    },
+    "failed_calls": 0,
+    "sec": 29.0
+   },
+   "rollout": {
+    "result": 0.5,
+    "resource": 20.051,
+    "choices": {
+     "present|standard": 23,
+     "stop|rollout": 3,
+     "open|rollout": 2,
+     "focus-b0|rollout": 2
+    },
+    "failed_calls": 0,
+    "sec": 20.8
+   },
+   "full": {
+    "result": 1.0,
+    "resource": 8.215,
+    "choices": {
+     "op:fuse|base": 5,
+     "present|own": 1,
+     "stop|own": 4,
+     "F:blind-b0|standard": 2,
+     "future+1|standard": 1,
+     "op:overlay|base": 1,
+     "op:beam3|base": 1,
+     "past-1|own": 1,
+     "past-2|standard": 1,
+     "past-1|standard": 1,
+     "F:blind-b1|standard": 1
+    },
+    "ops_passed_membrane": {
+     "heal": 12,
+     "beam1": 19,
+     "beam3": 19,
+     "contain": 1,
+     "compress": 0,
+     "inherit": 0,
+     "fuse": 21,
+     "carry": 0,
+     "rehost": 11,
+     "pierce": 19,
+     "overlay": 12,
+     "enter": 19,
+     "zoom": 17
+    },
+    "vote_vetoed": 1,
+    "failed_calls": 0,
+    "sec": 15.2
+   }
+  },
+  "1002": {
+   "default": {
+    "result": 1.0,
+    "resource": 24.524,
+    "choices": {
+     "present|standard": 45
+    },
+    "failed_calls": 0,
+    "sec": 34.4
+   },
+   "rollout": {
+    "result": 0.75,
+    "resource": 11.408,
+    "choices": {
+     "present|standard": 16,
+     "stop|rollout": 4
+    },
+    "failed_calls": 0,
+    "sec": 19.0
+   },
+   "full": {
+    "result": 1.0,
+    "resource": 11.159,
+    "choices": {
+     "F:blind-b0|standard": 2,
+     "op:fuse|Owl": 1,
+     "op:overlay|Owl": 2,
+     "stop|own": 4,
+     "F:blind-b1|own": 1,
+     "op:enter|Owl": 1,
+     "op:zoom|Owl": 6,
+     "past-1|own": 1,
+     "past-1|standard": 2
+    },
+    "ops_passed_membrane": {
+     "heal": 18,
+     "beam1": 19,
+     "beam3": 19,
+     "contain": 2,
+     "compress": 0,
+     "inherit": 0,
+     "fuse": 20,
+     "carry": 0,
+     "rehost": 6,
+     "pierce": 19,
+     "overlay": 6,
+     "enter": 18,
+     "zoom": 17
+    },
+    "vote_vetoed": 6,
+    "failed_calls": 0,
+    "sec": 21.4
+   }
+  },
+  "1003": {
+   "default": {
+    "result": 0.75,
+    "resource": 21.053,
+    "choices": {
+     "present|standard": 40
+    },
+    "failed_calls": 0,
+    "sec": 19.3
+   },
+   "rollout": {
+    "result": 1.0,
+    "resource": 8.297,
+    "choices": {
+     "present|standard": 15,
+     "stop|rollout": 4
+    },
+    "failed_calls": 0,
+    "sec": 8.2
+   },
+   "full": {
+    "result": 1.0,
+    "resource": 5.504,
+    "choices": {
+     "F:reuse-b0|standard": 1,
+     "F:blind-b1|standard": 1,
+     "stop|own": 4,
+     "F:blind-b0|standard": 1,
+     "past-1|standard": 3,
+     "past-1|own": 2,
+     "op:compress|Owl": 1,
+     "F:blind-b1|own": 1,
+     "past-2|standard": 1
+    },
+    "ops_passed_membrane": {
+     "heal": 11,
+     "beam1": 15,
+     "beam3": 15,
+     "contain": 0,
+     "compress": 1,
+     "inherit": 0,
+     "fuse": 16,
+     "carry": 0,
+     "rehost": 7,
+     "pierce": 15,
+     "overlay": 8,
+     "enter": 14,
+     "zoom": 13
+    },
+    "vote_vetoed": 5,
+    "failed_calls": 0,
+    "sec": 9.8
+   }
+  },
+  "1004": {
+   "default": {
+    "result": 1.0,
+    "resource": 23.04,
+    "choices": {
+     "present|standard": 43
+    },
+    "failed_calls": 0,
+    "sec": 17.8
+   },
+   "rollout": {
+    "result": 1.0,
+    "resource": 9.014,
+    "choices": {
+     "present|standard": 15,
+     "stop|rollout": 4
+    },
+    "failed_calls": 0,
+    "sec": 8.6
+   },
+   "full": {
+    "result": 1.0,
+    "resource": 2.898,
+    "choices": {
+     "op:compress|base": 1,
+     "op:inherit|base": 1,
+     "stop|own": 3,
+     "op:fuse|base": 1,
+     "past-2|own": 1,
+     "F:blind-b0|standard": 2,
+     "op:fuse|Owl": 1,
+     "F:blind-b1|standard": 1
+    },
+    "ops_passed_membrane": {
+     "heal": 11,
+     "beam1": 11,
+     "beam3": 11,
+     "contain": 0,
+     "compress": 3,
+     "inherit": 1,
+     "fuse": 11,
+     "carry": 0,
+     "rehost": 4,
+     "pierce": 11,
+     "overlay": 5,
+     "enter": 11,
+     "zoom": 11
+    },
+    "vote_vetoed": 3,
+    "failed_calls": 0,
+    "sec": 6.3
+   }
+  }
+ }
+}

@@ -1,0 +1,807 @@
+{
+ "row": "ai_ai",
+ "model": "openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct",
+ "rsos_arm": "v1",
+ "cells_run": [
+  1226,
+  1227,
+  1228,
+  1229,
+  1230,
+  1231,
+  1232,
+  1233,
+  1234,
+  1235,
+  1236,
+  1237,
+  1238,
+  1239,
+  1240,
+  1241,
+  1242,
+  1243,
+  1244,
+  1245,
+  1246,
+  1247,
+  1248,
+  1249,
+  1250
+ ],
+ "cells": {
+  "1226": {
+   "default": {
+    "result": 0.0,
+    "resource": 1152.0,
+    "choices": {
+     "present|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 3.3
+   },
+   "rollout": {
+    "result": 1.0,
+    "resource": 1158.0,
+    "choices": {
+     "present|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 2.9
+   },
+   "v1": {
+    "result": 0.0,
+    "resource": 2206.0,
+    "choices": {
+     "P4P5-joint|policy": 1,
+     "F:holokey|own": 1
+    },
+    "failed_calls": 0,
+    "sec": 2.6
+   }
+  },
+  "1227": {
+   "default": {
+    "result": 0.0,
+    "resource": 1728.0,
+    "choices": {
+     "present|standard": 2
+    },
+    "failed_calls": 0,
+    "sec": 2.1
+   },
+   "rollout": {
+    "result": 0.0,
+    "resource": 841.0,
+    "choices": {
+     "present|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 0.7
+   },
+   "v1": {
+    "result": 0.0,
+    "resource": 838.0,
+    "choices": {
+     "F:holo-vote|policy": 1
+    },
+    "failed_calls": 0,
+    "sec": 1.1
+   }
+  },
+  "1228": {
+   "default": {
+    "result": 0.0,
+    "resource": 848.0,
+    "choices": {
+     "present|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 1.3
+   },
+   "rollout": {
+    "result": 1.0,
+    "resource": 1722.0,
+    "choices": {
+     "present|standard": 1,
+     "focus_team|rollout": 1
+    },
+    "failed_calls": 0,
+    "sec": 2.6
+   },
+   "v1": {
+    "result": 1.0,
+    "resource": 839.0,
+    "choices": {
+     "F:holo-vote|policy": 1
+    },
+    "failed_calls": 0,
+    "sec": 1.1
+   }
+  },
+  "1229": {
+   "default": {
+    "result": 0.0,
+    "resource": 834.0,
+    "choices": {
+     "present|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 0.8
+   },
+   "rollout": {
+    "result": 0.0,
+    "resource": 834.0,
+    "choices": {
+     "present|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 0.7
+   },
+   "v1": {
+    "result": 0.0,
+    "resource": 827.0,
+    "choices": {
+     "F:holo-vote|policy": 1
+    },
+    "failed_calls": 0,
+    "sec": 0.9
+   }
+  },
+  "1230": {
+   "default": {
+    "result": 1.0,
+    "resource": 853.0,
+    "choices": {
+     "present|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 1.0
+   },
+   "rollout": {
+    "result": 1.0,
+    "resource": 861.0,
+    "choices": {
+     "present|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 2.0
+   },
+   "v1": {
+    "result": 1.0,
+    "resource": 3526.0,
+    "choices": {
+     "F:holo-vote|policy": 2,
+     "F:holokey|standard": 1,
+     "past-1|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 6.2
+   }
+  },
+  "1231": {
+   "default": {
+    "result": 0.0,
+    "resource": 890.0,
+    "choices": {
+     "present|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 2.0
+   },
+   "rollout": {
+    "result": 1.0,
+    "resource": 863.0,
+    "choices": {
+     "present|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 1.4
+   },
+   "v1": {
+    "result": 1.0,
+    "resource": 860.0,
+    "choices": {
+     "P4P5-joint|policy": 1
+    },
+    "failed_calls": 0,
+    "sec": 1.9
+   }
+  },
+  "1232": {
+   "default": {
+    "result": 0.0,
+    "resource": 2592.0,
+    "choices": {
+     "present|standard": 3
+    },
+    "failed_calls": 0,
+    "sec": 4.5
+   },
+   "rollout": {
+    "result": 0.0,
+    "resource": 1749.0,
+    "choices": {
+     "present|standard": 1,
+     "focus_home|rollout": 1
+    },
+    "failed_calls": 0,
+    "sec": 2.2
+   },
+   "v1": {
+    "result": 0.0,
+    "resource": 1698.0,
+    "choices": {
+     "P4P5-joint|policy": 1,
+     "F:holokey|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 3.1
+   }
+  },
+  "1233": {
+   "default": {
+    "result": 0.0,
+    "resource": 834.0,
+    "choices": {
+     "present|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 0.7
+   },
+   "rollout": {
+    "result": 0.0,
+    "resource": 833.0,
+    "choices": {
+     "present|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 0.7
+   },
+   "v1": {
+    "result": 0.0,
+    "resource": 821.0,
+    "choices": {
+     "F:holokey|policy": 1
+    },
+    "failed_calls": 0,
+    "sec": 1.0
+   }
+  },
+  "1234": {
+   "default": {
+    "result": 0.0,
+    "resource": 841.0,
+    "choices": {
+     "present|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 0.8
+   },
+   "rollout": {
+    "result": 0.0,
+    "resource": 844.0,
+    "choices": {
+     "focus_team|rollout": 1
+    },
+    "failed_calls": 0,
+    "sec": 2.0
+   },
+   "v1": {
+    "result": 0.0,
+    "resource": 1667.0,
+    "choices": {
+     "P4P5-joint|policy": 1,
+     "F:holokey|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 1.5
+   }
+  },
+  "1235": {
+   "default": {
+    "result": 1.0,
+    "resource": 875.0,
+    "choices": {
+     "present|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 1.6
+   },
+   "rollout": {
+    "result": 1.0,
+    "resource": 865.0,
+    "choices": {
+     "present|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 1.7
+   },
+   "v1": {
+    "result": 1.0,
+    "resource": 875.0,
+    "choices": {
+     "F:holo-vote|policy": 1
+    },
+    "failed_calls": 0,
+    "sec": 1.8
+   }
+  },
+  "1236": {
+   "default": {
+    "result": 1.0,
+    "resource": 853.0,
+    "choices": {
+     "present|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 0.6
+   },
+   "rollout": {
+    "result": 1.0,
+    "resource": 1010.0,
+    "choices": {
+     "focus_team|rollout": 1
+    },
+    "failed_calls": 0,
+    "sec": 3.4
+   },
+   "v1": {
+    "result": 1.0,
+    "resource": 3728.0,
+    "choices": {
+     "F:holo-vote|policy": 2,
+     "past-1|own": 1,
+     "past-1|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 3.6
+   }
+  },
+  "1237": {
+   "default": {
+    "result": 1.0,
+    "resource": 1735.0,
+    "choices": {
+     "present|standard": 2
+    },
+    "failed_calls": 0,
+    "sec": 1.2
+   },
+   "rollout": {
+    "result": 1.0,
+    "resource": 1708.0,
+    "choices": {
+     "focus_team|rollout": 1,
+     "focus_home|rollout": 1
+    },
+    "failed_calls": 0,
+    "sec": 1.0
+   },
+   "v1": {
+    "result": 1.0,
+    "resource": 1662.0,
+    "choices": {
+     "F:holo-vote|policy": 2
+    },
+    "failed_calls": 0,
+    "sec": 2.9
+   }
+  },
+  "1238": {
+   "default": {
+    "result": 0.0,
+    "resource": 859.0,
+    "choices": {
+     "present|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 0.7
+   },
+   "rollout": {
+    "result": 0.0,
+    "resource": 850.0,
+    "choices": {
+     "focus_team|rollout": 1
+    },
+    "failed_calls": 0,
+    "sec": 0.8
+   },
+   "v1": {
+    "result": 1.0,
+    "resource": 824.0,
+    "choices": {
+     "F:holokey|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 0.7
+   }
+  },
+  "1239": {
+   "default": {
+    "result": 1.0,
+    "resource": 852.0,
+    "choices": {
+     "present|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 0.5
+   },
+   "rollout": {
+    "result": 1.0,
+    "resource": 846.0,
+    "choices": {
+     "present|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 1.7
+   },
+   "v1": {
+    "result": 1.0,
+    "resource": 846.0,
+    "choices": {
+     "F:holo-vote|policy": 1
+    },
+    "failed_calls": 0,
+    "sec": 1.4
+   }
+  },
+  "1240": {
+   "default": {
+    "result": 1.0,
+    "resource": 5811.0,
+    "choices": {
+     "present|standard": 6
+    },
+    "failed_calls": 0,
+    "sec": 6.3
+   },
+   "rollout": {
+    "result": 1.0,
+    "resource": 5676.0,
+    "choices": {
+     "chain|rollout": 1,
+     "present|standard": 3,
+     "focus_team|rollout": 1,
+     "focus_office|rollout": 1
+    },
+    "failed_calls": 0,
+    "sec": 5.3
+   },
+   "v1": {
+    "result": 1.0,
+    "resource": 3623.0,
+    "choices": {
+     "F:holo-vote|policy": 1,
+     "future+1|own": 1,
+     "F:holo-vote|own": 1,
+     "F:holokey|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 5.2
+   }
+  },
+  "1241": {
+   "default": {
+    "result": 1.0,
+    "resource": 3721.0,
+    "choices": {
+     "present|standard": 4
+    },
+    "failed_calls": 0,
+    "sec": 3.5
+   },
+   "rollout": {
+    "result": 1.0,
+    "resource": 5655.0,
+    "choices": {
+     "present|standard": 1,
+     "focus_team|rollout": 1,
+     "focus_office|rollout": 1,
+     "focus_home|rollout": 3
+    },
+    "failed_calls": 0,
+    "sec": 6.1
+   },
+   "v1": {
+    "result": 1.0,
+    "resource": 3684.0,
+    "choices": {
+     "F:holo-vote|policy": 1,
+     "future+1|own": 1,
+     "F:holo-vote|standard": 1,
+     "past-1|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 3.6
+   }
+  },
+  "1242": {
+   "default": {
+    "result": 0.0,
+    "resource": 2694.0,
+    "choices": {
+     "present|standard": 3
+    },
+    "failed_calls": 0,
+    "sec": 2.5
+   },
+   "rollout": {
+    "result": 1.0,
+    "resource": 1733.0,
+    "choices": {
+     "focus_home|rollout": 1,
+     "focus_office|rollout": 1
+    },
+    "failed_calls": 0,
+    "sec": 1.9
+   },
+   "v1": {
+    "result": 1.0,
+    "resource": 829.0,
+    "choices": {
+     "F:holokey|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 1.7
+   }
+  },
+  "1243": {
+   "default": {
+    "result": 0.0,
+    "resource": 5877.0,
+    "choices": {
+     "present|standard": 6
+    },
+    "failed_calls": 0,
+    "sec": 8.9
+   },
+   "rollout": {
+    "result": 0.0,
+    "resource": 6349.0,
+    "choices": {
+     "present|standard": 5,
+     "focus_home|rollout": 1
+    },
+    "failed_calls": 0,
+    "sec": 9.4
+   },
+   "v1": {
+    "result": 1.0,
+    "resource": 4801.0,
+    "choices": {
+     "F:holo-vote|policy": 1,
+     "F:holo-vote|standard": 1,
+     "F:holokey|standard": 1,
+     "past-1|standard": 2
+    },
+    "failed_calls": 0,
+    "sec": 7.6
+   }
+  },
+  "1244": {
+   "default": {
+    "result": 1.0,
+    "resource": 2701.0,
+    "choices": {
+     "present|standard": 3
+    },
+    "failed_calls": 0,
+    "sec": 2.6
+   },
+   "rollout": {
+    "result": 1.0,
+    "resource": 2748.0,
+    "choices": {
+     "present|standard": 3
+    },
+    "failed_calls": 0,
+    "sec": 4.9
+   },
+   "v1": {
+    "result": 1.0,
+    "resource": 3784.0,
+    "choices": {
+     "F:holo-vote|policy": 1,
+     "future+1|own": 1,
+     "F:holo-vote|standard": 1,
+     "F:holokey|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 7.0
+   }
+  },
+  "1245": {
+   "default": {
+    "result": 0.0,
+    "resource": 5896.0,
+    "choices": {
+     "present|standard": 6
+    },
+    "failed_calls": 0,
+    "sec": 6.0
+   },
+   "rollout": {
+    "result": 0.0,
+    "resource": 6213.0,
+    "choices": {
+     "present|standard": 2,
+     "focus_home|rollout": 2,
+     "focus_office|rollout": 1,
+     "chain|rollout": 1
+    },
+    "failed_calls": 0,
+    "sec": 4.9
+   },
+   "v1": {
+    "result": 1.0,
+    "resource": 2714.0,
+    "choices": {
+     "F:holo-vote|policy": 2,
+     "P3-repair|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 5.0
+   }
+  },
+  "1246": {
+   "default": {
+    "result": 1.0,
+    "resource": 2776.0,
+    "choices": {
+     "present|standard": 3
+    },
+    "failed_calls": 0,
+    "sec": 2.3
+   },
+   "rollout": {
+    "result": 0.0,
+    "resource": 2721.0,
+    "choices": {
+     "present|standard": 1,
+     "focus_city|rollout": 1,
+     "focus_office|rollout": 1
+    },
+    "failed_calls": 0,
+    "sec": 2.5
+   },
+   "v1": {
+    "result": 1.0,
+    "resource": 2705.0,
+    "choices": {
+     "F:holo-vote|policy": 1,
+     "F:holo-vote|standard": 1,
+     "F:holokey|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 3.9
+   }
+  },
+  "1247": {
+   "default": {
+    "result": 1.0,
+    "resource": 5689.0,
+    "choices": {
+     "present|standard": 6
+    },
+    "failed_calls": 0,
+    "sec": 4.8
+   },
+   "rollout": {
+    "result": 1.0,
+    "resource": 4703.0,
+    "choices": {
+     "present|standard": 1,
+     "focus_office|rollout": 1,
+     "focus_city|rollout": 1,
+     "focus_home|rollout": 2
+    },
+    "failed_calls": 0,
+    "sec": 7.7
+   },
+   "v1": {
+    "result": 1.0,
+    "resource": 4464.0,
+    "choices": {
+     "F:holo-vote|policy": 1,
+     "F:holokey|own": 1,
+     "F:holo-vote|standard": 1,
+     "past-1|standard": 2
+    },
+    "failed_calls": 0,
+    "sec": 5.7
+   }
+  },
+  "1248": {
+   "default": {
+    "result": 1.0,
+    "resource": 3694.0,
+    "choices": {
+     "present|standard": 4
+    },
+    "failed_calls": 0,
+    "sec": 5.6
+   },
+   "rollout": {
+    "result": 0.0,
+    "resource": 2741.0,
+    "choices": {
+     "chain|rollout": 2,
+     "focus_manager|rollout": 1
+    },
+    "failed_calls": 0,
+    "sec": 4.6
+   },
+   "v1": {
+    "result": 1.0,
+    "resource": 2624.0,
+    "choices": {
+     "F:holo-vote|policy": 1,
+     "F:holo-vote|standard": 1,
+     "past-1|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 2.1
+   }
+  },
+  "1249": {
+   "default": {
+    "result": 0.0,
+    "resource": 842.0,
+    "choices": {
+     "present|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 1.7
+   },
+   "rollout": {
+    "result": 0.0,
+    "resource": 1756.0,
+    "choices": {
+     "present|standard": 2
+    },
+    "failed_calls": 0,
+    "sec": 1.6
+   },
+   "v1": {
+    "result": 0.0,
+    "resource": 1730.0,
+    "choices": {
+     "P4P5-joint|policy": 1,
+     "F:holokey|own": 1
+    },
+    "failed_calls": 0,
+    "sec": 2.0
+   }
+  },
+  "1250": {
+   "default": {
+    "result": 1.0,
+    "resource": 849.0,
+    "choices": {
+     "present|standard": 1
+    },
+    "failed_calls": 0,
+    "sec": 0.4
+   },
+   "rollout": {
+    "result": 1.0,
+    "resource": 847.0,
+    "choices": {
+     "chain|rollout": 1
+    },
+    "failed_calls": 0,
+    "sec": 0.5
+   },
+   "v1": {
+    "result": 1.0,
+    "resource": 812.0,
+    "choices": {
+     "F:holokey|policy": 1
+    },
+    "failed_calls": 0,
+    "sec": 0.6
+   }
+  }
+ }
+}

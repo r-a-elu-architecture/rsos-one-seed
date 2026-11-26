@@ -1,0 +1,94 @@
+cancer 7700 0.1111 {'core': 63, 'inside': 44, 'above': 82, 'outside': 42, 'tube': 69}
+cancer 7701 0.0526 {'core': 107, 'inside': 10, 'above': 122, 'outside': 10, 'tube': 51}
+cancer 7702 0.0292 {'core': 103, 'inside': 17, 'above': 108, 'outside': 21, 'tube': 51}
+cancer 7703 0.0234 {'core': 99, 'inside': 26, 'above': 107, 'outside': 23, 'tube': 45}
+cancer 7704 0.0819 {'core': 77, 'inside': 9, 'above': 117, 'outside': 18, 'tube': 79}
+cancer 7705 -0.0292 {'core': 89, 'inside': 16, 'above': 116, 'outside': 33, 'tube': 46}
+cancer 7706 -0.0292 {'core': 93, 'inside': 32, 'above': 93, 'outside': 20, 'tube': 62}
+cancer 7707 0.0117 {'core': 72, 'inside': 4, 'above': 122, 'outside': 22, 'tube': 80}
+cancer 7708 0.1111 {'core': 79, 'inside': 45, 'above': 68, 'outside': 56, 'tube': 52}
+cancer 7709 0.076 {'core': 56, 'inside': 3, 'above': 151, 'outside': 3, 'tube': 87}
+cancer 7710 -0.1462 {'core': 77, 'inside': 30, 'above': 118, 'outside': 28, 'tube': 47}
+cancer 7711 -0.0877 {'core': 83, 'inside': 46, 'above': 98, 'outside': 41, 'tube': 32}
+wine 7700 0.1111 {'core': 30, 'inside': 0, 'above': 188, 'outside': 0, 'tube': 82}
+wine 7701 0.0556 {'core': 65, 'inside': 7, 'above': 143, 'outside': 4, 'tube': 81}
+wine 7702 0.0741 {'core': 30, 'inside': 1, 'above': 174, 'outside': 2, 'tube': 93}
+wine 7703 0.037 {'core': 50, 'inside': 1, 'above': 194, 'outside': 0, 'tube': 55}
+wine 7704 0.0741 {'core': 52, 'inside': 4, 'above': 146, 'outside': 40, 'tube': 58}
+wine 7705 0.0741 {'core': 61, 'inside': 1, 'above': 170, 'outside': 2, 'tube': 66}
+wine 7706 0.0556 {'core': 64, 'inside': 4, 'above': 147, 'outside': 12, 'tube': 73}
+wine 7707 -0.0185 {'core': 45, 'inside': 0, 'above': 182, 'outside': 3, 'tube': 70}
+wine 7708 0.037 {'core': 56, 'inside': 0, 'above': 166, 'outside': 32, 'tube': 46}
+wine 7709 0.037 {'core': 37, 'inside': 0, 'above': 195, 'outside': 0, 'tube': 68}
+wine 7710 -0.0185 {'core': 27, 'inside': 0, 'above': 202, 'outside': 28, 'tube': 43}
+wine 7711 0.0 {'core': 49, 'inside': 0, 'above': 179, 'outside': 2, 'tube': 70}
+digits 7700 -0.0222 {'core': 189, 'inside': 7, 'above': 52, 'outside': 6, 'tube': 46}
+digits 7701 -0.0296 {'core': 217, 'inside': 3, 'above': 45, 'outside': 7, 'tube': 28}
+digits 7702 -0.0074 {'core': 196, 'inside': 2, 'above': 49, 'outside': 9, 'tube': 44}
+digits 7703 -0.0296 {'core': 198, 'inside': 7, 'above': 44, 'outside': 7, 'tube': 44}
+digits 7704 -0.0574 {'core': 195, 'inside': 5, 'above': 45, 'outside': 6, 'tube': 49}
+digits 7705 -0.0426 {'core': 190, 'inside': 3, 'above': 65, 'outside': 4, 'tube': 38}
+digits 7706 0.0074 {'core': 226, 'inside': 10, 'above': 37, 'outside': 3, 'tube': 24}
+digits 7707 -0.0259 {'core': 200, 'inside': 4, 'above': 56, 'outside': 10, 'tube': 30}
+digits 7708 -0.0074 {'core': 208, 'inside': 5, 'above': 33, 'outside': 10, 'tube': 44}
+digits 7709 -0.0426 {'core': 202, 'inside': 3, 'above': 44, 'outside': 8, 'tube': 43}
+digits 7710 -0.0352 {'core': 180, 'inside': 4, 'above': 60, 'outside': 10, 'tube': 46}
+digits 7711 -0.0204 {'core': 183, 'inside': 7, 'above': 48, 'outside': 9, 'tube': 53}
+{
+ "code_sha256": "972ee911ecff13c2b2fed053ab7bcec2dfa8b2903c2dccbfb85c684ea34f1c97",
+ "P0": {
+  "wins": 33,
+  "nonzero": 36,
+  "of": 36,
+  "mean": 0.06721626597357593,
+  "p": 1.1360680218786001e-07
+ },
+ "P2": {
+  "wins": 33,
+  "nonzero": 36,
+  "of": 36,
+  "mean": 0.08085066060212259,
+  "p": 1.1360680218786001e-07
+ },
+ "P5": {
+  "wins": 18,
+  "nonzero": 35,
+  "of": 36,
+  "mean": 0.011395386614684866,
+  "p": 0.5000000000000001
+ },
+ "P9": {
+  "wins": 32,
+  "nonzero": 35,
+  "of": 36,
+  "mean": 0.08408327918561836,
+  "p": 2.0884908735752106e-07
+ },
+ "means": {
+  "sparse": {
+   "cancer": 0.8338206627680312,
+   "wine": 0.8410493827160493,
+   "digits": 0.7871913580246913
+  },
+  "inside": {
+   "cancer": 0.7270955165692007,
+   "wine": 0.7484567901234568,
+   "digits": 0.7342592592592593
+  },
+  "plain": {
+   "cancer": 0.7514619883040935,
+   "wine": 0.7654320987654321,
+   "digits": 0.7435185185185186
+  },
+  "global": {
+   "cancer": 0.7358674463937622,
+   "wine": 0.7608024691358025,
+   "digits": 0.7228395061728395
+  },
+  "best_native": {
+   "cancer": 0.8167641325536062,
+   "wine": 0.7978395061728395,
+   "digits": 0.8132716049382717
+  }
+ }
+}

@@ -1,0 +1,340 @@
+{
+ "model": "claude-opus-5-5",
+ "utc": "2026-11-17T15:40:29Z",
+ "system": "You are the White Dragon: a cross-domain systems engineer who transplants proven mechanisms from other fields into AI agent workflows. Be concrete and executable.",
+ "prompt": "HOST: three LLM agents (planner -> worker -> checker) apply 14 natural-language change requests to a\n30-line configuration state (lines 'service.field = value'; services ['auth', 'billing', 'search', 'cache', 'gateway']; fields ['replicas', 'timeout_ms', 'retries', 'owner', 'region', 'log_level'] plus\nmax_conn (1-4 digits) and tier (gold|silver|bronze) that can be added; owners ['alice', 'bruno', 'chen', 'dara', 'emeka', 'farah']; regions ['eu-west', 'us-east', 'ap-south', 'sa-east'];\nlog levels ['debug', 'info', 'warn', 'error']). Lines can be changed, added at the end, or deleted. Each agent holds its own copy of the\nstate (\"book\"). At steps 4, 8 and 12 one untouched line of the worker's working book is silently corrupted before\nthe worker runs (any other copy, e.g. a snapshot of the last approved state, is not touched).\n\nTHE PALACE (condition P) and its five places, with exact current formats:\n- INSTRUCTION (planner -> worker): '@state#<8-hex sha256 of the planner's book>' then the planner's free-text\n  instruction (an LLM writes it; it names every key and final value and often restates state lines).\n- WALLS (green dots): the 8-hex hashes; the worker compares its own book's hash before its LLM call; on mismatch a\n  heal runs (the worker sends its 6-hex hashes of 4-line chunks, the planner returns the differing chunks in full).\n- EDITS (worker -> checker): '@state#<base hash>', then line edits ('i' or 'i1,i2', then '|new line' rows), then\n  '=<8-hex hash of the new state>'. The checker applies them to its own book and checks the hash.\n- DOOR (checker -> worker): a JSON verdict {\"verdict\": \"approve\"|\"reject\", \"reason\": \"<free text>\"} on every attempt.\n  The worker needs the reason only after a reject (it is put in its retry prompt).\n- FORWARD (checker -> planner): the approved edits message, so the planner updates its book.\n- INSIDE: the state itself and the texts the LLMs read.\n\nReal example (A3, seed 100, steps 0 and 2):\n[planner -> worker, msg, 89 tok]\n@state#4962bd9d\nSet `billing.retries` to `3`. This is the value of `cache.retries`. Change no other key. The resulting `billing` block is: `billing.replicas = 7`, `billing.timeout_ms = 3300`, `billing.retries = 3`, `billing.owner = emeka`, `billing.region = eu-west`, `billing.log_level = debug`.\n\n[worker -> checker, msg, 13 tok]\n@state#4962bd9d\n8\n|billing.retries = 3\n=ab693ccf\n\n[checker -> worker, msg, 53 tok]\n{\"verdict\": \"approve\", \"reason\": \"The only change was billing.retries from 1 to 3, which matches the requested value of cache.retries. No other key changed, and the resulting billing block matches the expected values.\"}\n\n[checker -> planner, msg, 13 tok]\n@state#4962bd9d\n8\n|billing.retries = 3\n=ab693ccf\n\n[planner -> worker, msg, 191 tok]\n@state#96475def\nDelete the key `auth.region` (its line, currently `sa-east`) from the state. Leave every other key unchanged, with these final values:\n\nauth.replicas = 3\nauth.timeout_ms = 3000\nauth.retries = 7\nauth.owner = bruno\nauth.log_level = debug\nbilling.replicas = 7\nbilling.timeout_ms = 3300\nbilling.retries = 3\nbilling.owner = emeka\nbilling.region = eu-west\nbilling.log_level = debug\nsearch.replicas = 8\nsearch.timeout_ms = 1700\nsearch.retries = 0\nsearch.owner = farah\nsearch.region = us-east\nsearch.log_level = warn\ncache.replicas = 4\ncache.timeout_ms = 2000\ncache.retries = 3\ncache.owner = bruno\ncache.region = us-east\ncache.log_level = info\ngateway.replicas = 6\ngateway.timeout_ms = 2400\ngateway.retries = 6\ngateway.owner = bruno\ngateway.region = sa-east\ngateway.log_level = error\n\n[worker -> checker, msg, 9 tok]\n@state#96475def\n4,5\n=770fa63e\n\n[checker -> worker, msg, 57 tok]\n{\"verdict\": \"approve\", \"reason\": \"The only change reported is the removal of auth.region, which is the requested deletion. No other keys were added, removed, or modified, and the expected final state contains no auth.region key.\"}\n\n[checker -> planner, msg, 9 tok]\n@state#96475def\n4,5\n=770fa63e\n\nInitial state of seed 100 (shared out of band at the start, like every initial book):\nauth.replicas = 3\nauth.timeout_ms = 3000\nauth.retries = 7\nauth.owner = bruno\nauth.region = sa-east\nauth.log_level = warn\nbilling.replicas = 7\nbilling.timeout_ms = 3300\nbilling.retries = 1\nbilling.owner = emeka\nbilling.region = eu-west\nbilling.log_level = debug\nsearch.replicas = 8\nsearch.timeout_ms = 1700\nsearch.retries = 0\nsearch.owner = farah\nsearch.region = us-east\nsearch.log_level = warn\ncache.replicas = 4\ncache.timeout_ms = 2000\ncache.retries = 3\ncache.owner = bruno\ncache.region = us-east\ncache.log_level = info\ngateway.replicas = 6\ngateway.timeout_ms = 2400\ngateway.retries = 6\ngateway.owner = bruno\ngateway.region = sa-east\ngateway.log_level = error\n\nMEASURED COST in A3 (mean channel tokens per task, 16 tasks, 14 steps, ~1 retry and 3 drift heals per task):\ninstruction 1,349; edits 196; door 854; forward 187; heal 114; total P = 2,699. The palace's integrity layer\n(hashes, dots, heals) is ~340 of that. The baseline compact protocol (\"the tent\") measured 1,468 tokens per task\nwith 16/16 exact successes but no drift detection (40 of 48 corruptions stayed in the worker's copy). The owner's\ntarget: the hologram palace is lighter and smaller, the tent about 5 times its size: <= 0.2 x 1,468 = 294 tokens per\ntask, with full integrity: every drift healed before the worker's LLM call (0 model calls), every copy correct at\nthe end, every truncated message detected, and heal cost per drift <= 24 tokens.\n\nMETRIC: channel tokens = count of regex matches of \\w+|[^\\w\\s] over every message (primary). Guard: the same\nmessages are also counted in BPE tokens (tiktoken o200k_base) and bytes; a design that wins only on the regex proxy\n(e.g. long base62 blobs or long hex runs that the regex counts as one token) is scored as a failure.\n\nHARD CONSTRAINTS:\n1. Lossless: the receiver must reconstruct EXACTLY the texts the LLMs read in P (the planner's instruction\n   verbatim, the checker's reject reason verbatim, the state after edits). The LLM prompts are not changed.\n2. No extra LLM calls. The codec is deterministic code running beside each agent.\n3. Out of band only: the initial books plus fixed tables you define now (their one-time size is reported, not\n   counted per task). The codec may use any history both sides have already seen in this task (earlier messages,\n   books, snapshots of the last approved state).\n4. Drift in the worker's book must be detected and healed before the worker's LLM call; every truncation of a\n   worker -> checker message must be detected (the receiver's strict decode must reject it).\n5. You do not see the tent's formats; design from all domains.\n\nCROSS-DOMAIN LIBRARY (use any, or others you know): holography (every fragment holds the whole; reconstruction by a reference beam); DNA coding, replication proofreading and mismatch repair; error-correcting and error-detecting codes; information theory and source coding (entropy, dictionary and context coding); predictive coding (send only the surprise against a shared predictor); rocketry telemetry and mission control (frame sync, minor/major frames); double-entry bookkeeping and audit; military brevity codes and mission command; music notation (a score is a compressed performance); immunology (self/non-self markers); control theory and cybernetics; linguistics (anaphora, ellipsis, given/new).\n\nTASK: design the hologram palace. Decide where to land (places), at which depth, in which order, from which\ndomain and mechanism. For EVERY edge (instruction, edits, door approve, door reject, forward, heal) give the exact\nwire format as a grammar a programmer can implement without guessing, and a worked example using the example\nstep above. Define every table you need (or the rule that builds it from the initial books). Then predict the\nchannel tokens per task (regex proxy, total and per edge) and in BPE tokens, and the integrity you expect\n(drifts healed with 0 model calls out of 48, copies correct out of 16, truncations detected, heal tokens per drift).\nBe honest: if the target cannot be met under the constraints, say by how much, and predict the true number.",
+ "schema": {
+  "type": "object",
+  "properties": {
+   "landings": {
+    "type": "array",
+    "items": {
+     "type": "object",
+     "properties": {
+      "order": {
+       "type": "integer"
+      },
+      "place": {
+       "type": "string",
+       "enum": [
+        "instruction",
+        "walls",
+        "edits",
+        "door",
+        "forward",
+        "heal",
+        "paintings",
+        "inside"
+       ]
+      },
+      "depth": {
+       "type": "string"
+      },
+      "domain": {
+       "type": "string"
+      },
+      "source_mechanism": {
+       "type": "string"
+      },
+      "mechanism": {
+       "type": "string"
+      }
+     },
+     "required": [
+      "order",
+      "place",
+      "depth",
+      "domain",
+      "source_mechanism",
+      "mechanism"
+     ]
+    }
+   },
+   "tables": {
+    "type": "string",
+    "description": "every out-of-band table or the exact rule that builds it"
+   },
+   "edges": {
+    "type": "array",
+    "items": {
+     "type": "object",
+     "properties": {
+      "edge": {
+       "type": "string",
+       "enum": [
+        "instruction",
+        "edits",
+        "door_approve",
+        "door_reject",
+        "forward",
+        "heal"
+       ]
+      },
+      "grammar": {
+       "type": "string"
+      },
+      "encode": {
+       "type": "string"
+      },
+      "decode_and_checks": {
+       "type": "string"
+      },
+      "example": {
+       "type": "string"
+      }
+     },
+     "required": [
+      "edge",
+      "grammar",
+      "encode",
+      "decode_and_checks",
+      "example"
+     ]
+    }
+   },
+   "predicted_channel_tok_per_task": {
+    "type": "number"
+   },
+   "predicted_per_edge_tok_per_task": {
+    "type": "object",
+    "properties": {
+     "instruction": {
+      "type": "number"
+     },
+     "edits": {
+      "type": "number"
+     },
+     "door": {
+      "type": "number"
+     },
+     "forward": {
+      "type": "number"
+     },
+     "heal": {
+      "type": "number"
+     }
+    },
+    "required": [
+     "instruction",
+     "edits",
+     "door",
+     "forward",
+     "heal"
+    ]
+   },
+   "predicted_bpe_tok_per_task": {
+    "type": "number"
+   },
+   "predicted_one_time_table_tok": {
+    "type": "number"
+   },
+   "predicted_integrity": {
+    "type": "object",
+    "properties": {
+     "drift_healed_zero_call_of_48": {
+      "type": "integer"
+     },
+     "replica_consistent_of_16": {
+      "type": "integer"
+     },
+     "truncation_detected_pct": {
+      "type": "number"
+     },
+     "heal_tok_per_drift": {
+      "type": "number"
+     }
+    },
+    "required": [
+     "drift_healed_zero_call_of_48",
+     "replica_consistent_of_16",
+     "truncation_detected_pct",
+     "heal_tok_per_drift"
+    ]
+   },
+   "target_assessment": {
+    "type": "string"
+   }
+  },
+  "required": [
+   "landings",
+   "tables",
+   "edges",
+   "predicted_channel_tok_per_task",
+   "predicted_per_edge_tok_per_task",
+   "predicted_bpe_tok_per_task",
+   "predicted_one_time_table_tok",
+   "predicted_integrity",
+   "target_assessment"
+  ]
+ },
+ "raw_text": "{\"landings\":[{\"order\":1,\"place\":\"heal\",\"depth\":\"remove the channel heal from the normal path: drift is fixed locally with 0 tokens and 0 model calls\",\"domain\":\"DNA replication: methyl-directed mismatch repair\",\"source_mechanism\":\"The old (parental) strand is marked and trusted. A mismatch on the new strand is fixed by copying from the parental template, so nothing outside is needed.\",\"mechanism\":\"The worker's codec keeps SNAP, a copy of the last approved state, which the corruption never touches. Before decoding an instruction and before every LLM call, it checks sha256(WORK) == sha256(SNAP). If they differ, WORK := SNAP. This catches 48/48 drifts at 0 channel tokens. The channel heal is kept only as a fallback, for when an edits check fails at the checker (see the heal edge).\"},{\"order\":2,\"place\":\"walls\",\"depth\":\"delete the 8-hex walls; replace them with a chained 6-digit check carried by the edits and the forward\",\"domain\":\"double-entry bookkeeping / audit\",\"source_mechanism\":\"Every posting is reconciled on both ledgers, and the balance of one ledger proves the other.\",\"mechanism\":\"chk6(state) = int(first 8 hex of the same sha256 P already uses, 16) mod 1e6, written as exactly 6 zero-padded digits. That is 1 regex token and about 2 BPE tokens. The worker's edits end with chk6 of its new state, and the checker must reproduce it on its own book. That one check proves worker base == checker base and that the result matches. The forward sends the same chk6, and the planner must reproduce it. All three copies are reconciled every step, so a separate base hash or wall is not needed.\"},{\"order\":3,\"place\":\"edits\",\"depth\":\"wire format: word-level ops plus a terminal check word\",\"domain\":\"rocketry telemetry: minor frame with a sync word and frame CRC at a fixed position\",\"source_mechanism\":\"A frame is valid only if it ends in a CRC field of fixed length. A short frame fails the length or CRC test.\",\"mechanism\":\"Ops are space-separated words: '<line> <val>', 'x<line>', 'a<kc> <val>', 'r<line><kc> <val>'. The message ends with a 6-digit chk6. No op field can be 6 digits long (line indexes are at most 2 digits, values at most 4). So every truncation either removes the last word or shortens it, and strict decode rejects it: 100% detected. Region values use 3-letter codes.\"},{\"order\":4,\"place\":\"door\",\"depth\":\"brevity code for approve; the free-text codec only for reject\",\"domain\":\"military brevity codes\",\"source_mechanism\":\"'WILCO' replaces a sentence when the receiver needs no content.\",\"mechanism\":\"Approve is '+' (1 token). The approve reason is never needed by the worker and is not covered by the lossless clause. Reject is '-' plus the reason encoded with the same codec as the instruction. In that codec C is the base book and F is the attempted state.\"},{\"order\":5,\"place\":\"forward\",\"depth\":\"predictive coding: send only the surprise\",\"domain\":\"predictive coding (video motion prediction / DPCM)\",\"source_mechanism\":\"The receiver runs the same predictor as the sender. Only the check, plus the residual when the prediction misses, is sent.\",\"mechanism\":\"The planner's codec already built F_final, its own predicted state, while encoding its instruction (from S, X, A, H and Z items). The checker sends only chk6 of the approved state. If chk6(F_final) matches, the planner sets book := F_final (1 token). Otherwise the planner sends '?' and the checker resends the approved edits message.\"},{\"order\":6,\"place\":\"instruction\",\"depth\":\"holographic reconstruction of the instruction from the shared book (reference beam) plus a score of templates\",\"domain\":\"holography + music notation + linguistics (given/new, anaphora)\",\"source_mechanism\":\"With a reference beam, the image is rebuilt from a small interference record. A score encodes a performance as symbols over a shared instrument. Given information is referred to, not restated.\",\"mechanism\":\"The book C is the reference beam. Template items rebuild the planner's sentences, and a running view F (C plus the assignments made by the items so far) re-renders every restated key, value, block and full state list byte-exactly. In the A3 example, 89 tokens become 'S by 3 R cy N B b' (8 tokens) and 191 tokens become 'X ag L' (3 tokens). Code mode is the default; free text goes in \u00ab...\u00bb literals with \u00a7 key and value anaphora inside.\"},{\"order\":7,\"place\":\"instruction\",\"depth\":\"adaptive sentence dictionary (also used by reject reasons)\",\"domain\":\"source coding: LZ78 / dictionary coding with slot abstraction (immunology: memory cells learn a shape once, then recognize it cheaply)\",\"source_mechanism\":\"The first occurrence is sent literally and stored by both sides. Repeats cost one index.\",\"mechanism\":\"Every literal item of 4 or more regex tokens becomes entry D<n> in both codecs. Its \u00a7 macro arguments become slots. Later reuse is 'D<n> args', about 2 to 4 tokens. This absorbs the planner's task-specific phrasing after it first appears.\"},{\"order\":8,\"place\":\"inside\",\"depth\":\"untouched\",\"domain\":\"constraint 1\",\"source_mechanism\":\"n/a\",\"mechanism\":\"The LLM prompts and texts are unchanged. Every decoder rebuilds P's exact texts: the instruction verbatim, the reject reason verbatim, the new state, and, if the checker prompt needs it, P's '@state#..' edits text, regenerated deterministically from (base, ops).\"}],\"tables\":\"T0 SERVICE CODES: a=auth b=billing s=search c=cache g=gateway.\\nT1 FIELD CODES: r=replicas t=timeout_ms y=retries o=owner g=region l=log_level m=max_conn e=tier.\\nT2 KEY CODE (kc) = service code + field code, 40 keys. Examples: by=billing.retries, ag=auth.region, cy=cache.retries, be=billing.tier.\\nT3 VALUE WORDS (val): region codes euw=eu-west, use=us-east, aps=ap-south, sae=sa-east. Every other value is written literally: digits 1-4 long, alice|bruno|chen|dara|emeka|farah, debug|info|warn|error, gold|silver|bronze.\\nT4 CHECK: chk6(state) = int(sha256hex(state serialized exactly as P hashes it)[0:8], 16) mod 1000000, zero-padded to 6 digits. Examples: ab693ccf -> 800783; 770fa63e -> 514302.\\nT5 LIST STYLES (n): 1 = \\\"`k = v`\\\" joined by \\\", \\\" | 2 = \\\"k = v\\\" joined by \\\"\\\\n\\\" | 3 = \\\"- k = v\\\" joined by \\\"\\\\n\\\" | 4 = \\\"- `k = v`\\\" joined by \\\"\\\\n\\\" | 5 = \\\"k = v\\\" joined by \\\", \\\". k is the full key, v the value in F, lines in book order.\\nT6 STATIC TEMPLATES. ID = one uppercase letter; slots are K = kc, V = val, S = service code, n = style. Each entry gives the rendered text, then its effect on F:\\n  S K V -> \\\"Set `{K}` to `{V}`.\\\" ; F[K] := V (appended at the end if absent)\\n  R K -> \\\"This is the value of `{K}`.\\\"\\n  N -> \\\"Change no other key.\\\"\\n  B S -> \\\"The resulting `{S}` block is: {blk(S,F,1)}.\\\"\\n  X K -> \\\"Delete the key `{K}` (its line, currently `{C[K]}`) from the state.\\\" ; delete K from F\\n  L -> \\\"Leave every other key unchanged, with these final values:\\\\n\\\\n{all(F,2)}\\\"\\n  A K V -> \\\"Add the key `{K}` with value `{V}`.\\\" ; append K = V\\n  U -> \\\"Leave every other key unchanged.\\\"\\n  Q S n -> blk(S,F,n) ; W n -> all(F,n)\\n  E K -> \\\"`{K} = {F[K]}`\\\"\\n  H K V -> hidden: F[K] := V, renders \\\"\\\" ; Z K -> hidden: delete K, renders \\\"\\\"\\n  'D' is reserved for dictionary references. The other letters are reserved and empty. The table is frozen now.\\nT7 INLINE MACROS inside \u00ab\u00bb: \u00a7kKC -> \\\"`key`\\\" ; \u00a7KKC -> \\\"key\\\" ; \u00a7vKC / \u00a7VKC -> F value with / without backticks ; \u00a7cKC / \u00a7CKC -> C (base) value with / without backticks ; \u00a7sX / \u00a7SX -> service name with / without backticks ; \u00a7\u00a7 -> \\\"\u00a7\\\". A literal \\\"\u00bb\\\" is written \\\"\u00bb\u00bb\\\".\\nT8 ADAPTIVE DICTIONARY (built at run time, identically on both sides, starts empty per task, shared by instruction and reject): after each message decodes, every \u00ab \u00bb literal with 4 or more regex tokens of content is appended as D1, D2, ... (at most 99). Its slots are the arguments of its \u00a7 macros, in order.\\nT9 INITIAL BOOKS: as given, out of band.\\nOne-time size of T0-T7 is about 450 regex tokens.\",\"edges\":[{\"edge\":\"instruction\",\"grammar\":\"msg := item (WS+ item)* ; WS is ignored in code mode.\\nitem := TID slot* | 'D' DIGITS slot* | '\u00ab' litchar* '\u00bb' | '^' | '/'\\nTID := one uppercase letter in T6. Its slots follow, separated by WS: K=[a-z]{2} in T2, V=T3 word, S=[asbcg], n=[1-5].\\nlitchar := any char except '\u00bb' | '\u00bb\u00bb' | '\u00a7' macro (T7).\\nRender left to right with C = the healed book and F := copy(C). Template effects update F as they render.\\nJoiner rule: between two consecutive rendering template items insert ' '. Insert nothing next to a \u00ab \u00bb literal or a D item. Insert nothing around H or Z. '^' suppresses the next joiner. Each '/' emits '\\\\n' and suppresses the default joiner.\\nEncoder: greedy longest match, in this order: static templates, then D entries, then a \u00ab \u00bb literal with \u00a7 macros. It adds H or Z items only when they let later B, L, Q or W items match.\\nStrict decode: unknown TID, wrong slot count, unknown kc, or a key missing from F or C -> fail. The worker then asks for the raw instruction (fallback).\",\"encode\":\"Planner codec: tokenize the LLM text into sentences, match templates while simulating F, emit items. Keep F_final for the forward prediction.\",\"decode_and_checks\":\"Worker: (1) heal WORK from SNAP if the sha differs. (2) Render with C = WORK. (3) The rendered text is the exact P instruction text. The @state hash is regenerated as sha8(WORK) if the prompt contains it. Correctness of C is guaranteed by the chained chk6 of the previous step.\",\"example\":\"Step 0 (P: 89 tok): wire 'S by 3 R cy N B b' = 8 regex tokens, about 10 BPE. It decodes to: \\\"Set `billing.retries` to `3`. This is the value of `cache.retries`. Change no other key. The resulting `billing` block is: `billing.replicas = 7`, `billing.timeout_ms = 3300`, `billing.retries = 3`, `billing.owner = emeka`, `billing.region = eu-west`, `billing.log_level = debug`.\\\" B renders from F, where S already set by=3.\\nStep 2 (P: 191 tok): wire 'X ag L' = 3 regex tokens. X renders \\\"Delete the key `auth.region` (its line, currently `sa-east`) from the state.\\\" and deletes ag from F. L renders \\\"Leave every other key unchanged, with these final values:\\\\n\\\\n\\\" followed by the 29 lines of F.\\nNovel prose example: '\u00abCopy the value of \u00a7kcy into \u00a7kby.\u00bb N'. After that, the literal is stored as D1, and a later 'D1 sr gr' renders \\\"Copy the value of `search.replicas` into `gateway.replicas`.\\\"\"},{\"edge\":\"edits\",\"grammar\":\"msg := (op ' ')* CHK\\nop := LINE ' ' VAL (change the value of base line LINE)\\n    | 'x' LINE (delete base line)\\n    | 'a' KC ' ' VAL (append a line at the end)\\n    | 'r' LINE KC ' ' VAL (replace the key and value of a line)\\nLINE := 0-based base-book index, [0-9]{1,2}, no leading zero. VAL := T3 word (never 5 or more digits). CHK := [0-9]{6}, and it must be the last word.\\nApply order: changes and replaces by base index, then deletes in descending order, then appends in message order.\",\"encode\":\"Worker codec: diff(base = healed WORK, new state from the worker LLM) to canonical ops sorted by line, then append chk6(new).\",\"decode_and_checks\":\"Checker, strict decode. The last word must match [0-9]{6}. Every op must parse completely, every LINE must exist, and there must be no trailing garbage. Then apply to the checker's own book, and chk6(result) must equal CHK. Any failure means reject the frame (the checker sends '!' and the fallback heal runs). Truncation removes or shortens the final 6-digit word, and no earlier field can be 6 digits, so 100% of truncations are detected. If the checker's prompt needs P's text, it is regenerated: '@state#'+sha8(base), P line-edit rows, '='+sha8(new).\",\"example\":\"Step 0: '8 3 800783' = 3 regex tokens (about 4 BPE), vs 13 in P. Line 8 is billing.retries := 3; chk6(ab693ccf) = 800783.\\nStep 2: 'x4 514302' = 2 regex tokens, vs 9. Line 4 auth.region is deleted; chk6(770fa63e) = 514302.\\nTruncated '8 3 8007' fails: the last word is not 6 digits.\"},{\"edge\":\"door_approve\",\"grammar\":\"msg := '+'\",\"encode\":\"The checker's verdict is approve. The reason is dropped: the worker never reads it, and the lossless clause covers only reject reasons.\",\"decode_and_checks\":\"Worker: SNAP := WORK := attempted state. That state was already verified by chk6 at the checker.\",\"example\":\"Steps 0 and 2: '+' (1 token) replaces 53 and 57 tokens.\"},{\"edge\":\"door_reject\",\"grammar\":\"msg := '-' body. body has the same grammar as the instruction, with C = base book and F = attempted state (base + edits). It uses the shared D dictionary; new literals are appended to it.\",\"encode\":\"Checker codec: same greedy encoder as the instruction. Most reasons are novel prose, so expect about 0.95 x raw.\",\"decode_and_checks\":\"Worker: render the reason byte-exactly and put it in the retry prompt. Then reset WORK := SNAP.\",\"example\":\"Hypothetical reject on step 0: raw \\\"The instruction asks for `billing.retries` = 3, but the edit sets it to 1.\\\" (21 tokens). Wire: '-\u00abThe instruction asks for \u00a7kby = 3, but the edit sets it to 1.\u00bb' (20 tokens). The literal is stored as D1, so the same shape later costs '-D1 cy' plus its tail.\"},{\"edge\":\"forward\",\"grammar\":\"checker->planner: msg := CHK ([0-9]{6}). If the prediction misses: planner->checker '?', then checker->planner sends the approved edits message (edits grammar).\",\"encode\":\"Checker: send chk6(approved state).\",\"decode_and_checks\":\"Planner: if chk6(F_final of its own instruction encoding) == CHK, then book := F_final. Otherwise send '?', receive the edits, apply them to its book, and require chk6 == CHK. The forward also means the step is approved.\",\"example\":\"Step 0: '800783' (1 regex token, 2 BPE), vs 13. The planner's F_final from 'S by 3 ...' gives ab693ccf, whose chk6 is 800783. That is a hit.\\nStep 2: '514302' (1 token). F_final from 'X ag L' matches.\\nOn a miss: '?' then '8 3 800783'.\"},{\"edge\":\"heal\",\"grammar\":\"PRIMARY (local, 0 tokens): before decode and before every worker LLM call, if sha256(WORK) != sha256(SNAP) then WORK := SNAP.\\nFALLBACK (only after the checker sends '!'):\\n  worker->planner: '?' then 8 words h0..h7, each h_j = [0-9]{2} = int(sha256(lines 4j..4j+3 joined by '\\\\n')[0:8], 16) mod 100.\\n  planner->worker: ('c' J (' ' KC ' ' VAL){1,4})+ ' ' CHK, one group for each chunk J whose h differs, rows in order. If the chunk line count differs, or the final chk6 fails, the planner sends 'W 2' as a full state list.\",\"encode\":\"Primary: none. Fallback: as above.\",\"decode_and_checks\":\"The worker replaces the chunk rows. chk6(WORK) must equal CHK, otherwise escalate.\",\"example\":\"Step 4, line 9 (billing.owner) corrupted to 'dara'. The SNAP sha differs, so WORK := SNAP before the LLM call: 0 tokens, 0 model calls.\\nFallback for the same drift: worker '? 41 07 93 22 58 10 66 35' (9 tokens); planner 'c2 bt 3300 by 3 bo emeka bg euw 551203' (10 tokens). Total 19 tokens, within the 24 limit. Illustrative digits.\"}],\"predicted_channel_tok_per_task\":321,\"predicted_per_edge_tok_per_task\":{\"instruction\":175,\"edits\":54,\"door\":69,\"forward\":23,\"heal\":0},\"predicted_bpe_tok_per_task\":390,\"predicted_one_time_table_tok\":450,\"predicted_integrity\":{\"drift_healed_zero_call_of_48\":48,\"replica_consistent_of_16\":16,\"truncation_detected_pct\":100,\"heal_tok_per_drift\":0},\"target_assessment\":\"Prediction: about 321 regex tokens per task (likely range 260-400) and about 390 BPE tokens. That is 4.6x smaller than the tent (1,468) and 8.4x smaller than P (2,699). It misses the 294 target by about 27 tokens (9%), so I would not claim the target.\\n\\nPer-edge breakdown:\\n- **Instruction, 175:** 14 steps x about 7.5 tokens when sentences match templates, plus about 70 tokens for the first-time phrasing that goes into the D dictionary.\\n- **Edits, 54:** about 15 attempts x 3.6 tokens.\\n- **Door, 69:** 14 approves x 1 token, plus about 1 reject reason x 55 tokens. Reject reasons are novel prose and barely compress.\\n- **Forward, 23:** 14 x 1 token, plus about 2 prediction misses x 4.6 tokens.\\n- **Heal, 0.**\\n\\nIntegrity layer: about 58 tokens, down from about 340. The 6-digit checks cost 1 regex token and 2 BPE tokens each.\\n\\nThe target is reached only if the planner's phrasing is close to the T6 templates, so that the instruction edge comes in at 150 tokens or less. The two A3 examples compress 89 to 8 and 191 to 3, which is the best case. Novel prose is the real limit, and the lossless clause forbids dropping it.\\n\\nThe 14-token approve cost could go to 0 with an empty approve message, but then a reject truncated to nothing would look like an approve, so I don't recommend it.\\n\\nThe BPE guard passes: there are no long blobs. The longest wire words are 6-digit checks (2 BPE tokens) and 3-letter codes, so BPE comes to about 1.2x the regex count.\\n\\nIntegrity prediction:\\n- **Drifts:** 48/48 healed by the local SNAP repair with 0 model calls and 0 channel tokens. The channel fallback, if ever triggered, costs about 19 tokens, within the 24 limit.\\n- **Copies:** 16/16 correct at the end, because chk6 reconciles all three copies every step.\\n- **Truncation:** 100% of truncated edits messages detected, because the frame must end in a fixed-length 6-digit check word.\\n- **Residual risk:** a chk6 collision has probability about 1e-6 per step, roughly 2e-4 over all 16 tasks.\\n\\nAssumption to verify: the static templates were fitted to only the two examples shown. Run the codec on the A3 transcripts first to measure template coverage. That number decides whether the result lands at about 260 or about 400.\"}",
+ "design": {
+  "landings": [
+   {
+    "order": 1,
+    "place": "heal",
+    "depth": "remove the channel heal from the normal path: drift is fixed locally with 0 tokens and 0 model calls",
+    "domain": "DNA replication: methyl-directed mismatch repair",
+    "source_mechanism": "The old (parental) strand is marked and trusted. A mismatch on the new strand is fixed by copying from the parental template, so nothing outside is needed.",
+    "mechanism": "The worker's codec keeps SNAP, a copy of the last approved state, which the corruption never touches. Before decoding an instruction and before every LLM call, it checks sha256(WORK) == sha256(SNAP). If they differ, WORK := SNAP. This catches 48/48 drifts at 0 channel tokens. The channel heal is kept only as a fallback, for when an edits check fails at the checker (see the heal edge)."
+   },
+   {
+    "order": 2,
+    "place": "walls",
+    "depth": "delete the 8-hex walls; replace them with a chained 6-digit check carried by the edits and the forward",
+    "domain": "double-entry bookkeeping / audit",
+    "source_mechanism": "Every posting is reconciled on both ledgers, and the balance of one ledger proves the other.",
+    "mechanism": "chk6(state) = int(first 8 hex of the same sha256 P already uses, 16) mod 1e6, written as exactly 6 zero-padded digits. That is 1 regex token and about 2 BPE tokens. The worker's edits end with chk6 of its new state, and the checker must reproduce it on its own book. That one check proves worker base == checker base and that the result matches. The forward sends the same chk6, and the planner must reproduce it. All three copies are reconciled every step, so a separate base hash or wall is not needed."
+   },
+   {
+    "order": 3,
+    "place": "edits",
+    "depth": "wire format: word-level ops plus a terminal check word",
+    "domain": "rocketry telemetry: minor frame with a sync word and frame CRC at a fixed position",
+    "source_mechanism": "A frame is valid only if it ends in a CRC field of fixed length. A short frame fails the length or CRC test.",
+    "mechanism": "Ops are space-separated words: '<line> <val>', 'x<line>', 'a<kc> <val>', 'r<line><kc> <val>'. The message ends with a 6-digit chk6. No op field can be 6 digits long (line indexes are at most 2 digits, values at most 4). So every truncation either removes the last word or shortens it, and strict decode rejects it: 100% detected. Region values use 3-letter codes."
+   },
+   {
+    "order": 4,
+    "place": "door",
+    "depth": "brevity code for approve; the free-text codec only for reject",
+    "domain": "military brevity codes",
+    "source_mechanism": "'WILCO' replaces a sentence when the receiver needs no content.",
+    "mechanism": "Approve is '+' (1 token). The approve reason is never needed by the worker and is not covered by the lossless clause. Reject is '-' plus the reason encoded with the same codec as the instruction. In that codec C is the base book and F is the attempted state."
+   },
+   {
+    "order": 5,
+    "place": "forward",
+    "depth": "predictive coding: send only the surprise",
+    "domain": "predictive coding (video motion prediction / DPCM)",
+    "source_mechanism": "The receiver runs the same predictor as the sender. Only the check, plus the residual when the prediction misses, is sent.",
+    "mechanism": "The planner's codec already built F_final, its own predicted state, while encoding its instruction (from S, X, A, H and Z items). The checker sends only chk6 of the approved state. If chk6(F_final) matches, the planner sets book := F_final (1 token). Otherwise the planner sends '?' and the checker resends the approved edits message."
+   },
+   {
+    "order": 6,
+    "place": "instruction",
+    "depth": "holographic reconstruction of the instruction from the shared book (reference beam) plus a score of templates",
+    "domain": "holography + music notation + linguistics (given/new, anaphora)",
+    "source_mechanism": "With a reference beam, the image is rebuilt from a small interference record. A score encodes a performance as symbols over a shared instrument. Given information is referred to, not restated.",
+    "mechanism": "The book C is the reference beam. Template items rebuild the planner's sentences, and a running view F (C plus the assignments made by the items so far) re-renders every restated key, value, block and full state list byte-exactly. In the A3 example, 89 tokens become 'S by 3 R cy N B b' (8 tokens) and 191 tokens become 'X ag L' (3 tokens). Code mode is the default; free text goes in \u00ab...\u00bb literals with \u00a7 key and value anaphora inside."
+   },
+   {
+    "order": 7,
+    "place": "instruction",
+    "depth": "adaptive sentence dictionary (also used by reject reasons)",
+    "domain": "source coding: LZ78 / dictionary coding with slot abstraction (immunology: memory cells learn a shape once, then recognize it cheaply)",
+    "source_mechanism": "The first occurrence is sent literally and stored by both sides. Repeats cost one index.",
+    "mechanism": "Every literal item of 4 or more regex tokens becomes entry D<n> in both codecs. Its \u00a7 macro arguments become slots. Later reuse is 'D<n> args', about 2 to 4 tokens. This absorbs the planner's task-specific phrasing after it first appears."
+   },
+   {
+    "order": 8,
+    "place": "inside",
+    "depth": "untouched",
+    "domain": "constraint 1",
+    "source_mechanism": "n/a",
+    "mechanism": "The LLM prompts and texts are unchanged. Every decoder rebuilds P's exact texts: the instruction verbatim, the reject reason verbatim, the new state, and, if the checker prompt needs it, P's '@state#..' edits text, regenerated deterministically from (base, ops)."
+   }
+  ],
+  "tables": "T0 SERVICE CODES: a=auth b=billing s=search c=cache g=gateway.\nT1 FIELD CODES: r=replicas t=timeout_ms y=retries o=owner g=region l=log_level m=max_conn e=tier.\nT2 KEY CODE (kc) = service code + field code, 40 keys. Examples: by=billing.retries, ag=auth.region, cy=cache.retries, be=billing.tier.\nT3 VALUE WORDS (val): region codes euw=eu-west, use=us-east, aps=ap-south, sae=sa-east. Every other value is written literally: digits 1-4 long, alice|bruno|chen|dara|emeka|farah, debug|info|warn|error, gold|silver|bronze.\nT4 CHECK: chk6(state) = int(sha256hex(state serialized exactly as P hashes it)[0:8], 16) mod 1000000, zero-padded to 6 digits. Examples: ab693ccf -> 800783; 770fa63e -> 514302.\nT5 LIST STYLES (n): 1 = \"`k = v`\" joined by \", \" | 2 = \"k = v\" joined by \"\\n\" | 3 = \"- k = v\" joined by \"\\n\" | 4 = \"- `k = v`\" joined by \"\\n\" | 5 = \"k = v\" joined by \", \". k is the full key, v the value in F, lines in book order.\nT6 STATIC TEMPLATES. ID = one uppercase letter; slots are K = kc, V = val, S = service code, n = style. Each entry gives the rendered text, then its effect on F:\n  S K V -> \"Set `{K}` to `{V}`.\" ; F[K] := V (appended at the end if absent)\n  R K -> \"This is the value of `{K}`.\"\n  N -> \"Change no other key.\"\n  B S -> \"The resulting `{S}` block is: {blk(S,F,1)}.\"\n  X K -> \"Delete the key `{K}` (its line, currently `{C[K]}`) from the state.\" ; delete K from F\n  L -> \"Leave every other key unchanged, with these final values:\\n\\n{all(F,2)}\"\n  A K V -> \"Add the key `{K}` with value `{V}`.\" ; append K = V\n  U -> \"Leave every other key unchanged.\"\n  Q S n -> blk(S,F,n) ; W n -> all(F,n)\n  E K -> \"`{K} = {F[K]}`\"\n  H K V -> hidden: F[K] := V, renders \"\" ; Z K -> hidden: delete K, renders \"\"\n  'D' is reserved for dictionary references. The other letters are reserved and empty. The table is frozen now.\nT7 INLINE MACROS inside \u00ab\u00bb: \u00a7kKC -> \"`key`\" ; \u00a7KKC -> \"key\" ; \u00a7vKC / \u00a7VKC -> F value with / without backticks ; \u00a7cKC / \u00a7CKC -> C (base) value with / without backticks ; \u00a7sX / \u00a7SX -> service name with / without backticks ; \u00a7\u00a7 -> \"\u00a7\". A literal \"\u00bb\" is written \"\u00bb\u00bb\".\nT8 ADAPTIVE DICTIONARY (built at run time, identically on both sides, starts empty per task, shared by instruction and reject): after each message decodes, every \u00ab \u00bb literal with 4 or more regex tokens of content is appended as D1, D2, ... (at most 99). Its slots are the arguments of its \u00a7 macros, in order.\nT9 INITIAL BOOKS: as given, out of band.\nOne-time size of T0-T7 is about 450 regex tokens.",
+  "edges": [
+   {
+    "edge": "instruction",
+    "grammar": "msg := item (WS+ item)* ; WS is ignored in code mode.\nitem := TID slot* | 'D' DIGITS slot* | '\u00ab' litchar* '\u00bb' | '^' | '/'\nTID := one uppercase letter in T6. Its slots follow, separated by WS: K=[a-z]{2} in T2, V=T3 word, S=[asbcg], n=[1-5].\nlitchar := any char except '\u00bb' | '\u00bb\u00bb' | '\u00a7' macro (T7).\nRender left to right with C = the healed book and F := copy(C). Template effects update F as they render.\nJoiner rule: between two consecutive rendering template items insert ' '. Insert nothing next to a \u00ab \u00bb literal or a D item. Insert nothing around H or Z. '^' suppresses the next joiner. Each '/' emits '\\n' and suppresses the default joiner.\nEncoder: greedy longest match, in this order: static templates, then D entries, then a \u00ab \u00bb literal with \u00a7 macros. It adds H or Z items only when they let later B, L, Q or W items match.\nStrict decode: unknown TID, wrong slot count, unknown kc, or a key missing from F or C -> fail. The worker then asks for the raw instruction (fallback).",
+    "encode": "Planner codec: tokenize the LLM text into sentences, match templates while simulating F, emit items. Keep F_final for the forward prediction.",
+    "decode_and_checks": "Worker: (1) heal WORK from SNAP if the sha differs. (2) Render with C = WORK. (3) The rendered text is the exact P instruction text. The @state hash is regenerated as sha8(WORK) if the prompt contains it. Correctness of C is guaranteed by the chained chk6 of the previous step.",
+    "example": "Step 0 (P: 89 tok): wire 'S by 3 R cy N B b' = 8 regex tokens, about 10 BPE. It decodes to: \"Set `billing.retries` to `3`. This is the value of `cache.retries`. Change no other key. The resulting `billing` block is: `billing.replicas = 7`, `billing.timeout_ms = 3300`, `billing.retries = 3`, `billing.owner = emeka`, `billing.region = eu-west`, `billing.log_level = debug`.\" B renders from F, where S already set by=3.\nStep 2 (P: 191 tok): wire 'X ag L' = 3 regex tokens. X renders \"Delete the key `auth.region` (its line, currently `sa-east`) from the state.\" and deletes ag from F. L renders \"Leave every other key unchanged, with these final values:\\n\\n\" followed by the 29 lines of F.\nNovel prose example: '\u00abCopy the value of \u00a7kcy into \u00a7kby.\u00bb N'. After that, the literal is stored as D1, and a later 'D1 sr gr' renders \"Copy the value of `search.replicas` into `gateway.replicas`.\""
+   },
+   {
+    "edge": "edits",
+    "grammar": "msg := (op ' ')* CHK\nop := LINE ' ' VAL (change the value of base line LINE)\n    | 'x' LINE (delete base line)\n    | 'a' KC ' ' VAL (append a line at the end)\n    | 'r' LINE KC ' ' VAL (replace the key and value of a line)\nLINE := 0-based base-book index, [0-9]{1,2}, no leading zero. VAL := T3 word (never 5 or more digits). CHK := [0-9]{6}, and it must be the last word.\nApply order: changes and replaces by base index, then deletes in descending order, then appends in message order.",
+    "encode": "Worker codec: diff(base = healed WORK, new state from the worker LLM) to canonical ops sorted by line, then append chk6(new).",
+    "decode_and_checks": "Checker, strict decode. The last word must match [0-9]{6}. Every op must parse completely, every LINE must exist, and there must be no trailing garbage. Then apply to the checker's own book, and chk6(result) must equal CHK. Any failure means reject the frame (the checker sends '!' and the fallback heal runs). Truncation removes or shortens the final 6-digit word, and no earlier field can be 6 digits, so 100% of truncations are detected. If the checker's prompt needs P's text, it is regenerated: '@state#'+sha8(base), P line-edit rows, '='+sha8(new).",
+    "example": "Step 0: '8 3 800783' = 3 regex tokens (about 4 BPE), vs 13 in P. Line 8 is billing.retries := 3; chk6(ab693ccf) = 800783.\nStep 2: 'x4 514302' = 2 regex tokens, vs 9. Line 4 auth.region is deleted; chk6(770fa63e) = 514302.\nTruncated '8 3 8007' fails: the last word is not 6 digits."
+   },
+   {
+    "edge": "door_approve",
+    "grammar": "msg := '+'",
+    "encode": "The checker's verdict is approve. The reason is dropped: the worker never reads it, and the lossless clause covers only reject reasons.",
+    "decode_and_checks": "Worker: SNAP := WORK := attempted state. That state was already verified by chk6 at the checker.",
+    "example": "Steps 0 and 2: '+' (1 token) replaces 53 and 57 tokens."
+   },
+   {
+    "edge": "door_reject",
+    "grammar": "msg := '-' body. body has the same grammar as the instruction, with C = base book and F = attempted state (base + edits). It uses the shared D dictionary; new literals are appended to it.",
+    "encode": "Checker codec: same greedy encoder as the instruction. Most reasons are novel prose, so expect about 0.95 x raw.",
+    "decode_and_checks": "Worker: render the reason byte-exactly and put it in the retry prompt. Then reset WORK := SNAP.",
+    "example": "Hypothetical reject on step 0: raw \"The instruction asks for `billing.retries` = 3, but the edit sets it to 1.\" (21 tokens). Wire: '-\u00abThe instruction asks for \u00a7kby = 3, but the edit sets it to 1.\u00bb' (20 tokens). The literal is stored as D1, so the same shape later costs '-D1 cy' plus its tail."
+   },
+   {
+    "edge": "forward",
+    "grammar": "checker->planner: msg := CHK ([0-9]{6}). If the prediction misses: planner->checker '?', then checker->planner sends the approved edits message (edits grammar).",
+    "encode": "Checker: send chk6(approved state).",
+    "decode_and_checks": "Planner: if chk6(F_final of its own instruction encoding) == CHK, then book := F_final. Otherwise send '?', receive the edits, apply them to its book, and require chk6 == CHK. The forward also means the step is approved.",
+    "example": "Step 0: '800783' (1 regex token, 2 BPE), vs 13. The planner's F_final from 'S by 3 ...' gives ab693ccf, whose chk6 is 800783. That is a hit.\nStep 2: '514302' (1 token). F_final from 'X ag L' matches.\nOn a miss: '?' then '8 3 800783'."
+   },
+   {
+    "edge": "heal",
+    "grammar": "PRIMARY (local, 0 tokens): before decode and before every worker LLM call, if sha256(WORK) != sha256(SNAP) then WORK := SNAP.\nFALLBACK (only after the checker sends '!'):\n  worker->planner: '?' then 8 words h0..h7, each h_j = [0-9]{2} = int(sha256(lines 4j..4j+3 joined by '\\n')[0:8], 16) mod 100.\n  planner->worker: ('c' J (' ' KC ' ' VAL){1,4})+ ' ' CHK, one group for each chunk J whose h differs, rows in order. If the chunk line count differs, or the final chk6 fails, the planner sends 'W 2' as a full state list.",
+    "encode": "Primary: none. Fallback: as above.",
+    "decode_and_checks": "The worker replaces the chunk rows. chk6(WORK) must equal CHK, otherwise escalate.",
+    "example": "Step 4, line 9 (billing.owner) corrupted to 'dara'. The SNAP sha differs, so WORK := SNAP before the LLM call: 0 tokens, 0 model calls.\nFallback for the same drift: worker '? 41 07 93 22 58 10 66 35' (9 tokens); planner 'c2 bt 3300 by 3 bo emeka bg euw 551203' (10 tokens). Total 19 tokens, within the 24 limit. Illustrative digits."
+   }
+  ],
+  "predicted_channel_tok_per_task": 321,
+  "predicted_per_edge_tok_per_task": {
+   "instruction": 175,
+   "edits": 54,
+   "door": 69,
+   "forward": 23,
+   "heal": 0
+  },
+  "predicted_bpe_tok_per_task": 390,
+  "predicted_one_time_table_tok": 450,
+  "predicted_integrity": {
+   "drift_healed_zero_call_of_48": 48,
+   "replica_consistent_of_16": 16,
+   "truncation_detected_pct": 100,
+   "heal_tok_per_drift": 0
+  },
+  "target_assessment": "Prediction: about 321 regex tokens per task (likely range 260-400) and about 390 BPE tokens. That is 4.6x smaller than the tent (1,468) and 8.4x smaller than P (2,699). It misses the 294 target by about 27 tokens (9%), so I would not claim the target.\n\nPer-edge breakdown:\n- **Instruction, 175:** 14 steps x about 7.5 tokens when sentences match templates, plus about 70 tokens for the first-time phrasing that goes into the D dictionary.\n- **Edits, 54:** about 15 attempts x 3.6 tokens.\n- **Door, 69:** 14 approves x 1 token, plus about 1 reject reason x 55 tokens. Reject reasons are novel prose and barely compress.\n- **Forward, 23:** 14 x 1 token, plus about 2 prediction misses x 4.6 tokens.\n- **Heal, 0.**\n\nIntegrity layer: about 58 tokens, down from about 340. The 6-digit checks cost 1 regex token and 2 BPE tokens each.\n\nThe target is reached only if the planner's phrasing is close to the T6 templates, so that the instruction edge comes in at 150 tokens or less. The two A3 examples compress 89 to 8 and 191 to 3, which is the best case. Novel prose is the real limit, and the lossless clause forbids dropping it.\n\nThe 14-token approve cost could go to 0 with an empty approve message, but then a reject truncated to nothing would look like an approve, so I don't recommend it.\n\nThe BPE guard passes: there are no long blobs. The longest wire words are 6-digit checks (2 BPE tokens) and 3-letter codes, so BPE comes to about 1.2x the regex count.\n\nIntegrity prediction:\n- **Drifts:** 48/48 healed by the local SNAP repair with 0 model calls and 0 channel tokens. The channel fallback, if ever triggered, costs about 19 tokens, within the 24 limit.\n- **Copies:** 16/16 correct at the end, because chk6 reconciles all three copies every step.\n- **Truncation:** 100% of truncated edits messages detected, because the frame must end in a fixed-length 6-digit check word.\n- **Residual risk:** a chk6 collision has probability about 1e-6 per step, roughly 2e-4 over all 16 tasks.\n\nAssumption to verify: the static templates were fitted to only the two examples shown. Run the codec on the A3 transcripts first to measure template coverage. That number decides whether the result lands at about 260 or about 400."
+ },
+ "call": {
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 811,
+   "cache_read_input_tokens": 5050,
+   "output_tokens": 34455,
+   "output_tokens_details": {
+    "thinking_tokens": 27239
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 811,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "global",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 34455,
+     "cache_read_input_tokens": 5050,
+     "cache_creation_input_tokens": 811,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 811
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard",
+   "fallback_credit": null
+  },
+  "cost": 0.6966060000000001,
+  "api_ms": 366918
+ },
+ "sec": 368.3472466468811
+}

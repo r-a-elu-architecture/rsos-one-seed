@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Results: every pre-registered test, failures included | RSOS</title>
+<meta name="description" content="Pre-registered tests on real LLM agents across four model families, every prediction and the failure map.">
+<link rel="canonical" href="https://r-a-elu-architecture.github.io/RSOS-Language/results.html">
+<meta property="og:title" content="Results: every pre-registered test, failures included | RSOS">
+<meta property="og:description" content="Pre-registered tests on real LLM agents across four model families, every prediction and the failure map.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://r-a-elu-architecture.github.io/RSOS-Language/results.html">
+<meta property="og:site_name" content="RSOS">
+<meta property="og:image" content="https://r-a-elu-architecture.github.io/RSOS-Language/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="RSOS Core: shared state for AI agents, exact by construction. 318 of 320 tasks exact across six models.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Results: every pre-registered test, failures included | RSOS">
+<meta name="twitter:description" content="Pre-registered tests on real LLM agents across four model families, every prediction and the failure map.">
+<meta name="twitter:image" content="https://r-a-elu-architecture.github.io/RSOS-Language/og.png">
+<meta name="theme-color" content="#0e2233">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;600;700&family=Atkinson+Hyperlegible+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="family" role="navigation" aria-label="RSOS family"><div class="wrap">
+<b>RSOS</b>
+<a class="here" href="index.html">Core and Language</a>
+<a href="https://r-a-elu-architecture.github.io/RSOS-Multimodal-Cue-Framework/">Multimodal Cue Framework</a>
+</div></div>
+<div class="wrap">
+<header class="top">
+<a class="mark" href="index.html"><span class="dot" aria-hidden="true"></span>RSOS</a>
+<nav class="main" aria-label="Site"><a href="core.html">Core</a><a href="adopt.html">For organisations</a><a href="results.html" aria-current="page">Results</a><a href="paper.html">Research</a><a class="gh" href="https://github.com/r-a-elu-architecture/RSOS-Language">GitHub</a></nav>
+</header>
+</div>
+<main id="main">
+<div class="wrap">
+<div class="hero">
+<h1>Every pre-registered test, failures included.</h1>
+<p class="lead">Each experiment was pre-registered and committed before it ran. Every message and model call is
+recorded, and each results file carries a hash. On real hosts: 76 predictions, 50 passed and 26 failed. Results from four model families are archived at <a href="https://doi.org/10.5281/zenodo.24358277">doi:10.5281/zenodo.24358277</a>.</p>
+<p class="muted small">Host for A1–A5: planner → worker → checker, all <code>claude-haiku-5-5</code>, 14 change
+requests on a 30-line shared state, 3 injected drifts per task. Channel tokens use a regex count; every compactness
+pass also holds in BPE tokens (o200k). Source of every number: whitepaper v2 §7–§9, the A3c, A4 and A5 reports, and the files in
+<a href="https://github.com/r-a-elu-architecture/RSOS-Language/tree/main/results"><code>results/</code></a>.</p>
+</div>
+</div>
+
+<section id="research"><div class="wrap">
+<h2>Sealed research beyond agents (opened 20 Nov 2026)</h2>
+<p class="intro">The same discipline, applied to the seed of RSOS itself: each study with its predictions
+hashed in public before any code was written, then opened with every miss kept. Eleven studies so far. Layer 2 throughout: computation
+built, run and measured; most hosts are simulations, two are real (past LLM runs and a SQLite engine).</p>
+
+<div class="tw"><table>
+<thead><tr><th scope="col">Study</th><th scope="col">Question</th><th scope="col">Result</th><th scope="col" class="n">Predictions</th></tr></thead>
+<tbody>
+<tr><td>T2b, T2c</td><td>a self-healing holographic store against a classic erasure code</td><td>the classic code wins up to 85 % destroyed; the store wins beyond (54–57 % vs 15 % at 90 %)</td><td class="n">7/13, 6/9</td></tr>
+<tr><td>OPS1, OPS2</td><td>the seed's operators under a monitor of its own law; its laws on five hosts</td><td>monitor refused 2,276 / 2,276 violations, 0 / 22,013 false; one law held everywhere, one stopped on real SQLite</td><td class="n">8/12, 4/6</td></tr>
+<tr><td>ENGINE1, ENGINE2</td><td>an engine that grows its own operators; naming the cause first</td><td>three generated operators held on sealed hold-outs; relations read 3× more than the classic code beyond its cliff</td><td class="n">5/6, 8/10</td></tr>
+<tr><td>SPHERE2, SPHERE3</td><td>the compounding theorem tested directly</td><td>the bound is reached, undercut and, where successes compete, <b>exceeded by +2.82 pp as predicted</b>; a time-window law predicted a new host within 1 pp</td><td class="n">1/5, 3/4</td></tr>
+<tr><td>SQLITE2</td><td>the error-events law on a real database</td><td>failure climbs with read scope only when an operation spans lock windows (30.7 → 72.0 %)</td><td class="n">2/3</td></tr>
+<tr><td>AGENTS2</td><td>where real LLM agent errors fall along a plan</td><td>one-call JSON Patch errors rise 0.19 % → 2.33 % per step from first to last quarter (odds ratio 12.3); blind planning flat</td><td class="n">2/3</td></tr>
+<tr><td>SPHERE1</td><td>seven nodes connected by one protocol</td><td>the bound held at node and sphere level; 0 wrong adoptions; under-powered on two predictions</td><td class="n">3/7</td></tr>
+</tbody></table></div>
+<p class="muted small">Related work (AlphaEvolve, diagnosis-first repair, sealed acceptance loops, release gates,
+resonator networks, CaMeL) and a one-line seal check for every study: <a href="https://github.com/r-a-elu-architecture/RSOS-Language/blob/main/research/README.md">research/README.md</a>.
+The hashes: <a href="https://github.com/r-a-elu-architecture/RSOS-Language/blob/main/SEALS.md">SEALS.md</a>.</p>
+</div></section>
+
+<section id="sc1"><div class="wrap">
+<h2>SC1: A robot scene shared by six robots</h2>
+<p class="intro">Six robots keep one shared scene of 50 objects: where each object is on a 10 × 10 floor grid, its
+height, which robot is responsible for it, the room and the surface it rests on. That is 300 keys, 56 changes per task,
+16 tasks. Predictions were published before any model run (<a href="https://github.com/r-a-elu-architecture/RSOS-Language/commit/b9c8fc8">b9c8fc8</a>, 19 Nov 2026,
+05:43 UTC), then run on Mistral Large 4 and Gemini 3.8 Flash.</p>
+
+<div class="tw"><table>
+<thead><tr><th scope="col">Model</th><th scope="col" class="n">JSON Patch</th><th scope="col" class="n">RSOS blind</th><th scope="col">Where JSON Patch broke</th><th scope="col" class="n">RSOS tokens per correct task</th></tr></thead>
+<tbody>
+<tr><td>Mistral Large 4</td><td class="n">14/16</td><td class="n"><b>16/16</b></td><td><b>task 913, steps 53 and 49: two of the five named hand-overs</b>; also 906/50 and two copied values</td><td class="n">0.52× (USD 0.50×)</td></tr>
+<tr><td>Gemini 3.8 Flash</td><td class="n">15/16</td><td class="n"><b>16/16</b></td><td>task 906, step 45: a hand-over not on the list (P4 missed on Gemini)</td><td class="n">0.61×</td></tr>
+</tbody></table></div>
+<p class="muted small">All 192 injected drifts repaired with zero model calls. Mistral's RSOS planner proposed 3.3 invalid
+operations per task, all rejected before they ran. <a href="https://github.com/r-a-elu-architecture/RSOS-Language/blob/main/experiments/SC1_REPORT.md">SC1 report</a>.</p>
+
+<div class="split">
+<div>
+<h3>How the scene maps to state</h3>
+<div class="tw"><table>
+<thead><tr><th scope="col">Key</th><th scope="col">In the scene</th><th scope="col">Values</th></tr></thead>
+<tbody>
+<tr><td><code>cup.x</code>, <code>cup.y</code></td><td>grid cell of the cup</td><td>0–9</td></tr>
+<tr><td><code>cup.height_mm</code></td><td>height above the floor</td><td>100–5000</td></tr>
+<tr><td><code>cup.owner</code></td><td>robot responsible for it</td><td>rover, drone, arm, crane, loader, scout</td></tr>
+<tr><td><code>cup.room</code></td><td>room</td><td>kitchen, lab, dock, hall</td></tr>
+<tr><td><code>cup.on</code></td><td>surface it rests on</td><td>table, shelf, floor, cart</td></tr>
+</tbody></table></div>
+</div>
+<div>
+<h3>One hand-over: task 913, step 53</h3>
+<p>"Everything owned by arm is now owned by drone." 29 objects change robot.</p>
+<pre aria-label="RSOS program"><code><span class="c"># RSOS: what the planner writes, 35 bytes with the digest</span>
+REHOST owner arm drone
+4f064f1e0158</code></pre>
+<p class="muted small">JSON Patch must list every object with its new value: 29 entries, 1,591 bytes
+(<code>cup.owner</code>, <code>mug.owner</code>, <code>box.owner</code> … <code>spring.owner</code>), and the model
+has to find all 29 itself. In RSOS the runtime finds them.</p>
+</div>
+</div>
+
+<h3>What is sent per change, measured with zero model calls</h3>
+<div class="tw"><table>
+<thead><tr><th scope="col">Encoding, all 896 steps</th><th scope="col" class="n">Bytes</th><th scope="col" class="n">Tokens</th><th scope="col" class="n">vs JSON Patch</th></tr></thead>
+<tbody>
+<tr><td>Full scene-graph sync after each change</td><td class="n">7,089,308</td><td class="n">4,750,518</td><td class="n">90.7×</td></tr>
+<tr><td>JSON Patch with values, plus state digest</td><td class="n">78,197</td><td class="n">38,310</td><td class="n">1×</td></tr>
+<tr class="us"><td><b>RSOS program, plus state digest</b></td><td class="n"><b>38,439</b></td><td class="n"><b>8,337</b></td><td class="n"><b>0.49× bytes, 0.22× tokens</b></td></tr>
+<tr><td>Hand-overs only (44 steps)</td><td class="n" colspan="2"></td><td class="n"><b>0.059×</b></td></tr>
+<tr><td>Conditional steps only (50 steps)</td><td class="n" colspan="2"></td><td class="n"><span class="fail">1.20×: RSOS larger</span></td></tr>
+</tbody></table></div>
+<p class="muted small">Tokens here are the regex count used since A1; model-token (BPE) counts come with the run. Checking
+a robot's copy takes the 12-digit digest instead of the full scene (0.0015×). sha256 <code>f5a7a3ae…</code></p>
+
+<h3>Predictions, published before the runs</h3>
+<div class="tw"><table>
+<thead><tr><th scope="col">ID</th><th scope="col">Prediction</th><th scope="col">Status</th></tr></thead>
+<tbody>
+<tr><td>P1</td><td>RSOS blind planning exact on 16/16 on each model</td><td><span class="tag pass">hit: 32/32</span></td></tr>
+<tr><td>P2</td><td>One-call JSON Patch at most 15/16 on at least one model</td><td><span class="tag pass">hit: 15/16, 14/16</span></td></tr>
+<tr><td>P3</td><td>Every JSON Patch failure is a value computed from the changing state</td><td><span class="tag pass">hit</span></td></tr>
+<tr><td><b>P4</b></td><td><b>JSON Patch fails at least one of five named hand-overs:</b> task 913 step 53, 908/53, 913/49, 909/54, 913/39</td><td><span class="tag pass">hit on Mistral: 913/53, 913/49</span> <span class="tag fail">missed on Gemini</span></td></tr>
+<tr><td>P5</td><td>RSOS costs at most 0.7× per correct task</td><td><span class="tag pass">hit: 0.52×, 0.61×</span></td></tr>
+<tr><td>P6</td><td>Every injected drift repaired with zero model calls</td><td><span class="tag pass">hit: 192/192</span></td></tr>
+<tr><td>P7</td><td>The channel saving holds in model tokens, and so does the loss on conditional steps</td><td><span class="tag pass">hit: 0.55×</span></td></tr>
+</tbody></table></div>
+<p class="muted small">Limits stated in advance: a simulated scene without perception or motion; the request types of
+A7; the painting syntax is not measured here. <a href="https://github.com/r-a-elu-architecture/RSOS-Language/blob/main/experiments/PREREGISTRATION_SC1.md">Full
+pre-registration</a>, <a href="https://github.com/r-a-elu-architecture/RSOS-Language/blob/main/bench/statebench_v1_SC1.jsonl">the 16 tasks</a>.</p>
+</div></section>
+
+<section id="table"><div class="wrap">
+<h2>The operation table and its first predicted gap</h2>
+<p class="intro">Ordered by what they read and what they write, the Core operations leave gaps. The measured failure
+rates give a law that predicts what belongs in them, published before the first gap is built
+(<a href="https://github.com/r-a-elu-architecture/RSOS-Language/blob/main/experiments/OPERATION_TABLE.md">table</a>,
+<a href="https://github.com/r-a-elu-architecture/RSOS-Language/blob/main/experiments/PREREGISTRATION_SC2.md">SC2 pre-registration</a>).</p>
+<div class="tw"><table>
+<thead><tr><th scope="col">Reads ↓ / writes →</th><th scope="col">one key, literal</th><th scope="col">one key, computed</th><th scope="col">many keys</th></tr></thead>
+<tbody>
+<tr><th scope="row">nothing</th><td><code>set</code>, <code>delete</code></td><td></td><td><span class="tag pred">gap A</span></td></tr>
+<tr><th scope="row">one key</th><td></td><td><code>derive</code>, <code>multiply</code></td><td></td></tr>
+<tr><th scope="row">two keys</th><td></td><td><code>sum_into</code></td><td></td></tr>
+<tr><th scope="row">a condition</th><td><code>select_if</code></td><td></td><td><span class="tag pred">gap B</span></td></tr>
+<tr><th scope="row">the whole state</th><td></td><td><span class="tag pred">gap C</span></td><td><code>reassign_where</code><br><span class="tag pred">gap D</span> <code>derive_where</code></td></tr>
+</tbody></table></div>
+<h3>The law behind it</h3>
+<div class="tw"><table>
+<thead><tr><th scope="col">Reads</th><th scope="col" class="n">JSON Patch failed</th><th scope="col" class="n">RSOS blind failed</th></tr></thead>
+<tbody>
+<tr><td>nothing</td><td class="n">0 / 3,063</td><td class="n">0 / 2,703</td></tr>
+<tr><td>a condition</td><td class="n">0 / 788</td><td class="n">0 / 696</td></tr>
+<tr><td>one key</td><td class="n">10 / 7,125 (0.14%)</td><td class="n">0 / 6,477</td></tr>
+<tr><td>two keys</td><td class="n">2 / 1,193 (0.17%)</td><td class="n">0 / 1,096</td></tr>
+<tr class="us"><td><b>the whole state</b></td><td class="n"><b>19 / 823 (2.31%)</b></td><td class="n"><b>0 / 718</b></td></tr>
+</tbody></table>
+<p class="muted small">Every step of A7 and A8, all models, by what the operation reads.</p>
+<p><b>Prediction for gap D, before it exists:</b> an operation that scans the state and computes a value for every match
+("move every object of rover one cell right"). One-call JSON Patch will fail at least 5% of these requests, more than
+twice the scan rate, while RSOS blind planning stays exact. <span class="tag pass">hit on Mistral</span></p>
+<div class="tw"><table>
+<thead><tr><th scope="col">SC2 on Mistral Large 4</th><th scope="col">Predicted</th><th scope="col">Measured</th><th scope="col">Verdict</th></tr></thead>
+<tbody>
+<tr><td>JSON Patch, FLOW requests failed</td><td class="n">≥ 5%</td><td class="n"><b>14.8%</b> (19 of 128)</td><td><span class="tag pass">hit</span></td></tr>
+<tr><td>RSOS blind with FLOW, learnt from one line</td><td class="n">16/16</td><td class="n"><b>16/16</b></td><td><span class="tag pass">hit</span></td></tr>
+<tr><td>Ordering FLOW &gt; hand-over &gt; one key</td><td class="n">yes</td><td class="n">14.8% &gt; 3.1% &gt; 0.4%</td><td><span class="tag pass">hit</span></td></tr>
+<tr><td>Frozen predictor: where it breaks</td><td class="n">AUC ≥ 0.8, a top-10 hit</td><td class="n">AUC 0.95; ranks 1, 5, 6, 10 failed</td><td><span class="tag pass">hit</span></td></tr>
+<tr><td>Frozen predictor: how often</td><td class="n">2–14 failed steps</td><td class="n">22</td><td><span class="tag fail">miss</span></td></tr>
+<tr><td>Cause: finding the objects (control with objects named)</td><td class="n">≥ 2× more failures</td><td class="n">1.27× (14.8% vs 11.7%)</td><td><span class="tag fail">miss</span></td></tr>
+<tr><td>RSOS blind on the control (objects named, one line each)</td><td class="n">16/16</td><td class="n">14/16, steps refused, none silent</td><td><span class="tag fail">miss</span></td></tr>
+<tr><td>Channel on FLOW steps</td><td class="n">≤ 0.1×</td><td class="n">0.104×</td><td><span class="tag fail">miss</span></td></tr>
+</tbody></table></div>
+<p class="muted small">Tasks drawn from drand round 6654866 after the predictor was frozen. RSOS 0.26× the tokens per
+correct task. Gemini incomplete (prepaid credit ran out). <a href="https://github.com/r-a-elu-architecture/RSOS-Language/blob/main/experiments/SC2_REPORT.md">SC2 report</a>.</p>
+<p class="muted small"><b>Diagnosis of the control misses:</b> the transcripts show that both RSOS control failures,
+and 9 of JSON Patch's 10, hit the run's output cap (16,000 tokens per call, used up by the model's thinking), and that
+the harness's FLOW extension gave a wrong error message on retries. The pre-registered verdicts stand; the control is
+being rerun without these confounds (SC2-C2), pre-registered first.</p>
+<p class="small"><b>The law as frozen code.</b> A predictor of where JSON Patch fails, fitted on 14,560 earlier steps, is
+frozen by hash (<code>0c976ed0…</code>) before any FLOW task exists. The tasks are drawn from the public drand
+randomness beacon, round 6654866 (08:30 UTC, 19 Nov 2026), so nobody chooses them. The frozen predictor expects only
+about 3.9% for FLOW: the sentence and the code disagree, and the run decides.
+<a href="https://github.com/r-a-elu-architecture/RSOS-Language/blob/main/experiments/PREREGISTRATION_SC2.md">Amendment 2</a>.</p>
+</div></section>
+
+<section id="g9"><div class="wrap">
+<h2>A8: A prediction published before the run, then the run</h2>
+<p class="intro">On Claude, every JSON Patch failure was one request type ("everything owned by X is now owned by Y")
+and fell on the same named steps. Before running two model families never tested, we published which step would break:
+<b>on L3, one-call JSON Patch fails task 712 or 702 at step 35 on Mistral or Gemini, while RSOS blind stays exact on
+both</b> (chance level about 5%). Published <a href="https://github.com/r-a-elu-architecture/RSOS-Language/commit/00e5121">18 Nov 2026, 22:26 UTC</a>; results
+published <a href="https://github.com/r-a-elu-architecture/RSOS-Language/commit/d5f2f43">19 Nov 2026, 02:36 UTC</a>.</p>
+<div class="tw"><table>
+<thead><tr><th scope="col">Model</th><th scope="col">Cell</th><th scope="col" class="n">JSON Patch</th><th scope="col" class="n">RSOS blind</th><th scope="col">Where JSON Patch broke</th></tr></thead>
+<tbody>
+<tr><td>Gemini 3.8 Flash</td><td>S1</td><td class="n">16/16</td><td class="n"><b>16/16</b></td><td>—</td></tr>
+<tr><td>Gemini 3.8 Flash</td><td>L3</td><td class="n">15/16</td><td class="n"><b>16/16</b></td><td><b>task 712, step 35</b>: its only failure in 32 tasks</td></tr>
+<tr><td>Mistral Large 4</td><td>S1</td><td class="n">16/16</td><td class="n"><b>16/16</b></td><td>—</td></tr>
+<tr><td>GPT-6.2 Sol (Codex, reasoning low)</td><td>S1</td><td class="n">15/16</td><td class="n"><b>16/16</b></td><td>task 107, step 14 (failed on Haiku too)</td></tr>
+<tr><td>GPT-6.2 Sol (Codex, reasoning low)</td><td>L3</td><td class="n">15/16</td><td class="n"><b>16/16</b></td><td><b>task 712, step 35</b>: predicted in public before the run (G10, <a href="https://github.com/r-a-elu-architecture/RSOS-Language/commit/edcd42e">02:50 UTC</a>)</td></tr>
+<tr><td>Mistral Large 4</td><td>L3</td><td class="n">12/16</td><td class="n"><b>16/16</b></td><td><b>task 702, step 35</b> (also 22, 42); tasks 707, 711, 712</td></tr>
+</tbody></table></div>
+<p><b>The prediction hit on both families, and a second one, published before GPT ran, hit on GPT-6.2 Sol.</b> Step 35 of task 712 has now broken the one-call JSON Patch pattern on models from Anthropic, Google and OpenAI. RSOS blind is 256 of 256 tasks exact across Claude Haiku, Sonnet,
+Opus, Mistral Large 4, Gemini 3.8 Flash and GPT-6.2 Sol; every JSON Patch failure on the new families is a value computed from
+changed state. Cost per correct task on L3: 0.45× in USD on Mistral (list price fixed before the run), 0.61× in tokens
+on Gemini. Not met, and published: invalid operations proposed by other families were 1.7× Claude's, not the predicted
+3× (all were rejected before they ran). gpt-oss-120b on
+a free tier is incomplete (daily quota).</p>
+<a class="cta quiet" href="https://github.com/r-a-elu-architecture/RSOS-Language/blob/main/experiments/A8_FAMILIES_REPORT.md">Read the report</a>
+</div></section>
+
+<section id="a8"><div class="wrap">
+<h2>A8: Across Claude models, and a stronger JSON Patch</h2>
+<p class="intro">The same arms on Claude Haiku, Sonnet and Opus 5.5, on S1 (14 steps) and L3 (300 keys), plus JSON
+Patch told to work out the current value of every line before each patch (B2s). Five predictions fixed before the
+runs; all five passed. <span class="muted">sha256 <code>bbf7f31a…</code></span></p>
+<div class="tw"><table>
+<thead><tr><th scope="col">Model</th><th scope="col">Cell</th><th scope="col" class="n">JSON Patch</th><th scope="col" class="n">+ track state</th><th scope="col" class="n">RSOS blind</th><th scope="col" class="n">Blind ÷ JSON Patch, cost per correct</th></tr></thead>
+<tbody>
+<tr><td>Haiku 5.5</td><td>S1</td><td class="n">15/16</td><td class="n">15/16</td><td class="n"><b>16/16</b></td><td class="n">0.79</td></tr>
+<tr><td>Haiku 5.5</td><td>L3</td><td class="n">15/16</td><td class="n">14/16</td><td class="n"><b>16/16</b></td><td class="n"><b>0.50</b></td></tr>
+<tr><td>Sonnet 5.5</td><td>S1</td><td class="n">16/16</td><td class="n">—</td><td class="n"><b>16/16</b></td><td class="n">0.84</td></tr>
+<tr><td>Sonnet 5.5</td><td>L3</td><td class="n">15/16</td><td class="n">—</td><td class="n"><b>16/16</b></td><td class="n"><b>0.54</b></td></tr>
+<tr><td>Opus 5.5</td><td>S1</td><td class="n">16/16</td><td class="n">—</td><td class="n"><b>16/16</b></td><td class="n">not priced</td></tr>
+<tr><td>Opus 5.5</td><td>L3</td><td class="n">16/16</td><td class="n">—</td><td class="n"><b>16/16</b></td><td class="n">input 0.78×, thinking 0.39×</td></tr>
+</tbody></table></div>
+<p>Every JSON Patch failure in A8 (8 of 8) was an owner transfer on a changed state, and the same request failed for
+Haiku, for Haiku told to track state and for Sonnet, with the same wrong keys. Only the largest model avoided it.
+Other families: see the section above.</p>
+<a class="cta quiet" href="https://github.com/r-a-elu-architecture/RSOS-Language/blob/main/experiments/A8_REPORT.md">Read the A8 report</a>
+</div></section>
+
+<section id="a7b"><div class="wrap">
+<h2>A7b: Long tasks and large states</h2>
+<p class="intro">The same arms (one-call JSON Patch, M*; RSOS blind) on 48 new tasks: 56 steps with dependency chains
+(L1), 224 steps with chains of 29–73 dependent changes (L2), and 56 steps on a 300-key state (L3). Generator and
+predictions logged before any run. <span class="muted">sha256 <code>b1287a37…</code></span></p>
+<div class="tw"><table>
+<thead><tr><th scope="col"></th><th scope="col" class="n">L1 M*</th><th scope="col" class="n">L1 RSOS blind</th><th scope="col" class="n">L2 M*</th><th scope="col" class="n">L2 RSOS blind</th><th scope="col" class="n">L3 M*</th><th scope="col" class="n">L3 RSOS blind</th></tr></thead>
+<tbody>
+<tr><th scope="row">Exact</th><td class="n">16/16</td><td class="n"><b>16/16</b></td><td class="n">15/16</td><td class="n"><b>16/16</b></td><td class="n">15/16</td><td class="n"><b>16/16</b></td></tr>
+<tr><th scope="row">Failed steps (state-dependent)</th><td class="n">2 (2)</td><td class="n">0</td><td class="n">3 (3)</td><td class="n">0</td><td class="n">2 (2)</td><td class="n">0</td></tr>
+<tr><th scope="row">Cost per correct task ($×10⁻³)</th><td class="n">5.356</td><td class="n"><b>3.655</b></td><td class="n">20.761</td><td class="n"><b>13.777</b></td><td class="n">8.710</td><td class="n"><b>4.360</b></td></tr>
+<tr><th scope="row">÷ M* (95% CI)</th><td class="n">1</td><td class="n"><b>0.68</b> [0.63, 0.74]</td><td class="n">1</td><td class="n"><b>0.66</b> [0.61, 0.83]</td><td class="n">1</td><td class="n"><b>0.50</b> [0.47, 0.60]</td></tr>
+<tr><th scope="row">Drifts healed at 0 calls</th><td class="n">48/48</td><td class="n">48/48</td><td class="n">47/47</td><td class="n">47/47</td><td class="n">48/48</td><td class="n">48/48</td></tr>
+</tbody></table></div>
+<p>Across A7a and A7b: RSOS blind 80/80 exact with 0 wrong steps in about 5,800; M* 77/80, and all 8 of its failed
+steps were values computed from changed state (5 owner transfers, 3 copies), each wrong through every retry although
+the auditor named it. Failed predictions: M* did not collapse on 224 steps (P9: 15/16, predicted ≤ 8); blind input grew
+1.53× at 10× the state (P10: limit 1.5). The errors scale with how much state the planner must scan, not with chain
+length, and the cost gap widens with the state: 0.79–0.91× at 30 keys, 0.50× at 300.</p>
+<a class="cta quiet" href="https://github.com/r-a-elu-architecture/RSOS-Language/blob/main/experiments/A7_REPORT.md">Read the A7 report</a>
+</div></section>
+
+<section id="a7a"><div class="wrap">
+<h2>A7a: Against the market's most efficient pattern, and blind planning</h2>
+<p class="intro">M* is the most efficient market pattern we could build for the same agents: one call writes the whole
+task as JSON Patch with values the model computes from the full state, then one audit call. RSOS writes operations
+for the whole task; the blind arm's planner is shown no state value at all. Same model (Haiku 5.5), seeds, retries,
+hash check, zero-call healing and one audit rule for every arm. 96 live tasks, pre-registered.
+<span class="muted">sha256 <code>42be52d5…</code></span></p>
+<div class="tw"><table>
+<thead><tr><th scope="col"></th><th scope="col" class="n">S1 M*</th><th scope="col" class="n">S1 RSOS</th><th scope="col" class="n">S1 RSOS blind</th><th scope="col" class="n">S2 M*</th><th scope="col" class="n">S2 RSOS</th><th scope="col" class="n">S2 RSOS blind</th></tr></thead>
+<tbody>
+<tr><th scope="row">Exact</th><td class="n">15/16</td><td class="n">16/16</td><td class="n"><b>16/16</b></td><td class="n">16/16</td><td class="n">16/16</td><td class="n"><b>16/16</b></td></tr>
+<tr><th scope="row">Calls per task</th><td class="n">2.25</td><td class="n">2.38</td><td class="n">2.38</td><td class="n">2.00</td><td class="n">2.19</td><td class="n">2.25</td></tr>
+<tr><th scope="row">Cost per correct task ($×10⁻³)</th><td class="n">1.530</td><td class="n">1.251</td><td class="n"><b>1.204</b></td><td class="n">1.433</td><td class="n">1.327</td><td class="n"><b>1.304</b></td></tr>
+<tr><th scope="row">÷ M* (95% CI)</th><td class="n">1</td><td class="n">0.82</td><td class="n"><b>0.79</b> [0.79, 0.90]</td><td class="n">1</td><td class="n">0.93</td><td class="n"><b>0.91</b> [0.87, 0.95]</td></tr>
+<tr><th scope="row">Drifts healed at 0 calls</th><td class="n">48/48</td><td class="n">48/48</td><td class="n">48/48</td><td class="n">48/48</td><td class="n">48/48</td><td class="n">48/48</td></tr>
+</tbody></table></div>
+<p>Passed: blind planning loses no exactness (P2); M*'s errors sit on state-dependent steps (P6, one error: an owner
+transfer after earlier changes, wrong on all three attempts although the auditor named it); one plan (P7); healing in
+every arm (P8). Failed: M* never fell to 13/16 (P1); cost per correct halved (P3; measured 0.79/0.91); blind input
+halved (P4: the operation grammar outweighs a 30-key state); M* thinks twice as much (P5). The margins are small at
+this scale; the next cells (thinking off, depth 16, 224 steps, a local 0.5B model) have their predictions fixed in
+<a href="https://github.com/r-a-elu-architecture/RSOS-Language/blob/main/NEXT_TESTS.md">the roadmap</a>.</p>
+<a class="cta quiet" href="https://github.com/r-a-elu-architecture/RSOS-Language/blob/main/experiments/A7_REPORT.md">Read the A7a report</a>
+</div></section>
+
+<section id="a5"><div class="wrap">
+<h2>A5: The model bill: one plan for the whole task against one call per step</h2>
+<p class="intro">Target: 10× below our own per-step protocol (H-dragon, the best arm of A3–A4) run by the same agents. A
+one-call JSON baseline given the same hash check is not yet measured (A7, next). Phase 0 built the baseline
+honestly first: it found that most of the earlier bill was the command-line tool's own context on every call,
+fixed it, and priced every call from the official price table. Then the planner writes RSOS operations and the runtime
+executes and checks them; in the assembly line (X5) all 14 requests of a task are translated in one call and audited in
+one call. 192 live tasks, 4,917 calls. <span class="muted">sha256 <code>9cd1eb92…</code></span></p>
+<div class="tw"><table>
+<thead><tr><th scope="col"></th><th scope="col" class="n">S1 per step (B1)</th><th scope="col" class="n">S1 assembly line</th><th scope="col" class="n">S2 per step (B1)</th><th scope="col" class="n">S2 assembly line</th></tr></thead>
+<tbody>
+<tr><th scope="row">Exact / every copy true</th><td class="n">16 / 16</td><td class="n"><b>16 / 16</b></td><td class="n">15 / 15</td><td class="n"><b>16 / 16</b></td></tr>
+<tr><th scope="row">Model calls per task</th><td class="n">43.1</td><td class="n"><b>2.4</b></td><td class="n">42.1</td><td class="n"><b>2.2</b></td></tr>
+<tr><th scope="row">Cost per task (API prices)</th><td class="n">$0.004598</td><td class="n"><b>$0.001233</b></td><td class="n">$0.003815</td><td class="n"><b>$0.001352</b></td></tr>
+<tr><th scope="row">Ratio to B1 (95% CI)</th><td class="n">1</td><td class="n"><b>0.268</b> [0.240, 0.300]</td><td class="n">1</td><td class="n"><b>0.354</b> [0.336, 0.374]</td></tr>
+<tr><th scope="row">Ratio as billed</th><td class="n">1</td><td class="n">0.173</td><td class="n">1</td><td class="n">0.200</td></tr>
+<tr><th scope="row">Time per task</th><td class="n">106 s</td><td class="n"><b>12 s</b></td><td class="n">99 s</td><td class="n"><b>12 s</b></td></tr>
+<tr><th scope="row">Drift healed with 0 calls, wrong values from drift</th><td class="n">48/48, none</td><td class="n">48/48, none</td><td class="n">48/48, 0</td><td class="n">48/48, 0</td></tr>
+</tbody></table></div>
+<p><span class="tag pass">2 of 6 pass</span> no drift-traced errors (K5), offline baseline estimate within 12% (K6).
+<span class="tag fail">K1 failed</span> the registered arm (X3) reached 0.58× / 0.83×, not 0.1×; the assembly line
+reached 0.27× / 0.35×. <span class="tag fail">K2, K3 failed</span> per-step arms kept 22–28 calls and thought more
+than the baseline. <span class="tag fail">K4 failed</span> X3 missed one task per set on auditor errors. The audit
+approved 0 wrong steps in 192 tasks; one wrong step went through unsampled.</p>
+<p class="note"><b>What changed and what limits it.</b> A normal agent pipeline needs one model round trip per request,
+because each request reads what the last one wrote. Once the model writes a program the runtime executes, that
+dependency moves to the runtime, and the cost stops growing with the number of steps. The remaining bill is the model's
+thinking: 78–79% of the assembly line's cost is output, 86–87% of it thinking. Against our own earlier runs the cost per
+task fell about 12×; about 2.4× of that is the harness fix anyone can make.</p>
+</div></section>
+
+<section id="a4"><div class="wrap">
+<h2>A4: Does hidden drift become wrong answers?</h2>
+<p class="intro">A3 left 40 of 48 corruptions latent in the anchor protocol's copies. A4 makes the worker compute from
+its own copy (8 of 14 steps per task). 80 tasks, 4,000 calls. <span class="muted">sha256 <code>c2f41b80…</code></span></p>
+<div class="tw"><table>
+<thead><tr><th scope="col"></th><th scope="col" class="n">H-dragon</th><th scope="col" class="n">P (palace)</th><th scope="col" class="n">D (anchors)</th><th scope="col" class="n">E (deltas)</th><th scope="col" class="n">A (JSON)</th></tr></thead>
+<tbody>
+<tr><th scope="row">Exact success</th><td class="n"><b>15/16</b></td><td class="n"><b>16/16</b></td><td class="n">0/16</td><td class="n">1/16</td><td class="n">1/16</td></tr>
+<tr><th scope="row">Wrong values traced to drift</th><td class="n"><b>0</b></td><td class="n"><b>0</b></td><td class="n">93 of 96</td><td class="n">14</td><td class="n">7</td></tr>
+<tr><th scope="row">Drift healed with 0 model calls</th><td class="n"><b>48/48</b></td><td class="n"><b>48/48</b></td><td class="n">0/48</td><td class="n">0/48</td><td class="n">0/48</td></tr>
+<tr><th scope="row">Channel tokens (BPE)</th><td class="n"><b>575</b></td><td class="n">2,231</td><td class="n">1,038</td><td class="n">2,374</td><td class="n">13,736</td></tr>
+</tbody></table></div>
+<p><span class="tag pass">3 of 4 pass</span> the anchor protocol collapses (L1), no drift-traced errors for the
+integrity protocols (L3), H-dragon stays smallest (L4). <span class="tag fail">L2 failed</span> one worker model error
+on a true, healed copy (seed 407). The test is a worst case by design: every corrupted line is read later.</p>
+</div></section>
+
+<section id="a3c"><div class="wrap">
+<h2>A3c: The prose floor</h2>
+<p class="intro">A3b missed 5× because the planner's free prose must be restored word for word. A3c codes it against a
+reference both sides hold: a deterministic predictor with no neural network (H-pred), and a labelled arm with a local
+language model (H-local). <span class="muted">sha256 <code>1d797624…</code></span></p>
+<div class="tw"><table>
+<thead><tr><th scope="col"></th><th scope="col" class="n">D (anchors)</th><th scope="col" class="n">H-dragon</th><th scope="col" class="n">H-pred (0 model calls)</th><th scope="col" class="n">H-local (local model)</th></tr></thead>
+<tbody>
+<tr><th scope="row">Channel tokens per task (BPE)</th><td class="n">1,860</td><td class="n">1,023</td><td class="n"><b>262</b></td><td class="n"><b>197</b></td></tr>
+<tr><th scope="row">× D</th><td class="n">1</td><td class="n">0.55</td><td class="n"><b>0.141</b></td><td class="n"><b>0.106</b></td></tr>
+<tr><th scope="row">Exact / every copy true</th><td class="n">16/16 / 0/16</td><td class="n">16/16 / 16/16</td><td class="n">15/16 / 15/16</td><td class="n"><b>16/16 / 16/16</b></td></tr>
+<tr><th scope="row">Drift healed with 0 model calls</th><td class="n">0/48</td><td class="n">48/48</td><td class="n">48/48</td><td class="n">48/48</td></tr>
+<tr><th scope="row">Prose bits per character</th><td class="n">—</td><td class="n">—</td><td class="n">0.60</td><td class="n">0.41</td></tr>
+</tbody></table></div>
+<p><span class="tag pass">2 of 4 pass</span> H-local reaches 0.106× with full integrity (C3); the White Dragon
+predicted the size within 5% (C4; in A3b it was 66% off). <span class="tag fail">C1, C2 failed</span> H-pred's one
+miss was a checker rejecting a correct deletion three times. H-local needs about 1 GB of weights on both sides and ran
+about 15× slower on CPU.</p>
+</div></section>
+
+<section id="a3b"><div class="wrap">
+<h2>A3b: The hologram palace</h2>
+<p class="intro">The White Dragon designed a compact protocol in one call, with its own predicted size (H-dragon).
+A hand-built control used the anchor protocol's formats plus the green dot (H-copy). 16 tasks per arm, 1,374 new
+calls; palace, D and E were reused from A3 after all 48 of their runs replayed with 0 mismatches.
+<span class="muted">sha256 <code>0ae0d031…</code></span></p>
+<div class="tw"><table>
+<thead><tr><th scope="col"></th><th scope="col" class="n">Palace</th><th scope="col" class="n">D (anchors)</th><th scope="col" class="n">H-copy</th><th scope="col" class="n">H-dragon</th></tr></thead>
+<tbody>
+<tr><th scope="row">Channel tokens per task (BPE)</th><td class="n">2,699 (3,131)</td><td class="n">1,468 (1,860)</td><td class="n">1,290 (1,695)</td><td class="n"><b>932 (1,023)</b></td></tr>
+<tr><th scope="row">× D, regex / BPE</th><td class="n">1.84 / 1.68</td><td class="n">1 / 1</td><td class="n">0.88 / 0.91</td><td class="n"><b>0.64 / 0.55</b></td></tr>
+<tr><th scope="row">Exact success</th><td class="n">16/16</td><td class="n">16/16</td><td class="n">12/16</td><td class="n"><b>16/16</b></td></tr>
+<tr><th scope="row">Every copy true</th><td class="n">16/16</td><td class="n">0/16</td><td class="n">12/16</td><td class="n"><b>16/16</b></td></tr>
+<tr><th scope="row">Drift healed with 0 model calls</th><td class="n">48/48</td><td class="n">0/48</td><td class="n">47/48</td><td class="n"><b>48/48</b></td></tr>
+<tr><th scope="row">Channel tokens per heal</th><td class="n">37.9</td><td class="n">—</td><td class="n">2.0</td><td class="n"><b>0</b></td></tr>
+<tr><th scope="row">Truncations silently accepted</th><td class="n">0 (A3)</td><td class="n">13/1,150</td><td class="n">0/1,175</td><td class="n"><b>0/1,140</b></td></tr>
+</tbody></table></div>
+<p><span class="tag pass">5 of 7 pass</span> for H-dragon: smaller than D (B1), full integrity (B3), success ≥ D (B4),
+better than H-copy (B5), heal cost (B7). <span class="tag fail">B2 failed</span> target 0.2× D, reached 0.64×.
+<span class="tag fail">B6 failed</span> the engine predicted 321 tokens per task; 932 were measured. H-copy: 2 of 5
+pass; its four inexact tasks were model edit errors that the checker approved.</p>
+<p class="note"><b>Why 5× was missed, measured.</b> Where the engine landed, cost fell close to the floor: verdicts
+854 → 32 tokens per task, edits 196 → 44, forwards 187 → 49, heal 114 → 0. 87% of what remains is the planner's free
+prose (808 tokens), which must be restored word for word. The engine had named this as its main uncertainty: right
+about where, wrong about how much.</p>
+</div></section>
+
+<section id="a3"><div class="wrap">
+<h2>A3: Head to head with compact protocols</h2>
+<p class="intro">D and E are re-implementations from the published descriptions of Slipstream (shared concept
+anchors) and ACCP (deltas with sequence numbers), not the original systems. 16 tasks × 4 arms, 3,200 calls.
+<span class="muted">sha256 <code>ff058345…</code></span></p>
+<div class="tw"><table>
+<thead><tr><th scope="col"></th><th scope="col" class="n">Palace (A1)</th><th scope="col" class="n">JSON</th><th scope="col" class="n">D (Slipstream-style)</th><th scope="col" class="n">E (ACCP-style)</th></tr></thead>
+<tbody>
+<tr><th scope="row">Exact success</th><td class="n"><b>16/16</b></td><td class="n">4/16</td><td class="n"><b>16/16</b></td><td class="n">1/16</td></tr>
+<tr><th scope="row">Every copy true at the end</th><td class="n"><b>16/16</b></td><td class="n">4/16</td><td class="n">0/16</td><td class="n">1/16</td></tr>
+<tr><th scope="row">Channel tokens per task</th><td class="n">2,699</td><td class="n">17,442</td><td class="n"><b>1,468</b></td><td class="n">2,773</td></tr>
+<tr><th scope="row">Drift healed with 0 model calls</th><td class="n"><b>48/48</b></td><td class="n">0/48</td><td class="n">0/48</td><td class="n">0/48</td></tr>
+<tr><th scope="row">Drift left in some copy</th><td class="n"><b>0</b></td><td class="n">0</td><td class="n">40</td><td class="n">6</td></tr>
+<tr><th scope="row">Truncations silently accepted</th><td class="n">0</td><td class="n">0</td><td class="n">13/1,150</td><td class="n">99/1,955</td></tr>
+</tbody></table></div>
+<p><span class="tag pass">2 of 4 pass</span> healing (R2), success (R3). <span class="tag fail">R1 failed</span> the
+palace was 1.84× the size of D, from formats inherited from A1, not from its integrity layer.
+<span class="tag fail">R4 failed</span> on channel tokens against E (38 vs 96 per repair); counting model work, the
+palace's repair costs 0.9% of E's. The anchor protocol stays right only because no agent reads the drifted copy: 40 of
+48 corruptions stayed latent. A4 tests whether they turn into wrong answers.</p>
+</div></section>
+
+<section id="a2"><div class="wrap">
+<h2>A2: The knowing White Dragon redesigns a weak host</h2>
+<p class="intro">Host: A1's summaries-plus-retrieval workflow, 5.83 wrong lines per task. Given only its parts,
+weaknesses and a cross-domain library, the engine landed four changes in order. The first was a memory journal with
+per-line check and restore, drawn from DNA mismatch repair and ledger reconciliation. 6 tasks per stage, 5,687 calls.
+<span class="muted">sha256 <code>8916f4de…</code></span></p>
+<div class="tw"><table>
+<thead><tr><th scope="col">Arm</th><th scope="col" class="n">Wrong lines after 4 landings</th><th scope="col" class="n">Change</th><th scope="col" class="n">Billed tokens</th></tr></thead>
+<tbody>
+<tr class="us"><th scope="row">Knowing</th><td class="n"><b>2.17</b></td><td class="n"><b>−63%</b></td><td class="n">+20%</td></tr>
+<tr><th scope="row">Blind</th><td class="n">8.17</td><td class="n">worse</td><td class="n">+95%</td></tr>
+<tr><th scope="row">Weighted (F1b rule)</th><td class="n">3.33</td><td class="n">−43%</td><td class="n">+72%</td></tr>
+</tbody></table></div>
+<p><span class="tag pass">4 of 4 pass</span> knowing beats blind and weighted; gain on 3 of 4 landings; predicted total
+gain within 16% of measured; the map's order beats a shuffled order. The engine re-derived the palace's green dot and
+heal on its own, from other domains, and placed it first.</p>
+</div></section>
+
+<section id="a1"><div class="wrap">
+<h2>A1: Palace against three strong baselines</h2>
+<p class="intro">8 tasks per arm, 1,522 calls. <span class="muted">sha256 <code>d224abbf…</code></span></p>
+<div class="tw"><table>
+<thead><tr><th scope="col"></th><th scope="col" class="n">Palace</th><th scope="col" class="n">JSON full state</th><th scope="col" class="n">Structured output</th><th scope="col" class="n">Summaries + retrieval</th></tr></thead>
+<tbody>
+<tr><th scope="row">Exact success</th><td class="n"><b>7/8</b></td><td class="n">5/8</td><td class="n">5/8</td><td class="n">0/8</td></tr>
+<tr><th scope="row">Channel tokens per task</th><td class="n"><b>2,563</b></td><td class="n">17,311</td><td class="n">24,425</td><td class="n">4,561</td></tr>
+<tr><th scope="row">Drift caught</th><td class="n"><b>24/24</b></td><td class="n">24/24</td><td class="n">23/24</td><td class="n">0/24</td></tr>
+<tr><th scope="row">Per repair: channel tokens / model tokens / time</th><td class="n"><b>38 / 0 / 0.15 ms</b></td><td class="n">875 / 6,894 / 13.8 s</td><td class="n">1,607 / 10,214 / 13.0 s</td><td class="n">—</td></tr>
+</tbody></table></div>
+<p><span class="tag pass">5 of 6 pass</span> <span class="tag fail">P2 failed</span> a checker that remembers the last
+approved state also caught all drift. Against full-state baselines the difference is the cost and determinism of
+repair, not the detection rate; against the memory pattern common in production, detection itself differs: 24/24 vs
+0/24.</p>
+</div></section>
+
+<section id="ht1"><div class="wrap split">
+<div>
+<h2>HT1: Human input</h2>
+<p class="intro">The author entered six of his own models as typed symbols and as text. Symbols were faster on 0 of 5
+timed tasks while also at least as accurate, so <span class="fail">K1 failed</span>. Mean accuracy was 0.88 for
+symbols and 0.96 for text; where symbols were faster, an element had been dropped.</p>
+<p class="muted small">The text was written as shorthand, so HT1 compares two compressed forms by the same person.
+sha256 <code>e1f8266b…</code></p>
+</div>
+<div>
+<h3>What followed</h3>
+<p>Typing was the bottleneck, so an RSOS keyboard layer was built: one key or chord emits a whole component or
+operator. An automated check keyed 12 targets and decoded them blind from the code alone: 12/12 after one bug fix,
+88 of 89 fields recovered (0.989). HT2 runs after a learning phase with a pre-registered plateau gate.</p>
+<a class="more" href="try.html#keyboard">Open the keyboard</a>
+</div>
+</div></section>
+
+<section id="failures"><div class="wrap">
+<h2>The failure map</h2>
+<p class="intro">All 39 entries of the failure map are listed with their cause and the next test. Of the first
+20, 14 are failures of blind choice: fixed rules, random growth, resending, or typing by hand. A3c answered two more
+(the prose floor and the engine's size prediction). Every remaining failure of the integrity protocols is a single
+model error on a true copy, never a codec or integrity failure; the cost failures of A5 point to thinking tokens; A7a's four show that M*'s margin is small at this scale.</p>
+<a class="cta quiet" href="https://github.com/r-a-elu-architecture/RSOS-Language/blob/main/experiments/FAILURES_MAP.md">Read the full failure map</a>
+</div></section>
+
+<section id="earlier"><div class="wrap">
+<h2>Earlier results: simulation and code</h2>
+<div class="tw"><table>
+<thead><tr><th scope="col">Test</th><th scope="col">Result</th></tr></thead>
+<tbody>
+<tr><th scope="row">C1 palace messages</th><td>280/280 decoded exactly; drift detected 366/366</td></tr>
+<tr><th scope="row">T7 structure vs names</th><td>meaning carried by structure 98.3% vs names 3.3%; <span class="fail">with 10% relation noise: 47.5% (failed)</span></td></tr>
+<tr><th scope="row">T8 one program, two runtimes</th><td>a person's session and an agent from the same program (agent accuracy 0.488 → 0.762)</td></tr>
+<tr><th scope="row">V1 sense keys (simulation)</th><td>one rich sense channel opens the anchored state 0.90–0.92 vs a name key 0.18</td></tr>
+<tr><th scope="row">H3c evolve-healing (simulation)</th><td>quality −0.19 → +0.67; harmful copies 4.95% → 0.60%</td></tr>
+<tr><th scope="row">E1, F1b White Dragon growth (simulation)</th><td>deficit targeting 2.5×; <span class="fail">entry reinforcement +0.02 (failed)</span></td></tr>
+</tbody></table></div>
+</div></section>
+
+<section id="limits"><div class="wrap split">
+<div>
+<h2>Limits</h2>
+<ul class="plain">
+<li>One model family (Haiku-class, one provider). The cross-family test is open.</li>
+<li>8–16 tasks per arm: integrity and token differences are large; success differences of one or two tasks are not
+established.</li>
+<li>One task family: structured state editing. Free-text collaboration is untested.</li>
+<li>Competitors are re-implemented from public descriptions; our lossless quantiser favours D.</li>
+</ul>
+</div>
+<div>
+<ul class="plain">
+<li>The zero-token heal assumes a second, untouched copy; with both corrupted it costs 18.5 tokens per drift
+(offline).</li>
+<li>A2 and A3b each used one engine design call, so the variance between calls is unmeasured.</li>
+<li>Human evidence: one person, the inventor. No effect on people has been shown.</li>
+<li>Three of five ledger instruments tested did not track their claims and are being rebuilt.</li>
+</ul>
+</div>
+</div></section>
+</main>
+<footer><div class="wrap">
+<div><p>RSOS by R. A. Elu, <a href="https://orcid.org/0009-0000-1456-2467">ORCID 0009-0000-1456-2467</a>.
+Code under Apache 2.0, text under CC BY 4.0.</p>
+<p>Research and development software. Not a medical device.</p></div>
+<div><p><a href="https://github.com/r-a-elu-architecture/RSOS-Language">Source on GitHub</a></p><p><a href="https://github.com/r-a-elu-architecture/RSOS-Language/blob/main/spec/core/STATE_OPS.md">Core specification</a></p>
+<p><a href="https://doi.org/10.5281/zenodo.24359268">Software DOI</a></p><p><a href="https://github.com/r-a-elu-architecture/RSOS-Language/blob/main/RESPONSIBLE_USE.md">Responsible use</a></p>
+<p><a href="https://github.com/r-a-elu-architecture/RSOS-Language/blob/main/SECURITY.md">Security</a></p></div>
+<div><p><a href="try.html">The RSOS language: editor and keyboard</a></p><p><a href="origins.html">Origins of the operations</a></p>
+<p><a href="programme.html">Research programme</a></p><p><a href="family.html">The RSOS family</a></p></div>
+</div></footer>
+</body>
+</html>

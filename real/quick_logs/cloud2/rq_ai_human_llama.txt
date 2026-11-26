@@ -1,0 +1,21 @@
+fetched /home/runner/work/RSOS-Multimodal-World/RSOS-Multimodal-World/real/hosts/data/topical_chat/test_freq.json 3c65693d59e40a1fb58ead35dcfe85fbcc88ea93a4d74557df620996f72c8f08
+ok /home/runner/work/RSOS-Multimodal-World/RSOS-Multimodal-World/real/hosts/data/topical_chat/test_freq.json 3c65693d59e40a1fb58ead35dcfe85fbcc88ea93a4d74557df620996f72c8f08
+fetched /home/runner/work/RSOS-Multimodal-World/RSOS-Multimodal-World/real/hosts/data/topical_chat/train.json 39a079d8464ea5f44f0fd78dbc85fd4eed96303347cbf4f9301f823e3c0f437f
+ok /home/runner/work/RSOS-Multimodal-World/RSOS-Multimodal-World/real/hosts/data/topical_chat/train.json 39a079d8464ea5f44f0fd78dbc85fd4eed96303347cbf4f9301f823e3c0f437f
+ai_human  model openrouter:meta-llama/llama-3.1-8b-instruct
+cell 1 seed    result 0.214  resource 2.114  R 0.1014  in 1832 out 282 parity -1 mention 8
+cell 1 default result 0.286  resource 2.081  R 0.1373  in 1851 out 230 parity 0 mention 0
+cell 2 seed    result 0.667  resource 1.382  R 0.4824  in 1176 out 206 parity -2 mention 8
+cell 2 default result 0.667  resource 1.395  R 0.4779  in 1196 out 199 parity 0 mention 0
+cell 3 seed    result 0.100  resource 1.567  R 0.0638  in 1369 out 198 parity -2 mention 8
+cell 3 default result 0.000  resource 1.572  R 0.0000  in 1386 out 186 parity 0 mention 0
+cell 4 seed    result 0.200  resource 1.515  R 0.1320  in 1293 out 222 parity -1 mention 8
+cell 4 default result 0.000  resource 1.501  R 0.0000  in 1311 out 190 parity 0 mention 0
+cell 5 seed    result 0.667  resource 1.246  R 0.5350  in 1063 out 183 parity -1 mention 8
+cell 5 default result 0.333  resource 1.268  R 0.2629  in 1085 out 183 parity 0 mention 0
+cell 6 seed    result 0.500  resource 1.640  R 0.3049  in 1440 out 200 parity -1 mention 8
+cell 6 default result 0.500  resource 1.664  R 0.3005  in 1457 out 207 parity 0 mention 0
+cell 7 seed    result 0.214  resource 1.747  R 0.1227  in 1539 out 208 parity -1 mention 8
+cell 7 default result 0.095  resource 1.743  R 0.0546  in 1555 out 188 parity 0 mention 0
+cell 8 seed    result 0.000  resource 1.539  R 0.0000  in 1328 out 211 parity -1 mention 8
+cell 8 default result 0.000  resource 1.536  R 0.0000  in 1344 out 192 parity 0 mention 0

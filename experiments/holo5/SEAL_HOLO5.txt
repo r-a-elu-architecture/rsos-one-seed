@@ -1,0 +1,5 @@
+dbf92de4660fa9276f5c2025dd8b35a982e10e34b421cb0214c9f9669603470b  holo5.py
+efd0d4af2b3ca13ba70e20145b1a7b62e76cf308bebe7ba535c2a49ddba3eb38  PREREG_HOLO5.md
+sealed 2026-11-21T11:08:25Z before heal and test
+95f5e05d34578b9965663eaa97b682f837b4f5103ec5b255aec061b80a8d8046  LANDINGS.json
+LANDINGS sealed 2026-11-21T11:15:23Z before test (0 rules landed)

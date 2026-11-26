@@ -1,0 +1,17 @@
+shade 5 objects ['d1a0g1b0', 'd1a1g1b0', 'd1a1g0b0', 'd0a1g0b0'] house {'dry': 'd0a1g0b0', 'drift': 'd1a0g1b0', 'calm': 'd1a1g0b0'} fixed d1a1g0b0
+shade 1 objects ['d1a0g1b0', 'd1a0g1b1', 'd1a1g1b0', 'd1a1g1b1'] house {'dry': 'd1a0g1b0', 'drift': 'd1a1g1b0', 'calm': 'd1a0g1b0'} fixed d1a0g1b1
+shade 7 objects ['d1a1g1b0', 'd1a0g1b0', 'd1a1g1b1', 'd0a1g0b0'] house {'dry': 'd1a1g1b0', 'drift': 'd1a1g1b0', 'calm': 'd1a0g1b0'} fixed d1a1g1b0
+shade 3 objects ['d1a1g1b0', 'd1a1g1b1', 'd1a1g0b0', 'd1a1g0b1'] house {'dry': 'd1a1g0b0', 'drift': 'd1a1g1b0', 'calm': 'd1a1g0b0'} fixed d1a1g0b1
+shade 9 objects ['d1a0g0b0', 'd1a1g1b0', 'd1a0g1b0', 'd0a1g0b0'] house {'dry': 'd1a0g0b0', 'drift': 'd1a1g1b0', 'calm': 'd1a0g0b0'} fixed d1a0g0b0
+shade 13 objects ['d1a1g0b0', 'd1a1g0b1', 'd1a1g1b0', 'd1a1g1b1'] house {'dry': 'd1a1g0b0', 'drift': 'd1a1g0b0', 'calm': 'd1a1g0b0'} fixed d1a1g0b1
+shade 11 objects ['d1a1g0b0', 'd1a1g0b1', 'd0a1g0b0', 'd0a1g0b1'] house {'dry': 'd1a1g0b0', 'drift': 'd1a1g0b0', 'calm': 'd1a1g0b0'} fixed d1a1g0b1
+shade 15 objects ['d1a1g1b0', 'd1a1g0b0', 'd1a0g1b0', 'd0a1g0b0'] house {'dry': 'd1a1g1b0', 'drift': 'd1a1g0b0', 'calm': 'd1a1g0b0'} fixed d1a1g0b0
+shade 17 objects ['d1a1g1b0', 'd1a1g1b1', 'd1a1g0b0', 'd1a1g0b1'] house {'dry': 'd1a1g1b0', 'drift': 'd1a1g0b0', 'calm': 'd1a1g0b0'} fixed d1a1g0b1
+shade 21 objects ['d1a1g1b0', 'd0a1g0b0', 'd1a1g0b0', 'd1a0g1b0'] house {'dry': 'd1a1g1b0', 'drift': 'd0a1g0b0', 'calm': 'd1a1g1b0'} fixed d1a1g0b0
+shade 19 objects ['d1a1g1b0', 'd1a1g0b0', 'd1a0g1b0', 'd1a0g1b1'] house {'dry': 'd1a1g1b0', 'drift': 'd1a1g0b0', 'calm': 'd1a1g1b0'} fixed d1a1g0b0
+house > fixed: wins 13 losses 10 ties 10 p 0.3388 mean 0.0002
+house > flat: wins 24 losses 5 ties 4 p 0.0003 mean 0.0095
+house > shuffled: wins 18 losses 9 ties 6 p 0.061 mean 0.0014
+house > best_native: wins 33 losses 0 ties 0 p 0.0 mean 0.0287
+channels house <= fixed on both: 25/33
+shades where the house uses >1 object: 9/11

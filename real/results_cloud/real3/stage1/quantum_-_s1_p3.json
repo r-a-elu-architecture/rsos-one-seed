@@ -1,0 +1,67 @@
+{
+ "row": "quantum",
+ "model": "-",
+ "stage": 1,
+ "pair": 3,
+ "cells": {
+  "std|207": {
+   "default": {
+    "result": 0.9858816772553921,
+    "resource": 2520.0,
+    "R": 0.0003912228877997588,
+    "choices": {
+     "present|standard": 12
+    }
+   },
+   "seed3v1": {
+    "result": 0.9937744457166107,
+    "resource": 2516.0,
+    "R": 0.0003949818941639947,
+    "choices": {
+     "P8:vote-of-futures|policy": 1,
+     "focus_ghz_X|standard": 1,
+     "P1:counter-shift|policy": 1,
+     "P8:vote-of-futures|standard": 1,
+     "focus_qaoa_ring_ZZ|standard": 1,
+     "F:joint-all|standard": 2,
+     "future+1|standard": 1,
+     "P4P5:horizon-neyman|policy": 1,
+     "P2:price-on-harm|standard": 1,
+     "P1:counter-shift|standard": 1,
+     "P8:vote-of-futures|own": 1
+    },
+    "policy_fallback_steps": 0
+   },
+   "sec": 143
+  },
+  "std|208": {
+   "default": {
+    "result": 0.9766753610614806,
+    "resource": 2520.0,
+    "R": 0.00038756958772280975,
+    "choices": {
+     "present|standard": 12
+    }
+   },
+   "seed3v1": {
+    "result": 0.9772782531816435,
+    "resource": 2520.0,
+    "R": 0.0003878088306276363,
+    "choices": {
+     "P4P5:horizon-neyman|policy": 1,
+     "future+1|standard": 1,
+     "P2:price-on-harm|standard": 1,
+     "F:joint-greedy|policy": 3,
+     "focus_qaoa_ring_ZZ|standard": 1,
+     "P3:repair-worst|standard": 1,
+     "future+2|standard": 1,
+     "focus_nlocal_Y|standard": 1,
+     "past-1|standard": 1,
+     "F:joint-greedy|own": 1
+    },
+    "policy_fallback_steps": 0
+   },
+   "sec": 143
+  }
+ }
+}

@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rsoslang"
+version = "0.4.0"
+description = "RSOS State Runtime and Language: multi-agent workflows in 2 model calls instead of 42, with hash-checked shared state (MCP server included)"
+requires-python = ">=3.9"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+readme = "README.md"
+authors = [{name = "r-a-elu-architecture"}]
+keywords = ["mcp", "multi-agent", "agents", "llm", "state", "langgraph", "protocol"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = ["mcp>=1.10"]
+
+[project.optional-dependencies]
+experiments = ["tiktoken", "numpy", "networkx"]
+
+[project.scripts]
+rsoslang = "rsoslang.__main__:cli"
+rsoslang-mcp = "rsoslang.mcp_server:main"
+
+[project.urls]
+Homepage = "https://r-a-elu-architecture.github.io/RSOS-Language/"
+Repository = "https://github.com/r-a-elu-architecture/RSOS-Language"
+Results = "https://r-a-elu-architecture.github.io/RSOS-Language/results.html"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+rsoslang = ["data/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

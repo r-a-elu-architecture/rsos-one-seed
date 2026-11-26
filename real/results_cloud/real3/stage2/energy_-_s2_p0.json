@@ -1,0 +1,90 @@
+{
+ "row": "energy",
+ "model": "-",
+ "stage": 2,
+ "pair": 0,
+ "cells": {
+  "std|209": {
+   "default": {
+    "result": 11.229615670975424,
+    "resource": 143.34192593059413,
+    "R": 0.07834145940255317,
+    "choices": {
+     "present|standard": 168
+    }
+   },
+   "seed3v1": {
+    "result": 11.81558836554185,
+    "resource": 147.8579194680072,
+    "R": 0.07991177211240587,
+    "choices": {
+     "P4P5:scenario_mpc|policy": 73,
+     "P2:price_on_wear|policy": 28,
+     "P5:soc_dp_realpast_tree|policy": 21,
+     "P2:price_on_wear|standard": 17,
+     "charge_half|standard": 1,
+     "P5:soc_dp_realpast_tree|standard": 2,
+     "future+2|standard": 3,
+     "P4P5:scenario_mpc|standard": 1,
+     "F:coupled_hours:realpast_day_paths|policy": 2,
+     "P2:price_on_wear|own": 1,
+     "present|standard": 4,
+     "future+1|standard": 1,
+     "present|own": 1,
+     "P4P5:scenario_mpc|own": 12,
+     "future+1|own": 1
+    },
+    "policy_fallback_steps": 0
+   },
+   "strongest": {
+    "result": 11.656932321235196,
+    "resource": 145.4407244052833,
+    "R": 0.08014902544594137,
+    "choices": {
+     "present|standard": 168
+    }
+   },
+   "sec": 6103
+  },
+  "std|210": {
+   "default": {
+    "result": 11.308327532046196,
+    "resource": 143.34192593059413,
+    "R": 0.07889057900283596,
+    "choices": {
+     "present|standard": 168
+    }
+   },
+   "seed3v1": {
+    "result": 11.961354683396053,
+    "resource": 143.13925831685415,
+    "R": 0.08356445900340148,
+    "choices": {
+     "P5:soc_dp_realpast_tree|policy": 14,
+     "P2:price_on_wear|policy": 25,
+     "past-1|standard": 1,
+     "P5:soc_dp_realpast_tree|standard": 9,
+     "P4P5:scenario_mpc|policy": 79,
+     "F:coupled_hours:realpast_day_paths|standard": 1,
+     "P2:price_on_wear|standard": 13,
+     "discharge_full|standard": 8,
+     "P4P5:scenario_mpc|standard": 3,
+     "charge_half|own": 1,
+     "F:coupled_hours:realpast_day_paths|policy": 1,
+     "discharge_full|own": 11,
+     "past-1|own": 2
+    },
+    "policy_fallback_steps": 0
+   },
+   "strongest": {
+    "result": 12.116040056775669,
+    "resource": 146.32417218266727,
+    "R": 0.08280272408888342,
+    "choices": {
+     "present|standard": 168
+    }
+   },
+   "sec": 6066
+  }
+ }
+}

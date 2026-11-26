@@ -1,0 +1,189 @@
+{
+ "cells": {
+  "B3|light|0.1": {
+   "beam": 0.8917,
+   "lockstep": 0.0472,
+   "whole": 0.4591
+  },
+  "B4|light|0.1": {
+   "beam": 0.9552,
+   "lockstep": 0.5452,
+   "whole": 0.9349
+  },
+  "B29|light|0.1": {
+   "beam": 0.9734,
+   "lockstep": 0.9734,
+   "whole": 0.9734
+  },
+  "B3|light|0.3": {
+   "beam": 0.1643,
+   "lockstep": 0.0103,
+   "whole": 0.0492
+  },
+  "B4|light|0.3": {
+   "beam": 0.746,
+   "lockstep": 0.023,
+   "whole": 0.1821
+  },
+  "B29|light|0.3": {
+   "beam": 0.9786,
+   "lockstep": 0.9774,
+   "whole": 0.9786
+  },
+  "B3|light|0.5": {
+   "beam": 0.0302,
+   "lockstep": 0.004,
+   "whole": 0.0187
+  },
+  "B4|light|0.5": {
+   "beam": 0.1187,
+   "lockstep": 0.0071,
+   "whole": 0.0369
+  },
+  "B29|light|0.5": {
+   "beam": 0.9671,
+   "lockstep": 0.9492,
+   "whole": 0.9496
+  },
+  "B3|radio|0.1": {
+   "beam": 0.7103,
+   "lockstep": 0.071,
+   "whole": 0.4266
+  },
+  "B4|radio|0.1": {
+   "beam": 0.8095,
+   "lockstep": 0.4952,
+   "whole": 0.6667
+  },
+  "B29|radio|0.1": {
+   "beam": 0.9762,
+   "lockstep": 0.9655,
+   "whole": 0.977
+  },
+  "B3|radio|0.3": {
+   "beam": 0.1635,
+   "lockstep": 0.0163,
+   "whole": 0.0825
+  },
+  "B4|radio|0.3": {
+   "beam": 0.396,
+   "lockstep": 0.0563,
+   "whole": 0.1829
+  },
+  "B29|radio|0.3": {
+   "beam": 0.9687,
+   "lockstep": 0.9452,
+   "whole": 0.9599
+  },
+  "B3|radio|0.5": {
+   "beam": 0.0298,
+   "lockstep": 0.004,
+   "whole": 0.0198
+  },
+  "B4|radio|0.5": {
+   "beam": 0.0806,
+   "lockstep": 0.0079,
+   "whole": 0.0476
+  },
+  "B29|radio|0.5": {
+   "beam": 0.975,
+   "lockstep": 0.9341,
+   "whole": 0.9365
+  },
+  "B3|matter|0.1": {
+   "beam": 0.9258,
+   "lockstep": 0.0401,
+   "whole": 0.594
+  },
+  "B4|matter|0.1": {
+   "beam": 0.9909,
+   "lockstep": 0.5956,
+   "whole": 0.9587
+  },
+  "B29|matter|0.1": {
+   "beam": 0.979,
+   "lockstep": 0.9786,
+   "whole": 0.9786
+  },
+  "B3|matter|0.3": {
+   "beam": 0.2036,
+   "lockstep": 0.0079,
+   "whole": 0.0595
+  },
+  "B4|matter|0.3": {
+   "beam": 0.802,
+   "lockstep": 0.027,
+   "whole": 0.2274
+  },
+  "B29|matter|0.3": {
+   "beam": 0.9806,
+   "lockstep": 0.9806,
+   "whole": 0.9798
+  },
+  "B3|matter|0.5": {
+   "beam": 0.0238,
+   "lockstep": 0.0008,
+   "whole": 0.0095
+  },
+  "B4|matter|0.5": {
+   "beam": 0.1794,
+   "lockstep": 0.004,
+   "whole": 0.0258
+  },
+  "B29|matter|0.5": {
+   "beam": 0.9841,
+   "lockstep": 0.9825,
+   "whole": 0.9774
+  }
+ },
+ "holo_share_beam": {
+  "B3|light|0.1": 0.132,
+  "B4|light|0.1": 0.115,
+  "B29|light|0.1": 0.097,
+  "B3|light|0.3": 0.104,
+  "B4|light|0.3": 0.385,
+  "B29|light|0.3": 0.305,
+  "B3|light|0.5": 0.033,
+  "B4|light|0.5": 0.13,
+  "B29|light|0.5": 0.481,
+  "B3|radio|0.1": 0.088,
+  "B4|radio|0.1": 0.104,
+  "B29|radio|0.1": 0.109,
+  "B3|radio|0.3": 0.069,
+  "B4|radio|0.3": 0.182,
+  "B29|radio|0.3": 0.278,
+  "B3|radio|0.5": 0.028,
+  "B4|radio|0.5": 0.081,
+  "B29|radio|0.5": 0.462,
+  "B3|matter|0.1": 0.11,
+  "B4|matter|0.1": 0.091,
+  "B29|matter|0.1": 0.102,
+  "B3|matter|0.3": 0.088,
+  "B4|matter|0.3": 0.308,
+  "B29|matter|0.3": 0.296,
+  "B3|matter|0.5": 0.032,
+  "B4|matter|0.5": 0.169,
+  "B29|matter|0.5": 0.468
+ },
+ "C1_beam_gt_lockstep": [
+  18,
+  18
+ ],
+ "C3_beam_gt_whole": [
+  18,
+  18
+ ],
+ "T29_max_abs_beam_minus_lockstep": 0.040899999999999936,
+ "caught_by_READY_beam": 531,
+ "zero": {
+  "exact": 42,
+  "sync_1": 42,
+  "runs": 42
+ },
+ "PASS": {
+  "C1": true,
+  "C3": true,
+  "C2": true
+ },
+ "ROW_PASS": true
+}

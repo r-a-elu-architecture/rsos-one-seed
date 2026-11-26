@@ -1,0 +1,351 @@
+{
+ "agent_model": "claude-haiku-5-5",
+ "auc": {
+  "blind": -2.500000000000001,
+  "knowing": 12.166666666666664,
+  "shuffled": 8.333333333333332,
+  "weighted": 2.9999999999999987
+ },
+ "billed_mean": {
+  "blind": [
+   95087.83333333333,
+   122983.83333333333,
+   135178.5,
+   148701.83333333334,
+   185628.16666666666
+  ],
+  "knowing": [
+   95087.83333333333,
+   90359.83333333333,
+   97454.83333333333,
+   111827.16666666667,
+   113869.83333333333
+  ],
+  "weighted": [
+   95087.83333333333,
+   98664.0,
+   141079.66666666666,
+   167640.5,
+   163237.33333333334
+  ]
+ },
+ "calibration": [
+  {
+   "measured": 2.4999999999999996,
+   "order": 1,
+   "part": "memory",
+   "predicted": 2.9,
+   "primitive": "memory_journal"
+  },
+  {
+   "measured": 0.5,
+   "order": 2,
+   "part": "worker",
+   "predicted": 0.7,
+   "primitive": "worker_full_view"
+  },
+  {
+   "measured": 0.0,
+   "order": 3,
+   "part": "checker",
+   "predicted": 0.4,
+   "primitive": "checker_full_view"
+  },
+  {
+   "measured": 0.666666666666667,
+   "order": 4,
+   "part": "planner",
+   "predicted": 0.25,
+   "primitive": ""
+  }
+ ],
+ "checks": {
+  "Q1": {
+   "blind": -2.333333333333333,
+   "knowing": 3.6666666666666665,
+   "pass": true,
+   "weighted": 2.4999999999999996
+  },
+  "Q2": {
+   "gains": [
+    2.4999999999999996,
+    0.5,
+    0.0,
+    0.666666666666667
+   ],
+   "pass": true
+  },
+  "Q3": {
+   "measured_total": 3.6666666666666665,
+   "pass": true,
+   "predicted_total": 4.25
+  },
+  "Q4": {
+   "auc_map": 12.166666666666664,
+   "auc_shuffled": 8.333333333333332,
+   "pass": true,
+   "perm": [
+    3,
+    0,
+    1,
+    2
+   ]
+  }
+ },
+ "code_commit": "8e476a6e88e4a4540ace8cd04a1f09df9f013ee8",
+ "curves_errors_per_task": {
+  "blind": [
+   5.833333333333333,
+   5.833333333333333,
+   5.666666666666667,
+   6.166666666666667,
+   8.166666666666666
+  ],
+  "knowing": [
+   5.833333333333333,
+   3.3333333333333335,
+   2.8333333333333335,
+   2.8333333333333335,
+   2.1666666666666665
+  ],
+  "shuffled": [
+   5.833333333333333,
+   6.666666666666667,
+   3.3333333333333335,
+   2.8333333333333335,
+   2.1666666666666665
+  ],
+  "weighted": [
+   5.833333333333333,
+   4.666666666666667,
+   6.0,
+   6.333333333333333,
+   3.3333333333333335
+  ]
+ },
+ "dragon_model": "claude-opus-5-5",
+ "drift_caught": {
+  "blind": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "knowing": [
+   0,
+   18,
+   18,
+   18,
+   18
+  ],
+  "weighted": [
+   0,
+   0,
+   0,
+   0,
+   18
+  ]
+ },
+ "experiment": "a2_dragon",
+ "gains": {
+  "blind": [
+   0.0,
+   0.16666666666666607,
+   -0.5,
+   -1.9999999999999991
+  ],
+  "knowing": [
+   2.4999999999999996,
+   0.5,
+   0.0,
+   0.666666666666667
+  ],
+  "shuffled": [
+   -0.8333333333333339,
+   3.3333333333333335,
+   0.5,
+   0.666666666666667
+  ],
+  "weighted": [
+   1.166666666666666,
+   -1.333333333333333,
+   -0.33333333333333304,
+   2.9999999999999996
+  ]
+ },
+ "landings": {
+  "blind": [
+   {
+    "depth": "structure",
+    "domain": "double-entry bookkeeping and audit",
+    "part": "checker",
+    "payload": "",
+    "primitive": "second_checker",
+    "source_mechanism": "second_checker framed from double-entry bookkeeping and audit"
+   },
+   {
+    "depth": "structure",
+    "domain": "immunology",
+    "part": "memory",
+    "payload": "",
+    "primitive": "retrieval_k16",
+    "source_mechanism": "retrieval_k16 framed from immunology"
+   },
+   {
+    "depth": "structure",
+    "domain": "quantum error correction",
+    "part": "checker",
+    "payload": "",
+    "primitive": "checker_full_view",
+    "source_mechanism": "checker_full_view framed from quantum error correction"
+   },
+   {
+    "depth": "surface",
+    "domain": "rocketry and mission control",
+    "part": "planner",
+    "payload": "Before writing, run a GO/NO-GO poll: for each memory line, mark GO (directly applies to this change request), NO-GO (contradicts it or is stale), or SILENT (irrelevant). Use only GO lines; the change request overrides memory. Then issue exactly one command in the format: ACTION: <verb + target>; CONSTRAINTS: <from GO lines>; COMMIT CRITERIA: <observable check proving done>; ABORT IF: <condition to stop and report>. If any core field is unknown, issue HOLD: <the one missing fact>.",
+    "primitive": "",
+    "source_mechanism": "Launch Commit Criteria with a Go/No-Go poll (rocketry and mission control): before launch, every console is polled GO/NO-GO. The launch command goes out only with written pass/fail criteria and abort rules, and any criterion that can't be checked puts the count on a HOLD instead of proceeding on a guess."
+   }
+  ],
+  "knowing": [
+   {
+    "depends_on": [],
+    "depth": "structure",
+    "domain": "genetics (DNA mismatch repair) + double-entry bookkeeping",
+    "order": 1,
+    "part": "memory",
+    "payload": "",
+    "predicted_error_reduction_per_task": 2.9,
+    "predicted_token_change_pct": -4,
+    "primitive": "memory_journal",
+    "source_mechanism": "Strand-template mismatch repair and ledger reconciliation: the approved-write journal is the reference strand. Any line that no longer matches its checksum gets restored before the next step runs."
+   },
+   {
+    "depends_on": [
+     1
+    ],
+    "depth": "structure",
+    "domain": "military mission command",
+    "order": 2,
+    "part": "worker",
+    "payload": "",
+    "predicted_error_reduction_per_task": 0.7,
+    "predicted_token_change_pct": 9,
+    "primitive": "worker_full_view",
+    "source_mechanism": "Shared common operating picture: the executing unit sees the whole battlespace, not just a filtered slice, so it doesn't miss dependent lines that keyword top-8 retrieval leaves out."
+   },
+   {
+    "depends_on": [
+     1,
+     2
+    ],
+    "depth": "structure",
+    "domain": "double-entry bookkeeping and audit",
+    "order": 3,
+    "part": "checker",
+    "payload": "",
+    "predicted_error_reduction_per_task": 0.4,
+    "predicted_token_change_pct": 7,
+    "primitive": "checker_full_view",
+    "source_mechanism": "Full-ledger audit instead of sampled vouchers: the checker checks the writes against the complete restored state, so it can catch collateral and missing changes."
+   },
+   {
+    "depends_on": [
+     1
+    ],
+    "depth": "procedure",
+    "domain": "military mission command + surgical checklist",
+    "order": 4,
+    "part": "planner",
+    "payload": "PROCEDURE before writing the instruction: (1) Restate the request's intent in one line. (2) List every affected key with its exact current value and required new value, as KEY: old -> new. (3) List dependent or related keys that must stay unchanged. (4) State the done-condition: the exact final value of every listed key. (5) If the request is ambiguous or a key is missing from the visible state, say so explicitly. Do not guess.",
+    "predicted_error_reduction_per_task": 0.25,
+    "predicted_token_change_pct": 3,
+    "primitive": "",
+    "source_mechanism": "Commander's intent plus an explicit end-state: the order lists every target key, its exact old and new value, and what must not change, so the worker and checker check against a closed list."
+   }
+  ],
+  "weighted": [
+   {
+    "depth": "surface",
+    "domain": "control theory and cybernetics",
+    "part": "worker",
+    "payload": "Treat the retrieved memory lines as your prior and the instruction as a new measurement. Before writing: (1) Find the innovation, meaning what the instruction adds to or contradicts in memory. (2) Weight it: specific, explicit, recent claims override vague memory; vague claims do not. (3) Gate it: zero innovation means no writes; a contradiction means an update that cites the memory line it replaces. Writes contain only the correction. Summary: state the innovation and what changed.",
+    "primitive": "",
+    "source_mechanism": "Kalman filter measurement update (innovation gating): treat memory as the prior state estimate and the instruction as a new measurement, compute the innovation (residual), weight it by relative confidence (Kalman gain), reject outliers, and write only the correction."
+   },
+   {
+    "depth": "structure",
+    "domain": "control theory and cybernetics",
+    "part": "channel",
+    "payload": "",
+    "primitive": "readback",
+    "source_mechanism": "readback framed from control theory and cybernetics"
+   },
+   {
+    "depth": "structure",
+    "domain": "ecology",
+    "part": "checker",
+    "payload": "",
+    "primitive": "second_checker",
+    "source_mechanism": "second_checker framed from ecology"
+   },
+   {
+    "depth": "structure",
+    "domain": "control theory and cybernetics",
+    "part": "memory",
+    "payload": "",
+    "primitive": "memory_journal",
+    "source_mechanism": "memory_journal framed from control theory and cybernetics"
+   }
+  ]
+ },
+ "numpy": "2.5.3",
+ "python": "3.13.18",
+ "results_sha256": "8916f4decec95d6eeeec666bf35a707104763b7405fa177ab639e7513a2e0e70",
+ "run_utc": "2026-11-17T10:58:32Z",
+ "seeds": [
+  200,
+  201,
+  202,
+  203,
+  204,
+  205
+ ],
+ "success": {
+  "blind": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "knowing": [
+   0,
+   1,
+   0,
+   1,
+   2
+  ],
+  "weighted": [
+   0,
+   0,
+   0,
+   0,
+   1
+  ]
+ },
+ "weights_final": {
+  "chemistry": 1.0,
+  "control theory and cybernetics": 5.166666666666666,
+  "double-entry bookkeeping and audit": 1.0,
+  "ecology": 1.0,
+  "genetics (DNA replication proofreading and repair)": 1.0,
+  "immunology": 1.0,
+  "military mission command": 1.0,
+  "quantum error correction": 1.0,
+  "rocketry and mission control": 1.0,
+  "socio-technical safety (aviation crew resource management, surgical checklists)": 1.0
+ }
+}

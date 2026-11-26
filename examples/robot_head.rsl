@@ -1,0 +1,27 @@
+# A mental model on a real object: the work table is a robot; each part carries one composed model.
+# Source: owner, session D64-D66; chat 2 T25-T29 (Eagle, Owl, rooms, control panel).
+LANGUAGE RSOS 0.2
+WORLD workday
+HOST person KIND human CHANNELS visual, auditory, kinesthetic STATES associated, owl, eagle
+USE HOST person
+CONSENT person FOR practice, cues BY person
+BASELINE person
+HOUSE mind FOR person
+ROOM eagle PERSPECTIVE above IN mind
+ROOM associated_room PERSPECTIVE inside IN mind
+OBJECT robot KIND work_table IN eagle
+PART robot.head KIND decision_model
+PART robot.hand KIND action_model
+MODEL robot.head = associated + confidence + analogical_reasoning IN eagle FOR decision
+MODEL robot.hand = top_view + dissociated + future_pacing + action IN eagle FOR action
+OBJECT couch KIND furniture IN eagle REPRESENTS langgraph
+DEDICATE couch TO hypothesis_testing
+FORM couch DIRECTIONS forward -> hypothesis ; backward -> contradiction ; up -> framing ; down -> operational_test
+MATERIAL couch = user_interface
+OBJECT eagle_calculator KIND symbol
+ANCHOR eagle_calculator TO robot.head CHANNEL kinesthetic
+CUE eagle CODE "-.." CHANNEL kinesthetic
+FUTUREPACE eagle_calculator SCENARIOS 3
+USE STATE eagle
+SELECTMODEL robot.head BY choice
+OPEN eagle_calculator FROM kinesthetic SCOPE whole

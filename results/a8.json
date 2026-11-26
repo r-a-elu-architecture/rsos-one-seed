@@ -1,0 +1,308 @@
+{
+ "code_commit": "e9ea8530739a1a41c360a5148efa3fee8fe68cbb",
+ "experiment": "a8",
+ "numpy": "2.5.3",
+ "predictions": {
+  "G1_invariance": false,
+  "G2_counts": {
+   "blind_failed": 0,
+   "m_star_dependent": 25,
+   "m_star_failed": 25
+  },
+  "G2_error_class": true,
+  "G3_cost_L3": true,
+  "G4_stronger_m_star": true,
+  "G5_no_family_where_m_star_wins": false,
+  "REACH_families_blind_exact": [
+   "codex_gpt62sol",
+   "default",
+   "gemini_38flash",
+   "mistral_large40",
+   "opus55",
+   "sonnet55"
+  ]
+ },
+ "python": "3.13.18",
+ "results_sha256": "8cb9a1fdb958e08411d5f3f084bb2d6bee4fc301bb3f39fce207af1b6550ba9a",
+ "run_utc": "2026-11-19T03:24:35Z",
+ "tables": {
+  "codex_gpt62sol": {
+   "L3": {
+    "B2": {
+     "cost_per_correct": null,
+     "exact": 15,
+     "failed_dependent": 1,
+     "failed_steps": 1,
+     "model": "gpt-6.2-sol",
+     "tasks": 16
+    },
+    "X5b": {
+     "cost_per_correct": null,
+     "exact": 16,
+     "failed_dependent": 0,
+     "failed_steps": 0,
+     "model": "gpt-6.2-sol",
+     "tasks": 16
+    }
+   },
+   "S1": {
+    "B2": {
+     "cost_per_correct": null,
+     "exact": 15,
+     "failed_dependent": 1,
+     "failed_steps": 1,
+     "model": "gpt-6.2-sol",
+     "tasks": 16
+    },
+    "X5b": {
+     "cost_per_correct": null,
+     "exact": 16,
+     "failed_dependent": 0,
+     "failed_steps": 0,
+     "model": "gpt-6.2-sol",
+     "tasks": 16
+    }
+   }
+  },
+  "default": {
+   "L3": {
+    "B2": {
+     "cost_per_correct": 0.008710406666666667,
+     "exact": 15,
+     "failed_dependent": 2,
+     "failed_steps": 2,
+     "model": "claude-haiku-5-5",
+     "tasks": 16
+    },
+    "X5b": {
+     "cost_per_correct": 0.00436043125,
+     "exact": 16,
+     "failed_dependent": 0,
+     "failed_steps": 0,
+     "model": "claude-haiku-5-5",
+     "tasks": 16
+    }
+   },
+   "S1": {
+    "B2": {
+     "cost_per_correct": 0.0015301,
+     "exact": 15,
+     "failed_dependent": 1,
+     "failed_steps": 1,
+     "model": "claude-haiku-5-5",
+     "tasks": 16
+    },
+    "X5b": {
+     "cost_per_correct": 0.00120408125,
+     "exact": 16,
+     "failed_dependent": 0,
+     "failed_steps": 0,
+     "model": "claude-haiku-5-5",
+     "tasks": 16
+    },
+    "X5r": {
+     "cost_per_correct": 0.00125128125,
+     "exact": 16,
+     "failed_dependent": 0,
+     "failed_steps": 0,
+     "model": "claude-haiku-5-5",
+     "tasks": 16
+    }
+   }
+  },
+  "gemini_38flash": {
+   "L3": {
+    "B2": {
+     "cost_per_correct": null,
+     "exact": 15,
+     "failed_dependent": 1,
+     "failed_steps": 1,
+     "model": "gemini-3.8-flash",
+     "tasks": 16
+    },
+    "X5b": {
+     "cost_per_correct": null,
+     "exact": 16,
+     "failed_dependent": 0,
+     "failed_steps": 0,
+     "model": "gemini-3.8-flash",
+     "tasks": 16
+    }
+   },
+   "S1": {
+    "B2": {
+     "cost_per_correct": null,
+     "exact": 16,
+     "failed_dependent": 0,
+     "failed_steps": 0,
+     "model": "gemini-3.8-flash",
+     "tasks": 16
+    },
+    "X5b": {
+     "cost_per_correct": null,
+     "exact": 16,
+     "failed_dependent": 0,
+     "failed_steps": 0,
+     "model": "gemini-3.8-flash",
+     "tasks": 16
+    }
+   }
+  },
+  "groq_gptoss120b": {
+   "S1": {
+    "B2": {
+     "cost_per_correct": null,
+     "exact": 16,
+     "failed_dependent": 0,
+     "failed_steps": 0,
+     "model": "openai/gpt-oss-120b",
+     "tasks": 16
+    },
+    "X5b": {
+     "cost_per_correct": null,
+     "exact": 3,
+     "failed_dependent": 0,
+     "failed_steps": 0,
+     "model": "openai/gpt-oss-120b",
+     "tasks": 3
+    }
+   }
+  },
+  "haiku_b2s": {
+   "L3": {
+    "B2s": {
+     "cost_per_correct": 0.009178571428571428,
+     "exact": 14,
+     "failed_dependent": 3,
+     "failed_steps": 3,
+     "model": "claude-haiku-5-5",
+     "tasks": 16
+    }
+   },
+   "S1": {
+    "B2s": {
+     "cost_per_correct": 0.00155394,
+     "exact": 15,
+     "failed_dependent": 1,
+     "failed_steps": 1,
+     "model": "claude-haiku-5-5",
+     "tasks": 16
+    }
+   }
+  },
+  "mistral_large40": {
+   "L3": {
+    "B2": {
+     "cost_per_correct": null,
+     "exact": 12,
+     "failed_dependent": 14,
+     "failed_steps": 14,
+     "model": "mistral-large-4-0",
+     "tasks": 16
+    },
+    "X5b": {
+     "cost_per_correct": null,
+     "exact": 16,
+     "failed_dependent": 0,
+     "failed_steps": 0,
+     "model": "mistral-large-4-0",
+     "tasks": 16
+    }
+   },
+   "S1": {
+    "B2": {
+     "cost_per_correct": null,
+     "exact": 16,
+     "failed_dependent": 0,
+     "failed_steps": 0,
+     "model": "mistral-large-4-0",
+     "tasks": 16
+    },
+    "X5b": {
+     "cost_per_correct": null,
+     "exact": 16,
+     "failed_dependent": 0,
+     "failed_steps": 0,
+     "model": "mistral-large-4-0",
+     "tasks": 16
+    }
+   }
+  },
+  "opus55": {
+   "L3": {
+    "B2": {
+     "cost_per_correct": null,
+     "exact": 16,
+     "failed_dependent": 0,
+     "failed_steps": 0,
+     "model": "claude-opus-5-5",
+     "tasks": 16
+    },
+    "X5b": {
+     "cost_per_correct": null,
+     "exact": 16,
+     "failed_dependent": 0,
+     "failed_steps": 0,
+     "model": "claude-opus-5-5",
+     "tasks": 16
+    }
+   },
+   "S1": {
+    "B2": {
+     "cost_per_correct": null,
+     "exact": 16,
+     "failed_dependent": 0,
+     "failed_steps": 0,
+     "model": "claude-opus-5-5",
+     "tasks": 16
+    },
+    "X5b": {
+     "cost_per_correct": null,
+     "exact": 16,
+     "failed_dependent": 0,
+     "failed_steps": 0,
+     "model": "claude-opus-5-5",
+     "tasks": 16
+    }
+   }
+  },
+  "sonnet55": {
+   "L3": {
+    "B2": {
+     "cost_per_correct": 0.09377053333333334,
+     "exact": 15,
+     "failed_dependent": 1,
+     "failed_steps": 1,
+     "model": "claude-sonnet-5-5",
+     "tasks": 16
+    },
+    "X5b": {
+     "cost_per_correct": 0.050562,
+     "exact": 16,
+     "failed_dependent": 0,
+     "failed_steps": 0,
+     "model": "claude-sonnet-5-5",
+     "tasks": 16
+    }
+   },
+   "S1": {
+    "B2": {
+     "cost_per_correct": 0.014938125,
+     "exact": 16,
+     "failed_dependent": 0,
+     "failed_steps": 0,
+     "model": "claude-sonnet-5-5",
+     "tasks": 16
+    },
+    "X5b": {
+     "cost_per_correct": 0.012547,
+     "exact": 16,
+     "failed_dependent": 0,
+     "failed_steps": 0,
+     "model": "claude-sonnet-5-5",
+     "tasks": 16
+    }
+   }
+  }
+ }
+}

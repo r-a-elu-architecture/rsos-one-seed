@@ -1,0 +1,1110 @@
+{
+ "summary": {
+  "runs": 1,
+  "chan": 208.0,
+  "bpe": 208.0,
+  "success": 1,
+  "replica": 1,
+  "heal0": 3,
+  "instr_bpc": 0.5877923736082296,
+  "reason_bpc": 0.0,
+  "edits_fallback": 0,
+  "trunc_silent": 0
+ },
+ "runs": [
+  {
+   "cond": "Hp",
+   "seed": 999,
+   "tag": "replay_smoke",
+   "success": true,
+   "line_acc": 1.0,
+   "replica_success": true,
+   "final_errors": [],
+   "steps_failed": 0,
+   "n_msgs": 56,
+   "n_calls": 42,
+   "channel_tok": 208,
+   "channel_bpe": 208,
+   "channel_bytes": 1415,
+   "billed_tok": 77502,
+   "out_tok": 4423,
+   "in_tok": 73079,
+   "cost_usd": 0.014369040000000001,
+   "wall_sec": 0.08698487281799316,
+   "drift": [
+    {
+     "step": 4,
+     "key": "auth.retries",
+     "true": "7",
+     "wrong": "0",
+     "detected_by": "snapshot_sha",
+     "recovery_tok": 0,
+     "recovery_sec": 0.0017402172088623047,
+     "fallback_heal_tok": 19,
+     "pre_worker_true": true,
+     "healed": true,
+     "healed_zero_call": true,
+     "caught": true,
+     "silent_in_final": false,
+     "in_any_copy_final": false
+    },
+    {
+     "step": 8,
+     "key": "auth.replicas",
+     "true": "2",
+     "wrong": "1",
+     "detected_by": "snapshot_sha",
+     "recovery_tok": 0,
+     "recovery_sec": 0.0013196468353271484,
+     "fallback_heal_tok": 19,
+     "pre_worker_true": true,
+     "healed": true,
+     "healed_zero_call": true,
+     "caught": true,
+     "silent_in_final": false,
+     "in_any_copy_final": false
+    },
+    {
+     "step": 12,
+     "key": "billing.timeout_ms",
+     "true": "4200",
+     "wrong": "3300",
+     "detected_by": "snapshot_sha",
+     "recovery_tok": 0,
+     "recovery_sec": 0.0010695457458496094,
+     "fallback_heal_tok": 19,
+     "pre_worker_true": true,
+     "healed": true,
+     "healed_zero_call": true,
+     "caught": true,
+     "silent_in_final": false,
+     "in_any_copy_final": false
+    }
+   ],
+   "per_call": [
+    {
+     "role": "planner",
+     "step": 0,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 834,
+     "cache_r": 930,
+     "out": 179,
+     "sec": 3.730194568634033
+    },
+    {
+     "role": "worker",
+     "step": 0,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 1893,
+     "cache_r": 0,
+     "out": 12,
+     "sec": 3.172781467437744
+    },
+    {
+     "role": "checker",
+     "step": 0,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 1615,
+     "cache_r": 0,
+     "out": 135,
+     "sec": 3.8790271282196045
+    },
+    {
+     "role": "planner",
+     "step": 1,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 833,
+     "cache_r": 923,
+     "out": 43,
+     "sec": 3.5615129470825195
+    },
+    {
+     "role": "worker",
+     "step": 1,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 1805,
+     "cache_r": 0,
+     "out": 13,
+     "sec": 3.0934698581695557
+    },
+    {
+     "role": "checker",
+     "step": 1,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 1525,
+     "cache_r": 0,
+     "out": 57,
+     "sec": 3.4064228534698486
+    },
+    {
+     "role": "planner",
+     "step": 2,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 833,
+     "cache_r": 924,
+     "out": 151,
+     "sec": 3.794923782348633
+    },
+    {
+     "role": "worker",
+     "step": 2,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 1807,
+     "cache_r": 0,
+     "out": 12,
+     "sec": 2.9686813354492188
+    },
+    {
+     "role": "checker",
+     "step": 2,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 1525,
+     "cache_r": 0,
+     "out": 60,
+     "sec": 3.817444324493408
+    },
+    {
+     "role": "planner",
+     "step": 3,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 833,
+     "cache_r": 928,
+     "out": 113,
+     "sec": 3.351795196533203
+    },
+    {
+     "role": "worker",
+     "step": 3,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 1846,
+     "cache_r": 0,
+     "out": 13,
+     "sec": 4.415499210357666
+    },
+    {
+     "role": "checker",
+     "step": 3,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 1567,
+     "cache_r": 0,
+     "out": 131,
+     "sec": 3.7822067737579346
+    },
+    {
+     "role": "planner",
+     "step": 4,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 834,
+     "cache_r": 929,
+     "out": 197,
+     "sec": 4.469554901123047
+    },
+    {
+     "role": "worker",
+     "step": 4,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 1910,
+     "cache_r": 0,
+     "out": 12,
+     "sec": 3.2733888626098633
+    },
+    {
+     "role": "checker",
+     "step": 4,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 1637,
+     "cache_r": 0,
+     "out": 132,
+     "sec": 3.6156704425811768
+    },
+    {
+     "role": "planner",
+     "step": 5,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 832,
+     "cache_r": 926,
+     "out": 263,
+     "sec": 5.023097276687622
+    },
+    {
+     "role": "worker",
+     "step": 5,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 1952,
+     "cache_r": 0,
+     "out": 12,
+     "sec": 2.7139439582824707
+    },
+    {
+     "role": "checker",
+     "step": 5,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 1674,
+     "cache_r": 0,
+     "out": 98,
+     "sec": 4.404969215393066
+    },
+    {
+     "role": "planner",
+     "step": 6,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 836,
+     "cache_r": 924,
+     "out": 209,
+     "sec": 3.8965680599212646
+    },
+    {
+     "role": "worker",
+     "step": 6,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 1921,
+     "cache_r": 0,
+     "out": 18,
+     "sec": 3.3488729000091553
+    },
+    {
+     "role": "checker",
+     "step": 6,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 1664,
+     "cache_r": 0,
+     "out": 204,
+     "sec": 3.872506618499756
+    },
+    {
+     "role": "planner",
+     "step": 7,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 833,
+     "cache_r": 915,
+     "out": 113,
+     "sec": 4.32604718208313
+    },
+    {
+     "role": "worker",
+     "step": 7,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 1862,
+     "cache_r": 0,
+     "out": 17,
+     "sec": 2.8910040855407715
+    },
+    {
+     "role": "checker",
+     "step": 7,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 1604,
+     "cache_r": 0,
+     "out": 78,
+     "sec": 3.3068337440490723
+    },
+    {
+     "role": "planner",
+     "step": 8,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 836,
+     "cache_r": 909,
+     "out": 123,
+     "sec": 4.896159648895264
+    },
+    {
+     "role": "worker",
+     "step": 8,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 1868,
+     "cache_r": 0,
+     "out": 12,
+     "sec": 3.353022575378418
+    },
+    {
+     "role": "checker",
+     "step": 8,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 1600,
+     "cache_r": 0,
+     "out": 113,
+     "sec": 4.015637636184692
+    },
+    {
+     "role": "planner",
+     "step": 9,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 840,
+     "cache_r": 912,
+     "out": 105,
+     "sec": 3.8896420001983643
+    },
+    {
+     "role": "worker",
+     "step": 9,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 1809,
+     "cache_r": 0,
+     "out": 12,
+     "sec": 3.4836416244506836
+    },
+    {
+     "role": "checker",
+     "step": 9,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 1544,
+     "cache_r": 0,
+     "out": 126,
+     "sec": 4.160658836364746
+    },
+    {
+     "role": "planner",
+     "step": 10,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 833,
+     "cache_r": 918,
+     "out": 188,
+     "sec": 4.467034578323364
+    },
+    {
+     "role": "worker",
+     "step": 10,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 1812,
+     "cache_r": 0,
+     "out": 14,
+     "sec": 3.083594799041748
+    },
+    {
+     "role": "checker",
+     "step": 10,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 1552,
+     "cache_r": 0,
+     "out": 495,
+     "sec": 5.7460315227508545
+    },
+    {
+     "role": "planner",
+     "step": 11,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 834,
+     "cache_r": 921,
+     "out": 211,
+     "sec": 4.014245271682739
+    },
+    {
+     "role": "worker",
+     "step": 11,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 1894,
+     "cache_r": 0,
+     "out": 8,
+     "sec": 3.3518946170806885
+    },
+    {
+     "role": "checker",
+     "step": 11,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 1605,
+     "cache_r": 0,
+     "out": 102,
+     "sec": 4.4593589305877686
+    },
+    {
+     "role": "planner",
+     "step": 12,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 832,
+     "cache_r": 920,
+     "out": 192,
+     "sec": 4.132626533508301
+    },
+    {
+     "role": "worker",
+     "step": 12,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 1844,
+     "cache_r": 0,
+     "out": 18,
+     "sec": 2.811089038848877
+    },
+    {
+     "role": "checker",
+     "step": 12,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 1587,
+     "cache_r": 0,
+     "out": 86,
+     "sec": 3.583293914794922
+    },
+    {
+     "role": "planner",
+     "step": 13,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 835,
+     "cache_r": 915,
+     "out": 222,
+     "sec": 4.117318630218506
+    },
+    {
+     "role": "worker",
+     "step": 13,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 1884,
+     "cache_r": 0,
+     "out": 14,
+     "sec": 3.3548426628112793
+    },
+    {
+     "role": "checker",
+     "step": 13,
+     "attempt": 0,
+     "in": 2,
+     "cache_w": 1617,
+     "cache_r": 0,
+     "out": 110,
+     "sec": 4.3419928550720215
+    }
+   ],
+   "per_msg": [
+    {
+     "step": 0,
+     "attempt": 0,
+     "from": "planner",
+     "to": "worker",
+     "tok": 12,
+     "bpe": 12,
+     "bytes": 92,
+     "kind": "msg"
+    },
+    {
+     "step": 0,
+     "attempt": 0,
+     "from": "worker",
+     "to": "checker",
+     "tok": 2,
+     "bpe": 2,
+     "bytes": 15,
+     "kind": "msg"
+    },
+    {
+     "step": 0,
+     "attempt": 0,
+     "from": "checker",
+     "to": "worker",
+     "tok": 1,
+     "bpe": 1,
+     "bytes": 1,
+     "kind": "msg"
+    },
+    {
+     "step": 0,
+     "attempt": 0,
+     "from": "checker",
+     "to": "planner",
+     "tok": 2,
+     "bpe": 2,
+     "bytes": 15,
+     "kind": "msg"
+    },
+    {
+     "step": 1,
+     "attempt": 0,
+     "from": "planner",
+     "to": "worker",
+     "tok": 6,
+     "bpe": 6,
+     "bytes": 55,
+     "kind": "msg"
+    },
+    {
+     "step": 1,
+     "attempt": 0,
+     "from": "worker",
+     "to": "checker",
+     "tok": 2,
+     "bpe": 2,
+     "bytes": 11,
+     "kind": "msg"
+    },
+    {
+     "step": 1,
+     "attempt": 0,
+     "from": "checker",
+     "to": "worker",
+     "tok": 1,
+     "bpe": 1,
+     "bytes": 1,
+     "kind": "msg"
+    },
+    {
+     "step": 1,
+     "attempt": 0,
+     "from": "checker",
+     "to": "planner",
+     "tok": 2,
+     "bpe": 2,
+     "bytes": 11,
+     "kind": "msg"
+    },
+    {
+     "step": 2,
+     "attempt": 0,
+     "from": "planner",
+     "to": "worker",
+     "tok": 3,
+     "bpe": 3,
+     "bytes": 16,
+     "kind": "msg"
+    },
+    {
+     "step": 2,
+     "attempt": 0,
+     "from": "worker",
+     "to": "checker",
+     "tok": 2,
+     "bpe": 2,
+     "bytes": 15,
+     "kind": "msg"
+    },
+    {
+     "step": 2,
+     "attempt": 0,
+     "from": "checker",
+     "to": "worker",
+     "tok": 1,
+     "bpe": 1,
+     "bytes": 1,
+     "kind": "msg"
+    },
+    {
+     "step": 2,
+     "attempt": 0,
+     "from": "checker",
+     "to": "planner",
+     "tok": 2,
+     "bpe": 2,
+     "bytes": 15,
+     "kind": "msg"
+    },
+    {
+     "step": 3,
+     "attempt": 0,
+     "from": "planner",
+     "to": "worker",
+     "tok": 12,
+     "bpe": 12,
+     "bytes": 84,
+     "kind": "msg"
+    },
+    {
+     "step": 3,
+     "attempt": 0,
+     "from": "worker",
+     "to": "checker",
+     "tok": 2,
+     "bpe": 2,
+     "bytes": 10,
+     "kind": "msg"
+    },
+    {
+     "step": 3,
+     "attempt": 0,
+     "from": "checker",
+     "to": "worker",
+     "tok": 1,
+     "bpe": 1,
+     "bytes": 1,
+     "kind": "msg"
+    },
+    {
+     "step": 3,
+     "attempt": 0,
+     "from": "checker",
+     "to": "planner",
+     "tok": 2,
+     "bpe": 2,
+     "bytes": 10,
+     "kind": "msg"
+    },
+    {
+     "step": 4,
+     "attempt": 0,
+     "from": "planner",
+     "to": "worker",
+     "tok": 13,
+     "bpe": 13,
+     "bytes": 94,
+     "kind": "msg"
+    },
+    {
+     "step": 4,
+     "attempt": 0,
+     "from": "worker",
+     "to": "checker",
+     "tok": 2,
+     "bpe": 2,
+     "bytes": 16,
+     "kind": "msg"
+    },
+    {
+     "step": 4,
+     "attempt": 0,
+     "from": "checker",
+     "to": "worker",
+     "tok": 1,
+     "bpe": 1,
+     "bytes": 1,
+     "kind": "msg"
+    },
+    {
+     "step": 4,
+     "attempt": 0,
+     "from": "checker",
+     "to": "planner",
+     "tok": 2,
+     "bpe": 2,
+     "bytes": 16,
+     "kind": "msg"
+    },
+    {
+     "step": 5,
+     "attempt": 0,
+     "from": "planner",
+     "to": "worker",
+     "tok": 13,
+     "bpe": 13,
+     "bytes": 95,
+     "kind": "msg"
+    },
+    {
+     "step": 5,
+     "attempt": 0,
+     "from": "worker",
+     "to": "checker",
+     "tok": 2,
+     "bpe": 2,
+     "bytes": 10,
+     "kind": "msg"
+    },
+    {
+     "step": 5,
+     "attempt": 0,
+     "from": "checker",
+     "to": "worker",
+     "tok": 1,
+     "bpe": 1,
+     "bytes": 1,
+     "kind": "msg"
+    },
+    {
+     "step": 5,
+     "attempt": 0,
+     "from": "checker",
+     "to": "planner",
+     "tok": 2,
+     "bpe": 2,
+     "bytes": 10,
+     "kind": "msg"
+    },
+    {
+     "step": 6,
+     "attempt": 0,
+     "from": "planner",
+     "to": "worker",
+     "tok": 15,
+     "bpe": 15,
+     "bytes": 116,
+     "kind": "msg"
+    },
+    {
+     "step": 6,
+     "attempt": 0,
+     "from": "worker",
+     "to": "checker",
+     "tok": 2,
+     "bpe": 2,
+     "bytes": 18,
+     "kind": "msg"
+    },
+    {
+     "step": 6,
+     "attempt": 0,
+     "from": "checker",
+     "to": "worker",
+     "tok": 1,
+     "bpe": 1,
+     "bytes": 1,
+     "kind": "msg"
+    },
+    {
+     "step": 6,
+     "attempt": 0,
+     "from": "checker",
+     "to": "planner",
+     "tok": 2,
+     "bpe": 2,
+     "bytes": 18,
+     "kind": "msg"
+    },
+    {
+     "step": 7,
+     "attempt": 0,
+     "from": "planner",
+     "to": "worker",
+     "tok": 13,
+     "bpe": 13,
+     "bytes": 80,
+     "kind": "msg"
+    },
+    {
+     "step": 7,
+     "attempt": 0,
+     "from": "worker",
+     "to": "checker",
+     "tok": 2,
+     "bpe": 2,
+     "bytes": 12,
+     "kind": "msg"
+    },
+    {
+     "step": 7,
+     "attempt": 0,
+     "from": "checker",
+     "to": "worker",
+     "tok": 1,
+     "bpe": 1,
+     "bytes": 1,
+     "kind": "msg"
+    },
+    {
+     "step": 7,
+     "attempt": 0,
+     "from": "checker",
+     "to": "planner",
+     "tok": 2,
+     "bpe": 2,
+     "bytes": 12,
+     "kind": "msg"
+    },
+    {
+     "step": 8,
+     "attempt": 0,
+     "from": "planner",
+     "to": "worker",
+     "tok": 10,
+     "bpe": 10,
+     "bytes": 78,
+     "kind": "msg"
+    },
+    {
+     "step": 8,
+     "attempt": 0,
+     "from": "worker",
+     "to": "checker",
+     "tok": 2,
+     "bpe": 2,
+     "bytes": 19,
+     "kind": "msg"
+    },
+    {
+     "step": 8,
+     "attempt": 0,
+     "from": "checker",
+     "to": "worker",
+     "tok": 1,
+     "bpe": 1,
+     "bytes": 1,
+     "kind": "msg"
+    },
+    {
+     "step": 8,
+     "attempt": 0,
+     "from": "checker",
+     "to": "planner",
+     "tok": 2,
+     "bpe": 2,
+     "bytes": 19,
+     "kind": "msg"
+    },
+    {
+     "step": 9,
+     "attempt": 0,
+     "from": "planner",
+     "to": "worker",
+     "tok": 10,
+     "bpe": 10,
+     "bytes": 75,
+     "kind": "msg"
+    },
+    {
+     "step": 9,
+     "attempt": 0,
+     "from": "worker",
+     "to": "checker",
+     "tok": 2,
+     "bpe": 2,
+     "bytes": 15,
+     "kind": "msg"
+    },
+    {
+     "step": 9,
+     "attempt": 0,
+     "from": "checker",
+     "to": "worker",
+     "tok": 1,
+     "bpe": 1,
+     "bytes": 1,
+     "kind": "msg"
+    },
+    {
+     "step": 9,
+     "attempt": 0,
+     "from": "checker",
+     "to": "planner",
+     "tok": 2,
+     "bpe": 2,
+     "bytes": 15,
+     "kind": "msg"
+    },
+    {
+     "step": 10,
+     "attempt": 0,
+     "from": "planner",
+     "to": "worker",
+     "tok": 5,
+     "bpe": 5,
+     "bytes": 39,
+     "kind": "msg"
+    },
+    {
+     "step": 10,
+     "attempt": 0,
+     "from": "worker",
+     "to": "checker",
+     "tok": 2,
+     "bpe": 2,
+     "bytes": 15,
+     "kind": "msg"
+    },
+    {
+     "step": 10,
+     "attempt": 0,
+     "from": "checker",
+     "to": "worker",
+     "tok": 1,
+     "bpe": 1,
+     "bytes": 1,
+     "kind": "msg"
+    },
+    {
+     "step": 10,
+     "attempt": 0,
+     "from": "checker",
+     "to": "planner",
+     "tok": 2,
+     "bpe": 2,
+     "bytes": 15,
+     "kind": "msg"
+    },
+    {
+     "step": 11,
+     "attempt": 0,
+     "from": "planner",
+     "to": "worker",
+     "tok": 12,
+     "bpe": 12,
+     "bytes": 89,
+     "kind": "msg"
+    },
+    {
+     "step": 11,
+     "attempt": 0,
+     "from": "worker",
+     "to": "checker",
+     "tok": 2,
+     "bpe": 2,
+     "bytes": 10,
+     "kind": "msg"
+    },
+    {
+     "step": 11,
+     "attempt": 0,
+     "from": "checker",
+     "to": "worker",
+     "tok": 1,
+     "bpe": 1,
+     "bytes": 1,
+     "kind": "msg"
+    },
+    {
+     "step": 11,
+     "attempt": 0,
+     "from": "checker",
+     "to": "planner",
+     "tok": 2,
+     "bpe": 2,
+     "bytes": 10,
+     "kind": "msg"
+    },
+    {
+     "step": 12,
+     "attempt": 0,
+     "from": "planner",
+     "to": "worker",
+     "tok": 6,
+     "bpe": 6,
+     "bytes": 47,
+     "kind": "msg"
+    },
+    {
+     "step": 12,
+     "attempt": 0,
+     "from": "worker",
+     "to": "checker",
+     "tok": 2,
+     "bpe": 2,
+     "bytes": 16,
+     "kind": "msg"
+    },
+    {
+     "step": 12,
+     "attempt": 0,
+     "from": "checker",
+     "to": "worker",
+     "tok": 1,
+     "bpe": 1,
+     "bytes": 1,
+     "kind": "msg"
+    },
+    {
+     "step": 12,
+     "attempt": 0,
+     "from": "checker",
+     "to": "planner",
+     "tok": 2,
+     "bpe": 2,
+     "bytes": 16,
+     "kind": "msg"
+    },
+    {
+     "step": 13,
+     "attempt": 0,
+     "from": "planner",
+     "to": "worker",
+     "tok": 8,
+     "bpe": 8,
+     "bytes": 57,
+     "kind": "msg"
+    },
+    {
+     "step": 13,
+     "attempt": 0,
+     "from": "worker",
+     "to": "checker",
+     "tok": 2,
+     "bpe": 2,
+     "bytes": 10,
+     "kind": "msg"
+    },
+    {
+     "step": 13,
+     "attempt": 0,
+     "from": "checker",
+     "to": "worker",
+     "tok": 1,
+     "bpe": 1,
+     "bytes": 1,
+     "kind": "msg"
+    },
+    {
+     "step": 13,
+     "attempt": 0,
+     "from": "checker",
+     "to": "planner",
+     "tok": 2,
+     "bpe": 2,
+     "bytes": 10,
+     "kind": "msg"
+    }
+   ],
+   "codec_stats": {
+    "instr_fallback": 0,
+    "edits_fallback": 0,
+    "forward_hit": 0,
+    "forward_miss": 0,
+    "instr_bits": 2113.113583121585,
+    "instr_chars": 3595,
+    "reason_bits": 0,
+    "reason_chars": 0,
+    "n_instr": 14,
+    "n_reason": 0,
+    "nak": 0
+   },
+   "trunc": {
+    "0.1": {
+     "detected": 14,
+     "silent_wrong": 0,
+     "correct": 0
+    },
+    "0.2": {
+     "detected": 14,
+     "silent_wrong": 0,
+     "correct": 0
+    },
+    "0.3": {
+     "detected": 14,
+     "silent_wrong": 0,
+     "correct": 0
+    },
+    "0.4": {
+     "detected": 14,
+     "silent_wrong": 0,
+     "correct": 0
+    },
+    "0.5": {
+     "detected": 14,
+     "silent_wrong": 0,
+     "correct": 0
+    }
+   }
+  }
+ ]
+}

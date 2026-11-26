@@ -1,0 +1,142 @@
+{
+ "row": "economics",
+ "model": "-",
+ "pair": 2,
+ "cells": {
+  "std|305": {
+   "default": {
+    "result": 2438.9325213493516,
+    "resource": 343.75398270413683,
+    "R": 7.094994222797119,
+    "choices": {
+     "present|standard": 26
+    },
+    "sec": 0.0
+   },
+   "rollout": {
+    "result": 2462.982429107508,
+    "resource": 333.926688015805,
+    "R": 7.375817859131203,
+    "choices": {
+     "prebuild|rollout": 19,
+     "present|standard": 3,
+     "lean|rollout": 2,
+     "focus_short|rollout": 2
+    },
+    "sec": 1.7
+   },
+   "seed3v1": {
+    "result": 2466.912014285448,
+    "resource": 326.85180634545947,
+    "R": 7.547493899048839,
+    "choices": {
+     "P4P5:stochastic_lp|policy": 23,
+     "F:pool:capital_newsvendor|policy": 1,
+     "future+1|own": 1,
+     "P4P5:stochastic_lp|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 888.2
+   },
+   "structure": {
+    "result": 2462.7221412031345,
+    "resource": 361.3709533650653,
+    "R": 6.8149421481455805,
+    "choices": {
+     "prebuild|standard": 8,
+     "future+2|standard": 3,
+     "focus_short|standard": 2,
+     "past-2|standard": 3,
+     "future+1|standard": 1,
+     "focus_short|own": 2,
+     "past-1|own": 2,
+     "focus_small|standard": 1,
+     "past-1|standard": 1,
+     "prebuild|own": 2,
+     "lean|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 1.6
+   },
+   "strongest": {
+    "result": 2469.3362366406964,
+    "resource": 326.6149311903753,
+    "R": 7.560389929636698,
+    "choices": {
+     "present|standard": 26
+    },
+    "sec": 1.2
+   },
+   "sec": 893
+  },
+  "std|306": {
+   "default": {
+    "result": 2396.6026706297707,
+    "resource": 377.8877577223089,
+    "R": 6.342101911623494,
+    "choices": {
+     "present|standard": 26
+    },
+    "sec": 0.0
+   },
+   "rollout": {
+    "result": 2406.1689410836743,
+    "resource": 365.9134808236676,
+    "R": 6.575786537482609,
+    "choices": {
+     "prebuild|rollout": 16,
+     "focus_small|rollout": 5,
+     "focus_big|rollout": 1,
+     "present|standard": 2,
+     "focus_short|rollout": 1,
+     "lean|rollout": 1
+    },
+    "sec": 1.7
+   },
+   "seed3v1": {
+    "result": 2410.3703737159303,
+    "resource": 342.1431686926462,
+    "R": 7.0449174330328725,
+    "choices": {
+     "P4P5:stochastic_lp|policy": 23,
+     "F:pool:capital_newsvendor|policy": 1,
+     "F:otrace:lp_corrected|own": 1,
+     "P4P5:stochastic_lp|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 852.0
+   },
+   "structure": {
+    "result": 2408.1315640150906,
+    "resource": 372.2601832100759,
+    "R": 6.468947452959589,
+    "choices": {
+     "prebuild|standard": 9,
+     "past-1|own": 1,
+     "past-2|standard": 3,
+     "focus_big|standard": 1,
+     "future+1|standard": 2,
+     "future+2|standard": 1,
+     "focus_small|standard": 3,
+     "prebuild|own": 2,
+     "past-1|standard": 1,
+     "focus_short|standard": 1,
+     "future+2|own": 1,
+     "lean|own": 1
+    },
+    "policy_fallback_steps": 0,
+    "sec": 3.0
+   },
+   "strongest": {
+    "result": 2410.1790712778825,
+    "resource": 342.4697903751534,
+    "R": 7.037639929167732,
+    "choices": {
+     "present|standard": 26
+    },
+    "sec": 1.8
+   },
+   "sec": 858
+  }
+ }
+}

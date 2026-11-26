@@ -1,0 +1,10 @@
+{
+ "frozen_diff_empty": true,
+ "D_replayed": 16,
+ "D_mismatches": [],
+ "Hd_replayed": 16,
+ "Hd_mismatches": [],
+ "Hd_chan_mean": 932.4375,
+ "Hd_bpe_mean": 1023.3125,
+ "pass": true
+}

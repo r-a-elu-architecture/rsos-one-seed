@@ -1,0 +1,3 @@
+pair 1 6620 {'joined': 390, 'notubes': 17, 'aloneA': 23, 'aloneB': 27, 'native': 1}
+pair 7 6620 {'joined': 429, 'notubes': 16, 'aloneA': 26, 'aloneB': 26, 'native': 1}
+pair 13 6620 {'joined': 389, 'notubes': 16, 'aloneA': 24, 'aloneB': 21, 'native': 1}

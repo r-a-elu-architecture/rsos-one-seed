@@ -1,0 +1,86 @@
+# ABL1 (real/PREREG_ABL1.md, real/SEAL_ABL1.txt): RSOS operator ablation. Results to cloud-results/abl1/<run id>/.
+name: rsos-abl1
+on:
+  push:
+    branches: [core-v1]
+    paths: ["cloud/trigger_abl1.txt"]
+permissions:
+  contents: write
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        u: ["ai_agents openrouter:openai/gpt-oss-20b 901 904",
+            "ai_agents openrouter:openai/gpt-oss-20b 905 908",
+            "ai_agents openrouter:openai/gpt-oss-20b 909 912",
+            "ai_agents openrouter:openai/gpt-oss-20b 913 916",
+            "ai_agents openrouter:openai/gpt-oss-20b 917 920",
+            "ai_agents openrouter:openai/gpt-oss-20b 921 924",
+            "ai_agents openrouter:openai/gpt-oss-20b 925 928",
+            "ai_agents openrouter:openai/gpt-oss-20b 929 932",
+            "ai_agents openrouter:openai/gpt-oss-20b 933 936",
+            "ai_agents openrouter:openai/gpt-oss-20b 937 940",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 1001 1025",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 1026 1050",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 1051 1075",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 1076 1100",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 1101 1125",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 1126 1150",
+            "space - 901 912",
+            "space - 913 924",
+            "space - 925 936",
+            "space - 937 948"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install numpy scipy pandas scikit-learn requests qiskit qiskit-aer pvlib gymnasium skyfield dandi pynwb tiktoken mistral-common && pip install --no-deps llama-models
+      - name: OpenRouter credit check (AI rows; prints usage and limit only)
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          set -- ${{ matrix.u }}
+          case "$1" in ai_*)
+            python - <<'EOF'
+          import os, json, sys, urllib.request
+          r = urllib.request.Request("https://openrouter.ai/api/v1/key", headers={"Authorization": "Bearer " + os.environ["OPENROUTER_API_KEY"]})
+          d = json.load(urllib.request.urlopen(r, timeout=30)).get("data", {})
+          print("OPENROUTER usage", d.get("usage"), "limit", d.get("limit"), "remaining", d.get("limit_remaining"))
+          rem = d.get("limit_remaining")
+          if rem is not None and rem < 1.0: sys.exit("STOP: less than $1 OpenRouter credit left")
+          EOF
+            ;; esac
+      - name: real data for this row
+        run: |
+          set -- ${{ matrix.u }}
+          if [ "$1" = space ]; then cp real/hosts/data/space_tle_frozen.txt real/hosts/data/space_tle.txt; fi
+          if [ "$1" = ai_human ]; then python real/hosts/ai_human_fetch.py; fi
+      - name: ABL1 seal check
+        run: grep -v '^#' real/SEAL_ABL1.txt | sha256sum -c --quiet
+      - run: python cloud/abl1_unit.py ${{ matrix.u }}
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          REASONING_EFFORT: low
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: abl1-${{ strategy.job-index }}
+          path: real/outa1/
+  collect:
+    needs: unit
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: /tmp/art
+      - run: |
+          git config user.name "rsos-cloud"; git config user.email "rsos-cloud@users.noreply.github.com"
+          git fetch origin cloud-results && git checkout cloud-results
+          mkdir -p abl1/${{ github.run_id }} && cp /tmp/art/*/*.json abl1/${{ github.run_id }}/ 2>/dev/null || true
+          git add abl1 && git commit -qm "ABL1 ${{ github.run_id }}" && (git push -q origin cloud-results || (git pull -q --rebase origin cloud-results && git push -q origin cloud-results))

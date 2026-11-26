@@ -1,0 +1,37 @@
+fetched /home/runner/work/RSOS-Multimodal-World/RSOS-Multimodal-World/real/hosts/data/topical_chat/test_freq.json 3c65693d59e40a1fb58ead35dcfe85fbcc88ea93a4d74557df620996f72c8f08
+ok /home/runner/work/RSOS-Multimodal-World/RSOS-Multimodal-World/real/hosts/data/topical_chat/test_freq.json 3c65693d59e40a1fb58ead35dcfe85fbcc88ea93a4d74557df620996f72c8f08
+fetched /home/runner/work/RSOS-Multimodal-World/RSOS-Multimodal-World/real/hosts/data/topical_chat/train.json 39a079d8464ea5f44f0fd78dbc85fd4eed96303347cbf4f9301f823e3c0f437f
+ok /home/runner/work/RSOS-Multimodal-World/RSOS-Multimodal-World/real/hosts/data/topical_chat/train.json 39a079d8464ea5f44f0fd78dbc85fd4eed96303347cbf4f9301f823e3c0f437f
+ai_human  model openrouter:meta-llama/llama-3.1-8b-instruct  cells 1-4  modes ('seed3', 'seed3v1', 'seed', 'rollout', 'default')  pool in None
+cell 1 seed3    result 0.429  resource 1.246  R 0.3440  in 991 out 255 parity -2 mention 1 holo 7  failed 0 [20.7s]  choices={'unit-1|standard': 1, 'F:holomin-top|standard': 1, 'op:enter|Associated': 5, 'past-1|standard': 1}
+        seed3 ops used {'enter': 5, 'colour': 8, 'rooms': 8, 'transplant': 7}  rooms {'Eagle': 0, 'Owl': 0, 'Associated': 8, 'base': 0}  vetoed 2  rollouts v1/ops 113/230  passed {heal: 8, beam1: 5, beam3: 5, contain: 6, compress: 2, fuse: 13, rehost: 4, pierce: 5, overlay: 5, enter: 8, zoom: 4}  enter depth {1: 8, 2: 8}  inherit 3 shapes 6 fallback 0 pool_saved /tmp/pool_ai_human_llama_1.json
+cell 1 seed3v1  result 0.571  resource 1.140  R 0.5013  in 888 out 252 parity -2 mention 1 holo 7  failed 0 [8.5s]  choices={'unit-1|standard': 1, 'F:holomin-top|standard': 7}
+cell 1 seed     result 0.286  resource 2.114  R 0.1352  in 1831 out 283 parity -2 mention 8 holo 0  failed 0  land w0 r3 [2.4s]
+cell 1 rollout  result 0.143  resource 2.086  R 0.0685  in 1832 out 254 parity -1 mention 8 holo 0  failed 0 [2.0s]
+cell 1 default  result 0.286  resource 2.081  R 0.1373  in 1851 out 230 parity 0 mention 0 holo 0  failed 0 [1.8s]
+cell 1 pareto vs default: seed3 WIN, seed3v1 WIN, seed no, rollout no; strongest = default (row C)
+cell 2 seed3    result 0.667  resource 0.898  R 0.7424  in 673 out 225 parity -2 mention 2 holo 6  failed 0 [6.1s]  choices={'unit-0|standard': 1, 'top|standard': 1, 'op:enter|Associated': 1, 'F:holomin-top|standard': 5}
+        seed3 ops used {'enter': 1, 'colour': 8, 'rooms': 8, 'transplant': 8}  rooms {'Eagle': 0, 'Owl': 0, 'Associated': 8, 'base': 0}  vetoed 1  rollouts v1/ops 79/110  passed {heal: 8, beam1: 7, beam3: 7, contain: 1, compress: 2, inherit: 2, fuse: 11, rehost: 2, pierce: 7, overlay: 7, enter: 8, zoom: 7}  enter depth {1: 8, 2: 8}  inherit 7 shapes 12 fallback 0 pool_saved /tmp/pool_ai_human_llama_1.json
+cell 2 seed3v1  result 0.667  resource 0.890  R 0.7491  in 666 out 224 parity -2 mention 2 holo 6  failed 0 [3.8s]  choices={'unit-0|standard': 1, 'top|standard': 1, 'F:holomin-top|standard': 6}
+cell 2 seed     result 0.667  resource 1.383  R 0.4820  in 1176 out 207 parity -2 mention 8 holo 0  failed 0  land w0 r3 [2.1s]
+cell 2 rollout  result 0.667  resource 1.384  R 0.4817  in 1176 out 208 parity -2 mention 8 holo 0  failed 0 [2.2s]
+cell 2 default  result 0.333  resource 1.406  R 0.2371  in 1196 out 210 parity 0 mention 0 holo 0  failed 0 [1.6s]
+cell 2 pareto vs default: seed3 WIN, seed3v1 WIN, seed WIN, rollout WIN; strongest = default (row C)
+cell 3 seed3    result 0.050  resource 0.922  R 0.0542  in 694 out 228 parity -3 mention 0 holo 8  failed 0 [10.0s]  choices={'F:holomin-top|standard': 5, 'op:compress|Associated': 1, 'op:rehost|Associated': 1, 'op:enter|Associated': 1}
+        seed3 ops used {'compress': 1, 'rehost': 1, 'enter': 1, 'colour': 8, 'rooms': 8, 'transplant': 8}  rooms {'Eagle': 0, 'Owl': 0, 'Associated': 8, 'base': 0}  vetoed 1  rollouts v1/ops 104/174  passed {heal: 8, beam1: 7, beam3: 7, contain: 3, compress: 5, inherit: 5, fuse: 15, rehost: 5, pierce: 8, overlay: 8, enter: 8, zoom: 8}  enter depth {1: 10, 2: 10}  inherit 7 shapes 13 fallback 0 pool_saved /tmp/pool_ai_human_llama_1.json
+cell 3 seed3v1  result 0.050  resource 0.900  R 0.0556  in 678 out 222 parity -3 mention 0 holo 8  failed 0 [5.8s]  choices={'F:holo-top|standard': 1, 'F:holomin-top|standard': 7}
+cell 3 seed     result 0.100  resource 1.581  R 0.0633  in 1369 out 212 parity -2 mention 8 holo 0  failed 0  land w0 r5 [2.2s]
+cell 3 rollout  result 0.100  resource 1.567  R 0.0638  in 1369 out 198 parity -2 mention 8 holo 0  failed 0 [1.7s]
+cell 3 default  result 0.000  resource 1.575  R 0.0000  in 1386 out 189 parity 0 mention 0 holo 0  failed 0 [1.5s]
+cell 3 pareto vs default: seed3 WIN, seed3v1 WIN, seed no, rollout WIN; strongest = default (row C)
+cell 4 seed3    result 0.000  resource 1.041  R 0.0000  in 794 out 247 parity -2 mention 2 holo 6  failed 0 [8.2s]  choices={'unit-0|standard': 1, 'F:holomin-top|standard': 6, 'top|standard': 1}
+        seed3 ops used {'colour': 8, 'rooms': 8, 'transplant': 8}  rooms {'Eagle': 0, 'Owl': 0, 'Associated': 8, 'base': 0}  vetoed 3  rollouts v1/ops 93/150  passed {heal: 8, beam1: 8, beam3: 8, contain: 4, compress: 4, inherit: 5, fuse: 13, rehost: 3, pierce: 8, overlay: 8, enter: 8, zoom: 8}  enter depth {1: 9, 2: 9}  inherit 7 shapes 13 fallback 0 pool_saved /tmp/pool_ai_human_llama_1.json
+cell 4 seed3v1  result 0.000  resource 1.041  R 0.0000  in 794 out 247 parity -2 mention 2 holo 6  failed 0 [5.7s]  choices={'unit-0|standard': 1, 'F:holomin-top|standard': 6, 'top|standard': 1}
+cell 4 seed     result 0.200  resource 1.517  R 0.1318  in 1293 out 224 parity -1 mention 8 holo 0  failed 0  land w0 r2 [2.4s]
+cell 4 rollout  result 0.200  resource 1.502  R 0.1332  in 1293 out 209 parity -1 mention 8 holo 0  failed 0 [2.2s]
+cell 4 default  result 0.000  resource 1.502  R 0.0000  in 1311 out 191 parity 0 mention 0 holo 0  failed 0 [1.7s]
+cell 4 pareto vs default: seed3 WIN, seed3v1 WIN, seed no, rollout WIN; strongest = default (row C)
+seed3 v2 operators chosen (cells 1-4): {'enter': 7, 'compress': 1, 'rehost': 1}
+ops bound: {"heal": "bound", "beam1": "bound", "beam3": "bound", "contain": "bound", "compress": "bound", "inherit": "bound", "fuse": "bound", "carry": "not bound: needs carry", "rehost": "bound", "pierce": "bound", "overlay": "bound", "enter": "bound (depth 2)", "zoom": "bound (generic)", "colour": "bound", "rooms": "bound (generic)", "transplant": "bound (generic; file: SEED3_POOL_IN / SEED3_POOL_OUT)"}
+bounded calls: {"consecutive_fail": 0, "calls": 160, "failed": 0, "requests": 160, "retries": 0, "seconds_waited": 0.0, "broken_calls": 0, "last_reason": ""}
+total 92.5s

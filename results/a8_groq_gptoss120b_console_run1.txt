@@ -1,0 +1,64 @@
+>> $env:A7_LABEL = "groq_gptoss120b"
+>> py experiments/a7_run.py smoke S1 B2,X5b
+S1 B2 999 think=default success=True acc=1.000 calls=4 out=2985 think_tok=2580 inv=0 wrong=0 fail=0 wall=18s
+S1 X5b 999 think=default success=True acc=1.000 calls=5 out=2421 think_tok=2202 inv=1 wrong=0 fail=0 wall=37s
+B2 {'success': True, 'replica_success': True, 'n_calls': 4, 'in_tok': 2097, 'out_tok': 2985, 'think_tok': 2580, 'invalid_ops': 0, 'steps_wrong': 0, 'steps_failed': 0}
+X5b {'success': True, 'replica_success': True, 'n_calls': 5, 'in_tok': 2817, 'out_tok': 2421, 'think_tok': 2202, 'invalid_ops': 1, 'steps_wrong': 0, 'steps_failed': 0}
+PS D:\FROM_CLAUDE\RSOS-A8> py experiments/a7_run.py run S1 B2,X5b
+S1 label=groq_gptoss120b backend=openai: done 0, live 32
+S1 B2 100 think=default success=True acc=1.000 calls=2 out=2930 think_tok=2570 inv=0 wrong=0 fail=0 wall=7s
+S1 B2 101 think=default success=True acc=1.000 calls=2 out=3239 think_tok=2943 inv=0 wrong=0 fail=0 wall=18s
+S1 B2 102 think=default success=True acc=1.000 calls=2 out=3247 think_tok=2913 inv=0 wrong=0 fail=0 wall=68s
+S1 B2 104 think=default success=True acc=1.000 calls=2 out=2595 think_tok=2230 inv=0 wrong=0 fail=0 wall=17s
+S1 B2 105 think=default success=True acc=1.000 calls=2 out=2131 think_tok=1773 inv=0 wrong=0 fail=0 wall=26s
+S1 B2 106 think=default success=True acc=1.000 calls=2 out=2808 think_tok=2452 inv=0 wrong=0 fail=0 wall=26s
+S1 B2 107 think=default success=True acc=1.000 calls=2 out=3899 think_tok=3427 inv=0 wrong=0 fail=0 wall=50s
+S1 B2 301 think=default success=True acc=1.000 calls=2 out=3227 think_tok=2843 inv=0 wrong=0 fail=0 wall=18s
+S1 B2 302 think=default success=True acc=1.000 calls=2 out=3079 think_tok=2740 inv=0 wrong=0 fail=0 wall=47s
+S1 B2 303 think=default success=True acc=1.000 calls=2 out=2586 think_tok=2190 inv=0 wrong=0 fail=0 wall=16s
+S1 B2 304 think=default success=True acc=1.000 calls=2 out=2672 think_tok=2274 inv=0 wrong=0 fail=0 wall=27s
+S1 B2 300 think=default success=True acc=1.000 calls=2 out=3428 think_tok=3011 inv=0 wrong=0 fail=0 wall=169s
+S1 B2 305 think=default success=True acc=1.000 calls=2 out=3474 think_tok=3043 inv=0 wrong=0 fail=0 wall=48s
+S1 B2 306 think=default success=True acc=1.000 calls=2 out=2971 think_tok=2628 inv=0 wrong=0 fail=0 wall=68s
+S1 B2 307 think=default success=True acc=1.000 calls=2 out=2483 think_tok=2180 inv=0 wrong=0 fail=0 wall=76s
+S1 X5b 101 think=default success=True acc=1.000 calls=2 out=2217 think_tok=2021 inv=0 wrong=0 fail=0 wall=26s
+S1 X5b 102 think=default success=True acc=1.000 calls=2 out=1868 think_tok=1690 inv=0 wrong=0 fail=0 wall=45s
+S1 X5b 103 think=default success=True acc=1.000 calls=4 out=4385 think_tok=3994 inv=13 wrong=0 fail=0 wall=51s
+S1 X5b 100 think=default success=True acc=1.000 calls=2 out=2481 think_tok=2296 inv=0 wrong=0 fail=0 wall=167s
+S1 X5b 104 think=default success=True acc=1.000 calls=2 out=1843 think_tok=1648 inv=0 wrong=0 fail=0 wall=35s
+S1 X5b 105 think=default success=True acc=1.000 calls=4 out=2332 think_tok=2094 inv=0 wrong=0 fail=0 wall=77s
+S1 X5b 107 think=default success=True acc=1.000 calls=4 out=2723 think_tok=2477 inv=3 wrong=0 fail=0 wall=47s
+S1 X5b 106 think=default success=True acc=1.000 calls=4 out=2881 think_tok=2672 inv=1 wrong=0 fail=0 wall=109s
+S1 X5b 301 think=default success=True acc=1.000 calls=4 out=2559 think_tok=2307 inv=3 wrong=0 fail=0 wall=48s
+S1 X5b 300 think=default success=True acc=1.000 calls=2 out=2383 think_tok=2203 inv=0 wrong=0 fail=0 wall=66s
+S1 X5b 302 think=default success=False acc=0.969 calls=6 out=4131 think_tok=3853 inv=3 wrong=0 fail=1 wall=81s
+S1 X5b 304 think=default success=True acc=1.000 calls=2 out=2664 think_tok=2496 inv=0 wrong=0 fail=0 wall=37s
+S1 X5b 303 think=default success=True acc=1.000 calls=2 out=2175 think_tok=1975 inv=0 wrong=0 fail=0 wall=116s
+S1 X5b 305 think=default success=True acc=1.000 calls=2 out=1999 think_tok=1809 inv=0 wrong=0 fail=0 wall=35s
+S1 X5b 306 think=default success=True acc=1.000 calls=2 out=2381 think_tok=2199 inv=0 wrong=0 fail=0 wall=46s
+S1 X5b 307 think=default success=True acc=1.000 calls=4 out=2248 think_tok=2011 inv=4 wrong=0 fail=0 wall=47s
+Traceback (most recent call last):
+  File "D:\FROM_CLAUDE\RSOS-A8\experiments\a7_run.py", line 193, in <module>
+    main_run(set_name, arms)
+    ~~~~~~~~^^^^^^^^^^^^^^^^
+  File "D:\FROM_CLAUDE\RSOS-A8\experiments\a7_run.py", line 178, in main_run
+    r = fu.result()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 453, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\_base.py", line 402, in __get_result
+    raise self._exception
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "D:\FROM_CLAUDE\RSOS-A8\experiments\a7_run.py", line 70, in run_one
+    res, task = S.run_plan(arm, set_name, seed, tag=tag, think=THINK)
+                ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\FROM_CLAUDE\RSOS-A8\experiments\a7_arms.py", line 177, in run_plan
+    ptext = call("planner", psys, head + "Change requests:\n" + "\n\n".join(lines))
+  File "D:\FROM_CLAUDE\RSOS-A8\experiments\a7_arms.py", line 151, in call
+    text, _, rec = L.llm(system, prompt, None, log)
+                   ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\FROM_CLAUDE\RSOS-A8\experiments\a7_openai.py", line 59, in llm
+    raise RuntimeError("openai-compatible call failed: " + err)
+RuntimeError: openai-compatible call failed: HTTP 429: b'{"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m7qae51me8t9k9r6z3afmhps` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 6705, Req'
+PS D:\FROM_CLAUDE\RSOS-A8>

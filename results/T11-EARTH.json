@@ -1,0 +1,71 @@
+{
+ "code_commit": "d2757aed7b3249c35f51615dba25807ea59d59ba",
+ "experiment": "T11-EARTH",
+ "numpy": "2.5.3",
+ "python": "3.13.18",
+ "results_sha256": "6915d33650fb8982a39c93d24b941852e8b19579bf01000dc0fbdca10fa1794b",
+ "run_utc": "2026-11-16T19:36:57Z",
+ "summary": {
+  "H1_propagation": {
+   "ci95": [
+    -5.107414518379481,
+    -4.386199786140642
+   ],
+   "distress_adaptive_minus_none": -4.73,
+   "pass": true,
+   "spending_diff": -53192.4
+  },
+  "H2_cash_conserved": {
+   "pass": true
+  },
+  "H3_sign_set_by_relation": {
+   "k+0.3": -53192.4,
+   "k-0.3": 52810.9,
+   "pass": true
+  },
+  "H4_fixed_vs_adaptive": {
+   "agency": [
+    9.497,
+    9.813
+   ],
+   "distress": [
+    0.312,
+    5.053
+   ]
+  },
+  "per_policy_k+0.3": {
+   "adaptive": {
+    "agency": 9.813,
+    "cash_mean": 485.88,
+    "discretionary": 225074.2,
+    "distress": 5.053,
+    "tension": 0.505,
+    "unmet_days": 0
+   },
+   "fixed": {
+    "agency": 9.497,
+    "cash_mean": 494.44,
+    "discretionary": 170429.2,
+    "distress": 0.312,
+    "tension": 0.031,
+    "unmet_days": 0
+   },
+   "none": {
+    "agency": 4.525,
+    "cash_mean": 477.39,
+    "discretionary": 278266.6,
+    "distress": 9.783,
+    "tension": 0.978,
+    "unmet_days": 0
+   },
+   "sham": {
+    "agency": 4.525,
+    "cash_mean": 477.57,
+    "discretionary": 275839.1,
+    "distress": 9.685,
+    "tension": 0.968,
+    "unmet_days": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,10 @@
+ai_ai exit 0
+ai_human exit 0
+ai_agents exit 0
+economics exit 0
+space exit 0
+energy exit 0
+quantum exit 0
+neuro exit 0
+robotics exit 0
+biology exit 0

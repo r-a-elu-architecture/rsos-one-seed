@@ -1,0 +1,6 @@
+cell 4 6660 0.7851 0.7851 {'report+popular': 0.7171, 'round+round': 0.7633, 'random+random': 0.7514, 'B': 0.7486} 14 s
+cell 4 6661 0.8786 0.8786 {'report+popular': 0.7903, 'round+round': 0.8549, 'random+random': 0.8343, 'B': 0.8136} 13 s
+cell 10 6660 0.8578 0.8578 {'report+popular': 0.7954, 'round+round': 0.8264, 'random+random': 0.8013, 'B': 0.7954} 13 s
+cell 10 6661 0.9374 0.9374 {'report+popular': 0.885, 'round+round': 0.8985, 'random+random': 0.8776, 'B': 0.885} 13 s
+cell 16 6660 0.9946 0.9946 {'report+popular': 0.9671, 'round+round': 0.9186, 'random+random': 0.8979, 'B': 0.991} 14 s
+cell 16 6661 0.9933 0.9933 {'report+popular': 0.9829, 'round+round': 0.9394, 'random+random': 0.9158, 'B': 0.9942} 13 s

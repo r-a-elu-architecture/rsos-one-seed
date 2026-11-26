@@ -1,0 +1,144 @@
+{
+ "T4": {
+  "flips10": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "errors": 78
+  },
+  "erase30": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "errors": 52
+  },
+  "erase70": {
+   "precision": 0.99392,
+   "recall": 0.83632,
+   "errors": 391
+  }
+ },
+ "T5": {
+  "0.85": {
+   "H": 0.70813,
+   "S": 0.7475,
+   "SR": 0.86875,
+   "CC": 1.0,
+   "CU": 1.0
+  },
+  "0.9": {
+   "H": 0.54604,
+   "S": 0.57812,
+   "SR": 0.66896,
+   "CC": 1.0,
+   "CU": 0.15604
+  },
+  "0.95": {
+   "H": 0.38542,
+   "S": 0.41854,
+   "SR": 0.48458,
+   "CC": 0.15604,
+   "CU": 0.15604
+  },
+  "0.98": {
+   "H": 0.25438,
+   "S": 0.28667,
+   "SR": 0.31292,
+   "CC": 0.15604,
+   "CU": 0.15604
+  },
+  "compressed_bits_mean": 748.5
+ },
+ "engine": {
+  "T1": {
+   "incumbent_cal": {
+    "precision": 1.0,
+    "recall": 0.3115
+   },
+   "alloc": {
+    "Tiger": 1,
+    "Lion": 0,
+    "Leopard": 0,
+    "Dragon": 0,
+    "WhiteDragon": 0,
+    "Bear": 0
+   },
+   "exit": "target_met",
+   "law0_refused": 0,
+   "evals_after_exit": 0,
+   "challenge": {
+    "champion": {
+     "passes": 2,
+     "sigma_mult": 3.872,
+     "eps": 0.156,
+     "c": 3.867,
+     "r6": 1,
+     "margin": 1.628,
+     "rounds": 3,
+     "tier_decay": 0.601,
+     "soft_recon": 0
+    },
+    "cal": 0.536,
+    "rep": null,
+    "hold": {
+     "precision": 1.0,
+     "recall": 0.53887
+    },
+    "incumbent_hold": {
+     "precision": 1.0,
+     "recall": 0.3095
+    },
+    "ablated_hold": {
+     "precision": 1.0,
+     "recall": 0.11213
+    },
+    "promoted": true,
+    "share_of_gain_removed_by_ablation": 1.8605
+   }
+  },
+  "T2": {
+   "incumbent_cal": {
+    "accuracy": 0.55083
+   },
+   "alloc": {
+    "Tiger": 3,
+    "Lion": 0,
+    "Leopard": 0,
+    "Dragon": 0,
+    "WhiteDragon": 0,
+    "Bear": 0
+   },
+   "exit": "target_met",
+   "law0_refused": 1,
+   "evals_after_exit": 0,
+   "challenge": {
+    "champion": {
+     "passes": 4,
+     "sigma_mult": 3.437,
+     "eps": 0.074,
+     "gate": 0.754,
+     "c": 0.976,
+     "r6": 1,
+     "soft": 1,
+     "temp": 1.492,
+     "anneal": 0.52
+    },
+    "cal": 0.5966666666666667,
+    "rep": null,
+    "hold": {
+     "accuracy": 0.59333
+    },
+    "incumbent_hold": {
+     "accuracy": 0.5525
+    },
+    "ablated_hold": {
+     "accuracy": 0.53667
+    },
+    "promoted": true,
+    "share_of_gain_removed_by_ablation": 1.3878
+   }
+  }
+ },
+ "genome": {
+  "entries": 10,
+  "chain_verifies": true
+ }
+}

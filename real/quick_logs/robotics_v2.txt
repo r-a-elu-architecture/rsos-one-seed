@@ -1,0 +1,18 @@
+# robotics_quick.py after 50450d0 (lexicographic value), cells 1-8 (5-8 new), output copied verbatim
+1 seed result 200.0 resource 34.64 R 5.7736
+1 default result 200.0 resource 42.492 R 4.7068
+2 seed result 179.0 resource 43.148 R 4.1485
+2 default result 178.0 resource 50.042 R 3.557
+3 seed result 163.0 resource 80.733 R 2.019
+3 default result 159.0 resource 88.023 R 1.8063
+4 seed result 161.0 resource 83.721 R 1.923
+4 default result 160.0 resource 91.822 R 1.7425
+5 seed result 178.0 resource 54.122 R 3.2889
+5 default result 178.0 resource 61.264 R 2.9055
+6 seed result 200.0 resource 22.146 R 9.0308
+6 default result 200.0 resource 32.049 R 6.2404
+7 seed result 181.0 resource 61.941 R 2.9222
+7 default result 176.0 resource 48.466 R 3.6314
+8 seed result 179.0 resource 54.737 R 3.2702
+8 default result 174.0 resource 58.495 R 2.9746
+Pareto wins 7/8; effort saved % 18.5 13.8 8.3 8.8 11.7 30.9 -27.8 6.4

@@ -1,0 +1,1 @@
+green dot of SEAL1 (sha256 of sorted JSON of SEAL_SEAL1.txt lines): 9a3ad5ebcadc4ec54e0b2bffbe97c6c267791758fb9438d18f3ea6f9f9c09beb

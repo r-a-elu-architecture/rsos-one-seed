@@ -1,0 +1,613 @@
+{
+ "schema": "registry/operators.schema.json",
+ "registry_version": "1.0.0",
+ "core_version": "1.0.0",
+ "status_ladder": [
+  "proposed",
+  "specified",
+  "implemented",
+  "tested",
+  "executed"
+ ],
+ "publication_rule": "An entry appears in the Core (market) layer only if status is tested or executed AND evidence is non-empty. Other entries appear in the research layer with a status badge.",
+ "entries": [
+  {
+   "id": "C-001",
+   "tech_name": "set",
+   "symbolic_name": "SET",
+   "aliases": [
+    "SET k \"text\""
+   ],
+   "kind": "operation",
+   "signature": "set(key: Key, value: Text)",
+   "semantics": "key := value, stored as text exactly as given.",
+   "preconditions": [
+    "key is a valid key"
+   ],
+   "postconditions": [
+    "state[key] == value"
+   ],
+   "errors": [
+    "E_NOT_KEY"
+   ],
+   "deterministic": true,
+   "familiar_equivalent": "JSON Patch add/replace",
+   "target": [
+    "state_runtime"
+   ],
+   "status": "executed",
+   "evidence": [
+    {
+     "id": "A7",
+     "report": "experiments/A7_REPORT.md"
+    },
+    {
+     "id": "A8",
+     "report": "experiments/A8_REPORT.md"
+    },
+    {
+     "id": "A8-families",
+     "report": "experiments/A8_FAMILIES_REPORT.md"
+    }
+   ],
+   "evidence_note": "Executed by blind planners in A7/A8 through the experiment harness's runtime; rsoslang.core.state replays the A5 plans to identical final states (experiments/a5_runtime_equivalence.py).",
+   "measured_uses_a7_a8": 2011,
+   "tests": [
+    "tests/core/test_conformance.py::test_set"
+   ],
+   "safety_class": "machine",
+   "origin": {
+    "register": [],
+    "language": "spec/LANGUAGE.md (SET)"
+   },
+   "since": "core-1.0.0"
+  },
+  {
+   "id": "C-002",
+   "tech_name": "copy",
+   "symbolic_name": "SET",
+   "aliases": [
+    "SET k other.key"
+   ],
+   "kind": "operation",
+   "signature": "copy(key: Key, from: Key)",
+   "semantics": "key := state[from].",
+   "preconditions": [
+    "from exists"
+   ],
+   "postconditions": [
+    "state[key] == old state[from]"
+   ],
+   "errors": [
+    "E_NOT_KEY",
+    "E_MISSING_KEY"
+   ],
+   "deterministic": true,
+   "familiar_equivalent": "JSON Patch copy",
+   "target": [
+    "state_runtime"
+   ],
+   "status": "tested",
+   "evidence": [],
+   "evidence_note": "",
+   "measured_uses_a7_a8": 0,
+   "tests": [
+    "tests/core/test_conformance.py::test_copy"
+   ],
+   "safety_class": "machine",
+   "origin": {
+    "register": [],
+    "language": "spec/LANGUAGE.md (SET)"
+   },
+   "since": "core-1.0.0"
+  },
+  {
+   "id": "C-003",
+   "tech_name": "delete",
+   "symbolic_name": "DEL",
+   "aliases": [],
+   "kind": "operation",
+   "signature": "delete(key: Key)",
+   "semantics": "Remove key.",
+   "preconditions": [
+    "key exists"
+   ],
+   "postconditions": [
+    "key not in state"
+   ],
+   "errors": [
+    "E_NOT_KEY",
+    "E_MISSING_KEY"
+   ],
+   "deterministic": true,
+   "familiar_equivalent": "JSON Patch remove",
+   "target": [
+    "state_runtime"
+   ],
+   "status": "executed",
+   "evidence": [
+    {
+     "id": "A7",
+     "report": "experiments/A7_REPORT.md"
+    },
+    {
+     "id": "A8",
+     "report": "experiments/A8_REPORT.md"
+    },
+    {
+     "id": "A8-families",
+     "report": "experiments/A8_FAMILIES_REPORT.md"
+    }
+   ],
+   "evidence_note": "Executed by blind planners in A7/A8 through the experiment harness's runtime; rsoslang.core.state replays the A5 plans to identical final states (experiments/a5_runtime_equivalence.py).",
+   "measured_uses_a7_a8": 692,
+   "tests": [
+    "tests/core/test_conformance.py::test_delete"
+   ],
+   "safety_class": "machine",
+   "origin": {
+    "register": [],
+    "language": "spec/LANGUAGE.md (DEL)"
+   },
+   "since": "core-1.0.0"
+  },
+  {
+   "id": "C-004",
+   "tech_name": "derive",
+   "symbolic_name": "INHERIT",
+   "aliases": [],
+   "kind": "operation",
+   "signature": "derive(dst: Key, src: Key, add: Int = 0, max: Int | null = null)",
+   "semantics": "If add == 0 and max is null: dst := state[src] (any text). Otherwise dst := min(int(state[src]) + add, max), as decimal text.",
+   "preconditions": [
+    "src exists",
+    "if add != 0 or max is set: state[src] is an integer"
+   ],
+   "postconditions": [
+    "dst holds the derived value; src unchanged unless dst == src"
+   ],
+   "errors": [
+    "E_NOT_KEY",
+    "E_MISSING_KEY",
+    "E_NOT_INTEGER"
+   ],
+   "deterministic": true,
+   "familiar_equivalent": "computed field",
+   "target": [
+    "state_runtime"
+   ],
+   "status": "executed",
+   "evidence": [
+    {
+     "id": "A7",
+     "report": "experiments/A7_REPORT.md"
+    },
+    {
+     "id": "A8",
+     "report": "experiments/A8_REPORT.md"
+    },
+    {
+     "id": "A8-families",
+     "report": "experiments/A8_FAMILIES_REPORT.md"
+    }
+   ],
+   "evidence_note": "Executed by blind planners in A7/A8 through the experiment harness's runtime; rsoslang.core.state replays the A5 plans to identical final states (experiments/a5_runtime_equivalence.py).",
+   "measured_uses_a7_a8": 5829,
+   "tests": [
+    "tests/core/test_conformance.py::test_derive"
+   ],
+   "safety_class": "machine",
+   "origin": {
+    "register": [],
+    "language": "spec/LANGUAGE.md (INHERIT)"
+   },
+   "since": "core-1.0.0"
+  },
+  {
+   "id": "C-005",
+   "tech_name": "sum_into",
+   "symbolic_name": "FUSE",
+   "aliases": [],
+   "kind": "operation",
+   "signature": "sum_into(dst: Key, a: Key, b: Key, max: Int | null = null)",
+   "semantics": "dst := min(int(state[a]) + int(state[b]), max).",
+   "preconditions": [
+    "a and b exist and hold integers"
+   ],
+   "postconditions": [
+    "dst holds the sum"
+   ],
+   "errors": [
+    "E_NOT_KEY",
+    "E_MISSING_KEY",
+    "E_NOT_INTEGER"
+   ],
+   "deterministic": true,
+   "familiar_equivalent": "reducer",
+   "target": [
+    "state_runtime"
+   ],
+   "status": "executed",
+   "evidence": [
+    {
+     "id": "A7",
+     "report": "experiments/A7_REPORT.md"
+    },
+    {
+     "id": "A8",
+     "report": "experiments/A8_REPORT.md"
+    },
+    {
+     "id": "A8-families",
+     "report": "experiments/A8_FAMILIES_REPORT.md"
+    }
+   ],
+   "evidence_note": "Executed by blind planners in A7/A8 through the experiment harness's runtime; rsoslang.core.state replays the A5 plans to identical final states (experiments/a5_runtime_equivalence.py).",
+   "measured_uses_a7_a8": 1099,
+   "tests": [
+    "tests/core/test_conformance.py::test_sum_into"
+   ],
+   "safety_class": "machine",
+   "origin": {
+    "register": [
+     "U60"
+    ],
+    "language": "spec/LANGUAGE.md (FUSE)"
+   },
+   "since": "core-1.0.0"
+  },
+  {
+   "id": "C-006",
+   "tech_name": "multiply",
+   "symbolic_name": "SCALE",
+   "aliases": [],
+   "kind": "operation",
+   "signature": "multiply(key: Key, factor: Number >= 0, max: Int | null = null)",
+   "semantics": "key := min(int(state[key]) * factor, max); the product MUST be a whole number.",
+   "preconditions": [
+    "key exists and holds an integer",
+    "the product is a whole number"
+   ],
+   "postconditions": [
+    "key holds the product"
+   ],
+   "errors": [
+    "E_NOT_KEY",
+    "E_MISSING_KEY",
+    "E_NOT_INTEGER",
+    "E_FRACTION"
+   ],
+   "deterministic": true,
+   "familiar_equivalent": "scalar update",
+   "target": [
+    "state_runtime"
+   ],
+   "status": "executed",
+   "evidence": [
+    {
+     "id": "A7",
+     "report": "experiments/A7_REPORT.md"
+    },
+    {
+     "id": "A8",
+     "report": "experiments/A8_REPORT.md"
+    },
+    {
+     "id": "A8-families",
+     "report": "experiments/A8_FAMILIES_REPORT.md"
+    }
+   ],
+   "evidence_note": "Executed by blind planners in A7/A8 through the experiment harness's runtime; rsoslang.core.state replays the A5 plans to identical final states (experiments/a5_runtime_equivalence.py).",
+   "measured_uses_a7_a8": 645,
+   "tests": [
+    "tests/core/test_conformance.py::test_multiply"
+   ],
+   "safety_class": "machine",
+   "origin": {
+    "register": [],
+    "language": "spec/LANGUAGE.md (SCALE)"
+   },
+   "since": "core-1.0.0"
+  },
+  {
+   "id": "C-007",
+   "tech_name": "select_if",
+   "symbolic_name": "ROUTE",
+   "aliases": [
+    "route by state"
+   ],
+   "kind": "operation",
+   "signature": "select_if(cond_key: Key, equals: Text, dst: Key, then: Text, else: Text)",
+   "semantics": "dst := then if state[cond_key] == equals, else dst := else.",
+   "preconditions": [
+    "cond_key exists"
+   ],
+   "postconditions": [
+    "dst holds then or else"
+   ],
+   "errors": [
+    "E_NOT_KEY",
+    "E_MISSING_KEY"
+   ],
+   "deterministic": true,
+   "familiar_equivalent": "conditional assignment",
+   "target": [
+    "state_runtime"
+   ],
+   "status": "executed",
+   "evidence": [
+    {
+     "id": "A7",
+     "report": "experiments/A7_REPORT.md"
+    },
+    {
+     "id": "A8",
+     "report": "experiments/A8_REPORT.md"
+    },
+    {
+     "id": "A8-families",
+     "report": "experiments/A8_FAMILIES_REPORT.md"
+    }
+   ],
+   "evidence_note": "Executed by blind planners in A7/A8 through the experiment harness's runtime; rsoslang.core.state replays the A5 plans to identical final states (experiments/a5_runtime_equivalence.py).",
+   "measured_uses_a7_a8": 696,
+   "tests": [
+    "tests/core/test_conformance.py::test_select_if"
+   ],
+   "safety_class": "machine",
+   "origin": {
+    "register": [
+     "U5"
+    ],
+    "language": "spec/LANGUAGE.md (ROUTE)"
+   },
+   "since": "core-1.0.0"
+  },
+  {
+   "id": "C-008",
+   "tech_name": "reassign_where",
+   "symbolic_name": "REHOST",
+   "aliases": [
+    "re-host"
+   ],
+   "kind": "operation",
+   "signature": "reassign_where(field: Name, from: Text, to: Text)",
+   "semantics": "For every key whose last segment is field and whose value equals from: value := to. No match is not an error.",
+   "preconditions": [],
+   "postconditions": [
+    "no key ending in .field holds from"
+   ],
+   "errors": [],
+   "deterministic": true,
+   "familiar_equivalent": "UPDATE … SET field = to WHERE field = from",
+   "target": [
+    "state_runtime"
+   ],
+   "status": "executed",
+   "evidence": [
+    {
+     "id": "A7",
+     "report": "experiments/A7_REPORT.md"
+    },
+    {
+     "id": "A8",
+     "report": "experiments/A8_REPORT.md"
+    },
+    {
+     "id": "A8-families",
+     "report": "experiments/A8_FAMILIES_REPORT.md"
+    }
+   ],
+   "evidence_note": "Executed by blind planners in A7/A8 through the experiment harness's runtime; rsoslang.core.state replays the A5 plans to identical final states (experiments/a5_runtime_equivalence.py).",
+   "measured_uses_a7_a8": 718,
+   "tests": [
+    "tests/core/test_conformance.py::test_reassign_where"
+   ],
+   "safety_class": "machine",
+   "origin": {
+    "register": [
+     "U18"
+    ],
+    "language": "spec/LANGUAGE.md (REHOST)"
+   },
+   "since": "core-1.0.0"
+  },
+  {
+   "id": "C-009",
+   "tech_name": "derive_where",
+   "symbolic_name": "FLOW",
+   "aliases": [
+    "FLOW field OVER cond_field value +n CAP m"
+   ],
+   "kind": "operation",
+   "signature": "derive_where(field: Name, cond_field: Name, equals: Text, add: Int, max: Int | null = null)",
+   "semantics": "For every object whose cond_field equals the given text: field := min(int(field) + add, max). No match is not an error.",
+   "preconditions": [
+    "every matched value of field is an integer"
+   ],
+   "postconditions": [
+    "every matched object's field is increased and capped"
+   ],
+   "errors": [
+    "E_PARSE",
+    "E_NOT_INTEGER"
+   ],
+   "deterministic": true,
+   "familiar_equivalent": "UPDATE … SET field = field + n WHERE cond_field = x",
+   "target": [
+    "state_runtime"
+   ],
+   "status": "tested",
+   "evidence": [],
+   "evidence_note": "Gap D of experiments/OPERATION_TABLE.md; specified with its predicted properties before it was built (experiments/PREREGISTRATION_SC2.md, 19 Nov 2026 06:33 UTC); implemented and tested 19 Nov. Enters the Core layer only after the SC2 run (publication rule).",
+   "measured_uses_a7_a8": 0,
+   "tests": [
+    "tests/core/test_conformance.py::test_derive_where"
+   ],
+   "safety_class": "machine",
+   "origin": {
+    "register": [
+     "U3",
+     "U22"
+    ],
+    "language": "spec/LANGUAGE.md (FLOW … DIRECTION … TO)"
+   },
+   "since": "proposed after core-1.0.0"
+  },
+  {
+   "id": "C-101",
+   "tech_name": "state_digest",
+   "symbolic_name": "green dot",
+   "aliases": [
+    "dot"
+   ],
+   "kind": "function",
+   "signature": "state_digest(state: Map[Key, Text]) -> Hex12",
+   "semantics": "First 12 hex digits of SHA-256 over the canonical JSON of the state (keys sorted, values as text, separators ',' and ':', UTF-8).",
+   "preconditions": [],
+   "postconditions": [
+    "equal states have equal digests"
+   ],
+   "errors": [],
+   "deterministic": true,
+   "familiar_equivalent": "content hash",
+   "target": [
+    "state_runtime"
+   ],
+   "status": "executed",
+   "evidence": [
+    {
+     "id": "A4",
+     "report": "experiments/A4_REPORT.md"
+    },
+    {
+     "id": "A5",
+     "report": "experiments/A5_REPORT.md"
+    }
+   ],
+   "evidence_note": "Drift detection by snapshot digest in A4/A5 (and A7/A8: every injected drift caught). Canonical encoding changed in 0.4.0.",
+   "measured_uses_a7_a8": null,
+   "tests": [
+    "tests/core/test_conformance.py::test_state_digest_vectors"
+   ],
+   "safety_class": "machine",
+   "origin": {
+    "register": [
+     "U89"
+    ],
+    "language": "green dot"
+   },
+   "since": "core-1.0.0"
+  },
+  {
+   "id": "C-102",
+   "tech_name": "reconcile",
+   "symbolic_name": "heal / sync",
+   "aliases": [
+    "heal",
+    "sync"
+   ],
+   "kind": "function",
+   "signature": "reconcile(replica: Map[Key, Text]) -> {healed: [Key], state, digest, model_calls: 0}",
+   "semantics": "If digest(replica) equals the agreed digest, nothing changes; otherwise every key that differs is restored from the agreed state. Zero model calls.",
+   "preconditions": [],
+   "postconditions": [
+    "the returned state equals the agreed state"
+   ],
+   "errors": [],
+   "deterministic": true,
+   "familiar_equivalent": "anti-entropy / replica repair",
+   "target": [
+    "state_runtime"
+   ],
+   "status": "executed",
+   "evidence": [
+    {
+     "id": "A4",
+     "report": "experiments/A4_REPORT.md"
+    },
+    {
+     "id": "A5",
+     "report": "experiments/A5_REPORT.md"
+    }
+   ],
+   "evidence_note": "Every injected drift healed with zero model calls (A3c–A8).",
+   "measured_uses_a7_a8": null,
+   "tests": [
+    "tests/core/test_conformance.py::test_reconcile"
+   ],
+   "safety_class": "machine",
+   "origin": {
+    "register": [
+     "U90",
+     "U1",
+     "U6"
+    ],
+    "language": "heal"
+   },
+   "since": "core-1.0.0"
+  }
+ ],
+ "interfaces": [
+  {
+   "tech_name": "rsos_state_new",
+   "kind": "mcp_tool",
+   "layer": "core"
+  },
+  {
+   "tech_name": "rsos_state_prompt",
+   "kind": "mcp_tool",
+   "layer": "core"
+  },
+  {
+   "tech_name": "rsos_state_apply",
+   "kind": "mcp_tool",
+   "layer": "core"
+  },
+  {
+   "tech_name": "rsos_state_sync",
+   "kind": "mcp_tool",
+   "layer": "core"
+  },
+  {
+   "tech_name": "rsos_state_get",
+   "kind": "mcp_tool",
+   "layer": "core"
+  },
+  {
+   "tech_name": "rsos_check",
+   "kind": "mcp_tool",
+   "layer": "language"
+  },
+  {
+   "tech_name": "rsos_compile",
+   "kind": "mcp_tool",
+   "layer": "language"
+  },
+  {
+   "tech_name": "rsos_statements",
+   "kind": "mcp_tool",
+   "layer": "language"
+  },
+  {
+   "tech_name": "rsos_session",
+   "kind": "mcp_tool",
+   "layer": "language"
+  },
+  {
+   "tech_name": "rsos_paint_graph",
+   "kind": "mcp_tool",
+   "layer": "language"
+  },
+  {
+   "tech_name": "rsos_paint_workflow",
+   "kind": "mcp_tool",
+   "layer": "language"
+  },
+  {
+   "tech_name": "rsos_apply_gestures",
+   "kind": "mcp_tool",
+   "layer": "language"
+  }
+ ]
+}

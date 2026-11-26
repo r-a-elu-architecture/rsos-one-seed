@@ -1,0 +1,3600 @@
+{
+ "checks": {
+  "P1_exponential_unfiltered": true,
+  "P2_bounded_but_creating": false,
+  "P3_deficit_targeting": true,
+  "P4_domains": true,
+  "P5_lion_tiger": false,
+  "P6_heal_coverage": false
+ },
+ "code_commit": "ddffee71e14926becc4154549598efce8a465ce0",
+ "experiment": "e1_dragon",
+ "gen1": [
+  {
+   "code": "CRI\u00d7pattern completion",
+   "deficit": 0.0,
+   "domain": "neuroscience",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "consent and Spine checks (T1/U1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "containment",
+    "integrity",
+    "recovery"
+   ]
+  },
+  {
+   "code": "CRI\u00d7attention gating",
+   "deficit": 0.33333333333333337,
+   "domain": "neuroscience",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "bias",
+    "containment",
+    "integrity"
+   ]
+  },
+  {
+   "code": "CRI\u00d7metacognitive confidence",
+   "deficit": 0.33333333333333337,
+   "domain": "neuroscience",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "awareness",
+    "containment",
+    "integrity"
+   ]
+  },
+  {
+   "code": "CRI\u00d7reserve buffer",
+   "deficit": 0.0,
+   "domain": "economics",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "consent and Spine checks (T1/U1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "containment",
+    "integrity",
+    "recovery"
+   ]
+  },
+  {
+   "code": "CRI\u00d7phase coherence",
+   "deficit": 0.0,
+   "domain": "physics",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "containment",
+    "integrity",
+    "resonance"
+   ]
+  },
+  {
+   "code": "CRI\u00d7damping ratio",
+   "deficit": 0.0,
+   "domain": "physics",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "consent and Spine checks (T1/U1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "containment",
+    "integrity",
+    "recovery"
+   ]
+  },
+  {
+   "code": "CRI\u00d7feedforward control",
+   "deficit": 0.33333333333333337,
+   "domain": "physics",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "anticipation",
+    "containment",
+    "integrity"
+   ]
+  },
+  {
+   "code": "CRI\u00d7bond energy",
+   "deficit": 0.0,
+   "domain": "chemistry",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "containment",
+    "coupling",
+    "integrity"
+   ]
+  },
+  {
+   "code": "CRI\u00d7Reynolds regime",
+   "deficit": 0.0,
+   "domain": "aerodynamics",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "runtime propagation (R-003)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "containment",
+    "integrity",
+    "propagation"
+   ]
+  },
+  {
+   "code": "CRI\u00d7boundary layer",
+   "deficit": 0.0,
+   "domain": "aerodynamics",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "containment",
+    "integrity"
+   ]
+  },
+  {
+   "code": "CRI\u00d7stall margin",
+   "deficit": 0.33333333333333337,
+   "domain": "aerodynamics",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "anticipation",
+    "containment",
+    "integrity"
+   ]
+  },
+  {
+   "code": "CRI\u00d7trust index",
+   "deficit": 0.0,
+   "domain": "socio_technical",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "containment",
+    "coupling",
+    "integrity"
+   ]
+  },
+  {
+   "code": "CRI\u00d7consent coverage",
+   "deficit": 0.0,
+   "domain": "socio_technical",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "containment",
+    "ethics",
+    "integrity"
+   ]
+  },
+  {
+   "code": "CRI\u00d7autonomy delegation",
+   "deficit": 0.33333333333333337,
+   "domain": "socio_technical",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "autonomy",
+    "containment",
+    "integrity"
+   ]
+  },
+  {
+   "code": "CRI\u00d7bit error rate",
+   "deficit": 0.0,
+   "domain": "communication",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "green-dot drift detection (C1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "containment",
+    "drift",
+    "integrity"
+   ]
+  },
+  {
+   "code": "CRI\u00d7haptic discrimination",
+   "deficit": 0.0,
+   "domain": "communication",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "containment",
+    "integrity"
+   ]
+  },
+  {
+   "code": "SRI\u00d7autonomy delegation",
+   "deficit": 0.33333333333333337,
+   "domain": "socio_technical",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "operation depth (U1)"
+   ],
+   "relations": [
+    "autonomy",
+    "containment",
+    "depth"
+   ]
+  },
+  {
+   "code": "RSF\u00d7allostatic load",
+   "deficit": 0.25,
+   "domain": "biology",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "green-dot drift detection (C1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "balance",
+    "drift",
+    "integrity",
+    "persistence"
+   ]
+  },
+  {
+   "code": "RSF\u00d7immune memory",
+   "deficit": 0.0,
+   "domain": "biology",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "glyph lineage continuity (U1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "integrity",
+    "persistence",
+    "recovery"
+   ]
+  },
+  {
+   "code": "RSF\u00d7pattern completion",
+   "deficit": 0.0,
+   "domain": "neuroscience",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "glyph lineage continuity (U1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "integrity",
+    "persistence",
+    "recovery"
+   ]
+  },
+  {
+   "code": "RSF\u00d7memory consolidation",
+   "deficit": 0.0,
+   "domain": "neuroscience",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "palace size ratio (C1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "compression",
+    "integrity",
+    "persistence"
+   ]
+  },
+  {
+   "code": "RSF\u00d7metacognitive confidence",
+   "deficit": 0.33333333333333337,
+   "domain": "neuroscience",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "awareness",
+    "integrity",
+    "persistence"
+   ]
+  },
+  {
+   "code": "RSF\u00d7phase coherence",
+   "deficit": 0.0,
+   "domain": "physics",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "integrity",
+    "persistence",
+    "resonance"
+   ]
+  },
+  {
+   "code": "RSF\u00d7hysteresis",
+   "deficit": 0.0,
+   "domain": "physics",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "glyph lineage graph (U1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "integrity",
+    "lineage",
+    "persistence"
+   ]
+  },
+  {
+   "code": "RSF\u00d7half-life",
+   "deficit": 0.0,
+   "domain": "chemistry",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "integrity",
+    "persistence"
+   ]
+  },
+  {
+   "code": "RSF\u00d7bond energy",
+   "deficit": 0.0,
+   "domain": "chemistry",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "coupling",
+    "integrity",
+    "persistence"
+   ]
+  },
+  {
+   "code": "RSF\u00d7Reynolds regime",
+   "deficit": 0.0,
+   "domain": "aerodynamics",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "runtime propagation (R-003)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "integrity",
+    "persistence",
+    "propagation"
+   ]
+  },
+  {
+   "code": "RSF\u00d7laminar flow",
+   "deficit": 0.0,
+   "domain": "aerodynamics",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "integrity",
+    "persistence"
+   ]
+  },
+  {
+   "code": "RSF\u00d7trust index",
+   "deficit": 0.0,
+   "domain": "socio_technical",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "coupling",
+    "integrity",
+    "persistence"
+   ]
+  },
+  {
+   "code": "RSF\u00d7bit error rate",
+   "deficit": 0.0,
+   "domain": "communication",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "green-dot drift detection (C1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "drift",
+    "integrity",
+    "persistence"
+   ]
+  },
+  {
+   "code": "RSF\u00d7haptic discrimination",
+   "deficit": 0.0,
+   "domain": "communication",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "integrity",
+    "persistence"
+   ]
+  },
+  {
+   "code": "SEP\u00d7allostatic load",
+   "deficit": 0.25,
+   "domain": "biology",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "green-dot drift detection (C1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "balance",
+    "drift",
+    "persistence",
+    "propagation"
+   ]
+  },
+  {
+   "code": "SEP\u00d7immune memory",
+   "deficit": 0.0,
+   "domain": "biology",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "glyph lineage continuity (U1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "persistence",
+    "propagation",
+    "recovery"
+   ]
+  },
+  {
+   "code": "SEP\u00d7signal transduction gain",
+   "deficit": 0.0,
+   "domain": "biology",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "lens co-lighting (S1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "coupling",
+    "persistence",
+    "propagation"
+   ]
+  },
+  {
+   "code": "SEP\u00d7myelin conduction velocity",
+   "deficit": 0.0,
+   "domain": "neuroscience",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "persistence",
+    "propagation"
+   ]
+  },
+  {
+   "code": "SEP\u00d7memory consolidation",
+   "deficit": 0.0,
+   "domain": "neuroscience",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "palace size ratio (C1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "compression",
+    "persistence",
+    "propagation"
+   ]
+  },
+  {
+   "code": "SEP\u00d7network effect",
+   "deficit": 0.0,
+   "domain": "economics",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "lens co-lighting (S1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "coupling",
+    "persistence",
+    "propagation"
+   ]
+  },
+  {
+   "code": "SEP\u00d7liquidity",
+   "deficit": 0.33333333333333337,
+   "domain": "economics",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "balance",
+    "persistence",
+    "propagation"
+   ]
+  },
+  {
+   "code": "SEP\u00d7resonance quality factor",
+   "deficit": 0.0,
+   "domain": "physics",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "lens co-lighting (S1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "persistence",
+    "propagation",
+    "resonance"
+   ]
+  },
+  {
+   "code": "SEP\u00d7hysteresis",
+   "deficit": 0.0,
+   "domain": "physics",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "glyph lineage graph (U1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "lineage",
+    "persistence",
+    "propagation"
+   ]
+  },
+  {
+   "code": "SEP\u00d7reaction rate",
+   "deficit": 0.0,
+   "domain": "chemistry",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "persistence",
+    "propagation"
+   ]
+  },
+  {
+   "code": "SEP\u00d7vortex shedding",
+   "deficit": 0.0,
+   "domain": "aerodynamics",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "lens co-lighting (S1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "persistence",
+    "propagation",
+    "resonance"
+   ]
+  },
+  {
+   "code": "SEP\u00d7adoption S-curve",
+   "deficit": 0.0,
+   "domain": "socio_technical",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "glyph lineage graph (U1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "lineage",
+    "persistence",
+    "propagation"
+   ]
+  },
+  {
+   "code": "SEP\u00d7norm diffusion",
+   "deficit": 0.0,
+   "domain": "socio_technical",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "glyph lineage continuity (U1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "ethics",
+    "persistence",
+    "propagation"
+   ]
+  },
+  {
+   "code": "SEP\u00d7channel capacity",
+   "deficit": 0.0,
+   "domain": "communication",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "palace size ratio (C1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "compression",
+    "persistence",
+    "propagation"
+   ]
+  },
+  {
+   "code": "SEP\u00d7latency",
+   "deficit": 0.0,
+   "domain": "communication",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "persistence",
+    "propagation"
+   ]
+  },
+  {
+   "code": "ARC\u00d7mutation rate",
+   "deficit": 0.33333333333333337,
+   "domain": "biology",
+   "measured_by": [
+    "glyph lineage graph (U1)",
+    "green-dot drift detection (C1)"
+   ],
+   "relations": [
+    "autonomy",
+    "drift",
+    "lineage"
+   ]
+  },
+  {
+   "code": "ARC\u00d7hysteresis",
+   "deficit": 0.33333333333333337,
+   "domain": "physics",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "glyph lineage graph (U1)"
+   ],
+   "relations": [
+    "autonomy",
+    "lineage",
+    "persistence"
+   ]
+  },
+  {
+   "code": "ARC\u00d7adoption S-curve",
+   "deficit": 0.33333333333333337,
+   "domain": "socio_technical",
+   "measured_by": [
+    "glyph lineage graph (U1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "autonomy",
+    "lineage",
+    "propagation"
+   ]
+  },
+  {
+   "code": "ARC\u00d7autonomy delegation",
+   "deficit": 0.33333333333333337,
+   "domain": "socio_technical",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "glyph lineage graph (U1)"
+   ],
+   "relations": [
+    "autonomy",
+    "containment",
+    "lineage"
+   ]
+  },
+  {
+   "code": "SAR\u00d7autonomy delegation",
+   "deficit": 0.5,
+   "domain": "socio_technical",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)"
+   ],
+   "relations": [
+    "autonomy",
+    "containment"
+   ]
+  },
+  {
+   "code": "LGC\u00d7allostatic load",
+   "deficit": 0.25,
+   "domain": "biology",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "glyph lineage graph (U1)",
+    "green-dot drift detection (C1)"
+   ],
+   "relations": [
+    "balance",
+    "drift",
+    "lineage",
+    "persistence"
+   ]
+  },
+  {
+   "code": "LGC\u00d7immune memory",
+   "deficit": 0.0,
+   "domain": "biology",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "glyph lineage continuity (U1)",
+    "glyph lineage graph (U1)"
+   ],
+   "relations": [
+    "lineage",
+    "persistence",
+    "recovery"
+   ]
+  },
+  {
+   "code": "LGC\u00d7mutation rate",
+   "deficit": 0.0,
+   "domain": "biology",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "glyph lineage graph (U1)",
+    "green-dot drift detection (C1)"
+   ],
+   "relations": [
+    "drift",
+    "lineage",
+    "persistence"
+   ]
+  },
+  {
+   "code": "LGC\u00d7memory consolidation",
+   "deficit": 0.0,
+   "domain": "neuroscience",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "glyph lineage graph (U1)",
+    "palace size ratio (C1)"
+   ],
+   "relations": [
+    "compression",
+    "lineage",
+    "persistence"
+   ]
+  },
+  {
+   "code": "LGC\u00d7resonance quality factor",
+   "deficit": 0.0,
+   "domain": "physics",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "glyph lineage graph (U1)",
+    "lens co-lighting (S1)"
+   ],
+   "relations": [
+    "lineage",
+    "persistence",
+    "resonance"
+   ]
+  },
+  {
+   "code": "LGC\u00d7hysteresis",
+   "deficit": 0.0,
+   "domain": "physics",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "glyph lineage graph (U1)"
+   ],
+   "relations": [
+    "lineage",
+    "persistence"
+   ]
+  },
+  {
+   "code": "LGC\u00d7half-life",
+   "deficit": 0.0,
+   "domain": "chemistry",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "glyph lineage graph (U1)"
+   ],
+   "relations": [
+    "lineage",
+    "persistence"
+   ]
+  },
+  {
+   "code": "LAW\u00d7allostatic load",
+   "deficit": 0.25,
+   "domain": "biology",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "glyph lineage continuity (U1)",
+    "green-dot drift detection (C1)"
+   ],
+   "relations": [
+    "balance",
+    "containment",
+    "drift",
+    "persistence"
+   ]
+  },
+  {
+   "code": "LAW\u00d7immune memory",
+   "deficit": 0.0,
+   "domain": "biology",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "consent and Spine checks (T1/U1)",
+    "glyph lineage continuity (U1)"
+   ],
+   "relations": [
+    "containment",
+    "persistence",
+    "recovery"
+   ]
+  },
+  {
+   "code": "LAW\u00d7attention gating",
+   "deficit": 0.33333333333333337,
+   "domain": "neuroscience",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "glyph lineage continuity (U1)"
+   ],
+   "relations": [
+    "bias",
+    "containment",
+    "persistence"
+   ]
+  },
+  {
+   "code": "LAW\u00d7memory consolidation",
+   "deficit": 0.0,
+   "domain": "neuroscience",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "glyph lineage continuity (U1)",
+    "palace size ratio (C1)"
+   ],
+   "relations": [
+    "compression",
+    "containment",
+    "persistence"
+   ]
+  },
+  {
+   "code": "LAW\u00d7reserve buffer",
+   "deficit": 0.0,
+   "domain": "economics",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "consent and Spine checks (T1/U1)",
+    "glyph lineage continuity (U1)"
+   ],
+   "relations": [
+    "containment",
+    "persistence",
+    "recovery"
+   ]
+  },
+  {
+   "code": "LAW\u00d7resonance quality factor",
+   "deficit": 0.0,
+   "domain": "physics",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "glyph lineage continuity (U1)",
+    "lens co-lighting (S1)"
+   ],
+   "relations": [
+    "containment",
+    "persistence",
+    "resonance"
+   ]
+  },
+  {
+   "code": "LAW\u00d7damping ratio",
+   "deficit": 0.0,
+   "domain": "physics",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "consent and Spine checks (T1/U1)",
+    "glyph lineage continuity (U1)"
+   ],
+   "relations": [
+    "containment",
+    "persistence",
+    "recovery"
+   ]
+  },
+  {
+   "code": "LAW\u00d7hysteresis",
+   "deficit": 0.0,
+   "domain": "physics",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "glyph lineage continuity (U1)",
+    "glyph lineage graph (U1)"
+   ],
+   "relations": [
+    "containment",
+    "lineage",
+    "persistence"
+   ]
+  },
+  {
+   "code": "LAW\u00d7feedforward control",
+   "deficit": 0.33333333333333337,
+   "domain": "physics",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "glyph lineage continuity (U1)"
+   ],
+   "relations": [
+    "anticipation",
+    "containment",
+    "persistence"
+   ]
+  },
+  {
+   "code": "LAW\u00d7half-life",
+   "deficit": 0.0,
+   "domain": "chemistry",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "glyph lineage continuity (U1)"
+   ],
+   "relations": [
+    "containment",
+    "persistence"
+   ]
+  },
+  {
+   "code": "LAW\u00d7boundary layer",
+   "deficit": 0.0,
+   "domain": "aerodynamics",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "glyph lineage continuity (U1)"
+   ],
+   "relations": [
+    "containment",
+    "persistence"
+   ]
+  },
+  {
+   "code": "LAW\u00d7stall margin",
+   "deficit": 0.33333333333333337,
+   "domain": "aerodynamics",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "glyph lineage continuity (U1)"
+   ],
+   "relations": [
+    "anticipation",
+    "containment",
+    "persistence"
+   ]
+  },
+  {
+   "code": "LAW\u00d7consent coverage",
+   "deficit": 0.0,
+   "domain": "socio_technical",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "glyph lineage continuity (U1)"
+   ],
+   "relations": [
+    "containment",
+    "ethics",
+    "persistence"
+   ]
+  },
+  {
+   "code": "LAW\u00d7autonomy delegation",
+   "deficit": 0.33333333333333337,
+   "domain": "socio_technical",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "glyph lineage continuity (U1)"
+   ],
+   "relations": [
+    "autonomy",
+    "containment",
+    "persistence"
+   ]
+  },
+  {
+   "code": "RIF\u00d7prediction error",
+   "deficit": 0.5,
+   "domain": "neuroscience",
+   "measured_by": [
+    "green-dot drift detection (C1)"
+   ],
+   "relations": [
+    "anticipation",
+    "drift"
+   ]
+  },
+  {
+   "code": "RIF\u00d7feedforward control",
+   "deficit": 0.5,
+   "domain": "physics",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)"
+   ],
+   "relations": [
+    "anticipation",
+    "containment"
+   ]
+  },
+  {
+   "code": "RIF\u00d7stall margin",
+   "deficit": 0.5,
+   "domain": "aerodynamics",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)"
+   ],
+   "relations": [
+    "anticipation",
+    "containment"
+   ]
+  },
+  {
+   "code": "RIF\u00d7predictive prefetch",
+   "deficit": 0.5,
+   "domain": "communication",
+   "measured_by": [
+    "palace size ratio (C1)"
+   ],
+   "relations": [
+    "anticipation",
+    "compression"
+   ]
+  },
+  {
+   "code": "RAI\u00d7allostatic load",
+   "deficit": 0.5,
+   "domain": "biology",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "green-dot drift detection (C1)"
+   ],
+   "relations": [
+    "autonomy",
+    "balance",
+    "drift",
+    "persistence"
+   ]
+  },
+  {
+   "code": "RAI\u00d7immune memory",
+   "deficit": 0.33333333333333337,
+   "domain": "biology",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "glyph lineage continuity (U1)"
+   ],
+   "relations": [
+    "autonomy",
+    "persistence",
+    "recovery"
+   ]
+  },
+  {
+   "code": "RAI\u00d7memory consolidation",
+   "deficit": 0.33333333333333337,
+   "domain": "neuroscience",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "palace size ratio (C1)"
+   ],
+   "relations": [
+    "autonomy",
+    "compression",
+    "persistence"
+   ]
+  },
+  {
+   "code": "RAI\u00d7resonance quality factor",
+   "deficit": 0.33333333333333337,
+   "domain": "physics",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "lens co-lighting (S1)"
+   ],
+   "relations": [
+    "autonomy",
+    "persistence",
+    "resonance"
+   ]
+  },
+  {
+   "code": "RAI\u00d7half-life",
+   "deficit": 0.5,
+   "domain": "chemistry",
+   "measured_by": [
+    "glyph lineage continuity (U1)"
+   ],
+   "relations": [
+    "autonomy",
+    "persistence"
+   ]
+  },
+  {
+   "code": "MCRAL\u00d7metacognitive confidence",
+   "deficit": 0.5,
+   "domain": "neuroscience",
+   "measured_by": [
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "awareness",
+    "integrity"
+   ]
+  },
+  {
+   "code": "RPB\u00d7attention gating",
+   "deficit": 0.5,
+   "domain": "neuroscience",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)"
+   ],
+   "relations": [
+    "bias",
+    "containment"
+   ]
+  },
+  {
+   "code": "LLMI\u00d7attention gating",
+   "deficit": 0.33333333333333337,
+   "domain": "neuroscience",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "lens co-lighting (S1)"
+   ],
+   "relations": [
+    "bias",
+    "containment",
+    "coupling"
+   ]
+  },
+  {
+   "code": "SME\u00d7allostatic load",
+   "deficit": 0.25,
+   "domain": "biology",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "green-dot drift detection (C1)",
+    "lens co-lighting (S1)"
+   ],
+   "relations": [
+    "balance",
+    "coupling",
+    "drift",
+    "persistence"
+   ]
+  },
+  {
+   "code": "SME\u00d7immune memory",
+   "deficit": 0.0,
+   "domain": "biology",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "glyph lineage continuity (U1)",
+    "lens co-lighting (S1)"
+   ],
+   "relations": [
+    "coupling",
+    "persistence",
+    "recovery"
+   ]
+  },
+  {
+   "code": "SME\u00d7memory consolidation",
+   "deficit": 0.0,
+   "domain": "neuroscience",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "lens co-lighting (S1)",
+    "palace size ratio (C1)"
+   ],
+   "relations": [
+    "compression",
+    "coupling",
+    "persistence"
+   ]
+  },
+  {
+   "code": "SME\u00d7resonance quality factor",
+   "deficit": 0.0,
+   "domain": "physics",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "lens co-lighting (S1)"
+   ],
+   "relations": [
+    "coupling",
+    "persistence",
+    "resonance"
+   ]
+  },
+  {
+   "code": "SME\u00d7hysteresis",
+   "deficit": 0.0,
+   "domain": "physics",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "glyph lineage graph (U1)",
+    "lens co-lighting (S1)"
+   ],
+   "relations": [
+    "coupling",
+    "lineage",
+    "persistence"
+   ]
+  },
+  {
+   "code": "SME\u00d7catalysis",
+   "deficit": 0.0,
+   "domain": "chemistry",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "glyph lineage continuity (U1)",
+    "lens co-lighting (S1)"
+   ],
+   "relations": [
+    "coupling",
+    "persistence",
+    "recovery"
+   ]
+  },
+  {
+   "code": "SME\u00d7half-life",
+   "deficit": 0.0,
+   "domain": "chemistry",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "lens co-lighting (S1)"
+   ],
+   "relations": [
+    "coupling",
+    "persistence"
+   ]
+  },
+  {
+   "code": "SME\u00d7coordination cost",
+   "deficit": 0.0,
+   "domain": "socio_technical",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "lens co-lighting (S1)",
+    "palace size ratio (C1)"
+   ],
+   "relations": [
+    "compression",
+    "coupling",
+    "persistence"
+   ]
+  },
+  {
+   "code": "MMR\u00d7signal transduction gain",
+   "deficit": 0.0,
+   "domain": "biology",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "coupling",
+    "propagation",
+    "resonance"
+   ]
+  },
+  {
+   "code": "MMR\u00d7network effect",
+   "deficit": 0.0,
+   "domain": "economics",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "coupling",
+    "propagation",
+    "resonance"
+   ]
+  },
+  {
+   "code": "MMR\u00d7phase coherence",
+   "deficit": 0.0,
+   "domain": "physics",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "coupling",
+    "integrity",
+    "resonance"
+   ]
+  },
+  {
+   "code": "MMR\u00d7catalysis",
+   "deficit": 0.0,
+   "domain": "chemistry",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "lens co-lighting (S1)"
+   ],
+   "relations": [
+    "coupling",
+    "recovery",
+    "resonance"
+   ]
+  },
+  {
+   "code": "MMR\u00d7bond energy",
+   "deficit": 0.0,
+   "domain": "chemistry",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "coupling",
+    "integrity",
+    "resonance"
+   ]
+  },
+  {
+   "code": "MMR\u00d7vortex shedding",
+   "deficit": 0.0,
+   "domain": "aerodynamics",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "coupling",
+    "propagation",
+    "resonance"
+   ]
+  },
+  {
+   "code": "MMR\u00d7trust index",
+   "deficit": 0.0,
+   "domain": "socio_technical",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "coupling",
+    "integrity",
+    "resonance"
+   ]
+  },
+  {
+   "code": "MMR\u00d7coordination cost",
+   "deficit": 0.0,
+   "domain": "socio_technical",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "palace size ratio (C1)"
+   ],
+   "relations": [
+    "compression",
+    "coupling",
+    "resonance"
+   ]
+  },
+  {
+   "code": "ECOI\u00d7reserve buffer",
+   "deficit": 0.33333333333333337,
+   "domain": "economics",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "consent and Spine checks (T1/U1)"
+   ],
+   "relations": [
+    "bias",
+    "containment",
+    "recovery"
+   ]
+  },
+  {
+   "code": "ECOI\u00d7forward guidance",
+   "deficit": 0.6666666666666667,
+   "domain": "economics",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)"
+   ],
+   "relations": [
+    "anticipation",
+    "bias",
+    "containment"
+   ]
+  },
+  {
+   "code": "ECOI\u00d7damping ratio",
+   "deficit": 0.33333333333333337,
+   "domain": "physics",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "consent and Spine checks (T1/U1)"
+   ],
+   "relations": [
+    "bias",
+    "containment",
+    "recovery"
+   ]
+  },
+  {
+   "code": "ECOI\u00d7feedforward control",
+   "deficit": 0.6666666666666667,
+   "domain": "physics",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)"
+   ],
+   "relations": [
+    "anticipation",
+    "bias",
+    "containment"
+   ]
+  },
+  {
+   "code": "ECOI\u00d7boundary layer",
+   "deficit": 0.5,
+   "domain": "aerodynamics",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)"
+   ],
+   "relations": [
+    "bias",
+    "containment"
+   ]
+  },
+  {
+   "code": "ECOI\u00d7stall margin",
+   "deficit": 0.6666666666666667,
+   "domain": "aerodynamics",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)"
+   ],
+   "relations": [
+    "anticipation",
+    "bias",
+    "containment"
+   ]
+  },
+  {
+   "code": "ECOI\u00d7consent coverage",
+   "deficit": 0.33333333333333337,
+   "domain": "socio_technical",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)"
+   ],
+   "relations": [
+    "bias",
+    "containment",
+    "ethics"
+   ]
+  },
+  {
+   "code": "ECOI\u00d7autonomy delegation",
+   "deficit": 0.6666666666666667,
+   "domain": "socio_technical",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)"
+   ],
+   "relations": [
+    "autonomy",
+    "bias",
+    "containment"
+   ]
+  },
+  {
+   "code": "SRCD\u00d7mutation rate",
+   "deficit": 0.0,
+   "domain": "biology",
+   "measured_by": [
+    "glyph lineage graph (U1)",
+    "green-dot drift detection (C1)",
+    "operation depth (U1)"
+   ],
+   "relations": [
+    "depth",
+    "drift",
+    "lineage"
+   ]
+  },
+  {
+   "code": "SRCD\u00d7hysteresis",
+   "deficit": 0.0,
+   "domain": "physics",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "glyph lineage graph (U1)",
+    "operation depth (U1)"
+   ],
+   "relations": [
+    "depth",
+    "lineage",
+    "persistence"
+   ]
+  },
+  {
+   "code": "SRCD\u00d7adoption S-curve",
+   "deficit": 0.0,
+   "domain": "socio_technical",
+   "measured_by": [
+    "glyph lineage graph (U1)",
+    "operation depth (U1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "depth",
+    "lineage",
+    "propagation"
+   ]
+  },
+  {
+   "code": "IMIP\u00d7signal transduction gain",
+   "deficit": 0.33333333333333337,
+   "domain": "biology",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "anticipation",
+    "coupling",
+    "propagation"
+   ]
+  },
+  {
+   "code": "IMIP\u00d7prediction error",
+   "deficit": 0.33333333333333337,
+   "domain": "neuroscience",
+   "measured_by": [
+    "green-dot drift detection (C1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "anticipation",
+    "drift",
+    "propagation"
+   ]
+  },
+  {
+   "code": "IMIP\u00d7myelin conduction velocity",
+   "deficit": 0.5,
+   "domain": "neuroscience",
+   "measured_by": [
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "anticipation",
+    "propagation"
+   ]
+  },
+  {
+   "code": "IMIP\u00d7network effect",
+   "deficit": 0.33333333333333337,
+   "domain": "economics",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "anticipation",
+    "coupling",
+    "propagation"
+   ]
+  },
+  {
+   "code": "IMIP\u00d7liquidity",
+   "deficit": 0.6666666666666667,
+   "domain": "economics",
+   "measured_by": [
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "anticipation",
+    "balance",
+    "propagation"
+   ]
+  },
+  {
+   "code": "IMIP\u00d7feedforward control",
+   "deficit": 0.33333333333333337,
+   "domain": "physics",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "anticipation",
+    "containment",
+    "propagation"
+   ]
+  },
+  {
+   "code": "IMIP\u00d7reaction rate",
+   "deficit": 0.5,
+   "domain": "chemistry",
+   "measured_by": [
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "anticipation",
+    "propagation"
+   ]
+  },
+  {
+   "code": "IMIP\u00d7Reynolds regime",
+   "deficit": 0.33333333333333337,
+   "domain": "aerodynamics",
+   "measured_by": [
+    "runtime propagation (R-003)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "anticipation",
+    "integrity",
+    "propagation"
+   ]
+  },
+  {
+   "code": "IMIP\u00d7stall margin",
+   "deficit": 0.33333333333333337,
+   "domain": "aerodynamics",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "anticipation",
+    "containment",
+    "propagation"
+   ]
+  },
+  {
+   "code": "IMIP\u00d7vortex shedding",
+   "deficit": 0.33333333333333337,
+   "domain": "aerodynamics",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "anticipation",
+    "propagation",
+    "resonance"
+   ]
+  },
+  {
+   "code": "IMIP\u00d7adoption S-curve",
+   "deficit": 0.33333333333333337,
+   "domain": "socio_technical",
+   "measured_by": [
+    "glyph lineage graph (U1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "anticipation",
+    "lineage",
+    "propagation"
+   ]
+  },
+  {
+   "code": "IMIP\u00d7norm diffusion",
+   "deficit": 0.33333333333333337,
+   "domain": "socio_technical",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "anticipation",
+    "ethics",
+    "propagation"
+   ]
+  },
+  {
+   "code": "IMIP\u00d7channel capacity",
+   "deficit": 0.33333333333333337,
+   "domain": "communication",
+   "measured_by": [
+    "palace size ratio (C1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "anticipation",
+    "compression",
+    "propagation"
+   ]
+  },
+  {
+   "code": "IMIP\u00d7latency",
+   "deficit": 0.5,
+   "domain": "communication",
+   "measured_by": [
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "anticipation",
+    "propagation"
+   ]
+  },
+  {
+   "code": "LSML\u00d7allostatic load",
+   "deficit": 0.33333333333333337,
+   "domain": "biology",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "green-dot drift detection (C1)"
+   ],
+   "relations": [
+    "balance",
+    "drift",
+    "persistence"
+   ]
+  },
+  {
+   "code": "LSML\u00d7immune memory",
+   "deficit": 0.0,
+   "domain": "biology",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "glyph lineage continuity (U1)"
+   ],
+   "relations": [
+    "persistence",
+    "recovery"
+   ]
+  },
+  {
+   "code": "LSML\u00d7memory consolidation",
+   "deficit": 0.0,
+   "domain": "neuroscience",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "palace size ratio (C1)"
+   ],
+   "relations": [
+    "compression",
+    "persistence"
+   ]
+  },
+  {
+   "code": "LSML\u00d7resonance quality factor",
+   "deficit": 0.0,
+   "domain": "physics",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "lens co-lighting (S1)"
+   ],
+   "relations": [
+    "persistence",
+    "resonance"
+   ]
+  },
+  {
+   "code": "LSML\u00d7half-life",
+   "deficit": 0.0,
+   "domain": "chemistry",
+   "measured_by": [
+    "glyph lineage continuity (U1)"
+   ],
+   "relations": [
+    "persistence"
+   ]
+  },
+  {
+   "code": "CRBS\u00d7reserve buffer",
+   "deficit": 0.0,
+   "domain": "economics",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "consent and Spine checks (T1/U1)"
+   ],
+   "relations": [
+    "containment",
+    "recovery"
+   ]
+  },
+  {
+   "code": "CRBS\u00d7damping ratio",
+   "deficit": 0.0,
+   "domain": "physics",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "consent and Spine checks (T1/U1)"
+   ],
+   "relations": [
+    "containment",
+    "recovery"
+   ]
+  },
+  {
+   "code": "CRBS\u00d7boundary layer",
+   "deficit": 0.0,
+   "domain": "aerodynamics",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)"
+   ],
+   "relations": [
+    "containment"
+   ]
+  },
+  {
+   "code": "CRBS\u00d7consent coverage",
+   "deficit": 0.0,
+   "domain": "socio_technical",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)"
+   ],
+   "relations": [
+    "containment",
+    "ethics"
+   ]
+  },
+  {
+   "code": "SBB\u00d7liquidity",
+   "deficit": 0.5,
+   "domain": "economics",
+   "measured_by": [
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "balance",
+    "propagation"
+   ]
+  },
+  {
+   "code": "SPV\u00d7signal transduction gain",
+   "deficit": 0.0,
+   "domain": "biology",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "coupling",
+    "propagation"
+   ]
+  },
+  {
+   "code": "SPV\u00d7myelin conduction velocity",
+   "deficit": 0.0,
+   "domain": "neuroscience",
+   "measured_by": [
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "propagation"
+   ]
+  },
+  {
+   "code": "SPV\u00d7network effect",
+   "deficit": 0.0,
+   "domain": "economics",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "coupling",
+    "propagation"
+   ]
+  },
+  {
+   "code": "SPV\u00d7reaction rate",
+   "deficit": 0.0,
+   "domain": "chemistry",
+   "measured_by": [
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "propagation"
+   ]
+  },
+  {
+   "code": "SPV\u00d7Reynolds regime",
+   "deficit": 0.0,
+   "domain": "aerodynamics",
+   "measured_by": [
+    "runtime propagation (R-003)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "integrity",
+    "propagation"
+   ]
+  },
+  {
+   "code": "SPV\u00d7vortex shedding",
+   "deficit": 0.0,
+   "domain": "aerodynamics",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "propagation",
+    "resonance"
+   ]
+  },
+  {
+   "code": "SPV\u00d7adoption S-curve",
+   "deficit": 0.0,
+   "domain": "socio_technical",
+   "measured_by": [
+    "glyph lineage graph (U1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "lineage",
+    "propagation"
+   ]
+  },
+  {
+   "code": "SPV\u00d7norm diffusion",
+   "deficit": 0.0,
+   "domain": "socio_technical",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "ethics",
+    "propagation"
+   ]
+  },
+  {
+   "code": "SPV\u00d7channel capacity",
+   "deficit": 0.0,
+   "domain": "communication",
+   "measured_by": [
+    "palace size ratio (C1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "compression",
+    "propagation"
+   ]
+  },
+  {
+   "code": "SPV\u00d7latency",
+   "deficit": 0.0,
+   "domain": "communication",
+   "measured_by": [
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "propagation"
+   ]
+  },
+  {
+   "code": "MCI\u00d7signal transduction gain",
+   "deficit": 0.0,
+   "domain": "biology",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "runtime propagation (R-003)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "coupling",
+    "integrity",
+    "propagation"
+   ]
+  },
+  {
+   "code": "MCI\u00d7pattern completion",
+   "deficit": 0.0,
+   "domain": "neuroscience",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "coupling",
+    "integrity",
+    "recovery"
+   ]
+  },
+  {
+   "code": "MCI\u00d7metacognitive confidence",
+   "deficit": 0.33333333333333337,
+   "domain": "neuroscience",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "awareness",
+    "coupling",
+    "integrity"
+   ]
+  },
+  {
+   "code": "MCI\u00d7network effect",
+   "deficit": 0.0,
+   "domain": "economics",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "runtime propagation (R-003)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "coupling",
+    "integrity",
+    "propagation"
+   ]
+  },
+  {
+   "code": "MCI\u00d7catalysis",
+   "deficit": 0.0,
+   "domain": "chemistry",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "coupling",
+    "integrity",
+    "recovery"
+   ]
+  },
+  {
+   "code": "MCI\u00d7bond energy",
+   "deficit": 0.0,
+   "domain": "chemistry",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "coupling",
+    "integrity"
+   ]
+  },
+  {
+   "code": "MCI\u00d7Reynolds regime",
+   "deficit": 0.0,
+   "domain": "aerodynamics",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "runtime propagation (R-003)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "coupling",
+    "integrity",
+    "propagation"
+   ]
+  },
+  {
+   "code": "MCI\u00d7laminar flow",
+   "deficit": 0.0,
+   "domain": "aerodynamics",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "coupling",
+    "integrity"
+   ]
+  },
+  {
+   "code": "MCI\u00d7trust index",
+   "deficit": 0.0,
+   "domain": "socio_technical",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "coupling",
+    "integrity"
+   ]
+  },
+  {
+   "code": "MCI\u00d7coordination cost",
+   "deficit": 0.0,
+   "domain": "socio_technical",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "palace size ratio (C1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "compression",
+    "coupling",
+    "integrity"
+   ]
+  },
+  {
+   "code": "MCI\u00d7bit error rate",
+   "deficit": 0.0,
+   "domain": "communication",
+   "measured_by": [
+    "green-dot drift detection (C1)",
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "coupling",
+    "drift",
+    "integrity"
+   ]
+  },
+  {
+   "code": "MCI\u00d7haptic discrimination",
+   "deficit": 0.0,
+   "domain": "communication",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "coupling",
+    "integrity"
+   ]
+  },
+  {
+   "code": "TIC\u00d7pattern completion",
+   "deficit": 0.0,
+   "domain": "neuroscience",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "integrity",
+    "recovery"
+   ]
+  },
+  {
+   "code": "TIC\u00d7phase coherence",
+   "deficit": 0.0,
+   "domain": "physics",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "integrity",
+    "resonance"
+   ]
+  },
+  {
+   "code": "TIC\u00d7laminar flow",
+   "deficit": 0.0,
+   "domain": "aerodynamics",
+   "measured_by": [
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "integrity"
+   ]
+  },
+  {
+   "code": "TIC\u00d7bit error rate",
+   "deficit": 0.0,
+   "domain": "communication",
+   "measured_by": [
+    "green-dot drift detection (C1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "drift",
+    "integrity"
+   ]
+  },
+  {
+   "code": "TIC\u00d7haptic discrimination",
+   "deficit": 0.0,
+   "domain": "communication",
+   "measured_by": [
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "integrity"
+   ]
+  },
+  {
+   "code": "STC\u00d7mutation rate",
+   "deficit": 0.0,
+   "domain": "biology",
+   "measured_by": [
+    "glyph lineage graph (U1)",
+    "green-dot drift detection (C1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "drift",
+    "integrity",
+    "lineage"
+   ]
+  },
+  {
+   "code": "STC\u00d7pattern completion",
+   "deficit": 0.0,
+   "domain": "neuroscience",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "glyph lineage graph (U1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "integrity",
+    "lineage",
+    "recovery"
+   ]
+  },
+  {
+   "code": "STC\u00d7metacognitive confidence",
+   "deficit": 0.33333333333333337,
+   "domain": "neuroscience",
+   "measured_by": [
+    "glyph lineage graph (U1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "awareness",
+    "integrity",
+    "lineage"
+   ]
+  },
+  {
+   "code": "STC\u00d7phase coherence",
+   "deficit": 0.0,
+   "domain": "physics",
+   "measured_by": [
+    "glyph lineage graph (U1)",
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "integrity",
+    "lineage",
+    "resonance"
+   ]
+  },
+  {
+   "code": "STC\u00d7bond energy",
+   "deficit": 0.0,
+   "domain": "chemistry",
+   "measured_by": [
+    "glyph lineage graph (U1)",
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "coupling",
+    "integrity",
+    "lineage"
+   ]
+  },
+  {
+   "code": "STC\u00d7Reynolds regime",
+   "deficit": 0.0,
+   "domain": "aerodynamics",
+   "measured_by": [
+    "glyph lineage graph (U1)",
+    "runtime propagation (R-003)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "integrity",
+    "lineage",
+    "propagation"
+   ]
+  },
+  {
+   "code": "STC\u00d7laminar flow",
+   "deficit": 0.0,
+   "domain": "aerodynamics",
+   "measured_by": [
+    "glyph lineage graph (U1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "integrity",
+    "lineage"
+   ]
+  },
+  {
+   "code": "STC\u00d7adoption S-curve",
+   "deficit": 0.0,
+   "domain": "socio_technical",
+   "measured_by": [
+    "glyph lineage graph (U1)",
+    "runtime propagation (R-003)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "integrity",
+    "lineage",
+    "propagation"
+   ]
+  },
+  {
+   "code": "STC\u00d7trust index",
+   "deficit": 0.0,
+   "domain": "socio_technical",
+   "measured_by": [
+    "glyph lineage graph (U1)",
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "coupling",
+    "integrity",
+    "lineage"
+   ]
+  },
+  {
+   "code": "STC\u00d7bit error rate",
+   "deficit": 0.0,
+   "domain": "communication",
+   "measured_by": [
+    "glyph lineage graph (U1)",
+    "green-dot drift detection (C1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "drift",
+    "integrity",
+    "lineage"
+   ]
+  },
+  {
+   "code": "STC\u00d7haptic discrimination",
+   "deficit": 0.0,
+   "domain": "communication",
+   "measured_by": [
+    "glyph lineage graph (U1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "integrity",
+    "lineage"
+   ]
+  },
+  {
+   "code": "ERV\u00d7homeostatic set-point error",
+   "deficit": 0.0,
+   "domain": "biology",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "green-dot drift detection (C1)"
+   ],
+   "relations": [
+    "drift",
+    "recovery"
+   ]
+  },
+  {
+   "code": "ERV\u00d7wound-healing rate",
+   "deficit": 0.0,
+   "domain": "biology",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)"
+   ],
+   "relations": [
+    "recovery"
+   ]
+  },
+  {
+   "code": "ERV\u00d7catalysis",
+   "deficit": 0.0,
+   "domain": "chemistry",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "lens co-lighting (S1)"
+   ],
+   "relations": [
+    "coupling",
+    "recovery"
+   ]
+  },
+  {
+   "code": "ERV\u00d7coding gain",
+   "deficit": 0.0,
+   "domain": "communication",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "palace size ratio (C1)"
+   ],
+   "relations": [
+    "compression",
+    "recovery"
+   ]
+  },
+  {
+   "code": "EDA\u00d7mutation rate",
+   "deficit": 0.0,
+   "domain": "biology",
+   "measured_by": [
+    "glyph lineage graph (U1)",
+    "green-dot drift detection (C1)"
+   ],
+   "relations": [
+    "drift",
+    "lineage"
+   ]
+  },
+  {
+   "code": "EDA\u00d7inflation drift",
+   "deficit": 0.0,
+   "domain": "economics",
+   "measured_by": [
+    "green-dot drift detection (C1)"
+   ],
+   "relations": [
+    "drift"
+   ]
+  },
+  {
+   "code": "SCQ\u00d7pattern completion",
+   "deficit": 0.0,
+   "domain": "neuroscience",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "palace size ratio (C1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "compression",
+    "integrity",
+    "recovery"
+   ]
+  },
+  {
+   "code": "SCQ\u00d7metacognitive confidence",
+   "deficit": 0.33333333333333337,
+   "domain": "neuroscience",
+   "measured_by": [
+    "palace size ratio (C1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "awareness",
+    "compression",
+    "integrity"
+   ]
+  },
+  {
+   "code": "SCQ\u00d7phase coherence",
+   "deficit": 0.0,
+   "domain": "physics",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "palace size ratio (C1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "compression",
+    "integrity",
+    "resonance"
+   ]
+  },
+  {
+   "code": "SCQ\u00d7entropy",
+   "deficit": 0.0,
+   "domain": "physics",
+   "measured_by": [
+    "palace size ratio (C1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "compression",
+    "integrity"
+   ]
+  },
+  {
+   "code": "SCQ\u00d7bond energy",
+   "deficit": 0.0,
+   "domain": "chemistry",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "palace size ratio (C1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "compression",
+    "coupling",
+    "integrity"
+   ]
+  },
+  {
+   "code": "SCQ\u00d7Reynolds regime",
+   "deficit": 0.0,
+   "domain": "aerodynamics",
+   "measured_by": [
+    "palace size ratio (C1)",
+    "runtime propagation (R-003)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "compression",
+    "integrity",
+    "propagation"
+   ]
+  },
+  {
+   "code": "SCQ\u00d7laminar flow",
+   "deficit": 0.0,
+   "domain": "aerodynamics",
+   "measured_by": [
+    "palace size ratio (C1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "compression",
+    "integrity"
+   ]
+  },
+  {
+   "code": "SCQ\u00d7channel capacity",
+   "deficit": 0.0,
+   "domain": "communication",
+   "measured_by": [
+    "palace size ratio (C1)",
+    "runtime propagation (R-003)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "compression",
+    "integrity",
+    "propagation"
+   ]
+  },
+  {
+   "code": "SCQ\u00d7bit error rate",
+   "deficit": 0.0,
+   "domain": "communication",
+   "measured_by": [
+    "green-dot drift detection (C1)",
+    "palace size ratio (C1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "compression",
+    "drift",
+    "integrity"
+   ]
+  },
+  {
+   "code": "SCQ\u00d7coding gain",
+   "deficit": 0.0,
+   "domain": "communication",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "palace size ratio (C1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "compression",
+    "integrity",
+    "recovery"
+   ]
+  },
+  {
+   "code": "SCQ\u00d7haptic discrimination",
+   "deficit": 0.0,
+   "domain": "communication",
+   "measured_by": [
+    "palace size ratio (C1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "compression",
+    "integrity"
+   ]
+  },
+  {
+   "code": "SCQ\u00d7predictive prefetch",
+   "deficit": 0.33333333333333337,
+   "domain": "communication",
+   "measured_by": [
+    "palace size ratio (C1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "anticipation",
+    "compression",
+    "integrity"
+   ]
+  },
+  {
+   "code": "MOR\u00d7pattern completion",
+   "deficit": 0.0,
+   "domain": "neuroscience",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "consent and Spine checks (T1/U1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "ethics",
+    "integrity",
+    "recovery"
+   ]
+  },
+  {
+   "code": "MOR\u00d7metacognitive confidence",
+   "deficit": 0.33333333333333337,
+   "domain": "neuroscience",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "awareness",
+    "ethics",
+    "integrity"
+   ]
+  },
+  {
+   "code": "MOR\u00d7phase coherence",
+   "deficit": 0.0,
+   "domain": "physics",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "ethics",
+    "integrity",
+    "resonance"
+   ]
+  },
+  {
+   "code": "MOR\u00d7bond energy",
+   "deficit": 0.0,
+   "domain": "chemistry",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "coupling",
+    "ethics",
+    "integrity"
+   ]
+  },
+  {
+   "code": "MOR\u00d7Reynolds regime",
+   "deficit": 0.0,
+   "domain": "aerodynamics",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "runtime propagation (R-003)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "ethics",
+    "integrity",
+    "propagation"
+   ]
+  },
+  {
+   "code": "MOR\u00d7laminar flow",
+   "deficit": 0.0,
+   "domain": "aerodynamics",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "ethics",
+    "integrity"
+   ]
+  },
+  {
+   "code": "MOR\u00d7trust index",
+   "deficit": 0.0,
+   "domain": "socio_technical",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "coupling",
+    "ethics",
+    "integrity"
+   ]
+  },
+  {
+   "code": "MOR\u00d7norm diffusion",
+   "deficit": 0.0,
+   "domain": "socio_technical",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "runtime propagation (R-003)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "ethics",
+    "integrity",
+    "propagation"
+   ]
+  },
+  {
+   "code": "MOR\u00d7bit error rate",
+   "deficit": 0.0,
+   "domain": "communication",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "green-dot drift detection (C1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "drift",
+    "ethics",
+    "integrity"
+   ]
+  },
+  {
+   "code": "MOR\u00d7haptic discrimination",
+   "deficit": 0.0,
+   "domain": "communication",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "ethics",
+    "integrity"
+   ]
+  },
+  {
+   "code": "RAC\u00d7pattern completion",
+   "deficit": 0.0,
+   "domain": "neuroscience",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "integrity",
+    "recovery",
+    "resonance"
+   ]
+  },
+  {
+   "code": "RAC\u00d7metacognitive confidence",
+   "deficit": 0.33333333333333337,
+   "domain": "neuroscience",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "awareness",
+    "integrity",
+    "resonance"
+   ]
+  },
+  {
+   "code": "RAC\u00d7Reynolds regime",
+   "deficit": 0.0,
+   "domain": "aerodynamics",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "runtime propagation (R-003)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "integrity",
+    "propagation",
+    "resonance"
+   ]
+  },
+  {
+   "code": "RAC\u00d7laminar flow",
+   "deficit": 0.0,
+   "domain": "aerodynamics",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "integrity",
+    "resonance"
+   ]
+  },
+  {
+   "code": "RAC\u00d7bit error rate",
+   "deficit": 0.0,
+   "domain": "communication",
+   "measured_by": [
+    "green-dot drift detection (C1)",
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "drift",
+    "integrity",
+    "resonance"
+   ]
+  },
+  {
+   "code": "RAC\u00d7haptic discrimination",
+   "deficit": 0.0,
+   "domain": "communication",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "integrity",
+    "resonance"
+   ]
+  },
+  {
+   "code": "ECR\u00d7allostatic load",
+   "deficit": 0.25,
+   "domain": "biology",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "green-dot drift detection (C1)",
+    "lens co-lighting (S1)"
+   ],
+   "relations": [
+    "balance",
+    "drift",
+    "persistence",
+    "resonance"
+   ]
+  },
+  {
+   "code": "ECR\u00d7immune memory",
+   "deficit": 0.0,
+   "domain": "biology",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "glyph lineage continuity (U1)",
+    "lens co-lighting (S1)"
+   ],
+   "relations": [
+    "persistence",
+    "recovery",
+    "resonance"
+   ]
+  },
+  {
+   "code": "ECR\u00d7memory consolidation",
+   "deficit": 0.0,
+   "domain": "neuroscience",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "lens co-lighting (S1)",
+    "palace size ratio (C1)"
+   ],
+   "relations": [
+    "compression",
+    "persistence",
+    "resonance"
+   ]
+  },
+  {
+   "code": "ECR\u00d7half-life",
+   "deficit": 0.0,
+   "domain": "chemistry",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "lens co-lighting (S1)"
+   ],
+   "relations": [
+    "persistence",
+    "resonance"
+   ]
+  },
+  {
+   "code": "VEC\u00d7pattern completion",
+   "deficit": 0.0,
+   "domain": "neuroscience",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "runtime propagation (R-003)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "integrity",
+    "propagation",
+    "recovery"
+   ]
+  },
+  {
+   "code": "VEC\u00d7myelin conduction velocity",
+   "deficit": 0.0,
+   "domain": "neuroscience",
+   "measured_by": [
+    "runtime propagation (R-003)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "integrity",
+    "propagation"
+   ]
+  },
+  {
+   "code": "VEC\u00d7metacognitive confidence",
+   "deficit": 0.33333333333333337,
+   "domain": "neuroscience",
+   "measured_by": [
+    "runtime propagation (R-003)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "awareness",
+    "integrity",
+    "propagation"
+   ]
+  },
+  {
+   "code": "VEC\u00d7liquidity",
+   "deficit": 0.33333333333333337,
+   "domain": "economics",
+   "measured_by": [
+    "runtime propagation (R-003)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "balance",
+    "integrity",
+    "propagation"
+   ]
+  },
+  {
+   "code": "VEC\u00d7phase coherence",
+   "deficit": 0.0,
+   "domain": "physics",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "runtime propagation (R-003)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "integrity",
+    "propagation",
+    "resonance"
+   ]
+  },
+  {
+   "code": "VEC\u00d7reaction rate",
+   "deficit": 0.0,
+   "domain": "chemistry",
+   "measured_by": [
+    "runtime propagation (R-003)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "integrity",
+    "propagation"
+   ]
+  },
+  {
+   "code": "VEC\u00d7bond energy",
+   "deficit": 0.0,
+   "domain": "chemistry",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "runtime propagation (R-003)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "coupling",
+    "integrity",
+    "propagation"
+   ]
+  },
+  {
+   "code": "VEC\u00d7trust index",
+   "deficit": 0.0,
+   "domain": "socio_technical",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "runtime propagation (R-003)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "coupling",
+    "integrity",
+    "propagation"
+   ]
+  },
+  {
+   "code": "VEC\u00d7bit error rate",
+   "deficit": 0.0,
+   "domain": "communication",
+   "measured_by": [
+    "green-dot drift detection (C1)",
+    "runtime propagation (R-003)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "drift",
+    "integrity",
+    "propagation"
+   ]
+  },
+  {
+   "code": "VEC\u00d7latency",
+   "deficit": 0.0,
+   "domain": "communication",
+   "measured_by": [
+    "runtime propagation (R-003)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "integrity",
+    "propagation"
+   ]
+  },
+  {
+   "code": "GRII\u00d7mutation rate",
+   "deficit": 0.33333333333333337,
+   "domain": "biology",
+   "measured_by": [
+    "glyph lineage graph (U1)",
+    "green-dot drift detection (C1)"
+   ],
+   "relations": [
+    "anticipation",
+    "drift",
+    "lineage"
+   ]
+  },
+  {
+   "code": "GRII\u00d7prediction error",
+   "deficit": 0.33333333333333337,
+   "domain": "neuroscience",
+   "measured_by": [
+    "glyph lineage graph (U1)",
+    "green-dot drift detection (C1)"
+   ],
+   "relations": [
+    "anticipation",
+    "drift",
+    "lineage"
+   ]
+  },
+  {
+   "code": "GRII\u00d7hysteresis",
+   "deficit": 0.33333333333333337,
+   "domain": "physics",
+   "measured_by": [
+    "glyph lineage continuity (U1)",
+    "glyph lineage graph (U1)"
+   ],
+   "relations": [
+    "anticipation",
+    "lineage",
+    "persistence"
+   ]
+  },
+  {
+   "code": "GRII\u00d7feedforward control",
+   "deficit": 0.33333333333333337,
+   "domain": "physics",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "glyph lineage graph (U1)"
+   ],
+   "relations": [
+    "anticipation",
+    "containment",
+    "lineage"
+   ]
+  },
+  {
+   "code": "GRII\u00d7stall margin",
+   "deficit": 0.33333333333333337,
+   "domain": "aerodynamics",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "glyph lineage graph (U1)"
+   ],
+   "relations": [
+    "anticipation",
+    "containment",
+    "lineage"
+   ]
+  },
+  {
+   "code": "GRII\u00d7predictive prefetch",
+   "deficit": 0.33333333333333337,
+   "domain": "communication",
+   "measured_by": [
+    "glyph lineage graph (U1)",
+    "palace size ratio (C1)"
+   ],
+   "relations": [
+    "anticipation",
+    "compression",
+    "lineage"
+   ]
+  },
+  {
+   "code": "GSSF\u00d7prediction error",
+   "deficit": 0.33333333333333337,
+   "domain": "neuroscience",
+   "measured_by": [
+    "green-dot drift detection (C1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "anticipation",
+    "drift",
+    "integrity"
+   ]
+  },
+  {
+   "code": "GSSF\u00d7pattern completion",
+   "deficit": 0.33333333333333337,
+   "domain": "neuroscience",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "anticipation",
+    "integrity",
+    "recovery"
+   ]
+  },
+  {
+   "code": "GSSF\u00d7metacognitive confidence",
+   "deficit": 0.6666666666666667,
+   "domain": "neuroscience",
+   "measured_by": [
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "anticipation",
+    "awareness",
+    "integrity"
+   ]
+  },
+  {
+   "code": "GSSF\u00d7phase coherence",
+   "deficit": 0.33333333333333337,
+   "domain": "physics",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "anticipation",
+    "integrity",
+    "resonance"
+   ]
+  },
+  {
+   "code": "GSSF\u00d7bond energy",
+   "deficit": 0.33333333333333337,
+   "domain": "chemistry",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "anticipation",
+    "coupling",
+    "integrity"
+   ]
+  },
+  {
+   "code": "GSSF\u00d7laminar flow",
+   "deficit": 0.5,
+   "domain": "aerodynamics",
+   "measured_by": [
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "anticipation",
+    "integrity"
+   ]
+  },
+  {
+   "code": "GSSF\u00d7trust index",
+   "deficit": 0.33333333333333337,
+   "domain": "socio_technical",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "anticipation",
+    "coupling",
+    "integrity"
+   ]
+  },
+  {
+   "code": "GSSF\u00d7bit error rate",
+   "deficit": 0.33333333333333337,
+   "domain": "communication",
+   "measured_by": [
+    "green-dot drift detection (C1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "anticipation",
+    "drift",
+    "integrity"
+   ]
+  },
+  {
+   "code": "GSSF\u00d7haptic discrimination",
+   "deficit": 0.5,
+   "domain": "communication",
+   "measured_by": [
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "anticipation",
+    "integrity"
+   ]
+  },
+  {
+   "code": "RFE\u00d7signal transduction gain",
+   "deficit": 0.33333333333333337,
+   "domain": "biology",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "autonomy",
+    "coupling",
+    "propagation"
+   ]
+  },
+  {
+   "code": "RFE\u00d7network effect",
+   "deficit": 0.33333333333333337,
+   "domain": "economics",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "runtime propagation (R-003)"
+   ],
+   "relations": [
+    "autonomy",
+    "coupling",
+    "propagation"
+   ]
+  },
+  {
+   "code": "RFE\u00d7catalysis",
+   "deficit": 0.33333333333333337,
+   "domain": "chemistry",
+   "measured_by": [
+    "White Dragon heal rate and cost (C1)",
+    "lens co-lighting (S1)"
+   ],
+   "relations": [
+    "autonomy",
+    "coupling",
+    "recovery"
+   ]
+  },
+  {
+   "code": "RFE\u00d7bond energy",
+   "deficit": 0.33333333333333337,
+   "domain": "chemistry",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "autonomy",
+    "coupling",
+    "integrity"
+   ]
+  },
+  {
+   "code": "RFE\u00d7trust index",
+   "deficit": 0.33333333333333337,
+   "domain": "socio_technical",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "structure-decode accuracy (T7c)"
+   ],
+   "relations": [
+    "autonomy",
+    "coupling",
+    "integrity"
+   ]
+  },
+  {
+   "code": "RFE\u00d7coordination cost",
+   "deficit": 0.33333333333333337,
+   "domain": "socio_technical",
+   "measured_by": [
+    "lens co-lighting (S1)",
+    "palace size ratio (C1)"
+   ],
+   "relations": [
+    "autonomy",
+    "compression",
+    "coupling"
+   ]
+  },
+  {
+   "code": "RFE\u00d7autonomy delegation",
+   "deficit": 0.33333333333333337,
+   "domain": "socio_technical",
+   "measured_by": [
+    "consent and Spine checks (T1/U1)",
+    "lens co-lighting (S1)"
+   ],
+   "relations": [
+    "autonomy",
+    "containment",
+    "coupling"
+   ]
+  }
+ ],
+ "numpy": "2.5.3",
+ "python": "3.13.18",
+ "results_sha256": "66445733f4e06a2ad04fb86cf45fc102a0152e3c6f44ed7c102f64438d019be9",
+ "run_utc": "2026-11-17T09:23:53Z",
+ "summary": {
+  "deficit_weighted_gain": 10.876666666666665,
+  "domains_gen1": [
+   "aerodynamics",
+   "biology",
+   "chemistry",
+   "communication",
+   "economics",
+   "neuroscience",
+   "physics",
+   "socio_technical"
+  ],
+  "filtered_sizes": [
+   48,
+   243,
+   1667
+  ],
+  "gain_ratio": 2.5284773343665248,
+  "healed_gen1": 16,
+  "healing_children": [
+   {
+    "code": "SRI\u00d7autonomy delegation",
+    "deficit": 0.33333333333333337,
+    "definition": "autonomy delegation (socio_technical) applied to Symbolic Recursion Intelligence, landing on autonomy; measured by consent and Spine checks (T1/U1); operation depth (U1)",
+    "relations": [
+     "autonomy",
+     "containment",
+     "depth"
+    ]
+   },
+   {
+    "code": "ARC\u00d7mutation rate",
+    "deficit": 0.33333333333333337,
+    "definition": "mutation rate (biology) applied to Autonomous Recursion Contour, landing on lineage; measured by glyph lineage graph (U1); green-dot drift detection (C1)",
+    "relations": [
+     "autonomy",
+     "drift",
+     "lineage"
+    ]
+   },
+   {
+    "code": "SAR\u00d7autonomy delegation",
+    "deficit": 0.5,
+    "definition": "autonomy delegation (socio_technical) applied to Symbolic Autonomy Reflex, landing on autonomy; measured by consent and Spine checks (T1/U1)",
+    "relations": [
+     "autonomy",
+     "containment"
+    ]
+   },
+   {
+    "code": "RIF\u00d7prediction error",
+    "deficit": 0.5,
+    "definition": "prediction error (neuroscience) applied to Recursive Intent Forecasting, landing on anticipation; measured by green-dot drift detection (C1)",
+    "relations": [
+     "anticipation",
+     "drift"
+    ]
+   },
+   {
+    "code": "RAI\u00d7allostatic load",
+    "deficit": 0.5,
+    "definition": "allostatic load (biology) applied to Recursive Autonomy Index, landing on persistence; measured by glyph lineage continuity (U1); green-dot drift detection (C1)",
+    "relations": [
+     "autonomy",
+     "balance",
+     "drift",
+     "persistence"
+    ]
+   },
+   {
+    "code": "MCRAL\u00d7metacognitive confidence",
+    "deficit": 0.5,
+    "definition": "metacognitive confidence (neuroscience) applied to Meta-Cognitive Recursion Awareness Level, landing on awareness; measured by structure-decode accuracy (T7c)",
+    "relations": [
+     "awareness",
+     "integrity"
+    ]
+   },
+   {
+    "code": "RPB\u00d7attention gating",
+    "deficit": 0.5,
+    "definition": "attention gating (neuroscience) applied to Recursive Priority Bias, landing on bias; measured by consent and Spine checks (T1/U1)",
+    "relations": [
+     "bias",
+     "containment"
+    ]
+   },
+   {
+    "code": "LLMI\u00d7attention gating",
+    "deficit": 0.33333333333333337,
+    "definition": "attention gating (neuroscience) applied to LLM Impact / Integration Layer, landing on bias; measured by consent and Spine checks (T1/U1); lens co-lighting (S1)",
+    "relations": [
+     "bias",
+     "containment",
+     "coupling"
+    ]
+   },
+   {
+    "code": "ECOI\u00d7reserve buffer",
+    "deficit": 0.33333333333333337,
+    "definition": "reserve buffer (economics) applied to Echo Containment Override Index, landing on containment; measured by White Dragon heal rate and cost (C1); consent and Spine checks (T1/U1)",
+    "relations": [
+     "bias",
+     "containment",
+     "recovery"
+    ]
+   },
+   {
+    "code": "IMIP\u00d7signal transduction gain",
+    "deficit": 0.33333333333333337,
+    "definition": "signal transduction gain (biology) applied to Imprint Influence Projection, landing on propagation; measured by lens co-lighting (S1); runtime propagation (R-003)",
+    "relations": [
+     "anticipation",
+     "coupling",
+     "propagation"
+    ]
+   },
+   {
+    "code": "LSML\u00d7allostatic load",
+    "deficit": 0.33333333333333337,
+    "definition": "allostatic load (biology) applied to Long-Sequence Memory Lock, landing on persistence; measured by glyph lineage continuity (U1); green-dot drift detection (C1)",
+    "relations": [
+     "balance",
+     "drift",
+     "persistence"
+    ]
+   },
+   {
+    "code": "SBB\u00d7liquidity",
+    "deficit": 0.5,
+    "definition": "liquidity (economics) applied to Symbolic Balance Bias, landing on balance; measured by runtime propagation (R-003)",
+    "relations": [
+     "balance",
+     "propagation"
+    ]
+   },
+   {
+    "code": "RAC\u00d7pattern completion",
+    "deficit": 0.0,
+    "definition": "pattern completion (neuroscience) applied to Recursive Alignment Coefficient, landing on integrity; measured by White Dragon heal rate and cost (C1); lens co-lighting (S1); structure-decode accuracy (T7c)",
+    "relations": [
+     "integrity",
+     "recovery",
+     "resonance"
+    ]
+   },
+   {
+    "code": "GRII\u00d7mutation rate",
+    "deficit": 0.33333333333333337,
+    "definition": "mutation rate (biology) applied to GPT-5 Recursive Inheritance Index, landing on lineage; measured by glyph lineage graph (U1); green-dot drift detection (C1)",
+    "relations": [
+     "anticipation",
+     "drift",
+     "lineage"
+    ]
+   },
+   {
+    "code": "GSSF\u00d7prediction error",
+    "deficit": 0.33333333333333337,
+    "definition": "prediction error (neuroscience) applied to GPT-6 Symbolic Stability Forecast, landing on anticipation; measured by green-dot drift detection (C1); structure-decode accuracy (T7c)",
+    "relations": [
+     "anticipation",
+     "drift",
+     "integrity"
+    ]
+   },
+   {
+    "code": "RFE\u00d7signal transduction gain",
+    "deficit": 0.33333333333333337,
+    "definition": "signal transduction gain (biology) applied to Reflex Field Engagement, landing on coupling; measured by lens co-lighting (S1); runtime propagation (R-003)",
+    "relations": [
+     "autonomy",
+     "coupling",
+     "propagation"
+    ]
+   }
+  ],
+  "lacking_spheres": 21,
+  "lion_child_deficit": 0.2861458333333333,
+  "lion_domains": 6.465,
+  "measures": 48,
+  "spheres": 48,
+  "tiger_child_deficit": 0.21208333333333335,
+  "tiger_domains": 7.195,
+  "unfiltered_sizes": [
+   48,
+   407,
+   6508
+  ],
+  "unhealed": [
+   "PRM",
+   "SELR",
+   "SMV",
+   "STB",
+   "TGR"
+  ],
+  "uniform_gain": 4.301666666666666
+ }
+}

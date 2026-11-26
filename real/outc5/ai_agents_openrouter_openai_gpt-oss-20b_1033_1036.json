@@ -1,0 +1,230 @@
+{
+ "row": "ai_agents",
+ "model": "openrouter:openai/gpt-oss-20b",
+ "rsos_arm": "full",
+ "cells_run": [
+  1033,
+  1034,
+  1035,
+  1036
+ ],
+ "cells": {
+  "1033": {
+   "default": {
+    "result": 0.75,
+    "resource": 25.625,
+    "choices": {
+     "present|standard": 46
+    },
+    "failed_calls": 0,
+    "sec": 32.5
+   },
+   "rollout": {
+    "result": 1.0,
+    "resource": 8.44,
+    "choices": {
+     "present|standard": 14,
+     "stop|rollout": 4,
+     "open|rollout": 1
+    },
+    "failed_calls": 0,
+    "sec": 10.8
+   },
+   "full": {
+    "result": 1.0,
+    "resource": 6.507,
+    "choices": {
+     "F:blind-b0|standard": 2,
+     "op:fuse|base": 3,
+     "stop|own": 3,
+     "present|own": 3,
+     "present|standard": 3,
+     "F:reuse-b0|standard": 1,
+     "F:blind-b1|standard": 1,
+     "past-2|own": 1
+    },
+    "ops_passed_membrane": {
+     "heal": 14,
+     "beam1": 17,
+     "beam3": 17,
+     "contain": 1,
+     "compress": 0,
+     "inherit": 0,
+     "fuse": 22,
+     "carry": 0,
+     "rehost": 8,
+     "pierce": 17,
+     "overlay": 8,
+     "enter": 17,
+     "zoom": 16
+    },
+    "vote_vetoed": 6,
+    "failed_calls": 0,
+    "sec": 13.7
+   }
+  },
+  "1034": {
+   "default": {
+    "result": 0.75,
+    "resource": 24.782,
+    "choices": {
+     "present|standard": 47
+    },
+    "failed_calls": 0,
+    "sec": 28.4
+   },
+   "rollout": {
+    "result": 0.75,
+    "resource": 9.671,
+    "choices": {
+     "present|standard": 18,
+     "stop|rollout": 3,
+     "open|rollout": 1
+    },
+    "failed_calls": 0,
+    "sec": 10.5
+   },
+   "full": {
+    "result": 1.0,
+    "resource": 7.5,
+    "choices": {
+     "op:fuse|Owl": 2,
+     "op:heal|base": 1,
+     "present|own": 2,
+     "op:fuse|base": 4,
+     "present|standard": 2,
+     "stop|own": 3,
+     "past-2|own": 1,
+     "F:reuse-b0|standard": 1,
+     "F:blind-b0|standard": 1
+    },
+    "ops_passed_membrane": {
+     "heal": 17,
+     "beam1": 17,
+     "beam3": 17,
+     "contain": 0,
+     "compress": 0,
+     "inherit": 0,
+     "fuse": 18,
+     "carry": 0,
+     "rehost": 7,
+     "pierce": 17,
+     "overlay": 6,
+     "enter": 17,
+     "zoom": 17
+    },
+    "vote_vetoed": 3,
+    "failed_calls": 0,
+    "sec": 18.7
+   }
+  },
+  "1035": {
+   "default": {
+    "result": 1.0,
+    "resource": 21.127,
+    "choices": {
+     "present|standard": 43
+    },
+    "failed_calls": 0,
+    "sec": 27.3
+   },
+   "rollout": {
+    "result": 1.0,
+    "resource": 9.214,
+    "choices": {
+     "present|standard": 14,
+     "open|rollout": 2,
+     "focus-b0|rollout": 2,
+     "stop|rollout": 4
+    },
+    "failed_calls": 0,
+    "sec": 13.8
+   },
+   "full": {
+    "result": 1.0,
+    "resource": 3.033,
+    "choices": {
+     "F:blind-b0|standard": 3,
+     "op:overlay|Owl": 2,
+     "stop|own": 3,
+     "op:compress|Owl": 1,
+     "op:fuse|Owl": 1,
+     "past-2|own": 1
+    },
+    "ops_passed_membrane": {
+     "heal": 9,
+     "beam1": 9,
+     "beam3": 9,
+     "contain": 0,
+     "compress": 1,
+     "inherit": 0,
+     "fuse": 12,
+     "carry": 0,
+     "rehost": 5,
+     "pierce": 9,
+     "overlay": 8,
+     "enter": 9,
+     "zoom": 9
+    },
+    "vote_vetoed": 1,
+    "failed_calls": 0,
+    "sec": 6.0
+   }
+  },
+  "1036": {
+   "default": {
+    "result": 1.0,
+    "resource": 32.816,
+    "choices": {
+     "present|standard": 48
+    },
+    "failed_calls": 0,
+    "sec": 52.6
+   },
+   "rollout": {
+    "result": 1.0,
+    "resource": 18.189,
+    "choices": {
+     "present|standard": 18,
+     "stop|rollout": 4,
+     "open|rollout": 2,
+     "focus-b0|rollout": 4
+    },
+    "failed_calls": 0,
+    "sec": 26.3
+   },
+   "full": {
+    "result": 1.0,
+    "resource": 5.825,
+    "choices": {
+     "op:inherit|Owl": 1,
+     "op:fuse|Owl": 1,
+     "stop|own": 4,
+     "F:blind-b0|standard": 2,
+     "present|own": 3,
+     "present|standard": 2,
+     "op:compress|Owl": 1,
+     "F:blind-b1|standard": 1
+    },
+    "ops_passed_membrane": {
+     "heal": 13,
+     "beam1": 12,
+     "beam3": 14,
+     "contain": 1,
+     "compress": 2,
+     "inherit": 1,
+     "fuse": 18,
+     "carry": 0,
+     "rehost": 5,
+     "pierce": 14,
+     "overlay": 6,
+     "enter": 14,
+     "zoom": 13
+    },
+    "vote_vetoed": 5,
+    "failed_calls": 0,
+    "sec": 15.8
+   }
+  }
+ }
+}

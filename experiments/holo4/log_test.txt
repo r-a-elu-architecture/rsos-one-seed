@@ -1,0 +1,52 @@
+{
+ "dna_sha256": "51990c4efd40bcc6b73d65fd4d0055e87dd5d7ba8291fb794767418a99ee51ed",
+ "d1": {
+  "adv_healed": -0.059423658963266845,
+  "adv_healed_uncoupled": -0.1048456938705313,
+  "adv_before_heal": -0.0634931268951068,
+  "healed_wins_vs_best_baseline": 6
+ },
+ "d2": {
+  "adv_healed": -0.2626365054986863,
+  "adv_healed_uncoupled": -0.2954899691156192,
+  "adv_before_heal": -0.22078161117397554,
+  "healed_wins_vs_best_baseline": 5
+ },
+ "d3": {
+  "adv_healed": -0.660496274390321,
+  "adv_healed_uncoupled": -0.6498863412817177,
+  "adv_before_heal": -0.501996911181901,
+  "healed_wins_vs_best_baseline": 5
+ },
+ "d4": {
+  "adv_healed": -0.5056955916515912,
+  "adv_healed_uncoupled": -0.5024020212660244,
+  "adv_before_heal": -0.5351880875250868,
+  "healed_wins_vs_best_baseline": 6
+ },
+ "d5": {
+  "adv_healed": -0.986778700404927,
+  "adv_healed_uncoupled": -1.0183993331374825,
+  "adv_before_heal": -0.9430006569257956,
+  "healed_wins_vs_best_baseline": 4
+ },
+ "W1_healed_beats_best_baseline_d5": {
+  "wins": 4,
+  "of": 16,
+  "p": 0.9893646240234375
+ },
+ "W2_advantage_grows_with_density": {
+  "rho": -0.25606823078735363,
+  "p": 0.021867241868791736
+ },
+ "W3_coupled_beats_uncoupled_d5": {
+  "wins": 8,
+  "of": 16,
+  "p": 0.5981903076171875
+ },
+ "W4_healed_beats_unhealed_all_densities": {
+  "wins": 37,
+  "of": 80,
+  "p": 0.7829788723272606
+ }
+}

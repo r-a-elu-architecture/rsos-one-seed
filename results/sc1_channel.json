@@ -1,0 +1,1031 @@
+{
+ "set": "SC1",
+ "tasks": 16,
+ "units": [
+  "bytes",
+  "regex_tokens",
+  "o200k_tokens"
+ ],
+ "total": {
+  "G_full_scene_graph": {
+   "bytes": 7089308,
+   "regex_tokens": 4750518,
+   "o200k_tokens": 2612604
+  },
+  "P_json_patch_plus_digest": {
+   "bytes": 78197,
+   "regex_tokens": 38310,
+   "o200k_tokens": 27685
+  },
+  "R_rsos_plus_digest": {
+   "bytes": 38439,
+   "regex_tokens": 8337,
+   "o200k_tokens": 15181
+  },
+  "C_core_plus_digest": {
+   "bytes": 50998,
+   "regex_tokens": 16388,
+   "o200k_tokens": 20333
+  },
+  "digest_only_replica_check": {
+   "bytes": 192,
+   "regex_tokens": 16,
+   "o200k_tokens": 111
+  },
+  "full_state_replica_check": {
+   "bytes": 126731,
+   "regex_tokens": 84822,
+   "o200k_tokens": 46733
+  },
+  "planner_input_B2": {
+   "bytes": 122924,
+   "regex_tokens": 36699,
+   "o200k_tokens": 41549
+  },
+  "planner_input_X5b": {
+   "bytes": 42319,
+   "regex_tokens": 12667,
+   "o200k_tokens": 12227
+  }
+ },
+ "ratios": {
+  "bytes": {
+   "R_vs_P": 0.4916,
+   "R_vs_G": 0.0054,
+   "C_vs_P": 0.6522,
+   "X5b_vs_B2_planner_input": 0.3443,
+   "digest_vs_full_replica_check": 0.0015
+  },
+  "regex_tokens": {
+   "R_vs_P": 0.2176,
+   "R_vs_G": 0.0018,
+   "C_vs_P": 0.4278,
+   "X5b_vs_B2_planner_input": 0.3452,
+   "digest_vs_full_replica_check": 0.0002
+  },
+  "o200k_tokens": {
+   "R_vs_P": 0.5483,
+   "R_vs_G": 0.0058,
+   "C_vs_P": 0.7344,
+   "X5b_vs_B2_planner_input": 0.2943,
+   "digest_vs_full_replica_check": 0.0024
+  }
+ },
+ "by_operation": {
+  "INHERIT": {
+   "steps": 504,
+   "G_full_scene_graph": {
+    "bytes": 3987646,
+    "regex_tokens": 2672124,
+    "o200k_tokens": 1469721
+   },
+   "P_json_patch_plus_digest": {
+    "bytes": 30913,
+    "regex_tokens": 14560,
+    "o200k_tokens": 12060
+   },
+   "R_rsos_plus_digest": {
+    "bytes": 22964,
+    "regex_tokens": 4918,
+    "o200k_tokens": 9063
+   },
+   "C_core_plus_digest": {
+    "bytes": 28747,
+    "regex_tokens": 9332,
+    "o200k_tokens": 11412
+   },
+   "R_vs_P_bytes": 0.7429
+  },
+  "DEL": {
+   "steps": 30,
+   "G_full_scene_graph": {
+    "bytes": 236809,
+    "regex_tokens": 158682,
+    "o200k_tokens": 87160
+   },
+   "P_json_patch_plus_digest": {
+    "bytes": 1532,
+    "regex_tokens": 690,
+    "o200k_tokens": 619
+   },
+   "R_rsos_plus_digest": {
+    "bytes": 812,
+    "regex_tokens": 150,
+    "o200k_tokens": 336
+   },
+   "C_core_plus_digest": {
+    "bytes": 1052,
+    "regex_tokens": 270,
+    "o200k_tokens": 403
+   },
+   "R_vs_P_bytes": 0.53
+  },
+  "FUSE": {
+   "steps": 95,
+   "G_full_scene_graph": {
+    "bytes": 751672,
+    "regex_tokens": 503707,
+    "o200k_tokens": 276903
+   },
+   "P_json_patch_plus_digest": {
+    "bytes": 5238,
+    "regex_tokens": 2609,
+    "o200k_tokens": 2113
+   },
+   "R_rsos_plus_digest": {
+    "bytes": 4412,
+    "regex_tokens": 1235,
+    "o200k_tokens": 1806
+   },
+   "C_core_plus_digest": {
+    "bytes": 5932,
+    "regex_tokens": 2375,
+    "o200k_tokens": 2700
+   },
+   "R_vs_P_bytes": 0.8423
+  },
+  "ROUTE": {
+   "steps": 50,
+   "G_full_scene_graph": {
+    "bytes": 395616,
+    "regex_tokens": 265176,
+    "o200k_tokens": 145805
+   },
+   "P_json_patch_plus_digest": {
+    "bytes": 2526,
+    "regex_tokens": 1130,
+    "o200k_tokens": 984
+   },
+   "R_rsos_plus_digest": {
+    "bytes": 3032,
+    "regex_tokens": 700,
+    "o200k_tokens": 1003
+   },
+   "C_core_plus_digest": {
+    "bytes": 4682,
+    "regex_tokens": 1350,
+    "o200k_tokens": 1615
+   },
+   "R_vs_P_bytes": 1.2003
+  },
+  "SET": {
+   "steps": 135,
+   "G_full_scene_graph": {
+    "bytes": 1068811,
+    "regex_tokens": 716215,
+    "o200k_tokens": 394060
+   },
+   "P_json_patch_plus_digest": {
+    "bytes": 8861,
+    "regex_tokens": 4185,
+    "o200k_tokens": 3363
+   },
+   "R_rsos_plus_digest": {
+    "bytes": 4320,
+    "regex_tokens": 810,
+    "o200k_tokens": 1753
+   },
+   "C_core_plus_digest": {
+    "bytes": 5940,
+    "regex_tokens": 1755,
+    "o200k_tokens": 2391
+   },
+   "R_vs_P_bytes": 0.4875
+  },
+  "REHOST": {
+   "steps": 44,
+   "G_full_scene_graph": {
+    "bytes": 347895,
+    "regex_tokens": 233044,
+    "o200k_tokens": 128192
+   },
+   "P_json_patch_plus_digest": {
+    "bytes": 27180,
+    "regex_tokens": 14182,
+    "o200k_tokens": 7749
+   },
+   "R_rsos_plus_digest": {
+    "bytes": 1615,
+    "regex_tokens": 220,
+    "o200k_tokens": 572
+   },
+   "C_core_plus_digest": {
+    "bytes": 2715,
+    "regex_tokens": 660,
+    "o200k_tokens": 1009
+   },
+   "R_vs_P_bytes": 0.0594
+  },
+  "SCALE": {
+   "steps": 38,
+   "G_full_scene_graph": {
+    "bytes": 300859,
+    "regex_tokens": 201570,
+    "o200k_tokens": 110763
+   },
+   "P_json_patch_plus_digest": {
+    "bytes": 1947,
+    "regex_tokens": 954,
+    "o200k_tokens": 797
+   },
+   "R_rsos_plus_digest": {
+    "bytes": 1284,
+    "regex_tokens": 304,
+    "o200k_tokens": 648
+   },
+   "C_core_plus_digest": {
+    "bytes": 1930,
+    "regex_tokens": 646,
+    "o200k_tokens": 803
+   },
+   "R_vs_P_bytes": 0.6595
+  }
+ },
+ "per_task": [
+  {
+   "seed": 900,
+   "steps": 56,
+   "keys_init": 300,
+   "channel": {
+    "G_full_scene_graph": {
+     "bytes": 441636,
+     "regex_tokens": 295110,
+     "o200k_tokens": 162740
+    },
+    "P_json_patch_plus_digest": {
+     "bytes": 4601,
+     "regex_tokens": 2248,
+     "o200k_tokens": 1665
+    },
+    "R_rsos_plus_digest": {
+     "bytes": 2423,
+     "regex_tokens": 545,
+     "o200k_tokens": 973
+    },
+    "C_core_plus_digest": {
+     "bytes": 3221,
+     "regex_tokens": 1068,
+     "o200k_tokens": 1312
+    },
+    "digest_only_replica_check": {
+     "bytes": 12,
+     "regex_tokens": 1,
+     "o200k_tokens": 5
+    },
+    "full_state_replica_check": {
+     "bytes": 7904,
+     "regex_tokens": 5277,
+     "o200k_tokens": 2922
+    }
+   },
+   "planner_input": {
+    "B2": {
+     "bytes": 7730,
+     "regex_tokens": 2323,
+     "o200k_tokens": 2619
+    },
+    "X5b": {
+     "bytes": 2671,
+     "regex_tokens": 821,
+     "o200k_tokens": 787
+    }
+   }
+  },
+  {
+   "seed": 901,
+   "steps": 56,
+   "keys_init": 300,
+   "channel": {
+    "G_full_scene_graph": {
+     "bytes": 443865,
+     "regex_tokens": 296840,
+     "o200k_tokens": 162407
+    },
+    "P_json_patch_plus_digest": {
+     "bytes": 6113,
+     "regex_tokens": 2993,
+     "o200k_tokens": 2015
+    },
+    "R_rsos_plus_digest": {
+     "bytes": 2538,
+     "regex_tokens": 522,
+     "o200k_tokens": 961
+    },
+    "C_core_plus_digest": {
+     "bytes": 3388,
+     "regex_tokens": 1036,
+     "o200k_tokens": 1303
+    },
+    "digest_only_replica_check": {
+     "bytes": 12,
+     "regex_tokens": 1,
+     "o200k_tokens": 8
+    },
+    "full_state_replica_check": {
+     "bytes": 7931,
+     "regex_tokens": 5297,
+     "o200k_tokens": 2881
+    }
+   },
+   "planner_input": {
+    "B2": {
+     "bytes": 7859,
+     "regex_tokens": 2304,
+     "o200k_tokens": 2615
+    },
+    "X5b": {
+     "bytes": 2829,
+     "regex_tokens": 802,
+     "o200k_tokens": 785
+    }
+   }
+  },
+  {
+   "seed": 902,
+   "steps": 56,
+   "keys_init": 300,
+   "channel": {
+    "G_full_scene_graph": {
+     "bytes": 444503,
+     "regex_tokens": 298542,
+     "o200k_tokens": 164139
+    },
+    "P_json_patch_plus_digest": {
+     "bytes": 4119,
+     "regex_tokens": 1994,
+     "o200k_tokens": 1505
+    },
+    "R_rsos_plus_digest": {
+     "bytes": 2438,
+     "regex_tokens": 530,
+     "o200k_tokens": 945
+    },
+    "C_core_plus_digest": {
+     "bytes": 3235,
+     "regex_tokens": 1040,
+     "o200k_tokens": 1274
+    },
+    "digest_only_replica_check": {
+     "bytes": 12,
+     "regex_tokens": 1,
+     "o200k_tokens": 7
+    },
+    "full_state_replica_check": {
+     "bytes": 7942,
+     "regex_tokens": 5335,
+     "o200k_tokens": 2935
+    }
+   },
+   "planner_input": {
+    "B2": {
+     "bytes": 7713,
+     "regex_tokens": 2312,
+     "o200k_tokens": 2614
+    },
+    "X5b": {
+     "bytes": 2685,
+     "regex_tokens": 810,
+     "o200k_tokens": 782
+    }
+   }
+  },
+  {
+   "seed": 903,
+   "steps": 56,
+   "keys_init": 300,
+   "channel": {
+    "G_full_scene_graph": {
+     "bytes": 443673,
+     "regex_tokens": 297648,
+     "o200k_tokens": 163937
+    },
+    "P_json_patch_plus_digest": {
+     "bytes": 3940,
+     "regex_tokens": 1820,
+     "o200k_tokens": 1448
+    },
+    "R_rsos_plus_digest": {
+     "bytes": 2509,
+     "regex_tokens": 485,
+     "o200k_tokens": 941
+    },
+    "C_core_plus_digest": {
+     "bytes": 3256,
+     "regex_tokens": 956,
+     "o200k_tokens": 1217
+    },
+    "digest_only_replica_check": {
+     "bytes": 12,
+     "regex_tokens": 1,
+     "o200k_tokens": 5
+    },
+    "full_state_replica_check": {
+     "bytes": 7923,
+     "regex_tokens": 5319,
+     "o200k_tokens": 2934
+    }
+   },
+   "planner_input": {
+    "B2": {
+     "bytes": 7648,
+     "regex_tokens": 2209,
+     "o200k_tokens": 2547
+    },
+    "X5b": {
+     "bytes": 2608,
+     "regex_tokens": 707,
+     "o200k_tokens": 718
+    }
+   }
+  },
+  {
+   "seed": 904,
+   "steps": 56,
+   "keys_init": 300,
+   "channel": {
+    "G_full_scene_graph": {
+     "bytes": 443871,
+     "regex_tokens": 297702,
+     "o200k_tokens": 163383
+    },
+    "P_json_patch_plus_digest": {
+     "bytes": 4727,
+     "regex_tokens": 2314,
+     "o200k_tokens": 1668
+    },
+    "R_rsos_plus_digest": {
+     "bytes": 2339,
+     "regex_tokens": 515,
+     "o200k_tokens": 936
+    },
+    "C_core_plus_digest": {
+     "bytes": 3174,
+     "regex_tokens": 1022,
+     "o200k_tokens": 1267
+    },
+    "digest_only_replica_check": {
+     "bytes": 12,
+     "regex_tokens": 1,
+     "o200k_tokens": 7
+    },
+    "full_state_replica_check": {
+     "bytes": 7978,
+     "regex_tokens": 5319,
+     "o200k_tokens": 2917
+    }
+   },
+   "planner_input": {
+    "B2": {
+     "bytes": 7610,
+     "regex_tokens": 2286,
+     "o200k_tokens": 2582
+    },
+    "X5b": {
+     "bytes": 2587,
+     "regex_tokens": 784,
+     "o200k_tokens": 752
+    }
+   }
+  },
+  {
+   "seed": 905,
+   "steps": 56,
+   "keys_init": 300,
+   "channel": {
+    "G_full_scene_graph": {
+     "bytes": 446799,
+     "regex_tokens": 298522,
+     "o200k_tokens": 164902
+    },
+    "P_json_patch_plus_digest": {
+     "bytes": 4321,
+     "regex_tokens": 2120,
+     "o200k_tokens": 1588
+    },
+    "R_rsos_plus_digest": {
+     "bytes": 2342,
+     "regex_tokens": 523,
+     "o200k_tokens": 975
+    },
+    "C_core_plus_digest": {
+     "bytes": 3113,
+     "regex_tokens": 1032,
+     "o200k_tokens": 1291
+    },
+    "digest_only_replica_check": {
+     "bytes": 12,
+     "regex_tokens": 1,
+     "o200k_tokens": 6
+    },
+    "full_state_replica_check": {
+     "bytes": 8014,
+     "regex_tokens": 5347,
+     "o200k_tokens": 2951
+    }
+   },
+   "planner_input": {
+    "B2": {
+     "bytes": 7646,
+     "regex_tokens": 2303,
+     "o200k_tokens": 2602
+    },
+    "X5b": {
+     "bytes": 2588,
+     "regex_tokens": 801,
+     "o200k_tokens": 769
+    }
+   }
+  },
+  {
+   "seed": 906,
+   "steps": 56,
+   "keys_init": 300,
+   "channel": {
+    "G_full_scene_graph": {
+     "bytes": 440379,
+     "regex_tokens": 295588,
+     "o200k_tokens": 162199
+    },
+    "P_json_patch_plus_digest": {
+     "bytes": 5213,
+     "regex_tokens": 2579,
+     "o200k_tokens": 1807
+    },
+    "R_rsos_plus_digest": {
+     "bytes": 2360,
+     "regex_tokens": 530,
+     "o200k_tokens": 932
+    },
+    "C_core_plus_digest": {
+     "bytes": 3205,
+     "regex_tokens": 1050,
+     "o200k_tokens": 1289
+    },
+    "digest_only_replica_check": {
+     "bytes": 12,
+     "regex_tokens": 1,
+     "o200k_tokens": 7
+    },
+    "full_state_replica_check": {
+     "bytes": 7812,
+     "regex_tokens": 5245,
+     "o200k_tokens": 2893
+    }
+   },
+   "planner_input": {
+    "B2": {
+     "bytes": 7722,
+     "regex_tokens": 2321,
+     "o200k_tokens": 2612
+    },
+    "X5b": {
+     "bytes": 2691,
+     "regex_tokens": 819,
+     "o200k_tokens": 777
+    }
+   }
+  },
+  {
+   "seed": 907,
+   "steps": 56,
+   "keys_init": 300,
+   "channel": {
+    "G_full_scene_graph": {
+     "bytes": 440428,
+     "regex_tokens": 295522,
+     "o200k_tokens": 162291
+    },
+    "P_json_patch_plus_digest": {
+     "bytes": 4072,
+     "regex_tokens": 1983,
+     "o200k_tokens": 1502
+    },
+    "R_rsos_plus_digest": {
+     "bytes": 2359,
+     "regex_tokens": 529,
+     "o200k_tokens": 939
+    },
+    "C_core_plus_digest": {
+     "bytes": 3128,
+     "regex_tokens": 1034,
+     "o200k_tokens": 1258
+    },
+    "digest_only_replica_check": {
+     "bytes": 12,
+     "regex_tokens": 1,
+     "o200k_tokens": 6
+    },
+    "full_state_replica_check": {
+     "bytes": 7850,
+     "regex_tokens": 5267,
+     "o200k_tokens": 2893
+    }
+   },
+   "planner_input": {
+    "B2": {
+     "bytes": 7575,
+     "regex_tokens": 2283,
+     "o200k_tokens": 2584
+    },
+    "X5b": {
+     "bytes": 2536,
+     "regex_tokens": 781,
+     "o200k_tokens": 752
+    }
+   }
+  },
+  {
+   "seed": 908,
+   "steps": 56,
+   "keys_init": 300,
+   "channel": {
+    "G_full_scene_graph": {
+     "bytes": 444482,
+     "regex_tokens": 297814,
+     "o200k_tokens": 163731
+    },
+    "P_json_patch_plus_digest": {
+     "bytes": 4985,
+     "regex_tokens": 2480,
+     "o200k_tokens": 1786
+    },
+    "R_rsos_plus_digest": {
+     "bytes": 2343,
+     "regex_tokens": 542,
+     "o200k_tokens": 967
+    },
+    "C_core_plus_digest": {
+     "bytes": 3112,
+     "regex_tokens": 1056,
+     "o200k_tokens": 1297
+    },
+    "digest_only_replica_check": {
+     "bytes": 12,
+     "regex_tokens": 1,
+     "o200k_tokens": 10
+    },
+    "full_state_replica_check": {
+     "bytes": 7951,
+     "regex_tokens": 5327,
+     "o200k_tokens": 2939
+    }
+   },
+   "planner_input": {
+    "B2": {
+     "bytes": 7691,
+     "regex_tokens": 2339,
+     "o200k_tokens": 2634
+    },
+    "X5b": {
+     "bytes": 2654,
+     "regex_tokens": 837,
+     "o200k_tokens": 798
+    }
+   }
+  },
+  {
+   "seed": 909,
+   "steps": 56,
+   "keys_init": 300,
+   "channel": {
+    "G_full_scene_graph": {
+     "bytes": 440507,
+     "regex_tokens": 295362,
+     "o200k_tokens": 162527
+    },
+    "P_json_patch_plus_digest": {
+     "bytes": 5102,
+     "regex_tokens": 2476,
+     "o200k_tokens": 1807
+    },
+    "R_rsos_plus_digest": {
+     "bytes": 2509,
+     "regex_tokens": 507,
+     "o200k_tokens": 949
+    },
+    "C_core_plus_digest": {
+     "bytes": 3297,
+     "regex_tokens": 992,
+     "o200k_tokens": 1258
+    },
+    "digest_only_replica_check": {
+     "bytes": 12,
+     "regex_tokens": 1,
+     "o200k_tokens": 6
+    },
+    "full_state_replica_check": {
+     "bytes": 7889,
+     "regex_tokens": 5283,
+     "o200k_tokens": 2911
+    }
+   },
+   "planner_input": {
+    "B2": {
+     "bytes": 7767,
+     "regex_tokens": 2266,
+     "o200k_tokens": 2584
+    },
+    "X5b": {
+     "bytes": 2734,
+     "regex_tokens": 764,
+     "o200k_tokens": 752
+    }
+   }
+  },
+  {
+   "seed": 910,
+   "steps": 56,
+   "keys_init": 300,
+   "channel": {
+    "G_full_scene_graph": {
+     "bytes": 443608,
+     "regex_tokens": 296384,
+     "o200k_tokens": 163573
+    },
+    "P_json_patch_plus_digest": {
+     "bytes": 4739,
+     "regex_tokens": 2328,
+     "o200k_tokens": 1691
+    },
+    "R_rsos_plus_digest": {
+     "bytes": 2269,
+     "regex_tokens": 498,
+     "o200k_tokens": 915
+    },
+    "C_core_plus_digest": {
+     "bytes": 3050,
+     "regex_tokens": 988,
+     "o200k_tokens": 1233
+    },
+    "digest_only_replica_check": {
+     "bytes": 12,
+     "regex_tokens": 1,
+     "o200k_tokens": 9
+    },
+    "full_state_replica_check": {
+     "bytes": 7919,
+     "regex_tokens": 5285,
+     "o200k_tokens": 2922
+    }
+   },
+   "planner_input": {
+    "B2": {
+     "bytes": 7607,
+     "regex_tokens": 2277,
+     "o200k_tokens": 2571
+    },
+    "X5b": {
+     "bytes": 2544,
+     "regex_tokens": 775,
+     "o200k_tokens": 739
+    }
+   }
+  },
+  {
+   "seed": 911,
+   "steps": 56,
+   "keys_init": 300,
+   "channel": {
+    "G_full_scene_graph": {
+     "bytes": 443282,
+     "regex_tokens": 297666,
+     "o200k_tokens": 163400
+    },
+    "P_json_patch_plus_digest": {
+     "bytes": 4030,
+     "regex_tokens": 1927,
+     "o200k_tokens": 1502
+    },
+    "R_rsos_plus_digest": {
+     "bytes": 2403,
+     "regex_tokens": 502,
+     "o200k_tokens": 931
+    },
+    "C_core_plus_digest": {
+     "bytes": 3124,
+     "regex_tokens": 974,
+     "o200k_tokens": 1219
+    },
+    "digest_only_replica_check": {
+     "bytes": 12,
+     "regex_tokens": 1,
+     "o200k_tokens": 8
+    },
+    "full_state_replica_check": {
+     "bytes": 7937,
+     "regex_tokens": 5323,
+     "o200k_tokens": 2924
+    }
+   },
+   "planner_input": {
+    "B2": {
+     "bytes": 7606,
+     "regex_tokens": 2262,
+     "o200k_tokens": 2565
+    },
+    "X5b": {
+     "bytes": 2589,
+     "regex_tokens": 760,
+     "o200k_tokens": 731
+    }
+   }
+  },
+  {
+   "seed": 912,
+   "steps": 56,
+   "keys_init": 300,
+   "channel": {
+    "G_full_scene_graph": {
+     "bytes": 443307,
+     "regex_tokens": 297476,
+     "o200k_tokens": 163307
+    },
+    "P_json_patch_plus_digest": {
+     "bytes": 3864,
+     "regex_tokens": 1851,
+     "o200k_tokens": 1442
+    },
+    "R_rsos_plus_digest": {
+     "bytes": 2412,
+     "regex_tokens": 538,
+     "o200k_tokens": 957
+    },
+    "C_core_plus_digest": {
+     "bytes": 3159,
+     "regex_tokens": 1044,
+     "o200k_tokens": 1279
+    },
+    "digest_only_replica_check": {
+     "bytes": 12,
+     "regex_tokens": 1,
+     "o200k_tokens": 6
+    },
+    "full_state_replica_check": {
+     "bytes": 7917,
+     "regex_tokens": 5315,
+     "o200k_tokens": 2916
+    }
+   },
+   "planner_input": {
+    "B2": {
+     "bytes": 7685,
+     "regex_tokens": 2313,
+     "o200k_tokens": 2611
+    },
+    "X5b": {
+     "bytes": 2653,
+     "regex_tokens": 811,
+     "o200k_tokens": 779
+    }
+   }
+  },
+  {
+   "seed": 913,
+   "steps": 56,
+   "keys_init": 300,
+   "channel": {
+    "G_full_scene_graph": {
+     "bytes": 440253,
+     "regex_tokens": 295484,
+     "o200k_tokens": 162036
+    },
+    "P_json_patch_plus_digest": {
+     "bytes": 8821,
+     "regex_tokens": 4526,
+     "o200k_tokens": 2830
+    },
+    "R_rsos_plus_digest": {
+     "bytes": 2326,
+     "regex_tokens": 514,
+     "o200k_tokens": 932
+    },
+    "C_core_plus_digest": {
+     "bytes": 3134,
+     "regex_tokens": 1028,
+     "o200k_tokens": 1276
+    },
+    "digest_only_replica_check": {
+     "bytes": 12,
+     "regex_tokens": 1,
+     "o200k_tokens": 6
+    },
+    "full_state_replica_check": {
+     "bytes": 7838,
+     "regex_tokens": 5247,
+     "o200k_tokens": 2904
+    }
+   },
+   "planner_input": {
+    "B2": {
+     "bytes": 7651,
+     "regex_tokens": 2296,
+     "o200k_tokens": 2585
+    },
+    "X5b": {
+     "bytes": 2612,
+     "regex_tokens": 794,
+     "o200k_tokens": 755
+    }
+   }
+  },
+  {
+   "seed": 914,
+   "steps": 56,
+   "keys_init": 300,
+   "channel": {
+    "G_full_scene_graph": {
+     "bytes": 445407,
+     "regex_tokens": 298158,
+     "o200k_tokens": 164303
+    },
+    "P_json_patch_plus_digest": {
+     "bytes": 5211,
+     "regex_tokens": 2570,
+     "o200k_tokens": 1829
+    },
+    "R_rsos_plus_digest": {
+     "bytes": 2445,
+     "regex_tokens": 525,
+     "o200k_tokens": 950
+    },
+    "C_core_plus_digest": {
+     "bytes": 3213,
+     "regex_tokens": 1028,
+     "o200k_tokens": 1265
+    },
+    "digest_only_replica_check": {
+     "bytes": 12,
+     "regex_tokens": 1,
+     "o200k_tokens": 6
+    },
+    "full_state_replica_check": {
+     "bytes": 7970,
+     "regex_tokens": 5325,
+     "o200k_tokens": 2943
+    }
+   },
+   "planner_input": {
+    "B2": {
+     "bytes": 7694,
+     "regex_tokens": 2296,
+     "o200k_tokens": 2596
+    },
+    "X5b": {
+     "bytes": 2661,
+     "regex_tokens": 794,
+     "o200k_tokens": 762
+    }
+   }
+  },
+  {
+   "seed": 915,
+   "steps": 56,
+   "keys_init": 300,
+   "channel": {
+    "G_full_scene_graph": {
+     "bytes": 443308,
+     "regex_tokens": 296700,
+     "o200k_tokens": 163729
+    },
+    "P_json_patch_plus_digest": {
+     "bytes": 4339,
+     "regex_tokens": 2101,
+     "o200k_tokens": 1600
+    },
+    "R_rsos_plus_digest": {
+     "bytes": 2424,
+     "regex_tokens": 532,
+     "o200k_tokens": 978
+    },
+    "C_core_plus_digest": {
+     "bytes": 3189,
+     "regex_tokens": 1040,
+     "o200k_tokens": 1295
+    },
+    "digest_only_replica_check": {
+     "bytes": 12,
+     "regex_tokens": 1,
+     "o200k_tokens": 9
+    },
+    "full_state_replica_check": {
+     "bytes": 7956,
+     "regex_tokens": 5311,
+     "o200k_tokens": 2948
+    }
+   },
+   "planner_input": {
+    "B2": {
+     "bytes": 7720,
+     "regex_tokens": 2309,
+     "o200k_tokens": 2628
+    },
+    "X5b": {
+     "bytes": 2677,
+     "regex_tokens": 807,
+     "o200k_tokens": 789
+    }
+   }
+  }
+ ],
+ "sha256": "a09bc0cc303c3504c2dccf107c85f527556df1452c9c627797749979994d2739"
+}

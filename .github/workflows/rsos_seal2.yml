@@ -1,0 +1,49 @@
+# SEAL2 on cloud machines (24 Nov 2026): one job per sealed unit, then the sealed analysis; results to branch cloud-results.
+name: rsos-seal2
+on:
+  push:
+    branches: [core-v1]
+    paths: ["cloud/trigger_seal2.txt"]
+permissions:
+  contents: write
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        u: ["laws 1", "laws 3", "laws 5", "laws 7", "laws 9", "laws 11", "laws 13", "laws 15", "laws 17", "laws 19", "laws 21", "le 1", "le 3", "le 5", "le 7", "le 9", "le 11", "le 13", "le 15", "le 17", "le 19", "le 21", "organs 1 7120", "organs 1 7121", "organs 3 7120", "organs 3 7121", "organs 5 7120", "organs 5 7121", "organs 7 7120", "organs 7 7121", "organs 9 7120", "organs 9 7121", "organs 11 7120", "organs 11 7121", "organs 13 7120", "organs 13 7121", "organs 15 7120", "organs 15 7121", "organs 17 7120", "organs 17 7121", "organs 19 7120", "organs 19 7121", "organs 21 7120", "organs 21 7121"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install numpy scipy scikit-learn requests
+      - run: python cloud/seal2_unit.py ${{ matrix.u }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: seal2-${{ strategy.job-index }}
+          path: seal2/out/diag/
+  analyze:
+    needs: unit
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install numpy scipy scikit-learn requests
+      - uses: actions/download-artifact@v4
+        with:
+          path: /tmp/art
+      - run: mkdir -p seal2/out/diag && cp -r /tmp/art/*/. seal2/out/diag/ && ls seal2/out/diag | wc -l
+      - run: cd seal2 && python seal2.py analyze > out/analyze_log.txt 2>&1; cat out/analyze_log.txt
+      - name: push results to cloud-results
+        if: always()
+        run: |
+          git config user.name "rsos-cloud"; git config user.email "rsos-cloud@users.noreply.github.com"
+          cp -r seal2/out /tmp/seal2out
+          git fetch origin cloud-results && git checkout cloud-results
+          rm -rf seal2_out && cp -r /tmp/seal2out seal2_out
+          git add seal2_out && git commit -qm "SEAL2 cloud run ${{ github.run_id }}" && git push -q origin cloud-results

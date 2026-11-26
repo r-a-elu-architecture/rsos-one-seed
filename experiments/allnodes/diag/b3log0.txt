@@ -1,0 +1,8 @@
+bridge 1 6650 {'supply': 'B', 'drift': 'B'} {'child_C': 0.9718, 'parA_C': 0.9689, 'parB_C': 0.9718, 'child_A': 0.8944, 'parA_A': 0.8864, 'child_B': 0.98, 'parB_B': 0.98} 47 s
+bridge 1 6651 {'supply': 'B', 'drift': 'B'} {'child_C': 0.9806, 'parA_C': 0.96, 'parB_C': 0.9806, 'child_A': 0.9603, 'parA_A': 0.9539, 'child_B': 0.9838, 'parB_B': 0.9838} 51 s
+bridge 7 6650 {'supply': 'B', 'drift': 'B'} {'child_C': 0.9964, 'parA_C': 0.9958, 'parB_C': 0.9964, 'child_A': 0.8496, 'parA_A': 0.8507, 'child_B': 0.9967, 'parB_B': 0.9967} 53 s
+bridge 7 6651 {'supply': 'B', 'drift': 'B'} {'child_C': 0.9486, 'parA_C': 0.9396, 'parB_C': 0.9486, 'child_A': 0.8904, 'parA_A': 0.9057, 'child_B': 0.9943, 'parB_B': 0.9943} 53 s
+bridge 13 6650 {'supply': 'A', 'drift': 'A'} {'child_C': 0.9874, 'parA_C': 0.9874, 'parB_C': 0.9875, 'child_A': 0.9883, 'parA_A': 0.9883, 'child_B': 0.9507, 'parB_B': 0.9404} 49 s
+bridge 13 6651 {'supply': 'A', 'drift': 'A'} {'child_C': 0.9879, 'parA_C': 0.9879, 'parB_C': 0.9879, 'child_A': 0.9883, 'parA_A': 0.9883, 'child_B': 0.9925, 'parB_B': 0.9921} 48 s
+bridge 19 6650 {'supply': 'A', 'drift': 'A'} {'child_C': 0.9975, 'parA_C': 0.9975, 'parB_C': 0.9967, 'child_A': 0.9681, 'parA_A': 0.9681, 'child_B': 0.9971, 'parB_B': 0.9967} 42 s
+bridge 19 6651 {'supply': 'A', 'drift': 'A'} {'child_C': 0.9942, 'parA_C': 0.9942, 'parB_C': 0.9942, 'child_A': 0.9929, 'parA_A': 0.9929, 'child_B': 0.9942, 'parB_B': 0.995} 44 s

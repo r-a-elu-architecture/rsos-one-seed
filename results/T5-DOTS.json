@@ -1,0 +1,311 @@
+{
+ "ci95": {
+  "cancer": {
+   "bio": [
+    -1.2670565302144259,
+    0.09746588693957577
+   ],
+   "bio+chem": [
+    -1.0721247563352818,
+    -0.1949317738791423
+   ],
+   "bio+chem+feedback": [
+    -1.949317738791421,
+    -0.2923976608187125
+   ],
+   "bio+chem+music": [
+    -1.1695906432748557,
+    0.19493177387914415
+   ],
+   "bio+chem+music+feedback": [
+    -2.339181286549708,
+    -0.48732943469786033
+   ],
+   "bio+feedback": [
+    -1.364522417153996,
+    -0.09746588693957021
+   ],
+   "bio+music": [
+    -1.461988304093568,
+    0.2923976608187125
+   ],
+   "bio+music+feedback": [
+    -1.267056530214422,
+    -0.3898635477582846
+   ],
+   "chem": [
+    -0.29239766081871066,
+    0.2923976608187162
+   ],
+   "chem+feedback": [
+    -0.29239766081871066,
+    0.2923976608187162
+   ],
+   "chem+music": [
+    -0.4873294346978511,
+    -0.09746588693957021
+   ],
+   "chem+music+feedback": [
+    -0.4873294346978511,
+    -0.09746588693957021
+   ],
+   "feedback": [
+    0.0,
+    0.0
+   ],
+   "music": [
+    0.0,
+    0.0
+   ],
+   "music+feedback": [
+    0.0,
+    0.0
+   ]
+  },
+  "digits": {
+   "bio": [
+    -0.6172839506172848,
+    0.7098765432098771
+   ],
+   "bio+chem": [
+    -1.080246913580248,
+    0.3086419753086415
+   ],
+   "bio+chem+feedback": [
+    -1.666666666666668,
+    0.6790123456790106
+   ],
+   "bio+chem+music": [
+    -0.6481481481481532,
+    0.21604938271604923
+   ],
+   "bio+chem+music+feedback": [
+    -0.833333333333336,
+    0.493827160493826
+   ],
+   "bio+feedback": [
+    -0.4320987654321022,
+    0.8641975308641987
+   ],
+   "bio+music": [
+    -0.7716049382716029,
+    0.40123456790123374
+   ],
+   "bio+music+feedback": [
+    -0.6481481481481477,
+    0.6790123456790124
+   ],
+   "chem": [
+    -0.9876543209876522,
+    -0.09259259259259782
+   ],
+   "chem+feedback": [
+    -1.0185185185185166,
+    -0.12345679012346067
+   ],
+   "chem+music": [
+    -0.8641975308642044,
+    -0.1543209876543198
+   ],
+   "chem+music+feedback": [
+    -0.7716049382716103,
+    -0.1543209876543198
+   ],
+   "feedback": [
+    0.0,
+    0.0
+   ],
+   "music": [
+    -0.2469135802469121,
+    0.33950617283950435
+   ],
+   "music+feedback": [
+    -0.2469135802469121,
+    0.33950617283950435
+   ]
+  },
+  "wine": {
+   "bio": [
+    0.0,
+    0.0
+   ],
+   "bio+chem": [
+    0.0,
+    0.0
+   ],
+   "bio+chem+feedback": [
+    0.0,
+    0.0
+   ],
+   "bio+chem+music": [
+    0.0,
+    0.0
+   ],
+   "bio+chem+music+feedback": [
+    0.0,
+    0.0
+   ],
+   "bio+feedback": [
+    0.0,
+    0.0
+   ],
+   "bio+music": [
+    0.0,
+    0.0
+   ],
+   "bio+music+feedback": [
+    0.0,
+    0.0
+   ],
+   "chem": [
+    0.0,
+    0.0
+   ],
+   "chem+feedback": [
+    0.0,
+    0.0
+   ],
+   "chem+music": [
+    0.0,
+    0.0
+   ],
+   "chem+music+feedback": [
+    0.0,
+    0.0
+   ],
+   "feedback": [
+    0.0,
+    0.0
+   ],
+   "music": [
+    0.0,
+    0.0
+   ],
+   "music+feedback": [
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "code_commit": "5d77b8fecf4d17ce0751df48d157103a63d1aac8",
+ "experiment": "T5-DOTS",
+ "mean_effect_pp": {
+  "cancer": {
+   "bio": -0.4873294346978548,
+   "bio+chem": -0.5847953216374269,
+   "bio+chem+feedback": -1.0721247563352818,
+   "bio+chem+music": -0.4873294346978548,
+   "bio+chem+music+feedback": -1.3645224171539978,
+   "bio+feedback": -0.682261208576997,
+   "bio+music": -0.5847953216374268,
+   "bio+music+feedback": -0.7797270955165692,
+   "chem": 1.8503717077085944e-15,
+   "chem+feedback": 1.8503717077085944e-15,
+   "chem+music": -0.29239766081871066,
+   "chem+music+feedback": -0.29239766081871066,
+   "feedback": 0.0,
+   "music": 0.0,
+   "music+feedback": 0.0
+  },
+  "digits": {
+   "bio": 0.030864197530864706,
+   "bio+chem": -0.3395061728395062,
+   "bio+chem+feedback": -0.46296296296296496,
+   "bio+chem+music": -0.2469135802469158,
+   "bio+chem+music+feedback": -0.15432098765432167,
+   "bio+feedback": 0.24691358024691393,
+   "bio+music": -0.21604938271604923,
+   "bio+music+feedback": 0.0,
+   "chem": -0.5555555555555555,
+   "chem+feedback": -0.5864197530864201,
+   "chem+music": -0.5555555555555591,
+   "chem+music+feedback": -0.5246913580246945,
+   "feedback": 0.0,
+   "music": 0.0,
+   "music+feedback": 0.0
+  },
+  "wine": {
+   "bio": 0.0,
+   "bio+chem": 0.0,
+   "bio+chem+feedback": 0.0,
+   "bio+chem+music": 0.0,
+   "bio+chem+music+feedback": 0.0,
+   "bio+feedback": 0.0,
+   "bio+music": 0.0,
+   "bio+music+feedback": 0.0,
+   "chem": 0.0,
+   "chem+feedback": 0.0,
+   "chem+music": 0.0,
+   "chem+music+feedback": 0.0,
+   "feedback": 0.0,
+   "music": 0.0,
+   "music+feedback": 0.0
+  }
+ },
+ "numpy": "2.5.3",
+ "python": "3.13.18",
+ "results_sha256": "596490fc813d172f9416db6a33c9043b0b31a2b1ebc578631d86006e185a3b0b",
+ "run_utc": "2026-11-16T19:25:56Z",
+ "summary": {
+  "H1_same_dot_different_hosts": {
+   "bio_ci95": {
+    "cancer": [
+     -1.2670565302144259,
+     0.09746588693957577
+    ],
+    "digits": [
+     -0.6172839506172848,
+     0.7098765432098771
+    ],
+    "wine": [
+     0.0,
+     0.0
+    ]
+   },
+   "bio_effect_pp": {
+    "cancer": -0.487,
+    "digits": 0.031,
+    "wine": 0.0
+   },
+   "pass": false
+  },
+  "H2_host_decides_best": {
+   "best": {
+    "cancer": "chem",
+    "digits": "bio+feedback",
+    "wine": "bio"
+   },
+   "mean_spearman": NaN,
+   "pass": false,
+   "spearman_pairs": [
+    NaN,
+    -0.297,
+    NaN
+   ]
+  },
+  "H3_nonadditive": {
+   "pass": false,
+   "per_host": {
+    "digits": {
+     "best": "bio+feedback",
+     "effect": 0.24691358024691393,
+     "nonadditive": false,
+     "sum_of_singles": 0.030864197530864706
+    }
+   }
+  },
+  "baseline_accuracy": {
+   "cancer": 0.9698,
+   "digits": 0.946,
+   "wine": 0.9815
+  },
+  "chat_reference": {
+   "bio": {
+    "cancer": -0.39,
+    "digits": 0.586,
+    "wine": -2.16
+   },
+   "spearman": "-0.28 to -0.22"
+  }
+ }
+}

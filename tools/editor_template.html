@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RSOS Language: edit a program as a painting</title>
+<style>
+  :root { --ink:#1e2430; --muted:#5b6475; --sky:#e3eef8; --ground:#dfe8cf; --accent:#c8781e; --brain:#7b5ea7; --ok:#2e7d4f; --bad:#b23b3b; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; color:var(--ink); background:#f7f6f2; }
+  header { padding:18px 24px 6px; }
+  h1 { font-size:20px; margin:0 0 4px; }
+  header p { margin:0; color:var(--muted); max-width:900px; }
+  main { display:grid; grid-template-columns: minmax(0,1fr) 360px; gap:16px; padding:12px 24px 24px; }
+  @media (max-width: 980px) { main { grid-template-columns: 1fr; } }
+  .card { background:#fff; border:1px solid #e2e0d8; border-radius:10px; padding:14px; }
+  svg { width:100%; height:auto; display:block; border-radius:8px; }
+  .palette { display:flex; flex-wrap:wrap; gap:8px; margin:10px 0 2px; }
+  .chip { border:1px solid #c9c4b6; background:#fffaf0; border-radius:16px; padding:5px 11px; cursor:pointer; font-size:13px; }
+  .chip[aria-pressed="true"] { background:var(--accent); color:#fff; border-color:var(--accent); }
+  .zone { cursor:pointer; }
+  .zone:hover { stroke:var(--accent); stroke-width:2; }
+  .hint { color:var(--muted); font-size:13px; margin:8px 0 0; }
+  pre { background:#1e2430; color:#e8e6df; padding:10px; border-radius:8px; font-size:12.5px; min-height:70px; white-space:pre-wrap; margin:6px 0 0; }
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  td { padding:4px 2px; border-bottom:1px solid #eee; }
+  td.num { text-align:right; font-variant-numeric:tabular-nums; }
+  .up { color:var(--ok); } .down { color:var(--bad); }
+  button { font:inherit; border:1px solid #c9c4b6; background:#fff; border-radius:8px; padding:5px 10px; cursor:pointer; }
+  footer { color:var(--muted); font-size:12.5px; padding:0 24px 24px; max-width:1000px; }
+#scene text,#scene .ghost{pointer-events:none}
+#scene .placed{cursor:grab;touch-action:none}
+.chip{touch-action:none}
+#scene .zone.near-drop{fill:#ffd99a;stroke-width:2.5}
+#scene .zone{cursor:pointer}
+#task{max-width:100%;width:100%}
+.back{font-size:14px;color:#1d7f55;text-decoration:none}
+#scene .zone:hover,#scene .zone:focus{fill:#ffd99a}
+</style>
+</head>
+<body>
+<header>
+  <a class="back" href="index.html">← RSOS Language</a>
+  <h1>Edit a program as a painting</h1>
+  <p>A real 12-module support agent, painted. Choose a guest, then click where it goes on its host: the <b>head</b>
+  (what it takes in), the <b>heart</b> (how it works), the <b>brain</b> (what it knows) or <b>near</b> (beside it).
+  Click the engine to turn it grey. Every number is measured by running the program.</p>
+</header>
+<main>
+  <section class="card">
+    <div class="palette" role="toolbar" aria-label="Guests">
+      <button class="chip" data-guest="spell_corrector" aria-pressed="false">spell corrector → bird</button>
+      <button class="chip" data-guest="synonym_expander" aria-pressed="false">synonym expander → bird</button>
+      <button class="chip" data-guest="cache" aria-pressed="false">cache → lake</button>
+      <button class="chip" data-guest="fast_retry" aria-pressed="false">fast retry → engine heart</button>
+      <button id="heal" aria-pressed="false">heal the engine</button>
+      <button id="reset">return to baseline</button>
+    </div>
+    <svg id="scene" viewBox="0 0 1100 440" role="img" aria-label="The workflow as a painting"></svg>
+    <p class="hint" id="hint">Drag a guest onto its host: it snaps to the head, heart, brain or near. Or choose it and click a dashed circle. Drag a placed guest off its host to remove it.</p>
+  </section>
+  <aside class="card">
+    <h2 style="font-size:16px;margin:0 0 6px">The program</h2>
+    <pre id="program"></pre>
+    <h2 style="font-size:16px;margin:14px 0 6px">Measured effect</h2>
+    <table id="metrics"></table>
+    <p class="hint" id="setinfo"></p>
+    <h2 style="font-size:16px;margin:14px 0 6px">Speed test</h2>
+    <select id="task" aria-label="Task"></select>
+    <button id="start">Start</button> <button id="export">Export results</button> <button id="copy">Copy results</button>
+    <p class="hint" id="taskinfo">Pick a task, press Start, then reach the target with gestures.</p>
+    <h2 style="font-size:16px;margin:14px 0 6px">REACH</h2>
+    <pre id="reach" aria-live="polite"></pre>
+    <p class="hint" id="reachinfo"></p>
+    <textarea id="results" readonly rows="4" style="width:100%;font-size:11px;display:none" aria-label="Speed test results"></textarea>
+  </aside>
+</main>
+<footer>
+  RSOS Language 0.2. The browser shows runs made by the Python runtime for every combination of these gestures
+  (<span id="ncombos"></span> programs, each run on 500 held-out tickets). Gestures compile to exact program changes;
+  the effects are measured, not drawn. Research and development software.
+</footer>
+<script>
+const DATA = /*DATA*/null;
+const ORDER = ["intake","normalize","classify","extract","memory","priority","plan","policy","act","verify","respond","log"];
+const LAYER = {intake:3,normalize:2,classify:1,extract:2,memory:2,priority:1,plan:1,policy:0,act:2,verify:1,respond:3,log:3};
+const KIND = {intake:"door",normalize:"path",classify:"bird",extract:"path",memory:"lake",priority:"bird",plan:"bird",
+              policy:"sky",act:"engine",verify:"owl",respond:"bridge",log:"bridge"};
+const GLYPH = {door:"▯",path:"≈",bird:"⋎",lake:"◡",sky:"☁",engine:"⚙",owl:"◉",bridge:"⌒"};
+const TARGET = DATA.target, CHOICES = DATA.choices;
+const state = {spell_corrector:null, synonym_expander:null, cache:null, fast_retry:null, grey:null, heal:null};
+let selected = null;
+const pos = n => [70 + ORDER.indexOf(n) * 87, 70 + LAYER[n] * 88];
+const key = s => Object.keys(CHOICES).map(g => `${g}=${s[g] || "-"}`).join("|");
+const svgNS = "http://www.w3.org/2000/svg";
+function el(tag, attrs, parent, text) {
+  const e = document.createElementNS(svgNS, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  if (text !== undefined) e.textContent = text;
+  parent.appendChild(e); return e;
+}
+function program() {
+  const out = [];
+  for (const g of ["spell_corrector","synonym_expander","cache","fast_retry"]) {
+    const p = state[g]; if (!p) continue;
+    out.push(p === "near" ? `PLACE ${g} NEAR ${TARGET[g]}` : `PIERCE ${g} THROUGH ${TARGET[g]}.${p}`);
+  }
+  if (state.grey) out.push("SHIFT act TO grey");
+  if (state.heal) out.push("HEAL act");
+  return out.join("\n") || "# the baseline program: no gestures yet";
+}
+function draw() {
+  const s = document.getElementById("scene"); s.innerHTML = "";
+  el("rect", {width:1100, height:440, fill:"#e3eef8"}, s);
+  el("rect", {y:345, width:1100, height:95, fill:"#dfe8cf"}, s);
+  for (let i = 0; i < ORDER.length - 1; i++) {
+    const [x1,y1] = pos(ORDER[i]), [x2,y2] = pos(ORDER[i+1]);
+    el("line", {x1,y1,x2,y2, stroke:"#4a7ba6", "stroke-width":2.5, opacity:.55}, s);
+  }
+  const m = DATA.table[key(state)];
+  for (const n of ORDER) {
+    const [x,y] = pos(n), r = 24;
+    let fill = "#f6f3ea";
+    if (n === "act" && state.grey) fill = "#9a9a9a";
+    if (n === "act" && !state.grey && m.crashed > 0) fill = "#3a3a3a";
+    const g = el("g", {}, s);
+    el("circle", {cx:x, cy:y, r, fill, stroke:"#333", "stroke-width":1.2}, g);
+    el("text", {x, y:y+6, "text-anchor":"middle", "font-size":19, fill: fill === "#3a3a3a" ? "#fff" : "#222"}, g, GLYPH[KIND[n]]);
+    el("text", {x, y:y+r+15, "text-anchor":"middle", "font-size":12}, g, n);
+    if (n === "act") { g.style.cursor = "pointer"; g.addEventListener("click", () => { state.grey = state.grey ? null : "on"; update(); }); }
+    // drop zones for the selected guest
+    if (selected && TARGET[selected] === n) {
+      const zones = {head:[x, y-r-14], heart:[x, y+8], brain:[x, y-12], near:[x+r+22, y]};
+      for (const [place,[zx,zy]] of Object.entries(zones)) {
+        if (!CHOICES[selected].includes(place)) continue;
+        const z = el("circle", {cx:zx, cy:zy, r:11, fill:"#fff7e6", stroke:"#c8781e", "stroke-dasharray":"3 2", class:"zone", "data-place":place,
+                                tabindex:0, role:"button", "aria-label":`${selected} at the ${place} of ${n}`}, s);
+        const put = () => { state[selected] = place; update(); };
+        z.addEventListener("click", put); z.addEventListener("keydown", e => { if (e.key === "Enter") put(); });
+        const side = place === "heart" || place === "brain";
+        el("text", side ? {x:zx-15, y:zy+4, "text-anchor":"end", "font-size":11, fill:"#8a5a00"}
+                        : {x:zx, y:zy-15, "text-anchor":"middle", "font-size":11, fill:"#8a5a00"}, s, place);
+      }
+    }
+    // placed guests
+    const placed = Object.keys(TARGET).filter(gn => TARGET[gn] === n && state[gn]);
+    placed.forEach((gn, j) => {
+      const p = state[gn];
+      const [ox,oy] = {head:[0,-r-14], heart:[0,8], brain:[0,-12], near:[r+22,0]}[p];
+      el("rect", {x:x+ox-6+j*13, y:y+oy-6, width:12, height:12, fill: p==="brain" ? "#7b5ea7" : "#c8781e", stroke:"#333", class:"placed", "data-guest":gn}, s)
+        .appendChild(document.createElementNS(svgNS,"title")).textContent = `${gn} at ${p}`;
+    });
+  }
+  s.querySelectorAll("circle.zone").forEach(z => s.appendChild(z));   // drop zones above placed guests, so they stay clickable
+  el("text", {x:16, y:28, "font-size":14, "font-weight":"bold"}, s, "Sky = supervision · ground = input and output · left to right = the flow");
+}
+function metrics() {
+  const b = DATA.table[key({spell_corrector:null,synonym_expander:null,cache:null,fast_retry:null,grey:null,heal:null})];
+  const m = DATA.table[key(state)];
+  const rows = [["accuracy","accuracy",1],["crashed","crashed",-1],["cost per ticket","cost_per_ticket",-1],["score","score",1]];
+  document.getElementById("metrics").innerHTML = rows.map(([lab,k,dir]) => {
+    const d = m[k] - b[k], cls = Math.abs(d) < 1e-9 ? "" : (d*dir > 0 ? "up" : "down");
+    return `<tr><td>${lab}</td><td class="num">${m[k].toFixed(3)}</td><td class="num ${cls}">${d>=0?"+":""}${d.toFixed(3)}</td></tr>`;
+  }).join("");
+}
+function update() {
+  document.getElementById("program").textContent = program();
+  document.getElementById("heal").setAttribute("aria-pressed", state.heal ? "true" : "false");
+  draw(); metrics(); share();
+}
+document.querySelectorAll(".chip").forEach(b => b.addEventListener("click", () => {
+  selected = selected === b.dataset.guest ? null : b.dataset.guest;
+  document.querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed", c.dataset.guest === selected ? "true" : "false"));
+  document.getElementById("hint").textContent = selected ? `Click a dashed circle on the ${ {classify:"bird (classify)",memory:"lake (memory)",act:"engine (act)"}[TARGET[selected]] }.` : "Choose a guest above.";
+  draw();
+}));
+document.getElementById("heal").addEventListener("click", () => { state.heal = state.heal ? null : "on"; update(); });
+document.getElementById("reset").addEventListener("click", () => { for (const k in state) state[k] = null; selected = null;
+  document.querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed","false")); update(); });
+// ---- drag and drop: a guest snaps to the nearest measured place (head, heart, brain, near) ----
+const scene = document.getElementById("scene");
+let drag = null, suppressClick = false;
+function svgPoint(e) { const p = scene.createSVGPoint(); p.x = e.clientX; p.y = e.clientY;
+  return p.matrixTransform(scene.getScreenCTM().inverse()); }
+function nearestZone(pt) {
+  let best = null, bd = 1e9;
+  scene.querySelectorAll("circle.zone").forEach(z => {
+    const d = Math.hypot(pt.x - +z.getAttribute("cx"), pt.y - +z.getAttribute("cy")); if (d < bd) { bd = d; best = z; } });
+  return [best, bd];
+}
+function beginDrag(g, e) {
+  selected = g;
+  document.querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed", c.dataset.guest === g ? "true" : "false"));
+  draw();
+  drag = {g, ghost: el("rect", {width:14, height:14, fill:"#c8781e", stroke:"#333", opacity:.85, class:"ghost"}, scene)};
+  moveDrag(e);
+}
+function moveDrag(e) {
+  const pt = svgPoint(e); drag.ghost.setAttribute("x", pt.x - 7); drag.ghost.setAttribute("y", pt.y - 7);
+  const [z, d] = nearestZone(pt);
+  scene.querySelectorAll("circle.zone").forEach(c => c.classList.toggle("near-drop", c === z && d <= 40));
+}
+function endDrag(e) {
+  const pt = svgPoint(e), [z, d] = nearestZone(pt), g = drag.g;
+  const [hx, hy] = pos(TARGET[g]);
+  drag.ghost.remove(); drag = null;
+  if (z && d <= 40) state[g] = z.dataset.place;                       // snapped to a measured place
+  else if (Math.hypot(pt.x - hx, pt.y - hy) > 70) state[g] = null;    // dropped away from its host: removed
+  update();
+}
+scene.addEventListener("pointerdown", e => {
+  const t = e.target.closest && e.target.closest(".placed, .zone"); if (!t) return;
+  const g = t.classList.contains("placed") ? t.dataset.guest
+          : (selected && state[selected] === t.dataset.place ? selected : null);   // grab a placed guest by its zone
+  if (!g) return;                                                                  // empty zone: a click places
+  e.preventDefault(); beginDrag(g, e);
+});
+document.querySelectorAll(".chip").forEach(b => b.addEventListener("pointerdown", e => {
+  const x0 = e.clientX, y0 = e.clientY, g = b.dataset.guest;
+  const mv = ev => { if (!drag && Math.hypot(ev.clientX - x0, ev.clientY - y0) > 6) { suppressClick = true; beginDrag(g, ev); } };
+  const up = () => { window.removeEventListener("pointermove", mv); window.removeEventListener("pointerup", up);
+    setTimeout(() => { suppressClick = false; }, 0); };   // only the click that ends this drag is swallowed
+  window.addEventListener("pointermove", mv); window.addEventListener("pointerup", up);
+}));
+window.addEventListener("pointermove", e => { if (drag) moveDrag(e); });
+window.addEventListener("pointerup", e => { if (drag) endDrag(e); });
+document.querySelectorAll(".chip").forEach(b => b.addEventListener("click", e => {
+  if (suppressClick) { suppressClick = false; e.stopImmediatePropagation(); } }, true));
+// a program can be shared as a link: #spell_corrector=brain&cache=heart&grey=on
+for (const part of location.hash.slice(1).split("&")) {
+  const [k, v] = part.split("="); if (k in state && v && (CHOICES[k] || []).includes(v)) state[k] = v;
+}
+function share() {
+  try { history.replaceState(null, "", "#" + Object.entries(state).filter(([k,v]) => v).map(([k,v]) => `${k}=${v}`).join("&")); } catch (e) {}
+}
+document.getElementById("setinfo").textContent = "Measured on " + DATA.set + ".";
+document.getElementById("ncombos").textContent = Object.keys(DATA.table).length;
+// ---- speed test (spec/SPEED_TEST.md): time and gestures to reach each target ----
+const TASKS = [
+  {id:"typos", text:"Fix typos: accuracy at least 0.66", ok:m => m.accuracy >= 0.66},
+  {id:"phrasing", text:"Understand unseen phrasing: accuracy at least 0.57 without the spell corrector",
+   ok:(m,s) => m.accuracy >= 0.57 && !s.spell_corrector},
+  {id:"cost", text:"Cut memory cost: cost per ticket at most 11.40 with no loss of accuracy", ok:m => m.cost_per_ticket <= 11.40 && m.accuracy >= 0.488},
+  {id:"crashes", text:"Stop the crashes: crashed = 0", ok:m => m.crashed === 0},
+  {id:"all", text:"All together: score at least 0.65", ok:m => m.score >= 0.65},
+];
+const runs = []; let active = null;
+const sel = document.getElementById("task");
+TASKS.forEach(t => { const o = document.createElement("option"); o.value = t.id; o.textContent = t.text; sel.appendChild(o); });
+document.getElementById("start").addEventListener("click", () => {
+  document.getElementById("reset").click();
+  active = {task: sel.value, start: performance.now(), gestures: 0};
+  document.getElementById("taskinfo").textContent = "Running: " + TASKS.find(t => t.id === sel.value).text;
+});
+const _update = update;
+update = function () {
+  _update();
+  if (!active) return;
+  active.gestures += 1;
+  const m = DATA.table[key(state)], t = TASKS.find(x => x.id === active.task);
+  if (t.ok(m, state)) {
+    const secs = (performance.now() - active.start) / 1000;
+    runs.push({task: active.task, seconds: +secs.toFixed(1), gestures: active.gestures - 1, program: program(), metrics: m,
+               at: new Date().toISOString(), arm: "painting"});
+    document.getElementById("taskinfo").textContent = `Done in ${secs.toFixed(1)} s with ${active.gestures - 1} gestures.`;
+    active = null;
+  }
+};
+// ---- REACH: the selected task as a stretch target, with the measured distance (owner's operator, 18 Nov 2026) ----
+const REACHDEF = {typos:{k:"accuracy",t:0.66,dir:1}, phrasing:{k:"accuracy",t:0.57,dir:1},
+  cost:{k:"cost_per_ticket",t:11.40,dir:-1}, crashes:{k:"crashed",t:0,dir:-1,stretch:1000}, all:{k:"score",t:0.65,dir:1}};
+const fx = v => (Math.round(v * 1000) / 1000).toString();
+function renderReach() {
+  const d = REACHDEF[sel.value]; if (!d) return;
+  const b = DATA.table[key({spell_corrector:null,synonym_expander:null,cache:null,fast_retry:null,grey:null,heal:null})];
+  const m = DATA.table[key(state)];
+  const factor = v => d.dir > 0 ? v / b[d.k] : (v === 0 ? Infinity : b[d.k] / v);
+  const T = d.stretch || factor(d.t), R = Math.min(factor(m[d.k]), T);
+  document.getElementById("reach").textContent =
+    `REACH ${sel.value} ON agent.${d.k} TARGET ${fx(T)} AGAINST baseline MEASURE ${d.k} RESULT ${fx(R)}`;
+  document.getElementById("reachinfo").textContent = R >= T
+    ? `Reached ${fx(R)}x of ${fx(T)}x against the baseline on ${d.k}: target met.`
+    : `Reached ${fx(R)}x of ${fx(T)}x against the baseline on ${d.k}. Before the next gesture, name what stops you (LIMIT).`
+      + (d.stretch ? " The target is zero crashes, written as a 1000x stretch." : "");
+}
+sel.addEventListener("change", renderReach);
+const _update2 = update;
+update = function () { _update2(); renderReach(); };
+function showResults() {
+  const t = document.getElementById("results"); t.style.display = "block"; t.value = JSON.stringify(runs, null, 1); return t;
+}
+document.getElementById("export").addEventListener("click", () => {
+  showResults();
+  try {   // downloads may be blocked where the page is embedded; the results stay visible to copy
+    const blob = new Blob([JSON.stringify(runs, null, 1)], {type: "application/json"});
+    const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "speed_test_painting.json"; a.click();
+  } catch (e) {}
+});
+document.getElementById("copy").addEventListener("click", async () => {
+  const t = showResults();
+  try { await navigator.clipboard.writeText(t.value); document.getElementById("taskinfo").textContent = "Results copied."; }
+  catch (e) { t.select(); document.getElementById("taskinfo").textContent = "Select the text above and copy it."; }
+});
+update();
+</script>
+</body>
+</html>

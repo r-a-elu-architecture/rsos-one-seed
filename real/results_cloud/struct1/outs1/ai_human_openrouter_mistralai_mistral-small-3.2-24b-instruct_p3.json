@@ -1,0 +1,106 @@
+{
+ "row": "ai_human",
+ "model": "openrouter:mistralai/mistral-small-3.2-24b-instruct",
+ "pair": 3,
+ "cells": {
+  "std|307": {
+   "default": {
+    "result": 0.08333333333333333,
+    "resource": 1.461,
+    "R": 0.057038558065252105,
+    "choices": {
+     "present|standard": 8
+    },
+    "failed_calls": 0,
+    "sec": 32.7
+   },
+   "rollout": {
+    "result": 0.08333333333333333,
+    "resource": 1.439,
+    "R": 0.05791058605513087,
+    "choices": {
+     "unit-0|rollout": 1,
+     "top|rollout": 7
+    },
+    "failed_calls": 0,
+    "sec": 12.7
+   },
+   "seed3v1": {
+    "result": 0.08333333333333333,
+    "resource": 0.839,
+    "R": 0.09932459276916965,
+    "choices": {
+     "unit-0|standard": 1,
+     "F:holomin-top|standard": 4,
+     "F:holo-top|standard": 3
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 16.7
+   },
+   "structure": {
+    "result": 0.08333333333333333,
+    "resource": 1.43,
+    "R": 0.05827505827505827,
+    "choices": {
+     "unit-0|standard": 2,
+     "top|standard": 4,
+     "unit-1|standard": 1,
+     "unit-3|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 9.1
+   },
+   "sec": 71
+  },
+  "std|308": {
+   "default": {
+    "result": 0.5,
+    "resource": 1.171,
+    "R": 0.4269854824935952,
+    "choices": {
+     "present|standard": 8
+    },
+    "failed_calls": 0,
+    "sec": 34.5
+   },
+   "rollout": {
+    "result": 0.5,
+    "resource": 1.125,
+    "R": 0.4444444444444444,
+    "choices": {
+     "unit-0|rollout": 4,
+     "top|rollout": 4
+    },
+    "failed_calls": 0,
+    "sec": 12.1
+   },
+   "seed3v1": {
+    "result": 0.5,
+    "resource": 0.687,
+    "R": 0.727802037845706,
+    "choices": {
+     "unit-0|standard": 3,
+     "F:holomin-top|standard": 5
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 12.5
+   },
+   "structure": {
+    "result": 0.5,
+    "resource": 1.119,
+    "R": 0.44682752457551383,
+    "choices": {
+     "unit-0|standard": 4,
+     "top|standard": 4
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 9.0
+   },
+   "sec": 68
+  }
+ }
+}

@@ -1,0 +1,205 @@
+{
+ "row": "ai_agents",
+ "model": "openrouter:openai/gpt-oss-20b",
+ "cells_run": [
+  905,
+  906,
+  907,
+  908
+ ],
+ "cells": {
+  "selfcons|905": {
+   "default": {
+    "result": 0.75,
+    "resource": 23.695,
+    "R": 0.03165224730955898,
+    "choices": {
+     "present|standard": 43
+    },
+    "failed_calls": 0,
+    "sec": 37.8
+   },
+   "full": {
+    "result": 0.75,
+    "resource": 8.248,
+    "R": 0.09093113482056257,
+    "choices": {
+     "present|standard": 8,
+     "present|own": 6,
+     "stop|own": 4
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 15.7
+   },
+   "minus": {
+    "result": 0.75,
+    "resource": 7.656,
+    "R": 0.09796238244514106,
+    "choices": {
+     "present|standard": 9,
+     "present|own": 4,
+     "stop|own": 4
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 15.9
+   },
+   "sec": 69
+  },
+  "selfcons|906": {
+   "default": {
+    "result": 1.0,
+    "resource": 28.434,
+    "R": 0.03516916367728775,
+    "choices": {
+     "present|standard": 45
+    },
+    "failed_calls": 0,
+    "sec": 29.4
+   },
+   "full": {
+    "result": 1.0,
+    "resource": 16.607,
+    "R": 0.06021557174685374,
+    "choices": {
+     "present|standard": 2,
+     "future+1|own": 1,
+     "past-1|own": 5,
+     "stop|own": 4,
+     "past-1|standard": 11,
+     "future+2|standard": 1,
+     "focus-b0|standard": 2,
+     "future+2|own": 1,
+     "present|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 32.3
+   },
+   "minus": {
+    "result": 1.0,
+    "resource": 18.318,
+    "R": 0.05459111256687411,
+    "choices": {
+     "present|standard": 1,
+     "future+1|own": 1,
+     "past-1|own": 8,
+     "stop|own": 4,
+     "past-1|standard": 11,
+     "past-2|standard": 1,
+     "future+2|own": 1,
+     "present|own": 1,
+     "focus-b0|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 35.6
+   },
+   "sec": 97
+  },
+  "selfcons|907": {
+   "default": {
+    "result": 1.0,
+    "resource": 21.955,
+    "R": 0.04554771122751082,
+    "choices": {
+     "present|standard": 42
+    },
+    "failed_calls": 0,
+    "sec": 39.6
+   },
+   "full": {
+    "result": 0.5,
+    "resource": 9.998,
+    "R": 0.05001000200040008,
+    "choices": {
+     "present|standard": 4,
+     "present|own": 2,
+     "future+1|own": 5,
+     "stop|own": 4,
+     "future+1|standard": 4,
+     "open|own": 1,
+     "future+2|standard": 1,
+     "focus-b0|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 20.9
+   },
+   "minus": {
+    "result": 1.0,
+    "resource": 13.846,
+    "R": 0.07222302470027445,
+    "choices": {
+     "present|standard": 3,
+     "present|own": 5,
+     "future+1|own": 3,
+     "C:see>trace>beam>step|policy": 2,
+     "past-2|own": 1,
+     "past-1|own": 5,
+     "stop|own": 3,
+     "past-1|standard": 4,
+     "future+1|standard": 1,
+     "past-2|standard": 1,
+     "open|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 28.2
+   },
+   "sec": 89
+  },
+  "selfcons|908": {
+   "default": {
+    "result": 0.5,
+    "resource": 28.671,
+    "R": 0.01743922430330299,
+    "choices": {
+     "present|standard": 48
+    },
+    "failed_calls": 0,
+    "sec": 46.4
+   },
+   "full": {
+    "result": 1.0,
+    "resource": 17.527,
+    "R": 0.05705482969133337,
+    "choices": {
+     "present|standard": 11,
+     "present|own": 4,
+     "past-1|own": 2,
+     "open|own": 1,
+     "future+1|own": 8,
+     "C:see>trace>beam>step|policy": 1,
+     "stop|own": 2,
+     "future+1|standard": 5,
+     "open|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 36.7
+   },
+   "minus": {
+    "result": 0.75,
+    "resource": 11.196,
+    "R": 0.0669882100750268,
+    "choices": {
+     "present|standard": 6,
+     "stop|own": 4,
+     "open|own": 1,
+     "future+1|standard": 5,
+     "C:see>trace>beam>step|policy": 3,
+     "C:see>trace>beam>step|standard": 1,
+     "past-1|own": 1,
+     "present|own": 1,
+     "future+1|own": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 18.3
+   },
+   "sec": 101
+  }
+ }
+}

@@ -1,0 +1,26 @@
+# The node palace and the communication statements (mission re-scan, C1). Source: owner 17 Nov 2026; c2 T6, T7, T14, T25, T28, T50.13; c1 T15-T17, T53-T55, T102.
+LANGUAGE RSOS 0.2
+WORLD w
+HOST agent KIND software CHANNELS visual
+USE HOST agent
+OBJECT eagle KIND room
+BOOK robot_head SYMBOL eagle_calculator AT eagle
+SIGNAL robot_head CHECK hash COLOR green
+LIGHT white_dragon OVER all ACTS find, show, heal, hear
+OBJECT engine
+SENSE engine RADIUS 5 CHANNELS smell, visual, memory
+FOUNDATION figure DOMAINS economy, aerodynamics, physics
+LEVEL symbolic ABOVE text
+CARRIER universe MAIN structure LAYERS accent_a, accent_b
+GLYPHS robot_head CHANNEL haptic RATE 10
+ENVELOPE msg FIELDS version, sender, recipient
+CONTRACT robot_head KEEP behaviour, safety
+STANDARD rsos_visual CODEBOOK default
+OBSERVE engine BY others CHANNELS visual, smell
+OBJECT tv
+ASSOCIATE tv IN shoulders_dropped LEADS worry
+OBJECT RIF KIND metric
+DEFICIT RIF 1.0
+PATH RIF TO neuroscience, communication BEST 3 BY shared_relations
+PARTICLE g1 LAND RIF ON anticipation OPENS prediction_error
+LIGHT white_dragon OVER all ACTS heal STYLE tiger

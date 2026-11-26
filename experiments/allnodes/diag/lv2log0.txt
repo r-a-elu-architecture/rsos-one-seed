@@ -1,0 +1,8 @@
+cell 1 6700 0.9497 0.9531 45 {'report+popular': 0.9096, 'round+round': 0.9036, 'random+random': 0.8894, 'B': 0.9331}
+cell 1 6701 0.8542 0.8451 36 {'report+popular': 0.7964, 'round+round': 0.8258, 'random+random': 0.829, 'B': 0.8178}
+cell 7 6700 0.9029 0.8907 25 {'report+popular': 0.8583, 'round+round': 0.8707, 'random+random': 0.8624, 'B': 0.8583}
+cell 7 6701 0.8004 0.8061 30 {'report+popular': 0.7524, 'round+round': 0.7989, 'random+random': 0.7975, 'B': 0.7557}
+cell 13 6700 0.9699 0.9778 21 {'report+popular': 0.9351, 'round+round': 0.8851, 'random+random': 0.8654, 'B': 0.9507}
+cell 13 6701 0.9507 0.9582 43 {'report+popular': 0.901, 'round+round': 0.8835, 'random+random': 0.854, 'B': 0.9246}
+cell 19 6700 0.9833 0.9912 56 {'report+popular': 0.9858, 'round+round': 0.9449, 'random+random': 0.9256, 'B': 0.9871}
+cell 19 6701 0.9347 0.9349 49 {'report+popular': 0.8914, 'round+round': 0.875, 'random+random': 0.8715, 'B': 0.9038}

@@ -1,0 +1,20 @@
+# The note Sol touches or pierces a remote control (a LangGraph sub-part); the side changes the sequence.
+# Source: chat 2 T35 (owner) and T35.3 (the fixed default table, D80); bindings and search (T12).
+LANGUAGE RSOS 0.2
+WORLD ai_room
+PROFILE owner
+HOST team KIND agent CHANNELS haptic, visual STATES eagle
+OBJECT sol KIND note DOMAIN music
+PROPERTY sol.frequency = 392
+COLOUR sol red STATE drive
+OBJECT remote KIND agent_family DOMAIN ai REPRESENTS langgraph.router
+USE HOST team
+TOUCH sol ON remote AT top
+PIERCE sol THROUGH remote FROM top DEPTH 3 AS remote_sol
+PIERCE sol THROUGH remote FROM left DEPTH 3 AS remote_sol_left
+SEARCH contact.bottom OVER lateral, local_contact, multi_layer METRIC task_success
+PIERCE sol THROUGH remote FROM bottom DEPTH 2 AS remote_sol_bottom
+USE PROFILE owner
+MEANING contact.top = local_contact SCOPE state IN eagle
+USE STATE eagle
+TOUCH sol ON remote AT top

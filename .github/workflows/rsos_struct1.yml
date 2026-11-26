@@ -1,0 +1,84 @@
+# STRUCT1 sealed run (25 Nov 2026; real/PREREG_STRUCT1.md, real/SEAL_STRUCT1.txt): 5 rows x 4 pairs of fresh cells
+# 301-308, five arms per cell; sealed analysis real/analyze_struct1.py; results to cloud-results/struct1/<run id>.
+name: rsos-struct1
+on:
+  push:
+    branches: [core-v1]
+    paths: ["cloud/trigger_struct1.txt"]
+permissions:
+  contents: write
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        u: ["economics - 0", "economics - 1", "economics - 2", "economics - 3",
+            "space - 0", "space - 1", "space - 2", "space - 3",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 0",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 1",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 2",
+            "ai_ai openrouter:openai/gpt-oss-20b,openrouter:meta-llama/llama-3.1-8b-instruct 3",
+            "ai_human openrouter:mistralai/mistral-small-3.2-24b-instruct 0",
+            "ai_human openrouter:mistralai/mistral-small-3.2-24b-instruct 1",
+            "ai_human openrouter:mistralai/mistral-small-3.2-24b-instruct 2",
+            "ai_human openrouter:mistralai/mistral-small-3.2-24b-instruct 3",
+            "ai_agents openrouter:openai/gpt-oss-20b 0", "ai_agents openrouter:openai/gpt-oss-20b 1",
+            "ai_agents openrouter:openai/gpt-oss-20b 2", "ai_agents openrouter:openai/gpt-oss-20b 3"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install numpy scipy pandas scikit-learn requests qiskit qiskit-aer pvlib gymnasium skyfield dandi pynwb tiktoken mistral-common && pip install --no-deps llama-models
+      - name: OpenRouter credit check (AI rows; prints usage and limit only, never the key)
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          set -- ${{ matrix.u }}
+          case "$1" in ai_*)
+            python - <<'EOF'
+          import os, json, sys, urllib.request
+          r = urllib.request.Request("https://openrouter.ai/api/v1/key", headers={"Authorization": "Bearer " + os.environ["OPENROUTER_API_KEY"]})
+          d = json.load(urllib.request.urlopen(r, timeout=30)).get("data", {})
+          print("OPENROUTER usage", d.get("usage"), "limit", d.get("limit"), "remaining", d.get("limit_remaining"))
+          rem = d.get("limit_remaining")
+          if rem is not None and rem < 1.0: sys.exit("STOP: less than $1 OpenRouter credit left")
+          EOF
+            ;; esac
+      - name: real data for this row
+        run: |
+          set -- ${{ matrix.u }}
+          if [ "$1" = space ]; then python real/hosts/space_fetch.py; fi
+          if [ "$1" = ai_human ]; then python real/hosts/ai_human_fetch.py; fi
+      - run: python cloud/struct1_unit.py ${{ matrix.u }}
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          REASONING_EFFORT: low
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: struct1-${{ strategy.job-index }}
+          path: real/outs1/
+  analyze:
+    needs: unit
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install scipy
+      - uses: actions/download-artifact@v4
+        with:
+          path: /tmp/art
+      - run: mkdir -p real/outs1 && cp /tmp/art/*/*.json real/outs1/ 2>/dev/null; ls real/outs1 | wc -l && python real/analyze_struct1.py
+      - name: push results to cloud-results
+        if: always()
+        run: |
+          git config user.name "rsos-cloud"; git config user.email "rsos-cloud@users.noreply.github.com"
+          mkdir -p /tmp/s1 && cp -r real/outs1 real/RESULTS_STRUCT1.* /tmp/s1/ 2>/dev/null || true
+          git fetch origin cloud-results && git checkout cloud-results
+          mkdir -p struct1/${{ github.run_id }} && cp -r /tmp/s1/. struct1/${{ github.run_id }}/
+          git add struct1 && git commit -qm "STRUCT1 sealed run ${{ github.run_id }}" && (git push -q origin cloud-results || (git pull -q --rebase origin cloud-results && git push -q origin cloud-results))

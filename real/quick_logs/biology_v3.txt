@@ -1,0 +1,8 @@
+1 seed result 0.9649 resource 3600.0 R 0.000268
+1 default result 0.8713 resource 3600.0 R 0.000242
+2 seed result 0.9415 resource 3300.0 R 0.0002853
+2 default result 0.9181 resource 3300.0 R 0.0002782
+3 seed result 0.9259 resource 3600.0 R 0.0002572
+3 default result 0.8704 resource 3600.0 R 0.0002418
+4 seed result 0.9259 resource 3300.0 R 0.0002806
+4 default result 0.6481 resource 3300.0 R 0.0001964

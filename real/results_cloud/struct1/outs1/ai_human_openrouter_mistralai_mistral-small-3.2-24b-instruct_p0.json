@@ -1,0 +1,107 @@
+{
+ "row": "ai_human",
+ "model": "openrouter:mistralai/mistral-small-3.2-24b-instruct",
+ "pair": 0,
+ "cells": {
+  "std|301": {
+   "default": {
+    "result": 0.16666666666666666,
+    "resource": 1.221,
+    "R": 0.13650013650013648,
+    "choices": {
+     "present|standard": 8
+    },
+    "failed_calls": 0,
+    "sec": 27.0
+   },
+   "rollout": {
+    "result": 0.16666666666666666,
+    "resource": 1.205,
+    "R": 0.1383125864453665,
+    "choices": {
+     "unit-0|rollout": 1,
+     "top|rollout": 7
+    },
+    "failed_calls": 0,
+    "sec": 14.3
+   },
+   "seed3v1": {
+    "result": 0.22916666666666666,
+    "resource": 0.755,
+    "R": 0.30353200883002207,
+    "choices": {
+     "unit-0|standard": 1,
+     "F:holomin-top|standard": 6,
+     "top|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 14.4
+   },
+   "structure": {
+    "result": 0.16666666666666666,
+    "resource": 1.219,
+    "R": 0.13672409078479628,
+    "choices": {
+     "unit-0|standard": 1,
+     "top|standard": 7
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 10.7
+   },
+   "sec": 66
+  },
+  "std|302": {
+   "default": {
+    "result": 0.0,
+    "resource": 1.031,
+    "R": 0.0,
+    "choices": {
+     "present|standard": 8
+    },
+    "failed_calls": 0,
+    "sec": 23.3
+   },
+   "rollout": {
+    "result": 0.0,
+    "resource": 1.003,
+    "R": 0.0,
+    "choices": {
+     "unit-0|rollout": 1,
+     "top|rollout": 6,
+     "unit-1|rollout": 1
+    },
+    "failed_calls": 0,
+    "sec": 17.0
+   },
+   "seed3v1": {
+    "result": 0.3333333333333333,
+    "resource": 0.656,
+    "R": 0.5081300813008129,
+    "choices": {
+     "unit-0|standard": 1,
+     "F:holo-top|standard": 1,
+     "F:holomin-top|standard": 6
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 14.0
+   },
+   "structure": {
+    "result": 0.0,
+    "resource": 0.998,
+    "R": 0.0,
+    "choices": {
+     "unit-0|standard": 1,
+     "top|standard": 6,
+     "unit-1|standard": 1
+    },
+    "failed_calls": 0,
+    "policy_fallback_steps": 0,
+    "sec": 13.2
+   },
+   "sec": 68
+  }
+ }
+}

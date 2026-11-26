@@ -1,0 +1,32 @@
+cell 1 seed     result 0.64801 resource 240 R 2.7001e-03 [STAND-IN (interface check only)] choices {'present|standard': 1, 'present|own': 59}
+cell 1 default  result 0.64801 resource 240 R 2.7001e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 1 uniform  result 0.26149 resource 240 R 1.0896e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 1 time 60.3s
+cell 2 seed     result 0.27674 resource 240 R 1.1531e-03 [STAND-IN (interface check only)] choices {'present|standard': 1, 'present|own': 59}
+cell 2 default  result 0.27674 resource 240 R 1.1531e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 2 uniform  result 0.14518 resource 240 R 6.0491e-04 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 2 time 31.1s
+cell 3 seed     result 0.30576 resource 240 R 1.2740e-03 [STAND-IN (interface check only)] choices {'present|standard': 1, 'present|own': 59}
+cell 3 default  result 0.30576 resource 240 R 1.2740e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 3 uniform  result 0.14288 resource 240 R 5.9533e-04 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 3 time 26.9s
+cell 4 seed     result 0.30947 resource 240 R 1.2894e-03 [STAND-IN (interface check only)] choices {'present|standard': 1, 'present|own': 59}
+cell 4 default  result 0.30947 resource 240 R 1.2894e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 4 uniform  result 0.17175 resource 240 R 7.1563e-04 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 4 time 26.1s
+cell 5 seed     result 0.41364 resource 240 R 1.7235e-03 [STAND-IN (interface check only)] choices {'present|standard': 1, 'present|own': 59}
+cell 5 default  result 0.41364 resource 240 R 1.7235e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 5 uniform  result 0.25649 resource 240 R 1.0687e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 5 time 26.8s
+cell 6 seed     result 0.57360 resource 240 R 2.3900e-03 [STAND-IN (interface check only)] choices {'present|standard': 1, 'present|own': 59}
+cell 6 default  result 0.57360 resource 240 R 2.3900e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 6 uniform  result 0.48798 resource 240 R 2.0333e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 6 time 27.0s
+cell 7 seed     result 0.44648 resource 240 R 1.8604e-03 [STAND-IN (interface check only)] choices {'present|standard': 1, 'present|own': 59}
+cell 7 default  result 0.44648 resource 240 R 1.8604e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 7 uniform  result 0.30891 resource 240 R 1.2871e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 7 time 26.2s
+cell 8 seed     result 0.43755 resource 240 R 1.8231e-03 [STAND-IN (interface check only)] choices {'present|standard': 1, 'present|own': 59}
+cell 8 default  result 0.43755 resource 240 R 1.8231e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 8 uniform  result 0.27077 resource 240 R 1.1282e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 8 time 26.6s

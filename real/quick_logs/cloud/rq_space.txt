@@ -1,0 +1,31 @@
+{
+ "url": "https://celestrak.org/NORAD/elements/gp.php?GROUP=planet&FORMAT=tle",
+ "fetched_utc": "2026-11-24T14:24:53+00:00",
+ "satellites": 116,
+ "first": "SKYSAT-A",
+ "sha256": "16ffe2ff09aebc9b1981f8481b3f2f6845dbfae71148273da466e1bbf9d2a361"
+}
+cell 1 seed    result 540.04 resource 18212.1 R 0.029653 choices={'present|standard': 10, 'future+1|standard': 2, 'focus_science|standard': 8, 'future+2|standard': 4, 'focus_alert|standard': 1, 'present|own': 2}
+cell 1 default result 534.99 resource 17463.7 R 0.030635 stand_in=False
+cell 1 pareto no
+cell 2 seed    result 582.78 resource 15477.7 R 0.037653 choices={'present|standard': 18, 'focus_science|standard': 4, 'future+1|standard': 1, 'future+2|standard': 2, 'focus_science|own': 1}
+cell 2 default result 578.63 resource 14484.8 R 0.039947 stand_in=False
+cell 2 pareto no
+cell 3 seed    result 524.57 resource 17665.4 R 0.029695 choices={'present|standard': 10, 'future+1|standard': 7, 'focus_science|standard': 4, 'future+2|standard': 3, 'focus_bulk|standard': 1, 'present|own': 1}
+cell 3 default result 521.91 resource 16723.2 R 0.031209 stand_in=False
+cell 3 pareto no
+cell 4 seed    result 576.93 resource 17052.9 R 0.033832 choices={'present|standard': 9, 'future+2|standard': 5, 'focus_science|standard': 8, 'future+1|standard': 1, 'focus_bulk|standard': 1, 'present|own': 2}
+cell 4 default result 565.95 resource 15703.0 R 0.036041 stand_in=False
+cell 4 pareto no
+cell 5 seed    result 578.88 resource 16778.5 R 0.034501 choices={'present|standard': 11, 'focus_bulk|standard': 3, 'future+1|standard': 6, 'future+2|standard': 3, 'focus_alert|standard': 1, 'present|own': 1}
+cell 5 default result 575.55 resource 15504.2 R 0.037122 stand_in=False
+cell 5 pareto no
+cell 6 seed    result 575.51 resource 18899.1 R 0.030452 choices={'present|standard': 9, 'focus_science|standard': 5, 'future+1|standard': 6, 'future+2|standard': 5, 'focus_bulk|standard': 2, 'future+2|own': 1, 'present|own': 1}
+cell 6 default result 566.24 resource 17301.5 R 0.032728 stand_in=False
+cell 6 pareto no
+cell 7 seed    result 492.72 resource 18429.0 R 0.026736 choices={'present|standard': 10, 'future+2|standard': 3, 'future+1|standard': 5, 'focus_science|standard': 7, 'present|own': 2}
+cell 7 default result 488.01 resource 17010.5 R 0.028689 stand_in=False
+cell 7 pareto no
+cell 8 seed    result 535.44 resource 17576.4 R 0.030463 choices={'present|standard': 11, 'future+1|standard': 6, 'focus_bulk|standard': 2, 'focus_science|standard': 1, 'future+2|standard': 2, 'present|own': 3, 'urgent|standard': 1}
+cell 8 default result 527.78 resource 15978.6 R 0.033030 stand_in=False
+cell 8 pareto no

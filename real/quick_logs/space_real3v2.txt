@@ -1,0 +1,27 @@
+loss 0.0
+cell 1 seed3     result 288.71 resource 12907.4 lost 9.9 frag_mb 1498 repair_mb 0 rec/lost_frames 0/0 choices={'F:holo-plan|policy': 2, 'op:overlay|base': 1, 'op:beam3|base': 1, 'F:holo-carry|policy': 8, 'op:carry|Eagle': 3, 'op:fuse|base': 1, 'op:heal|Eagle': 1, 'op:carry|base': 1, 'op:zoom|base': 1, 'future+1|own': 1, 'op:overlay|Eagle': 1, 'op:fuse|Eagle': 1, 'op:zoom|Eagle': 1, 'op:zoom|Associated': 1, 'op:beam1|Associated': 1, 'op:heal|Associated': 1, 'present|own': 1}
+   v2 ops_used {'heal': 2, 'beam1': 1, 'beam3': 1, 'fuse': 2, 'carry': 4, 'overlay': 2, 'zoom': 3, 'colour': 27, 'rooms': 27, 'transplant': 26} rooms {'Eagle': 14, 'Owl': 0, 'Associated': 6, 'base': 7} colour {'failing': 20, 'recovering': 13, 'healthy': 48} vetoed 4
+   v2 passed_membrane {'heal': 19, 'beam1': 23, 'beam3': 23, 'contain': 16, 'compress': 1, 'inherit': 2, 'fuse': 27, 'carry': 26, 'rehost': 18, 'pierce': 27, 'overlay': 5, 'enter': 26, 'zoom': 26} tried {'heal': 27, 'beam1': 27, 'beam3': 27, 'contain': 27, 'compress': 27, 'inherit': 27, 'fuse': 27, 'carry': 27, 'rehost': 27, 'pierce': 27, 'overlay': 27, 'enter': 27, 'zoom': 27}
+   v2 rollouts v1/ops 661/216 zoom {3: 18, 6: 5, 12: 4} enter {1: 27, 2: 27} op_fallback 0 inherit 2 shapes 7 pool_in None pool_out /tmp/pool_space_v2.json
+   seed3 seconds 379.2
+cell 1 seed3v1   result 288.33 resource 12650.8 lost 9.9 frag_mb 2543 repair_mb 0 rec/lost_frames 0/0 choices={'F:holo-plan|policy': 4, 'F:holo-carry|policy': 20, 'future+1|own': 1, 'P4P5:exact-planner|policy': 1, 'P4P5:exact-planner|own': 1}
+   seed3v1 seconds 142.8
+cell 1 seed      result 284.07 resource 11340.3 lost 11.0 frag_mb 0 repair_mb 0 rec/lost_frames 0/0 choices={'land_withheld': 12, 'land_retargeted': 3, 'present|standard': 14, 'future+1|standard': 3, 'past-1|standard': 3, 'future+2|standard': 1, 'focus_bulk|standard': 3, 'present|own': 3}
+cell 1 rollout   result 284.65 resource 11568.1 lost 9.9 frag_mb 0 repair_mb 0 rec/lost_frames 0/0 choices={'present|standard': 18, 'focus_science|rollout': 3, 'focus_bulk|rollout': 6}
+cell 1 default   result 282.68 resource 10821.6 lost 9.9 frag_mb 0 repair_mb 0 rec/lost_frames 0/0 stand_in=True
+cell 1 strongest result 281.61 resource 11856.7 lost 9.9 frag_mb 0 repair_mb 0 rec/lost_frames 0/0 choices={'present|standard': 27}
+cell 1 pass(result > default / > strongest): seed3=WIN/WIN seed3v1=WIN/WIN seed=WIN/WIN rollout=WIN/WIN strongest=no/- v2-v1 +0.39 time 532.3s
+cell 2 seed3     result 334.53 resource 13973.1 lost 20.9 frag_mb 2235 repair_mb 0 rec/lost_frames 0/0 choices={'F:holo-plan|policy': 2, 'op:heal|Eagle': 1, 'F:holo-carry|policy': 5, 'op:zoom|Eagle': 4, 'op:contain|Eagle': 1, 'op:contain|base': 1, 'op:beam1|base': 1, 'op:fuse|Eagle': 3, 'op:enter|Eagle': 1, 'op:rehost|base': 1, 'op:zoom|base': 2, 'op:zoom|Associated': 2, 'op:beam3|Associated': 1, 'op:pierce|Associated': 1, 'P4P5:exact-planner|policy': 1, 'P4P5:exact-planner|own': 1}
+   v2 ops_used {'heal': 1, 'beam1': 1, 'beam3': 1, 'contain': 2, 'fuse': 3, 'rehost': 1, 'pierce': 1, 'enter': 1, 'zoom': 8, 'colour': 28, 'rooms': 28, 'transplant': 28} rooms {'Eagle': 17, 'Owl': 0, 'Associated': 6, 'base': 5} colour {'failing': 23, 'recovering': 11, 'healthy': 50} vetoed 2
+   v2 passed_membrane {'heal': 17, 'beam1': 21, 'beam3': 18, 'contain': 20, 'compress': 2, 'inherit': 1, 'fuse': 28, 'carry': 27, 'rehost': 15, 'pierce': 28, 'overlay': 3, 'enter': 27, 'zoom': 27} tried {'heal': 28, 'beam1': 28, 'beam3': 28, 'contain': 28, 'compress': 28, 'inherit': 28, 'fuse': 28, 'carry': 28, 'rehost': 28, 'pierce': 28, 'overlay': 28, 'enter': 28, 'zoom': 28}
+   v2 rollouts v1/ops 724/269 zoom {12: 3, 3: 22, 6: 3} enter {1: 28, 2: 28} op_fallback 0 inherit 4 shapes 9 pool_in None pool_out /tmp/pool_space_v2.json
+   seed3 seconds 1548.9
+cell 2 seed3v1   result 336.72 resource 14056.1 lost 20.9 frag_mb 1886 repair_mb 0 rec/lost_frames 0/0 choices={'F:holo-plan|policy': 13, 'F:holo-carry|policy': 13, 'F:holo-plan|own': 1, 'P4P5:exact-planner|own': 1}
+   seed3v1 seconds 764.5
+cell 2 seed      result 328.41 resource 11963.7 lost 23.2 frag_mb 0 repair_mb 0 rec/lost_frames 0/0 choices={'land_withheld': 13, 'land_retargeted': 6, 'present|standard': 15, 'future+1|standard': 2, 'past-1|standard': 2, 'future+2|standard': 5, 'past-2|standard': 1, 'focus_science|standard': 2, 'present|own': 1}
+cell 2 rollout   result 325.49 resource 11101.0 lost 23.8 frag_mb 0 repair_mb 0 rec/lost_frames 0/0 choices={'present|standard': 20, 'focus_bulk|rollout': 2, 'focus_science|rollout': 5, 'focus_alert|rollout': 1}
+cell 2 default   result 320.70 resource 10758.4 lost 29.8 frag_mb 0 repair_mb 0 rec/lost_frames 0/0 stand_in=True
+cell 2 strongest result 328.74 resource 12663.7 lost 23.2 frag_mb 0 repair_mb 0 rec/lost_frames 0/0 choices={'present|standard': 28}
+cell 2 pass(result > default / > strongest): seed3=WIN/WIN seed3v1=WIN/WIN seed=WIN/no rollout=WIN/no strongest=WIN/- v2-v1 -2.19 time 2323.1s
+exit 124
+NOTE: run stopped during cell 3 (3000 s limit; 2 shared CPUs at load ~10-12 from parallel builders). Cells 1-2 complete; cells 3-4 not run in this log.

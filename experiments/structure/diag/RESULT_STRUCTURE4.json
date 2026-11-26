@@ -1,0 +1,115 @@
+{
+ "checks": {
+  "laws_EXACT": true,
+  "laws_L0": true,
+  "laws_L1p": true,
+  "laws_L1": true,
+  "laws_L2": true,
+  "laws_C2": true,
+  "laws_C1": true,
+  "laws_L4": true,
+  "laws_L3": true,
+  "laws_PR": true,
+  "laws_RC": true,
+  "LE_relations": false,
+  "L5_relations": true,
+  "Meaning_M1": true,
+  "D_B1": true,
+  "E_E1": true
+ },
+ "TABLE_FILLED": false,
+ "LE_host": [
+  {
+   "v": 4,
+   "ch": "dry",
+   "detail": {
+    "2": {
+     "pred": 0.04363853458361145,
+     "meas": 0.0344632768361582,
+     "tol": 0.0236193021330441,
+     "ok": true
+    },
+    "4": {
+     "pred": 0.09325983620304432,
+     "meas": 0.06198830409356725,
+     "tol": 0.037416530156405954,
+     "ok": true
+    },
+    "8": {
+     "pred": 0.18203262184120023,
+     "meas": 0.0968553459119497,
+     "tol": 0.06325531432043169,
+     "ok": false
+    }
+   },
+   "ok": false
+  },
+  {
+   "v": 4,
+   "ch": "dr",
+   "detail": {
+    "2": {
+     "pred": 0.03532187953510031,
+     "meas": 0.03898305084745762,
+     "tol": 0.02230614017674974,
+     "ok": true
+    },
+    "4": {
+     "pred": 0.06935186708422227,
+     "meas": 0.06725146198830409,
+     "tol": 0.03395220901269946,
+     "ok": true
+    },
+    "8": {
+     "pred": 0.10758700992355284,
+     "meas": 0.1106918238993711,
+     "tol": 0.05276448130539268,
+     "ok": true
+    }
+   },
+   "ok": true
+  },
+  {
+   "v": 10,
+   "ch": "dr",
+   "detail": {
+    "2": {
+     "pred": 0.06625149296297123,
+     "meas": 0.06836158192090395,
+     "tol": 0.026581412973319604,
+     "ok": true
+    },
+    "4": {
+     "pred": 0.10897697027567124,
+     "meas": 0.11637426900584795,
+     "tol": 0.039378902517162695,
+     "ok": true
+    },
+    "8": {
+     "pred": 0.16118906979950798,
+     "meas": 0.18930817610062886,
+     "tol": 0.06074814630941186,
+     "ok": true
+    }
+   },
+   "ok": true
+  }
+ ],
+ "carried": [
+  "laws_EXACT",
+  "laws_L0",
+  "laws_L1p",
+  "laws_L1",
+  "laws_L2",
+  "laws_C2",
+  "laws_C1",
+  "laws_L4",
+  "laws_L3",
+  "laws_PR",
+  "laws_RC",
+  "L5_relations",
+  "Meaning_M1",
+  "D_B1",
+  "E_E1"
+ ]
+}

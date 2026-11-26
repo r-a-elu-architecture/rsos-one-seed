@@ -1,0 +1,577 @@
+{
+ "a3_bpe": {
+  "A": {
+   "bpe_mean": 14305.3125,
+   "bytes_mean": 46896.1875,
+   "edges_tok_bpe_per_task": {
+    "door": [
+     276.5,
+     264.25
+    ],
+    "edits": [
+     6508.0,
+     5253.0
+    ],
+    "forward": [
+     4797.3125,
+     3907.1875
+    ],
+    "instruction": [
+     5859.875,
+     4880.875
+    ]
+   },
+   "tok_mean": 17441.6875
+  },
+  "D": {
+   "bpe_mean": 1860.0,
+   "bytes_mean": 4929.6875,
+   "edges_tok_bpe_per_task": {
+    "door": [
+     111.4375,
+     140.875
+    ],
+    "edits": [
+     133.6875,
+     187.375
+    ],
+    "forward": [
+     129.5625,
+     181.375
+    ],
+    "instruction": [
+     1093.1875,
+     1350.375
+    ]
+   },
+   "tok_mean": 1467.875
+  },
+  "E": {
+   "bpe_mean": 3001.8125,
+   "bytes_mean": 9880.125,
+   "edges_tok_bpe_per_task": {
+    "door": [
+     824.25,
+     886.125
+    ],
+    "edits": [
+     453.6875,
+     536.5
+    ],
+    "forward": [
+     157.5625,
+     187.4375
+    ],
+    "instruction": [
+     1337.75,
+     1391.75
+    ]
+   },
+   "tok_mean": 2773.25
+  },
+  "P": {
+   "bpe_mean": 3131.0,
+   "bytes_mean": 10061.6875,
+   "edges_tok_bpe_per_task": {
+    "door": [
+     854.375,
+     802.875
+    ],
+    "edits": [
+     196.0,
+     352.0
+    ],
+    "forward": [
+     186.625,
+     335.6875
+    ],
+    "heal": [
+     113.75,
+     197.8125
+    ],
+    "instruction": [
+     1348.6875,
+     1442.625
+    ]
+   },
+   "tok_mean": 2699.4375
+  }
+ },
+ "a3_tables": {
+  "A": {
+   "billed_minus_scaffold_mean": 46548.4375,
+   "billed_tok_mean": 118527.6875,
+   "calls_mean": 51.25,
+   "channel_bytes_mean": 46896.1875,
+   "channel_tok_ci": [
+    17075.1234375,
+    17760.6875
+   ],
+   "channel_tok_mean": 17441.6875,
+   "cost_usd_total": 0.41912633000000005,
+   "drift_events": 48,
+   "drift_healed": 48,
+   "drift_healed_zero_call": 0,
+   "drift_in_any_copy_final": 0,
+   "drift_in_authoritative_final": 0,
+   "line_acc_mean": 0.9691472026414497,
+   "out_tok_mean": 15413.6875,
+   "recovery_billed_per_healed": 7356.208333333333,
+   "recovery_chan_per_healed": 901.5,
+   "recovery_sec_per_healed": 16.455342094103496,
+   "recovery_total_per_healed": 8257.708333333334,
+   "replica_success": 4,
+   "steps_failed": 17,
+   "success": 4,
+   "tasks": 16,
+   "wall_sec_mean": 250.7635961174965,
+   "wrong_final_lines": 15
+  },
+  "D": {
+   "billed_minus_scaffold_mean": 23424.5625,
+   "billed_tok_mean": 83563.3125,
+   "calls_mean": 42.75,
+   "channel_bytes_mean": 4929.6875,
+   "channel_tok_ci": [
+    1405.684375,
+    1542.190625
+   ],
+   "channel_tok_mean": 1467.875,
+   "cost_usd_total": 0.27011775,
+   "drift_events": 48,
+   "drift_healed": 3,
+   "drift_healed_zero_call": 0,
+   "drift_in_any_copy_final": 40,
+   "drift_in_authoritative_final": 0,
+   "line_acc_mean": 1.0,
+   "out_tok_mean": 6785.25,
+   "recovery_billed_per_healed": 0.0,
+   "recovery_chan_per_healed": 0.0,
+   "recovery_sec_per_healed": 0.0,
+   "recovery_total_per_healed": 0.0,
+   "replica_success": 0,
+   "steps_failed": 0,
+   "success": 16,
+   "tasks": 16,
+   "wall_sec_mean": 190.95728632807732,
+   "wrong_final_lines": 0
+  },
+  "E": {
+   "billed_minus_scaffold_mean": 34407.875,
+   "billed_tok_mean": 122580.75,
+   "calls_mean": 62.875,
+   "channel_bytes_mean": 9880.125,
+   "channel_tok_ci": [
+    2595.4375,
+    2944.3171875
+   ],
+   "channel_tok_mean": 2773.25,
+   "cost_usd_total": 0.39777452,
+   "drift_events": 48,
+   "drift_healed": 18,
+   "drift_healed_zero_call": 0,
+   "drift_in_any_copy_final": 6,
+   "drift_in_authoritative_final": 1,
+   "line_acc_mean": 0.8757300947929424,
+   "out_tok_mean": 8497.3125,
+   "recovery_billed_per_healed": 4282.0,
+   "recovery_chan_per_healed": 96.16666666666667,
+   "recovery_sec_per_healed": 9.64393667380015,
+   "recovery_total_per_healed": 4378.166666666667,
+   "replica_success": 1,
+   "steps_failed": 60,
+   "success": 1,
+   "tasks": 16,
+   "wall_sec_mean": 286.0370474755764,
+   "wrong_final_lines": 61
+  },
+  "P": {
+   "billed_minus_scaffold_mean": 24128.625,
+   "billed_tok_mean": 84789.75,
+   "calls_mean": 43.125,
+   "channel_bytes_mean": 10061.6875,
+   "channel_tok_ci": [
+    2551.6796875,
+    2886.8203125
+   ],
+   "channel_tok_mean": 2699.4375,
+   "cost_usd_total": 0.29662986,
+   "drift_events": 48,
+   "drift_healed": 48,
+   "drift_healed_zero_call": 48,
+   "drift_in_any_copy_final": 0,
+   "drift_in_authoritative_final": 0,
+   "line_acc_mean": 1.0,
+   "out_tok_mean": 6973.3125,
+   "recovery_billed_per_healed": 0.0,
+   "recovery_chan_per_healed": 37.916666666666664,
+   "recovery_sec_per_healed": 0.00011373559633890788,
+   "recovery_total_per_healed": 37.916666666666664,
+   "replica_success": 16,
+   "steps_failed": 2,
+   "success": 16,
+   "tasks": 16,
+   "wall_sec_mean": 191.70169700682163,
+   "wrong_final_lines": 0
+  }
+ },
+ "code_commit": "f65c2f8f673120810ad4f39473b0898332f849b2",
+ "dragon_predicted": {
+  "predicted_bpe_tok_per_task": 390,
+  "predicted_channel_tok_per_task": 321,
+  "predicted_integrity": {
+   "drift_healed_zero_call_of_48": 48,
+   "heal_tok_per_drift": 0,
+   "replica_consistent_of_16": 16,
+   "truncation_detected_pct": 100
+  },
+  "predicted_one_time_table_tok": 450,
+  "predicted_per_edge_tok_per_task": {
+   "door": 69,
+   "edits": 54,
+   "forward": 23,
+   "heal": 0,
+   "instruction": 175
+  }
+ },
+ "experiment": "a3b_hologram",
+ "mechanism_stats": {
+  "Hc": {
+   "approvals": 0,
+   "edits_fallback": 0,
+   "forward_miss": 0,
+   "heal_msgs": 48,
+   "instr_all_literal": 0,
+   "instr_literal_content_tok": 0,
+   "instr_tok": 16766,
+   "instr_with_D_ref": 0,
+   "instructions": 224
+  },
+  "Hd": {
+   "approvals": 224,
+   "edits_fallback": 0,
+   "forward_miss": 131,
+   "heal_msgs": 0,
+   "instr_all_literal": 53,
+   "instr_literal_content_tok": 11405,
+   "instr_tok": 12934,
+   "instr_with_D_ref": 4,
+   "instructions": 224
+  }
+ },
+ "model": "claude-haiku-5-5",
+ "numpy": "2.5.3",
+ "predictions": {
+  "B5": {
+   "Hc": 1290.25,
+   "Hd": 932.4375,
+   "bpe_Hc": 1695.125,
+   "bpe_Hd": 1023.3125,
+   "pass": true,
+   "proxy_artefact": false
+  },
+  "B6": {
+   "measured": 932.4375,
+   "pass": false,
+   "predicted": 321,
+   "rel_err": -0.655741001407601
+  },
+  "Hc": {
+   "B1": {
+    "D": 1467.875,
+    "H": 1290.25,
+    "bpe_D": 1860.0,
+    "bpe_H": 1695.125,
+    "bpe_ratio": 0.9113575268817204,
+    "pass": true,
+    "proxy_artefact": false,
+    "ratio": 0.8789917397598569
+   },
+   "B2": {
+    "limit": 293.575,
+    "pass": false,
+    "proxy_artefact": false
+   },
+   "B3": {
+    "healed_zero_call": "47/48",
+    "pass": false,
+    "replica_consistent": "12/16",
+    "truncation_silent": 0
+   },
+   "B4": {
+    "D": 16,
+    "H": 12,
+    "pass": false
+   },
+   "B7": {
+    "E": 96.16666666666667,
+    "H_per_healed": 2.0,
+    "limit": 24.041666666666668,
+    "pass": true
+   }
+  },
+  "Hd": {
+   "B1": {
+    "D": 1467.875,
+    "H": 932.4375,
+    "bpe_D": 1860.0,
+    "bpe_H": 1023.3125,
+    "bpe_ratio": 0.5501680107526882,
+    "pass": true,
+    "proxy_artefact": false,
+    "ratio": 0.6352294984245934
+   },
+   "B2": {
+    "limit": 293.575,
+    "pass": false,
+    "proxy_artefact": false
+   },
+   "B3": {
+    "healed_zero_call": "48/48",
+    "pass": true,
+    "replica_consistent": "16/16",
+    "truncation_silent": 0
+   },
+   "B4": {
+    "D": 16,
+    "H": 16,
+    "pass": true
+   },
+   "B7": {
+    "E": 96.16666666666667,
+    "H_per_healed": 0.0,
+    "limit": 24.041666666666668,
+    "pass": true
+   }
+  }
+ },
+ "python": "3.13.18",
+ "results_sha256": "0ae0d0315ac392184128252c5d8b57eabfc9c977f10eb6e02b6f7eda20507120",
+ "reuse_check": {
+  "a1_agents_diff_empty": true,
+  "mismatches": [],
+  "pass": true,
+  "replayed": 48
+ },
+ "run_utc": "2026-11-17T15:58:02Z",
+ "seeds": [
+  100,
+  101,
+  102,
+  103,
+  104,
+  105,
+  106,
+  107,
+  300,
+  301,
+  302,
+  303,
+  304,
+  305,
+  306,
+  307
+ ],
+ "tables": {
+  "Hc": {
+   "billed_minus_scaffold_mean": 23458.8125,
+   "billed_tok_mean": 84468.1875,
+   "calls_mean": 43.375,
+   "channel_bpe_mean": 1695.125,
+   "channel_bytes_mean": 4141.5625,
+   "channel_tok_ci": [
+    1212.6875,
+    1373.0625
+   ],
+   "channel_tok_mean": 1290.25,
+   "cost_usd_total": 0.29984147,
+   "drift_events": 48,
+   "drift_healed": 47,
+   "drift_healed_zero_call": 47,
+   "drift_in_any_copy_final": 1,
+   "drift_in_authoritative_final": 1,
+   "edges_tok_bpe_per_task": {
+    "door": [
+     87.4375,
+     90.6875
+    ],
+    "edits": [
+     75.75,
+     138.75
+    ],
+    "forward": [
+     71.375,
+     130.9375
+    ],
+    "heal": [
+     7.8125,
+     9.0625
+    ],
+    "instruction": [
+     1047.875,
+     1325.6875
+    ]
+   },
+   "fallback_heal_tok_mean": 37.625,
+   "final_errors": {
+    "100": [],
+    "101": [],
+    "102": [
+     "cache.log_level",
+     "cache.owner",
+     "cache.replicas",
+     "cache.retries",
+     "search.replicas"
+    ],
+    "103": [],
+    "104": [
+     "auth.tier"
+    ],
+    "105": [
+     "gateway.max_conn"
+    ],
+    "106": [],
+    "107": [],
+    "300": [],
+    "301": [
+     "auth.retries"
+    ],
+    "302": [],
+    "303": [],
+    "304": [],
+    "305": [],
+    "306": [],
+    "307": []
+   },
+   "recovery_chan_per_healed": 2.0,
+   "replica_success": 12,
+   "steps_failed": 3,
+   "success": 12,
+   "tasks": 16,
+   "wall_sec_mean": 176.20674331486225,
+   "wrong_final_lines": 8
+  },
+  "Hd": {
+   "billed_minus_scaffold_mean": 23195.75,
+   "billed_tok_mean": 82986.25,
+   "calls_mean": 42.5,
+   "channel_bpe_mean": 1023.3125,
+   "channel_bytes_mean": 3155.8125,
+   "channel_tok_ci": [
+    872.8109375,
+    993.2515625
+   ],
+   "channel_tok_mean": 932.4375,
+   "cost_usd_total": 0.2606261,
+   "drift_events": 48,
+   "drift_healed": 48,
+   "drift_healed_zero_call": 48,
+   "drift_in_any_copy_final": 0,
+   "drift_in_authoritative_final": 0,
+   "edges_tok_bpe_per_task": {
+    "door": [
+     31.5,
+     31.625
+    ],
+    "edits": [
+     43.5,
+     85.375
+    ],
+    "forward": [
+     40.875,
+     80.6875
+    ],
+    "instruction": [
+     808.375,
+     817.4375
+    ],
+    "other": [
+     8.1875,
+     8.1875
+    ]
+   },
+   "fallback_heal_tok_mean": 18.479166666666668,
+   "final_errors": {
+    "100": [],
+    "101": [],
+    "102": [],
+    "103": [],
+    "104": [],
+    "105": [],
+    "106": [],
+    "107": [],
+    "300": [],
+    "301": [],
+    "302": [],
+    "303": [],
+    "304": [],
+    "305": [],
+    "306": [],
+    "307": []
+   },
+   "recovery_chan_per_healed": 0.0,
+   "replica_success": 16,
+   "steps_failed": 0,
+   "success": 16,
+   "tasks": 16,
+   "wall_sec_mean": 175.5186209976673,
+   "wrong_final_lines": 0
+  }
+ },
+ "truncation": {
+  "Hc": {
+   "0.1": {
+    "correct": 0,
+    "detected": 235,
+    "silent_wrong": 0
+   },
+   "0.2": {
+    "correct": 0,
+    "detected": 235,
+    "silent_wrong": 0
+   },
+   "0.3": {
+    "correct": 0,
+    "detected": 235,
+    "silent_wrong": 0
+   },
+   "0.4": {
+    "correct": 0,
+    "detected": 235,
+    "silent_wrong": 0
+   },
+   "0.5": {
+    "correct": 0,
+    "detected": 235,
+    "silent_wrong": 0
+   }
+  },
+  "Hd": {
+   "0.1": {
+    "correct": 0,
+    "detected": 228,
+    "silent_wrong": 0
+   },
+   "0.2": {
+    "correct": 0,
+    "detected": 228,
+    "silent_wrong": 0
+   },
+   "0.3": {
+    "correct": 0,
+    "detected": 228,
+    "silent_wrong": 0
+   },
+   "0.4": {
+    "correct": 0,
+    "detected": 228,
+    "silent_wrong": 0
+   },
+   "0.5": {
+    "correct": 0,
+    "detected": 228,
+    "silent_wrong": 0
+   }
+  }
+ }
+}

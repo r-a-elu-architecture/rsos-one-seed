@@ -1,0 +1,66 @@
+{
+ "row": "quantum",
+ "model": "-",
+ "stage": 1,
+ "pair": 2,
+ "cells": {
+  "std|205": {
+   "default": {
+    "result": 0.9805203115960522,
+    "resource": 2520.0,
+    "R": 0.00038909536174446517,
+    "choices": {
+     "present|standard": 12
+    }
+   },
+   "seed3v1": {
+    "result": 0.9750428309030471,
+    "resource": 2520.0,
+    "R": 0.00038692175829486,
+    "choices": {
+     "F:joint-greedy|policy": 1,
+     "P1:counter-shift|policy": 1,
+     "focus_nlocal_Y|standard": 2,
+     "P3:repair-worst|standard": 2,
+     "focus_realamp_XX|standard": 2,
+     "past-2|standard": 1,
+     "P8:vote-of-futures|own": 1,
+     "focus_ghz_X|standard": 1,
+     "P4P5:horizon-neyman|own": 1
+    },
+    "policy_fallback_steps": 0
+   },
+   "sec": 137
+  },
+  "std|206": {
+   "default": {
+    "result": 0.9748355282598643,
+    "resource": 2520.0,
+    "R": 0.000386839495341216,
+    "choices": {
+     "present|standard": 12
+    }
+   },
+   "seed3v1": {
+    "result": 0.9755885923100278,
+    "resource": 2518.0,
+    "R": 0.0003874458269698284,
+    "choices": {
+     "focus_realamp_XX|standard": 1,
+     "P4P5:horizon-neyman|standard": 1,
+     "focus_nlocal_Y|standard": 2,
+     "future+2|own": 1,
+     "focus_su2_Z|standard": 1,
+     "focus_ghz_X|standard": 1,
+     "F:joint-all|standard": 1,
+     "P4P5:horizon-neyman|policy": 1,
+     "P1:counter-shift|standard": 1,
+     "future+2|standard": 1,
+     "P8:vote-of-futures|own": 1
+    },
+    "policy_fallback_steps": 0
+   },
+   "sec": 137
+  }
+ }
+}

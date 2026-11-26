@@ -1,0 +1,64 @@
+{
+ "landings_sha256": "95f5e05d34578b9965663eaa97b682f837b4f5103ec5b255aec061b80a8d8046",
+ "n_rules": 0,
+ "d1": {
+  "adv_landed": -0.0634931268951068,
+  "adv_landed_uncoupled": -0.028211434448788597,
+  "adv_unhealed": -0.0634931268951068,
+  "adv_holo4_healed": -0.059423658963266845,
+  "landed_wins_vs_best_baseline": 3
+ },
+ "d2": {
+  "adv_landed": -0.22078161117397554,
+  "adv_landed_uncoupled": -0.24938981430417906,
+  "adv_unhealed": -0.22078161117397554,
+  "adv_holo4_healed": -0.2626365054986863,
+  "landed_wins_vs_best_baseline": 4
+ },
+ "d3": {
+  "adv_landed": -0.501996911181901,
+  "adv_landed_uncoupled": -0.4824485231323359,
+  "adv_unhealed": -0.501996911181901,
+  "adv_holo4_healed": -0.660496274390321,
+  "landed_wins_vs_best_baseline": 5
+ },
+ "d4": {
+  "adv_landed": -0.5351880875250868,
+  "adv_landed_uncoupled": -0.42971602647704066,
+  "adv_unhealed": -0.5351880875250868,
+  "adv_holo4_healed": -0.5056955916515912,
+  "landed_wins_vs_best_baseline": 3
+ },
+ "d5": {
+  "adv_landed": -0.9430006569257956,
+  "adv_landed_uncoupled": -0.7097530296886283,
+  "adv_unhealed": -0.9430006569257956,
+  "adv_holo4_healed": -0.986778700404927,
+  "landed_wins_vs_best_baseline": 3
+ },
+ "W1_landed_beats_best_baseline_d5": {
+  "wins": 3,
+  "of": 16,
+  "p": 0.9979095458984375
+ },
+ "W2_advantage_grows_with_density": {
+  "rho": -0.3418070703932837,
+  "p": 0.0019148329033368394
+ },
+ "W3_coupled_beats_uncoupled_d5": {
+  "wins": 5,
+  "of": 16,
+  "p": 0.9615936279296875
+ },
+ "W4_landed_beats_unhealed_all": {
+  "wins": 0,
+  "of": 80,
+  "p": 1.0
+ },
+ "W5_landing_beats_global_knobs_holo4_all": {
+  "wins": 43,
+  "of": 80,
+  "p": 0.28821531309419657
+ },
+ "share_of_decisions_where_a_particle_landed": 0.0
+}

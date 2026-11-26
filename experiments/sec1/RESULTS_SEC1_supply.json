@@ -1,0 +1,73 @@
+{
+ "code_sha256": "a0859ebaf3e88d0fa5d6421e6ad41daa1fa17f07643973d676978e4cdd753a7c",
+ "supply": {
+  "P0_exact_beats_unhealed": {
+   "wins": 48,
+   "of": 80,
+   "p": 0.04645594111027311
+  },
+  "P1_spreads_further_with_living_structure": {
+   "wins": 77,
+   "of": 80,
+   "p": 7.064205149264112e-20
+  },
+  "P2_exact_beats_global_same_size": {
+   "wins": 80,
+   "of": 80,
+   "p": 8.271806125530277e-25
+  },
+  "P3_gain_grows_with_density": {
+   "rho": 0.17323323395383108,
+   "p": 0.1243660917230095
+  },
+  "P5_beats_best_native": {
+   "wins": 48,
+   "of": 80,
+   "p": 0.04645594111027311
+  },
+  "means_by_d": {
+   "1": {
+    "dragon": 0.9463489583333332,
+    "global": 0.7050260416666674,
+    "unhealed": 0.9428802083333333,
+    "best_native": 0.9428802083333333,
+    "spread_live": 14.6875,
+    "spread_off": 1.0
+   },
+   "2": {
+    "dragon": 0.9391875000000001,
+    "global": 0.6969531249999996,
+    "unhealed": 0.9345989583333334,
+    "best_native": 0.9345989583333334,
+    "spread_live": 44.1875,
+    "spread_off": 0.8125
+   },
+   "3": {
+    "dragon": 0.9498020833333334,
+    "global": 0.7246406249999996,
+    "unhealed": 0.9437864583333334,
+    "best_native": 0.9454739583333334,
+    "spread_live": 45.4375,
+    "spread_off": 0.875
+   },
+   "4": {
+    "dragon": 0.9635885416666663,
+    "global": 0.7213593749999998,
+    "unhealed": 0.9587760416666664,
+    "best_native": 0.9591041666666664,
+    "spread_live": 51.3125,
+    "spread_off": 0.9375
+   },
+   "5": {
+    "dragon": 0.9424479166666669,
+    "global": 0.7045833333333329,
+    "unhealed": 0.9337916666666668,
+    "best_native": 0.9337916666666668,
+    "spread_live": 53.6875,
+    "spread_off": 0.8125
+   }
+  },
+  "P4": "not measurable in this host",
+  "P6": "not measurable in this host"
+ }
+}

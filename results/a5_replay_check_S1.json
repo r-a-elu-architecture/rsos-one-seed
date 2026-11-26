@@ -1,0 +1,20 @@
+{
+ "set": "S1",
+ "b1_runs_replayed": 16,
+ "b1_mismatches": [],
+ "frozen_files_diff_vs_main_empty": true,
+ "oracle_tasks": 80,
+ "oracle_success": 80,
+ "oracle_healed_zero_call": 240,
+ "oracle_invalid": 0,
+ "oracle_traced": 0,
+ "oracle_audited_steps_per_task": {
+  "X1": 14.0,
+  "X1s": 10.3125,
+  "X2": 10.3125,
+  "X3": 10.3125,
+  "X5": 10.3125
+ },
+ "oracle_x5_calls_per_task": 2.0,
+ "pass": true
+}

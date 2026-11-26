@@ -1,0 +1,99 @@
+{
+ "level": "STRONG",
+ "rows_passed": 2,
+ "rows": {
+  "ai_agents": {
+   "rsos_arm": "full",
+   "cells": 48,
+   "mean_vs_rollout": 5.608708333333333,
+   "pct_vs_rollout": 43.389016479310214,
+   "p": 6.258959689123803e-14,
+   "wins": 44,
+   "guard": true,
+   "law0": true,
+   "harmed_cells": 2,
+   "result_vs_rollout": 0.11979166666666667,
+   "result_vs_standard": 0.13541666666666666,
+   "means": {
+    "default": {
+     "result": 0.8177083333333334,
+     "resource": 25.141166666666667
+    },
+    "rollout": {
+     "result": 0.8333333333333334,
+     "resource": 12.9265625
+    },
+    "full": {
+     "result": 0.953125,
+     "resource": 7.317854166666667
+    }
+   },
+   "by_position_in_job": {
+    "0": 4.713,
+    "1": 6.632333333333333,
+    "2": 5.660416666666666,
+    "3": 5.429083333333333
+   },
+   "holm_p": 1.8776879067371412e-13,
+   "pass": true
+  },
+  "ai_ai": {
+   "rsos_arm": "v1",
+   "cells": 100,
+   "mean_vs_rollout": 85.2,
+   "pct_vs_rollout": 3.8100859952508084,
+   "p": 0.24517258293617683,
+   "wins": 68,
+   "guard": true,
+   "law0": true,
+   "harmed_cells": 7,
+   "result_vs_rollout": 0.14,
+   "result_vs_standard": 0.22,
+   "means": {
+    "default": {
+     "result": 0.51,
+     "resource": 2458.8
+    },
+    "rollout": {
+     "result": 0.59,
+     "resource": 2236.17
+    },
+    "v1": {
+     "result": 0.73,
+     "resource": 2150.97
+    }
+   },
+   "holm_p": 0.24517258293617683,
+   "pass": false
+  },
+  "space": {
+   "rsos_arm": "v1",
+   "cells": 20,
+   "mean_vs_rollout": 3.717737225459328,
+   "pct_vs_rollout": 0.7438788882685032,
+   "p": 7.424458044629788e-09,
+   "wins": 20,
+   "guard": true,
+   "law0": true,
+   "harmed_cells": 0,
+   "result_vs_rollout": 3.717737225459328,
+   "result_vs_standard": 8.770921574311467,
+   "means": {
+    "default": {
+     "result": 494.7240353156223,
+     "resource": 15048.19214889949
+    },
+    "rollout": {
+     "result": 499.77721966447444,
+     "resource": 16152.789926257501
+    },
+    "v1": {
+     "result": 503.4949568899338,
+     "resource": 17026.14862520927
+    }
+   },
+   "holm_p": 1.4848916089259577e-08,
+   "pass": true
+  }
+ }
+}

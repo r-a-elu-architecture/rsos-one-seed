@@ -1,0 +1,24 @@
+cell 1 seed3       result 0.65596 resource 240 R 2.7331e-03 [STAND-IN (interface check only)] choices {'P8:vote|standard': 2, 'P8:vote|own': 14, 'P1:surprise|own': 3, 'past-2|own': 7, 'F:rel-reads|own': 12, 'present|own': 3, 'past-1|own': 8, 'F:otrace|own': 4, 'P2:age-price|own': 2, 'F:otrace-rel|own': 5}
+cell 1 seed        result 0.64634 resource 240 R 2.6931e-03 [STAND-IN (interface check only)] choices {'land_withheld': 0, 'land_retargeted': 40, 'present|standard': 1, 'past-1|own': 21, 'present|own': 25, 'past-2|own': 11, 'past-1|standard': 1, 'latent|own': 1}
+cell 1 rollout     result 0.64332 resource 240 R 2.6805e-03 [STAND-IN (interface check only)] choices {'present|standard': 57, 'latent|rollout': 2, 'focus_shank3|rollout': 1}
+cell 1 default     result 0.64801 resource 240 R 2.7001e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 1 uniform     result 0.26149 resource 240 R 1.0896e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 1 time 64.5s
+cell 2 seed3       result 0.31362 resource 240 R 1.3067e-03 [STAND-IN (interface check only)] choices {'P8:vote|standard': 1, 'P8:vote|own': 23, 'past-2|own': 6, 'P1:surprise|own': 2, 'F:rel-std|own': 3, 'present|own': 1, 'past-1|own': 9, 'F:otrace|own': 3, 'F:otrace-rel|own': 7, 'F:rel-reads|own': 1, 'latent|own': 2, 'P2:age-price|own': 1, 'focus_shank3|own': 1}
+cell 2 seed        result 0.29494 resource 240 R 1.2289e-03 [STAND-IN (interface check only)] choices {'land_withheld': 0, 'land_retargeted': 77, 'focus_shank3|standard': 1, 'focus_shank3|own': 5, 'past-1|own': 20, 'present|own': 11, 'past-2|own': 13, 'latent|own': 10}
+cell 2 rollout     result 0.26644 resource 240 R 1.1102e-03 [STAND-IN (interface check only)] choices {'focus_shank3|rollout': 5, 'present|standard': 20, 'latent|rollout': 31, 'focus_shank1|rollout': 2, 'focus_shank2|rollout': 2}
+cell 2 default     result 0.27674 resource 240 R 1.1531e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 2 uniform     result 0.14518 resource 240 R 6.0491e-04 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 2 time 66.0s
+cell 3 seed3       result 0.29148 resource 240 R 1.2145e-03 [STAND-IN (interface check only)] choices {'P8:vote|standard': 1, 'F:rel-reads|own': 3, 'P8:vote|own': 23, 'F:rel-std|own': 7, 'past-1|own': 8, 'F:otrace-rel|own': 4, 'past-2|own': 3, 'present|own': 4, 'P1:surprise|own': 4, 'F:otrace|own': 1, 'P2:age-price|own': 2}
+cell 3 seed        result 0.30523 resource 240 R 1.2718e-03 [STAND-IN (interface check only)] choices {'land_withheld': 0, 'land_retargeted': 64, 'present|standard': 1, 'past-1|own': 19, 'latent|own': 5, 'present|own': 17, 'past-2|own': 14, 'focus_shank0|own': 3, 'focus_shank3|own': 1}
+cell 3 rollout     result 0.30835 resource 240 R 1.2848e-03 [STAND-IN (interface check only)] choices {'present|standard': 43, 'focus_shank2|rollout': 1, 'focus_shank3|rollout': 5, 'latent|rollout': 7, 'focus_shank0|rollout': 4}
+cell 3 default     result 0.30576 resource 240 R 1.2740e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 3 uniform     result 0.14288 resource 240 R 5.9533e-04 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 3 time 66.3s
+cell 4 seed3       result 0.31364 resource 240 R 1.3068e-03 [STAND-IN (interface check only)] choices {'F:rel-reads|standard': 1, 'P8:vote|own': 16, 'F:otrace-rel|own': 6, 'F:rel-reads|own': 8, 'P2:age-price|standard': 1, 'past-2|own': 6, 'past-1|own': 4, 'P1:surprise|own': 3, 'present|own': 3, 'P2:age-price|own': 1, 'P8:vote|standard': 2, 'focus_shank2|own': 2, 'latent|own': 6, 'F:otrace|own': 1}
+cell 4 seed        result 0.28140 resource 240 R 1.1725e-03 [STAND-IN (interface check only)] choices {'land_withheld': 0, 'land_retargeted': 72, 'present|standard': 1, 'latent|standard': 1, 'latent|own': 14, 'past-1|own': 14, 'present|own': 15, 'past-2|own': 12, 'future+1|own': 1, 'focus_shank2|own': 2}
+cell 4 rollout     result 0.29708 resource 240 R 1.2378e-03 [STAND-IN (interface check only)] choices {'present|standard': 29, 'latent|rollout': 22, 'focus_shank2|rollout': 8, 'focus_shank3|rollout': 1}
+cell 4 default     result 0.30947 resource 240 R 1.2894e-03 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 4 uniform     result 0.17175 resource 240 R 7.1563e-04 [STAND-IN (interface check only)] choices {'present|standard': 60}
+cell 4 time 65.5s

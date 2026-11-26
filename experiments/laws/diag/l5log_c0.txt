@@ -1,0 +1,8 @@
+collect 1 6630 {'v3': 0.8949, 'v5m': 0.8946, 'report+popular': 0.8329, 'round+round': 0.8617, 'random+random': 0.8338, 'B': 0.8576}
+collect 1 6631 {'v3': 0.9511, 'v5m': 0.949, 'report+popular': 0.9136, 'round+round': 0.889, 'random+random': 0.8672, 'B': 0.9285}
+collect 7 6630 {'v3': 0.8396, 'v5m': 0.8593, 'report+popular': 0.7881, 'round+round': 0.8296, 'random+random': 0.8046, 'B': 0.7788}
+collect 7 6631 {'v3': 0.8915, 'v5m': 0.9004, 'report+popular': 0.8546, 'round+round': 0.8661, 'random+random': 0.8461, 'B': 0.8482}
+collect 13 6630 {'v3': 0.9875, 'v5m': 0.9879, 'report+popular': 0.9714, 'round+round': 0.921, 'random+random': 0.8985, 'B': 0.98}
+collect 13 6631 {'v3': 0.9871, 'v5m': 0.9867, 'report+popular': 0.9783, 'round+round': 0.9258, 'random+random': 0.8968, 'B': 0.9808}
+collect 19 6630 {'v3': 0.9714, 'v5m': 0.9728, 'report+popular': 0.9365, 'round+round': 0.9079, 'random+random': 0.8839, 'B': 0.9381}
+collect 19 6631 {'v3': 0.9921, 'v5m': 0.9921, 'report+popular': 0.9826, 'round+round': 0.9243, 'random+random': 0.899, 'B': 0.9854}

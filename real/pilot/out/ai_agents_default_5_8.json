@@ -1,0 +1,39 @@
+{
+ "row": "ai_agents",
+ "arm": "default",
+ "model": "openrouter:openai/gpt-oss-20b",
+ "cells": {
+  "5": {
+   "result": 1.0,
+   "resource": 24.219,
+   "choices": {
+    "present|standard": 44
+   },
+   "sec": 27.2
+  },
+  "6": {
+   "result": 1.0,
+   "resource": 25.616,
+   "choices": {
+    "present|standard": 46
+   },
+   "sec": 26.8
+  },
+  "7": {
+   "result": 1.0,
+   "resource": 33.745,
+   "choices": {
+    "present|standard": 49
+   },
+   "sec": 53.5
+  },
+  "8": {
+   "result": 1.0,
+   "resource": 20.176,
+   "choices": {
+    "present|standard": 41
+   },
+   "sec": 27.0
+  }
+ }
+}

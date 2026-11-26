@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For organisations: guarantees, fit, pilot path and limits | RSOS</title>
+<meta name="description" content="What RSOS Core guarantees, where it fits in an agent platform, how to run a pilot and what is not yet shown.">
+<link rel="canonical" href="https://r-a-elu-architecture.github.io/RSOS-Language/adopt.html">
+<meta property="og:title" content="For organisations: guarantees, fit, pilot path and limits | RSOS">
+<meta property="og:description" content="What RSOS Core guarantees, where it fits in an agent platform, how to run a pilot and what is not yet shown.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://r-a-elu-architecture.github.io/RSOS-Language/adopt.html">
+<meta property="og:site_name" content="RSOS">
+<meta property="og:image" content="https://r-a-elu-architecture.github.io/RSOS-Language/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="RSOS Core: shared state for AI agents, exact by construction. 318 of 320 tasks exact across six models.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="For organisations: guarantees, fit, pilot path and limits | RSOS">
+<meta name="twitter:description" content="What RSOS Core guarantees, where it fits in an agent platform, how to run a pilot and what is not yet shown.">
+<meta name="twitter:image" content="https://r-a-elu-architecture.github.io/RSOS-Language/og.png">
+<meta name="theme-color" content="#0e2233">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;600;700&family=Atkinson+Hyperlegible+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="family" role="navigation" aria-label="RSOS family"><div class="wrap">
+<b>RSOS</b>
+<a class="here" href="index.html">Core and Language</a>
+<a href="https://r-a-elu-architecture.github.io/RSOS-Multimodal-Cue-Framework/">Multimodal Cue Framework</a>
+</div></div>
+<div class="wrap">
+<header class="top">
+<a class="mark" href="index.html"><span class="dot" aria-hidden="true"></span>RSOS</a>
+<nav class="main" aria-label="Site"><a href="core.html">Core</a><a href="adopt.html" aria-current="page">For organisations</a><a href="results.html">Results</a><a href="paper.html">Research</a><a class="gh" href="https://github.com/r-a-elu-architecture/RSOS-Language">GitHub</a></nav>
+</header>
+</div>
+<main id="main">
+<div class="wrap">
+<div class="hero">
+<h1>For organisations</h1>
+<p class="lead">When several AI agents share a configuration, a ticket, a ledger or a plan, each keeps its own copy,
+and the copies drift. RSOS Core moves every value computation out of the model and into a small deterministic
+runtime, and lets you check and repair any copy without a model call.</p>
+<a class="cta" href="#pilot">Run a pilot</a><a class="cta quiet" href="core.html">Technical specification</a>
+</div>
+</div>
+
+<section id="properties"><div class="wrap">
+<h2>What you can rely on</h2>
+<div class="props">
+<div><h3>Exact values</h3><p>Arithmetic, caps, conditions and bulk reassignments are computed by the runtime, never
+written by the model. Across 256 benchmark tasks on six models, every final state was exact.</p></div>
+<div><h3>Less data to the planner</h3><p>The planning model sees key names, not values. In the measured protocol an auditor
+model checks each step and sees the values of the keys that step read and changed; an audit without values is a
+planned test.</p></div>
+<div><h3>Audit trail</h3><p>Every step is a short readable program with a digest, its diff and the resulting state
+digest. Replaying the log reproduces the state exactly.</p></div>
+<div><h3>Drift repair at no model cost</h3><p>Any agent's copy is compared by digest and restored from the agreed
+state with zero model calls.</p></div>
+<div><h3>Vendor neutrality</h3><p>Measured on models from Anthropic, Google, Mistral and OpenAI with the same
+prompts and the same runtime.</p></div>
+<div><h3>Small surface</h3><p>Eight operations, six error codes, one JSON IR. Readable in an afternoon; portable
+to another language from the specification and tests.</p></div>
+</div>
+</div></section>
+
+<section id="fit"><div class="wrap split">
+<div>
+<h2>Where it fits</h2>
+<p class="intro">Core sits between your agents and the state they share. It does not replace your orchestration
+framework, model provider or database.</p>
+<p class="muted small">Measured so far on StateBench, a synthetic benchmark of configuration-style key–value state
+with 30 to 300 keys. Results on your own workflows are what the pilot is for.</p>
+</div>
+<div class="tw"><table>
+<thead><tr><th scope="col">Situation</th><th scope="col">Fit</th></tr></thead>
+<tbody>
+<tr><td>Several agents edit one shared record or configuration</td><td><span class="tag pass">Measured</span></td></tr>
+<tr><td>Updates involve arithmetic, caps, conditions or bulk reassignments</td><td><span class="tag pass">Measured</span></td></tr>
+<tr><td>The planner must not see values</td><td><span class="tag pass">By design</span></td></tr>
+<tr><td>No model may see any value, including the auditor</td><td><span class="tag pred">Not yet shown</span></td></tr>
+<tr><td>Nested documents, lists or free text as state</td><td><span class="tag pred">Not yet shown</span></td></tr>
+<tr><td>Adversarial or tamper-resistant settings</td><td><span class="tag fail">Out of scope</span></td></tr>
+</tbody></table></div>
+</div></section>
+
+<section id="pilot"><div class="wrap split">
+<div>
+<h2>A pilot in five steps</h2>
+<p class="intro">Each step has a measurable result, so you can stop at any point with a clear answer.</p>
+</div>
+<ol class="steps">
+<li><b>Pick one workflow.</b> Choose one where agents share state and where an error is costly: an incident runbook,
+a pricing table, an access list.</li>
+<li><b>Map the state to keys.</b> Flatten it into dotted keys with text values, for example
+<code>auth.timeout_ms</code>. Record what the agents change today.</li>
+<li><b>Score your current agent.</b> Run your existing setup on StateBench and on a replay of your own change history.
+Count exact final states and tokens per correct task.</li>
+<li><b>Add the runtime.</b> Connect the MCP server or the Python library and switch the planner to key names only.
+Run the same tasks.</li>
+<li><b>Decide on the numbers.</b> Compare exact final states, cost per correct task and audit effort. Keep the logs;
+they replay with zero model calls.</li>
+</ol>
+</div></section>
+
+<section id="limits"><div class="wrap split">
+<div>
+<h2>Limits, stated plainly</h2>
+<p class="intro">These are open, and each is a planned or running test.</p>
+</div>
+<ul class="plain">
+<li>One benchmark family, 16 tasks per cell. Larger and more varied task sets are next.</li>
+<li>The strongest rival designs, a tool-calling agent and a code-writing agent, have not yet been run head to head.</li>
+<li>State is flat key–value text. Nested data must be flattened.</li>
+<li>The state digest detects accidental drift; it is not a security control.</li>
+<li>Maintained by one author. There is no commercial support contract today.</li>
+</ul>
+</div></section>
+
+<section id="contact"><div class="wrap split">
+<div>
+<h2>Talk to us</h2>
+<p class="intro">For a pilot, an integration question or a result that contradicts ours, open an issue. Failures
+are published alongside successes.</p>
+</div>
+<div>
+<a class="cta" href="https://github.com/r-a-elu-architecture/RSOS-Language/issues/new">Open an issue</a><a class="cta quiet" href="https://github.com/r-a-elu-architecture/RSOS-Language/blob/main/SECURITY.md">Report a security issue</a>
+</div>
+</div></section>
+</main>
+<footer><div class="wrap">
+<div><p>RSOS by R. A. Elu, <a href="https://orcid.org/0009-0000-1456-2467">ORCID 0009-0000-1456-2467</a>.
+Code under Apache 2.0, text under CC BY 4.0.</p>
+<p>Research and development software. Not a medical device.</p></div>
+<div><p><a href="https://github.com/r-a-elu-architecture/RSOS-Language">Source on GitHub</a></p><p><a href="https://github.com/r-a-elu-architecture/RSOS-Language/blob/main/spec/core/STATE_OPS.md">Core specification</a></p>
+<p><a href="https://doi.org/10.5281/zenodo.24359268">Software DOI</a></p><p><a href="https://github.com/r-a-elu-architecture/RSOS-Language/blob/main/RESPONSIBLE_USE.md">Responsible use</a></p>
+<p><a href="https://github.com/r-a-elu-architecture/RSOS-Language/blob/main/SECURITY.md">Security</a></p></div>
+<div><p><a href="try.html">The RSOS language: editor and keyboard</a></p><p><a href="origins.html">Origins of the operations</a></p>
+<p><a href="programme.html">Research programme</a></p><p><a href="family.html">The RSOS family</a></p></div>
+</div></footer>
+</body>
+</html>

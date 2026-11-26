@@ -1,0 +1,84 @@
+{
+ "row": "biology",
+ "model": "-",
+ "stage": 1,
+ "pair": 3,
+ "cells": {
+  "std|207": {
+   "default": {
+    "result": 0.6888888888888889,
+    "resource": 3600.0,
+    "R": 0.00019135802469135801,
+    "choices": {
+     "present|standard": 300
+    }
+   },
+   "seed3v1": {
+    "result": 0.8222222222222222,
+    "resource": 1414.0,
+    "R": 0.0005814867201005815,
+    "choices": {
+     "weak1|standard": 2,
+     "past-1|own": 22,
+     "future+1|own": 32,
+     "P2:price-mistakes|policy": 4,
+     "P1:deficit-share|own": 9,
+     "F:need|policy": 6,
+     "weak2|own": 5,
+     "clean|own": 44,
+     "F:need-fill|standard": 3,
+     "clean|standard": 14,
+     "pair|own": 5,
+     "future+2|standard": 4,
+     "future+2|own": 8,
+     "F:need|own": 18,
+     "F:need-fill|policy": 72,
+     "F:need-fill|own": 9,
+     "present|standard": 4,
+     "present|own": 9,
+     "past-2|own": 11,
+     "past-1|standard": 5,
+     "pair|standard": 3,
+     "future+1|standard": 5,
+     "F:need|standard": 4,
+     "P1:deficit-share|standard": 1,
+     "past-2|standard": 1
+    },
+    "policy_fallback_steps": 0
+   },
+   "sec": 15351
+  },
+  "std|208": {
+   "default": {
+    "result": 0.7333333333333333,
+    "resource": 3300.0,
+    "R": 0.0002222222222222222,
+    "choices": {
+     "present|standard": 300
+    }
+   },
+   "seed3v1": {
+    "result": 0.8222222222222222,
+    "resource": 106.0,
+    "R": 0.007756813417190775,
+    "choices": {
+     "F:need|policy": 1,
+     "F:need|own": 9,
+     "pair|own": 5,
+     "F:need-fill|policy": 1,
+     "F:need-fill|own": 4,
+     "F:need|standard": 2,
+     "future+1|standard": 3,
+     "past-1|own": 5,
+     "present|own": 260,
+     "future+1|own": 2,
+     "weak2|own": 1,
+     "past-1|standard": 1,
+     "present|standard": 6
+    },
+    "policy_fallback_steps": 0
+   },
+   "sec": 14758
+  }
+ }
+}

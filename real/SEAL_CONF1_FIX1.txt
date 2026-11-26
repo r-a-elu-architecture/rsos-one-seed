@@ -1,0 +1,7 @@
+# CONF1 FIX1 seal (25 Nov 2026): seal A (unchanged) + seal B + the FIX1 addendum, its workflow and the frozen orbit file
+5fa27662dc01dca097ccc9ede09aa5e91c1715ef14cb216c664240bbd9d221dc real/SEAL_CONF1_A.txt
+58d6ee1b260b4e13d317cd7f046a57fd682ccab066f4ee8da52e1f9fc005276a real/SEAL_CONF1_B.txt
+c352739862423925610060b703cbd9004f9de97ed4bf887d47a5aca5a53855fb real/PREREG_CONF1_FIX1.md
+bce0d5b14ac97b28aeb43a0db9e07a7dbe152da4b78586a9072f1c8231c97843 .github/workflows/rsos_conf1_fix1.yml
+adc60fc7d0d46ae11c1330e1d09a78a00ac29b6701551720ae418f2cc9bfe037 real/hosts/data/space_tle_frozen.txt
+15f0bae61ce2f33c895c335c94bdeff1bba7075aa751c6f6cce4b0c705663fb5 real/hosts/data/space_tle_frozen.meta.json
