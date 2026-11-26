@@ -276,18 +276,21 @@ PYTHONPATH=experiments/sec1 \
  <a href="https://github.com/r-a-elu-architecture/srcx5">repository</a> ·
  paper <a href="https://doi.org/10.5281/zenodo.24555259">doi:10.5281/zenodo.24555259</a> · software <a href="https://doi.org/10.5281/zenodo.24557469">doi:10.5281/zenodo.24557469</a></p>
  <table class="stack"><thead><tr><th>Connect from</th><th>How</th></tr></thead><tbody>
- <tr><td>A browser</td><td><a href="https://r-a-elu-architecture.github.io/srcx5/">the live record</a>: every record re-checked on the page</td></tr>
- <tr><td>Any HTTP client or mirror</td><td><code>GET https://r-a-elu-architecture.github.io/srcx5/api/head.json</code>, then <code>ids.json</code>, <code>log.json</code>, <code>records/&lt;id&gt;.json</code>; the same paths on every copy</td></tr>
- <tr><td>Python, as a node</td><td><code>python srcx5.py verify</code> · <code>serve --peer &lt;node&gt;</code> · <code>create</code> · <code>replicate</code></td></tr>
- <tr><td>AI agents</td><td>Model Context Protocol server <code>srcx5_mcp.py</code>: list, read, verify and submit records as tools</td></tr>
- <tr><td>Linked data</td><td>each record as JSON-LD with a W3C PROV view; OpenAPI 3.1 and JSON Schema for every interface</td></tr>
- <tr><td>Ledgers and archives</td><td>the log head time-stamped on Bitcoin through OpenTimestamps; Zenodo and Software Heritage keep it citable</td></tr>
+ <tr><td>A browser</td><td><a href="https://r-a-elu-architecture.github.io/srcx5/">the live record</a>: every record re-checked on the page; add a record through the <a href="https://github.com/r-a-elu-architecture/srcx5/issues/new?template=submit-record.yml">issue form</a> (no git needed)</td></tr>
+ <tr><td>A public node</td><td><a href="https://rsos-srcx5.hf.space">rsos-srcx5.hf.space</a>: read, submit, MCP and A2A, always on</td></tr>
+ <tr><td>Cloud AI agents</td><td>MCP over HTTP: <code>POST https://rsos-srcx5.hf.space/mcp</code> (list, read, verify and submit records as tools); listed in the MCP Registry as <code>io.github.r-a-elu-architecture/srcx5</code></td></tr>
+ <tr><td>Other agents</td><td>Agent2Agent (A2A): <code>https://rsos-srcx5.hf.space/.well-known/agent-card.json</code></td></tr>
+ <tr><td>Any tool or company system</td><td>HTTP and JSON, described in OpenAPI 3.1 (<code>openapi_v15.json</code>); the same read paths on every copy (<code>head.json</code>, <code>ids.json</code>, <code>records/&lt;id&gt;.json</code>)</td></tr>
+ <tr><td>Python or your own node</td><td><code>pip install srcx5</code> · <code>docker run -p 7860:7860 ghcr.io/r-a-elu-architecture/srcx5</code></td></tr>
+ <tr><td>Linked data</td><td>each record as JSON-LD with a W3C PROV view</td></tr>
+ <tr><td>Ledgers and archives</td><td>the log head time-stamped on Bitcoin through OpenTimestamps; content id on IPFS; Zenodo keeps it citable</td></tr>
  </tbody></table>
- <p class="small">Launch tests, sealed before they ran, all seven criteria met (<a data-f="protocol/tests/v14/RESULTS_V14.md" href="#">results</a>):
+ <p class="small">Launch tests, sealed before they ran. Version 1.4, all seven criteria met (<a data-f="protocol/tests/v14/RESULTS_V14.md" href="#">results</a>):
  records arrived byte-identical through six carriers, including a simulated delay-tolerant link with 30 % loss; sync
- failed over with two of three mirrors down; every interface conformed to its standard; an AI agent verified and rejected
- records over MCP; 600 of 600 invalid records were quarantined and 0 of 200 valid ones blocked; 400 hostile requests
- caused no failure; the log head was time-stamped on Bitcoin.</p>
+ failed over with two of three mirrors down; every interface conformed to its standard; 600 of 600 invalid records were
+ quarantined and 0 of 200 valid ones blocked; 400 hostile requests caused no failure. Version 1.5 (MCP over HTTP, A2A,
+ install, convergence across nodes, submission by issue), partly met (<a data-f="protocol/tests/v15/RESULTS_V15.md" href="#">results</a>):
+ all eight local tests met, one after a disclosed fix; one deployment check met only in an alternative form.</p>
 </div></section>
 
 <section class="band" id="paper" data-c style="--p:var(--yellow);--c:var(--yellow);--w:5.5px"><div class="in">
