@@ -1,16 +1,20 @@
-# Prior-art check, 26 Nov 2026 (web search; four elements rated "most unique" on 26 Nov)
+# Prior-art check, 26 Nov 2026 (web search on four mechanisms)
 
-Purpose: test the claim "new on the market" before any public text makes it. Result: each element has close relatives
-published in 2025–2026; none of them binds the same operator set across unrelated hosts. The claim to make is the
-combination and the cross-host binding, not any single element.
+Purpose: test, before any public text, whether four mechanisms used in the sealed tests are new. Result: each has close
+relatives published in 2025–2026; none of them applies the same operator set across unrelated hosts. The claim that can
+be made is the combination and its application across hosts, not any single mechanism. Full citations: paper 1,
+References.
 
-| RSOS element | Closest prior art found | Verdict |
+| Mechanism | Closest prior art found | Assessment |
 |---|---|---|
-| Hologram relative to the receiver (Law 5, H(W\|R)) | "Bayes-Sufficient Compression Is Not Enough" (NeurIPS 2026; arXiv 2610.03769): receiver-relative bounded coordination, message utility = receiver gain minus protocol tax. Also action-state communication (arXiv 2606.05304), multi-order communication MOC (arXiv 2606.02359), latent communication (Interlat, ACL 2026) | **Not new as a concept.** RSOS adds the same operator on non-LLM hosts (satellite pass plan) |
-| The system sees itself: commit only on a complete skeleton | R2-KG answer abstention until evidence suffices (arXiv 2502.12767); PAR2-RAG explicit sufficiency checks (ACL 2026 industry); skill programs that verify completeness before FINAL (arXiv 2605.17734) | **Not new as a mechanism.** RSOS binds it as a law (invariant + check + response) of a whole two-agent system |
-| Rooms by cognitive state (Owl, Eagle, Associated) | Observer–Situation Lattice, perspective as a first-class element of the agent architecture (arXiv 2603.01407); perspective-taking agents (PerspAct, arXiv 2511.08098) | **Partly anticipated.** Routing operators by the owner's state rooms is not found |
-| One operator vocabulary across unrelated hosts | Domain-independent planning (classical STRIPS/HTN operators over many domains); operads for system design (arXiv 2101.11115) | **Concept has precedent.** No system found that compiles one operator set (FUSE, PIERCE, ENTER, ZOOM, HEAL, BEAM, …) onto LLM agents, an AI–AI channel and a satellite scheduler and measures it against each host's standard and plain rollout |
+| Compact-state messages encoded relative to what the receiver already holds | Receiver-relative bounded coordination: message utility is the receiver's gain minus the protocol cost (Xie et al., NeurIPS 2026, arXiv:2610.03769); action-state communication, PACT (Huang et al., arXiv:2606.05304); multi-order communication, MOC (Guan et al., ICML 2026); latent communication, Interlat (Du et al., ACL 2026) | **Not new as a concept.** Here the same operator is also applied on a non-LLM host (the satellite pass plan) |
+| Commit an answer only when the evidence chain is complete | Answer abstention until evidence suffices, R2-KG (Jo et al., IJCNLP-AACL 2025 Findings, arXiv:2502.12767); explicit sufficiency checks, PAR²-RAG (Li et al., ACL 2026 Industry Track) | **Not new as a mechanism.** Here it is applied as a system invariant (invariant, check, response) across a two-agent system |
+| Evaluation modes chosen by the state of the decision (horizon 1 near the end; two horizons when predicted futures disagree; trace-ordered when the trace is confident) | Perspective as a first-class element of the agent architecture, Observer–Situation Lattice (Alqithami, AAMAS 2026, arXiv:2603.01407); perspective-taking agents, PerspAct (Patania et al., arXiv:2511.08098) | **Partly anticipated.** Routing operators by these decision-state modes was not found |
+| One operator vocabulary across unrelated hosts | Domain-independent planning (STRIPS operators across many domains; Fikes and Nilsson, 1971); operads for system design (Foley et al., Proc. R. Soc. A, 2021, arXiv:2101.11115) | **Precedent exists for the concept.** No system was found that applies one operator set (`FUSE`, `PIERCE`, `ENTER`, `ZOOM`, `HEAL`, `BEAM`, …) to LLM agents, an AI–AI channel and a satellite scheduler and measures it against each host's standard and against plain rollout |
 
-Wording for the paper: "RSOS's elements each have relatives in recent work (cited above); what we found no precedent for
-is one operator language bound unchanged across unrelated hosts and sealed-tested against each host's standard and
-against plain rollout." Search depth: four standard web searches; a full review is still needed before submission.
+A source noted during the search ("skill programs that verify completeness", arXiv:2605.17734) could not be confirmed on
+re-checking and is not cited.
+
+Statement used in the paper: the elements each have relatives in recent work; no precedent was found for one operator
+language applied unchanged across unrelated hosts and tested under seal against each host's standard and against plain
+rollout. Search depth: four web searches on 26 Nov and source verification on the same day; not a systematic review.

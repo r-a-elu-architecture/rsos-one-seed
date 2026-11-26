@@ -3,7 +3,7 @@
 ## The seed's parts, each with prior art
 | Seed part | Nearest prior art found | Verdict |
 |---|---|---|
-| Choose by the unit's own future over a base (standard) policy, never worse than it (membrane) | Rollout algorithms (Bertsekas; Bertsekas, Tsitsiklis and Wu 1997): base heuristic + lookahead; cost-improvement property: no worse than the base; broad applications | KNOWN: the seed is a rollout-family method |
+| Choose by the unit's own future over a base (standard) policy, never worse than it (acceptance guard) | Rollout algorithms (Bertsekas; Bertsekas, Tsitsiklis and Wu 1997): base heuristic + lookahead; cost-improvement property: no worse than the base; broad applications | KNOWN: the seed is a rollout-family method |
 | Own planned future actions applied now; own past actions as candidates | MPC warm start by shifting the previous solution (standard); AC4MPC: several initial guesses incl. the shifted previous solution and a policy rollout, the lowest-cost trajectory is applied | KNOWN in parts (shifted plan as candidate); own PAST actions as candidates not found |
 | Own committed trajectory (continue the plan one follows) | plan reuse / warm starting in MPC; MPPI warm-start buffers | KNOWN in parts |
 | Own future read from the real record (the tree) | scenario-based stochastic MPC with scenarios from historical data / bootstrapping | KNOWN |
@@ -19,7 +19,7 @@
 
 ## What this means
 1. Each part of the seed exists in the literature. The seed is, at its core, a rollout / scenario-MPC family method.
-2. "Beats standard practice across fields" is largely what rollout theory predicts; it cannot carry an "unprecedented" claim.
+2. "Beats standard practice across fields" is largely what rollout theory predicts; it does not by itself support a novelty claim.
 3. What is not found: (a) the specific branch set (own past AND own plan AND focused/coupled parts AND own committed trajectory)
    as ONE unchanged structure; (b) a sealed, cross-domain comparison in real operations (10 fields, one hash).
 4. Decisive tests for novelty: (i) seed vs PLAIN ROLLOUT with the same base, same scenarios, same budget (does the seed's own

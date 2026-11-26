@@ -3,7 +3,10 @@
 One shared decision selector, the *seed*, choosing among candidate actions written for each domain, tested across
 ten real domains against each domain's standard method. Every claim is sealed (pre-registered, fingerprinted, pushed before the run) and can be rerun.
 
-**Paper:** [`paper/WHITEPAPER_DRAFT.md`](paper/WHITEPAPER_DRAFT.md)
+**Papers** (preprints, CC BY 4.0):
+- *One Selector, Many Domains* — [doi:10.5281/zenodo.24555154](https://doi.org/10.5281/zenodo.24555154) · [PDF](paper/pdf/PAPER_1_ONE_SELECTOR.pdf) · [source](paper/PAPER_1_ONE_SELECTOR.md)
+- *SRC-X.5: an open record of sealed claims, verified at the source* — [doi:10.5281/zenodo.24555259](https://doi.org/10.5281/zenodo.24555259) · [PDF](paper/pdf/PAPER_2_SRCX5.pdf) · [source](paper/PAPER_2_SRCX5.md)
+- *Blind planning and the error-window law* — [doi:10.5281/zenodo.24555298](https://doi.org/10.5281/zenodo.24555298) · [PDF](paper/pdf/PAPER_3_BLIND_PLANNING.pdf) · [source](paper/PAPER_3_BLIND_PLANNING.md)
 
 ## Headline: against RSOS-free planning (plain rollout), fresh cells, levels fixed before each run (paper §5.7)
 | Host | Sealed test | RSOS vs plain rollout | Pre-registered criteria |
@@ -34,7 +37,7 @@ In the same run, with the AI-agent leak fixed, the full seed replicated: 45–57
 
 | Domain | Status | Headline | Paper | Sealed files |
 |---|---|---|---|---|
-| AI agents (gpt-oss-20b) | SHOWN | 51–68 % fewer tokens, accuracy not worse (wide intervals); Llama 8B rows reported, baseline near zero accuracy | [§5.1](paper/WHITEPAPER_DRAFT.md#51-real3-main-confirmatory-run) | [`real/RESULTS_REAL3.md`](real/RESULTS_REAL3.md) |
+| AI agents (gpt-oss-20b) | SHOWN | 51–68 % fewer tokens, accuracy not worse (wide intervals); Llama 8B rows reported, baseline near zero accuracy | [§5.1](paper/PAPER_1_ONE_SELECTOR.md#51-real3-main-confirmatory-run) | [`real/RESULTS_REAL3.md`](real/RESULTS_REAL3.md) |
 | AI–AI messaging | SHOWN (not after Holm) | 36.9 % fewer tokens; both arms at ceiling | §5.1 | same |
 | AI–human replies | SHOWN | 41–44 % fewer tokens; word-overlap proxy, which the seed targets | §5.1 | same |
 | Inventory | SHOWN | +1.36 %, 8/8 cells | §5.1 | same |
@@ -107,3 +110,7 @@ AI domains need an OpenRouter key (`OPENROUTER_API_KEY`); the other domains run 
 ## Licence
 Code: Apache 2.0 ([`LICENSE`](LICENSE)). Third-party data is not redistributed; see [`DATA_LICENCES.md`](DATA_LICENCES.md).
 The RSOS Language (blind planning, exact shared state): [`README_LANGUAGE.md`](README_LANGUAGE.md).
+
+## Cite
+Elu, R. A. (2026). *One Selector, Many Domains: a shared decision selector over domain-written candidate sets, sealed
+against each domain's standard method.* Preprint, Zenodo. https://doi.org/10.5281/zenodo.24555154 (machine-readable: [`CITATION.cff`](CITATION.cff))

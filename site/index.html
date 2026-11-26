@@ -8,7 +8,7 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="One Selector, Many Domains">
 <meta property="og:description" content="Sealed, rerunnable results across domains, and SRC-X.5: an open protocol for sealed claims, for any field.">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "ScholarlyArticle", "name": "One Selector, Many Domains", "about": ["decision-making", "AI agents", "multi-agent communication", "satellite scheduling", "pre-registration", "reproducibility"], "isAccessibleForFree": true, "license": "https://creativecommons.org/licenses/by/4.0/"}, {"@type": "SoftwareSourceCode", "name": "SRC-X.5", "alternateName": "srcx5", "description": "An open record of sealed claims, verified at the source: specification, a one-file reference node and an append-only, hash-chained public log. Carries no domain content, so any field can use it.", "programmingLanguage": "Python", "license": "https://www.apache.org/licenses/LICENSE-2.0", "version": "1.3"}, {"@type": "Dataset", "name": "Sealed test results (REAL3, STRUCT1, CONF1-CONF6, ABL1)", "description": "Pre-registered, fingerprinted results on fresh cells, each with its pass criteria fixed before the run and the outcome reported as met in all, part or none.", "isAccessibleForFree": true, "license": "https://www.apache.org/licenses/LICENSE-2.0"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "ScholarlyArticle", "name": "One Selector, Many Domains", "about": ["decision-making", "AI agents", "multi-agent communication", "satellite scheduling", "pre-registration", "reproducibility"], "isAccessibleForFree": true, "license": "https://creativecommons.org/licenses/by/4.0/", "headline": "One Selector, Many Domains: a shared decision selector over domain-written candidate sets, sealed against each domain's standard method", "author": {"@type": "Person", "name": "R. A. Elu", "identifier": "https://orcid.org/0009-0000-1456-2467"}, "datePublished": "2026-11-26", "identifier": "https://doi.org/10.5281/zenodo.24555154", "sameAs": "https://doi.org/10.5281/zenodo.24555154"}, {"@type": "SoftwareSourceCode", "name": "SRC-X.5", "alternateName": "srcx5", "description": "An open record of sealed claims, verified at the source: specification, a one-file reference node and an append-only, hash-chained public log. Carries no domain content, so any field can use it.", "programmingLanguage": "Python", "license": "https://www.apache.org/licenses/LICENSE-2.0", "version": "1.4.1", "author": {"@type": "Person", "name": "R. A. Elu", "identifier": "https://orcid.org/0009-0000-1456-2467"}, "codeRepository": "https://github.com/r-a-elu-architecture/srcx5"}, {"@type": "ScholarlyArticle", "name": "SRC-X.5: an open record of sealed claims, verified at the source", "author": {"@type": "Person", "name": "R. A. Elu", "identifier": "https://orcid.org/0009-0000-1456-2467"}, "datePublished": "2026-11-26", "identifier": "https://doi.org/10.5281/zenodo.24555259", "isAccessibleForFree": true, "license": "https://creativecommons.org/licenses/by/4.0/"}, {"@type": "ScholarlyArticle", "name": "Blind planning and the error-window law: where LLM agents break when they edit shared state, predicted in public before each run", "author": {"@type": "Person", "name": "R. A. Elu", "identifier": "https://orcid.org/0009-0000-1456-2467"}, "datePublished": "2026-11-26", "identifier": "https://doi.org/10.5281/zenodo.24555298", "isAccessibleForFree": true, "license": "https://creativecommons.org/licenses/by/4.0/"}, {"@type": "Dataset", "name": "Sealed test results (REAL3, STRUCT1, CONF1-CONF6, ABL1)", "description": "Pre-registered, fingerprinted results on fresh cells, each with its pass criteria fixed before the run and the outcome reported as met in all, part or none.", "isAccessibleForFree": true, "license": "https://www.apache.org/licenses/LICENSE-2.0"}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@700;800&family=Instrument+Sans:wght@400;600&display=swap">
@@ -262,14 +262,16 @@ PYTHONPATH=experiments/sec1 \
  <p>Pre-registration, fingerprints of every file, fresh cells, paired comparisons with intervals, every cell rerunnable,
  every fix disclosed. The method above, as an open protocol: a specification, a one-file node and a public log anyone
  can join. It carries no domain content, so a benchmark, a clinical protocol or a forecast is sealed the same way.
- Apache 2.0 (<a data-f="protocol/SPEC_SRCX5_1_4.md" href="#">specification</a>).</p></div>
+ Apache 2.0 (<a data-f="protocol/SPEC_SRCX5_1_4_1.md" href="#">specification</a>).</p></div>
 </div></section>
 
 <section class="band alt" id="paper" data-c style="--p:var(--yellow);--c:var(--yellow);--w:5.5px"><div class="in">
- <h2>The paper</h2>
- <p><a data-p="paper-0" href="#">One Seed, Many Domains</a>: method, the controlled world (SEAL2, SEAL1), the real world (REAL1, REAL3),
- the communication principle, prior art, limits and disclosures. It states what was shown and what was not.</p>
- <p><span class="pill">§5 real-world results</span><span class="pill">§6 simulated world</span><span class="pill">§7 prior art and reviewer questions</span><span class="pill">§8 limits and fixes</span></p>
+ <h2>The papers</h2>
+ <p><a data-p="paper-0" href="#">One Selector, Many Domains</a> (<a href="https://doi.org/10.5281/zenodo.24555154">doi:10.5281/zenodo.24555154</a>): method, the controlled environment, the real-world runs (REAL1, REAL3, CONF1–CONF6),
+ prior art, limits and disclosures. It states what was shown and what was not.</p>
+ <p><span class="pill">§5 real-world results</span><span class="pill">§6 simulated environment</span><span class="pill">§7 prior art and reviewer questions</span><span class="pill">§8 limits and fixes</span></p>
+ <p>Companions: <a data-f="paper/PAPER_2_SRCX5.md" href="#">SRC-X.5: an open record of sealed claims, verified at the source</a> (<a href="https://doi.org/10.5281/zenodo.24555259">doi:10.5281/zenodo.24555259</a>) and
+ <a data-f="paper/PAPER_3_BLIND_PLANNING.md" href="#">Blind planning and the error-window law</a> (<a href="https://doi.org/10.5281/zenodo.24555298">doi:10.5281/zenodo.24555298</a>). All three are preprints under CC BY 4.0.</p>
 </div></section>
 
 <section class="band" id="purpose" data-c style="--p:var(--yellow);--c:var(--turq);--w:6px"><div class="in">
@@ -310,7 +312,7 @@ PYTHONPATH=experiments/sec1 \
 <script>
 {
 const REPO = "https://github.com/r-a-elu-architecture/rsos-one-seed/blob/main/";
-const PAPER = REPO + "paper/WHITEPAPER_DRAFT.md";
+const PAPER = REPO + "paper/PAPER_1_ONE_SELECTOR.md";
 const anchors = {"paper-0": "", "paper-1": "#1-the-claim-and-what-it-is-not", "paper-51": "#51-real3-main-confirmatory-run",
   "paper-7": "#7-prior-art-and-the-reviewers-first-questions", "paper-8": "#8-limits-and-disclosures", "paper-54": "#54-struct1-the-structure-alone-an-ablation-sealed", "paper-56": "#56-confirmations-on-fresh-cells-conf1-conf2-conf3", "paper-57": "#57-against-rsos-free-planning-and-what-carries-the-gain-conf4-abl1-conf5-conf6"};
 const R3 = "real/RESULTS_REAL3.md", SUM = "real/RESULTS_REAL3_SUMMARY.md";

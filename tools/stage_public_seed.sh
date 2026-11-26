@@ -10,7 +10,8 @@ cd "$REPO"
 # the release README leads; the language README stays as README_LANGUAGE.md
 mv "$OUT/README.md" "$OUT/README_LANGUAGE.md"; cp README_RELEASE.md "$OUT/README.md"
 # the paper and the sealed runs
-for p in paper/WHITEPAPER_DRAFT.md real seal1 seal2 cloud/real1_unit.py cloud/real3_unit.py cloud/real3_unit_fix1.py \
+for p in paper/WHITEPAPER_DRAFT.md paper/PAPER_1_ONE_SELECTOR.md paper/PAPER_2_SRCX5.md paper/PAPER_3_BLIND_PLANNING.md \
+         paper/pdf/PAPER_1_ONE_SELECTOR.pdf paper/pdf/PAPER_2_SRCX5.pdf paper/pdf/PAPER_3_BLIND_PLANNING.pdf real seal1 seal2 cloud/real1_unit.py cloud/real3_unit.py cloud/real3_unit_fix1.py \
          cloud/real3_fix1_units.json \
          .github/workflows/rsos_real1.yml .github/workflows/rsos_real1b.yml .github/workflows/rsos_real3_s1.yml \
          .github/workflows/rsos_real3_s2.yml .github/workflows/rsos_real3_fix1.yml .github/workflows/rsos_seal2.yml \
@@ -24,6 +25,7 @@ for p in paper/WHITEPAPER_DRAFT.md real seal1 seal2 cloud/real1_unit.py cloud/re
          .github/workflows/rsos_tle_freeze.yml protocol; do
   [ -e "$p" ] && cp -r --parents "$p" "$OUT/"
 done
+cp CITATION_RELEASE.cff "$OUT/CITATION.cff"   # the release cites paper 1; the language CITATION stays in RSOS-Language
 python3 tools/build_public_site.py "$OUT/site"; cp site/seed/mark.svg "$OUT/site/mark.svg"
 mkdir -p "$OUT/.github/workflows"; cp .github/workflows/site_pages.yml "$OUT/.github/workflows/"
 cd "$OUT"

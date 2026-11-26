@@ -1,43 +1,39 @@
 cff-version: 1.2.0
-title: "RSOS Language: a spatial-symbolic programming language for humans and AI"
-message: "If you use this software, please cite it as below."
+title: "One Selector, Many Domains: research release"
+message: "If you use this release, please cite the paper below."
 type: software
 authors:
-  - name: "R. A. Elu"
-    alias: "r-a-elu-architecture"
+  - family-names: "Elu"
+    given-names: "R. A."
     orcid: "https://orcid.org/0009-0000-1456-2467"
-version: "0.4.0"
-doi: "10.5281/zenodo.24359268"
-date-released: "2026-11-19"
+date-released: "2026-11-26"
 license: Apache-2.0
-repository-code: "https://github.com/r-a-elu-architecture/RSOS-Language"
-identifiers:
-  - type: doi
-    value: "10.5281/zenodo.24359268"
-    description: "Software, version 0.4.0 (RSOS Core 1.0)"
-  - type: doi
-    value: "10.5281/zenodo.24358277"
-    description: "Software, version 0.3.2 (A8 across model families)"
-  - type: doi
-    value: "10.5281/zenodo.24339364"
-    description: "Software, version 0.3.1"
-  - type: doi
-    value: "10.5281/zenodo.24317657"
-    description: "Software, all versions (concept DOI)"
-  - type: doi
-    value: "10.5281/zenodo.24321030"
-    description: "Software, version 0.2.1"
-  - type: doi
-    value: "10.5281/zenodo.24320392"
-    description: "Whitepaper v2"
-  - type: doi
-    value: "10.5281/zenodo.24304403"
-    description: "Whitepaper, all versions (concept DOI)"
-keywords: [visual programming, human-AI interaction, mental models, agent systems, spatial language]
+repository-code: "https://github.com/r-a-elu-architecture/rsos-one-seed"
+keywords: [decision-making, AI agents, multi-agent communication, satellite scheduling, pre-registration, reproducibility]
+preferred-citation:
+  type: article
+  title: "One Selector, Many Domains: a shared decision selector over domain-written candidate sets, sealed against each domain's standard method"
+  authors:
+    - family-names: "Elu"
+      given-names: "R. A."
+      orcid: "https://orcid.org/0009-0000-1456-2467"
+  doi: "10.5281/zenodo.24555154"
+  year: 2026
+  publisher:
+    name: "Zenodo"
+  status: preprint
 references:
-  - type: report
-    title: "RSOS: an executable spatial-symbolic language for human–AI and AI–AI communication (whitepaper)"
+  - type: article
+    title: "SRC-X.5: an open record of sealed claims, verified at the source"
     authors:
-      - name: "R. A. Elu"
-    doi: "10.5281/zenodo.24304403"
+      - family-names: "Elu"
+        given-names: "R. A."
+    doi: "10.5281/zenodo.24555259"
+    year: 2026
+  - type: article
+    title: "Blind planning and the error-window law: where LLM agents break when they edit shared state, predicted in public before each run"
+    authors:
+      - family-names: "Elu"
+        given-names: "R. A."
+    doi: "10.5281/zenodo.24555298"
     year: 2026
